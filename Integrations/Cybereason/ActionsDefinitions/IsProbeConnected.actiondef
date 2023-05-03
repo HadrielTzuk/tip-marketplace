@@ -1,0 +1,21 @@
+{
+    "CreationTimeUnixTimeInMs": 1524559211168, 
+    "Creator": "admin", 
+    "Description": "Check the connectivity of the endpoint to Cybereason. Supported entities: Hostname.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Entity\":\"bxxxdw0000w10e1\",\"EntityResult\":{\"is_connected\":\"false\"}}",
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Cybereason", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1524559211168, 
+    "Name": "Is Probe Connected", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Version": 1.0
+}

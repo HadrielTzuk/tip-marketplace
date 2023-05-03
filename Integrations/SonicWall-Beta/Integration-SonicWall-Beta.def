@@ -1,0 +1,51 @@
+{
+    "Description": "SonicWall Network Security virtual (NS) series brings SonicWall's industry leading Next-Generation Firewall (NGFW) capabilities to protect your workloads in the cloud from threats, with automated, real-time breach detection and protection. Manage consistent security policies centrally from a single pane of glass across cloud and on-prem environments.",
+    "DisplayName": "SonicWall-Beta",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/sonicwall",
+    "Identifier": "SonicWall-Beta",
+    "Categories": [
+        "Network Security",
+        "Firewall",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "SonicWall-Beta",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "6",
+            "Value": "https://<address>:<port>"
+        },
+        {
+            "IntegrationIdentifier": "SonicWall-Beta",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "SonicWall-Beta",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "SonicWall-Beta",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "IsAvailableForCommunity": false,
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 24.1.3, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"> <g> <g> <path d=\"M7.5,11C11.9,7.4,24,5.8,24,5.8S18.9,5.2,14.7,5C6.9,4.8-0.7,6.1,1.3,11.8C3.2,16.9,11.5,20,11.5,20S3.3,14.5,7.5,11z\"/> </g></g></svg>",
+    "Version": 2.0,
+    "MarketingDisplayName": "SonicWall-Beta"
+}

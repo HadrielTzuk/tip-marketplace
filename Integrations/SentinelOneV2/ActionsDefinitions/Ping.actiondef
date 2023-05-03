@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1542187905637,
+    "Creator": "Admin",
+    "Description": "Test integration connectivity.",
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOneV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542187905637,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

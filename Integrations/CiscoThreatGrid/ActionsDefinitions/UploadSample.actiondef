@@ -1,0 +1,120 @@
+{
+    "CreationTimeUnixTimeInMs": 1528904335494,
+    "Creator": "admin",
+    "Description": "Upload and analyze a sample. Note: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"count\": 0, \"max-confidence\": 0, \"sample\": \"99ca73a47996cc3069e39a672728a49c\", \"score\": 0, \"bis\": [], \"max-severity\": 0}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CiscoThreatGrid",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1528904335494,
+    "Name": "Upload Sample",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1528904335494,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The sample file path",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528904335494,
+            "Name": "File Path",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528904335494,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The vm to run the analysis on. e.g. win7-x64",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528904335494,
+            "Name": "Vm",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528904335494,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Name of a playbook to apply to this sample run. e.g. default",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528904335494,
+            "Name": "Playbook",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528904335494,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Any outgoing network traffic that is generated during the analysis to appear to exit from the Network Exit Location.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528904335494,
+            "Name": "Network Exit",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528904335494,
+            "CustomActionId": -1,
+            "DefaultValue": "true",
+            "Description": "if checked, the sample will be marked private",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528904335494,
+            "Name": "Private",
+            "Type": 1,
+            "Value": "true"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528904335494,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the IP address of the remote linux server, where the file is located.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528904335494,
+            "Name": "Linux Server Address",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528904335494,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the username of the remote linux server, where the file is located.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528904335494,
+            "Name": "Linux Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528904335494,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the password of the remote linux server, where the file is located.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528904335494,
+            "Name": "Linux Password",
+            "Type": 12,
+            "Value": ""
+        }
+    ],
+    "Script": "from CiscoThreatGridManager import CiscoThreatGridManager\nfrom SiemplifyUtils import construct_csv\nfrom SiemplifyAction import SiemplifyAction\nfrom ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_INPROGRESS\nimport sys\nimport base64\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = 'CiscoThreatGrid - Upload Sample'\n\n    conf = siemplify.get_configuration('CiscoThreatGrid')\n    server_addr = conf['Api Root']\n    api_key = conf['Api Key']\n    use_ssl = conf['Use SSL'].lower() == 'true'\n    cisco_threat_grid = CiscoThreatGridManager(server_addr, api_key, use_ssl)\n\n    file_path = siemplify.parameters['File Path']\n    vm = siemplify.parameters.get('Vm')\n    playbook = siemplify.parameters.get('Playbook')\n    private = siemplify.parameters['Private'].lower() == 'true'\n\n    sample_id = cisco_threat_grid.analyze_sample(file_path, vm=vm, playbook=playbook,\n                                          private=private)\n\n    output_massage = \"Sample {} was uploaded successfully.\".format(sample_id)\n    siemplify.LOGGER.info(\"Sample {} submitted successfully.\".format(sample_id))\n\n    siemplify.end(output_massage, sample_id, EXECUTION_STATE_INPROGRESS)\n\n\ndef analyze_async():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = 'CiscoThreatGrid - Upload Sample'\n\n    conf = siemplify.get_configuration('CiscoThreatGrid')\n    server_addr = conf['Api Root']\n    api_key = conf['Api Key']\n    use_ssl = conf['Use SSL'].lower() == 'true'\n    cisco_threat_grid = CiscoThreatGridManager(server_addr, api_key, use_ssl)\n\n    # Extract web id\n    sample_id = siemplify.parameters[\"additional_data\"]\n\n    try:\n        if cisco_threat_grid.is_sample_completed(sample_id):\n            siemplify.LOGGER.info(\"Sample {} analysis is complete.\".format(sample_id))\n\n            try:\n                # Download report\n                full_report = cisco_threat_grid.get_sample_report(sample_id)\n                siemplify.result.add_attachment(\n                    'Analysis Report',\n                    '{}.html'.format(sample_id, ), base64.b64encode(full_report))\n            except Exception as e:\n                # Attachment cannot be larger than 3 MB\n                siemplify.LOGGER.error(\n                    \"Can not add html report for {}:\\n{}.\".format(sample_id,\n                                                              str(e)))\n\n            try:\n                # Download pcap\n                pcap = cisco_threat_grid.get_sample_pcap(sample_id)\n                siemplify.result.add_attachment(\n                    'Network Pcap',\n                    '{}.pcap'.format(sample_id, ), base64.b64encode(pcap))\n            except Exception as e:\n                # Attachment cannot be larger than 3 MB\n                siemplify.LOGGER.error(\n                    \"Can not add pcap for {}:\\n{}.\".format(sample_id,\n                                                              str(e)))\n\n            try:\n                # Download screenshot\n                screenshot = cisco_threat_grid.get_sample_screenshot(sample_id)\n                siemplify.result.add_attachment(\n                    'Screenshot',\n                    '{}.png'.format(sample_id, ), base64.b64encode(screenshot))\n            except Exception as e:\n                # Attachment cannot be larger than 3 MB\n                siemplify.LOGGER.error(\n                    \"Can not add screenshot for {}:\\n{}.\".format(sample_id,\n                                                              str(e)))\n\n            try:\n                threat = cisco_threat_grid.get_sample_threat(sample_id)\n                threat_table = cisco_threat_grid.create_threat_table(threat)\n                if threat_table:\n                    csv_output = construct_csv(threat_table)\n                    siemplify.result.add_data_table(\"Threat Report\", csv_output)\n\n            except Exception as e:\n                # Attachment cannot be larger than 3 MB\n                siemplify.LOGGER.error(\n                    \"Can not add threat table for {}:\\n{}.\".format(\n                        sample_id,\n                        str(e)))\n\n            max_severity = threat.get(\"max-severity\", -1)\n            max_confidence = threat.get(\"max-confidence\", -1)\n            score = threat.get(\"score\", -1)\n\n            output_massage = \"Analysis completed. Score: {} - Max severity: {} - Max confidence: {}\".format(\n                score, max_severity, max_confidence)\n\n            siemplify.end(output_massage, 'true', EXECUTION_STATE_COMPLETED)\n\n        else:\n            siemplify.LOGGER.info(\"Sample {} is pending for analysis.\".format(sample_id))\n            output_massage = \"Waiting for analysis to complete: {}\".format(sample_id)\n            siemplify.end(output_massage, sample_id, EXECUTION_STATE_INPROGRESS)\n\n    except Exception as e:\n        siemplify.LOGGER.exception(e)\n        raise\n\n\nif __name__ == \"__main__\":\n    if len(sys.argv) < 3 or sys.argv[2] == 'True':\n        main()\n    else:\n        analyze_async()\n",
+    "ScriptResultName": "score",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

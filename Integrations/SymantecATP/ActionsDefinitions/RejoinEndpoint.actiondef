@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1530617082789, 
+    "Creator": "admin", 
+    "Description": "Rejoin endpoint in Symantec Endpoint Protection", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SymantecATP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530617082789, 
+    "Name": "Rejoin Endpoint", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecATPManager import SymantecATPManager\nfrom SiemplifyDataModel import EntityTypes\n\nATP_PROVIDER = 'SymantecATP'\nRESULT_TABLE_NAME = \"Command IDs\"\nACTION_NAME = \"SymantecATP_Rejoin Endpoint\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(ATP_PROVIDER)\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    atp_manager = SymantecATPManager(conf.get('API Root'), conf.get('Client ID'), conf.get('Client Secret'), verify_ssl)\n\n    errors = []\n    command_ids_csv = ['Entity Identifier, Command ID']\n    rejoined_entities = []\n    command_ids = []\n\n    target_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.ADDRESS or\n                       entity.entity_type == EntityTypes.HOSTNAME]\n\n    for entity in target_entities:\n        try:\n            if entity.entity_type == EntityTypes.ADDRESS:\n                entity_uuid = atp_manager.get_endpoint_uuid_by_ip(entity.identifier)\n            else:\n                entity_uuid = atp_manager.get_endpoint_uuid_by_hostname(entity.udentifier)\n\n            command_id = atp_manager.rejoin_endpoint_by_uid(entity_uuid)\n\n            if command_id:\n                command_ids_csv.append(\"{0}, {1}\".format(entity.identifier, command_id))\n                rejoined_entities.append(entity)\n                command_ids.append(command_id)\n\n        except Exception as err:\n            error_message = 'Error rejoin \"{0}\", Error: {1}'.format(entity.identifier, unicode(err))\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    # Check if CSV contain values and not only header.\n    if len(command_ids_csv) > 1:\n        output_message = \"{0} rejoined successfully.\".format(','.join([entity.identifier for entity in\n                                                                       rejoined_entities]))\n\n        siemplify.result.add_data_table(RESULT_TABLE_NAME, command_ids_csv)\n\n    else:\n        output_message = \"No entities were rejoined.\"\n\n    # Attach errors if exists.\n    if errors:\n        output_message = \"{0}, \\n \\n  ERRORS: \\n {1} \".format(output_message, ' \\n '.join(errors))\n\n    siemplify.end(output_message, ','.join(command_ids))\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "command_ids", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 13.76</h2><h5>Published on 13 November, 2020</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     McAfeeMvisionEDRV2\n    </b>\n   </li>\n   <ul>\n    <li>\n     McAfee Mvision EDR V2\n    </li>\n    <ul>\n     <li>\n      NEW! McAfee Mvision EDR V2 integration\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     McAfeeMvisionEPOV2\n    </b>\n   </li>\n   <ul>\n    <li>\n     McAfee Mvision ePO V2\n    </li>\n    <ul>\n     <li>\n      NEW! NEW! McAfee Mvision ePO V2 integration. Available on the Siemplify version 5.3 and higher.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "13.76",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "16/11/20",
+    "Title": "Release Notes"
+}

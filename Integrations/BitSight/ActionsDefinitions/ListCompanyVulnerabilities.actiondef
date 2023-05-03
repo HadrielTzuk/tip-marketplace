@@ -1,0 +1,57 @@
+{
+    "Id": -1,
+    "Creator": "admin",
+    "IntegrationIdentifier": "BitSight",
+    "Name": "List Company Vulnerabilities",
+    "Description": "List vulnerabilities related to the company in BitSight.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 0,
+    "ModificationTimeUnixTimeInMs": 0,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "{\"stats\":[{\"id\":\"CVE-2xxx-xxx\",\"name\":\"CVE-2xxx-xxxx\",\"first_seen\":\"2021-07-15\",\"event_count\":4,\"host_count\":4,\"confidence\":\"LOW\"},{\"id\":\"CVE-2xxx-xxxx\",\"name\":\"CVE-2xxx-xxxx\",\"first_seen\":\"2021-07-15\",\"event_count\":4,\"host_count\":4,\"confidence\":\"LOW\"}]}",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "Name": "Company Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the company for which you want to return vulnerabilities.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Only High Confidence",
+            "Type": 1,
+            "DefaultValue": true,
+            "Value": true,
+            "IsMandatory": false,
+            "Description": "If enabled, action will only return vulnerabilities with high confidence.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Vulnerabilities To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many vulnerabilities you want to return. Default: 50.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

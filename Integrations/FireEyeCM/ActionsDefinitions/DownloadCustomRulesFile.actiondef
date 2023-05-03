@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Download custom rules file from FireEye CM.",
+    "Id": -1,
+    "IntegrationIdentifier": "FireEyeCM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Download Custom Rules File",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"file_path\":\"/var/dir/Siemplify_custom_rule_file.txt\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Sensor Name",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specify the name of the sensor, where you want to download the custom rules file from. If nothing is specified here, action will try to find the sensor automatically.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Download Folder Path",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the absolute path to the folder, where the file should be downloaded to.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Overwrite",
+            "Type": 1,
+            "Value": "True",
+            "DefaultValue": "True",
+            "IsMandatory": true,
+            "Description": "If enabled, action will overwrite the existing file with the same path.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

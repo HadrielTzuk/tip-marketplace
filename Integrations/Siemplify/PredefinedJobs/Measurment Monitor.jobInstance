@@ -1,0 +1,11 @@
+{
+	"Name": "Measurment Monitor",
+	"Category": "Siemplify",
+	"Creator": "Siemplify System",
+	"RunIntervalInSeconds": 86400,
+	"Description": "Sends an email report of various system measurement to configured admins",
+	"IsEnabled": false,
+	"IsCustom": false,
+	"Version": 1.0,
+	"Params": []
+}

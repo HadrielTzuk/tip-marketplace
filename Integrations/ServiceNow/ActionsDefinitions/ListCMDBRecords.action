@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1517416445121,
+    "Creator": "admin",
+    "Description": "List CMDB records from the same class in ServiceNow.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"result\": [{\"sys_id\": \"02ece63e0b203200dc03650d37673xxx\", \"name\": \"AMSHumanCapital_development\"}, {\"sys_id\": \"0d62dfeb1394130068227f176144bxxx\", \"name\": \"ACME Citrix License server\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517416445121,
+    "Name": "List CMDB Records",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517835807096,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify name of the class, from where you want to list records. Example: cmdb_ci_appl.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517835807096,
+            "Name": "Class Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517835807096,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify query filter for the results. Visit documentation to get more details. Example of the filter: sys_idLIKE1^sys_idSTARTSWITH0.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517835807096,
+            "Name": "Query Filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517835807096,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many records to return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517835807096,
+            "Name": "Max Records To Return",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

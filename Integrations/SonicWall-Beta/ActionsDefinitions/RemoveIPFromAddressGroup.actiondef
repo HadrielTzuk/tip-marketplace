@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244, 
+    "Creator": "admin", 
+    "Description": "Remove IP address from specific SonicWall Address Group. Caution: Successful action execution commits all uncommitted changes. This is a SonicWall limitation.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SonicWall-Beta", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1570446244, 
+    "Name": "Remove IP from Address Group", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify from which group you want to remove the IP address. Groups that contain unicode characters are not supported. This is a SonicWall limitation.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1535884906829, 
+            "Name": "Group Name", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

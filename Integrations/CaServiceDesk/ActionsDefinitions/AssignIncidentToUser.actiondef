@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1524499103614,
+    "Creator": "admin",
+    "Description": "Assign an incident to a specific user",
+    "Id": -1,
+    "IntegrationIdentifier": "CaServiceDesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524499103614,
+    "Name": "Assign Incident To User",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1524499103614,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Incident number",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1524499103614,
+            "Name": "Ticket ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1524499103614,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Username to assign the incident to.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1524499103614,
+            "Name": "Username",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom CaSoapManager import CaSoapManager\r\n\r\n# Consts\r\nACTION_SCRIPT_NAME = 'Assign Incident To User'\r\n\r\n\r\ndef main():\r\n\r\n    siemplify = SiemplifyAction()\r\n    siemplify.script_name = ACTION_SCRIPT_NAME\r\n\r\n    conf = siemplify.get_configuration('CaServiceDesk')\r\n\r\n    api_root = conf['Api Root']\r\n    username = conf['Username']\r\n    password = conf['Password']\r\n\r\n    ca_manager = CaSoapManager(api_root, username, password)\r\n\r\n    # Parameters\r\n    ticket_id = siemplify.parameters.get('Ticket ID')\r\n    username = siemplify.parameters.get('Username')\r\n\r\n    result_value = ca_manager.assign_incident_to_user(ticket_id, username)\r\n\r\n    if result_value:\r\n        output_message = 'Ticket with id \"{0}\" assigned to \"{1}\"'.format(ticket_id, username)\r\n    else:\r\n        output_message = 'Ticket with id \"{0}\" was not assigned to \"{1}\"'\r\n\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n",
+    "ScriptResultName": "ScriptResult",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

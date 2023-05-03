@@ -1,0 +1,54 @@
+{
+    "CreationTimeUnixTimeInMs": 1506519447027,
+    "Creator": "admin",
+    "Description": "Closes the case the current alert has been grouped to",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506519447027,
+    "Name": "Close Case",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1510914865800,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Closure reason.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914865800,
+            "Name": "Reason",
+            "Type": 5,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1510914865800,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Root cause of the case closure.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914865800,
+            "Name": "Root Cause",
+            "Type": 6,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1510914865800,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comment content.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914865800,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import *\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\t\n\tcaseStatus = siemplify.case.status \n\tStatusResult = None\n\t\n\tif (caseStatus != 1):\n\t\toutput_message = \"Cannot close case, as it is allready not opened.\"\n\t\tStatusResult = \"False\"\n\telse:\n\t\troot_cause = siemplify.parameters[\"Root Cause\"]\n\t\tcomment = siemplify.parameters[\"Comment\"]\n\t\treason = siemplify.parameters[\"Reason\"]\n\t\tsiemplify.close_case(root_cause,comment,reason)\n\t\tStatusResult = \"True\"\n\t\t\n\t\toutput_message = \"The case was closed. \\n Root Cause: %s \\n Comment: %s \\n Reason: %s\" % (root_cause,comment,reason)\t\n\tsiemplify.end(output_message, StatusResult)\n\nif __name__ == '__main__':\n\tmain()\n",
+    "ScriptResultName": "StatusResult",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

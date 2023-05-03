@@ -1,0 +1,121 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Create a rule group in AWS WAF.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSWAF",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Create Rule Group",
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"Regional\":[\"Rule_group_name\"],\"CloudFront\":[\"Rule_group_name\"]}]",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the rule group. Note: The name must have 1-128 characters. Valid characters: A-Z, a-z, 0-9, - (hyphen), and _ (underscore).",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "CloudFront",
+            "Description": "Specify what should be the scope for the creation of the rule group. If “Both” is selected, action will create a Rule Group in Regional and CloudFront scopes.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Scope",
+            "OptionalValues": [
+                "CloudFront",
+                "Regional",
+                "Both"
+            ],
+            "Type": 15,
+            "Value": "CloudFront"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "100",
+            "Description": "Specify the capacity of the rule group. Note: you can’t change the capacity after the group is created. Maximum is 1500.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Capacity",
+            "Type": 0,
+            "Value": "100"
+        },
+        {
+             "CreationTimeUnixTimeInMs": 1535381792970,
+             "CustomActionId": -1,
+             "DefaultValue": "True",
+             "Description": "If enabled, AWS WAF will store a sampling of the web requests that match the rules.",
+             "Id": -1,
+             "IsMandatory": true,
+             "ModificationTimeUnixTimeInMs": 1535381792970,
+             "Name": "Enable Sampled Requests",
+             "Type": 1,
+             "Value": "True"
+        },
+        {
+             "CreationTimeUnixTimeInMs": 1535381792970,
+             "CustomActionId": -1,
+             "DefaultValue": "True",
+             "Description": "If enabled, the associated resource sends metrics to CloudWatch.",
+             "Id": -1,
+             "IsMandatory": true,
+             "ModificationTimeUnixTimeInMs": 1535381792970,
+             "Name": "Enable CloudWatch Metrics",
+             "Type": 1,
+             "Value": "True"
+        },
+        {
+             "CreationTimeUnixTimeInMs": 1535381792970,
+             "CustomActionId": -1,
+             "DefaultValue": "",
+             "Description": "Specify the name of the CloudWatch Metric. Note: The name must have 1-128 characters. Valid characters: A-Z, a-z, 0-9, - (hyphen), and _ (underscore).",
+             "Id": -1,
+             "IsMandatory": true,
+             "ModificationTimeUnixTimeInMs": 1535381792970,
+             "Name": "CloudWatch Metric Name",
+             "Type": 0,
+             "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the description for the Rule Group.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Description",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify additional tags that should be added to the Rule Group. Format: key_1:value_1,key_2:value_1.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Tags",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

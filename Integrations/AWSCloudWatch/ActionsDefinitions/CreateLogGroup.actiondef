@@ -1,0 +1,32 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Create a log group in AWS CloudWatch.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSCloudWatch",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "{\"group_name\": \"Amit2Test\"}",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Create Log Group",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name for the new log group.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Log Group Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

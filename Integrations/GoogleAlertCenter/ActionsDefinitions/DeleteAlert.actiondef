@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Delete an alert in Google Alert Center. Note: it takes 30 days for the alert to fully disappear in Google Alert Center, before that they can still be recovered.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleAlertCenter",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Delete Alert",
+    "Parameters": [
+        {
+            "Name": "Alert ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the id of the alert that needs to be deleted.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

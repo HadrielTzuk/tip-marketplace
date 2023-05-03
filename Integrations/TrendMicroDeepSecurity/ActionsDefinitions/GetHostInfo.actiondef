@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1538566551898, 
+    "Creator": "Admin", 
+    "Description": "Describe a computer", 
+    "Id": -1, 
+    "IntegrationIdentifier": "TrendMicroDeepSecurity", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1538566551898, 
+    "Name": "Get Host Info", 
+    "Parameters": [], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom TrendmicroDeepSecurityManager import TrendmicroManager\nfrom SiemplifyAction import SiemplifyAction\nimport json\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('TrendMicro')\n    api_key = conf.get('Api Secret Key')\n    api_version = conf.get('Api Version')\n    server_address = conf.get('Server Address')\n    use_ssl = conf.get(\"Verify SSL\")\n    trendmicro_manager = TrendmicroManager(api_key, server_address, api_version, use_ssl)\n\n    entities = []\n\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.HOSTNAME and not entity.is_internal:\n            computer_id = trendmicro_manager.get_computer_id_by_name(entity.identifier)\n            if computer_id:\n                computer_details = trendmicro_manager.get_computer_info(computer_id)\n                if computer_details:\n                    siemplify.result.add_json(entity.identifier, json.dumps(computer_details))\n\n                    # TODO: enrich? (Meny)\n                    entities.append(entity.identifier)\n\n    if entities:\n        output_message = \"Successfully get computer details\"\n    else:\n        output_message = \"Not found hosts details\"\n\n    siemplify.end(output_message, 'true')\n\n\nif __name__ == \"__main__\":\n    main()", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Version": 1.0
+}

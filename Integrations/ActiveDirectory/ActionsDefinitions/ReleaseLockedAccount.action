@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1514736520880, 
+    "Creator": "admin", 
+    "Description": "Release locked account", 
+    "Id": -1, 
+    "IntegrationIdentifier": "ActiveDirectory", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1514736520880, 
+    "Name": "Release Locked Account", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Type": 0, 
+    "Version": 2.0
+}

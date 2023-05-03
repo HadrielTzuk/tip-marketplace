@@ -1,0 +1,80 @@
+{
+    "CreationTimeUnixTimeInMs": 1513614105103,
+    "Creator": "admin",
+    "Description": "Send an advanced message to a Slack channel or user. Action provides an ability to send 'simple' text messages and 'rich' Slack block messages with buttons, advanced formatting and more. Please see https://api.slack.com/block-kit for the block messages reference. Note that action is not working on Siemplify entities. This action can be used together with the 'Wait for Reply With Webhook' action to first send a 'block' message with a webhook to a user, and when later with 'Wait for Reply With Webhook' action check for a user's response.",
+    "Id": -1,
+    "IntegrationIdentifier": "Slack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1663342003000,
+    "Name": "Send Advanced Message",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"U043FPEMATG\", \"EntityResult\": {\"channel\": \"D044C3DUMB2\", \"message\": {\"bot_id\": \"B02D9QYM7P0\", \"type\": \"message\", \"text\": \"test msg\", \"user\": \"U02D1RPLVST\", \"ts\": \"1666008612.116169\", \"app_id\": \"A02DDGD942Z\", \"team\": \"T02CX3N6B0B\", \"bot_profile\": {\"id\": \"B02D9QYM7P0\", \"app_id\": \"A02DDGD942Z\", \"name\": \"test\", \"icons\": {\"image_36\": \"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_36.png\", \"image_48\": \"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_48.png\", \"image_72\": \"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/service_72.png\"}, \"deleted\": false, \"updated\": 1630908872, \"team_id\": \"T02CX3N6B0B\"}, \"blocks\": [{\"type\": \"rich_text\", \"block_id\": \"RJvg\", \"elements\": [{\"type\": \"rich_text_section\", \"elements\": [{\"type\": \"text\", \"text\": \"test msg\"}]}]}]}, \"ts\": \"1666008612.116169\", \"ok\": true}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1513614626960,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the recipient to send a message to.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513614626960,
+            "Name": "Recipient",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1513614626960,
+            "CustomActionId": -1,
+            "DefaultValue": "Name",
+            "Description": "Specify channel or user name (full name) to send message to. Optionally channel or user id can be specified, or email address of a user.",
+            "OptionalValues": [
+                "Name",
+                "Email",
+                "Channel or User ID"
+            ],
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513614626960,
+            "Name": "Recipient Type",
+            "Type": 15,
+            "Value": "Name"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1513614626960,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the message content to send.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513614626960,
+            "Name": "Message",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663342003000,
+            "CustomActionId": -1,
+            "DefaultValue": "Text",
+            "Description": "Specify the message type to send.",
+            "OptionalValues": [
+                "Text",
+                "Blocks"
+            ],
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1663342003000,
+            "Name": "Message Type",
+            "Type": 15,
+            "Value": "Text"
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,62 @@
+{
+    "CreationTimeUnixTimeInMs": 1524559211168,
+    "Creator": "admin",
+    "Description": "Update alert in Cyberint.",
+    "Id": -1,
+    "IntegrationIdentifier": "Cyberint",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524559211168,
+    "Name": "Update Alert",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the id of the alert that would need to have the status updated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Alert ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "Select One",
+            "Description": "Specify the status for the event. Note: if \"Closed\" is selected, \"Closure Reason\" needs to be provided as well.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Status",
+            "Type": 15,
+            "OptionalValues": [
+                "Select One",
+                "Open",
+                "Acknowledged",
+                "Closed"
+            ]
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "Select One",
+            "Description": "Specify the closure reason for closed status.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Closure Reason",
+            "Type": 15,
+            "OptionalValues": [
+                "Select One",
+                "Resolved",
+                "Irrelevant",
+                "False Positive"
+            ]
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,264 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 14.6</h2><h5>Published on 10 March, 2021</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     CSV
+    </b>
+   </li>
+   <ul>
+    <li>
+     CSV
+    </li>
+    <ul>
+     <li>
+      Added new optional parameters for actions "Search by Entity" and "Search by String"
+     </li>
+     <li>
+      Updated output messages for actions "Search by Entity" and "Search by String"
+     </li>
+     <li>
+      Added ability to provide multiple columns in the parameter "CSV Column" for actions "Search by Entity" and "Search by String"
+     </li>
+     <li>
+      Updated action and action parameter descriptions for actions "Search by Entity" and "Search by String"
+     </li>
+     <li>
+      Added ability to apply custom "Alert Name" and "Severity" for alerts ingested by "CSV Connector"
+     </li>
+     <li>
+      Updated connector and connector parameter descriptions in the "CSV Connector"
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Exchange
+    </b>
+   </li>
+   <ul>
+    <li>
+     Exchange
+    </li>
+    <ul>
+     <li>
+      Integration configuration is updated to support Oauth authentication.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ServiceNow
+    </b>
+   </li>
+   <ul>
+    <li>
+     ServiceNow
+    </li>
+    <ul>
+     <li>
+      Added support for Oauth authentication. Please refer to the integration documentation for all of the required steps.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     Exchange
+    </b>
+   </li>
+   <ul>
+    <li>
+     Add Senders to Exchange-Siemplify Inbox Rule
+    </li>
+    <ul>
+     <li>
+      NEW! New Action Added - Add Senders to Exchange-Siemplify Inbox Rules
+     </li>
+    </ul>
+    <li>
+     Remove Senders from Exchange-Siemplify Inbox Rules
+    </li>
+    <ul>
+     <li>
+      NEW! New Action Added - Remove Senders from Exchange-Siemplify Inbox Rules
+     </li>
+    </ul>
+    <li>
+     Add Domains to Exchange-Siemplify Inbox Rules
+    </li>
+    <ul>
+     <li>
+      NEW! New Action Added - Add Domains to Exchange-Siemplify Inbox Rules
+     </li>
+    </ul>
+    <li>
+     Generate Token
+    </li>
+    <ul>
+     <li>
+      NEW! New Generate Token action added that can be used to obtain Oauth token for authentication.
+     </li>
+    </ul>
+    <li>
+     Get Authorization
+    </li>
+    <ul>
+     <li>
+      NEW! New Get Authorization action added that can be used to obtain Oauth token for authentication.
+     </li>
+    </ul>
+    <li>
+     List Exchange-Siemplify Inbox Rules
+    </li>
+    <ul>
+     <li>
+      NEW! New Action Added - List Exchange-Siemplify Inbox Rules
+     </li>
+    </ul>
+    <li>
+     Remove Domains from Exchange-Siemplify Inbox Rules
+    </li>
+    <ul>
+     <li>
+      NEW! New Action Added - Remove Domains from Exchange-Siemplify Inbox Rules
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     RSAArcher
+    </b>
+   </li>
+   <ul>
+    <li>
+     Add Incident Journal Entry
+    </li>
+    <ul>
+     <li>
+      Action "Add Incident Journal Entry" is now dynamically searching for the relevant application and field ids instead of working with the hardcoded ones.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     SentinelOneV2
+    </b>
+   </li>
+   <ul>
+    <li>
+     Download Threat File
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action "Download Threat File"
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ServiceNow
+    </b>
+   </li>
+   <ul>
+    <li>
+     Get Oauth Token
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action "Get OAuth Token".
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Siemplify
+    </b>
+   </li>
+   <ul>
+    <li>
+     Remove Tag
+    </li>
+    <ul>
+     <li>
+      NEW! New action to automatically remove tags from a Siemplify case.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Jobs</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     Exchange
+    </b>
+   </li>
+   <ul>
+    <li>
+     Oauth Token Expiry Notification Job
+    </li>
+    <ul>
+     <li>
+      NEW! New Oauth Token Expiry Notification Job added.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     QRadar
+    </b>
+   </li>
+   <ul>
+    <li>
+     SyncCloseOffenses
+    </li>
+    <ul>
+     <li>
+      Updated the job logic to not close offenses based on the test Siemplify alerts.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     Exchange
+    </b>
+   </li>
+   <ul>
+    <li>
+     Exchange Mail Connector v2 with Oauth Authentication
+    </li>
+    <ul>
+     <li>
+      NEW! New Exchange Mail Connector v2 with Oauth Authentication connector added.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Splunk
+    </b>
+   </li>
+   <ul>
+    <li>
+     Notable Events Connector
+    </li>
+    <ul>
+     <li>
+      Added new optional parameters "Multivalue Fields" and "Extract Base Events" to the connector "Notable Events Connector"
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

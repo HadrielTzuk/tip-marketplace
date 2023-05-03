@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Symantec Blue Coat ProxySG.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "SymantecBlueCoatProxySG",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1655285436,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11775"
+    },
+    {
+        "ChangeDescription": "New Action Added - Block Entities.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Block Entities",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1656489978,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11777"
+    }
+]

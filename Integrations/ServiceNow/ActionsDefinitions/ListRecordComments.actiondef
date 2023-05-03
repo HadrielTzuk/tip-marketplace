@@ -1,0 +1,75 @@
+{
+    "CreationTimeUnixTimeInMs": 1517416445121,
+    "Creator": "admin",
+    "Description": "List comments related to a specific table record in ServiceNow.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"sys_id\":\"43551xxxxxxxxxxxxx\",\"sys_created_on\":\"2021-09-03 10:29:48\",\"name\":\"incident\",\"element_id\":\"552c4xxxxxxxxxxxxx\",\"sys_tags\":\"\",\"value\":\"test\",\"sys_created_by\":\"admin\",\"element\":\"comments\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517416445121,
+    "Name": "List Record Comments",
+    "Parameters": [
+         {
+             "CreationTimeUnixTimeInMs": 1517835807096,
+             "CustomActionId": -1,
+             "DefaultValue": "",
+             "Description": "Specify the name of the table for which you want to list comments or work notes. Example: incident.",
+             "Id": -1,
+             "IsMandatory": true,
+             "ModificationTimeUnixTimeInMs": 1517835807096,
+             "Name": "Table Name",
+             "Type": 0,
+             "Value": ""
+         },
+         {
+             "CreationTimeUnixTimeInMs": 1517835807096,
+             "CustomActionId": -1,
+             "DefaultValue": "",
+             "Description": "Specify the record ID for which you want to list comments or work notes.",
+             "Id": -1,
+             "IsMandatory": true,
+             "ModificationTimeUnixTimeInMs": 1517835807096,
+             "Name": "Record Sys ID",
+             "Type": 0,
+             "Value": ""
+        },
+        {
+            "Name": "Type",
+            "Type": 15,
+            "Value": "Comment",
+            "DefaultValue": "Comment",
+            "IsMandatory": true,
+            "Description": "Specify whether comment or work note should be listed.",
+            "OptionalValues": [
+                "Comment",
+                "Work Note"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1533725706168,
+            "ModificationTimeUnixTimeInMs": 1533725706168
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517835807096,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many results to return. Default: 50.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517835807096,
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "Value": 50
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

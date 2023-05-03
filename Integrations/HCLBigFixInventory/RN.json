@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - HCL BigFix Inventory.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "HCLBigFixInventory",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1657692968,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11853"
+    }
+]

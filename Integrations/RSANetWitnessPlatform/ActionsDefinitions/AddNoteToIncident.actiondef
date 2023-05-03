@@ -1,0 +1,54 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244,
+    "Creator": "admin",
+    "Description": "Add Note to Incident in RSA Netwitness. Requires RSA Netwitness Respond license, configured Web Username and Web Password in the integration configuration.",
+    "Id": -1,
+    "IntegrationIdentifier": "RSANetWitnessPlatform",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Add Note to Incident",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify ID of the incident that needs to be updated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Incident ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify which note should be added to.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Note",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the author of the note.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Author",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}
+

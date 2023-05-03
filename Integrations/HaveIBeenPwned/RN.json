@@ -1,0 +1,49 @@
+[
+    {
+        "ChangeDescription": "Updated to match latest version. New \"Api Key\" param required",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Have I Been Pwned",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "TIPG-169"
+    },
+    {
+        "ChangeDescription": "Updated action to verify API key by using an authenticated API endpoint.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Ping",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1589776104,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2923"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Have I Been Pwned",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Have I Been Pwned",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

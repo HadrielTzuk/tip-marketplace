@@ -1,0 +1,496 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 12.30</h2><h5>Published on 17 April, 2020</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     ConnectWise
+    </b>
+   </li>
+   <ul>
+    <li>
+     ConnectWise
+    </li>
+    <ul>
+     <li>
+      REGRESSIVE! Added new property 'Client ID' in integration, and made changes in manager and all actions accordingly
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     DigitalShadows
+    </b>
+   </li>
+   <ul>
+    <li>
+     DigitalShadows
+    </li>
+    <ul>
+     <li>
+      NEW! Created the Integration
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     McAfeeEPO
+    </b>
+   </li>
+   <ul>
+    <li>
+     McAfeeEPO
+    </li>
+    <ul>
+     <li>
+      Fixed comparison with the IPHostName instead of ComputerName
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     McAfeeESM
+    </b>
+   </li>
+   <ul>
+    <li>
+     McAfee ESM
+    </li>
+    <ul>
+     <li>
+      Added encryption for local token. Added DPU support.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Office365CloudAppSecurity
+    </b>
+   </li>
+   <ul>
+    <li>
+     Office 365 CloudApp Security
+    </li>
+    <ul>
+     <li>
+      Fix Unicode issues
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     SentinelOneV2
+    </b>
+   </li>
+   <ul>
+    <li>
+     SentinelOneV2
+    </li>
+    <ul>
+     <li>
+      REGRESSIVE! Implemented new authentication method for the integration.
+     </li>
+     <li>
+      REGRESSIVE! Added logging to all actions.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ServiceNow
+    </b>
+   </li>
+   <ul>
+    <li>
+     ServiceNow
+    </li>
+    <ul>
+     <li>
+      Added validation for Api Root integration parameter.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ThreatQ
+    </b>
+   </li>
+   <ul>
+    <li>
+     ThreatQ
+    </li>
+    <ul>
+     <li>
+      Refactoring of the Integration and impementation of new actions. Customers who have a PS version of the ThreatQ integration will have to update their playbooks to align with the new integration version.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     ConnectWise
+    </b>
+   </li>
+   <ul>
+    <li>
+     UpdateTicket
+    </li>
+    <ul>
+     <li>
+      Summary field is now being truncated if character count is more than 100
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     CrowdStrikeFalcon
+    </b>
+   </li>
+   <ul>
+    <li>
+     Contain Endpoint
+    </li>
+    <ul>
+     <li>
+      Edited the result status, so that the output message logs correctly.
+     </li>
+    </ul>
+    <li>
+     Lift Contained Endpoint
+    </li>
+    <ul>
+     <li>
+      Edited the result status, so that the output message logs correctly.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     FalconSandbox
+    </b>
+   </li>
+   <ul>
+    <li>
+     Analyze File
+    </li>
+    <ul>
+     <li>
+      Fixed log mechanism.
+     </li>
+    </ul>
+    <li>
+     Ping
+    </li>
+    <ul>
+     <li>
+      Fixed ping action.
+     </li>
+    </ul>
+    <li>
+     Get Hash Scan Report
+    </li>
+    <ul>
+     <li>
+      Fixed the issue with wrong output message when entity was enriched. Added logs and changed the deprecated endpoint for downloading report data with the new one.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     McAfeeESM
+    </b>
+   </li>
+   <ul>
+    <li>
+     Send Query To ESM
+    </li>
+    <ul>
+     <li>
+      Removed sensitive data from logs.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     MISP
+    </b>
+   </li>
+   <ul>
+    <li>
+     Create File Misp Object
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for adding file objects to MISP
+     </li>
+    </ul>
+    <li>
+     Create IP-Port Misp Object
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for adding IP-Port objects to MISP
+     </li>
+    </ul>
+    <li>
+     Create network-connection Misp Object
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for adding network connection objects to MISP
+     </li>
+    </ul>
+    <li>
+     Create Url Misp Object
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for adding URL objects to MISP
+     </li>
+    </ul>
+    <li>
+     Create VirusTotal Report Object
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for adding VirusTotal report objects to MISP
+     </li>
+    </ul>
+    <li>
+     Delete an Attribute
+    </li>
+    <ul>
+     <li>
+      Changed parameter types to string
+     </li>
+    </ul>
+    <li>
+     Remove Tag From an Attribute
+    </li>
+    <ul>
+     <li>
+      Changed parameter types to string
+     </li>
+    </ul>
+    <li>
+     Remove Tag From an Event
+    </li>
+    <ul>
+     <li>
+      Changed parameter types to string
+     </li>
+    </ul>
+    <li>
+     Add Tag to an Event
+    </li>
+    <ul>
+     <li>
+      Changed parameter types to string
+     </li>
+    </ul>
+    <li>
+     Add Tag to an Attribute
+    </li>
+    <ul>
+     <li>
+      Changed parameter types to string
+     </li>
+    </ul>
+    <li>
+     Add Sighting to an Attribute
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for adding sightings to an attribute
+     </li>
+    </ul>
+    <li>
+     List Sightings of an Attribute
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for listing sightings of an attribute
+     </li>
+    </ul>
+    <li>
+     Set IDS Flag for an Attribute
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for setting the IDS flag of an attribute
+     </li>
+    </ul>
+    <li>
+     Unset IDS Flag for an Attribute
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for unsetting the IDS flag of an attribute
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     RecordedFuture
+    </b>
+   </li>
+   <ul>
+    <li>
+     RecordedFuture Enrichment Actions
+    </li>
+    <ul>
+     <li>
+      Removal of unused parameters that caused issues in enrichment actions.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     SentinelOneV2
+    </b>
+   </li>
+   <ul>
+    <li>
+     Get System Status
+    </li>
+    <ul>
+     <li>
+      REGRESSIVE! Changed new authentication method and implemented new logic for the action.
+     </li>
+    </ul>
+    <li>
+     Get Events For Endpoint Hours Back
+    </li>
+    <ul>
+     <li>
+      REGRESSIVE! Changed to new authentication method and implemented new logic for the action.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Talos
+    </b>
+   </li>
+   <ul>
+    <li>
+     WhoIs Action
+    </li>
+    <ul>
+     <li>
+      Added support for JSON results and JSON result example for use in playbooks.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ThreatConnect
+    </b>
+   </li>
+   <ul>
+    <li>
+     Enrich Entities
+    </li>
+    <ul>
+     <li>
+      Fixed the enrichment issue with hashes, the indicator value should be uppercase
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ThreatQ
+    </b>
+   </li>
+   <ul>
+    <li>
+     Get Incident Details
+    </li>
+    <ul>
+     <li>
+      Action will not enrich entities. Instead, we have other actions for this purpose.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     Endgame
+    </b>
+   </li>
+   <ul>
+    <li>
+     Endgame Connector
+    </li>
+    <ul>
+     <li>
+      Fixed an issue connected with the pagination of alerts fetching.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     MicrosoftAzureSentinel
+    </b>
+   </li>
+   <ul>
+    <li>
+     Microsoft Azure Sentinel Incident Connector
+    </li>
+    <ul>
+     <li>
+      Fixed the creation of AlertInfo to allow alerts to be processed properly
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     QRadar
+    </b>
+   </li>
+   <ul>
+    <li>
+     QRadar New Correlations Events Connector
+    </li>
+    <ul>
+     <li>
+      Added support for non-ASCII data.
+     </li>
+     <li>
+      Fixed the bug when connector stops if the timestamp file gets corrupted
+     </li>
+    </ul>
+    <li>
+     Qradar Correlation Events Connector V2
+    </li>
+    <ul>
+     <li>
+      NEW! Added a new connector for QRadar V7.3.2+.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     SentinelOneV2
+    </b>
+   </li>
+   <ul>
+    <li>
+     SentinelOne - Query Connector
+    </li>
+    <ul>
+     <li>
+      REGRESSIVE! Adjusted connector to new authentication system and implemented new events fetching logic.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

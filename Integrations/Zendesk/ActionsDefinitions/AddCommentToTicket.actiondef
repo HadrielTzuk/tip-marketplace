@@ -1,0 +1,65 @@
+{
+    "CreationTimeUnixTimeInMs": 1530620303254,
+    "Creator": "admin",
+    "Description": "Add a comment to an existing ticket",
+    "Id": -1,
+    "IntegrationIdentifier": "Zendesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530620303254,
+    "Name": "Add Comment To Ticket",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530620303254,
+            "CustomActionId": -1,
+            "DefaultValue":  "",
+            "Description": "Specify the Zendesk Ticket ID for which you would like to add a comment.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530620303254,
+            "Name": "Ticket ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530620303254,
+            "CustomActionId": -1,
+            "DefaultValue":  "",
+            "Description": "Provide the text you would like to be contained in the comment body",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530620303254,
+            "Name": "Comment Body",
+            "Type": 11,
+            "Value":  ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530620303254,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specify the name of the author, please make sure this name exists on Zendesk",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530620303254,
+            "Name": "Author Name",
+            "Type": 0,
+            "Value":  ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530620303254,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify whether the comment should be public, or internal. Unchecked means it will be public, checked means it will be internal only.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530620303254,
+            "Name": "Internal Note",
+            "Type": 1,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom Zendesk import ZendeskManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(\"Zendesk\")\n    user_email = conf['User Email Address']\n    api_token = conf('Api Token')\n    zendesk = ZendeskManager(user_email, api_token)\n\n    ticket_id = siemplify.parameters['Ticket ID']\n    comment_body = siemplify.parameters['Comment Body']\n    author_name = siemplify.parameters.get('Author Name', None)\n    comment = zendesk.add_comment_to_ticket(ticket_id=ticket_id, comment_body=comment_body, author_name=author_name)\n\n    if comment:\n        output_message = \"Ticket with id {0} was updated with comment: {1}\".format(ticket_id, comment_body)\n        result_value = 'true'\n    else:\n        output_message = 'There was a problem adding comment to ticket with id: {0}.'.format(ticket_id)\n        result_value = 'false'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

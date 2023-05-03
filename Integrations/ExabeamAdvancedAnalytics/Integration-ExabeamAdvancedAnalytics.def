@@ -1,0 +1,44 @@
+{
+    "Description": "Exabeam Advanced Analytics is the world's most deployed behavioral analytics platform. Advanced Analytics automatically links and analyzes user and entity activity to better inform security analysts about threats and corresponding remediation.",
+    "DisplayName": "Exabeam Advanced Analytics",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/exabeam-advanced-analytics",
+    "Identifier": "ExabeamAdvancedAnalytics",
+    "Categories": [
+        "SIEM",
+        "XDR",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ExabeamAdvancedAnalytics",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https://{api root}"
+        },
+        {
+            "IntegrationIdentifier": "ExabeamAdvancedAnalytics",
+            "isMandatory": true,
+            "PropertyDisplayName": "API Token",
+            "PropertyName": "API Token",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ExabeamAdvancedAnalytics",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path d=\"M15.3 6L5.6 19.383h2.9L16.75 8l1.45 2-8.5 11.717H1L13.85 4l1.45 2zm-2.7 15.733h8.7L24 18l-1.45-2-2.45 3.383h-2.9L21.1 14l-1.45-2-7.05 9.733z\"\/>\r\n<\/svg>\r\n",
+    "Version": 4.0,
+    "MarketingDisplayName": "Exabeam Advanced Analytics"
+}

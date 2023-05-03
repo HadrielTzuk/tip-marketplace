@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1572450486,
+    "Creator": "admin",
+    "Description": "Add values to a watchlist in McAfee ESM. Note: McAfee ESM will allow values of the invalid type to be passed, for example, API will not raise error adding hash to the IP watchlist. Please pay attention to the input.",
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeESM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1572450486,
+    "Name": "Add Values To Watchlist",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1572450486,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the watchlist that needs to be updated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1572450486,
+            "Name": "Watchlist Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1572450486,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of values that need to be added to a watchlist.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1572450486,
+            "Name": "Values to Add",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

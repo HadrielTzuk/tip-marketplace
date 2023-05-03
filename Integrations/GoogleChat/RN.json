@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New integration added - Google Chat.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "GoogleChat",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1656489978,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11746"
+    }
+]

@@ -1,0 +1,137 @@
+{
+    "CreationTimeUnixTimeInMs": 1542188059113,
+    "Creator": "Admin",
+    "Description": "Add path to the exclusion list in SentinelOne.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"userName\": \"user\", \"description\": \"Created by Siemplify.\", \"userId\": \"8237415437026xxxxx\", \"scopeName\": \"Test Group\", \"value\": \"Test Path\", \"source\": \"user\", \"inject\": true, \"updatedAt\": \"2020-07-02T10:47:07.213003Z\", \"osType\": \"windows\", \"scope\": {\"groupIds\": [\"863712577864500060\"]}, \"pathExclusionType\": \"file\", \"type\": \"path\", \"id\": \"926589090764579580\", \"createdAt\": \"2020-07-02T10:47:07.214956Z\", \"mode\": \"suppress\"}, {\"userName\": \"user\", \"description\": \"Created by Siemplify.\", \"userId\": \"8237415437026xxxxx\", \"scopeName\": \"Test Group 2\", \"value\": \"Test Path\", \"source\": \"user\", \"inject\": true, \"updatedAt\": \"2020-07-02T10:47:07.225542Z\", \"osType\": \"windows\", \"scope\": {\"groupIds\": [\"926559911218143489\"]}, \"pathExclusionType\": \"file\", \"type\": \"path\", \"id\": \"926589090865242880\", \"createdAt\": \"2020-07-02T10:47:07.226877Z\", \"mode\": \"suppress\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOneV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542188059113,
+    "Name": "Create Path Exclusion Record",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the path that needs to be added to the exclusion list.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "windows",
+            "Description": "Specify the OS for the path. Possible values: windows, windows_legacy, macos, linux.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Operation System",
+            "Type": 0,
+            "Value": "windows"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of site ids, where path needs to be sent to the exclusion list.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Site IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of group ids, where path needs to be sent to the exclusion list.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Group IDs",
+            "Type": 0,
+            "Value": ""
+        },
+         {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of account ids, where path needs to be sent to the exclusion list.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Account IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify additional information related to the path.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Description",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will add the path to the global exclusion list. Note: when this parameter is enabled, parameters “Site IDs“, “Group IDs“ and “Account IDs“ are ignored.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Add to global exclusion list",
+            "Type": 1,
+            "Value": "False"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "If enabled, action will include subfolders for the provided path. This feature only works, if user provides folder path and not file path.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Include Subfolders",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "Suppress Alerts",
+            "Description": "Specify what mode should be used for the excluded path.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Mode",
+            "Type": 15,
+            "OptionalValues": [
+                "Suppress Alerts",
+                "Interoperability",
+                "Interoperability - Extended",
+                "Performance Focus",
+                "Performance Focus - Extended"
+            ],
+            "Value": "Suppress Alerts"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 4.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

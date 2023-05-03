@@ -1,0 +1,66 @@
+{
+    "Description": "Secure, Rotate and Control Access to Privileged Account Credentials",
+    "DisplayName": "CyberArkVault",
+    "Identifier": "CyberArkVault",
+    "Categories": [
+        "Identity",
+        "IAM",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "CyberArkVault",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://{Base URL}:{Port}"
+        },
+        {
+            "IntegrationIdentifier": "CyberArkVault",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password Vault Api Root",
+            "PropertyName": "Password Vault Api Root",
+            "PropertyType": "2",
+            "Value": "https://{Base URL}:{Port}"
+        },
+        {
+            "IntegrationIdentifier": "CyberArkVault",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CyberArkVault",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CyberArkVault",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Application ID",
+            "PropertyName": "Application ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CyberArkVault",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Use SSL",
+            "PropertyName": "Use SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<!-- Generated by IcoMoon.io --><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><title>CyberArk_IntegrationImage</title><path d=\"M9.28 19.84v-7.552l6.464-3.776 6.656 3.84 7.104-4.096-13.696-7.872-13.312 7.872v15.616l13.504 7.744 13.504-7.744v-8.192l-13.504 7.808-6.72-3.648zM11.072 19.264l4.928-2.816 4.864 2.816v-5.696l-4.864-2.88-4.928 2.88v5.696z\"></path></svg>",
+    "Version": 5.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/cyberarkvault",
+    "MarketingDisplayName": "CyberArk Vault"
+}

@@ -1,0 +1,56 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Create a new group",
+    "Id": -1,
+    "IntegrationIdentifier": "GSuite",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Create Group",
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"kind\":\"admin#directory#group\",\"id\":\"XXXXXX\",\"etag\":\"\\\"XXXXXXXXXXX\\\"\",\"email\":\"XXXXXXXX@XXXXXXXX.com\",\"name\":\"XXXXXXXXXXXXXX\",\"description\":\"\",\"adminCreated\":\"True\"}]",
+        "ResultName": "JsonResult"
+    }],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Email address of the new group.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Email Address",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Display name of the new group.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Description of the new group.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Description",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

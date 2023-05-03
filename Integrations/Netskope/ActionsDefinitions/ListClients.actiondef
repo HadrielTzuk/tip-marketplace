@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1534436861977,
+    "Creator": "Admin",
+    "Description": "List clients.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"client_install_time\": 1532040251, \"users\": [{\"heartbeat_status_since\": 1532040385, \"user_added_time\": 1532040167, \"last_event\": {\"status\": \"Enabled\", \"timestamp\": 1548578307, \"event\": \"Tunnel Up\", \"actor\": \"System\"}, \"device_classification_status\": \"Not Configured\", \"username\": \"john_doe@example.com\", \"user_source\": \"Manual\", \"userkey\": \"00000\", \"_id\": \"00000\", \"heartbeat_status\": \"Active\"}], \"last_event\": {\"status\": \"Enabled\", \"timestamp\": 1548578307, \"event\": \"Tunnel Up\", \"actor\": \"System\"}, \"host_info\": {\"device_model\": \"VMware Virtual Platform\", \"os\": \"Windows\", \"hostname\": \"host000\", \"device_make\": \"VMware, Inc.\", \"os_version\": \"10.0\"}, \"client_version\": \"1.1.1.1\", \"_id\": \"device000\", \"device_id\": \"device000\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Netskope",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534436861977,
+    "Name": "List Clients",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "This acts as a filter on all the entries in the database.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Query",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665793363,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Number of results to return. Default: 25.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665793363,
+            "Name": "Limit",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "clients",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

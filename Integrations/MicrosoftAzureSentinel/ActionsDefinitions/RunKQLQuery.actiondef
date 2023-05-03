@@ -1,0 +1,70 @@
+{
+    "CreationTimeUnixTimeInMs": 1524560820281,
+    "Creator": "klim.lyapin@siemplify.co",
+    "Description": "Run Azure Sentinel KQL Query based on the provided action input parameters.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Avg7Day\": 327, \"EventID\": 4625, \"Account\": \"host.local\\\\some.user\", \"StartTimeUtc\": \"2020-01-08T13:57:26.75Z\", \"LogonTypeName\": \"3 - Network\", \"timestamp\": \"2020-01-08T13:57:26.75Z\", \"CountLast7day\": 2292, \"EndTimeUtc\": \"2020-01-08T17:38:05.337Z\", \"CountToday\": 1554, \"SubStatus\": \"0xc0000071\", \"Computer\": \"us-dc-v01001.host.local\", \"AccountType\": \"User\", \"HostCustomEntity\": \"us-dc-v01001.host.local\", \"WorkstationName\": \"US-DC-V01001\", \"IpAddress\": \"127.0.0.1\", \"AccountCustomEntity\": \"host.local\\\\some.user\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftAzureSentinel",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524560820281,
+    "Name": "Run KQL Query",
+    "Parameters": [
+        {
+            "CustomActionId": -1,
+            "IsMandatory": true,
+            "DefaultValue": "",
+            "Description": "A KQL Query to execute in Azure Sentinel. For example, to get security alerts available in Sentinel, query will be \"SecurityAlert\". Use other action input parameters (time span, limit) to filter the query results. For the examples of KQL queries consider Sentinel \"Logs\" Web page",
+            "Name": "KQL Query",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Time span to look for, use the following format: \nPT + number + (M, H), where M - minutes, H - hours. \nUse P + number + D to specify a number of days. \nCan be combined as P1DT1H1M - 1 day, 1 hour and 1 minute.",
+            "Name": "Time Span",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "180",
+            "Description": "Timeout value for the Azure Sentinel hunting rule API call. Note that Siemplify action python process timeout should be adjusted accordingly for this parameter, to not timeout action sooner than specified value because of the python process timeout.",
+            "Name": "Query Timeout",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "100",
+            "Description": "How many records should be fetched. Optional parameter, if set, adds a \"| limit x\" to the kql query where x is the value set for the record limit. Can be removed if \"limit\" is already set in kql query or not needed.",
+            "Name": "Record Limit",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

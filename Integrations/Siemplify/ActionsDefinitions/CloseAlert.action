@@ -1,0 +1,79 @@
+{
+    "CreationTimeUnixTimeInMs": 1506519447027,
+    "Creator": "admin",
+    "Description": "Closes the current alert",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506519447027,
+    "Name": "Close Alert",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1510914865800,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Alert closure reason.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914865800,
+            "Name": "Reason",
+            "Type": 5,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1510914865800,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Root cause of the alert closure.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914865800,
+            "Name": "Root Cause",
+            "Type": 6,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1510914865800,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comment content.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914865800,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1559656970233,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "User that the closed case will be assigned to.",
+            "Id": 0,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1559656970233,
+            "Name": "Assign To User",
+            "Type": 3,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1559656970236,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Comma separated tags values.",
+            "Id": 0,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1559656970236,
+            "Name": "Tags",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import *\n#from SiemplifyMock import SiemplifyActionMock\nfrom ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_FAILED\n\ndef main():\n    siemplify = SiemplifyAction()\n    #siemplify = SiemplifyActionMock()\n    siemplify.script_name = 'Siemplify-CloseAlert'\n    root_cause = siemplify.parameters[\"Root Cause\"]\n    comment = siemplify.parameters[\"Comment\"]\n    reason = siemplify.parameters[\"Reason\"]\n    tags = siemplify.parameters.get('Tags')\n    user = siemplify.parameters.get('Assign To User')\n    response = siemplify.close_alert(root_cause, comment, reason)\n    \n    tags_list = tags.split(',') if tags else []\n\n    if response.get('is_request_valid') and not response.get('errors'):\n        return_status = EXECUTION_STATE_COMPLETED\n        result_value = \"True\"\n        output_message = \"The alert was closed.\\nRoot Cause: %s\\nComment: %s\\nReason: %s\" % (\n            root_cause, comment, reason)\n        for tag in tags_list:\n            siemplify.add_tag(tag)\n        siemplify.assign_case(user)\n    else:\n        return_status = EXECUTION_STATE_FAILED\n        result_value = \"False\"\n        output_message = \"Failed to close the alert. {0}\".format(', '.join(response.get('errors')))\n        siemplify.LOGGER.error(output_message)\n\n    siemplify.end(output_message, result_value, return_status)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "StatusResult",
+    "Type": 0,
+    "TimeoutSeconds": 600,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

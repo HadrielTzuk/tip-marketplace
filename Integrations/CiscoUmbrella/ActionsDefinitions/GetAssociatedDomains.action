@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1514190021264, 
+    "Creator": "admin", 
+    "Description": "Get associated domains for  a particular hostname", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [\"google.com\", \"twilio.com\", \"gmail.com\"], \"Entity\": \"amazon.com\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "CiscoUmbrella", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1514190021264, 
+    "Name": "Get Associated Domains", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

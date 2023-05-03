@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1534436861977, 
+    "Creator": "Admin", 
+    "Description": "Enrich entities with ProofPoint Email Protection.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "ProofPointPS", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1534436861977, 
+    "Name": "Enrich Entities", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"USERUNIQNAME\"]}", 
+    "Version": 1.0
+}

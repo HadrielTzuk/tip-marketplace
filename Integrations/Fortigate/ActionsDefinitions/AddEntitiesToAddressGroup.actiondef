@@ -1,0 +1,27 @@
+{
+	"CreationTimeUnixTimeInMs": 0,
+	"Creator": "admin",
+	"Description": "Add entities to the address group in Fortigate. Supported entities: URL, IP Address. Note: action will extract domain part of URL entities.",
+	"Id": -1,
+	"IntegrationIdentifier": "Fortigate",
+	"IsCustom": false,
+	"IsEnabled": true,
+	"ModificationTimeUnixTimeInMs": 0,
+	"Name": "Add Entities To Address Group",
+	"Parameters": [{
+		"Name": "Address Group Name",
+		"Type": 0,
+		"DefaultValue": "",
+		"Value": "",
+		"IsMandatory": true,
+		"Description": "Specify the name of the address group to which action should add entities.",
+		"Id": -1,
+		"CustomActionId": -1,
+		"CreationTimeUnixTimeInMs": 0,
+		"ModificationTimeUnixTimeInMs": 0
+	}],
+	"SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"DestinationURL\"]}",
+	"ScriptResultName": "is_success",
+	"Type": 0,
+	"Version": 1.0
+}

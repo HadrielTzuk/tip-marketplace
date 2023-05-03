@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1512460394948, 
+    "Creator": "admin", 
+    "Description": "Get account out of facility (OOF) settings for the provided Siemplify User entity. Note 1: If the target User entity is a username, not a mail address, please run Enrich Entities from Active Directory integration first to try to use the information about User's mail stored in Active Directory. Note 2: For integration to return the information, it should have delegation or impersonation permissions to the target account mailbox. Link to impersonation permission configuration: https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/impersonation-and-ews-in-exchange", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"john_doe@example.com\", \"EntityResult\": {\"state\": \"Disabled\", \"external_audience\": \"All\", \"start\": \"2020-10-15 13:00:00+00:00\", \"end\": \"2020-10-16 13:00:00+00:00\", \"internal_reply\": null, \"external_reply\": null}}, {\"Entity\": \"lilydoe@example.com\", \"EntityResult\": {\"state\": \"Disabled\", \"external_audience\": \"All\", \"start\": \"2020-10-15 13:00:00+00:00\", \"end\": \"2020-10-16 13:00:00+00:00\", \"internal_reply\": null, \"external_reply\": null}}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Exchange", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1512460394948, 
+    "Name": "Get Account Out Of Facility Settings", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

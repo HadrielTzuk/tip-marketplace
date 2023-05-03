@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "New Integration - Added new integration, ServiceDesk Plus V.3.0, to support newest API version from ServiceDesk Plus.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "ServiceDeskPlusV3",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1605622658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5705"
+    },
+    {
+        "ChangeDescription": "Integration Actions - Updated actions to support latest API changes, introduced in version 12.0 of ServiceDesk Plus.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "ServiceDeskPlusV3",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1637746979,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10036"
+    },
+    {
+        "ChangeDescription": "ServiceDeskPlusV3 - New Job Added \"Sync Closed Requests By Tag\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Sync Closed Requests By Tag",
+        "ItemType": "Job",
+        "New": true,
+        "PublishTime": 1643175420,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10638"
+    }
+]

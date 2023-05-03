@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1528703639795, 
+    "Creator": "admin", 
+    "Description": "Search for a hash in sandbox records", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"status\": \"finished\", \"runs\": [{\"detection\": \"clean\", \"yara\": false, \"system\": \"w7_1\", \"error\": null}, {\"detection\": \"clean\", \"yara\": false, \"system\": \"w7x64\", \"error\": null}], \"sha1\": \"e96a0e74ed5cfbcaa65c764939b29945e988be9b\", \"tags\": [], \"webid\": \"773601\", \"comments\": \"testing\", \"filename\": \"mocks.txt\", \"scriptname\": \"default.jbs\", \"time\": \"2019-01-21T11:21:20+01:00\", \"duration\": 530, \"sha256\": \"6087f230c0d6ea362f23ca2abb4baf82a9058cb0143af3e82584005f56626000\", \"md5\": \"502cddb08849eb191386017dfca05000\", \"analysisid\": \"765760\"}, \"Entity\": \"502cddb08849eb191386017dfca05000\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "JoeSandbox", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1528703639795, 
+    "Name": "Search Hash", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import *\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\tprint \"Action started\"\n\t\n\t# sample script:\n\t# configuration = siemplify.get_configuration('Provider')\n\n\t# for entity in siemplify.target_entities:\n\t#     entity.additional_properties['EnrichmentProperty'] = ...\n\t# siemplify.update_entities(siemplify.target_entities)\n\t## CASE CSV INSIGHT (entity)\n\t# siemplify.create_case_insight(\"VirusTotal\", \"Susp\", \"Entity is susp\", \"10.0.0.12\", InsightSeverity.INFO, InsightType.Entity, additional_data='[\"csv, row,1\", \"csv, row2\"]', additional_data_type=0, additional_data_title=\"Title\")\n\n\toutput_message = 'output message'\n\tresult_value = 'true'\n\tprint \"Action done\"\n\tsiemplify.end(output_message, result_value)\n\nif __name__ == \"__main__\":\n\tmain()", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 1.0
+}

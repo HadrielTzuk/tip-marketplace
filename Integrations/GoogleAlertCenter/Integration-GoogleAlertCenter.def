@@ -1,0 +1,46 @@
+{
+    "Description": "Real-time security alerts and insights that help you protect your organization from the latest threats, including phishing, malware, and other suspicious activity.",
+    "DisplayName": "Google Alert Center",
+    "Identifier": "GoogleAlertCenter",
+    "MarketingDisplayName": "Google Alert Center",
+    "Categories": [
+        "Cloud Security",
+        "Google"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "GoogleAlertCenter",
+            "PropertyName": "Service Account JSON Secret",
+            "PropertyDescription": "Specify the full JSON content of the service account file to be used in the integration.",
+            "PropertyDisplayName": "Service Account JSON Secret",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleAlertCenter",
+            "PropertyDescription": "Email address that has access to the alert center.",
+            "PropertyDisplayName": "Impersonation Email Address",
+            "PropertyName": "Impersonation Email Address",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleAlertCenter",
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Google Alert Center server is valid.",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg id=\"Layer_1\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M12.5,23a3.21,3.21,0,0,0,3.12-2.62H9.38A3.21,3.21,0,0,0,12.5,23Zm8-6.19a6,6,0,0,1-2-4.5V9.88a6.08,6.08,0,0,0-5.1-6.06V2.87a.85.85,0,1,0-1.7,0v.95a6.08,6.08,0,0,0-5.1,6.06v2.43a6,6,0,0,1-2,4.49A1.55,1.55,0,0,0,4,18,1.52,1.52,0,0,0,5.49,19.5h14A1.52,1.52,0,0,0,21,18,1.54,1.54,0,0,0,20.48,16.81Zm-7.33-1h-1.3V14.14h1.3Zm0-2.95h-1.3V7.91h1.3Z\"/></svg>",
+    "Version": 5.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/google-alert-center"
+}

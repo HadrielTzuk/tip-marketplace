@@ -1,0 +1,86 @@
+[
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "AlienVaultTI",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1614072507,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Fixed a bug, where integration will treat invalid API Root as valid.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Anomali",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1614072507,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-491"
+    },
+    {
+        "ChangeDescription": "Added new action \"Get Related Associations\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Get Related Associations",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1623145530,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7901"
+    },
+    {
+        "ChangeDescription": "Updated the integration\u2019s code to work with Python version 3.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Anomali",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1623145530,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7900"
+    },
+    {
+        "ChangeDescription": "Regression note: Improved functionality of \"Get Threat Info\". Please Note - This change might affect the way the action was working, due to differences in the JSON result's structure. Please keep that in mind when updating",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Get Threat Info",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1623145530,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7899"
+    },
+    {
+        "ChangeDescription": "GetThreatInfo - Updated the way action parses trusted circles related to entities.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "GetThreatInfo",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1631589407,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9744"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Anomali",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

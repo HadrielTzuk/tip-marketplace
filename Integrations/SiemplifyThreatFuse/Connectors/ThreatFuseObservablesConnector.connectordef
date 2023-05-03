@@ -1,0 +1,321 @@
+{
+   "IsEnabled":true,
+   "IsCustom":false,
+   "Integration":"SiemplifyThreatFuse",
+   "DocumentationLink":"https://integrations.siemplify.co/doc/siemplify-threatfuse",
+   "Name":"Siemplify ThreatFuse - Observables Connector",
+   "Description":"Pull observables from Siemplify ThreatFuse. Note: Source names are used in the whitelist.",
+   "Creator":"Admin",
+   "Script":"",
+   "Version":1,
+   "MappingRules":[
+
+   ],
+   "ProductToVisualFamilyRecords":[
+
+   ],
+   "SimulationUseCases":{
+      "CasesForUseCase":[
+
+      ],
+      "UseCaseName":null
+   },
+   "Parameters":[
+      {
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1532871487965,
+         "DefaultValue":"Product Name",
+         "Description":"Enter the source field name in order to retrieve the Product Field name.",
+         "Id":-1,
+         "IsMandatory":true,
+         "Mode":0,
+         "ModificationTimeUnixTimeInMs":1532871487965,
+         "Name":"DeviceProductField",
+         "Type":2
+      },
+      {
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1532871487965,
+         "DefaultValue":"type",
+         "Description":"Enter the source field name in order to retrieve the Event Field name.",
+         "Id":-1,
+         "IsMandatory":true,
+         "Mode":0,
+         "ModificationTimeUnixTimeInMs":1532871487965,
+         "Name":"EventClassId",
+         "Type":2
+      },
+      {
+         "Name":"Script Timeout (Seconds)",
+         "Type":1,
+         "DefaultValue":300,
+         "IsMandatory":true,
+         "Description":"Timeout limit for the python process running the current script.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"API Root",
+         "Type":2,
+         "DefaultValue":"https://api.threatstream.com",
+         "IsMandatory":true,
+         "Description":"API root of the Siemplify ThreatFuse instance.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Email Address",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":true,
+         "Description":"Email address of the Siemplify ThreatFuse account.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"API Key",
+         "Type":3,
+         "DefaultValue":"",
+         "IsMandatory":true,
+         "Description":"API Key of the Siemplify ThreatFuse account.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Lowest Severity To Fetch",
+         "Type":2,
+         "DefaultValue":"High",
+         "IsMandatory":true,
+         "Description":"Lowest severity that will be used to fetch observables. Possible values: Low, Medium, High, Very-High",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Lowest Confidence To Fetch",
+         "Type":1,
+         "DefaultValue":50,
+         "IsMandatory":true,
+         "Description":"Lowest confidence that will be used to fetch observables. Maximum is 100.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Source Feed Filter",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"Comma-separated list of feed ids that should be used to ingest observables. Example: 515,4129",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Observable Type Filter",
+         "Type":2,
+         "DefaultValue":"url, domain, email, hash, ip, ipv6",
+         "IsMandatory":false,
+         "Description":"Comma-separated list of observable types that should be  ingested. Example: url, domain. Possible values: url, domain, email, hash, ip, ipv6",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Observable Status Filter",
+         "Type":2,
+         "DefaultValue":"active",
+         "IsMandatory":false,
+         "Description":"Comma-separated list of observable status that should be used to ingest new data. Example: active, inactive. Possible values: active, inactive, falsepos",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Threat Type Filter",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"Comma-separated list of threat types that should be used to ingest observables. Example: аdware, anomalous, anonymization, apt. Possible values: аdware, anomalous, anonymization, apt,bot,brute, c2,compromised, crypto,data_leakage, ddos, dyn_dns, exfil, exploit, fraud, hack_tool, i2p, informational, malware, p2p, parked, phish, scan, sinkhole, spam, suppress, suspicious, tor, vps",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Trusted Circle Filter",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"Comma-separated list of trusted circle ids that should be used to ingest observables. Example: 146,147",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Tag Name Filter",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"Comma-separated list of tag names associated with observables that should be used with ingestion. Example: Microsoft Credentials, Phishing",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Source Feed Grouping",
+         "Type":0,
+         "DefaultValue":false,
+         "IsMandatory":false,
+         "Description":"If enabled, the connector will group observables from the same source under the same Siemplify Alert.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Fetch Max Days Backwards",
+         "Type":1,
+         "DefaultValue":1,
+         "IsMandatory":false,
+         "Description":"Amount of days from where to fetch findings.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Max Observables Per Alert",
+         "Type":1,
+         "DefaultValue":100,
+         "IsMandatory":false,
+         "Description":"How many observables should be a part of one Siemplify Alert. Maximum is 200.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Use whitelist as a blacklist",
+         "Type":0,
+         "DefaultValue":false,
+         "IsMandatory":true,
+         "Description":"If enabled, whitelist will be used as a blacklist.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Environment Field Name",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Environment Regex Pattern",
+         "Type":2,
+         "DefaultValue":".*",
+         "IsMandatory":false,
+         "Description":"A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Verify SSL",
+         "Type":0,
+         "DefaultValue":false,
+         "IsMandatory":true,
+         "Description":"If enabled, verify the SSL certificate for the connection to the Siemplify ThreatFuse server is valid.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Server Address",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"The address of the proxy server to use.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Username",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"The proxy username to authenticate with.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Password",
+         "Type":3,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"The proxy password to authenticate with.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      }
+   ],
+   "Rules":[
+
+   ],
+   "IsConnectorRulesSupported":false,
+   "IsSystem":false,
+   "Id":0,
+   "CreationTimeUnixTimeInMs":1605727805979,
+   "ModificationTimeUnixTimeInMs":1605727805981
+}

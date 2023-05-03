@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1527753629788,
+    "Creator": "admin",
+    "Description": "Get the file lists that are assigned in a policy",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"1\": {\"guid\": \"38c1a9eb-0389-4f12-8084-96f5ee62d72e\", \"type\": \"application_blocking\", \"name\": \"Execution Blacklist\"}, \"0\": {\"guid\": \"cef9b12e-4a25-4f1a-93f4-3836ebd97ed5\", \"type\": \"simple_custom_detections\", \"name\": \"File Blacklist\"}, \"2\": {\"guid\": \"3133128e-5455-4e74-82c5-1ff3c816c414\", \"type\": \"application_whitelist\", \"name\": \"File Whitelist\"}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CiscoAMP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527753629788,
+    "Name": "Get File Lists By Policy",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527753629788,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The name of the policy e.g. Triage",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1527753629788,
+            "Name": "Policy Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat\nfrom CiscoAMPManager import CiscoAMPManager\nimport json\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    configurations = siemplify.get_configuration('CiscoAMP')\n    server_addr = configurations['Api Root']\n    client_id = configurations['Client ID']\n    api_key = configurations['Api Key']\n    use_ssl = configurations['Use SSL'].lower() == 'true'\n\n    cisco_amp_manager = CiscoAMPManager(server_addr, client_id, api_key,\n                                        use_ssl)\n\n    policy_name = siemplify.parameters[\"Policy Name\"]\n\n    policy_info = cisco_amp_manager.get_policy_by_name(policy_name)\n\n    if policy_info.get(\"file_lists\"):\n        flat_file_lists = []\n\n        for file_list in policy_info.get(\"file_lists\"):\n            # Remove links - irrelevant\n            if file_list.get(\"links\"):\n                del file_list[\"links\"]\n            flat_file_lists.append(dict_to_flat(file_list))\n\n        # Attach file lists in csv\n        csv_output = cisco_amp_manager.construct_csv(flat_file_lists)\n        siemplify.result.add_data_table(\"File Lists\", csv_output)\n\n    siemplify.end(\"Successfully found {} file lists.\".format(\n        len(policy_info.get(\"file_lists\", []))), json.dumps(policy_info.get(\"file_lists\")))\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "file_lists",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

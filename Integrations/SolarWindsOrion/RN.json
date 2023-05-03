@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "NEW! SolarWinds Orion integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "SolarWindsOrion",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1605622658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5587"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "SolarWindsOrion",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "SolarWindsOrion",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

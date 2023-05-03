@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1575015001,
+    "Creator": "klim.lyapin@siemplify.co",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftDefenderATP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1575015001,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1511272859210, 
+    "Creator": "admin", 
+    "Description": "Retrieve server and agent DAT information from the endpoints in McAfee ePO. Supported entities: Hostname, IP.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"Equal\": true,\"dat_version\": \"9455.0000\", \"server_version\": \"9455.0000\"}, \"Entity\": \"1.1.1.1\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "McAfeeEPO", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1511272859210, 
+    "Name": "Compare Server and Agent DAT", 
+    "Parameters": [], 
+    "ScriptResultName": "agent_dat_status", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 2.0
+}

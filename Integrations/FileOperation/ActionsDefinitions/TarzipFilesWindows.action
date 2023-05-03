@@ -1,0 +1,54 @@
+{
+    "CreationTimeUnixTimeInMs": 1511343313430,
+    "Creator": "admin",
+    "Description": "Compress a tarzip file on windows share",
+    "Id": -1,
+    "IntegrationIdentifier": "FileOperation",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511343313430,
+    "Name": "Tarzip Files Windows",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1511800025376,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The full path to the folder with the relevant files",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800025376,
+            "Name": "source_folder",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800025376,
+            "CustomActionId": -1,
+            "DefaultValue": "*.txt",
+            "Description": "iles extension to include in targzip file {ex: *.txt}",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800025376,
+            "Name": "file_filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800025376,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The path to the folder to put the zip file into",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800025376,
+            "Name": "output_folder",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from FileOperationManager import FileOperationManager\nfrom SiemplifyAction import *\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    file_manager = FileOperationManager()\n    source_folder = siemplify.parameters['source_folder']\n    file_filter = siemplify.parameters['file_filter']\n    output_folder = siemplify.parameters['output_folder']\n    tarzip_file_path = file_manager.targz_windows(source_folder, file_filter, output_folder)\n\n    output_message = \"Successfully created {0}\".format(tarzip_file_path)\n    result_value = True\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "TarPath",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

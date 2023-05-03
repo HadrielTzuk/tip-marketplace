@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1534435367433,
+    "Creator": "Admin",
+    "Description": "Submit File for Analysis.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"C:\\temp\\test.txt\": 95}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeATD",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534435367433,
+    "Name": "Submit File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534435367433,
+            "CustomActionId": 20336,
+            "DefaultValue": null,
+            "Description": "The paths of the file to submit, comma separated. Notice - some file types are not supported by ATD (i.e: CSV files).",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534435367433,
+            "Name": "File Paths",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534435367433,
+            "CustomActionId": 20336,
+            "DefaultValue": null,
+            "Description": "The ID of the analyzer profile to analyze with",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534435367433,
+            "Name": "Analyzer Profile ID",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import construct_csv\nfrom McAfeeATDManager import McAfeeATDManager\n\nPROVIDER = \"McAfeeATD\"\nACTION_NAME = \"McAfeeATD_Submit File\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(PROVIDER)\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    atd_manager = McAfeeATDManager(server_address=conf.get('Server Address'),\n                                   username=conf.get('Username'),\n                                   password=conf.get('Password'),\n                                   verify_ssl=verify_ssl)\n\n    # Parameters\n    file_path = siemplify.parameters.get('File Path')\n    analyzer_profile_id = siemplify.parameters.get('Analyzer Profile ID')\n\n    task_id = atd_manager.submit_file(file_path, analyzer_profile_id)\n\n    if task_id:\n        output_message = 'File \"{0}\" was submitted.'.format(file_path)\n    else:\n        output_message = 'No file was submitted.'\n\n    siemplify.end(output_message, task_id)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "task_id",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

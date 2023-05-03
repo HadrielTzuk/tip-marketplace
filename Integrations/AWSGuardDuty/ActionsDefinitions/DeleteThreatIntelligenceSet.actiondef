@@ -1,0 +1,40 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Delete a threat intelligence set in AWS GuardDuty.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSGuardDuty",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Delete Threat Intelligence Set",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the detector ID that should be used to get threat intelligence sets details. This parameter can be found in the “Settings” tab.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Detector ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the comma-separated list of ids of threat intelligence sets. Example: id_1,id_2",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Threat Intelligence Set IDs",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

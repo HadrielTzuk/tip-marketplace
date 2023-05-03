@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1524477976794,
+    "Creator": "admin",
+    "Description": "Fetch a list of existing scans",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Scans\": [{\"status\": \"completed\", \"control\": true, \"uuid\": \"00000-000000-00000-0000000000-00000000000\", \"read\": true, \"last_modification_date\": 1538656691, \"enabled\": true, \"creation_date\": 1521364372, \"user_permissions\": 000, \"folder_id\": 100, \"starttime\": null, \"shared\": false, \"owner\": \"admin\", \"timezone\": null, \"rrules\": null, \"type\": \"local\", \"id\": 000, \"name\": \"Nessus-test\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "NessusScanner",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524477976794,
+    "Name": "Get Scans",
+    "Parameters": [],
+    "Script": "# Imports\nfrom SiemplifyAction import SiemplifyAction\nfrom NessusScannerManager import NessusScanner\n\n\ndef main():\n    # Configuration.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('NessusScanner')\n    access_key = conf['Access Key']\n    secret_key = conf['Secret Key']\n    server_address = conf['Api Root']\n    nessus_client = NessusScanner(access_key, secret_key, server_address)\n\n    scans_csv = nessus_client.get_scans_name_csv()\n\n    # Verify Result.\n    if len(scans_csv) > 1:\n        # Display Table.\n        siemplify.result.add_data_table('Nessus Scans', scans_csv)\n        result_value = 'true'\n        output_message = ''\n    else:\n        result_value = 'false'\n        output_message = 'No scans were found.'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "ScriptResult",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

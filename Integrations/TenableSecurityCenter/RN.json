@@ -1,0 +1,98 @@
+[
+    {
+        "ChangeDescription": "Added non-mandatory Proxy Parameters. Will be used if set (not empty).",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Tenable Security Center Connector",
+        "ItemType": "Connector",
+        "New": true,
+        "PublishTime": 1574619407,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-471"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Tenable Security Center",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Added new action \"Run Asset Scan\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Run Asset Scan",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1608036680,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-6232"
+    },
+    {
+        "ChangeDescription": "Added new action \"Create IP List Asset\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Create IP List Asset",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1608036680,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-6229"
+    },
+    {
+        "ChangeDescription": "Added new action \"Add IP To IP List Asset\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Create IP List Asset",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1608036680,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-6231"
+    },
+    {
+        "ChangeDescription": "Fixed a bug regarding the amount and dates of alerts ingested from the connector. Note - we have added 2 new parameters to the connector: \"Max Days Backwards\" and \"Limit Per Cycle\", once you will update the connector default values will be provided. Please make sure to check those values and modify them if needed, to best suit your desired connector's behavior.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Tenable Security Center Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1608036680,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4796"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Tenable Security Center",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Integration - Added a special header to all requests made by the integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "TenableSecurityCenter",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1660725408,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12022"
+    }
+]

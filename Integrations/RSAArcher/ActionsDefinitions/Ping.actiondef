@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1523436998378,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "RSAArcher",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1523436998378,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom MISPManager import MISPManager\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration(\"MISP\")\r\n    server_address = conf[\"Api Root\"]\r\n    api_key = conf[\"Api Key\"]\r\n    use_ssl = conf.get('Use SSL', 'False').lower() == 'true'\r\n\r\n    misp_manager = MISPManager(server_address, api_key, use_ssl=use_ssl)\r\n\r\n    # Test connectivity\r\n    misp_manager.test_connectivity()\r\n    siemplify.end(\"Connected successfully.\", 'true')\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()",
+    "ScriptResultName": "success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

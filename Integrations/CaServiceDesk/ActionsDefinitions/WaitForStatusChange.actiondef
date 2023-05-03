@@ -1,0 +1,48 @@
+{
+    "CreationTimeUnixTimeInMs": 1551955259979,
+    "Creator": "Admin",
+    "Description": "Waiting until ticket status is changed.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"severity.sym\": \"None\", \"resolution_code.sym\": \"None\", \"urgency.sym\": \"Test\", \"resolve_date\": \"None\", \"caused_by_chg.chg_ref_num\": \"None\", \"log_agent.combo_name\": \"Test\", \"requested_by.combo_name\": \"None\", \"resolution_method.sym\": \"None\", \"problem.ref_num\": \"None\", \"change.chg_ref_num\": \"None\", \"affected_service.name\": \"None\", \"priority.sym\": \"3\", \"customer.combo_name\": \"Test\", \"call_back_date\": \"None\", \"assignee.combo_name\": \"TestUser\", \"status\": \"OP\", \"group.combo_name\": \"None\", \"impact.sym\": \"Test Group\", \"description\": \"Test\", \"symptom_code.sym\": \"None\", \"external_system_ticket\": \"None\", \"last_mod_dt\": \"1547368725\", \"active\": \"1\", \"open_date\": \"1517743983\", \"category.sym\": \"None\", \"status.sym\": \"Open\", \"persistent_id\": \"cr:123456\", \"summary\": \"test\", \"close_date\": \"None\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CaServiceDesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1551955259989,
+    "Name": "Wait For Status Change",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1551955260003,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Target ticket ID.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1551955260003,
+            "Name": "Ticket ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1551955260004,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Expected status.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1551955260004,
+            "Name": "Expected Ticket Status Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CaSoapManager import CaSoapManager\nfrom ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_INPROGRESS\nimport sys\n\n# Consts\nACTION_SCRIPT_NAME = 'CA Service Desk_Wait_For_Status_Change'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_SCRIPT_NAME\n\n    conf = siemplify.get_configuration('CaServiceDesk')\n\n    api_root = conf['Api Root']\n    username = conf['Username']\n    password = conf['Password']\n\n    ca_manager = CaSoapManager(api_root, username, password)\n\n    ticket_id = siemplify.parameters.get('Ticket ID')\n    expected_ticket_status = siemplify.parameters.get('Expected Ticket Status')\n\n    current_ticket_status = ca_manager.get_ticket_status(ticket_id)\n\n    if current_ticket_status == expected_ticket_status:\n        output_message = \"Ticket status is already: {0}.\".format(current_ticket_status)\n        siemplify.end(output_message, 'true')\n    else:\n        output_message = \"Current ticket status is: {0}, keeping tracking ticket.\".format(current_ticket_status)\n        siemplify.end(output_message, 'false', EXECUTION_STATE_INPROGRESS)\n\n\ndef fetch_scan_report_async():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_SCRIPT_NAME\n\n    conf = siemplify.get_configuration('CaServiceDesk')\n\n    api_root = conf['Api Root']\n    username = conf['Username']\n    password = conf['Password']\n\n    ca_manager = CaSoapManager(api_root, username, password)\n\n    ticket_id = siemplify.parameters.get('Ticket ID')\n    expected_ticket_status = siemplify.parameters.get('Expected Ticket Status')\n\n    current_ticket_status = ca_manager.get_ticket_status(ticket_id)\n\n    if current_ticket_status == expected_ticket_status:\n        output_massage = \"Ticket status was changed to expected status: {0}.\".format(expected_ticket_status)\n        siemplify.end(output_massage, \"true\", EXECUTION_STATE_COMPLETED)\n\n    else:\n        output_massage = \"Current ticket status is: {0}, keeping tracking ticket.\".format(current_ticket_status)\n        siemplify.end(output_massage, \"false\", EXECUTION_STATE_INPROGRESS)\n\n\nif __name__ == \"__main__\":\n    if len(sys.argv) < 3 or sys.argv[2] == 'True':\n        main()\n    else:\n        fetch_scan_report_async()\n",
+    "ScriptResultName": "ScriptResult",
+    "Version": 3.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

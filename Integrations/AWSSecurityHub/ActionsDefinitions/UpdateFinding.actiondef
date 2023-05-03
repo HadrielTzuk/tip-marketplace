@@ -1,0 +1,170 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Update findings in AWS Security Hub.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSSecurityHub",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Update Finding",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify ID of the finding that you want to update.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the product ARN of the finding that you want to update.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Product ARN",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify new text for the note on the finding. Note: If the “Note” parameter has a value, you should also fill out the “Note Author” parameter. This is an AWS Security Hub limitation.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Note",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the author of the note. Note: If the “Note Author” parameter has a value, you should also fill out the “Note” parameter. This is an AWS Security Hub limitation.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Note Author",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Select One",
+            "Description": "Specify new severity for the finding.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Severity",
+            "OptionalValues": [
+                "Critical",
+                "High",
+                "Medium",
+                "Low",
+                "Informational",
+                "Select One"
+            ],
+            "Type": 15,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Select One",
+            "Description": "Specify a new verification state for the finding.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Verification State",
+            "OptionalValues": [
+                "Unknown",
+                "True Positive",
+                "False Positive",
+                "Benign Positive",
+                "Select One"
+            ],
+            "Type": 15,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify new confidence for the finding.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Confidence",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify new criticality for the finding.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Criticality",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of types for the finding. Example: type1,type2",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Types",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Select One",
+            "Description": "Specify new workflow status for the finding.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Workflow Status",
+            "OptionalValues": [
+                "New",
+                "Notified",
+                "Resolved",
+                "Suppressed",
+                "Select One"
+            ],
+            "Type": 15,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify custom fields that should be updated in the finding. Format Custom_field_1:value,Custom_field_2:value",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Custom Fields",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

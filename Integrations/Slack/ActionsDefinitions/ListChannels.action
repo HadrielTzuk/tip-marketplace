@@ -1,0 +1,95 @@
+{
+    "CreationTimeUnixTimeInMs": 1513611814405,
+    "Creator": "admin",
+    "Description": "Get a list of Slack channels based on the provided criteria. Note that action is not working on Siemplify entities.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample":"[{\"is_general\": false, \"name_normalized\": \"project_old\", \"is_channel\": true, \"creator\": \"U0136KZ0xxx\", \"is_member\": true, \"is_archived\": false, \"topic\": {\"last_set\": 0, \"value\": \"\", \"creator\": \"\"}, \"parent_conversation\": null, \"is_im\": false, \"is_ext_shared\": false, \"previous_names\": [\"project_new\", \"project\"], \"id\": \"C013ELA1xxx\", \"is_org_shared\": false, \"pending_connected_team_ids\": [], \"is_pending_ext_shared\": false, \"is_mpim\": false, \"is_group\": false, \"shared_team_ids\": [\"T013MJHSxxx\"], \"purpose\": {\"last_set\": 1589444943, \"value\": \"This *channel* is for working on a project. Hold meetings, share docs, and make decisions together with your team.\", \"creator\": \"U0136KZ0xxx\"}, \"is_private\": false, \"is_shared\": false, \"num_members\": 4, \"name\": \"project_old\", \"created\": 1589444943, \"pending_shared\": [], \"unlinked\": 0}]" ,
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Slack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1513611814405,
+    "Name": "List Channels",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1513614626960,
+            "CustomActionId": -1,
+            "DefaultValue": "20",
+            "Description": "Specify how many channels to return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1513614626960,
+            "Name": "Max Channels to Return",
+            "Type": 0,
+            "Value": "20"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1513614626960,
+            "CustomActionId": -1,
+            "DefaultValue": "public_channel",
+            "Description": "Specify what type of conversations to return. Example: public_channel,private_channel. Possible Values: public_channel, private_channel, mpim, im.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1513614626960,
+            "Name": "Type Filter",
+            "Type": 0,
+            "Value": "public_channel"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663583300000,
+            "CustomActionId": -1,
+            "DefaultValue": "Select One",
+            "Description": "Specify the key that needs to be used to filter channels.",
+            "OptionalValues": [
+                "Select One",
+                "Name",
+                "ID",
+                "Topic",
+                "Purpose"
+            ],
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1663583300000,
+            "Name": "Filter Key",
+            "Type": 15,
+            "Value": "Select One"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663583300000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what value should be used in the filter. If “Equal“ is selected, action will try to find the exact match among results and if “Contains“ is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the value  provided in the “Filter Key” parameter.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1663583300000,
+            "Name": "Filter Value",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663583300000,
+            "CustomActionId": -1,
+            "DefaultValue": "Not Specified",
+            "Description": "Specify what filter logic should be applied. Filtering logic is working based on the value  provided in the “Filter Key” parameter.",
+            "OptionalValues": [
+                "Not Specified",
+                "Equal",
+                "Contains"
+            ],
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1663583300000,
+            "Name": "Filter Logic",
+            "Type": 15,
+            "Value": "Not Specified"
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

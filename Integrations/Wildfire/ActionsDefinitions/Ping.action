@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1519203012501,
+    "Creator": "admin",
+    "Description": "Test connectivity to Wildfire",
+    "Id": -1,
+    "IntegrationIdentifier": "Wildfire",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519203012501,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,58 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381792970,
+    "Creator": "Admin",
+    "Description": "List available regulatory standards in Microsoft Azure Security Center",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"value\": [{\"id\": \"/subscriptions/XXXXXXX-XXXX-XXXX-XXXX-XXXXXXX/providers/Microsoft.Security/regulatoryComplianceStandards/Azure-CIS-1.1.0\", \"name\": \"Azure-CIS-1.1.0\", \"type\": \"Microsoft.Security/regulatoryComplianceStandards\", \"properties\": {\"state\": \"Failed\", \"passedControls\": 21, \"failedControls\": 3, \"skippedControls\": 0, \"unsupportedControls\": 87}}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "AzureSecurityCenter",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535381792970,
+    "Name": "List Regulatory Standards",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID of the subscription for which you want to query information. Note: if subscription ID is provided at the integration level and action level, priority will be given to action configuration.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Subscription ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Failed",
+            "Description": "Specify the comma-separated list of states. Example: Failed, Skipped. Only standards with the matching state will be returned. For example, if you specify “Failed”, action will only return failed standards. Possible values: Passed, Failed, Unsupported, Skipped",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "State Filter",
+            "Type": 0,
+            "Value": "Failed"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many standards to return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Standards To Return",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

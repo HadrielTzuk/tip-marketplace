@@ -1,0 +1,66 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805,
+    "Creator": "Admin",
+    "DefaultResultValue": "",
+    "Description": "List Endgame Investigations.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"created_by_chat\": false, \"name\": \"Siemplify AutoRun Collection\", \"core_os\": \"windows\", \"created_at\": \"2020-01-14T18:13:29.939146+00:00\", \"task_completion\": {\"completed_tasks\": 2, \"total_tasks\": 2}, \"hunt_count\": 1, \"archived\": false, \"created_by\": {\"username\": \"admin\", \"first_name\": \"Super\", \"last_name\": \"Admin\", \"last_viewed_alert\": \"2020-01-14T13:24:38.011000\", \"is_sso\": false, \"is_active\": true, \"email\": null, \"is_editable\": true, \"is_superuser\": true, \"is_ldap\": false, \"role\": {\"role\": \"Admin\", \"id\": \"37e9e54e-0bb8-5058-9bd4-50a0d0fbea35\", \"permissions\": {\"endpoints.scan\": true, \"sensor.admin.view\": true, \"sensor.admin.update\": true, \"endpoints.delete\": true, \"investigation.create\": true, \"endpoints.respond\": true, \"search.search\": true, \"sensor.admin.create\": true, \"endpoints.tag\": true, \"user.delete\": true, \"endpoints.deploy\": true, \"user.update\": true, \"search.save\": true, \"alerts.admin.forwardalerts\": true, \"endpoints.view\": true, \"user.view\": true, \"sensor.admin.download\": true, \"alerts.view\": true, \"alerts.update\": true, \"search.delete\": true, \"sensor.admin.delete\": true, \"endpoints.uninstall\": true, \"investigation.view\": true, \"admin\": true, \"investigation.update\": true, \"endpoints.changeconfiguration\": true, \"user.create\": true}}, \"is_removable\": false, \"timezone\": null, \"type\": \"Local\", \"id\": \"5ed3c5d7-f450-489d-8b5f-9430b18da4c1\"}, \"updated_at\": \"2020-01-14T18:13:29.995294+00:00\", \"created_by_user_display_name\": \"Super Admin\", \"canceled_by_user_id\": null, \"version\": 2, \"endpoint_count\": 2, \"assigned_to\": {\"username\": \"admin\", \"first_name\": \"Super\", \"last_name\": \"Admin\", \"last_viewed_alert\": \"2020-01-14T13:24:38.011000\", \"is_sso\": false, \"is_active\": true, \"email\": null, \"is_editable\": true, \"is_superuser\": true, \"is_ldap\": false, \"role\": {\"role\": \"Admin\", \"id\": \"37e9e54e-0bb8-5058-9bd4-50a0d0fbea35\", \"permissions\": {\"endpoints.scan\": true, \"sensor.admin.view\": true, \"sensor.admin.update\": true, \"endpoints.delete\": true, \"investigation.create\": true, \"endpoints.respond\": true, \"search.search\": true, \"sensor.admin.create\": true, \"endpoints.tag\": true, \"user.delete\": true, \"endpoints.deploy\": true, \"user.update\": true, \"search.save\": true, \"alerts.admin.forwardalerts\": true, \"endpoints.view\": true, \"user.view\": true, \"sensor.admin.download\": true, \"alerts.view\": true, \"alerts.update\": true, \"search.delete\": true, \"sensor.admin.delete\": true, \"endpoints.uninstall\": true, \"investigation.view\": true, \"admin\": true, \"investigation.update\": true, \"endpoints.changeconfiguration\": true, \"user.create\": true}}, \"is_removable\": false, \"timezone\": null, \"type\": \"Local\", \"id\": \"5ed3c5d7-f450-489d-8b5f-9430b18da4c1\"}, \"is_canceled\": false, \"canceled_by_user_display_name\": null, \"id\": \"1a08f167-44b4-4fd7-9cbb-94dca727b90c\", \"user_display_name\": \"Super Admin\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Endgame",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1560351300805,
+    "Name": "List Investigations",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835,
+            "CustomActionId": -1,
+            "DefaultValue": "Solaris, Windows, MacOs, Linux",
+            "Description": "Specify for which OS you want to list investigations. Parameter can take multiple values as a comma separated string.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560351300835,
+            "Name": "OS",
+            "OptionalValues": null,
+            "OptionalValuesJson": null,
+            "Type": 0,
+            "Value": "Solaris, Windows, MacOs, Linux"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Return investigations created for the specified time frame in hours.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560351300835,
+            "Name": "Fetch investigations for the last X hours",
+            "OptionalValues": null,
+            "OptionalValuesJson": null,
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify how many investigation you want to query.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560351300835,
+            "Name": "Max Investigation to Return",
+            "OptionalValues": null,
+            "OptionalValuesJson": null,
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "TimeoutSeconds": 600,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

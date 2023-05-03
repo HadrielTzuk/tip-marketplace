@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244, 
+    "Creator": "admin", 
+    "Description": "Add tag to the endpoint in McAfee Mvision ePO.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "McAfeeMvisionEPO", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1570446244, 
+    "Name": "Add Tag", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530543579170, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify what tag you want to add to endpoint.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530543579170, 
+            "Name": "Tag Name", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

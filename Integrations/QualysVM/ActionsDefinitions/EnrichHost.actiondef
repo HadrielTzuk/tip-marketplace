@@ -1,0 +1,34 @@
+{
+    "CreationTimeUnixTimeInMs": 1533210105447, 
+    "Creator": "Admin", 
+    "Description": "Enrich host with information from Qualys VM. Note: AssetView module is required. Supported entities: IP Address, Hostname.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"LAST_VM_SCANNED_DATE\": \"2019-01-06T12: 39: 00Z\", \"LAST_VM_SCANNED_DURATION\": \"490\", \"NETWORK_ID\": \"0\", \"IP\": \"1.1.1.1\", \"LAST_VULN_SCAN_DATETIME\": \"2019-01-06T12: 39: 00Z\", \"COMMENTS\": \"AddedbyX\", \"TRACKING_METHOD\": \"IP\", \"DNS\": \"one.one.one.one\", \"OS\": \"Linux3.13\", \"ID\": \"54664176\"}, \"Entity\": \"1.1.1.1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "QualysVM", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1533210105447, 
+    "Name": "Enrich Host", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1533211249615,
+            "CustomActionId": -1,
+            "DefaultValue": "true",
+            "Description": "If enabled, action will create an insight containing all of the retrieved information about the entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1533211249615,
+            "Name": "Create Insight",
+            "Type": 1,
+            "Value": "true"
+        }
+    ],
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\",\"HOSTNAME\"]}", 
+    "Version": 1.0
+}

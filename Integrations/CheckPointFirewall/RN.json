@@ -1,0 +1,121 @@
+[
+    {
+        "ChangeDescription": "Added domain field support for login",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "CheckPointFirewall",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1726"
+    },
+    {
+        "ChangeDescription": "New \"Add a Sam Rule\" action added. Notice, the action performs a publish command after adding the rule.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Add a Sam Rule",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1597742939,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4048"
+    },
+    {
+        "ChangeDescription": "New \"Run Script\" action added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Run Script",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1601460501,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4379"
+    },
+    {
+        "ChangeDescription": "Improvements across the whole integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "CheckPointFirewall",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604395162,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5031"
+    },
+    {
+        "ChangeDescription": "Added new action \"Show Logs\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Show Logs",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1604395162,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5360"
+    },
+    {
+        "ChangeDescription": "Added new action \"Download Log Attachment\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Download Log Attachment.",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1604395162,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5364"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "CheckPointFirewall",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Added new action \"Remove SAM Rule\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Remove SAM Rule",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1612956743,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-6693"
+    },
+    {
+        "ChangeDescription": "Improved functionality of API Calls from the manager, to match most of the usecases regarding the json payload field in the calls.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "CheckPointFirewall",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1612956743,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7289"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "CheckPointFirewall",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

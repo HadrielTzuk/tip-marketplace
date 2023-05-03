@@ -1,0 +1,53 @@
+{
+	"Cases": [{
+			"Events": [{
+					"_fields": {
+						"BaseEventIds": "[]",
+						"ParentEventId": -1,
+						"DeviceProduct": "MSSQL",
+						"StartTime": "1529399987612",
+						"EndTime": "1529399987612"
+					},
+					"_rawDataFields": {
+						"sourcetype": "MSSQL",
+						"DeviceVendor": "MSSQL",
+						"StartTime": "1529399987612",
+						"EndTime": "1529399987612",
+						"EventId": "220",
+						"Name": "MSSQL",
+						"Mail_OriginalEmailBody": "Hello, You have an important email from the Human Resources Department with regards to your December 2015 Paycheck\r\n\r\nThis email is enclosed in the Marquette University secure network, hence access it below\r\n\r\nAccess the documents here <MSSQL://markossolomon.com/F1q7QX.php<link removed>\r\n\r\n***Ensure your login credentials are correct to avoid cancellations**\r\n\r\nFaithfully \r\nHuman Resources \r\nUniversity of California, Berkeley\r\n\r",
+						"Severity": "High",
+						"CategoryOutcome": "allowed",
+						"DeviceEventClassId": "MSSQL",
+						"SourceUserName": "f.attacker4@gmail.com",
+						"DestinationUserName": "vickie.b@siemplify.co",
+						"DestinationURL": "MSSQL://markossolomon.com/F1q7QX.php",
+						"sentTime": "1498647816000",
+						"message_id": "220",
+						"subject": "MSSQL",
+						"body": "Hello, You have an important email from the Human Resources Department with regards to your December 2015 Paycheck\r\n\r\nThis email is enclosed in the Marquette University secure network, hence access it below\r\n\r\nAccess the documents here <MSSQL://markossolomon.com/F1q7QX.php<link removed>\r\n\r\n***Ensure your login credentials are correct to avoid cancellations**\r\n\r\nFaithfully \r\nHuman Resources \r\nUniversity of California, Berkeley\r\n\r"
+					},
+					"Environment": null,
+					"SourceSystemName": null
+				}
+			],
+			"Environment": null,
+			"SourceSystemName": "Splunk",
+			"TicketId": "d6f179fb-15ed-4fd5-9de3-666ce5ac7156 MSSQL",
+			"Description": "MSSQL",
+			"DisplayId": "d6f179fb-15ed-4fd5-9de3-666ce5ac7156 MSSQL",
+			"Reason": "MSSQL",
+			"Name": "MSSQL",
+			"DeviceVendor": "MSSQL",
+			"DeviceProduct": "MSSQL",
+			"StartTime": 1529399987612,
+			"EndTime": 1529399987612,
+			"IsTestCase": false,
+			"Priority": 80,
+			"RuleGenerator": "MSSQL",
+			"PlaybookTriggerKeywords": [],
+			"Extensions": []
+		}
+	],
+	"IsTestCase": false
+}

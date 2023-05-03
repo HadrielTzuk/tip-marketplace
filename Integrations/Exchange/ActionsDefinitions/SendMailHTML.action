@@ -1,0 +1,89 @@
+{
+    "CreationTimeUnixTimeInMs": 1518953619227,
+    "Creator": "admin",
+    "Description": "Send an email with HTML template content, Send to field is comma separated. Note: Sender's display name can be configured in the client under the account settings",
+    "Id": -1,
+    "IntegrationIdentifier": "Exchange",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518953619227,
+    "Name": "Send Mail HTML",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518955088070, 
+            "CustomActionId": -1, 
+            "DefaultValue": "",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1518955088070, 
+            "Name": "Subject", 
+            "Type": 0, 
+            "Value": "", 
+            "Description": "The subject of the email"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518955088070, 
+            "CustomActionId": -1, 
+            "DefaultValue": "",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1518955088070, 
+            "Name": "Send to", 
+            "Type": 0, 
+            "Value": "", 
+            "Description": "Recipient email address. Multiple addresses can be separated by commas"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518955088070,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518955088070,
+            "Name": "CC",
+            "Type": 0,
+            "Value": "",
+            "Description": "CC email address. Multiple addresses can be separated by commas"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "BCC",
+            "Type": 0,
+            "Value": "",
+            "Description": "BCC email address. Multiple addresses can be separated by commas"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518955088070, 
+            "CustomActionId": -1, 
+            "DefaultValue": "",
+            "Id": -1, 
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518955088070,
+            "Name": "Attachments Paths",
+            "Type": 0,
+            "Value": "",
+            "Description": "Full path to attachments to be uploaded. Comma sepreated. e.g. C:\\Desktop\\x.txt,C:\\Desktop\\sample.txt"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518955088070, 
+            "CustomActionId": -1, 
+            "DefaultValue": "",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1518955088070, 
+            "Name": "Mail content", 
+            "Type": 10, 
+            "Value": "", 
+            "Description": "Mail body"
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

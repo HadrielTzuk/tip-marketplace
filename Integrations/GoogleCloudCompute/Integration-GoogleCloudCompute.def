@@ -1,0 +1,128 @@
+{
+    "Description": "Google Cloud Compute is the Infrastructure as a Service (IaaS) component of Google Cloud Platform which is built on the global infrastructure that runs Google's search engine, Gmail, YouTube and other services. Google Cloud Compute enables users to launch virtual machines (VMs) on demand. VMs can be launched from the standard images or custom images created by users. Google Cloud Compute users must authenticate based on OAuth 2.0 before launching the VMs.",
+    "DisplayName": "Google Cloud Compute",
+    "Identifier": "GoogleCloudCompute",
+    "PythonVersion": 2,
+    "Categories": [
+        "IT & Infrastructure",
+        "Cloud",
+        "Google"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "GoogleCloudCompute",
+            "IsMandatory": false,
+            "PropertyDescription": "Type of the Google Cloud account. Located at the “type” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Account Type",
+            "PropertyName": "Account Type",
+            "PropertyType": "2",
+            "Value": "service_account"
+        },
+        {
+            "IntegrationIdentifier": "GoogleCloudCompute",
+            "IsMandatory": false,
+            "PropertyDescription": "Project ID of the Google Cloud account. Located at the “project_id” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Project ID",
+            "PropertyName": "Project ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleCloudCompute",
+            "IsMandatory": false,
+            "PropertyDescription": "Private Key ID of the Google Cloud account. Located at the “private_key_id” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Private Key ID",
+            "PropertyName": "Private Key ID",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleCloudCompute",
+            "IsMandatory": false,
+            "PropertyDescription": "Private Key of the Google Cloud account. Located at the “private_key” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Private Key",
+            "PropertyName": "Private Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleCloudCompute",
+            "IsMandatory": false,
+            "PropertyDescription": "Client Email of the Google Cloud account. Located at the “client_email” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Client Email",
+            "PropertyName": "Client Email",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleCloudCompute",
+            "IsMandatory": false,
+            "PropertyDescription": "Client ID of the Google Cloud account. Located at the “client_id” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleCloudCompute",
+            "IsMandatory": false,
+            "PropertyDescription": "Auth URI of the Google Cloud account. Located at the “auth_uri” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Auth URI",
+            "PropertyName": "Auth URI",
+            "PropertyType": "2",
+            "Value": "https://accounts.google.com/o/oauth2/auth"
+        },
+        {
+            "IntegrationIdentifier": "GoogleCloudCompute",
+            "IsMandatory": false,
+            "PropertyDescription": "Token URI of the Google Cloud account. Located at the “token_uri” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Token URI",
+            "PropertyName": "Token URI",
+            "PropertyType": "2",
+            "Value": "https://oauth2.googleapis.com/token"
+        },
+        {
+            "IntegrationIdentifier": "GoogleCloudCompute",
+            "IsMandatory": false,
+            "PropertyDescription": "Auth Provider X509 URL of the Google Cloud account. Located at the “auth_provider_x509_cert_url” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Auth Provider X509 URL",
+            "PropertyName": "Auth Provider X509 URL",
+            "PropertyType": "2",
+            "Value": "https://www.googleapis.com/oauth2/v1/certs"
+        },
+        {
+            "IntegrationIdentifier": "GoogleCloudCompute",
+            "IsMandatory": false,
+            "PropertyDescription": "Client X509 URL of the Google Cloud account. Located at the “client_x509_cert_url” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Client X509 URL",
+            "PropertyName": "Client X509 URL",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleCloudCompute",
+            "IsMandatory": false,
+            "PropertyDescription": "Optional: Instead of specifying private key id, private key and other parameters, specify here the full JSON content of the service account file. Other connection parameters will be ignored if this parameter is provided.",
+            "PropertyDisplayName": "Service Account Json File Content",
+            "PropertyName": "Service Account Json File Content",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleCloudCompute",
+            "IsMandatory": false,
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Google Cloud Compute service is valid.",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": true
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\"\r\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\r\n<style type=\"text\/css\">\r\n\t.st0{fill-rule:evenodd;clip-rule:evenodd;}\r\n<\/style>\r\n<g>\r\n\t<g>\r\n\t\t<path class=\"st0\" d=\"M10.1,14.9h4.9v-4.9h-4.9V14.9z M11.3,11.3h2.4v2.4h-2.4V11.3z M22.8,11.8l-4.6-8.1C18,3.3,17.6,3,17.1,3H7.9\r\n\t\t\tC7.4,3,7,3.3,6.7,3.7l-4.6,8.1c-0.2,0.4-0.2,1,0,1.4l4.6,8.1C7,21.7,7.5,22,8,22h9.1c0.5,0,0.9-0.3,1.2-0.7l4.6-8.1\r\n\t\t\tC23.1,12.8,23.1,12.2,22.8,11.8z M18,10.7h-1.8v1.2H18v1.2h-1.8v1.2H18v1.2h-1.8v0.6h-0.6V18h-1.2v-1.8h-1.2V18h-1.2v-1.8h-1.2V18\r\n\t\t\tH9.4v-1.8H8.8v-0.6H7v-1.2h1.8v-1.2H7v-1.2h1.8v-1.2H7V9.4h1.8V8.8h0.6V7h1.2v1.8h1.2V7h1.2v1.8h1.2V7h1.2v1.8h0.6v0.6H18V10.7z\"\r\n\t\t\t\/>\r\n\t<\/g>\r\n<\/g>\r\n<\/svg>",
+    "Version": 4.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/google-cloud-compute",
+    "MarketingDisplayName": "Google Cloud Compute"
+}

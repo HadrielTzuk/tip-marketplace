@@ -1,0 +1,58 @@
+{
+    "Description": "Microsoft Teams is a platform that combines workplace chat, meetings, notes, and attachments\nQuick Guide: you must first register your app at Microsoft App Registration Portal, Configure Microsoft Teams Integration, Run the action 'Get Authorization', Run the action 'Generate Token'.",
+    "DisplayName": "Microsoft Teams",
+    "Identifier": "MicrosoftTeams",
+    "Categories": [
+        "IT & Infrastructure",
+        "Communications"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "MicrosoftTeams",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftTeams",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Secret ID",
+            "PropertyName": "Secret ID",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftTeams",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Tenant",
+            "PropertyName": "Tenant",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftTeams",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Refresh Token",
+            "PropertyName": "Refresh Token",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftTeams",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Redirect URL",
+            "PropertyName": "Redirect URL",
+            "PropertyType": "2",
+            "Value": "http://localhost/"
+        }
+    ],
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<path d=\"M6.4,39.6c0-9.6,0-19,0-28.3c0-0.4,0.6-1.2,1-1.3c7-1.2,14-2.4,21-3.5c0,12.4,0,24.7,0,37.1C21.1,42.2,13.8,40.9,6.4,39.6z\n\t\t M15.3,20.9c0,4.1,0,8,0,11.8c1.2,0,2,0,3,0c0-4.1,0-8,0-12c1.5-0.1,2.7-0.1,3.9-0.2c0-0.9,0-1.6,0-2.5c-3.7,0.2-7.2,0.3-10.8,0.5\n\t\tc0.1,0.9,0.1,1.6,0.2,2.4C12.8,20.9,13.9,20.9,15.3,20.9z\"/>\n\t<path d=\"M29.9,36.2c0-4.3,0-8.7,0-13.3c2.1,0,4.1,0,6.3,0c0,3.8,0.1,7.4,0,11.1C36.1,36.4,33,37.4,29.9,36.2z\"/>\n\t<path d=\"M37.2,34c0-3.4,0-6.4,0-9.5c2.1,0,4,0,6.2,0c0,2.3,0.2,4.6-0.1,6.9c-0.1,0.9-1.4,1.9-2.4,2.3C39.9,34.1,38.6,33.9,37.2,34z\n\t\t\"/>\n\t<path d=\"M40.4,16.5c1.9,0,3.2,1.4,3.2,3.3c0,1.8-1.5,3.2-3.3,3.2c-1.8,0-3.2-1.6-3.2-3.3C37.1,17.9,38.6,16.5,40.4,16.5z\"/>\n\t<path d=\"M32.2,21c-2-0.4-2.4-0.6-2.4-4.1c0-1.9,1.1-2.3,2.5-2.4c1.7-0.1,3.2,1.5,3.2,3.3C35.5,19.6,34,21.1,32.2,21z\"/>\n</g>\n</svg>\n",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/microsoft-teams",
+    "Version": 14.0,
+    "MarketingDisplayName": "Microsoft Teams",
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3
+}

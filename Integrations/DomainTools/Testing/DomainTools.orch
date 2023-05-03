@@ -1,0 +1,339 @@
+{
+  "Identifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "DomainTools",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "967df505-da94-4702-a0f2-0facbe21d9a2",
+      "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+      "ParentStepIdentifiers": [
+        "3ebc248f-66b1-4925-9abd-47c5c67dfa1e"
+      ],
+      "ParentStepIdentifier": "3ebc248f-66b1-4925-9abd-47c5c67dfa1e",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "DomainTools_Reverse Domain_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "DomainTools_Reverse Domain",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "967df505-da94-4702-a0f2-0facbe21d9a2",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "ScriptName",
+          "Value": "DomainTools_Reverse Domain",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        },
+        {
+          "ParentStepIdentifier": "967df505-da94-4702-a0f2-0facbe21d9a2",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        },
+        {
+          "ParentStepIdentifier": "967df505-da94-4702-a0f2-0facbe21d9a2",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205908197,
+      "ModificationTimeUnixTimeInMs": 1519205908197
+    },
+    {
+      "Identifier": "3ebc248f-66b1-4925-9abd-47c5c67dfa1e",
+      "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+      "ParentStepIdentifiers": [
+        "8f0a63a8-0c25-4834-95bf-68b5e67c7866"
+      ],
+      "ParentStepIdentifier": "8f0a63a8-0c25-4834-95bf-68b5e67c7866",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "DomainTools_Recent Domains_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "DomainTools_Recent Domains",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "3ebc248f-66b1-4925-9abd-47c5c67dfa1e",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "ScriptName",
+          "Value": "DomainTools_Recent Domains",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        },
+        {
+          "ParentStepIdentifier": "3ebc248f-66b1-4925-9abd-47c5c67dfa1e",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"String Query\":\"googl\"}",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        },
+        {
+          "ParentStepIdentifier": "3ebc248f-66b1-4925-9abd-47c5c67dfa1e",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205908197,
+      "ModificationTimeUnixTimeInMs": 1519205908197
+    },
+    {
+      "Identifier": "10736667-d3f7-4cf8-976b-530c1ae5eb01",
+      "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "DomainTools_Get Domain Profile_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "DomainTools_Get Domain Profile",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "10736667-d3f7-4cf8-976b-530c1ae5eb01",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "ScriptName",
+          "Value": "DomainTools_Get Domain Profile",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        },
+        {
+          "ParentStepIdentifier": "10736667-d3f7-4cf8-976b-530c1ae5eb01",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        },
+        {
+          "ParentStepIdentifier": "10736667-d3f7-4cf8-976b-530c1ae5eb01",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205908197,
+      "ModificationTimeUnixTimeInMs": 1519205908197
+    },
+    {
+      "Identifier": "c3156b4c-0434-4c0e-98e1-55f03af4445a",
+      "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+      "ParentStepIdentifiers": [
+        "10736667-d3f7-4cf8-976b-530c1ae5eb01"
+      ],
+      "ParentStepIdentifier": "10736667-d3f7-4cf8-976b-530c1ae5eb01",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "DomainTools_Get Domain Risk_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "DomainTools_Get Domain Risk",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "c3156b4c-0434-4c0e-98e1-55f03af4445a",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "ScriptName",
+          "Value": "DomainTools_Get Domain Risk",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        },
+        {
+          "ParentStepIdentifier": "c3156b4c-0434-4c0e-98e1-55f03af4445a",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Threshold\":\"0\"}",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        },
+        {
+          "ParentStepIdentifier": "c3156b4c-0434-4c0e-98e1-55f03af4445a",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205908197,
+      "ModificationTimeUnixTimeInMs": 1519205908197
+    },
+    {
+      "Identifier": "2d8f8c46-9950-4630-84dd-587a434c0aeb",
+      "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+      "ParentStepIdentifiers": [
+        "967df505-da94-4702-a0f2-0facbe21d9a2"
+      ],
+      "ParentStepIdentifier": "967df505-da94-4702-a0f2-0facbe21d9a2",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "DomainTools_Reverse Email_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "DomainTools_Reverse Email",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "2d8f8c46-9950-4630-84dd-587a434c0aeb",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "ScriptName",
+          "Value": "DomainTools_Reverse Email",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        },
+        {
+          "ParentStepIdentifier": "2d8f8c46-9950-4630-84dd-587a434c0aeb",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        },
+        {
+          "ParentStepIdentifier": "2d8f8c46-9950-4630-84dd-587a434c0aeb",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205908197,
+      "ModificationTimeUnixTimeInMs": 1519205908197
+    },
+    {
+      "Identifier": "ebac3103-cb26-4594-9dc2-5b871a5141d6",
+      "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+      "ParentStepIdentifiers": [
+        "2d8f8c46-9950-4630-84dd-587a434c0aeb"
+      ],
+      "ParentStepIdentifier": "2d8f8c46-9950-4630-84dd-587a434c0aeb",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "DomainTools_Reverse IP_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "DomainTools_Reverse IP",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "ebac3103-cb26-4594-9dc2-5b871a5141d6",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "ScriptName",
+          "Value": "DomainTools_Reverse IP",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        },
+        {
+          "ParentStepIdentifier": "ebac3103-cb26-4594-9dc2-5b871a5141d6",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        },
+        {
+          "ParentStepIdentifier": "ebac3103-cb26-4594-9dc2-5b871a5141d6",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205908197,
+      "ModificationTimeUnixTimeInMs": 1519205908197
+    },
+    {
+      "Identifier": "8f0a63a8-0c25-4834-95bf-68b5e67c7866",
+      "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+      "ParentStepIdentifiers": [
+        "c3156b4c-0434-4c0e-98e1-55f03af4445a"
+      ],
+      "ParentStepIdentifier": "c3156b4c-0434-4c0e-98e1-55f03af4445a",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "DomainTools_Get Hosting History_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "DomainTools_Get Hosting History",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "8f0a63a8-0c25-4834-95bf-68b5e67c7866",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "ScriptName",
+          "Value": "DomainTools_Get Hosting History",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        },
+        {
+          "ParentStepIdentifier": "8f0a63a8-0c25-4834-95bf-68b5e67c7866",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        },
+        {
+          "ParentStepIdentifier": "8f0a63a8-0c25-4834-95bf-68b5e67c7866",
+          "ParentWorkflowIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205908197,
+          "ModificationTimeUnixTimeInMs": 1519205908197
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205908197,
+      "ModificationTimeUnixTimeInMs": 1519205908197
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "1088c268-4c6a-4969-a1fc-2c4c1b0474d2",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "71ae9e05-644d-4b91-b6c8-7b7c52851027",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "DomainTools",
+      "AllEnvironments": "",
+      "Id": 64,
+      "CreationTimeUnixTimeInMs": 1519205908197,
+      "ModificationTimeUnixTimeInMs": 1519205908197
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 64,
+  "CreationTimeUnixTimeInMs": 1519205908197,
+  "ModificationTimeUnixTimeInMs": 1519205908197
+}

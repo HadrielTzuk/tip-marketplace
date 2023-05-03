@@ -1,0 +1,34 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List the organizational units of an account",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"kind\": \"admin#directory#orgUnit\", \"parentOrgUnitPath\": \"/\", \"name\": \"XXXXX\", \"etag\": \"\\\"XXXXXXXXXXXXXXXXXXXXXXXXXX\\\"\", \"orgUnitPath\": \"/OU-1\", \"parentOrgUnitId\": \"id:XXXX\", \"blockInheritance\": false, \"orgUnitId\": \"id:XXX\", \"description\": \"\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "GSuite",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List OU Of Account",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The unique ID for the customer's G Suite account, 'my_customer' alias can also be used to represent your account's customerId. To find Customer ID, from the GSuite Admin console Home page, go to Account settings and then Profile.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Customer ID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "organizational_units",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

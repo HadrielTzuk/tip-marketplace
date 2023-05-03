@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1517403679848,
+    "Creator": "admin",
+    "Description": "Close a request",
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceDeskPlus",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517403679848,
+    "Name": "Close Request",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517836174195,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The request's ID.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517836174195,
+            "Name": "Request ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517836174195,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Closing comment.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517836174195,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517836174195,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Whether the resolution of the request is acknowledged or not.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517836174195,
+            "Name": "Resolution Acknowledged",
+            "Type": 1,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

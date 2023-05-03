@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1514451276433, 
+    "Creator": "admin", 
+    "Description": "Provide domain status, its content categories, and security categories", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"content_categories\": \"Ecommerce/Shopping\", \"status\": \"1\", \"security_categories\": \"\"}, \"Entity\": \"amazon.com\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "CiscoUmbrella", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1514451276433, 
+    "Name": "Get Domain Status", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

@@ -1,0 +1,78 @@
+{
+    "CreationTimeUnixTimeInMs": 1512995809743,
+    "Creator": "admin",
+    "Description": "Search for similar cases and return their Ids",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1512995809743,
+    "Name": "Get Similar Cases",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1513178850231,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "Search for similar cases by the same Rule Generator. Note: All these search criteria are joined using logical 'AND' condition and will be used in the same search.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513178850231,
+            "Name": "Rule Generator",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1513178850231,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "Search for similar cases by the same Port number. Note: All these search criteria are joined using logical 'AND' condition and will be used in the same search.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513178850231,
+            "Name": "Port",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1513178850231,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "Search for similar cases by the same Category Outcome. Note: All these search criteria are joined using logical 'AND' condition and will be used in the same search.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513178850231,
+            "Name": "Category Outcome",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1513178850231,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "Search for similar cases containing the same Entity Identifier. Note: All these search criteria are joined using logical 'AND' condition and will be used in the same search.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513178850231,
+            "Name": "Entity Identifier",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1513178850231,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Defines how many days back the search should look for similar cases.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513178850231,
+            "Name": "Days Back",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import *\n\ndef main():\n    siemplify = SiemplifyAction()\n        \n    print (siemplify.parameters[\"Port\"])\n    print (siemplify.parameters[\"CategoryOutcome\"])\n    print (siemplify.parameters[\"RuleGenerator\"])\n    print (siemplify.parameters[\"EntityIdentifier\"])\n    print (siemplify.parameters[\"DaysBack\"])\n    similarCases = siemplify.get_similar_cases(consider_ports=siemplify.parameters[\"Port\"],\n                                consider_category_outcome=siemplify.parameters[\"CategoryOutcome\"],\n                                consider_rule_generator=siemplify.parameters[\"RuleGenerator\"],\n                                consider_entity_identifiers=siemplify.parameters[\"EntityIdentifier\"],\n                                days_to_look_back=siemplify.parameters[\"DaysBack\"])\n    if (len(similarCases) == 0):\n    \toutput_message = \"No similar cases Found\"\n    else:\n    \toutput_message = \"Found [%s] similar cases\" % str(len(similarCases))\n    \n    siemplify.end(output_message, str(similarCases))\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "SimilarCasesIds",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

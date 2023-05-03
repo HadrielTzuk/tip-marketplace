@@ -1,0 +1,24 @@
+{
+    "Name": "Test Dependencies and Managers Version", 
+    "Description": "Verify the all the dependencies and managers werer installed or updated properly, and tha the versions of the dependencies is correct.",
+    "Script": "from TestManager1 import TestManager1\nfrom TestManager2 import TestManager2\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import output_handler\nimport pyjokes\nimport cowsay\nimport subprocess\n\n\n@output_handler\ndef main(stdout_handler=None):\n    siemplify = SiemplifyAction(stdout_handler=stdout_handler)\n\n    t1 = TestManager1()\n    assert t1.get_version() == \"A1\"\n\n    t2 = TestManager2()\n    assert t2.get_version() == \"A2\"\n\n    cowsay.cheese(\"YAY\")\n    pyjokes.get_joke()\n\n    assert pyjokes.__version__ == \"0.5.0\"\n    proc = subprocess.Popen(\"pip freeze\", stdout=subprocess.PIPE, shell=True)\n    out, err = proc.communicate()\n    assert \"cowsay==2.0.3\" in out\n\n    siemplify.end(\"Success!\", 'true')\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "IntegrationIdentifier": "SiemplifyTest", 
+    "ScriptResultName": "ScriptResult", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultName": "JsonResult", 
+            "ResultExample": ""
+        }
+    ], 
+    "Creator": "Admin", 
+    "IsEnabled": true, 
+    "IsCustom": false, 
+    "IsSystem": false, 
+    "Version": 3.0, 
+    "TimeoutSeconds": 600, 
+    "Parameters": [], 
+    "DefaultResultValue": "", 
+    "Id": -1, 
+    "CreationTimeUnixTimeInMs": 1561380989220, 
+    "ModificationTimeUnixTimeInMs": 1561380989227
+}

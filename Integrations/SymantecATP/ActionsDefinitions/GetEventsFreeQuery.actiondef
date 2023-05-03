@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1530543579170,
+    "Creator": "admin",
+    "Description": "Fetch events by free query",
+    "Id": -1,
+    "IntegrationIdentifier": "SymantecATP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530543579170,
+    "Name": "Get Events Free Query",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530543579170,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Free query text.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530543579170,
+            "Name": "Query",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530543579170,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Limit of query results. Note: Limit is 5000 events. This is Symantec ATP limitation.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530543579170,
+            "Name": "Limit",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecATPManager import SymantecATPManager\nfrom SiemplifyUtils import dict_to_flat, construct_csv\n\nATP_PROVIDER = 'SymantecATP'\nRESULT_TABLE_NAME = \"Command IDs\"\nACTION_NAME = \"SymantecATP_Events Free Query\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(ATP_PROVIDER)\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    atp_manager = SymantecATPManager(conf.get('API Root'), conf.get('Client ID'), conf.get('Client Secret'), verify_ssl)\n\n    result_value = False\n\n    # Parameters.\n    query = siemplify.parameters.get('Query')\n    limit = int(siemplify.parameters.get('Limit'))\n\n    query_result = atp_manager.get_events_free_query(query, limit)\n\n    if query_result:\n        query_result = map(dict_to_flat, query_result)\n        csv_result = construct_csv(query_result)\n        siemplify.result.add_data_table(csv_result)\n        result_value = True\n\n    if result_value:\n        output_message = \"Found {0} events for query.\".format(len(query_result))\n    else:\n        output_message = \"No events were found for query.\"\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "events_amount",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

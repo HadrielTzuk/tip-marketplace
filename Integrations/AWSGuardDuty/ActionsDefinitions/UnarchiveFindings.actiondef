@@ -1,0 +1,40 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Unarchive GuardDuty findings that are specified by finding IDs.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSGuardDuty",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Unarchive Findings",
+    "Parameters": [
+    {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The unique ID of the detector.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Detector ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The IDs of the findings that you want to unarchive. Comma separated ids.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Finding IDs",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

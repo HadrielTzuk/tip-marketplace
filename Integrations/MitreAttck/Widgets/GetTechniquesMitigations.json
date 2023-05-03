@@ -1,0 +1,24 @@
+{
+  "type": 3,
+  "actionIdentifier": "Get Techniques Mitigations",
+  "title": "MitreAttck - Get Techniques Mitigations",
+  "description": "This widget highlights the most important items in MitreAttck - Get Techniques Mitigations",
+  "dataDefinition":
+  {
+    "htmlHeight": 400,
+    "safeRendering": false,
+    "type": 3,
+    "widgetDefinitionScope": 2
+  },
+  "conditionsGroup": {
+    "conditions": [
+      {
+        "value": "true",
+        "fieldName": "[{stepInstanceName}.is_success]",
+        "matchType": 0
+      }
+    ],
+    "logicalOperator": 0
+  },
+  "defaultSize": 1
+}

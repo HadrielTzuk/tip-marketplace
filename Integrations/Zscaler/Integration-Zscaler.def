@@ -1,0 +1,57 @@
+{
+    "Description": "Zscaler is a cloud security solution built for performance and flexible scalability. Use the Zscaler integration to block and manage domains using whitelists and blacklists.",
+    "DisplayName": "Zscaler",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/zscaler",
+    "Identifier": "Zscaler",
+    "Categories": [
+        "Secure Web Gateway",
+        "Security"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAMAAACScZ2GAAAAn1BMVEX///8Am91FtuYYpeAOoN9BteYTo+AJn944seUfp+HJ6vi65PY9s+UvruTh9PvZ8PqW1vH5/f7y+v3q9/yFz+9YvulOuuhJuOcpq+Pu+f3V7/qR1PB+ze5qxexkwuvE6PckquL8/v/l9fzd8vvQ7fm+5ve14vWp3vSK0vBTvOj2/P7N7PiO0/Bwx+yk3POf2vKa2PJewOqu4PUzr+R5y+20vzqBAAAEKklEQVRo3u3ZyXaiUBAG4PqReR4EDYo4zxo1ef9nawpMo63x9AZkwbe4gHCSom5dDBVqtVqtVusd9H2oarIoirJmnt2YmsTff+GeeqHGGHTw6OBTI8xV3JF73Utsz9ItNcEed6LVBzXBrhtZ435PwK1RQ9bEysSjxKNGiCU8Ok9p6h42UU9IZvROKzwxmnfHyFnrgN7oiGc6183wJ3XedJ7qTu0LRcfv5K5PbLpKhI6CjKgmBtVoIuNXh4DYsafglnWi2nzjN+aO2KmPB0Jdc/yB33SJ6Sqe0WqKb4/n5EV5uh8N3YthXAZJmUiVavGFp6wpsRDYnBwqLUJcHakGUzwlEJusO25A/1jKyPWpBssX0dFEf3pHGnIOVe+EJ9T/uqUVVW+ARx3/vxb7gKr3iUdzes2pL7wUD/b/5GqeLha7gEoj5Ayq3lbEP76opK/DsQimaJv1jnJr5ESPajBC6X5BOsM+7o3P392DhYJLdZjhXkgFfYOXQqpHgjs2sWCE1w5UFw03NsSOIl4SDKqNLaKUFvX4ghYNd1SnWCt/N0/sF14wqXZ+eFNStoYXZJ/ewBCQM2jWwStzeo94sFHNZOIpeGVB7zXp4nfjHb1dKuAXSTN6VM5qv3e7Ju6I5wak7tZuKGnIydboM6Dmmcx26UKPG9IXbbVarbp9ChuDmqvPb5mN5SvAmd7Fd5wt/bAdm35M7YDYAsAnMaeG/vzaFK5Ml+tKBjpRWpyyAFhDYl1LgTLuHbM9ADFRPBoDYmRQLnBHZkQVkPHXkUxc7YhsCwVhQoFVXhMBnZtm7yUPXuQboQoMs6wonTxIOnMw50429sjnjcYDjC2Paq84oQFREZ2mZIO4JYrATlSFwLa9WZ8LKi76TX520Ccp7yxuD9kmsYUw5Fm0sv0tf+5zoA7Zav5WFGbjeHjxqCJbNb/5JBsHU+6VdnXjZwEsV8eUcpNlB1jqAOzk2jrlq2YOx+pRZXQZUAwiAUxac4QqZ7BkX74jGZnpGhjz4t0cXfcUcnhnQKbqXLiM4jwXV0JA2bgu4xdwJXoSkJxQUnS50k6Qy2X/QSyNUDAXty+zc2Ssw3IEbPgFePDNneeCfOBLl1SV4V2TbuZGIifpkNd8+S1m8YEJuDNePiGget7W+/sDPqgiZ0BxiXmRZC7oWnbcqdcps+p+d6/tPoO3n4ASSNdvXW/lDqjHB9XwuahGH3Nd1+dHbihPiKZ9YMhJUmN/l58vQr0ogEU9Hkxe4h/BSeTnoAwkVI0hMiJyg/w5LFnIJwtM5sFJeQFIfeRJzP8eWCMjKuC8xfkTqBoaSjTAVScl+vzZX1IgojBOacn3QRMVhY1HnNuYqrGRfpgjItfUtM64t84LfSnIoizl/6R3QlnMPt9viVamJDlEk6EqiuNwyRNgSpsJtVqtVqtVkT+FYEgrFTMoeQAAAABJRU5ErkJggg==",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Zscaler",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://admin.zscalertwo.net"
+        },
+        {
+            "IntegrationIdentifier": "Zscaler",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Login ID",
+            "PropertyName": "Login ID",
+            "PropertyType": "2",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Zscaler",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "Api Key",
+            "PropertyType": "3",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Zscaler",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Zscaler",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SvgImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\r\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\r\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\r\n<g>\r\n\t<g>\r\n\t\t<path d=\"M44.3,19.1c-1.1-0.7-2.4-1.1-3.7-1.2c-0.3,0-0.5-0.1-0.6-0.4c-0.3-0.6-0.7-1.1-1.1-1.6c-0.1-0.1-0.2-0.2-0.3-0.1\r\n\t\t\tc-4.6,0.9-8.4,3.2-11.1,7.1c0,0,0,0,0,0.1c0.1,0,0.2-0.1,0.3-0.1c2.7-1.2,5.5-1.4,8.4-0.4c0.5,0.2,1,0.4,1.5,0.8\r\n\t\t\tc1.8,1.3,1,3.6-0.4,4.2c-0.5,0.2-1,0.3-1.5,0.4c-2.1,0.2-4.1,0.2-6.2,0.5c-3,0.3-5.8,1.3-8.1,3.3c-1,0.9-2.1,1.7-2.9,2.7\r\n\t\t\tc0-0.5,0-0.9,0-1.3c0.3-3.2,1.6-6,3.4-8.7c2.3-3.4,5.4-6.1,8.8-8.4c0.1-0.1,0.2-0.1,0.2-0.2c0,0,0,0,0-0.1c-2.1,0-4.1,0.3-6,1\r\n\t\t\tc3-2.2,6.5-3.4,10.2-3.8c0,0,0-0.1,0-0.1c-0.7-0.3-1.4-0.6-2.1-0.8c-4.4-1.3-8.6-0.9-12.5,1.6c-0.6,0.4-1.1,0.9-1.7,1.4\r\n\t\t\tc-0.2,0.2-0.4,0.2-0.6,0.2c-3.8-0.7-7.2,0.3-10,3c-0.3,0.3-0.6,0.5-1,0.6c-2.4,0.8-4,2.4-4.5,4.9c0,0,0,0.1-0.1,0.1v1.5\r\n\t\t\tc0.1,0.5,0.2,0.9,0.4,1.4c0.7,1.7,1.9,2.8,3.5,3.5c0.2,0.1,0.4,0.2,0.5,0.4c1.9,2.6,4.5,4,7.7,4.4c1.2,0.1,2.3,0.1,3.5-0.2\r\n\t\t\tc0.2,0,0.4,0,0.5,0.2c2.1,2.1,4.7,3.2,7.6,3.7c0.3,0,0.6,0.1,1,0.1h2.2c0.6-0.1,1.2-0.2,1.8-0.3c3.2-0.7,5.9-2.1,7.8-4.8\r\n\t\t\tc0.4-0.6,0.8-1.3,1.1-2c0.1-0.2,0.2-0.3,0.5-0.3c3.1-0.2,5.8-2.4,6.5-5.3C47.9,23.3,46.7,20.7,44.3,19.1z\"/>\r\n\t</g>\r\n</g>\r\n</svg>\r\n",
+    "Version": 4.0,
+    "MarketingDisplayName": "Zscaler"
+}

@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1532537479127, 
+    "Creator": "admin", 
+    "Description": "Sender Policy Framework (SPF) records allow domain owners to publish a list of IP addresses or subnets that are authorized to send email on their behalf", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [\"1.1.1.1/24\", \"64.233.160.0/19\", \"103.237.104.0/22\"], \"Entity\": \"domain.com\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "MXToolBox", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1532537479127, 
+    "Name": "SPF Lookup", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1532537479127, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The IP address to look for", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1532537479127, 
+            "Name": "IP Address", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom MXToolBoxManager import MXToolBoxManager\nfrom SiemplifyUtils import dict_to_flat, construct_csv\n\nMXTOOLBOX_PROVIDER = 'MXToolBox'\nSCRIPT_NAME = 'MXToolBox_Investigator_SPF_Lookup'\n\n\ndef main():\n    # Configurations.\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    conf = siemplify.get_configuration(MXTOOLBOX_PROVIDER)\n    verify_ssl = True if conf['Verify SSL'] == 'true' else False\n    mx_tool_box_manager = MXToolBoxManager(conf['API Root'], conf['API Key'], verify_ssl)\n    # Variables.\n    errors = []\n    success_entities = []\n    failed_entities = []  # In case ip address is not permitted for domain.\n    results_array = []\n    entity_csv_header = ['Ranges']\n    result_value = False\n\n    # Parameters.\n    sender_ip = siemplify.parameters.get(\"Sender's IP\")\n\n    domain_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.HOSTNAME]\n\n    for domain_entity in domain_entities:\n        try:\n            # Get related ips ranges.\n            ip_ranges = mx_tool_box_manager.get_spf_ips_list_for_domain(domain_entity.identifier)\n            for ip_range in ip_ranges:\n                if mx_tool_box_manager.is_address_in_network_range(sender_ip, ip_range):\n                    if domain_entity not in success_entities:\n                        success_entities.append(domain_entity)\n                    results_array.append(True)\n                    break\n            if domain_entity not in success_entities:\n                failed_entities.append(domain_entity)\n                results_array.append(False)\n\n            if ip_ranges:\n                entity_csv_header.extend(ip_ranges)\n                siemplify.result.add_entity_table(domain_entity.identifier, entity_csv_header)\n                print ip_ranges\n                print entity_csv_header.extend(ip_ranges)\n\n        except Exception as err:\n            error_message = 'Error fetching SPF lookup data for \"{0}\", ERROR: {1}'.format(domain_entity.identifier,\n                                                                                           unicode(err))\n            errors.append(error_message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n\n    if success_entities or failed_entities:\n        output_message = \"Domains which {0} is permitted for: {1}  \\n \\n Domains which {0} is not permitted for: {2}\".format(\n            sender_ip,\n            \",\".join([entity.identifier for entity in success_entities]),\n            \",\".join([entity.identifier for entity in failed_entities]))\n    else:\n        output_message = 'Not found data for target entities.'\n\n    if errors:\n        output_message = \"{0}  \\n \\n {1}\".format(output_message, \" \\n \".join(errors))\n\n    siemplify.end(output_message, \",\".join(map(str, results_array)))\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "auth_sender", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\", \"USERUNIQNAME\"]}", 
+    "Version": 1.0
+}

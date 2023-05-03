@@ -1,0 +1,30 @@
+{
+    "CreationTimeUnixTimeInMs": 1506512780387,
+    "Creator": "admin",
+    "Description": "Assign case to specific user or usergroup",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506512780387,
+    "Name": "Assign Case",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1510914806944,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "User or Usergroup to whom a case should be assigned.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914806944,
+            "Name": "Assigned User",
+            "Type": 3,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import *\n\ndef main():\n    siemplify = SiemplifyAction()\n    assigned_user = siemplify.parameters[\"user\"]\n    \n    siemplify.assign_case(assigned_user)\n\n    output_message = \"The case was successfully assigned to %s.\" %assigned_user  \n    \n    siemplify.end(output_message, \"true\")\n\nif __name__ == '__main__':\n\tmain()\n",
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

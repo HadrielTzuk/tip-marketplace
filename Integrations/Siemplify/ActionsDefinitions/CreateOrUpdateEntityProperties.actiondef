@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1546867434647,
+    "Creator": "Admin",
+    "Description": "Create\\Change properties for entities in an entity scope.",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1546867434650,
+    "Name": "Create Or Update Entity Properties",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1546867434657,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Field that has to be created or updated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1546867434657,
+            "Name": "Entity Field",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1546867434657,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Value that has to be set to the field.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1546867434657,
+            "Name": "Field Value",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\n\nACTION_NAME = \"Create\\Updated Entity Properties\"\n\nBOOLEAN_VALUES = ['True', 'False']\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    # Parameters.\n    entity_field = siemplify.parameters.get('Entity Field')\n    property_value = siemplify.parameters.get('Field Value')\n    entities_to_update = []\n    for entity in siemplify.target_entities:\n        if hasattr(entity, entity_field):\n            if isinstance(getattr(entity, entity_field), bool):\n                if property_value and property_value not in BOOLEAN_VALUES:\n                    raise Exception('Variable is boolean, Wrong input, has to be True or False.')\n                else:\n                    setattr(entity, entity_field, property_value.lower() == 'true')\n            else:\n                setattr(entity, entity_field, property_value)\n        else:\n            entity.additional_properties[entity_field] = property_value\n\n        entities_to_update.append(entity)\n\n    if siemplify.target_entities:\n        output_message = 'Property {0} were changed for the following entities: {1}'.format(\n            entity_field,\n            ','.join([entity.identifier for entity in siemplify.target_entities])\n        )\n\n    else:\n        output_message = 'No target entities in scope.'\n    siemplify.update_entities(entities_to_update)\n    siemplify.end(output_message, True)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 8.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

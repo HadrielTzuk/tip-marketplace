@@ -1,0 +1,38 @@
+{
+    "CreationTimeUnixTimeInMs": 1554654347845,
+    "Creator": "Admin",
+    "DefaultResultValue": "",
+    "Description": "Get event data by it's ID. ",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SymantecICDX",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1554654347851,
+    "Name": "Get Event",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1554654347860,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Event UUID",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1554654347860,
+            "Name": "Event UUID",
+            "OptionalValuesJson": null,
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecICDXManager import SymantecICDXManager\nfrom SiemplifyUtils import dict_to_flat\n\n\nPROVIDER = \"SymantecICDX\"\nACTION_NAME = \"SymantecICDX - Get Event\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.action_definition_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    verify_ssl = conf.get('Verify SSL').lower() == 'true'\n    icdx_manager = SymantecICDXManager(api_root=conf.get('Api Root'),\n                                       api_key=conf.get('Api Token'),\n                                       verify_ssl=verify_ssl)\n    result_value = False\n\n    event_uuid = siemplify.parameters.get('Event UUID')\n    event_data = icdx_manager.get_event(event_uuid)\n\n    if event_data:\n        siemplify.result.add_result_json(event_data)\n        siemplify.result.add_data_table(event_uuid, dict_to_flat(event_data))\n        output_message = 'Found event for UUID: {0}'.format(event_uuid)\n        result_value = True\n    else:\n        output_message = 'Not found event for UUID: {0}'.format(event_uuid)\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "TimeoutSeconds": 600,
+    "Version": 3.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

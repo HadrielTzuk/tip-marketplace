@@ -1,0 +1,48 @@
+{
+    "Description": "Outpost24 is a leading cyber assessment product focused on enabling its customers to achieve maximum value from their evolving technology investments. By leveraging their full stack security insights to reduce the attack surface for any architecture, Outpost24 customers continuously improve their security posture with the least effort.",
+    "DisplayName": "Outpost24",
+    "Identifier": "Outpost24",
+    "MarketingDisplayName": "Outpost24",
+    "Categories": ["Vulnerability & Risk Management", "Security"],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Outpost24",
+            "PropertyName": "API Root",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://your-appliance.outpost24.com"
+        },
+        {
+            "IntegrationIdentifier": "Outpost24",
+            "PropertyName": "Username",
+            "PropertyDisplayName": "Username",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Outpost24",
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Outpost24",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": "true"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M17.81,9a6.41,6.41,0,0,0-2.88-2.33l.18-.45a6.57,6.57,0,0,0-2.61-.52,6.73,6.73,0,0,0-1.29.12,6.85,6.85,0,1,0,8.13,6.77,6.78,6.78,0,0,0-1.17-3.83ZM12.5,17.8a5.25,5.25,0,0,1-1-10.4,5,5,0,0,1,3,.28l.18-.43a6,6,0,0,1,2.56,2.09h0l-.41.27a5.4,5.4,0,0,1,.89,2.94A5.22,5.22,0,0,1,12.5,17.8ZM21.19,6.68l-.38.25a10.16,10.16,0,0,0-4.52-3.65l.19-.47a10.19,10.19,0,0,0-4-.81A10.5,10.5,0,1,0,23,12.52,10.38,10.38,0,0,0,21.19,6.68ZM12.5,21.39A8.87,8.87,0,0,1,10.85,3.81a7.45,7.45,0,0,1,1.65-.16,8.73,8.73,0,0,1,3.38.65l.17-.42a9.22,9.22,0,0,1,4.17,3.44h0l-.36.24a8.68,8.68,0,0,1,1.53,5A8.89,8.89,0,0,1,12.5,21.39Zm0-12a3.08,3.08,0,0,0-3.1,3.1,3.1,3.1,0,0,0,6.2,0A3.08,3.08,0,0,0,12.5,9.42Zm0,3.91a.85.85,0,1,1,.8-.85A.82.82,0,0,1,12.5,13.33Z\"/></svg>",
+    "Version": 3.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/outpost24"
+}

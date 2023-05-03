@@ -1,0 +1,58 @@
+{
+	"Cases": [{
+			"Events": [{
+					"_fields": {
+						"BaseEventIds": "[]",
+						"ParentEventId": -1,
+						"DeviceProduct": "IPS_Product",
+						"StartTime": "1530604352474",
+						"EndTime": "1530604352474"
+					},
+					"_rawDataFields": {
+						"applicationProtocol": "TCP",
+						"categoryOutcome": "blocked",
+						"destinationAddress": "104.131.182.103",
+						"destinationHostName": "siemplify.co",
+						"destinationPort": "770",
+						"destinationProcessName": "MrlCS.sob",
+						"destinationUserName": "XWzNr1l@gmail.com",
+						"deviceEventClassId": "IRC Connections",
+						"deviceHostName": "ckIYC2",
+						"Field_24": "B0:E7:DF:6C:EF:71",
+						"deviceProduct": "IPS_Product",
+						"deviceVendor": "Vendor",
+						"endTime": "1532539763243",
+						"eventId": "0aa16009-5bb4-41a3-91ed-81347442ca29",
+						"managerReceiptTime": "1472578976804",
+						"message": "Connection to IRC Server",
+						"name": "IRC Connections",
+						"severity": "8",
+						"sourceAddress": "123.123.123.123",
+						"sourceHostName": "example.com",
+						"startTime": "1532539763243",
+						"sourcetype": "IPS_Product"
+					},
+					"Environment": null,
+					"SourceSystemName": null
+				}
+			],
+			"Environment": null,
+			"SourceSystemName": "Splunk",
+			"TicketId": "acad741b-67fc-4968-b74d-32be9787c3db 1 mxtoolbox",
+			"Description": "IRC Connections",
+			"DisplayId": "acad741b-67fc-4968-b74d-32be9787c3db 1 mxtoolbox",
+			"Reason": null,
+			"Name": "IRC Connections",
+			"DeviceVendor": "IPS",
+			"DeviceProduct": "IPS_Product",
+			"StartTime": 1532539763243,
+			"EndTime": 1532539763243,
+			"IsTestCase": true,
+			"Priority": -1,
+			"RuleGenerator": "Simulation_Original_IRC Connections",
+			"PlaybookTriggerKeywords": [],
+			"Extensions": []
+		}
+	],
+	"IsTestCase": true
+}

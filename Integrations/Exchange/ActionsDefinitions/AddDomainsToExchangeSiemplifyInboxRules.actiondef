@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 1511698992392,
+    "Creator": "admin",
+    "Description": "Action will get as a parameter a list of Domains, and will be able to create or update a rule, filtering the domains from your mailboxes. Actions can be modified in the parameters using rule parameter. WARNING: Action will modify your current users inbox rules, using EWS. NOTICE - to perform operation, please configure EDiscovery Group and Author permissions. For full details, please visit: https://integrations.siemplify.co/doc/exchang. NOTE: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed.",
+    "Id": -1,
+    "IntegrationIdentifier": "Exchange",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511698992392,
+    "Name": "Add Domains to Exchange-Siemplify Inbox Rules",
+    "Parameters": [
+        {
+            "Name": "Domains",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the Domains you would like to add to the rule, in a comma separated list.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Rule to add Domains to",
+            "Type": 15,
+            "DefaultValue": "Siemplify - Domains List - Move To Junk",
+            "Value": "Siemplify - Domains List - Move To Junk",
+            "IsMandatory": true,
+            "Description": "Specify the rule to add the Domains to. If the rule doesn't exist - action will create it where it's missing.",
+            "OptionalValues": [
+                "Siemplify - Domains List - Move To Junk",
+                "Siemplify - Domains List - Delete",
+                "Siemplify - Domains List - Permanently Delete"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Perform action in all mailboxes",
+            "Type": 1,
+            "DefaultValue": false,
+            "Value": false,
+            "IsMandatory": false,
+            "Description": "If checked, action will be performed in all mailboxes accessible with current impersonalization settings",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "How many mailboxes to process in a single batch",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "In case \"Perform action in all mailboxes\" is checked, action works in batches, this parameter controls how many mailboxes action should process in single batch (single connection to mail server).",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 14.41</h2><h5>Published on 18 February, 2021</h5><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     MicrosoftAzureSentinel\n    </b>\n   </li>\n   <ul>\n    <li>\n     Microsoft Azure Sentinel Incident Connector v2\n    </li>\n    <ul>\n     <li>\n      Updated connector logic to track already processed incidents ids (ids.json)\n     </li>\n     <li>\n      Added a mechanism to avoid connector looping when all alerts have the exact same timestamp.\n     </li>\n    </ul>\n    <li>\n     Microsoft Azure Sentinel Incident Connector\n    </li>\n    <ul>\n     <li>\n      Updated connector logic for handling firstAlertTimeGenerated and lastAlertTimeGenerated fields.\n     </li>\n     <li>\n      Updated connector logic to avoid ingestion of faulty incidents.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "14.41",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "18/02/21",
+    "Title": "Release Notes"
+}

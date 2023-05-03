@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1536139347055,
+    "Creator": "Admin",
+    "Description": "Test integration connectivity.",
+    "Id": -1,
+    "IntegrationIdentifier": "FortiManager",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1536139347055,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import *\nfrom FortiManager import FortiManager\n\n\nPROVIDER = 'FortiManager'\nACTION_NAME = 'FortiManager_Ping'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    verify_ssl = conf.get('Verify SSL', 'false').lower() == 'true'\n    forti_manager = FortiManager(conf['API Root'], conf['Username'], conf['Password'], verify_ssl)\n\n    siemplify.end('Connection Established!', True)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

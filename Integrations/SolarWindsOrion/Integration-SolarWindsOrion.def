@@ -1,0 +1,51 @@
+{
+    "Description": "The Orion Platform offers a single architecture that scales to manage the most complex and geographically dispersed IT environments. SolarWinds scalability engines are designed to provide monitoring and management for large enterprise-class infrastructures. Additional polling engines allow you to scale up to 400,000 elements on a single Orion Platform instance while additional web servers scale the number of supported users. With Enterprise Operations Console (EOC), you can centralize and simplify data management of multiple instances in a single, consolidated view.",
+    "DisplayName": "SolarWinds Orion",
+    "Identifier": "SolarWindsOrion",
+    "Categories": [
+        "Security",
+        "SIEM"
+    ],
+    "PythonVersion": 2,
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "SolarWindsOrion",
+            "IsMandatory": true,
+            "PropertyDisplayName": "IP Address",
+            "PropertyName": "IP Address",
+            "PropertyType": 2,
+            "Value": "https://x.x.x.x:17778"
+        },
+        {
+            "IntegrationIdentifier": "SolarWindsOrion",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "SolarWindsOrion",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "SolarWindsOrion",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": "True"
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M11.9502 11.6572C12.0203 11.6338 12.0905 11.6104 12.1607 11.6104C13.6348 11.1892 15.0621 10.6277 16.4893 10.0193C17.8932 9.43438 19.2737 8.73245 20.4669 7.74975C21.707 6.74364 22.7131 5.43337 23.2747 3.79552C23.3449 3.56155 23.5086 3.23398 23.532 3C21.59 5.64395 13.8922 5.92472 13.8922 5.92472L15.6938 4.26348C8.41709 4.26348 3.33978 7.37538 1 9.01323C3.97152 9.34079 6.68566 10.6043 8.79145 12.4995C9.84435 12.1953 10.8973 11.9613 11.9502 11.6572Z\" \/>\r\n<path d=\"M24 11.3998C24 11.3998 16.9105 10.8616 9.54018 13.2248C10.5229 14.2543 11.3418 15.4242 11.9736 16.6877C15.8576 14.5351 21.2157 11.7976 24 11.3998Z\" \/>\r\n<path d=\"M12.4649 17.8108C12.9095 18.9573 13.2136 20.1974 13.3306 21.4842L20.0926 14.5351L12.4649 17.8108Z\" \/>\r\n<\/svg>",
+    "Version": 3.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/solar-winds-orion",
+    "MarketingDisplayName": "SolarWinds Orion"
+}

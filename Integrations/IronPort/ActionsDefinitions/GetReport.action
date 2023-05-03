@@ -1,0 +1,73 @@
+{
+    "CreationTimeUnixTimeInMs": 1523457565939,
+    "Creator": "admin",
+    "Description": "Fetch specific Ironport report information.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"email@dworld.co.uk\": {\"incoming_social_mail\": 0, \"incoming_detected_amp\": 0, \"outgoing_detected_content_filter\": 0, \"incoming_marketing_mail\": 0, \"outgoing_detected_spam\": 0, \"incoming_detected_virus\": 0, \"incoming_bulk_mail\": 0, \"incoming_total_clean_recipients\": 1, \"incoming_detected_spam\": 0, \"incoming_detected_content_filter\": 0, \"incoming_threat_content_filter\": 0, \"outgoing_detected_virus\": 0, \"incoming_detected_ims_spam_increment_over_case\": 0, \"outgoing_total_clean_recipients\": 0, \"outgoing_threat_content_filter\": 0, \"outgoing_detected_ims_spam_increment_over_case\": 0, \"incoming_graymail\": 0}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "IronPort",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1523457565939,
+    "Name": "Get Report",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1523458933405,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The type of the report to fetch. Note: mail_sender_ip_hostname_detail and mail_incoming_ip_hostname_detail reports work based on Siemplify IP or Host entities;  mail_users_detail works on Siemplify User entity (with email address). Other reports are working without Siemplify entities.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1523458933405,
+            "Name": "Report Type",
+            "Type": 15,
+            "OptionalValues": [
+                "mail_authentication_incoming_domain",
+                "mail_content_filter_outgoing",
+                "mail_destination_domain_detail",
+                "mail_dlp_outgoing_policy_detail",
+                "mail_incoming_domain_detail",
+                "mail_incoming_ip_hostname_detail",
+                "mail_incoming_network_detail",
+                "mail_sender_domain_detail",
+                "mail_sender_ip_hostname_detail",
+                "mail_users_detail",
+                "mail_virus_type_detail"
+            ],
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523458933405,
+            "CustomActionId": -1,
+            "DefaultValue": "7",
+            "Description": "Specify a time frame in days for which to search for reports data. By default is set to last 7 days.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1523458933405,
+            "Name": "Search Reports Data for Last X Days",
+            "Type": 0,
+            "Value": "7"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523458933405,
+            "CustomActionId": -1,
+            "DefaultValue": "20",
+            "Description": "Specify a time frame in days for which to search for reports data. By default is set to last 7 days.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1523458933405,
+            "Name": "Max Records to Return",
+            "Type": 0,
+            "Value": "20"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "SimulationDataJson": "{\"Entities\": []}",
+"Version": 1.0
+
+}

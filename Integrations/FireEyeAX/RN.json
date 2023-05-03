@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - FireEye AX",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "FireEyeAX",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1633519274,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9933"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "FireEyeAX",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

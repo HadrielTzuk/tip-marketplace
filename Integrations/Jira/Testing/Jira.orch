@@ -1,0 +1,295 @@
+{
+  "Identifier": "ab632435-3885-4014-8635-f01c729d0b34",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": true,
+  "Name": "Jira",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "74d0b155-a726-4ff5-aed6-07ce6bdc45cf",
+      "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+      "ParentStepIdentifiers": [
+        "da9dba15-bd70-40ad-8d39-53303b968839"
+      ],
+      "ParentStepIdentifier": "da9dba15-bd70-40ad-8d39-53303b968839",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Jira_List Issues_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Jira_List Issues",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "74d0b155-a726-4ff5-aed6-07ce6bdc45cf",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "ScriptName",
+          "Value": "Jira_List Issues",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        },
+        {
+          "ParentStepIdentifier": "74d0b155-a726-4ff5-aed6-07ce6bdc45cf",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Project Key\":\"TIP\",\"Summary\":\"\",\"Description\":\"\",\"Issue Type\":\"Bug\",\"Priority\":\"High\",\"Created From\":\"2017-04-12\",\"Updated From\":\"2017-04-25\",\"Assignee\":\"avital\",\"Reporter\":\"Or gabay\",\"Status\":\"Backlog\"}",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        },
+        {
+          "ParentStepIdentifier": "74d0b155-a726-4ff5-aed6-07ce6bdc45cf",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519144901198,
+      "ModificationTimeUnixTimeInMs": 1519144901198
+    },
+    {
+      "Identifier": "28e1431d-3261-4d19-a525-0bf58c161f56",
+      "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+      "ParentStepIdentifiers": [
+        "74d0b155-a726-4ff5-aed6-07ce6bdc45cf"
+      ],
+      "ParentStepIdentifier": "74d0b155-a726-4ff5-aed6-07ce6bdc45cf",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Jira_Delete Issue_1",
+      "IsAutomatic": false,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Jira_Delete Issue",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "28e1431d-3261-4d19-a525-0bf58c161f56",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "ScriptName",
+          "Value": "Jira_Delete Issue",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        },
+        {
+          "ParentStepIdentifier": "28e1431d-3261-4d19-a525-0bf58c161f56",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Issue Key\":\"[Jira_Create Issue_1.issue_key]\"}",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        },
+        {
+          "ParentStepIdentifier": "28e1431d-3261-4d19-a525-0bf58c161f56",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519144901198,
+      "ModificationTimeUnixTimeInMs": 1519144901198
+    },
+    {
+      "Identifier": "86c56f44-c3a8-49ea-bf92-432d942a8498",
+      "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+      "ParentStepIdentifiers": [
+        "b75f4fed-63b5-47da-9eb7-ba4bc1419fa7"
+      ],
+      "ParentStepIdentifier": "b75f4fed-63b5-47da-9eb7-ba4bc1419fa7",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Jira_Add Comment_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Jira_Add Comment",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "86c56f44-c3a8-49ea-bf92-432d942a8498",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "ScriptName",
+          "Value": "Jira_Add Comment",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        },
+        {
+          "ParentStepIdentifier": "86c56f44-c3a8-49ea-bf92-432d942a8498",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Issue Key\":\"[Jira_Create Issue_1.issue_key]\",\"Comment\":\"PB comment\"}",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        },
+        {
+          "ParentStepIdentifier": "86c56f44-c3a8-49ea-bf92-432d942a8498",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519144901198,
+      "ModificationTimeUnixTimeInMs": 1519144901198
+    },
+    {
+      "Identifier": "da9dba15-bd70-40ad-8d39-53303b968839",
+      "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+      "ParentStepIdentifiers": [
+        "9e2caefa-e7cd-49bd-9e85-e864907c7a29"
+      ],
+      "ParentStepIdentifier": "9e2caefa-e7cd-49bd-9e85-e864907c7a29",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Jira_Update Issue_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Jira_Update Issue",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "da9dba15-bd70-40ad-8d39-53303b968839",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "ScriptName",
+          "Value": "Jira_Update Issue",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        },
+        {
+          "ParentStepIdentifier": "da9dba15-bd70-40ad-8d39-53303b968839",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Issue Key\":\"[Jira_Create Issue_1.issue_key]\",\"Summary\":\"Another PB Test\",\"Description\":\"PB update\",\"Issue Type\":\"Bug\",\"Jira Username\":\"zivh\"}",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        },
+        {
+          "ParentStepIdentifier": "da9dba15-bd70-40ad-8d39-53303b968839",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519144901198,
+      "ModificationTimeUnixTimeInMs": 1519144901198
+    },
+    {
+      "Identifier": "b75f4fed-63b5-47da-9eb7-ba4bc1419fa7",
+      "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Jira_Create Issue_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Jira_Create Issue",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "b75f4fed-63b5-47da-9eb7-ba4bc1419fa7",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "ScriptName",
+          "Value": "Jira_Create Issue",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        },
+        {
+          "ParentStepIdentifier": "b75f4fed-63b5-47da-9eb7-ba4bc1419fa7",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Project Key\":\"TIP\",\"Summary\":\"Test issue\",\"Description\":\"PB issue\",\"Issue Type\":\"Bug\",\"Jira Username\":\"zivh\"}",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        },
+        {
+          "ParentStepIdentifier": "b75f4fed-63b5-47da-9eb7-ba4bc1419fa7",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519144901198,
+      "ModificationTimeUnixTimeInMs": 1519144901198
+    },
+    {
+      "Identifier": "9e2caefa-e7cd-49bd-9e85-e864907c7a29",
+      "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+      "ParentStepIdentifiers": [
+        "86c56f44-c3a8-49ea-bf92-432d942a8498"
+      ],
+      "ParentStepIdentifier": "86c56f44-c3a8-49ea-bf92-432d942a8498",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Jira_Assign Issue_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Jira_Assign Issue",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "9e2caefa-e7cd-49bd-9e85-e864907c7a29",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "ScriptName",
+          "Value": "Jira_Assign Issue",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        },
+        {
+          "ParentStepIdentifier": "9e2caefa-e7cd-49bd-9e85-e864907c7a29",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Issue Key\":\"[Jira_Create Issue_1.issue_key]\",\"Assignee\":\"org\",\"Jira Username\":\"zivh\"}",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        },
+        {
+          "ParentStepIdentifier": "9e2caefa-e7cd-49bd-9e85-e864907c7a29",
+          "ParentWorkflowIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519144901198,
+          "ModificationTimeUnixTimeInMs": 1519144901198
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519144901198,
+      "ModificationTimeUnixTimeInMs": 1519144901198
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "b212d21d-bb37-48b4-9659-01994b9c6423",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "ab632435-3885-4014-8635-f01c729d0b34",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Jira",
+      "AllEnvironments": "",
+      "Id": 47,
+      "CreationTimeUnixTimeInMs": 1519144901198,
+      "ModificationTimeUnixTimeInMs": 1519144901198
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 47,
+  "CreationTimeUnixTimeInMs": 1519144901197,
+  "ModificationTimeUnixTimeInMs": 1519144901197
+}

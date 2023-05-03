@@ -1,0 +1,95 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451342720,
+    "Creator": "admin",
+    "Description": "Create a new event in MISP.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"id\":\"XXX\",\"orgc_id\":\"1\",\"org_id\":\"1\",\"date\":\"2020-12-21\",\"threat_level_id\":\"1\",\"info\":\"qweqwe\",\"published\":false,\"uuid\":\"e8c5c0adXXXXXXXXXXXXXXXXXXXd62c06ee\",\"attribute_count\":\"0\",\"analysis\":\"1\",\"timestamp\":\"1608536549\",\"distribution\":\"0\",\"proposal_email_lock\":false,\"locked\":false,\"publish_timestamp\":\"0\",\"sharing_group_id\":\"0\",\"disable_correlation\":false,\"extends_uuid\":\"\",\"event_creator_email\":\"admin@admin.test\",\"Org\":{\"id\":\"1\",\"name\":\"ORGNAME\",\"uuid\":\"09b0dde1-2934XXXXXXXXXXXXXX6f534f041\",\"local\":true},\"Orgc\":{\"id\":\"1\",\"name\":\"ORGNAME\",\"uuid\":\"09b0dde1-2934XXXXXXXXXXXXXX6f534f041\",\"local\":true}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "MISP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530451342720,
+    "Name": "Create Event",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451342720,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name for the new event.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530451342720,
+            "Name": "Event Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451342720,
+            "CustomActionId": -1,
+            "DefaultValue": "Community",
+            "Description": "Specify the distribution of the event. Possible values: 0 - Organisation, 1 - Community, 2 - Connected, 3 - All. You can either provide a number or a string.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451342720,
+            "Name": "Distribution",
+            "Type": 0,
+            "Value": "Community"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451342720,
+            "CustomActionId": -1,
+            "DefaultValue": "High",
+            "Description": "Specify the threat level of the event. Possible values: 1 - High, 2 - Medium, 3 - Low, 4 - Undefined. You can either provide a number or a string.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451342720,
+            "Name": "Threat Level",
+            "Type": 0,
+            "Value": "High"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451342720,
+            "CustomActionId": -1,
+            "DefaultValue": "Initial",
+            "Description": "Specify the analysis of the event. Possible values: 0 - Initial, 1 - Ongoing, 2 - Completed. You can either provide a number or a string.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451342720,
+            "Name": "Analysis",
+            "Type": 0,
+            "Value": "Initial"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451342720,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will publish the event to the community.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451342720,
+            "Name": "Publish",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451342720,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify additional comments related to the event.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451342720,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom MISPManager import MISPManager\nimport json\n\nSCRIPT_NAME = \"MISP - Create Event\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    conf = siemplify.get_configuration(\"MISP\")\n    server_address = conf[\"Api Root\"]\n    api_key = conf[\"Api Key\"]\n    use_ssl = conf.get('Use SSL', 'False').lower() == 'true'\n\n    event_name = siemplify.parameters.get('Event Name')\n    distribution = int(siemplify.parameters.get('Distribution') or 1)\n    threat_level_id = int(siemplify.parameters.get('Threat Level') or 0)\n    analysis = int(siemplify.parameters.get('Analysis') or 0)\n    published = siemplify.parameters.get('Publish', \"False\").lower() == 'true'\n    comment = siemplify.parameters.get('Comment')\n\n    misp_manager = MISPManager(server_address, api_key, use_ssl=use_ssl)\n    event_id = misp_manager.create_event(event_name=event_name,\n                                         distribution=distribution,\n                                         comment=comment,\n                                         published=published,\n                                         threat_level_id=threat_level_id,\n                                         analysis=analysis)\n\n    siemplify.end(\"Successfully created event {}\".format(event_id), json.dumps(event_id))\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "event_id",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

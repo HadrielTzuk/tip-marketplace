@@ -1,0 +1,79 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Perform simple search in Stellar Cyber Starlight.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"_index\": \"aella-assets-2020.07.10\", \"_type\": \"amsg\", \"_id\": \"6ada4b1e-c21b-11ea-ba27-c2317d2axxxx\", \"_score\": null, \"_source\": {\"ip\": \"172.30.203.xxx\", \"locid\": \"unassigned location\", \"tenantid\": \"\", \"tag\": \"\", \"start_time_date\": \"2020-07-09 19:34:18\", \"device_class\": \"\", \"id\": \"6ada4b1e-c21b-11ea-ba27-c2317d2axxxx\", \"service\": [], \"engid\": \"ad42005056a2xxxx\", \"state\": \"new\", \"device_desc\": \"\", \"applist\": [], \"iplist\": [\"172.30.203.xxx\"], \"desc\": \"\", \"apphistory\": [], \"location\": \"Tel Aviv,Israel\", \"vendor\": \"Fortinet, Inc.\\r\", \"user_sid\": \"\", \"timestamp\": 1594323438160, \"start_time\": 1594323258153, \"vlan\": 0, \"mac\": \"e8:1c:ba:4c:37:xx\", \"d\": {\"appid_id\": \"\", \"type\": \"host\"}, \"name\": \"172.30.203.xxx\", \"iphistory\": [{\"ip\": \"172.30.203.xxx\", \"time\": 1594323258153}], \"geoip\": \"185.180.102.xxx\", \"subtype\": \"client\", \"last_seen_date\": \"2020-07-09 19:37:18\", \"reputation\": \"Good\", \"t\": \"172.30.203.xxx\", \"last_seen\": 1594323438160}, \"sort\": [1594323438160]}, {\"_index\": \"aella-assets-2020.07.10\", \"_type\": \"amsg\", \"_id\": \"8569172c-c210-11ea-ada3-c2317d2axxxx\", \"_score\": null, \"_source\": {\"ip\": \"172.30.202.xxx\", \"locid\": \"unassigned location\", \"tenantid\": \"\", \"tag\": \"\", \"start_time_date\": \"2020-07-09 18:16:17\", \"device_class\": \"\", \"id\": \"8569172c-c210-11ea-ada3-c2317d2axxxx\", \"service\": [], \"engid\": \"ad42005056a2xxxx\", \"state\": \"new\", \"device_desc\": \"\", \"applist\": [], \"iplist\": [\"172.30.202.xxx\"], \"desc\": \"\", \"apphistory\": [], \"location\": \"Tel Aviv,Israel\", \"vendor\": \"VMware, Inc.\\r\", \"user_sid\": \"\", \"timestamp\": 1594339278823, \"start_time\": 1594318577932, \"vlan\": 0, \"mac\": \"00:50:56:a2:04:xx\", \"d\": {\"appid_id\": \"\", \"type\": \"host\"}, \"name\": \"172.30.202.xxx\", \"iphistory\": [{\"ip\": \"172.30.202.xxx\", \"time\": 1594318577932}], \"geoip\": \"185.180.102.xxx\", \"subtype\": \"client\", \"last_seen_date\": \"2020-07-10 00:01:18\", \"reputation\": \"Good\", \"t\": \"172.30.202.xxx\", \"last_seen\": 1594339278823}, \"sort\": [1594339278823]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "StellarCyberStarlight",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Simple Search",
+    "Parameters": [
+        {
+            "Name": "Index",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify in which index do you want to search. You can find a list of known indexes in the documentation.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Query",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify query filter for the search.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "Value": 50,
+            "DefaultValue": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many results to return in response.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Sort Field",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specify the field, which should be used for sorting.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1572450486,
+            "CustomActionId": -1,
+            "DefaultValue": "Descending",
+            "Description": "Specify the sort order for the result.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1572450486,
+            "Name": "Sort Order",
+            "Type": 15,
+            "OptionalValues": [
+                "Ascending",
+                "Descending"
+            ],
+            "Value": "Descending"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

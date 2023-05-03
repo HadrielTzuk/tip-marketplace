@@ -1,0 +1,44 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Return detailed information about an insight in AWS Security Hub.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSSecurityHub",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"InsightResults\":{\"InsightArn\":\"arn:aws:securityhub:::insight/securityhub/default/1\",\"GroupByAttribute\":\"ResourceId\",\"ResultValues\":[{\"GroupByAttributeValue\":\"arn:aws:s3:::int-arcsight-v-27-0-getreportstatus\",\"Count\":5},{\"GroupByAttributeValue\":\"arn:aws:s3:::int-arcsight-v-27-0-searchactionbug\",\"Count\":5},{\"GroupByAttributeValue\":\"arn:aws:s3:::int-arcsight-v-27-0-unicodeandlogs\",\"Count\":5},{\"GroupByAttributeValue\":\"arn:aws:s3:::int-automation-v-1-0\",\"Count\":5},{\"GroupByAttributeValue\":\"arn:aws:s3:::int-awss3-v-1-0\",\"Count\":5},{\"GroupByAttributeValue\":\"arn:aws:s3:::int-azureactivedirectory-v-4-0\",\"Count\":5},{\"GroupByAttributeValue\":\"arn:aws:s3:::int-bootcamp-v-1-0\",\"Count\":5},{\"GroupByAttributeValue\":\"arn:aws:s3:::int-categories\",\"Count\":5}]}}]",
+		"ResultName": "JsonResult"
+	}],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Get Insight Details",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ARN of the insight.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Insight ARN",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many results to return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Results to Return",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

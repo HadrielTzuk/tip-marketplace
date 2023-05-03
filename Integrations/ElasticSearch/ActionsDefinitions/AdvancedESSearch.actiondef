@@ -1,0 +1,118 @@
+{
+    "CreationTimeUnixTimeInMs": 1522665793363,
+    "Creator": "Siemplify System",
+    "Description": "Premade structured Elastic search query, returns a dict of dictionaries. This action should be used when you want to use time range in the query. If you don’t want to use the time range, use Simple ES Search action.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"_score\": 0.2876821, \"_type\": \"person\", \"_id\": \"2\", \"_source\": {\"lastname\": \"Smith\", \"name\": \"John\", \"job_description\": \"Systems administrator\"}, \"_index\": \"accounts\"}, {\"_score\": 0.28582606, \"_type\": \"person\", \"_id\": \"1\", \"_source\": {\"lastname\": \"Doe\", \"name\": \"John\", \"job_description\": \"Systems administrator and Linux specialist\"}, \"_index\": \"accounts\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "ElasticSearch",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1522665793363,
+    "Name": "Advanced ES Search",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1560424826000,
+            "CustomActionId": -1,
+            "DefaultValue": "*",
+            "Description": "Search pattern for a elastic index.\r\nIn elastic, index is like a DatabaseName, and data is stored across various indexes.\r\nThis param defines in what index(es) to search. It can be an exact name ie: \"smp_playbooks-2019.06.13\"\r\nor you can use a (*) wildcard to search by a pattern. e: \"smp_playbooks-2019.06*\" or \"smp*\".\r\nTo learn more about elastic indexes visit https://www.elastic.co/blog/what-is-an-elasticsearch-index",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560424826000,
+            "Name": "Index",
+            "Type": 0,
+            "Value": "*"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560424826000,
+            "CustomActionId": -1,
+            "DefaultValue": "*",
+            "Description": "The search query to perform. It is in Lucene syntax.\r\nIE1: \"*\" (this is a wildcard that will return all record)\r\nIE1: \"level:error\"\r\nIE2: \"level:information\"\r\nIE3: \"level:error OR level:warning\"\r\nTo learn more about lucene syntax, visit\r\nhttps://www.elastic.co/guide/en/kibana/current/lucene-query.html#lucene-query\r\nhttps://www.elastic.co/guide/en/elasticsearch/reference/7.1/query-dsl-query-string-query.html#query-string-syntax",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560424826000,
+            "Name": "Query",
+            "Type": 0,
+            "Value": "*"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560424826000,
+            "CustomActionId": -1,
+            "DefaultValue": "100",
+            "Description": "Limits the document return count, ie: 10.\r\n0 = No limit",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560424826000,
+            "Name": "Limit",
+            "Type": 0,
+            "Value": "100"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665793363,
+            "CustomActionId": -1,
+            "DefaultValue": "*",
+            "Description": "Limits the returned fields. Default \"*\" = Return all fields.\r\nYou can state a single field. ie: \"level\"",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665793363,
+            "Name": "Display Field",
+            "Type": 0,
+            "Value": "*"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665793363,
+            "CustomActionId": -1,
+            "DefaultValue": "_all",
+            "Description": "Search field for free text queries (When query doesn't specify a field name).\r\nDefault is \"_all\", which means all fields are searched. It is best to use proper lucene syntanx on \"_all\" fields, or textual search on a specific field.\r\nie1: Search Field = \"_all\". Query = \"level:error\" Query will return all records where \"level\" field, equals \"error\".\r\nie2: Search Field = \"Message\", query = \"*Login Alarm*\". Query will return all records, which their \"Message\" field, contains the text \"Login Alarm\"",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665793363,
+            "Name": "Search Field",
+            "Type": 0,
+            "Value": "_all"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665793363,
+            "CustomActionId": -1,
+            "DefaultValue": "@timestamp",
+            "Description": "The name of the field to run time-based filtering against. Default is @timestamp. If both Earliest Date and Oldest Date are empty, no time-based filtering will occur.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665793363,
+            "Name": "Timestamp Field",
+            "Type": 0,
+            "Value": "@timestamp"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560424826000,
+            "CustomActionId": -1,
+            "DefaultValue": "now-1d",
+            "Description": "Start date of the search. Search will return only records equal or after this point in time.\r\nInput may be in exact UTC:\r\n\tFormat: YYYY-MM-DDTHH:MM:SSZ\r\n\tie: 2019-06-04T10:00:00Z\r\nInput may also be in relative form (using date-math):\r\n\tie: \"now\", \"now-1d\", \"now-1d/d\", \"now-2h/h\"\r\n\tto learn more about date-math visit https://www.elastic.co/guide/en/elasticsearch/reference/7.1/common-options.html#date-math",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560424826000,
+            "Name": "Oldest Date",
+            "Type": 0,
+            "Value": "now-1d"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560424826000,
+            "CustomActionId": -1,
+            "DefaultValue": "now",
+            "Description": "End date of the search. Search will return only records equal or before this point in time.\r\nInput may be in exact UTC:\r\n\tFormat: YYYY-MM-DDTHH:MM:SSZ\r\n\tie: 2019-06-04T10:00:00Z\r\nInput may also be in relative form (using date-math):\r\n\tie: \"now\", \"now-1d\", \"now-1d/d\", \"now-2h/h\"\r\n\tto learn more about date-math visit https://www.elastic.co/guide/en/elasticsearch/reference/7.1/common-options.html#date-math",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560424826000,
+            "Name": "Earliest Date",
+            "Type": 0,
+            "Value": "now"
+        }
+    ],
+    "ScriptResultName": "results",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

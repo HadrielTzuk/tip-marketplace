@@ -1,0 +1,45 @@
+{
+    "CreationTimeUnixTimeInMs": 1542187500928,
+    "Creator": "Admin",
+    "Description": "Update threat incident status in SentinelOne.",
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOneV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542187500928,
+    "Name": "Update Incident Status",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542187388209,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of threat ids for which you want to update the incident status.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542187388209,
+            "Name": "Threat ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542187388209,
+            "CustomActionId": -1,
+            "DefaultValue": "Resolved",
+            "Description": "Specify the incident status.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542187388209,
+            "Name": "Status",
+            "Type": 15,
+            "OptionalValues": [
+                "Resolved",
+                "Unresolved",
+                "In Progress"
+            ],
+            "Value": "Resolved"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

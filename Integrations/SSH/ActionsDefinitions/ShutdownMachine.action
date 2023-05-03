@@ -1,0 +1,77 @@
+{
+    "CreationTimeUnixTimeInMs": 1515463356177,
+    "Creator": "admin",
+    "Description": "Shutdown remote machine",
+    "Id": -1,
+    "IntegrationIdentifier": "SSH",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515463356177,
+    "Name": "Shutdown Machine",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516047014838,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Remote server address(e.g: x.x.x.x)",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516047014838,
+            "Name": "Remote Server",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516047014838,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516047014838,
+            "Name": "Remote Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516047014838,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516047014838,
+            "Name": "Remote Password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516047014838,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The default port will be 22.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516047014838,
+            "Name": "Remote Port",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516047014838,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Time to wait before shutdown in minutes(e.g: now).",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516047014838,
+            "Name": "Wait Time",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

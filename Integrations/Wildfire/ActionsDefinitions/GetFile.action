@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1519204750250, 
+    "Creator": "admin", 
+    "Description": "Download and save a sample from WildFire", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Wildfire", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1519204750250, 
+    "Name": "GetFile", 
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

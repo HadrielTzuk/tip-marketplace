@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1536501862741,
+    "Creator": "Admin",
+    "Description": "Get task information by ID.",
+    "Id": -1,
+    "IntegrationIdentifier": "FortiManager",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1536501862741,
+    "Name": "Get Task Information",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1536501862741,
+            "CustomActionId": 24,
+            "DefaultValue": null,
+            "Description": "The ID of the task to get information about.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1536501862741,
+            "Name": "Task ID",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import *\nfrom FortiManager import FortiManager\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\n\n\nPROVIDER = 'FortiManager'\nACTION_NAME = 'FortiManager_Get Task Information'\nTABLE_HEADER = 'Task Information'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    verify_ssl = conf.get('Verify SSL', 'false').lower() == 'true'\n    forti_manager = FortiManager(conf['API Root'], conf['Username'], conf['Password'], verify_ssl)\n\n    result_value = False\n\n    # Parameters.\n    task_id = siemplify.parameters.get('Task ID')\n\n    task_object = forti_manager.get_task(task_id)\n\n    if task_object:\n        siemplify.result.add_data_table(TABLE_HEADER, flat_dict_to_csv(dict_to_flat(task_object)))\n        output_message = \"Found information for task with ID: {0}\".format(task_id)\n        result_value = True\n    else:\n        output_message = 'No information found for task with ID: {0}'.format(task_id)\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

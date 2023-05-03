@@ -1,0 +1,75 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805, 
+    "Creator": "Admin", 
+    "Description": "Create a Reputation Override for the certificate. Note that action is not working on Siemplify entities.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\":\"38472c5bff7f11eb86dc8fXXXXXXXXXX\",\"created_by\":\"XXXXXXXXXX\",\"create_time\":\"XXXX-XX-XXTXX:XX:XX.XXXZ\",\"override_list\":\"WHITE_LIST\",\"override_type\":\"CERT\",\"description\":\"XXXXXX\",\"source\":\"APP\",\"source_ref\":\"None\",\"signed_by\":\"XXXXXXX\",\"certificate_authority\":\"XXXXXXXX\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1, 
+    "IntegrationIdentifier": "CBCloud", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1560351300805, 
+    "Name": "Create a Reputation Override for Certificate", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the Certificate Authority that authorizes the validity of the certificate to add to reputation override.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Certificate Authority", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the name of the signer to add to reputation override.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Signed By", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify a description for the created reputation override.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Description", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Not Specified",
+            "Description": "Specify override list to create.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Reputation Override List",
+            "OptionalValues": [
+                "Not Specified",
+                "WHITE_LIST",
+                "BLACK_LIST"
+            ],
+            "Type": 15,
+            "Value": "Not Specified"
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": []}", 
+    "Version": 1.0
+}

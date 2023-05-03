@@ -1,0 +1,45 @@
+{
+    "DisplayName": "HCL BigFix Inventory",
+    "Identifier": "HCLBigFixInventory",
+    "Description": "HCL BigFix Software Inventory provides valuable insight into what the organization owns and what it has installed but does not own along with how often the software is being used.",
+    "MarketingDisplayName": "HCL BigFix Inventory",
+    "Categories": [
+        "Asset Management"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "HCLBigFixInventory",
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyDescription": "API root of the HCL BigFix Inventory instance.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://{{ip address}}:9081"
+        },
+        {
+            "IntegrationIdentifier": "HCLBigFixInventory",
+            "PropertyDisplayName": "API Token",
+            "PropertyName": "API Token",
+            "PropertyDescription": "API Token of the HCL BigFix Inventory account.",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "HCLBigFixInventory",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the HCL BigFix Inventory server is valid.",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M12.5,2c-.78,0-1.55,.09-2.28,.25V7.43c.7-.29,1.47-.46,2.28-.46,3.28,0,5.93,2.66,5.93,5.93s-2.66,5.94-5.93,5.94-5.93-2.66-5.93-5.93V3.84c-2.76,1.89-4.57,5.07-4.57,8.66,0,5.8,4.7,10.5,10.5,10.5s10.5-4.7,10.5-10.5S18.3,2,12.5,2Zm2.43,11.06c0-1.34-1.09-2.43-2.43-2.43s-2.43,1.09-2.43,2.43,1.09,2.43,2.43,2.43,2.43-1.09,2.43-2.43Z\"/></svg>",
+    "Version": 1.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/hcl-bigfix-inventory"
+}

@@ -1,0 +1,49 @@
+{
+    "Description": "CA Service Desk Manager is designed to help IT service desk analysts make every moment count through a dynamic experience so they can deliver great customer service without the fear of overbearing processes or metrics. With the solution, teams can embrace teamwork rather than working from siloed knowledge stashes and disjointed communications.",
+    "DisplayName": "CA Service Desk Manager",
+    "Identifier": "CaServiceDesk",
+    "Categories": [
+        "IT & Infrastructure",
+        "ITSM"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "CaServiceDesk",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": 2,
+            "Value": "http://<IP OR FQDN>:<PORT>/"
+        },
+        {
+            "IntegrationIdentifier": "CaServiceDesk",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "CaServiceDesk",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "CaServiceDesk",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Ticket Fields",
+            "PropertyName": "Ticket Fields",
+            "PropertyType": 2,
+            "Value": "customer.combo_name,category.sym,status.sym,priority.sym,active,log_agent.combo_name,assignee.combo_name,group.combo_name,affected_service.name,severity.sym,urgency.sym,impact.sym,problem.ref_num,resolution_code.sym,call_back_date,change.chg_ref_num,caused_by_chg.chg_ref_num,external_system_ticket,resolution_method.sym,symptom_code.sym,requested_by.combo_name,persistent_id,summary,description,open_date,last_mod_dt,resolve_date,close_date,ref_num"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M22.9,9.7c-0.1-1.9-1-3.1-2.9-3.7c-1.4-0.4-2.9-0.5-4.4-0.2c-0.8,0.2-1.7,0.5-2.4,0.8c0.6,1,1.2,1.9,1.8,2.8\n\t\t\tc0.8-0.9,1.9-1,3-0.6c0.8,0.3,1.1,1.1,1,2.1c-0.7,0.1-1.4,0.1-2.1,0.2c-1.5,0.2-3,0.5-4.3,1.3c-2.4,1.6-2.3,5.2,0.3,6.6\n\t\t\tc1.8,1,4.4,0.7,5.9-0.8c0.1-0.1,0.2-0.2,0.4-0.3c0.1,0.5,0.1,0.9,0.2,1.4h3.5c0-1.5,0-2.9,0-4.3C22.9,13.3,22.9,11.5,22.9,9.7z\n\t\t\t M18.9,15.2c-0.3,1.3-1.4,2-2.7,1.9c-0.7-0.1-1.3-0.4-1.6-1.1c-0.2-0.8,0-1.5,0.7-2c1.1-0.7,2.3-0.9,3.7-1\n\t\t\tC19,13.8,19,14.5,18.9,15.2z M6.6,14.1c-0.1-1.1-0.1-2.3,0.1-3.4c0.2-1.4,1.1-2,2.5-2c1.2,0,1.8,0.7,2,1.8c1.1,0,2.1,0,3.1,0\n\t\t\tc0.1,0,0.3,0,0.5,0C14.5,8.9,14,7.8,13,7C9.8,4.4,4.4,5.7,2.8,9.4c-0.8,1.8-0.9,3.7-0.4,5.6c1,4.1,6.1,6.1,9.4,3.9\n\t\t\tc-0.4-1-0.9-1.9-1.3-2.9C8.5,17.2,6.9,16.5,6.6,14.1z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 16.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/ca-service-desk-manager",
+    "MarketingDisplayName": "CA Service Desk Manager"
+}

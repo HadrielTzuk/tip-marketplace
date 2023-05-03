@@ -1,0 +1,32 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List available log groups in AWS CloudWatch.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSCloudWatch",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"arn\": \"arn:aws:logs:XX-XXX-X:123456789:log-group:CloudTrail/DefaultLogGroup:*\", \"creationTime\": \"2021-01-25T13:36:35Z\", \"logGroupName\": \"CloudTrail/DefaultLogGroup\", \"metricFilterCount\": 0, \"storedBytes\": 123456789}]",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Log Groups",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many groups to return. Default: 50.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Groups To Return",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

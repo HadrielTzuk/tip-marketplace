@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 19.05</h2><h5>Published on 23 November, 2022</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     SEP\n    </b>\n   </li>\n   <ul>\n    <li>\n     SEP\n    </li>\n    <ul>\n     <li>\n      Symantec Endpoint Protection 14 - Added certificate verification for the integration configuration.\n     </li>\n     <li>\n      Symantec Endpoint Protection 14 - Security Enhancements.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     CBCloud\n    </b>\n   </li>\n   <ul>\n    <li>\n     VMware Carbon Black Cloud Alerts and Events Baseline Connector\n    </li>\n    <ul>\n     <li>\n      VMware Carbon Black Cloud Alerts and Events Baseline Connector - Improved processing of backlogged alerts and related events.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     MicrosoftAzureSentinel\n    </b>\n   </li>\n   <ul>\n    <li>\n     Microsoft Azure Sentinel Incident Connector v2\n    </li>\n    <ul>\n     <li>\n      Microsoft Azure Sentinel Incident Connector v2 - Updates for event creation logic and mapping for some incident types.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "19.05",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "23/11/22",
+    "Title": "Release Notes"
+}

@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Search records in a table in AppSheet.",
+    "Id": -1,
+    "IntegrationIdentifier": "AppSheet",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Search Records",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"_RowNumber\": \"2\", \"Name\": \"Acadia\", \"State\": \"Maine\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Table Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the table for which you want to retrieve details.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Selector Query",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the selector query, which will be used to limit results. If nothing is provided, action will return all records.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

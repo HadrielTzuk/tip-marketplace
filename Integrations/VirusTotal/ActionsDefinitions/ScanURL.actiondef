@@ -1,0 +1,48 @@
+{
+    "CreationTimeUnixTimeInMs": 1535884935059, 
+    "Creator": "System", 
+    "Description": "Scan URL via VirusTotal. *Mark entity as suspicious and show insights if risk score matches a given threshold.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"permalink\": \"https://www.virustotal.com/url/057e8630c8880da8778b4f99e048933efb7cee9abdcf57fad89a7e7a2c7eae04/analysis/1549258134/\", \"resource\": \"http://domain-example.com/F1q7QX.php\", \"url\": \"http://domain-example.com/F1q7QX.php\", \"response_code\": 1, \"scan_date\": \"2019-02-04 05:28:54\", \"scan_id\": \"057e8630c8880da8778b4f99e048933efb7cee9abdcf57fad89a7e7a2c7eae04-1549258134\", \"verbose_msg\": \"Scan finished, scan information embedded in this object\", \"filescan_id\": null, \"positives\": 5, \"total\": 67, \"scans\": {\"CLEAN MX\": {\"detected\": false, \"result\": \"clean site\"}, \"DNS8\": {\"detected\": false, \"result\": \"clean site\"}}}, \"Entity\": \"http://domain-example.com/F1q7QX.php\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "VirusTotal", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1535884935059, 
+    "Name": "Scan URL", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535884935059, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Mark entity as suspicious if number of negative engines is equal or above the given threshold", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1535884935059, 
+            "Name": "Threshold", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Action will fetch the latest result. If the result is older than mentioned days it will automatically rescan the entity", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535884906829, 
+            "Name": "Rescan after days", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom VirusTotal import VirusTotalManager, URL_TYPE\nfrom SiemplifyAction import SiemplifyAction\nfrom ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_INPROGRESS\nfrom SiemplifyUtils import add_prefix_to_dict\nimport sys\nimport json\n\n\nPROVIDER = 'VirusTotal'\nACTION_NAME = 'VT_Scan URL'\nREADY_STATUSES = -2\nVT_PREFIX = 'VT'\n\n\ndef get_entity_by_identifier(entities, identifier):\n    for entity in entities:\n        if entity.identifier.lower() == identifier.lower():\n            return entity\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    api_key = conf['Api Key']\n    use_ssl = conf['Use SSL'].lower() == 'true'\n    vt = VirusTotalManager(api_key, use_ssl)\n\n    task_ids = {}\n    errors = []\n\n    for entity in siemplify.target_entities:\n        # Search a file hash in virus total.\n        if entity.entity_type == EntityTypes.URL:\n            try:\n                # Rescan file.\n                scan_id = vt.scan_url(entity.identifier.lower())\n                siemplify.LOGGER.info(scan_id)\n                if scan_id:\n                    task_ids.update({entity.identifier: scan_id})\n\n            except Exception as err:\n                error_message = 'Error scanning URL \"{0}\", Error: {1}'.format(\n                    entity.identifier,\n                    err.message\n                )\n                siemplify.LOGGER.error(error_message)\n                siemplify.LOGGER.exception(err)\n                errors.append(error_message)\n\n    output_message = \"Searching reports for task ids.\"\n    siemplify.end(output_message, json.dumps(task_ids), EXECUTION_STATE_INPROGRESS)\n\n\ndef fetch_scan_report_async():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    api_key = conf['Api Key']\n    use_ssl = conf['Use SSL'].lower() == 'true'\n    vt = VirusTotalManager(api_key, use_ssl)\n\n    # Extract TASK IDS\n    task_ids = json.loads(siemplify.parameters[\"additional_data\"])\n\n    threshold = siemplify.parameters.get('Threshold', 3)\n\n    is_ready = True\n    is_risky = False\n    entities_to_enrich = []\n\n    for entity_identifier, task_id in task_ids.items():\n        try:\n            # check if analysis completed\n            report = vt.get_url_or_file_report(task_id, URL_TYPE)\n            status = report.get('response_code')\n            if status not in READY_STATUSES:\n                is_ready = False\n\n        except Exception as err:\n            error_message = 'Cannot get status for task ID \"{0}\", Error: {1}'.format(\n                task_id,\n                err.message\n            )\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n\n    if is_ready:\n        for entity_identifier, task_id in task_ids.items():\n            try:\n                # Get URL report.\n                url_report = vt.get_url_or_file_report(task_id, URL_TYPE)\n                # If report is none, and error not raised - probably entity can't be found.\n                if url_report:\n                    entity = get_entity_by_identifier(siemplify.target_entities, entity_identifier)\n                    entities_to_enrich.append(entity)\n                    entity.is_enriched = True\n\n                    # Scan detections_information\n                    entity.additional_properties.update(add_prefix_to_dict(vt.build_url_enrichment(url_report), VT_PREFIX))\n                    entity_table = vt.build_engine_csv(url_report['scans'])\n                    siemplify.result.add_entity_table('{0} Report'.format(entity.identifier), entity_table)\n\n                    web_link = url_report['permalink']\n                    siemplify.result.add_entity_link(\"{0} Link to web report\".format(entity.identifier), web_link)\n\n                    if int(threshold) < search_data['VT_risk_score']:\n                        is_risky = True\n                        entity.is_suspicious = True\n                        insight_msg = 'VirusTotal - URL was marked as malicious by {0} of {1} engines - Threshold set' \\\n                                      ' to - {2} (if exceed threshold)'.format(\n                            url_report.get('positives'), url_report.get('total'), threshold)\n                        siemplify.add_entity_insight(entity, insight_msg, triggered_by='Virustotal')\n\n            except Exception as err:\n                error_message = 'Error fetching report for task ID \"{0}\", Error: {1}'.format(\n                    task_id,\n                    err.message\n                )\n                siemplify.LOGGER.error(error_message)\n                siemplify.LOGGER.exception(err)\n\n        if entities_to_enrich:\n            output_massage = 'The following URLs were analyzed in VirusTotal: {0}.'.format(', '.join([entity.identifier\n                                                                                                      for entity in\n                                                                                                      entities_to_enrich\n                                                                                                      ]))\n            siemplify.update_entities(entities_to_enrich)\n        else:\n            output_massage = 'No URLs were scanned.'\n        siemplify.LOGGER.info(\"Scan URL Action END!!!.\")\n        siemplify.end(output_massage, is_risky, EXECUTION_STATE_COMPLETED)\n\n    else:\n        siemplify.LOGGER.info(\"Tasks {0} are still queued for analysis.\".format(task_ids.values()))\n        output_massage = \"Continuing...the requested items are still queued for analysis {0}\".format(task_ids)\n        siemplify.end(output_massage, is_risky, EXECUTION_STATE_INPROGRESS)\n\n\nif __name__ == \"__main__\":\n    if len(sys.argv) < 3 or sys.argv[2] == 'True':\n        main()\n    else:\n        fetch_scan_report_async()\n", 
+    "ScriptResultName": "is_risky", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Version": 2.0,
+    "IsAsync": true
+}

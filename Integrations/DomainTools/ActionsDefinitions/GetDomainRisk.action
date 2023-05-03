@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1515412073097, 
+    "Creator": "admin", 
+    "Description": "Enrich external domain entity with the domain risk score given by DomainTools data", 
+    "Id": -1, 
+    "IntegrationIdentifier": "DomainTools", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1515412073097, 
+    "Name": "Get Domain Risk", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1515513657605, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Mark entity as suspicious if the domain risk score pass the given threshold. e.g. 3", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1515513657605, 
+            "Name": "Threshold", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_risky", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

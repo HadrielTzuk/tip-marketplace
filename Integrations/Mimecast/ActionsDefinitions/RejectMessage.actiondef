@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583, 
+    "Creator": "admin", 
+    "Description": "Reject message in Mimecast. Note: only messages with status \"Held\" can be rejected.",
+    "Id": -1, 
+    "IntegrationIdentifier": "Mimecast", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530451212583, 
+    "Name": "Reject Message",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the ID of the message that needs to be rejected.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Message ID", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify an additional note containing an explanation regarding why the message was rejected.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Note",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Select One",
+            "Description": "Specify the reason for rejection.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Reason",
+            "OptionalValues": [
+                "Select One",
+                "Inappropriate Communication",
+                "Confidential Information",
+                "Restricted Content",
+                "Against Email Policy"
+            ],
+            "Type": 15,
+            "Value": "Select One"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "false",
+            "Description": "If enabled, action will notify the sender about rejection.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Notify Sender",
+            "Type": 1,
+            "Value": "false"
+        }
+    ], 
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

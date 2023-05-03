@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 19.5</h2><h5>Published on 25 January, 2023</h5><hr><h3>What's Improved</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     CBCloud\n    </b>\n   </li>\n   <ul>\n    <li>\n     Integration\n    </li>\n    <ul>\n     <li>\n      Enrich Entities, List Host Vulnerabilities - Added support for OOTB widget.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "19.5",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "25/01/23",
+    "Title": "Release Notes"
+}

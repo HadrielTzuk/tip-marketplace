@@ -1,0 +1,31 @@
+{
+    "CreationTimeUnixTimeInMs": 1518516430366,
+    "Creator": "admin",
+    "Description": "Push commits of a device group in Palo Alto Panorama. Note: It can take several minutes before changes are pushed. ",
+    "Id": -1,
+    "IntegrationIdentifier": "PaloAltoPanorama",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518516430366,
+    "Name": "Push Changes",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518700571020,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify name of the device group. Visit action documentation to get more insights on where you can find this value.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518700571020,
+            "Name": "Device Group Name",
+            "Type": 0,
+            "Value": "",
+            "Description": "The device group in which the rule is located, e.g: LCaas. For viewing the available device group names in a given device, please refer to https://<PANORAMA IP>/php/rest/browse.php/config::devices::entry[@name='<DEVICE_NAME>']::device-group."
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

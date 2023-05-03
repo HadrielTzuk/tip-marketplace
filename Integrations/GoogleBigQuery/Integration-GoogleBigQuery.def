@@ -1,0 +1,129 @@
+{
+    "Description": "BigQuery is a fully-managed, serverless data warehouse that enables scalable analysis over petabytes of data. It is a Software as a Service that supports querying using ANSI SQL. It also has built-in machine learning capabilities.",
+    "DisplayName": "Google BigQuery",
+    "Identifier": "GoogleBigQuery",
+    "Categories": [
+        "Database",
+        "Cloud",
+        "Operational",
+        "Google"
+    ],
+    "PythonVersion": 2,
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "GoogleBigQuery",
+            "IsMandatory": false,
+            "PropertyDescription": "Type of the Google BigQuery account. Located at the “type” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Account Type",
+            "PropertyName": "Account Type",
+            "PropertyType": "2",
+            "Value": "service_account"
+        },
+        {
+            "IntegrationIdentifier": "GoogleBigQuery",
+            "IsMandatory": false,
+            "PropertyDescription": "Project ID of the Google BigQuery account. Located at the “project_id” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Project ID",
+            "PropertyName": "Project ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleBigQuery",
+            "IsMandatory": false,
+            "PropertyDescription": "Private Key ID of the Google BigQuery account. Located at the “private_key_id” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Private Key ID",
+            "PropertyName": "Private Key ID",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleBigQuery",
+            "IsMandatory": false,
+            "PropertyDescription": "Private Key of the Google BigQuery account. Located at the “private_key” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Private Key",
+            "PropertyName": "Private Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleBigQuery",
+            "IsMandatory": false,
+            "PropertyDescription": "Client Email of the Google BigQuery account. Located at the “client_email” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Client Email",
+            "PropertyName": "Client Email",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleBigQuery",
+            "IsMandatory": false,
+            "PropertyDescription": "Client ID of the Google BigQuery account. Located at the “client_id” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleBigQuery",
+            "IsMandatory": false,
+            "PropertyDescription": "Auth URI of the Google BigQuery account. Located at the “auth_uri” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Auth URI",
+            "PropertyName": "Auth URI",
+            "PropertyType": "2",
+            "Value": "https://accounts.google.com/o/oauth2/auth"
+        },
+        {
+            "IntegrationIdentifier": "GoogleBigQuery",
+            "IsMandatory": false,
+            "PropertyDescription": "Token URI of the Google BigQuery account. Located at the “token_uri” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Token URI",
+            "PropertyName": "Token URI",
+            "PropertyType": "2",
+            "Value": "https://oauth2.googleapis.com/token"
+        },
+        {
+            "IntegrationIdentifier": "GoogleBigQuery",
+            "IsMandatory": false,
+            "PropertyDescription": "Auth Provider X509 URL of the Google BigQuery account. Located at the “auth_provider_x509_cert_url” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Auth Provider X509 URL",
+            "PropertyName": "Auth Provider X509 URL",
+            "PropertyType": "2",
+            "Value": "https://www.googleapis.com/oauth2/v1/certs"
+        },
+        {
+            "IntegrationIdentifier": "GoogleBigQuery",
+            "IsMandatory": false,
+            "PropertyDescription": "Client X509 URL of the Google BigQuery account. Located at the “client_x509_cert_url” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.",
+            "PropertyDisplayName": "Client X509 URL",
+            "PropertyName": "Client X509 URL",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleBigQuery",
+            "IsMandatory": false,
+            "PropertyDescription": "Optional: Instead of specifying private key id, private key and other parameters, specify here the full JSON content of the service account file. Other connection parameters will be ignored if this parameter is provided.",
+            "PropertyDisplayName": "Service Account Json File Content",
+            "PropertyName": "Service Account Json File Content",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleBigQuery",
+            "IsMandatory": false,
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Google Big Query service is valid.",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": true
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M23.7915 11.4093L18.7869 2.7463C18.5235 2.29267 18.0406 2 17.4991 2H7.4899C6.9631 2 6.46556 2.29267 6.20216 2.7463L1.19755 11.4093C0.93415 11.8775 0.93415 12.4482 1.19755 12.9019L6.20216 21.5648C6.46556 22.0331 6.9631 22.3111 7.4899 22.3111H17.4991C18.0259 22.3111 18.5235 22.0185 18.7869 21.5648L23.7915 12.9019C24.0695 12.4482 24.0695 11.8775 23.7915 11.4093ZM17.265 16.5456L16.8553 16.9553C16.7675 17.0431 16.6065 17.0431 16.5187 16.9553L14.9822 15.4042C14.9676 15.3895 14.9529 15.3749 14.9383 15.3456C13.431 16.5309 11.3238 16.5309 9.80197 15.3603C7.9728 13.9555 7.63623 11.3215 9.05567 9.49229C10.4605 7.66311 13.0945 7.32655 14.9236 8.74598C16.7528 10.1654 17.0894 12.7848 15.67 14.614C15.6846 14.6286 15.7139 14.6432 15.7285 14.6579L17.265 16.1944C17.3528 16.2968 17.3528 16.4431 17.265 16.5456Z\" \/>\r\n<path d=\"M12.3628 15.214C14.1004 15.214 15.509 13.8055 15.509 12.0679C15.509 10.3303 14.1004 8.9217 12.3628 8.9217C10.6252 8.9217 9.21662 10.3303 9.21662 12.0679C9.21662 13.8055 10.6252 15.214 12.3628 15.214Z\" \/>\r\n<\/svg>",
+    "Version": 6.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/google-big-query",
+    "MarketingDisplayName": "Google BigQuery"
+}

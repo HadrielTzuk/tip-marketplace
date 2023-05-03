@@ -1,0 +1,37 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Suppress Alert in FireEye Helix.",
+    "Id": -1,
+    "IntegrationIdentifier": "FireEyeHelix",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Suppress Alert",
+    "Parameters": [
+        {
+            "Name": "Alert ID",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify ID of the Alert that needs to be suppressed in FireEye Helix.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Duration",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify for how long the Alert should be suppressed in minutes.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

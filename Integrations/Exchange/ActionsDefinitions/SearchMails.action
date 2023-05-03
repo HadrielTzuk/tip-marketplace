@@ -1,0 +1,192 @@
+{
+    "CreationTimeUnixTimeInMs": 1511698992392,
+    "Creator": "admin",
+    "Description": "Search for specific emails in configured mailbox using multiple provided search criteria. Action return information on found in mailbox emails in JSON format. NOTICE - to search for an email in all mailboxes, please configure impersonation permissions. https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/impersonation-and-ews-in-exchange. Note: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"body\": \"Mail Body\", \"subject\": \"Mail Subject\", \"author\": \"john_doe@example.com\"}, {\"body\": \"\", \"subject\": \"Mail Subject\", \"author\": \"john_doe@example.com\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Exchange",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511698992392,
+    "Name": "Search Mails",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "Inbox",
+            "Description": "Mailbox folder to search email in. Parameter should also accept comma separated list of folders to check the user response in multiple folders.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Folder Name",
+            "Type": 0,
+            "Value": "Inbox"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of message ids that need to be searched. Note: this filter has priority over the other ones.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1512975883225,
+            "Name": "Message IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition, specify what subject to search for emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Subject Filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition, specify who should be the sender of needed emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Sender Filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition, specify who should be the recipient of needed emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Recipient Filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition, specify in what time frame in minutes should action look for emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Time Frame (minutes)",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "Filter condition, specify if search should look only for unread emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Only Unread",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "100",
+            "Description": "Return max X emails as an action result",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Max Emails To Return",
+            "Type": 0,
+            "Value": "100"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If checked, search in all mailboxes accessible with current impersonalization settings",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Search in all mailboxes",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "25",
+            "Description": "In case \"Search in all mailboxes\" is checked, action works in batches, this parameter controls how many mailboxes action should process in single batch (single connection to mail server).",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "How many mailboxes to process in a single batch",
+            "Type": 0,
+            "Value": "25"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of mailboxes that need to be searched. This parameter has priority over \"Search in all mailboxes\".",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Mailboxes",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the start time for the email search. Format: ISO 8601. This parameter has a priority over \"Time Frame (minutes)\".",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the end time for the email search. Format: ISO 8601. If nothing is provided and \"Start Time\" is valid then this parameter will use current time.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "End Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a regex pattern that needs to be searched in body part of the email.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Body Regex Filter",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "mails_json",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 18.55</h2><h5>Published on 15 September, 2022</h5><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     McAfeeESM\n    </b>\n   </li>\n   <ul>\n    <li>\n     McAfee ESM Correlations Connector\n    </li>\n    <ul>\n     <li>\n      McAfee ESM Correlations Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.\n     </li>\n    </ul>\n    <li>\n     McAfee ESM Connector\n    </li>\n    <ul>\n     <li>\n      McAfee ESM Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     Microsoft365Defender\n    </b>\n   </li>\n   <ul>\n    <li>\n     Microsoft 365 Defender Incidents Connector\n    </li>\n    <ul>\n     <li>\n      Incidents Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "18.55",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "15/09/22",
+    "Title": "Release Notes"
+}

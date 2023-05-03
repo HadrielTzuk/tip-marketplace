@@ -1,0 +1,45 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Remove IP addresses from the IP Set in AWS WAF.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSWAF",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Remove IP From IP Set",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the comma-separated list of IP set names. Example: name_1,name_2",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "IP Set Names",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "CloudFront",
+            "Description": "Specify what should be the scope of the set. If \"Both\" is selected, action will remove IP addresses from IPsets in Regional and CloudFront scopes.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Scope",
+            "OptionalValues": [
+                "CloudFront",
+                "Regional",
+                "Both"
+            ],
+            "Type": 15,
+            "Value": "CloudFront"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}",
+    "Version": 1.0
+}

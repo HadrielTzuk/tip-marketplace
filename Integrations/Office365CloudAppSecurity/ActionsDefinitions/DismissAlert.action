@@ -1,0 +1,42 @@
+{
+    "CreationTimeUnixTimeInMs": 1513525130286,
+    "Creator": "admin",
+    "Description": "Deprecated. Please refer to action \"Close Alert\".",
+    "Id": -1,
+    "IntegrationIdentifier": "Office365CloudAppSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1513525130286,
+    "Name": "Dismiss Alert",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518700589889,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Alert Unique Identifier. The parameter takes single alert Ids",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518700589889,
+            "Name": "Alert ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518700589889,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "A comment to explain why an alert is dismissed",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518700589889,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

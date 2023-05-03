@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1522587101057, 
+    "Creator": "admin", 
+    "Description": "Change zone for an endpoint (group of endpoints)", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Cylance", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1522587101057, 
+    "Name": "Change Zone", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1522590061298, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "The new Zone to add. Comma separated.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1522590061298, 
+            "Name": "Zones to Add", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1522590061298, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "The Zone to be removed. Comma separated.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1522590061298, 
+            "Name": "Zones to Remove", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "Script": null, 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 0.0
+}

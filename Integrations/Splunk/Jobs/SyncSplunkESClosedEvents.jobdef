@@ -1,0 +1,85 @@
+{
+    "CreationTimeUnixTimeInMs": 1534248991561,
+    "Creator": "Admin",
+    "Description": "This job will synchronize closed Splunk ES notable events and Siemplify alerts.",
+    "Id": -1,
+    "Integration": "Splunk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534248991561,
+    "Name": "Sync Splunk ES Closed Events",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530435938022,
+            "DefaultValue": "https://<ip>:8089",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1530435938022,
+            "Name": "Server Address",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530435938022,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1530435938022,
+            "Name": "Username",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530435938022,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1530435938022,
+            "Name": "Password",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530435938022,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1530435938022,
+            "Name": "API Token",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "24",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Max Hours Backwards",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "CA Certificate File",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Verify SSL",
+            "Type": 0
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Version": 1
+}

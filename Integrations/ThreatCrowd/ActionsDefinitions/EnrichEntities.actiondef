@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1527689640523, 
+    "Creator": "admin", 
+    "Description": "Quickly identify related infrastructure and malware", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"permalink\": \"https: //www.threatcrowd.org/ip.php?ip=1.1.1.1\", \"response_code\": \"1\", \"votes\": -1, \"references\": [\"http: //www.talosintelligence.com/feeds/ip-filter.blf\", \"https: //check.torproject.org/exit-addresses\", \"https: //otx.alienvault.com/pulse/56714a2867db8c3f8a46fe95/\"], \"hashes\": [], \"resolutions\": [{\"domain\": \"afplink.net\", \"last_resolved\": \"2016-06-24\"}, {\"domain\": \"jabber.zwiebeltoralf.de\", \"last_resolved\": \"2016-12-28\"}]}, \"Entity\": \"1.1.1.1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "ThreatCrowd", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1527689640523, 
+    "Name": "EnrichEntities", 
+    "Parameters": [], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv, add_prefix_to_dict_keys\nfrom ThreadCrowdManager import ThreadCrowdManager, ADDRESS_TYPE, DOMAIN_TYPE, MALICIOUS_VOTE\n\n\ndef enrich_entity(report, web_link, entity, siemplify):\n    # Enrich target entity with ThreatCrowd info and add web link with full details to entity\n    flat_report = dict_to_flat(report)\n    siemplify.result.add_entity_table(entity.identifier,\n                                      flat_dict_to_csv(flat_report))\n    flat_report = add_prefix_to_dict_keys(flat_report, \"ThreatCrowd\")\n    siemplify.result.add_entity_link(entity.identifier, web_link)\n    entity.additional_properties.update(flat_report)\n    if report['votes'] == MALICIOUS_VOTE:\n        entity.is_suspicious = True\n    entity.is_enriched = True\n    return True\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('ThreadCrowd')\n    use_ssl = conf['Use SSL'].lower() == 'true'\n    threat_crowd_manager = ThreadCrowdManager(use_ssl)\n\n    enriched_entities = []\n    scan_report = {}\n\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.ADDRESS:\n            scan_report = threat_crowd_manager.get_report(entity.identifier.lower(), ADDRESS_TYPE)\n\n        if entity.entity_type == EntityTypes.HOSTNAME:\n            scan_report = threat_crowd_manager.get_report(entity.identifier.lower(), DOMAIN_TYPE)\n\n        if scan_report:\n            link = scan_report['permalink']\n            enrich_entity(scan_report, link, entity, siemplify)\n            enriched_entities.append(entity)\n\n    if enriched_entities:\n        output_message = 'Following entities were enriched by ThreatCrowd. \\n{0}'.format(\n            enriched_entities)\n        result_value = 'true'\n        siemplify.update_entities(enriched_entities)\n    else:\n        output_message = 'No entities were enriched.'\n        result_value = 'false'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1542547990590,
+    "Creator": "Admin",
+    "Description": "Attach comment to incident.",
+    "Id": -1,
+    "IntegrationIdentifier": "SymantecATP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542547990590,
+    "Name": "Add Comment To Incident",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542547990590,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the UUID of the incident.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542547990590,
+            "Name": "Incident UUID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542547990590,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the comment that you want to add to the incident. Limit is 512 characters. This is Symantec ATP limitation.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542547990590,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecATPManager import SymantecATPManager\nfrom SiemplifyDataModel import EntityTypes\nfrom SymantecATPManager import ATPEntityTypes\n\n\nATP_PROVIDER = 'SymantecATP'\nACTION_NAME = \"SymantecATP_Add Comment To Incident\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(ATP_PROVIDER)\n    verify_ssl = conf.get('Verify SSL').lower() == 'true'\n    atp_manager = SymantecATPManager(conf.get('API Root'), conf.get('Client ID'), conf.get('Client Secret'), verify_ssl)\n\n    # Parameters.\n    incident_uuid = siemplify.parameters.get('Incident UUID')\n    comment = siemplify.parameters.get('Comment')\n\n    is_added = atp_manager.add_incident_comment(incident_uuid, comment)\n\n    if is_added:\n        output_message = \"Comment was successfully attached to incident.\"\n    else:\n        output_message = \"Comment was not attached to the incident.\"\n\n    siemplify.end(output_message, is_added)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_added",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

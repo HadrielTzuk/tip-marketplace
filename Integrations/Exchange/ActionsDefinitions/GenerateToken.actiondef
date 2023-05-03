@@ -1,0 +1,28 @@
+{
+    "CreationTimeUnixTimeInMs": 1543164953601,
+    "Creator": "admin",
+    "Description": "For integration configuration with Oauth authentication, get a refresh token using the authorization URL received in the Get Authorization action.",
+    "Id": -1,
+    "IntegrationIdentifier": "Exchange",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543164953601,
+    "Name": "Generate Token",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": 30001,
+            "DefaultValue": "",
+            "Description": "Use the authorization URL received in the Get Authorization URL action to request a refresh token.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Authorization URL",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

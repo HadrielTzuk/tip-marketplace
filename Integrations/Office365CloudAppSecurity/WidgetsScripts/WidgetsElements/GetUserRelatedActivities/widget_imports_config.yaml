@@ -1,0 +1,4 @@
+main_template_name: QueryWidgetTemplate.html
+common_imports:
+  QueryWidget:
+    import_all: yes

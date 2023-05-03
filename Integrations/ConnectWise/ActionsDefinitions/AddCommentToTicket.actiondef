@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1515424991640,
+    "Creator": "admin",
+    "Description": "Add new comment to a ticket in ConnectWise",
+    "Id": -1,
+    "IntegrationIdentifier": "ConnectWise",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515424991640,
+    "Name": "Add Comment To Ticket",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "ConnectWise ticket id. e.g. 608718",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Ticket Id",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comment content to attach to a ticket",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Comment",
+            "Type": 11,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If checked, put comment in internal section",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Internal",
+            "Type": 1,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyDataModel import EntityTypes\r\n# Imports\r\nfrom SiemplifyAction import SiemplifyAction\r\nfrom ConnectWiseManager import ConnectWiseManager\r\n\r\n\r\ndef main():\r\n\r\n    # Variables Definitions.\r\n    output_message = ''\r\n    result_value = False\r\n\r\n    siemplify = SiemplifyAction()\r\n    # Configuration.\r\n    configuration_settings = siemplify.get_configuration('ConnectWise')\r\n    company_url = configuration_settings['Api Root']\r\n    company_name = configuration_settings['Company Name']\r\n    public_key = configuration_settings['Public Key']\r\n    private_key = configuration_settings['Private Key']\r\n    connectwise_manager = ConnectWiseManager(company_url, company_name, public_key, private_key)\r\n\r\n    # Parameters.\r\n    ticket_id = siemplify.parameters['Ticket Id']\r\n    comment = siemplify.parameters['Comment']\r\n    is_internal = siemplify.parameters.get('Internal')\r\n    \r\n    # Execute Update Ticket.\r\n    result = connectwise_manager.add_comment_to_ticket(ticket_id, comment, is_internal)  # The result will be a ticket id.\r\n\r\n    if result:\r\n        output_message = \"Ticket with id {0} was updated with comment: {1}\".format(ticket_id, comment)\r\n        result_value = result\r\n    else:\r\n        output_message = 'There was a problem adding comment to ticket with id: {0}.'.format(ticket_id)\r\n        result_value = False\r\n\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n",
+    "ScriptResultName": "ticket_id",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

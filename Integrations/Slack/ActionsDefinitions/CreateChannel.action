@@ -1,0 +1,69 @@
+{
+    "CreationTimeUnixTimeInMs": 1542547990590,
+    "Creator": "Admin",
+    "Description": "Create a channel in Slack. Note that action is not working on Siemplify entities.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"is_general\": \"False\", \"name_normalized\": \"12asd1237712318\", \"is_channel\": \"True\", \"creator\": \"U014J4NFQQG\", \"is_member\": \"True\", \"is_archived\": \"False\", \"topic\": {\"last_set\": \"0\", \"value\": \"\", \"creator\": \"\"}, \"parent_conversation\": \"None\", \"is_im\": \"False\", \"is_ext_shared\": \"False\", \"previous_names\": [], \"last_read\": \"0000000000.000000\", \"id\": \"C014S1G6DB4\", \"is_org_shared\": \"False\", \"pending_connected_team_ids\": [], \"is_pending_ext_shared\": \"False\", \"is_mpim\": \"False\", \"is_group\": \"False\", \"shared_team_ids\": [\"T013MJHSNCT\"], \"purpose\": {\"last_set\": 0, \"value\": \"\", \"creator\": \"\"}, \"is_private\": \"False\", \"is_shared\": \"False\", \"name\": \"12asd1237712318\", \"created\": \"1591194197\", \"pending_shared\": [], \"unlinked\": 0, \"priority\": 0}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Slack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542547990590,
+    "Name": "Create Channel",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542547990590,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the channel. Note: Channel names may only contain lowercase letters, numbers, hyphens, and underscores, and must be 80 characters or less.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542547990590,
+            "Name": "Channel Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542547990590,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ids of the users that should be invited to the newly created channel. Example: U014JDHLW87, U08544ABC85. Parameter accepts multiple values as a comma separated list. Note: if both “User IDs” and “User Emails” are specified, action will only work with IDs.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542547990590,
+            "Name": "User IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542547990590,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will create a private channel.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542547990590,
+            "Name": "Is Private",
+            "Type": 1,
+            "Value": "False"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1662451232000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the emails of users that should be invited to the newly created channel. Parameter accepts multiple values as a comma separated list. Note: if both “User IDs” and “User Emails” are specified, action will only work with IDs.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1662451232000,
+            "Name": "User Emails",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0
+}

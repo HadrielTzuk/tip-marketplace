@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1519315238897, 
+    "Creator": "admin", 
+    "Description": "Retrieve information about services on endpoints in Sophos. Supported entities: IP Address, Hostname.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"entity_identifier\",\"EntityResult\":{\"services\":{\"status\":\"good\",\"serviceDetails\":[{\"name\":\"HitmanPro.Alert service\",\"status\":\"running\"},{\"name\":\"Sophos Anti-Virus\",\"status\":\"running\"},{\"name\":\"Sophos Anti-Virus Status Reporter\",\"status\":\"running\"}]}}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1, 
+    "IntegrationIdentifier": "Sophos", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1519315238897, 
+    "Name": "Get Services Status", 
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

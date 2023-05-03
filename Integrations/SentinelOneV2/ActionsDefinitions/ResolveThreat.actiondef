@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1542188059113,
+    "Creator": "Admin",
+    "Description": "Resolve threats in SentinelOne.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"resolved\": true, \"Threat_ID\": \"8649395079263xxxxx\"}, {\"resolved\": true, \"Threat_ID\": \"8846538469000xxxxx\"}, {\"resolved\": true, \"Threat_ID\": \"9165158021848xxxxx\"}, {\"resolved\": true, \"Threat_ID\": \"9286300562960xxxxx\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOneV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542188059113,
+    "Name": "Resolve Threat",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of threat IDs that need to be resolved.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Threat IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify an annotation describing, why the threat can be resolved.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Annotation",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

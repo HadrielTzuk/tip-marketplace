@@ -1,0 +1,75 @@
+{
+  "Identifier": "1ca3b9a1-180d-4943-80c1-9f7aa8dda230",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "Virus Total - Scan URL ",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "6283f072-c37f-4204-84d5-801c27dfa6f2",
+      "ParentWorkflowIdentifier": "1ca3b9a1-180d-4943-80c1-9f7aa8dda230",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "VirusTotal_Scan URL_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "VirusTotal_Scan URL",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "6283f072-c37f-4204-84d5-801c27dfa6f2",
+          "ParentWorkflowIdentifier": "1ca3b9a1-180d-4943-80c1-9f7aa8dda230",
+          "Name": "ScriptName",
+          "Value": "VirusTotal_Scan URL",
+          "CreationTimeUnixTimeInMs": 1519146877257,
+          "ModificationTimeUnixTimeInMs": 1519146877257
+        },
+        {
+          "ParentStepIdentifier": "6283f072-c37f-4204-84d5-801c27dfa6f2",
+          "ParentWorkflowIdentifier": "1ca3b9a1-180d-4943-80c1-9f7aa8dda230",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Threshold\":\"\"}",
+          "CreationTimeUnixTimeInMs": 1519146877257,
+          "ModificationTimeUnixTimeInMs": 1519146877257
+        },
+        {
+          "ParentStepIdentifier": "6283f072-c37f-4204-84d5-801c27dfa6f2",
+          "ParentWorkflowIdentifier": "1ca3b9a1-180d-4943-80c1-9f7aa8dda230",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519146877257,
+          "ModificationTimeUnixTimeInMs": 1519146877257
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519146877257,
+      "ModificationTimeUnixTimeInMs": 1519146877257
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "8a084631-cfe6-4217-9821-ed3c53e1d023",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "1ca3b9a1-180d-4943-80c1-9f7aa8dda230",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Virus Total - Scan URL ",
+      "AllEnvironments": "",
+      "Id": 57,
+      "CreationTimeUnixTimeInMs": 1519146877257,
+      "ModificationTimeUnixTimeInMs": 1519146877257
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 57,
+  "CreationTimeUnixTimeInMs": 1519146877257,
+  "ModificationTimeUnixTimeInMs": 1519146877257
+}

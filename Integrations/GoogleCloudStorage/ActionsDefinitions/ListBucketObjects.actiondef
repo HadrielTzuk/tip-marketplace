@@ -1,0 +1,58 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List objects stored in the Cloud Storage bucket.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleCloudStorage",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Objects\": [{\"ObjectName\": \"XXXX.svg\", \"Bucket\": \"siemplify-XXX\", \"ContentType\": \"image/svg+xml\", \"TimeCreated\": \"2021-01-12 09:20:09.870000+00:00\", \"TimeUpdated\": \"2021-01-12 09:31:01.969000+00:00\", \"Size\": 2534, \"MD5\": \"XXXX==\", \"Owner\": \"\", \"CR32c\": \"XXXXX==\", \"id\": \"siemplify-XXX/XXX.svg/XXXX\", \"ObjectACL\": [{\"Entity\": \"project-owners-XXXXX\", \"Role\": \"OWNER\"}]}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Bucket Objects",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify name of the bucket from which to retrieve objects.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Bucket Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many objects to return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Objects to Return",
+            "Type": 0,
+            "Value": "50"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If checked, retrieve the Access Control List of an object.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Retrieves the Access Control List of an object",
+            "Type": 1,
+            "Value": false
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\":[]}",
+    "Version": 1.0
+}

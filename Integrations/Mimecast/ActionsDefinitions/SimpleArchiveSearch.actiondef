@@ -1,0 +1,137 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Search archive emails using defined parameters in Mimecast. Note: when providing time make sure to take in the account timezones. For ease of use, Siemplify instance and Mimecast instance should be in the same timezone.",
+    "Id": -1,
+    "IntegrationIdentifier": "Mimecast",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Simple Archive Search",
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"size\": 6648, \"attachmentcount\": 3, \"subject\": \"test2\", \"displayfrom\": \"spam@mimecast.org\", \"id\": \"eNolj0tvgzAQhP-LzyDtGmNDOKUPklZNKzX0lQsytklpeLTY0EPV_16n7OHTajSa2f0h1qhpNI0mK5J_MPxxxx-1vt3Y5PUBC12h3BcXb3aQu8O1klBc7eqU5e7mJe9bd7e1JCCdsVYeTTsMp-nTDSfT-1ysOMYxVLEBJYyhCYKQUZJiyjjTtRYJF4LXkDljHc36qW0zChT9HQgRpXCeRf6H7ynICgIym9E2g6_AgMhRvTfz8sixVKEpJwtYIvJy1p4hLS-f9mtEsY4Elks-nBdvdGbskIUAcRgjMpZQQX7_APnsVEU\", \"smash\": \"1b61550b5e0c7ee28107a38919464dfd78677xxx\", \"displayto\": \"spam@mimecast.org\", \"receiveddate\": \"2021-06-21T07:22:00+0000\", \"status\": \"ARCHIVED\"}, {\"size\": 6662, \"attachmentcount\": 3, \"subject\": \"test2\", \"displayfrom\": \"phishing@mimecast.org\", \"id\": \"eNolT2FLwzAU_C_5mhbfy5K0XT_VgUOc2OlEGUJo07SWda0mbVHE_25mH9xxHMcd74c4oydr2oqsSUlb2ELTiE-9l_Z12ApK60dR39GX_Pp7t8tLw6joK7y9b8rD0cHX0e7R3rxd5dnDJo8oCcjZOFc0phuG0_QxDifT-2JZaV6wRBQriKWUItY1alGYmFclAx7XEiKNSZSOxo0s7aeuSxkwBOmBnMHlFvuf_M6BrCEgs7GuHfwEBqSw-r2dl08apUOjJgeoEKWaK88hU5vnpwwxylYRqqUfLsIHR2PPyEMAGQpvJ4Jz8vsHnMxxxx\", \"smash\": \"6dc4a295a30866658cf1c5ae84dbxxxx\", \"displayto\": \"phishing@mimecast.org\", \"receiveddate\": \"2021-06-21T05:42:00+0000\", \"status\": \"ARCHIVED\"}]",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of fields that needs to be returned.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Fields To Return",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of mailboxes that need to be searched.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Mailboxes",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of email addresses from which the emails were sent.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "From",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of email addresses to which the emails were sent.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "To",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a subject that needs to be searched.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Subject",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Last Hour",
+            "Description": "Specify a time frame for the search. If \"Custom\" is selected, you also need to provide \"Start Time\".",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Time Frame",
+            "OptionalValues": [
+                "Last Hour",
+                "Last 6 Hours",
+                "Last 24 Hours",
+                "Last Week",
+                "Last Month",
+                "Custom"
+            ],
+            "Type": 15,
+            "Value": "Last Hour"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the start time for the search. This parameter is mandatory, if \"Custom\" is selected for the \"Time Frame\" parameter. Format: ISO 8601",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the end time for the search. Format: ISO 8601. If nothing is provided and \"Custom\" is selected for the \"Time Frame\" parameter then this parameter will use current time.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "End Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many emails to return. Default: 50.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Emails To Return",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

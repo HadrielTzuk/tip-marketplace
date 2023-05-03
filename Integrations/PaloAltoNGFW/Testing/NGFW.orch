@@ -1,0 +1,383 @@
+{
+  "Identifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "NSGW",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "92ee9bf7-6cfa-48ca-8cb6-1d995edba989",
+      "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+      "ParentStepIdentifiers": [
+        "47eedc18-54e3-4fc4-a629-4227c2c9e6ef"
+      ],
+      "ParentStepIdentifier": "47eedc18-54e3-4fc4-a629-4227c2c9e6ef",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "PaloAltoNGFW_Block Urls_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "PaloAltoNGFW_Block Urls",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "92ee9bf7-6cfa-48ca-8cb6-1d995edba989",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptName",
+          "Value": "PaloAltoNGFW_Block Urls",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "92ee9bf7-6cfa-48ca-8cb6-1d995edba989",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Device Name\":\"localhost.localdomain\",\"Vsys Name\":\"vsys1\",\"Policy Name\":\"UrlBlackList\"}",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "92ee9bf7-6cfa-48ca-8cb6-1d995edba989",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520247611248,
+      "ModificationTimeUnixTimeInMs": 1520247611248
+    },
+    {
+      "Identifier": "47eedc18-54e3-4fc4-a629-4227c2c9e6ef",
+      "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+      "ParentStepIdentifiers": [
+        "3d9f60cb-2a81-4c4a-99f9-c28cf8db778d"
+      ],
+      "ParentStepIdentifier": "3d9f60cb-2a81-4c4a-99f9-c28cf8db778d",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "PaloAltoNGFW_Remove Ips from group_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "PaloAltoNGFW_Remove Ips from group",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "47eedc18-54e3-4fc4-a629-4227c2c9e6ef",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptName",
+          "Value": "PaloAltoNGFW_Remove Ips from group",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "47eedc18-54e3-4fc4-a629-4227c2c9e6ef",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Device Name\":\"localhost.localdomain\",\"Vsys Name\":\"vsys1\",\"Group Name\":\"Test IP group Yair\"}",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "47eedc18-54e3-4fc4-a629-4227c2c9e6ef",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520247611248,
+      "ModificationTimeUnixTimeInMs": 1520247611248
+    },
+    {
+      "Identifier": "b2ebe5af-a376-46cd-afab-431dcdc4e2a1",
+      "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+      "ParentStepIdentifiers": [
+        "92ee9bf7-6cfa-48ca-8cb6-1d995edba989"
+      ],
+      "ParentStepIdentifier": "92ee9bf7-6cfa-48ca-8cb6-1d995edba989",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "PaloAltoNGFW_Unblock Urls_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "PaloAltoNGFW_Unblock Urls",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "b2ebe5af-a376-46cd-afab-431dcdc4e2a1",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptName",
+          "Value": "PaloAltoNGFW_Unblock Urls",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "b2ebe5af-a376-46cd-afab-431dcdc4e2a1",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Device Name\":\"localhost.localdomain\",\"Vsys Name\":\"vsys1\",\"Policy Name\":\"UrlBlackList\"}",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "b2ebe5af-a376-46cd-afab-431dcdc4e2a1",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520247611248,
+      "ModificationTimeUnixTimeInMs": 1520247611248
+    },
+    {
+      "Identifier": "65166340-e702-4644-9dcc-6aaece339bec",
+      "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+      "ParentStepIdentifiers": [
+        "401f5d90-15eb-4ce2-b6bb-6c9fc1215153"
+      ],
+      "ParentStepIdentifier": "401f5d90-15eb-4ce2-b6bb-6c9fc1215153",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "PaloAltoNGFW_Edit Blocked Applications_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "PaloAltoNGFW_Edit Blocked Applications",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "65166340-e702-4644-9dcc-6aaece339bec",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptName",
+          "Value": "PaloAltoNGFW_Edit Blocked Applications",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "65166340-e702-4644-9dcc-6aaece339bec",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"applicationsToBlock\":\"app2\",\"applicationsToUnBlock\":\"apple-siri\",\"Device Name\":\"localhost.localdomain\",\"Vsys Name\":\"vsys1\",\"Policy Name\":\"ApplicationBlock\"}",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "65166340-e702-4644-9dcc-6aaece339bec",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520247611248,
+      "ModificationTimeUnixTimeInMs": 1520247611248
+    },
+    {
+      "Identifier": "401f5d90-15eb-4ce2-b6bb-6c9fc1215153",
+      "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+      "ParentStepIdentifiers": [
+        "fe1b2b53-7bd7-4c11-b49d-c3a097580c77"
+      ],
+      "ParentStepIdentifier": "fe1b2b53-7bd7-4c11-b49d-c3a097580c77",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "PaloAltoNGFW_Get Blocked Applications_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "PaloAltoNGFW_Get Blocked Applications",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "401f5d90-15eb-4ce2-b6bb-6c9fc1215153",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptName",
+          "Value": "PaloAltoNGFW_Get Blocked Applications",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "401f5d90-15eb-4ce2-b6bb-6c9fc1215153",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Device Name\":\"localhost.localdomain\",\"Vsys Name\":\"vsys1\",\"Policy Name\":\"ApplicationBlock\"}",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "401f5d90-15eb-4ce2-b6bb-6c9fc1215153",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520247611248,
+      "ModificationTimeUnixTimeInMs": 1520247611248
+    },
+    {
+      "Identifier": "416c49dc-40f1-4bfc-8da8-b1fe04cd82e4",
+      "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+      "ParentStepIdentifiers": [
+        "b2ebe5af-a376-46cd-afab-431dcdc4e2a1"
+      ],
+      "ParentStepIdentifier": "b2ebe5af-a376-46cd-afab-431dcdc4e2a1",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "PaloAltoNGFW_Block ips in policy_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "PaloAltoNGFW_Block ips in policy",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "416c49dc-40f1-4bfc-8da8-b1fe04cd82e4",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptName",
+          "Value": "PaloAltoNGFW_Block ips in policy",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "416c49dc-40f1-4bfc-8da8-b1fe04cd82e4",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Device Name\":\"localhost.localdomain\",\"Vsys Name\":\"vsys1\",\"Policy Name\":\"sdsdss\",\"Target\":\"source\"}",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "416c49dc-40f1-4bfc-8da8-b1fe04cd82e4",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520247611248,
+      "ModificationTimeUnixTimeInMs": 1520247611248
+    },
+    {
+      "Identifier": "3d9f60cb-2a81-4c4a-99f9-c28cf8db778d",
+      "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "PaloAltoNGFW_Add Ips to group_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "PaloAltoNGFW_Add Ips to group",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "3d9f60cb-2a81-4c4a-99f9-c28cf8db778d",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptName",
+          "Value": "PaloAltoNGFW_Add Ips to group",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "3d9f60cb-2a81-4c4a-99f9-c28cf8db778d",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Device Name\":\"localhost.localdomain\",\"Vsys Name\":\"vsys1\",\"Group Name\":\"Test IP group Yair\"}",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "3d9f60cb-2a81-4c4a-99f9-c28cf8db778d",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520247611248,
+      "ModificationTimeUnixTimeInMs": 1520247611248
+    },
+    {
+      "Identifier": "fe1b2b53-7bd7-4c11-b49d-c3a097580c77",
+      "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+      "ParentStepIdentifiers": [
+        "416c49dc-40f1-4bfc-8da8-b1fe04cd82e4"
+      ],
+      "ParentStepIdentifier": "416c49dc-40f1-4bfc-8da8-b1fe04cd82e4",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "PaloAltoNGFW_Unblock ips in policy_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "PaloAltoNGFW_Unblock ips in policy",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "fe1b2b53-7bd7-4c11-b49d-c3a097580c77",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptName",
+          "Value": "PaloAltoNGFW_Unblock ips in policy",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "fe1b2b53-7bd7-4c11-b49d-c3a097580c77",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Device Name\":\"localhost.localdomain\",\"Vsys Name\":\"vsys1\",\"Policy Name\":\"sdsdss\",\"Target\":\"source\"}",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        },
+        {
+          "ParentStepIdentifier": "fe1b2b53-7bd7-4c11-b49d-c3a097580c77",
+          "ParentWorkflowIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520247611248,
+          "ModificationTimeUnixTimeInMs": 1520247611248
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520247611248,
+      "ModificationTimeUnixTimeInMs": 1520247611248
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "732b60fe-2b6a-4601-b688-8ab4d0cd8075",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "f90ae687-7a2a-497a-babb-db990e9bb6e2",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Panorama",
+      "AllEnvironments": "",
+      "Id": 38,
+      "CreationTimeUnixTimeInMs": 1520247611248,
+      "ModificationTimeUnixTimeInMs": 1520247611248
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 38,
+  "CreationTimeUnixTimeInMs": 1520247611248,
+  "ModificationTimeUnixTimeInMs": 1520247611248
+}

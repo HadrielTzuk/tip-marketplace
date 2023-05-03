@@ -1,0 +1,106 @@
+{
+    "Description": "Microsoft SQL Server is a relational database management system developed by Microsoft.",
+    "DisplayName": "MSSQL",
+    "Identifier": "MSSQL",
+    "Categories": [
+        "Database",
+        "IT & Infrastructure",
+        "Free to use"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "MSSQL",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Server Address",
+            "PropertyName": "Server Address",
+            "PropertyType": "5",
+            "Value": "x.x.x.x"
+        },
+        {
+            "IntegrationIdentifier": "MSSQL",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MSSQL",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MSSQL",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Port",
+            "PropertyName": "Port",
+            "PropertyType": "2",
+            "Value": "1433"
+        },
+        {
+            "IntegrationIdentifier": "MSSQL",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Database Name For Testing",
+            "PropertyName": "Database Name For Testing",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MSSQL",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Windows Authentication",
+            "PropertyName": "Windows Authentication",
+            "PropertyType": "0",
+            "Value": "False"
+        },
+        {
+            "IntegrationIdentifier": "MSSQL",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Use Kerberos Authentication",
+            "PropertyName": "Use Kerberos Authentication",
+            "PropertyType": "0",
+            "Value": "False"
+        },
+        {
+            "IntegrationIdentifier": "MSSQL",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Kerberos Realm",
+            "PropertyName": "Kerberos Realm",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MSSQL",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Kerberos Username",
+            "PropertyName": "Kerberos Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MSSQL",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Kerberos Password",
+            "PropertyName": "Kerberos Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MSSQL",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M22.8,10.9l-0.1-0.5c-0.8-3.4-6-4.8-10.6-5.4c0.4-2.1-0.9-3.3-0.9-3.3l-0.2-0.2l-0.3,0.1C7.4,2.7,5.9,3.8,6,4.6\n\t\t\tc0.1,0.5,0.7,0.8,1.4,0.9C7.7,5.8,8.8,7,8.9,8.8c0.1,1.8-0.7,3.7-2.5,5.7c-0.6,0.3-1.1,0.7-1.6,1c-1.5,1.2-2.2,2.4-1.9,3.5\n\t\t\tc0.4,2.2,3.9,3.2,4,3.2c0.1,0,2,0.5,5.3,0.5c0.7,0,1.4,0,2.1-0.1l0-1l-1,0c2.3-3.5,1.8-8.1,1.6-9.4c3.9-1,7.2-1.4,7.3-1.4\n\t\t\tL22.8,10.9z M7,4.4C7.4,4,8.9,3.2,10.7,2.5c0.2,0.3,0.6,1.1,0.5,2.2L7.6,4.6C7.3,4.5,7.1,4.5,7,4.4z M12.2,21.8\n\t\t\tc-3.1,0-4.9-0.5-4.9-0.5c-0.8-0.2-3.1-1.2-3.3-2.5c-0.1-0.8,0.4-1.6,1.6-2.6c0.4-0.3,0.9-0.7,1.5-1l7.1-2.6\n\t\t\tC14.3,14.3,14.6,18.7,12.2,21.8z M8.4,13.5c1.1-1.6,1.6-3.3,1.4-4.8C9.8,7.3,9.2,6.3,8.7,5.6c3.8,0.2,11.4,1.1,12.8,4.5\n\t\t\tC19.6,10.4,13.2,11.4,8.4,13.5z\"/>\n\t</g>\n</g>\n</svg>",
+    "Version": 12.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/mssql",
+    "MarketingDisplayName": "MSSQL"
+}

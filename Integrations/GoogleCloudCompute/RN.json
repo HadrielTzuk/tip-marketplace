@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "New Google Cloud Compute integration added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "GoogleCloudCompute",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1624360236,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8346"
+    },
+    {
+        "ChangeDescription": "List Instances, Start Instance, Stop Instance, Delete Instance - Updated actions' dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "GoogleCloudCompute",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629139164,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8346"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "GoogleCloudCompute",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Improved support for SaaS environments in integration configuration, other integration configuration updates.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "GoogleCloudCompute",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1679443200,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "265188590"
+    }
+]

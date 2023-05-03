@@ -1,0 +1,21 @@
+{
+    "CreationTimeUnixTimeInMs": 1532523417395,
+    "Creator": "Admin",
+    "Description": "Gets a list of black-listed URLs.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "Zscaler",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1532523417395,
+    "Name": "Get Blacklist",
+    "Parameters": [],
+    "ScriptResultName": "blacklist_items",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

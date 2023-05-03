@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1532523417395,
+    "Creator": "Admin",
+    "Description": "Check connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "HaveIBeenPwned",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1532523417395,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from HaveIBeenPwnedManager import HaveIBeenPwnedManager\nfrom SiemplifyAction import SiemplifyAction\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('HaveIBeenPwned')\n    use_ssl = conf.get('Verify SSL', 'False').lower() == 'true'\n    hibp_manager = HaveIBeenPwnedManager(use_ssl=use_ssl)\n\n    hibp_manager.test_connectivity()\n\n    output_message = \"Connection Established\"\n    result_value = 'true'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_connect",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

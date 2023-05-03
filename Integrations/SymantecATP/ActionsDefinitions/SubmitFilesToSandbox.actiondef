@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1542553640129, 
+    "Creator": "Admin", 
+    "Description": "Submit file hashes to sandbox.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SymantecATP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1542553640129, 
+    "Name": "Submit Files To Sandbox", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecATPManager import SymantecATPManager\nfrom SiemplifyDataModel import EntityTypes\nfrom SymantecATPManager import ATPEntityTypes\n\n\nATP_PROVIDER = 'SymantecATP'\nACTION_NAME = \"SymantecATP_Submit File To Sandbox\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(ATP_PROVIDER)\n    verify_ssl = conf.get('Verify SSL').lower() == 'true'\n    atp_manager = SymantecATPManager(conf.get('API Root'), conf.get('Client ID'), conf.get('Client Secret'), verify_ssl)\n\n    errors = []\n    command_ids = []\n    submitted_entities = []\n\n    for entity in siemplify.rtarget_entities:\n        try:\n            if entity.entity_type == EntityTypes.FILEHASH and len(entity.identifier) == 64:\n                command_id = atp_manager.submit_file_to_sandbox(entity.identifier)\n                command_ids.append(command_id)\n                submitted_entities.append(entity)\n        except Exception as err:\n            error_message = 'Error submitting file \"{0}\" to sandbox, Error: {1}'.format(\n                entity.identifier, err.message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    if submitted_entities:\n        output_message = \"{0} were submitted to sandbox.\".format(\",\".join([entity.identifier for entity in\n                                                                           submitted_entities]))\n    else:\n        output_message = \"No file hashes were submitted to sandbox.\"\n\n    # Attach errors if exists.\n    if errors:\n        output_message = \"{0}, \\n \\n  ERRORS: \\n {1} \".format(output_message, ' \\n '.join(errors))\n\n    siemplify.end(output_message, \",\".join(command_ids))\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "command_ids", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 2.0
+}

@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1517416644721,
+    "Creator": "admin",
+    "Description": "Get an Oauth refresh token for ServiceNow. Requires: Username, Password, Client ID and Client Secret to be provided in the configuration tab.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"access_token\":\"xxxxxxxxxxxxxxxxxx\",\"refresh_token\":\"xxxxxxxxxxxxxxxxxx\",\"scope\":\"useraccount\",\"token_type\":\"Bearer\",\"expires_in\":1799}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517416644721,
+    "Name": "Get Oauth Token",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

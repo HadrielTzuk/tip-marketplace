@@ -1,0 +1,107 @@
+{
+    "CreationTimeUnixTimeInMs": 1509272890476,
+    "Creator": "admin",
+    "Description": "Filter JSON dict",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"a\": {\"HOST\": [{\"DETECTION\": {\"QID\": \"82003\", \"SEVERITY\": \"1\", \"RESULTS\": \"Timestamp of host (network byte ordering): 03:40:14 GMT\"}, \"IP\": \"1.1.1.1\", \"LAST_SCAN_DATETIME\": \"2018-08-13T10:24:35Z\", \"OS\": \"Windows 10\"}], \"DATETIME\": \"2018-08-29T14:01:12Z\"}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SiemplifyUtilities",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1509272890476,
+    "Name": "Filter JSON",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1538890869186,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The json dict data to filter.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1538890869186,
+            "Name": "JSON Data",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1538890869186,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The path to the Root Key. Note: The system uses dot notation for JSON search. For example: json.message.status. ",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1538890869186,
+            "Name": "Root Key Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1538890869186,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The path to the field to filter by, dot separated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1538890869186,
+            "Name": "Condition Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1538890869186,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The condition operator. Can be one of the following: = / != / > / < / >= / <= / in / not in.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1538890869186,
+            "Name": "Condition Operator",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1538890869186,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The value of the condition to filter by.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1538890869186,
+            "Name": "Condition Value",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1538890869186,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The path to the desired results in the filtered dict, dot separated.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1538890869186,
+            "Name": "Output Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1538890869186,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The delimeter to join the values inf the output path, default: comma.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1538890869186,
+            "Name": "Delimeter",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "results",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

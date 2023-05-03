@@ -1,0 +1,34 @@
+{
+    "Description": "Digital Shadows is designed to protect you from external threats, continually identifying where your assets are exposed, providing sufficient context to understand the risk, and options for remediation.\r\n",
+    "DisplayName": "DigitalShadows",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/digital-shadows",
+    "Identifier": "DigitalShadows",
+    "Categories": [
+        "Threat Intelligence",
+        "Security"
+    ],    
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "DigitalShadows",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "Api Key",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "DigitalShadows",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Secret",
+            "PropertyName": "Api Secret",
+            "PropertyType": 3,
+            "Value": null
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\"><rect x=\"32.7\" y=\"33.2\" width=\"14.9\" height=\"3.6\"/><path d=\"M10.8,19.8c-0.9-1-2-1.4-3.5-1.4c-1.4,0-2.7,0.5-3.5,1.3c-1.5,1.4-1.5,3.9-1.5,6s0.1,4.6,1.5,6C4.6,32.5,6,33,7.4,33\tc1.5,0,2.6-0.5,3.5-1.5v1.4h3.5V13.3h-3.6C10.8,13.3,10.8,19.8,10.8,19.8z M8.3,29.8c-2.2,0-2.4-1.8-2.4-4.1s0.3-4.1,2.4-4.1\tc2.2,0,2.5,1.8,2.4,4.1C10.8,28,10.5,29.8,8.3,29.8z\"/><path d=\"M25,24.2L22.7,24c-1.3-0.1-1.5-0.7-1.5-1.3c0-0.7,0.6-1.4,2-1.4c1.3,0,2.5,0.2,3.4,1l2.2-2.2c-1.4-1.3-3.2-1.7-5.5-1.7\tc-2.9,0-5.5,1.6-5.5,4.5c0,2.7,1.6,3.8,4.2,4l2.3,0.2c1.1,0.1,1.5,0.6,1.5,1.3c0,1.1-1.3,1.5-2.6,1.5c-1.1,0-2.6-0.2-3.8-1.4\tL17.2,31c1.8,1.8,3.8,2,6.1,2c3.4,0,6.1-1.5,6-4.6C29.2,26,27.8,24.5,25,24.2z\"/></svg>",
+    "Version": 5.0,
+    "MarketingDisplayName": "Digital Shadows"
+}

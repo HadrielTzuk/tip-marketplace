@@ -1,0 +1,63 @@
+{
+	"Cases": [{
+			"Events": [{
+					"_fields": {
+						"BaseEventIds": "[]",
+						"ParentEventId": -1,
+						"DeviceProduct": "McAfee Active Response",
+						"StartTime": "1534154364277",
+						"EndTime": "1534154364277"
+					},
+					"_rawDataFields": {
+						"applicationProtocol": "TCP",
+						"categoryOutcome": "blocked",
+						"destinationAddress": "10.0.0.28",
+						"destinationHostName": "lab@siemplify.local",
+						"destinationPort": "770",
+						"destinationProcessName": "MrlCS.sob",
+						"destinationUserName": "XWzNr1l@gmail.com",
+						"deviceAddress": "172.21.135.124",
+						"deviceEventClassId": "Data Exfiltration",
+						"deviceHostName": "ckIYC2",
+						"Field_24": "B0:E7:DF:6C:EF:71",
+						"deviceProduct": "McAfee Active Response",
+						"usb": "USB_DEVICE_1",
+						"deviceVendor": "Vendor",
+						"eventId": "0aa16009-5bb4-41a3-91ed-81347442ca29",
+						"managerReceiptTime": "1480867860000",
+						"message": "Data Exfiltration",
+						"name": "Data Exfiltration",
+						"sourceUserName": "User41@siemplify",
+						"severity": "8",
+						"sourceAddress": "10.0.0.51",
+						"cs1": "VID_078654",
+						"sourceHostName": "AppTransaction.db.siemplify",
+						"startTime": "1534154364277",
+						"endTime": "1534154364277",
+						"sourcetype": "DLP_Product"
+					},
+					"Environment": null,
+					"SourceSystemName": null
+				}
+			],
+			"Environment": null,
+			"SourceSystemName": "Splunk",
+			"TicketId": "McAfee Active Response 000",
+			"Description": "Data Exfiltration",
+			"DisplayId": "McAfee Active Response 000",
+			"Reason": null,
+			"Name": "Data Exfiltration",
+			"DeviceVendor": "McAfee Active Response",
+			"DeviceProduct": "McAfee Active Response",
+			"StartTime": 1534154364277,
+			"EndTime": 1534154364277,
+			"IsTestCase": false,
+			"Priority": 80,
+			"RuleGenerator": "Data Exfiltration",
+			"SourceGroupingIdentifier": null,
+			"PlaybookTriggerKeywords": [],
+			"Extensions": []
+		}
+	],
+	"IsTestCase": false
+}

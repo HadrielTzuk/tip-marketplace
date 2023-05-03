@@ -1,0 +1,52 @@
+{
+    "Description": "Axonius is the cybersecurity asset management platform that gives organizations a comprehensive asset inventory, uncovers security solution coverage gaps, and automatically validates and enforces security policies. By seamlessly integrating with over 300 security and management solutions.",
+    "DisplayName": "Axonius",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/axonius",
+    "Identifier": "Axonius",
+    "Categories": [
+        "IT & Infrastructure",
+        "Asset Management",
+        "Data Enrichment"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Axonius",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": 2,
+            "Value": "https://{root}"
+        },
+        {
+            "IntegrationIdentifier": "Axonius",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Axonius",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Secret",
+            "PropertyName": "API Secret",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Axonius",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "true"
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg width=\"23\" height=\"23\" viewBox=\"0 0 23 23\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M4.13678 18.2442C3.43528 18.8632 2.81631 18.7807 2.19734 18.8632C1.61964 18.8632 1.0832 19.1108 0.629286 19.4822C-0.154743 20.3075 -0.154743 21.6279 0.670551 22.412C1.45458 23.196 2.73378 23.196 3.51781 22.412C3.8892 21.9581 4.09552 21.4216 4.09552 20.8439C4.13678 20.225 4.13678 19.5647 4.71449 18.9045C5.37472 18.3268 6.03496 18.3268 6.65393 18.2855C7.23164 18.2855 7.76808 18.0379 8.22199 17.6665C9.00602 16.8412 9.00602 15.5208 8.18072 14.7367C7.39669 13.9527 6.11749 13.9527 5.33346 14.7367C4.96208 15.1907 4.75575 15.7271 4.71449 16.3048C4.67322 16.9238 4.75575 17.5427 4.13678 18.2442Z\" fill=\"currentColor\"\/><path d=\"M18.208 4.09046C17.5065 4.70943 16.8876 4.6269 16.2686 4.70943C15.6909 4.7507 15.1545 4.95702 14.7005 5.3284C13.999 6.19496 14.1228 7.51543 14.9894 8.21693C15.7322 8.8359 16.8463 8.8359 17.5891 8.21693C17.9605 7.76302 18.1668 7.22658 18.208 6.64887C18.2493 6.0299 18.2493 5.36967 18.827 4.70943C19.4872 4.13173 20.1475 4.13173 20.7665 4.09046C21.3442 4.09046 21.8806 3.84287 22.3345 3.47149C23.0773 2.60493 23.036 1.32573 22.1694 0.541698C21.3854 -0.159801 20.1887 -0.159801 19.4047 0.541698C19.0333 0.99561 18.827 1.53205 18.7857 2.10976C18.7445 2.76999 18.827 3.38896 18.208 4.09046Z\" fill=\"currentColor\"\/>\r\n<path d=\"M18.208 18.9045C18.827 19.606 18.7445 20.225 18.827 20.8439C18.827 21.4216 19.0746 21.9581 19.446 22.412C20.2713 23.196 21.5917 23.196 22.3758 22.3707C23.1598 21.5867 23.1598 20.3075 22.3758 19.5235C21.9219 19.1521 21.3854 18.9457 20.8077 18.9045C20.1887 18.8632 19.5285 18.8632 18.8683 18.2855C18.2906 17.6253 18.2906 16.965 18.2493 16.3461C18.2493 15.7684 18.0017 15.2319 17.6303 14.778C16.805 13.994 15.4846 13.994 14.7005 14.8193C13.9165 15.6033 13.9165 16.8825 14.7005 17.6665C15.1545 18.0379 15.6909 18.2442 16.2686 18.2855C16.9288 18.368 17.5478 18.2855 18.208 18.9045Z\" fill=\"currentColor\"\/>\r\n<path d=\"M4.13678 4.70943C4.75575 5.41093 4.67322 6.0299 4.75575 6.64887C4.75575 7.22658 4.96208 7.76302 5.33346 8.21693C6.03496 9.12475 7.35543 9.24855 8.22199 8.54705C9.08855 7.84555 9.2536 6.52508 8.5521 5.65852C8.46958 5.53472 8.34578 5.45219 8.22199 5.3284C7.76808 4.95702 7.23164 4.7507 6.65393 4.70943C6.03496 4.66817 5.37472 4.66817 4.71449 4.09046C4.17805 3.43023 4.17805 2.76999 4.13678 2.15102C4.13678 1.57332 3.93046 0.99561 3.51781 0.582963C2.69252 -0.201066 1.37205 -0.201066 0.588022 0.624227C-0.196007 1.40826 -0.196007 2.68746 0.588022 3.47149C1.04193 3.84287 1.57837 4.0492 2.15608 4.0492C2.81631 4.17299 3.43528 4.09046 4.13678 4.70943Z\" fill=\"currentColor\"\/><path d=\"M11.4819 13.9527C12.8436 13.9527 13.9578 12.8386 13.9578 11.4768C13.9578 10.1151 12.8436 9.00096 11.4819 9.00096C10.1202 9.00096 9.00602 10.1151 9.00602 11.4768C9.00602 12.8798 10.0789 13.9527 11.4819 13.9527Z\" fill=\"currentColor\"\/><\/svg>",
+    "Version": 1.0,
+    "MarketingDisplayName": "Axonius",
+    "PythonVersion": 2
+}

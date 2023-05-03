@@ -1,0 +1,92 @@
+{
+    "IntegrationIdentifier": "GoogleChat",
+    "Id": -1,
+    "Creator": "admin",
+    "Name": "List Spaces",
+    "Description": "List spaces that currently configured Google Chat bot was added to. Note: Action is not running on Siemplify entities.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"name\": \"spaces/sPPxO4xxxxx\", \"type\": \"DM\", \"singleUserBotDm\": true, \"threaded\": false, \"displayName\": \"\", \"memberships\": [{\"name\": \"spaces/sPPxO4xxxxx/members/114197761xxxxxx\", \"state\": \"JOINED\", \"member\": {\"name\": \"users/11419776166xxxxxx\", \"displayName\": \"Siemplify LAB Siemplify LAB\", \"domainId\": \"38jxxxxxx\", \"type\": \"HUMAN\", \"isAnonymous\": false}, \"createTime\": \"2022-04-26T04:47:18.031005Z\"}]}]",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "Name": "Filter Key",
+            "Type": 15,
+            "DefaultValue": "Select One",
+            "Value": "Select One",
+            "IsMandatory": false,
+            "Description": "Specify the key that needs to be used to filter Google Chat spaces.",
+            "OptionalValues": [
+                "Select One",
+                "Name",
+                "Display Name",
+                "Type"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Filter Logic",
+            "Type": 15,
+            "DefaultValue": "Not Specified",
+            "Value": "Not Specified",
+            "IsMandatory": false,
+            "Description": "Specify what filter logic should be applied. Filtering logic is working based on the value  provided in the \"Filter Key\" parameter.",
+            "OptionalValues": [
+                "Not Specified",
+                "Equal",
+                "Contains"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Filter Value",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what value should be used in the filter. If \"Equal\" is selected, action will try to find the exact match among results and if \"Contains\" is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the value  provided in the \"Filter Key\" parameter.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Records To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many records to return. If nothing is provided, action will return 50 records.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Include User Memberships",
+            "Type": 1,
+            "DefaultValue": false,
+            "Value": false,
+            "IsMandatory": false,
+            "Description": "If enabled, user memberships information will be added to the action Case Wall table and JSON result.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

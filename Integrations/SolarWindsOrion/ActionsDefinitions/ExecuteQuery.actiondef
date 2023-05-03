@@ -1,0 +1,43 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Execute query in SolarWinds Orion.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"results\": [{\"IpAddress\": \"172.30.203.xxx\", \"DisplayName\": \"orion\", \"SystemUpTime\": 859060.0, \"NodeDescription\": \"Hardware: Intel64 Family 6 Model 63 Stepping 2 AT/AT COMPATIBLE - Software: Windows Version 10.0 (Build 17763 Multiprocessor Free)\", \"ObjectSubType\": \"Agent\", \"Description\": \"Windows 2019 Server\", \"DNS\": \"orion\", \"SysName\": \"ORION\"}, {\"IpAddress\": \"172.30.202.xxx\", \"DisplayName\": \"DC001\", \"SystemUpTime\": 848721.0, \"NodeDescription\": \"Hardware: Intel64 Family 6 Model 63 Stepping 2 AT/AT COMPATIBLE - Software: Windows Version 10.0 (Build 14393 Multiprocessor Free)\", \"ObjectSubType\": \"WMI\", \"Description\": \"Windows 2016 Server\", \"DNS\": \"\", \"SysName\": \"DC001\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SolarWindsOrion",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Execute Query",
+    "Parameters": [
+        {
+            "Name": "Query",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the query that needs to be executed. Note: SolarWind queries don’t support “*” notation.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "Value": 100,
+            "DefaultValue": 100,
+            "IsMandatory": false,
+            "Description": "Specify how many results should be returned.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

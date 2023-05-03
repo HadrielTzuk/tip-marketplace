@@ -1,0 +1,163 @@
+{
+  "Identifier": "a81b0992-6d7e-4af5-b580-278e48b51765",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": true,
+  "Name": "Sophos",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "022534db-5cb2-4d6e-bc5d-11cd13207c5b",
+      "ParentWorkflowIdentifier": "a81b0992-6d7e-4af5-b580-278e48b51765",
+      "ParentStepIdentifiers": [
+        "08172dd4-092c-412a-8390-f2fe0837062e"
+      ],
+      "ParentStepIdentifier": "08172dd4-092c-412a-8390-f2fe0837062e",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Sophos_GetServicesStatus_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Sophos_GetServicesStatus",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "022534db-5cb2-4d6e-bc5d-11cd13207c5b",
+          "ParentWorkflowIdentifier": "a81b0992-6d7e-4af5-b580-278e48b51765",
+          "Name": "ScriptName",
+          "Value": "Sophos_GetServicesStatus",
+          "CreationTimeUnixTimeInMs": 1520164559656,
+          "ModificationTimeUnixTimeInMs": 1520164559656
+        },
+        {
+          "ParentStepIdentifier": "022534db-5cb2-4d6e-bc5d-11cd13207c5b",
+          "ParentWorkflowIdentifier": "a81b0992-6d7e-4af5-b580-278e48b51765",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520164559656,
+          "ModificationTimeUnixTimeInMs": 1520164559656
+        },
+        {
+          "ParentStepIdentifier": "022534db-5cb2-4d6e-bc5d-11cd13207c5b",
+          "ParentWorkflowIdentifier": "a81b0992-6d7e-4af5-b580-278e48b51765",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520164553448,
+          "ModificationTimeUnixTimeInMs": 1520164553448
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520164553448,
+      "ModificationTimeUnixTimeInMs": 1520164553448
+    },
+    {
+      "Identifier": "2f58a833-3981-44a0-99e5-575bc7f12258",
+      "ParentWorkflowIdentifier": "a81b0992-6d7e-4af5-b580-278e48b51765",
+      "ParentStepIdentifiers": [
+        "022534db-5cb2-4d6e-bc5d-11cd13207c5b"
+      ],
+      "ParentStepIdentifier": "022534db-5cb2-4d6e-bc5d-11cd13207c5b",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Sophos_ScanEndpoints_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Sophos_ScanEndpoints",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "2f58a833-3981-44a0-99e5-575bc7f12258",
+          "ParentWorkflowIdentifier": "a81b0992-6d7e-4af5-b580-278e48b51765",
+          "Name": "ScriptName",
+          "Value": "Sophos_ScanEndpoints",
+          "CreationTimeUnixTimeInMs": 1520164559656,
+          "ModificationTimeUnixTimeInMs": 1520164559656
+        },
+        {
+          "ParentStepIdentifier": "2f58a833-3981-44a0-99e5-575bc7f12258",
+          "ParentWorkflowIdentifier": "a81b0992-6d7e-4af5-b580-278e48b51765",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520164559656,
+          "ModificationTimeUnixTimeInMs": 1520164559656
+        },
+        {
+          "ParentStepIdentifier": "2f58a833-3981-44a0-99e5-575bc7f12258",
+          "ParentWorkflowIdentifier": "a81b0992-6d7e-4af5-b580-278e48b51765",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520164557848,
+          "ModificationTimeUnixTimeInMs": 1520164557848
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520164557848,
+      "ModificationTimeUnixTimeInMs": 1520164557848
+    },
+    {
+      "Identifier": "08172dd4-092c-412a-8390-f2fe0837062e",
+      "ParentWorkflowIdentifier": "a81b0992-6d7e-4af5-b580-278e48b51765",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Sophos_GetEventsLog_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Sophos_GetEventsLog",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "08172dd4-092c-412a-8390-f2fe0837062e",
+          "ParentWorkflowIdentifier": "a81b0992-6d7e-4af5-b580-278e48b51765",
+          "Name": "ScriptName",
+          "Value": "Sophos_GetEventsLog",
+          "CreationTimeUnixTimeInMs": 1520164559656,
+          "ModificationTimeUnixTimeInMs": 1520164559656
+        },
+        {
+          "ParentStepIdentifier": "08172dd4-092c-412a-8390-f2fe0837062e",
+          "ParentWorkflowIdentifier": "a81b0992-6d7e-4af5-b580-278e48b51765",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Timeframe (hours)\":\"12\"}",
+          "CreationTimeUnixTimeInMs": 1520164559656,
+          "ModificationTimeUnixTimeInMs": 1520164559656
+        },
+        {
+          "ParentStepIdentifier": "08172dd4-092c-412a-8390-f2fe0837062e",
+          "ParentWorkflowIdentifier": "a81b0992-6d7e-4af5-b580-278e48b51765",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520164551668,
+          "ModificationTimeUnixTimeInMs": 1520164551668
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520164551668,
+      "ModificationTimeUnixTimeInMs": 1520164551668
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "33c1158f-fec9-4596-ab4f-793820d05268",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "a81b0992-6d7e-4af5-b580-278e48b51765",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Sophos",
+      "AllEnvironments": "",
+      "Id": 34,
+      "CreationTimeUnixTimeInMs": 1520164559655,
+      "ModificationTimeUnixTimeInMs": 1520164559655
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 34,
+  "CreationTimeUnixTimeInMs": 1520164539954,
+  "ModificationTimeUnixTimeInMs": 1520164539954
+}

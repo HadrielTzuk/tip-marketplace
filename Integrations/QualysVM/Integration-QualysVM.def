@@ -1,0 +1,50 @@
+{
+    "Description": "Qualys VM (Vulnerability Management) is a cloud-based service that gives you immediate, global visibility into where your IT systems might be vulnerable to the latest Internet threats and how to protect them. It helps you to continuously identify threats and monitor unexpected changes in your network before they turn into breaches.",
+    "DisplayName": "QualysVM",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/qualysvm",
+    "Identifier": "QualysVM",
+    "Categories": [
+        "Vulnerability & Risk Management",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "QualysVM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "QualysVM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "QualysVM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "QualysVM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 32 32\" style=\"enable-background:new 0 0 32 32;\" xml:space=\"preserve\"><path d=\"M26.9,7c0-0.2-0.1-0.5-0.3-0.6c-0.2-0.2-0.5-0.5-0.8-0.7c-2-1.3-4.1-2.3-6.4-2.6c-5.2-0.8-9.8,0-14,3.4C5.2,6.5,5,6.7,5,7c-0.1,2.2-0.1,4.3-0.2,6.5c-0.1,3.6,1,6.8,3.3,9.6c2,2.5,4.7,4.6,7.6,6.1c0.1,0.1,0.5,0.1,0.7,0c1.1-0.7,2.2-1.4,3.3-2c1.9-1.4,3.6-3,5-4.8c1.4-1.8,2.3-3.7,2.4-6c0.1-1.6,0.2-3.2,0.2-4.6C27.1,10.1,27.1,8.5,26.9,7z M22.7,18.3c-0.3,0.6-1,1.2-1.5,1.8c-0.1,0.1-0.3,0.2-0.5,0.2c-1-0.2-1.8-0.5-2.6-0.7L18,19.5c0.7-0.8,1.6-1.5,2.2-2.3c2-2.5,1.4-5.7-0.8-7.4c-2.2-1.9-5.5-1.7-7.5,0.6c-1.6,1.8-1.8,4-1,6.2c0.6,1.7,1.9,2.8,3.4,3.6c1.6,1,3.4,1.4,5.2,1.7c0.7,0.1,1.4,0.2,2.2,0.3c-0.3,0.3-0.6,0.7-1,1c-1.4,1.3-1.4,1.3-3,1c-2-0.5-4-1.2-5.8-2.5c-2.8-1.9-4.2-4.6-4.1-7.9c0.1-3.4,1.8-5.8,5-7.1c3.4-1.5,7.1-0.5,9.3,2.2C24.4,11.5,24.8,15.1,22.7,18.3z\"/></svg>",
+    "Version": 13.0,
+    "MarketingDisplayName": "Qualys VM"
+}

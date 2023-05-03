@@ -1,0 +1,59 @@
+{
+    "Description": "The iboss cloud provides fast and secure Internet access on any device, from any location, in the cloud. Shift the focus from following perimeters to following users so that consistent cloud security is applied while users are in the office or on the road.",
+    "DisplayName": "iBoss",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/iboss",
+    "PythonVersion": 2,
+    "Categories": [
+        "Secure Web Gateway",
+        "Security"
+    ],
+    "Identifier": "IBoss",
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "IBoss",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Cloud API Root",
+            "PropertyName": "Cloud API Root",
+            "PropertyType": "2",
+            "Value": "https://cloud.iboss.com/"
+        },
+        {
+            "IntegrationIdentifier": "IBoss",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Account API Root",
+            "PropertyName": "Account API Root",
+            "PropertyType": "2",
+            "Value": "https://accounts.iboss.com/"
+        },
+        {
+            "IntegrationIdentifier": "IBoss",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "IBoss",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "IBoss",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": true
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"><g><g><path d=\"M14.6,2.2C13.9,2.1,13.2,2,12.5,2s-1.4,0.1-2,0.2v11.4h4.1V2.2z M16.4,3.2v4.6c1.6,1.1,2.6,2.9,2.6,4.9c0,3.4-2.9,6.2-6.5,6.2c-3.6,0-6.5-2.8-6.5-6.2c0-2,1-3.8,2.6-4.9V3.2C4.7,4.7,2,8.4,2,12.7C2,18.4,6.7,23,12.5,23C18.3,23,23,18.4,23,12.7C23,8.4,20.3,4.7,16.4,3.2z\"/></g></g></svg>",
+    "Version": 7.0,
+    "MarketingDisplayName": "iBoss"
+}

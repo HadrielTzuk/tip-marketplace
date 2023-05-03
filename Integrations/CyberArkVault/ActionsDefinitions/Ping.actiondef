@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1527174312472,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "CyberArkVault",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527174312472,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CyberarkVaultManager import CyberarkManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('CyberArk')\n    username = conf['Username']\n    password = conf['Password']\n    use_ssl = conf['Use SSL']\n\n    cyberark_manager = CyberarkManager(username, password, use_ssl)\n    is_connect = cyberark_manager.test_connectivity()\n\n    # If no exception occur - then connection is successful\n    output_message = \"Connected successfully.\"\n\n    siemplify.end(output_message, is_connect)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_connect",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

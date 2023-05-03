@@ -1,0 +1,76 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List available log streams in AWS CloudWatch.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSCloudWatch",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[[{\"group\": \"Siemplify\", \"logStreams\": [{\"arn\": \"arn:aws:logs:x-x-x:123456789:log-group:Siemplify:log-stream:XXXX\", \"creationTime\": \"2020-12-03T11:15:02Z\", \"firstEventTimestamp\": \"2020-12-03T11:16:37Z\", \"lastEventTimestamp\": \"2020-12-03T11:17:29Z\", \"lastIngestionTime\": 1606994249760, \"logStreamName\": \"XXXX\", \"storedBytes\": \"\", \"uploadSequenceToken\": \"123456789XXXXX\"}]}]]",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Log Streams",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of group names for which you want to retrieve log streams.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Log Groups",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Log Stream Name",
+            "Description": "Specify how the log streams should be ordered.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Order By",
+            "OptionalValues": [
+                "Log Stream Name",
+                "Last Event Time"
+            ],
+            "Type": 15,
+            "Value": "Log Stream Name"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Ascending",
+            "Description": "Specify how the log streams should be sorted.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Sort Order",
+            "OptionalValues": [
+                "Ascending",
+                "Descending"
+            ],
+            "Type": 15,
+            "Value": "Ascending"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many streams to return per log group. Default: 50.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Streams To Return",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

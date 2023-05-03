@@ -1,0 +1,40 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583, 
+    "Creator": "admin", 
+    "Description": "Permit sender in Mimecast.",
+    "Id": -1, 
+    "IntegrationIdentifier": "Mimecast", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530451212583, 
+    "Name": "Permit Sender",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the email address of the sender to permit.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Sender", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the email address of the recipient to permit.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Recipient",
+            "Type": 0,
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1528621129634,
+    "Creator": "admin",
+    "Description": "Session disconnect via an API call",
+    "Id": -1,
+    "IntegrationIdentifier": "CiscoISE",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1528621129634,
+    "Name": "Terminate Session",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1528621129634,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "ISE node server name, e.g. ciscoISE.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528621129634,
+            "Name": "Node Server Name",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528621129634,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The ID value of the calling station, e.g. 1.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528621129634,
+            "Name": "Calling Station ID",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528621129634,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Terminate Type value will be an integer between 0 and 2, e.g. 0 (0=DYNAMIC_AUTHZ_PORT_DEFAULT, 1=DYNAMIC_AUTHZ_PORT_BOUNCE, 2=DYNAMIC_AUTHZ_PORT_SHUTDOWN)",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528621129634,
+            "Name": "Terminate Type",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CiscoISEManager import CiscoISEManager\n\nCISCOISE_PROVIDER = \"CiscoISE\"\n\n\ndef main():\n    # Configuration.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(CISCOISE_PROVIDER)\n    cim = CiscoISEManager(conf['API Root'], conf['Username'], conf['Password'], conf['Verify SSL'])\n\n    # Parameters.\n    node_server_name = siemplify.parameters.get('Node Server Name')\n    calling_station_id = siemplify.parameters.get('Calling Station ID')\n    terminate_type = int(siemplify.parameters.get('Terminate Type', 0))\n\n    result_value = cim.terminate_session(node_server_name, calling_station_id, terminate_type)\n\n    if result_value:\n        output_message = \"Session terminated.\"\n    else:\n        output_message = \"Session was not terminated.\"\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_succeed",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

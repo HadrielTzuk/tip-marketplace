@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1526541527881,
+    "Creator": "admin",
+    "Description": "Upload file to MalShare",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"path\\\\bla.txt\": {\"SHA1\": \"da39a3ee5e6b4b0d3255bfef95601890afd80709\", \"SOURCES\": [], \"F_TYPE\": \"\", \"SSDEEP\": null, \"SHA256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"MD5\": \"d41d8cd98f00b204e9800998ecf8427e\"}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "MalShare",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1526541527881,
+    "Name": "Upload File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1526541527881,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The path of the file to upload",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1526541527881,
+            "Name": "File Path",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "# Imports\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\nfrom MalShareManager import MalShareManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    # Configuration.\n    conf = siemplify.get_configuration('MalShare')\n    api_key = conf['Api Key']\n    malshare = MalShareManager(api_key)\n    file_path = siemplify.parameters.get('File Path')\n\n    hash_info = malshare.upload_and_scan(file_path)\n    if hash_info:\n        flat_report = dict_to_flat(hash_info)\n        csv_output = flat_dict_to_csv(flat_report)\n        siemplify.result.add_entity_table('{0} Report'.format(file_path), csv_output)\n\n        output_message = \"File {0} submitted successfully.\".format(file_path)\n        result_value = True\n    else:\n        output_message = 'Failed to submit successfully.'\n        result_value = False\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

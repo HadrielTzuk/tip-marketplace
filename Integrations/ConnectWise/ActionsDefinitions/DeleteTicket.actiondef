@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1525626731304,
+    "Creator": "System",
+    "Description": "Delete ConnectWise ticket by ID",
+    "Id": -1,
+    "IntegrationIdentifier": "ConnectWise",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1525626731304,
+    "Name": "Delete Ticket",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1525626731304,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Ticket ID to be deleted. e.g. 607167",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1525626731304,
+            "Name": "Ticket Id",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyDataModel import EntityTypes\n# Imports\nfrom SiemplifyAction import SiemplifyAction\nfrom ConnectWiseManager import ConnectWiseManager\n\n\ndef main():\n\n    # Variables Definitions.\n    output_message = ''\n    result_value = False\n\n    siemplify = SiemplifyAction()\n    # Configuration.\n    configuration_settings = siemplify.get_configuration('ConnectWise')\n    company_url = configuration_settings['Api Root']\n    company_name = configuration_settings['Company Name']\n    public_key = configuration_settings['Public Key']\n    private_key = configuration_settings['Private Key']\n    connectwise_manager = ConnectWiseManager(company_url, company_name, public_key, private_key)\n\n    # Parameters.\n    ticket_id = siemplify.parameters['Ticket Id']\n\n    # Execute Delete Ticket.\n    result = connectwise_manager.delete_ticket(ticket_id)\n\n    if result:\n        output_message = \"Ticket with id {0} was deleted.\".format(ticket_id)\n        result_value = ticket_id\n    else:\n        output_message = 'There was a problem delete ticket with id: {0}.'.format(ticket_id)\n        result_value = False\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

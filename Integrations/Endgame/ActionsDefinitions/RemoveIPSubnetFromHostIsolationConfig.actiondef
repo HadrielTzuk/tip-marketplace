@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805,
+    "Creator": "Admin",
+    "DefaultResultValue": "",
+    "Description": "Remove IP subnet from Host Isolation Config defined in the Endgame.",
+    "Id": -1,
+    "IntegrationIdentifier": "Endgame",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1560351300805,
+    "Name": "Remove IP Subnet from Host Isolation Config",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Enter the IPv4 Subnet that you want to remove from Host Isolation Config.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1560351300835,
+            "Name": "IP Subnet",
+            "OptionalValues": null,
+            "OptionalValuesJson": null,
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "If enabled, creates Insight after successful execution of this action.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560351300835,
+            "Name": "Create Insight",
+            "OptionalValues": null,
+            "OptionalValuesJson": null,
+            "Type": 1,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "TimeoutSeconds": 600,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\",\"HOSTNAME\"]}"
+}

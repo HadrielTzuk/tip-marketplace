@@ -1,0 +1,75 @@
+{
+    "Description": "The VMware Carbon Black Endpoint Standard Live Response feature allows security operators to collect information and take action on remote endpoints with Carbon Black agents in real time.",
+    "DisplayName": "VMware Carbon Black Endpoint Standard Live Response",
+    "Identifier": "CBLiveResponse",
+    "PythonVersion": 2,
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "CBLiveResponse",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "5",
+            "Value": "https://defense-<environment>.conferdeploy.net/"
+        },
+        {
+            "IntegrationIdentifier": "CBLiveResponse",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Organization Key",
+            "PropertyName": "Organization Key",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CBLiveResponse",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Carbon Black Cloud API ID",
+            "PropertyName": "Carbon Black Cloud API ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CBLiveResponse",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Carbon Black Cloud API Secret Key",
+            "PropertyName": "Carbon Black Cloud API Secret Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CBLiveResponse",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Live Response API ID",
+            "PropertyName": "Live Response API ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CBLiveResponse",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Live Response API Secret Key",
+            "PropertyName": "Live Response API Secret Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CBLiveResponse",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Use Live Response V6 API",
+            "PropertyName": "Use Live Response V6 API",
+            "PropertyType": 0,
+            "Value": false
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M21.5,14.1c-0.3-0.5-0.8-0.9-1.4-1.3c1-0.6,1.5-1.5,1.5-2.6c0-0.5-0.1-1.1-0.4-1.5c-0.2-0.5-0.6-0.8-1.1-1.1\n\t\t\tc-0.5-0.3-1-0.4-1.6-0.4h-5v11.7h5.2c0.6,0,1.2-0.1,1.7-0.4c0.5-0.3,0.9-0.7,1.2-1.1c0.3-0.5,0.4-1.1,0.4-1.6\n\t\t\tC22,15.1,21.8,14.6,21.5,14.1z M15.4,9.1h2.8c0.5,0,0.8,0.1,1.1,0.4c0.3,0.3,0.5,0.6,0.5,1.1c0,0.4-0.2,0.7-0.5,1\n\t\t\tc-0.3,0.3-0.7,0.4-1.1,0.4h-2.8V9.1z M19.7,16.6c-0.4,0.3-0.8,0.5-1.2,0.5h-3.1v-3.3h3.1c0.5,0,0.9,0.1,1.2,0.5\n\t\t\tc0.3,0.3,0.5,0.7,0.5,1.2C20.1,16,19.9,16.4,19.7,16.6z M8.5,9c1,0,1.9,0.5,2.6,1.3l0.9-1.8c-0.4-0.4-0.9-0.7-1.3-0.9\n\t\t\tC9.9,7.2,9.2,7,8.5,7c-1,0-1.9,0.3-2.7,0.8c-0.8,0.6-1.5,1.3-2,2.2C3.2,11,3,11.9,3,13c0,1.1,0.2,2,0.8,3c0.5,0.9,1.2,1.6,2,2.2\n\t\t\tC6.6,18.7,7.5,19,8.5,19c0.8,0,1.5-0.2,2.1-0.5c0.5-0.3,0.9-0.6,1.3-1c0,0.1-0.9-1.6-0.9-1.6c-0.4,0.5-0.8,0.8-1.3,1\n\t\t\tC9,17.1,8.3,17.2,7.6,17c-0.6-0.2-1.2-0.5-1.6-1.1c-0.3-0.3-0.5-0.7-0.6-1c-0.1-0.3-0.2-0.6-0.3-0.9c-0.1-0.3-0.1-0.7-0.1-0.9\n\t\t\tC4.8,10.8,6.5,9,8.5,9z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 5.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/carbon-black-live-response",
+    "MarketingDisplayName": "VMware Carbon Black Endpoint Standard Live Response"
+}

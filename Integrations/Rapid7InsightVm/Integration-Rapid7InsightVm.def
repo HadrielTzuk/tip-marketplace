@@ -1,0 +1,49 @@
+{
+    "Description": "InsightVM vulnerability management software monitors exposures in real-time and adapts to new threats with fresh data, ensuring you can always act at the moment of impact.",
+    "DisplayName": "Rapid7 InsightVm",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/rapid7-insightsvm",
+    "Identifier": "Rapid7InsightVm",
+    "Categories": [
+        "Vulnerability & Risk Management",
+        "Security"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAMAAACScZ2GAAABXFBMVEX///8AAADpWCMNDQ3qYS4ODg4DAwMLCwsHBwfynX55eXnx8fHX19e2trZwcHBpaWlMTExAQEAmJibZ2dnCwsK8vLz2tp58fHxzc3NsbGxiYmJSUlIvLy8iIiIZGRkSEhL+/Pv39/f19fXh4eHT09PQ0NDJycmTk5NycnJmZmbwimVfX18rKysVFRXq6uqzs7OsrKyoqKiYmJiLi4uDg4N9fX1aWlpPT0/tdEfsazzrYzIyMjLqWyf//v7s7Oz97efl5eXd3d374tnMzMz618rGxsavr6/3wq6kpKSioqKdnZ2QkJCNjY2Hh4fzoILvgVlHR0c6OjrrZjYfHx/5+fn+8+/86OD5x7b2u6bzpIh/f3/xlHJWVlZEREQ9PT02NjYdHR0bGxvz8/P+9fHu7u74y7v0rZN+fn7ymXh2dnY0NDTqXyz+9/X63ND528/4zb3yqY3wjmvtelDteU/2Y9KcAAAEAElEQVRo3u3WWVfTUBAA4LkJtBVKsWJtC7Ugpbbsm2ytbCLKIruCKAru+/7/zzEzuVtiT8qjD/O9MHdCksndeoExxhhjjDHGGGOMsf9NstVtJd7fo/R0OwRsuy5eyYLRQSnMusXzfNLKuomMF1Vc+bSL88EMoL5dpyXk8M/Hb3AZ0yJgdAIs7TJ7AEZWBNwBUqVGyYvO7Kv1DNW34DTw/Ak01yNCHjS42AvGnAjqpGyBvkJHRg5zy04jh8fQ1IgISbwG5bZOXte5W64Iue1l+xMYVb1oLCYa1PfcaaT2FZpYoafVU52d+cFzQaZAuSaURzq3Ru003rAvSA9m9Z2TFF3N57s/Cx+O7z0Hze9e0U5xwIegiQ2B1oA80qNFHghtMHTDKsXlXoxfedEOZXGdfKDI73z/865hPI/lPQTLIWbuQ7Q24Ymp9Uqv65aNPmrNdOtXEGrG+4GksFFUE/IIU1f9iPSPCrTuhbvhYp466BdE2w+8PC4nC8kJBJO6u8hNGjvZmMXGTTvbH7e+UN4740U3vFruvgFj3l8dEKk9Ie8nzwTakLNS7hsdAo2D7y21KkAGaOIOA6xS9pleTZtqHSXUzHiIOwloNBmxYoi0LtB2VzLZ1bVe9VfuYyAvaBsEKKlXk4y5YWDLVat6Sw/ipl7M5KasH068WvZuoKcANNikBSKo52InhBfpdWp0qK3nJfg+/XNDXWVjr83U1OWZ3iNqtfbVLlXerLDZ0+qVLipPb9R9GpJY8bJpjEbw+hFGcxAY3CzNPWUZL7xzmpdHRYQMg7XHtFr7ywCQoggaxfxb6s2UFy1R8gNIGT0TTx3pN6C9S5U3Jmyx1vSE+mxagGcr5XJ5YMNaDWsiIN69ZCYC3uuvo0mQ0vTYJapHOsH8E4yaL41xfzxzuQMapxIonf7bhXFG+YrfxblqyjOzOQZkSvdvleoZCzw+bdfT0ocX3qtmDaLkqSp9NBlX+aT4R8GUHW94rCjii1/of6WuJNftlXEKaMGskyjU+Z/1Zn+h8nURQl1iVnHIKGZnddRGyaUZQfbVJkyOzabX9EdtsZeea6ZPxvzY2vSEKsmt2mKyelPumapUdq66cnriD+Z9R9oD9LF555matszpJG399Baybb6sv11n9XB1QJD5XdkWYYlyYDDfUa/UZOvLm0uclFet6d1lzsP41fbmOqdvKEHQjt6KB0XICD3wpxPYR05U6x5EmqPvWwQSU2e3skA7YAyrTXCfjgANT7QFPQRGcdocTsh7sCbi0DJEO3A9PbJxBxsX7bA4HPOCOlgm8FI8CY+vYdAGQbeKmE3h+sdI6i3MTtwC9P3L3RZfjQo6xubC0A9gjDHGGGOMMcYYY+w/8xeIrGZs46rtVwAAAABJRU5ErkJggg==",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Rapid7InsightVm",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Rapid7InsightVm",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Rapid7InsightVm",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Rapid7InsightVm",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path d=\"M9.35 21.3H.9c.15-.15.25-.3.4-.4C5.75 16.55 7 8.45 2.3 3.7h15.1c3.5 0 6.7 3.8 6.7 9.2 0 5.4-5.6 8.4-7 8.4h-3.15c1.75-4.65 3.5-9.25 5.3-13.95h-9.8c-.1 0-.3.2-.35.35-.15.6-.3 1.25-.45 1.9-.1.5-.2 1.05-.35 1.65h5.05C12 14.7 10.65 18 9.35 21.3z\"\/>\r\n<\/svg>\r\n",
+    "Version": 7.0,
+    "MarketingDisplayName": "Rapid7 InsightVM"
+}

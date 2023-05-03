@@ -1,0 +1,28 @@
+{
+    "CreationTimeUnixTimeInMs": 1543164953601,
+    "Creator": "admin",
+    "Description": "Generate an OAuth authorization code in BMC Helix Remedyforce. Please refer to the documentation portal for more information.",
+    "Id": -1,
+    "IntegrationIdentifier": "BMCHelixRemedyForce",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543164953601,
+    "Name": "Get OAuth Authorization Code",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "https://localhost",
+            "Description": "Specify the redirect URL that was used when the \"Connector App\" was created.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Redirect URL",
+            "Type": 0,
+            "Value": "https://localhost"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

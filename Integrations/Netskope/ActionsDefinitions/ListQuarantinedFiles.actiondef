@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1534436861977,
+    "Creator": "Admin",
+    "Description": "List quarantined files.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "Netskope",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534436861977,
+    "Name": "List Quarantined Files",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Restrict events to those that have timestamps greater than this (unixtime). Needed only if time period is not passed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Restrict events to those that have timestamps less than this (unixtime). Needed only if time period is not passed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "End Time",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "files",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

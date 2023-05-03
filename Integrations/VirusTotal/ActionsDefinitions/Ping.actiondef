@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1506238234929,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "VirusTotal",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506238753331,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from VirusTotal import VirusTotalManager\r\nfrom SiemplifyAction import SiemplifyAction\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n\r\n    conf = siemplify.get_configuration('VirusTotal')\r\n    api_key = conf['Api Key']\r\n    use_ssl = conf['Use SSL'].lower() == 'true'\r\n    vt = VirusTotalManager(api_key, use_ssl)\r\n\r\n    is_connected = vt.test_connectivity()\r\n    if is_connected:\r\n        output_message = \"Connection Established\"\r\n        result_value = 'true'\r\n    else:\r\n        output_message = \"Connection Failed\"\r\n        result_value = 'false'\r\n\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()",
+    "ScriptResultName": "True/False",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

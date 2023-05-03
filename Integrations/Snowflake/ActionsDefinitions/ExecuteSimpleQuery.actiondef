@@ -1,0 +1,124 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Execute a query based on parameters in Snowflake. Note: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed.",
+    "Id": -1,
+    "IntegrationIdentifier": "Snowflake",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Execute Simple Query",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"C_CUSTKEY\":\"60xxx\",\"C_NAME\":\"Customer#000xxxxx\",\"C_ADDRESS\":\"9Iixxxxxx\",\"C_NATIONKEY\":\"14\",\"C_PHONE\":\"24-678-xxx-xxxx\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Database",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the database in which you want to execute the query.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Table",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the table in which you want to execute the query.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Schema",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the name of the schema in which you want to execute the query.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Where Filter",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the WHERE filter for the query  that needs to be executed. Note: you don't need to limit and sort. Also, you don’t need to provide WHERE string in the payload. Only single quotes are supported in the query.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Fields To Return",
+            "Type": 0,
+            "DefaultValue": "*",
+            "Value": "*",
+            "IsMandatory": false,
+            "Description": "Specify what fields to return. If nothing is provided action will return all fields. Wildcard character is supported.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Sort Field",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what parameter should be used for sorting.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "ASC",
+            "Description": "Specify the order of sorting.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Sort Order",
+            "Type": 15,
+            "OptionalValues": [
+                "ASC",
+                "DESC"
+            ],
+            "Value": "ASC"
+        },
+        {
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many results to return. Default: 50.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "New Microsoft Graph Mail integration added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "MicrosoftGraphMail",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1665057489,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12617"
+    },
+    {
+        "ChangeDescription": "Microsoft Graph Mail Connector - Updated handling of Case Name Template connector parameter.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Microsoft Graph Mail Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1667989752,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13033"
+    },
+    {
+        "ChangeDescription": "Microsoft Graph Mail Connector - Connector improvements for email processing.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Microsoft Graph Mail Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1675330912,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13310"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "MicrosoftGraphMail",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

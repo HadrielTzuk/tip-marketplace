@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Return information about the domain from Cofense Triage.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"http://cie.org.mx/leather.php\", \"EntityResult\": {\"id\": \"1\", \"type\": \"hostnames\", \"attributes\": {\"hostname\": \"cie.org.mx\", \"risk_score\": null, \"created_at\": \"2019-04-12T02:58:19.893Z\", \"updated_at\": \"2019-04-12T02:58:19.974Z\"}}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "CofenseTriage",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Get Domain Details",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}"
+}

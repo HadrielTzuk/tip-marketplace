@@ -1,0 +1,74 @@
+[
+    {
+        "ChangeDescription": "AWS GuardDuty integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "AWSGuardDuty",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1605008252,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4463"
+    },
+    {
+        "ChangeDescription": "New Actions:\nCreate Sample Findings, Archive/Unarchive Findings, Update Findings Feedback, Get Detector Details, Delete a Trusted IP List/Threat Intelligence Set, Create/Update/Delete a detector, List Detectors",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "AWSGuardDuty",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1606209862,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4451"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "AWSGuardDuty",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Findings Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "AWS Guard Duty - Findings Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1661927346,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11397"
+    },
+    {
+        "ChangeDescription": "Archive findings, Create Trusted IP List, Get Finding Details, Get Threat Intel Set, Get All Trusted IP Lists, List Findings for Detector, List Threat Intel Set, Update Findings Feedback, Update a Trusted IP List actions - Added a new \"AWS Region\" parameter.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "AWSGuardDuty",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1661927346,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12656"
+    },
+    {
+        "ChangeDescription": "AWS GuardDuty - Findings Connector - Added a new event field that will contain the detector id specified in the connector configuration page. If the admin account detector id specified in the connector configuration, this detector id can be used to query the findings from the managed organizations in actions like \"Get Finding Details\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "AWSGuardDuty",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1661927346,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11644"
+    }
+]

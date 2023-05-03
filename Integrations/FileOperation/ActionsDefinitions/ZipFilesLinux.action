@@ -1,0 +1,90 @@
+{
+    "CreationTimeUnixTimeInMs": 1511346589633,
+    "Creator": "admin",
+    "Description": "Create a zip file from source folder files in a remote Linux host",
+    "Id": -1,
+    "IntegrationIdentifier": "FileOperation",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511346589633,
+    "Name": "Zip Files Linux",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1511799955421,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "x.x.x.x",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799955421,
+            "Name": "server_ip",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799955421,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799955421,
+            "Name": "username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799955421,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799955421,
+            "Name": "password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799955421,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The remote server folder with the relevant files",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799955421,
+            "Name": "source_folder",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799955421,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "files extension to include in zip file {ex: *.txt}",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799955421,
+            "Name": "file_filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799955421,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The remote server folder to put the zip file into",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799955421,
+            "Name": "output_folder",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from FileOperationManager import FileOperationManager\nfrom SiemplifyAction import *\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    file_manager = FileOperationManager()\n    server_ip = siemplify.parameters['server_ip']\n    username = siemplify.parameters['username']\n    password = siemplify.parameters['password']\n    source_folder = siemplify.parameters['source_folder']\n    file_filter = siemplify.parameters['file_filter']\n    output_folder = siemplify.parameters['output_folder']\n    zip_file_path = file_manager.zip_over_ssh_linux(server_ip, username, password, source_folder,\n                                                 file_filter, output_folder)\n\n    output_message = \"Successfully created {0}\".format(zip_file_path)\n    result_value = zip_file_path\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "ZIpPath",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

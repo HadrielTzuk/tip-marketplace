@@ -1,0 +1,58 @@
+{
+    "CreationTimeUnixTimeInMs": 1524560820281,
+    "Creator": "admin",
+    "Description": "List vulnerabilities found on the host in Crowdstrike Falcon. Supported entities: IP Address and Hostname. Note: requires Falcon Spotlight license and permissions. ",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Entity\":\"XXX.XXX.XXX\",\"EntityResult\": {\"statistics\":{\"total\":123,\"severity\":{\"critical\":1,\"high\":1,\"medium\":1,\"low\":1,\"unknown\":1},\"status\":{\"open\":1,\"reopened\":1},\"total_available_remediations\":1},\"details\":[{\"id\":\"74089e36ac3XXXXXab14abc076ed18eb_fff6dXXXXXX7352babdf7c7d240749e7\",\"cid\":\"27fe4e476cXXXXXX8476b2b6650e5a74\",\"aid\":\"74089e36acXXXXXXab14abc076ed18eb\",\"created_timestamp\":\"2021-05-12T22:45:47Z\",\"updated_timestamp\":\"2021-05-12T22:45:47Z\",\"status\":\"open\",\"cve\":{\"id\":\"CVE-2021-28476\",\"base_score\":9.9,\"severity\":\"CRITICAL\",\"exploit_status\":0},\"app\":{\"product_name_version\":\"Windows Windows 10\"},\"apps\":[{\"product_name_version\":\"Windows Windows 10\",\"sub_status\":\"open\",\"remediation\":{\"ids\":[\"acc34cd461023ffXXXXX420fa8839365\"]}}],\"host_info\":{\"hostname\":\"CROWDSTRIKE-H01\",\"local_ip\":\"172.30.202.33\",\"machine_domain\":\"\",\"os_version\":\"Windows 10\",\"ou\":\"\",\"site_name\":\"\",\"system_manufacturer\":\"VMware, Inc.\",\"groups\":[],\"tags\":[],\"platform\":\"Windows\"},\"remediation\":[{\"id\":\"acc34cd461023ffXXXXX420fa8839365\",\"reference\":\"KB5003169\",\"title\":\"Update Microsoft Windows 10 1909\",\"action\":\"Install patch for Microsoft Windows 10 1909 x64 (Workstation): Security Update KB5003169\",\"link\":\"https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5003169\"}]}]}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CrowdStrikeFalcon",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524560820281,
+    "Name": "List Host Vulnerabilities",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the comma-separated list of severities for vulnerabilities.If nothing is provided, action will ingest all related vulnerabilities. Possible values: Critical, High, Medium, Low, Unknown.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Severity Filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will create an insight per entity containing statistical information about related vulnerabilities.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Create Insight",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": "100",
+            "Description": "Specify how many vulnerabilities to return per host. If nothing is provided action will process all of the related vulnerabilities.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Max Vulnerabilities To Return",
+            "Type": 0,
+            "Value": "100"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}"
+}

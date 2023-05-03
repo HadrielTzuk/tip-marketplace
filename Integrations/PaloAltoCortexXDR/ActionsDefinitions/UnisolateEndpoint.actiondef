@@ -1,0 +1,17 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805, 
+    "Creator": "Admin", 
+    "DefaultResultValue": "", 
+    "Description": "Unisolate an endpoint.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "PaloAltoCortexXDR", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1560351300805, 
+    "Name": "Unisolate Endpoint", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "TimeoutSeconds": 600, 
+    "Version": 1.0
+}

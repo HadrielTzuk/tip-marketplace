@@ -1,0 +1,80 @@
+{
+    "Creator": "admin",
+    "Name": "Execute Simple Investigation Search",
+    "Description": "Execute investigation search based on parameters in Cybereason. Note: this action doesn't support nested queries. Only one type of data, for example, machines or users can be queried at once. For nested queries refer to action \"Execute Custom Investigation Search\". Please refer to the documentation portal for more details.",
+    "IntegrationIdentifier": "Cybereason",
+    "Id": -1,
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 1524559211168,
+    "ModificationTimeUnixTimeInMs": 1524559211168,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"simpleValues\":{\"isActiveProbeConnected\":{\"totalValues\":1,\"values\":[\"false\"]},\"osVersionType\":{\"totalValues\":1,\"values\":[\"Windows_10\"]},\"uptime\":{\"totalValues\":1,\"values\":[\"1456945\"]},\"timeStampSinceLastConnectionTime\":{\"totalValues\":1,\"values\":[\"19881265200\"]},\"domainFqdn\":{\"totalValues\":1,\"values\":[\"\"]},\"lastSeenTimeStamp\":{\"totalValues\":1,\"values\":[\"1618998831137\"]},\"ownerOrganization.name\":{\"totalValues\":1,\"values\":[\"INTEGRATION\"]},\"platformArchitecture\":{\"totalValues\":1,\"values\":[\"ARCH_AMD64\"]},\"elementDisplayName\":{\"totalValues\":1,\"values\":[\"desktop-67ce-ws\"]},\"timezoneUTCOffsetMinutes\":{\"totalValues\":1,\"values\":[\"180\"]}}},{\"simpleValues\":{\"isActiveProbeConnected\":{\"totalValues\":1,\"values\":[\"false\"]},\"uptime\":{\"totalValues\":1,\"values\":[\"98740\"]},\"timeStampSinceLastConnectionTime\":{\"totalValues\":1,\"values\":[\"19321799406\"]},\"timezoneUTCOffsetMinutes\":{\"totalValues\":1,\"values\":[\"-420\"]},\"lastSeenTimeStamp\":{\"totalValues\":1,\"values\":[\"1619558296931\"]},\"ownerOrganization.name\":{\"totalValues\":1,\"values\":[\"INTEGRATION\"]},\"platformArchitecture\":{\"totalValues\":1,\"values\":[\"ARCH_AMD64\"]},\"elementDisplayName\":{\"totalValues\":1,\"values\":[\"d3cyber-win10-6\"]},\"osVersionType\":{\"totalValues\":1,\"values\":[\"Windows_10\"]}}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Request Type",
+            "Type": 15,
+            "DefaultValue": "Machine",
+            "Value": "Machine",
+            "IsMandatory": false,
+            "Description": "Specify what should be queried.",
+            "OptionalValues": [
+                "Machine",
+                "User",
+                "Process",
+                "File",
+                "Connection",
+                "Domain Name",
+                "IP Address",
+                "Service"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Query Filters",
+            "Type": 0,
+            "DefaultValue": "{API field name} {Operator} {Value} OR {Value}",
+            "Value": "{API field name} {Operator} {Value} OR {Value}",
+            "IsMandatory": true,
+            "Description": "Specify the query that needs to be executed. Note: this query should follow a strict pattern of \"{API field} {Operator} {Value}\". For multiple values you need to provide an \"OR\" key. Each new filter needs to start from a new line. Please refer to the documentation portal to understand what an API field name is. Possible operators: Equals NotEquals ContainsIgnoreCase NotContainsIgnoreCase LessThan LessOrEqualsTo GreaterThan GreaterOrEqualsTo Between Includes NotIncludes",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Fields To Return",
+            "Type": 0,
+            "DefaultValue": "osVersionType,platformArchitecture,uptime,isActiveProbeConnected,lastSeenTimeStamp,timeStampSinceLastConnectionTime,mountPoints,processes,services,logonSessions,domainFqdn,timezoneUTCOffsetMinutes,domain,ownerMachine,ownerOrganization.name,isLocalSystem,emailAddress,avRemediationStatus,isSigned,signatureVerified,sha1String,maliciousClassificationType,createdTime,modifiedTime,size,correctedPath,productName,productVersion,companyName,internalName,elementDisplayName",
+            "Value": "osVersionType,platformArchitecture,uptime,isActiveProbeConnected,lastSeenTimeStamp,timeStampSinceLastConnectionTime,mountPoints,processes,services,logonSessions,domainFqdn,timezoneUTCOffsetMinutes,domain,ownerMachine,ownerOrganization.name,isLocalSystem,emailAddress,avRemediationStatus,isSigned,signatureVerified,sha1String,maliciousClassificationType,createdTime,modifiedTime,size,correctedPath,productName,productVersion,companyName,internalName,elementDisplayName",
+            "IsMandatory": true,
+            "Description": "Specify a comma-separated list of fields that need to be returned. Note: you need to provide API field names.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "DefaultValue": "50",
+            "Value": "50",
+            "IsMandatory": false,
+            "Description": "Specify how many results to return. Default: 50.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

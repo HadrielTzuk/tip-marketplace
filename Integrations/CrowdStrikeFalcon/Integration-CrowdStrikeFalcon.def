@@ -1,0 +1,51 @@
+{
+    "Description": "CrowdStrike Falcon is the leader in next-generation endpoint protection, threat intelligence and incident response through cloud-based endpoint protection.",
+    "DisplayName": "CrowdStrike Falcon",
+    "Identifier": "CrowdStrikeFalcon",
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "CrowdStrikeFalcon",
+            "IsMandatory": false,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https://api.crowdstrike.com"
+        },
+        {
+            "IntegrationIdentifier": "CrowdStrikeFalcon",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client API ID",
+            "PropertyName": "Client API ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CrowdStrikeFalcon",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client API Secret",
+            "PropertyName": "Client API Secret",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CrowdStrikeFalcon",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!-- Generator: Adobe Illustrator 25.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\r\n<g>\r\n\t<g>\r\n\t\t<path d=\"M16.7,16.2c-2.1,0.2-3.4-0.9-4.4-1.5c1.7,1.5,3,2.9,3.6,3.6c-0.5-0.1-1-0.4-1.4-0.7c0.6,0.8,1.4,1.6,2.3,2\r\n\t\t\tc0,0-0.4,0-0.8-0.1c1,0.8,1.6,0.5,2,0.3c0.5,1.4,1.3,1.3,1.6,1.3c-1.1-0.4-0.8-1.3,0.2-1.5c1-0.1,1.1,0.6,1.1,1\r\n\t\t\tc0.5-1.3,0.1-1.3-1-1.4c-1-0.1-1.3-0.5-1.5-0.8c0.5,0.1,1,0,2.1-0.5c1.1-0.6,2-0.4,2.5-0.4C20.2,15.5,18.8,16,16.7,16.2z\r\n\t\t\t M10.2,14.8c-1.6,0.1-3.2-1-4-1.6c1.1,1.4,2.8,2.3,4.5,2.7c1.7,0.4,2,0.5,3.3,1.1c-2.5-2.5-4.4-3-5-3.2\r\n\t\t\tC9.5,14.1,9.9,14.4,10.2,14.8z M6.4,8.6c1.4,1,3.3,1.6,4.7,3.5c-0.3-1-0.9-2.2-3.8-4.1C5.8,7.1,3.7,6,1,3C1.2,3.8,2.1,5.9,6.4,8.6\r\n\t\t\tz M11.2,13.5c-0.4-0.8-1.1-1.9-3.9-3.4C6.1,9.4,3.8,8.3,1.9,6.2C2,7,3,8.7,6.9,10.7C8,11.3,9.9,11.9,11.2,13.5z M23.1,16.2\r\n\t\t\tc0.1-1-2.2-1.4-3-1.7c-0.2-0.1-0.6-0.2-0.2-1c0.5-1.2,1-2.3-5.8-4.2C8.5,7.7,6.3,5.8,4.6,3.7c0.8,2.4,2.6,3.2,4.6,4.8\r\n\t\t\tc2,1.6,2.1,2.5,2.6,3.4c1.3,2.1,1.5,2.4,2.8,3.4c1.5,1,3.3,0.3,5.3,0.6c2,0.3,3.6,1.8,4,2.4C24.3,17.6,23.3,16.5,23.1,16.2z\r\n\t\t\t M21.8,15.7c1,0.2,1,0.4,1,0.8C22.4,16,21.8,15.7,21.8,15.7z\"\/><\/g><\/g><\/svg>",
+    "Version": 34.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/crowdstrike-falcon",
+    "MarketingDisplayName": "CrowdStrike Falcon"
+}

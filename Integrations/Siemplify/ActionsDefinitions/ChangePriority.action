@@ -1,0 +1,30 @@
+{
+    "CreationTimeUnixTimeInMs": 1506519518266,
+    "Creator": "admin",
+    "Description": "Automatically change case priority to the given input",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506519518266,
+    "Name": "Change Priority",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1510914859264,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Priority, which should be set for the case.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914859264,
+            "Name": "Priority",
+            "Type": 7,
+            "Value": ""
+        }
+    ],
+    "Script": "import json\nimport logging as log\nfrom requests import HTTPError\nfrom SiemplifyAction import *\n\ndef main():\n    siemplify = SiemplifyAction()\n    previousPriority = siemplify.case.priority\n    \n    priority = siemplify.parameters[\"Priority\"]\n    \n    #print previousPriority\n    #print priority\n\t#\n    #if (previousPriority == priority):\n    #\toutput_message = \"Case priority change was attempted unsuccessfully, because the case is allready assigned to priority %s.\" % (priority)\n    #else:\n    #\tsiemplify.change_case_priority(priority)\n    #\toutput_message = \"Case priority was successfully changed to %s.\" % (priority)\n    \n    siemplify.change_case_priority(priority)\n    output_message = \"Case priority was successfully changed to %s.\" % (priority)\n\n    output_message = \"The case priority was set to %s.\" % priority\n    siemplify.end(output_message, 'true')\n\nif __name__ == '__main__':\n\tmain()\n",
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

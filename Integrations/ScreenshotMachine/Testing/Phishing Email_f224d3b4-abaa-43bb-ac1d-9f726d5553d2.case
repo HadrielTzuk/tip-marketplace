@@ -1,0 +1,51 @@
+{
+	"Cases": [{
+		"Events": [{
+			"_fields": {
+				"BaseEventIds": "[]",
+				"ParentEventId": -1,
+				"DeviceProduct": "Phishing email detector",
+				"StartTime": "1525164412504",
+				"EndTime": "1525164412504"
+			},
+			"_rawDataFields": {
+				"sourcetype": "Phishing email detector",
+				"DeviceVendor": "Email server",
+				"StartTime": "1525164412504",
+				"EndTime": "1525164412504",
+				"EventId": "220",
+				"Name": "Your New Salary Notification",
+				"Mail_OriginalEmailBody": "Hello, You have an important email from the Human Resources Department with regards to your December 2015 Paycheck\r\n\r\nThis email is enclosed in the Marquette University secure network, hence access it below\r\n\r\nAccess the documents here <http://markossolomon.com/F1q7QX.php<link removed>\r\n\r\n***Ensure your login credentials are correct to avoid cancellations**\r\n\r\nFaithfully \r\nHuman Resources \r\nUniversity of California, Berkeley\r\n\r",
+				"Severity": "High",
+				"CategoryOutcome": "allowed",
+				"DeviceEventClassId": "Email check",
+				"SourceUserName": "f.attacker4@gmail.com",
+				"DestinationUserName": "vickie.b@siemplify.co",
+				"DestinationURL": "https://www.siemplify.co",
+				"sentTime": "1498647816000",
+				"message_id": "220",
+				"subject": "Your New Salary Notification",
+				"body": "Hello, You have an important email from the Human Resources Department with regards to your December 2015 Paycheck\r\n\r\nThis email is enclosed in the Marquette University secure network, hence access it below\r\n\r\nAccess the documents here <http://markossolomon.com/F1q7QX.php<link removed>\r\n\r\n***Ensure your login credentials are correct to avoid cancellations**\r\n\r\nFaithfully \r\nHuman Resources \r\nUniversity of California, Berkeley\r\n\r"
+			},
+			"Environment": null,
+			"SourceSystemName": null
+		}],
+		"Environment": null,
+		"SourceSystemName": "Splunk",
+		"TicketId": "f224d3b4-abaa-43bb-ac1d-9f726d5553d211",
+		"Description": "The email from <f.attacker4@gmail.com> to <vickie.b@siemplify.co> detected as phishing email.",
+		"DisplayId": "f224d3b4-abaa-43bb-ac1d-9f726d5553d211",
+		"Reason": "Phishing email detector",
+		"Name": "Suspicious phishing email",
+		"DeviceVendor": "Email server",
+		"DeviceProduct": "Phishing email detector",
+		"StartTime": 1525164412504,
+		"EndTime": 1525164412504,
+		"IsTestCase": false,
+		"Priority": 80,
+		"RuleGenerator": "Phishing email detector",
+		"PlaybookTriggerKeywords": [],
+		"Extensions": []
+	}],
+	"IsTestCase": false
+}

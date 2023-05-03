@@ -1,0 +1,31 @@
+{
+	"CreationTimeUnixTimeInMs": 1570446244,
+	"Creator": "admin",
+	"Description": "List tags that are available in McAfee Mvision ePO.",
+	"DynamicResultsMetadata": [{
+		"ResultExample": "[{\"id\": \"24753\", \"name\": \"Excluded from Compliance Check\", \"description\": \"Protection Workspace tag for systems to be excluded from the compliance check\", \"links\": [{\"rel\": \"self\", \"href\": \"24753\"}]}]",
+		"ResultName": "JsonResult"
+	}],
+	"Id": -1,
+	"IntegrationIdentifier": "McAfeeMvisionEPO",
+	"IsCustom": false,
+	"IsEnabled": true,
+	"ModificationTimeUnixTimeInMs": 1570446244,
+	"Name": "List Tags",
+	"Parameters": [{
+		"CreationTimeUnixTimeInMs": 1530543579170,
+		"CustomActionId": -1,
+		"DefaultValue": "100",
+		"Description": "Specify how many tags to return.",
+		"Id": -1,
+		"IsMandatory": false,
+		"ModificationTimeUnixTimeInMs": 1530543579170,
+		"Name": "Max Tags to Return",
+		"Type": 0,
+		"Value": "100"
+	}],
+	"ScriptResultName": "is_success",
+	"Type": 0,
+	"Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

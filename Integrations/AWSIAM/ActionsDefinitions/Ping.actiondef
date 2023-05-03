@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Test connectivity to AWS IAM with parameters provided at the integration configuration page on Marketplace tab.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSIAM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

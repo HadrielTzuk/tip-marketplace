@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1533143223495,
+    "Creator": "Admin",
+    "Description": "Get filemod data for a process by its id",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"process\": {\"process_md5\": \"098f6bcd4621d373cade4e832627b4f6\", \"sensor_id\": 2, \"group\": \"Default Group\", \"segment_id\": 1, \"process_name\": \"taskhost.exe\", \"start\": \"2013-09-19T22:07:07Z\", \"regmod_complete\": [\"2|2013-09-19 22:07:07.000000|\\\\\\\\registry\\\\\\\\user\\\\\\\\s-1-5-19\\\\\\\\software\\\\\\\\microsoft\\\\\\\\sqmclient\\\\\\\\reliability\\\\\\\\adaptivesqm\\\\\\\\manifestinfo\\\\\\\\version\", \"2|2013-09-19 22:09:07.000000|\\\\\\\\registry\\\\\\\\machine\\\\\\\\software\\\\\\\\microsoft\\\\\\\\reliability analysis\\\\\\\\rac\\\\\\\\wmilasttime\"], \"cmdline\": \"taskhost.exe $(arg0)\", \"filemod_complete\": [\"2|2013-09-19 22:07:07.000000|c:\\\\\\\\programdata\\\\\\\\microsoft\\\\\\\\rac\\\\\\\\statedata\\\\\\\\racmetadata.dat|\", \"2|2013-09-19 22:07:07.000000|c:\\\\\\\\programdata\\\\\\\\microsoft\\\\\\\\rac\\\\\\\\temp\\\\\\\\sql4475.tmp|\"], \"parent_id\": \"5856845119039539348\", \"modload_complete\": [\"2013-09-19 22:07:07.000000|517110bd83835338c037269e603db55d|c:\\\\\\\\windows\\\\\\\\system32\\\\\\\\taskhost.exe\", \"2013-09-19 22:07:07.000000|3556d5a8bf2cc508bdab51dec38d7c61|c:\\\\\\\\windows\\\\\\\\system32\\\\\\\\ntdll.dll\"], \"id\": \"2032659773721368929\", \"path\": \"c:\\\\\\\\windows\\\\\\\\system32\\\\\\\\taskhost.exe\", \"os_type\": \"windows\", \"last_update\": \"2013-09-19T22:09:07Z\", \"hostname\": \"TEST\"}, \"elapsed\": 0.0126001834869}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CBResponse",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1533143223495,
+    "Name": "Get FileMod Data For Process",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1533143223495,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "process unique id",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1533143223495,
+            "Name": "Process ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1533143223495,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "e.g. 1",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1533143223495,
+            "Name": "Segment Id",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom CarbonBlackResponseManager import CBResponseManager, CBResponseManagerException\nimport json\n\nPROVIDER = 'CBResponse'\nRESULT_CSV_HEADER = 'Time, Hash, File Name'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    configurations = siemplify.get_configuration(PROVIDER)\n    server_addr = configurations['Api Root']\n    api_key = configurations['Api Key']\n    cb_response = CBResponseManager(server_addr, api_key)\n\n    result_value = False\n    result_csv = [RESULT_CSV_HEADER]\n\n    # Parameters\n    process_id = siemplify.parameters.get('Process ID')\n    segment_id = siemplify.parameters.get('Segment ID')\n\n    filemod_csv = cb_response.get_process_filemod_list(process_id, segment_id)\n\n    if filemod_csv:\n        result_value = True\n        result_csv.extend(filemod_csv)\n        siemplify.result.add_data_table(process_id, result_csv)\n        output_message = 'Found filemod data for process id: {0}'.format(process_id)\n    else:\n        output_message = 'No filemod data found for process id: {0}'.format(process_id)\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

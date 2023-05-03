@@ -1,0 +1,82 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List available delivery methods in Ivanti Endpoint Manager.",
+    "Id": -1,
+    "IntegrationIdentifier": "IvantiEndpointManager",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Delivery Methods",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"DeliveryMethods\":[{\"DeliveryType\":\"MULTICAST\",\"DeliveryName\":\"Low-bandwidth distribution preparation\",\"DeliveryDescription\":\"Leaves package on targets for one week, allowing for a staggered installation.\"},{\"DeliveryType\":\"PUSHANDPULL\",\"DeliveryName\":\"Emergency failsafe distribution\",\"DeliveryDescription\":\"Bandwidth-intensive forced installation of package.\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Type",
+            "Type": 15,
+            "DefaultValue": "All",
+            "Value": "All",
+            "IsMandatory": false,
+            "Description": "Specify the delivery type that needs to be returned.",
+            "OptionalValues": [
+                "Push",
+                "Pull",
+                "Push and Pull",
+                "Multicast",
+                "All"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Filter Logic",
+            "Type": 15,
+            "DefaultValue": "Equal",
+            "Value": "Equal",
+            "IsMandatory": false,
+            "Description": "Specify what filter logic should be applied.",
+            "OptionalValues": [
+                "Equal",
+                "Contains"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Filter Value",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what value should be used in the filter. If \"Equal\" is selected, action will try to find the exact match among items and if \"Contains\" is selected, action will try to find items that contain that substring. If nothing is provided in this parameter, the filter will not be applied.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Delivery Methods To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many delivery methods to return. Default: 50.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

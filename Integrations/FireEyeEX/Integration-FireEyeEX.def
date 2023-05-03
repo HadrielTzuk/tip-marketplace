@@ -1,0 +1,50 @@
+{
+    "Description": "FireEye Email Security detects and blocks every kind of unwanted email, especially targeted advanced attacks. Time and again, this solution has proven itself capable of detecting corporate email threats in traffic accepted as safe by other products",
+    "DisplayName": "FireEye EX",
+    "Identifier": "FireEyeEX",
+    "Categories": [
+        "Email Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "FireEyeEX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "6",
+            "Value": "https://<address>:<port>"
+        },
+        {
+            "IntegrationIdentifier": "FireEyeEX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "FireEyeEX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "FireEyeEX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M17.8304 5.66197C18.04 5.69192 18.2496 5.57213 18.2496 5.33255C18.2796 4.31434 18.2496 1.85866 16.6025 1.25972C14.4763 0.481087 11.0323 1.55919 8.39698 3.0865C5.70173 4.61382 2.34763 8.1476 1 11.8012C1 11.8012 5.97125 7.48876 11.0623 6.26092C14.9255 5.3026 17.0218 5.51224 17.8304 5.66197Z\" \/>\r\n<path d=\"M5.31241 11.9509C5.25252 11.7413 5.01294 11.6514 4.80331 11.7413C3.90489 12.1905 1.80858 13.4782 2.10805 15.2152C2.49737 17.4612 5.16268 19.8869 7.79804 21.4143C10.4334 22.9715 15.225 24.1095 19.0283 23.4507C19.0283 23.4507 12.8292 21.2945 9.17561 17.4912C6.45041 14.6162 5.58194 12.6996 5.31241 11.9509Z\" \/>\r\n<path d=\"M17.0518 19.7372C16.902 19.9169 16.9619 20.1565 17.1117 20.2463C17.9502 20.7854 20.1064 21.9833 21.484 20.8453C23.2508 19.4078 23.9995 15.874 23.9995 12.8194C24.0295 9.73481 22.622 5.03308 20.1363 2.06829C20.1363 2.06829 21.3642 8.50697 19.8967 13.5681C18.8186 17.4013 17.5908 19.1083 17.0518 19.7372Z\" \/>\r\n<\/svg>",
+    "Version": 8.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/fireeye-ex",
+    "MarketingDisplayName": "FireEye EX"
+}

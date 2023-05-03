@@ -1,0 +1,72 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381792970, 
+    "Creator": "Admin", 
+    "Description": "Enrich domains using information from IOCs in Google Chronicle. Supported entities: Hostname, URL (action extracts domain part).",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"https://professionallogistics.in\", \"EntityResult\": {\"sources\": [{\"sourceUrl\": \"https://tools.emergingthreats.net/docs/ET%20Intelligence%20Rep%20List%20Tech%20Description.pdf\", \"confidenceScore\": {\"strRawConfidenceScore\": \"77\"}, \"rawSeverity\": \"Medium\", \"category\": \"Drop site for logs or stolen credentials\", \"addresses\": [{\"port\": [80], \"domain\": \"professionallogistics.in\"}], \"firstActiveTime\": \"2020-03-20T00:00:00Z\", \"lastActiveTime\": \"2020-03-21T00:00:00Z\"}], \"uri\": [\"https://ironmountain.backstory.chronicle.security/domainResults?domain=professionallogistics.in&selectedList=DomainViewDistinctAssets&whoIsTimestamp=2020-10-04T07%3A39%3A29.770408493Z\"]}}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "GoogleChronicle", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1535381792970, 
+    "Name": "Enrich Domain", 
+    "Parameters": [
+        {
+             "Name": "Create Insight",
+             "Type": 1,
+             "Value": true,
+             "DefaultValue": true,
+             "IsMandatory": false,
+             "Description": "If enabled, action will create an insight containing information about the entities.",
+             "CustomActionId": -1,
+             "Id": -1
+        },
+        {
+             "Name": "Only Suspicious Insight",
+             "Type": 1,
+             "Value": false,
+             "DefaultValue": false,
+             "IsMandatory": false,
+             "Description": "If enabled, action will only create an insight for entities that are marked as suspicious. Note: \"Create Insight\" parameter needs to be enabled.",
+             "CustomActionId": -1,
+             "Id": -1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1572955458924, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Medium", 
+            "Description": "Specify the lowest severity that should be associated with domain in order to mark it suspicious.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1572955458924, 
+            "Name": "Lowest Suspicious Severity", 
+            "OptionalValues": [
+                "High", 
+                "Medium", 
+                "Low", 
+                "Info"
+            ], 
+            "Type": 15, 
+            "Value": "Medium"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "True", 
+            "Description": "If enabled, action will mark the entity as suspicious, if information about severity is not available.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Mark Suspicious N/A Severity", 
+            "Type": 1, 
+            "Value": "True"
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\", \"HOSTNAME\"]}",
+    "Version": 1.0
+}

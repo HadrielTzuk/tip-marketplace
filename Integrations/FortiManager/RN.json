@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "FortiManager",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Fixed a bug where the integration's SVG logo file was causing unexpected behaviors in specific cases.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "FortiManager",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1617794120,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8062"
+    },
+    {
+        "ChangeDescription": "Updated the integration's API Root handling.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "FortiManager",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9607"
+    },
+    {
+        "ChangeDescription": "Integration Action's - Added support for workflow mode.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "FortiManager",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1678320000,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "270118341"
+    }
+]

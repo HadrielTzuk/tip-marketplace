@@ -1,0 +1,131 @@
+{
+    "CreationTimeUnixTimeInMs": 1511460515990,
+    "Creator": "admin",
+    "Description": "Search for entities in CSV files and enrich them.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [{\"domain\": \"SmartCompany.dom\", \"fileHash\": \"cbbc5aea3d4c7ec193aa2ff3b52df36ebb12338b18c9bb53fc4896115efaf78d\", \"reporter\": \"Symantec Antivirus\", \"app\": \"Arcsight\", \"id\": \"1011\", \"eventTime\": \"9/4/2017 10:00\", \"antivirusAction\": \"blocked\", \"virusName\": \"ECAT\", \"rule\": \"malicious\", \"eventName\": \"Virus detected\", \"User\": \"Ziv\", \"eventHostName\": \"WS-ZivDevComp\", \"File Source Path\": \"C:\\\\Users\\\\Default\\\\Desktop\\\\stringTimeRaw.csv\", \"machineAddress\": \"192.168.11.11\"}, {\"domain\": \"SmartCompany.dom\", \"fileHash\": \"cbbc5aea3d4c7ec193aa2ff3b52df36ebb12338b18c9bb53fc4896115efaf78d\", \"reporter\": \"Symantec Antivirus\", \"app\": \"ESM\", \"id\": \"1012\", \"eventTime\": \"9/4/2017 10:00\", \"antivirusAction\": \"allowed\", \"virusName\": \"ECAT\", \"rule\": \"malicious\", \"eventName\": \"Virus detected\", \"User\": \"GG\", \"eventHostName\": \"WS-GGDevComp\", \"File Source Path\": \"C:\\\\Users\\\\Default\\\\Desktop\\\\stringTimeRaw.csv\", \"machineAddress\": \"192.168.11.11\"}], \"Entity\": \"192.168.11.11\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CSV",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511460515990,
+    "Name": "CSV Search by Entity",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the file path to the CSV file or a folder path that contains all of the CSV files. If folder is provide, action will iterate over all CSV files in the folder.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "CSV Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of columns that can contain entity information. If nothing is provided, action will search in all of the columns.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "CSV Column",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify how many days backwards to process the CSV files.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "Days Back",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "If enabled, action will mark entity as suspicious, if it was found in file.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "Mark As Suspicious",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "If enabled, action will only return 1 row in the first file that matched the entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "Return the first row only",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": "utf-8, latin-1, iso-8859-1",
+            "Description": "A comma separated list CSV encoding types used for decoding your CSV files, e.g. utf-8, latin-1, iso-8859-1, utf-16... Order in which the encoding types are given sets the order in which they are used for decoding files, e.g.(from example above) the utf-8 has the highest priority and will be used primarily for decoding all the files, if there is a CSV file that uses some other encoding then the next in the order: latin-1 encoding will be used, and so on, until the last encoding is used.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "File Encoding Types",
+            "Type": 0,
+            "Value": "utf-8, latin-1, iso-8859-1"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will add information from CSV file and add it to the enrichment table of entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "Enrich Entities",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will create an insight, if entity was found in the file.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "Create Insight",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of values that need to be returned.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "Fields To Return",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "count_rows_csv",
+    "Type": 0,
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

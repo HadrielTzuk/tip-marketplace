@@ -1,0 +1,70 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381792970,
+    "Creator": "Admin",
+    "Description": "List available controls related to standards in Microsoft Azure Security Center.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"results\":[{\"Name\":\"PCI-DSS-3.2.1\",\"Controls\":[{\"id\":\"\/subscriptions\/XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXX/providers/Microsoft.Security/regulatoryComplianceStandards/PCI-DSS-3.2.1/regulatoryComplianceControls/1.2.1\",\"name\":\"1.2.1\",\"type\":\"Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls\",\"properties\":{\"description\":\"Restrict inbound and outbound traffic to that which is necessary for the cardholder data environment, and specifically deny all other traffic.\",\"state\":\"Failed\",\"passedAssessments\":112,\"failedAssessments\":12,\"skippedAssessments\":0}}]}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "AzureSecurityCenter",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535381792970,
+    "Name": "List Regulatory Standard Controls",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID of the subscription for which you want to query information. Note: if subscription ID is provided at the integration level and action level, priority will be given to action configuration.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Subscription ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of standard names for which you want to retrieve details. Example: Azure-CIS-1.1.0",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Standard Names",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Failed",
+            "Description": "Specify the comma-separated list of states. Example: Failed, Skipped. Only standards with the matching state will be returned. For example, if you specify “Failed”, action will only return failed standards. Possible values: Passed, Failed, Unsupported, Skipped",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "State Filter",
+            "Type": 0,
+            "Value": "Failed"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many controls to return per standard.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Standards To Return",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

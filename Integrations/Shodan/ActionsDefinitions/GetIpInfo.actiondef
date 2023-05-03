@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1545759703746, 
+    "Creator": "Admin", 
+    "Description": "Get all available information on an IP", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"data\": [{\"_shodan\": {\"id\": \"d670bfbb-4821-4320-969d-0590789ab502\", \"crawler\": \"545144fc95e7a7ef13ece5dbceb98ee386b37950\", \"options\": {}, \"module\": \"dns-udp\", \"ptr\": true}, \"hash\": -553166942, \"opts\": {\"raw\": \"34ef818200010000000000000756455253494f4e0442494e440000100003\"}, \"ip\": 134744072, \"isp\": \"Google\", \"data\": \"\\nRecursion: enabled\", \"port\": 53, \"hostnames\": [\"google-public-dns-a.google.com\"], \"location\": {\"city\": null, \"region_code\": null, \"area_code\": null, \"dma_code\": null, \"country_code3\": \"USA\", \"country_name\": \"United States\", \"postal_code\": null, \"longitude\": -97.822, \"country_code\": \"US\", \"latitude\": 37.751000000000005}, \"dns\": {\"resolver_hostname\": null, \"recursive\": true, \"resolver_id\": null, \"software\": null}, \"timestamp\": \"2019-01-29T12:36:09.300695\", \"domains\": [\"google.com\"], \"org\": \"Google\", \"os\": null, \"asn\": \"AS15169\", \"transport\": \"udp\", \"ip_str\": \"1.1.1.1\"}], \"city\": null, \"region_code\": null, \"tags\": [], \"ip\": 134744072, \"isp\": \"Google\", \"area_code\": null, \"dma_code\": null, \"last_update\": \"2019-01-29T12:36:09.300695\", \"country_code3\": \"USA\", \"country_name\": \"United States\", \"hostnames\": [\"google-public-dns-a.google.com\"], \"postal_code\": null, \"longitude\": -97.822, \"country_code\": \"US\", \"ip_str\": \"1.1.1.1\", \"latitude\": 37.751000000000005, \"org\": \"Google\", \"os\": null, \"asn\": \"AS15169\", \"ports\": [53]}, \"Entity\": \"1.1.1.1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Shodan", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1545759703750, 
+    "Name": "Get Ip Info", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1545759703759, 
+            "CustomActionId": 57, 
+            "DefaultValue": "false", 
+            "Description": "True if all historical banners should be returned", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1545759703759, 
+            "Name": "Return Historical Banners", 
+            "Type": 1, 
+            "Value": "false"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1545759703761, 
+            "CustomActionId": 57, 
+            "DefaultValue": "false", 
+            "Description": "True to only return the list of ports and the general host information, no banners.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1545759703761, 
+            "Name": "Set Minify", 
+            "Type": 1, 
+            "Value": "false"
+        }
+    ], 
+    "Script": "from ShodanManager import ShodanManager\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\nfrom SiemplifyDataModel import EntityTypes\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('Shodan')\n    verify_ssl = conf.get('Verify SSL', 'False').lower() == 'true'\n    api_key = conf.get('API key', \"\")\n    shodan = ShodanManager(api_key, verify_ssl=verify_ssl)\n\n    # parameters\n    history = siemplify.parameters.get(\"Return Historical Banners\", \"False\").lower() == 'true'\n    minify = siemplify.parameters.get(\"Set Minify\", \"False\").lower() == 'true'\n\n    entities = []\n    result_value = 'false'\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.ADDRESS:\n            try:\n                ip_info = shodan.get_ip_info(entity.identifier, history=history, minify=minify)\n                if ip_info:\n                    entities.append(entity.identifier)\n                    result_value = 'true'\n                    # Add csv table\n                    flat_report = dict_to_flat(ip_info)\n                    csv_output = flat_dict_to_csv(flat_report)\n                    siemplify.result.add_entity_table(entity.identifier, csv_output)\n\n            except Exception as e:\n                # An error occurred - skip entity and continue\n                siemplify.LOGGER.error(\"An error occurred on entity: {}.\\n{}.\".format(entity.identifier, str(e)))\n                siemplify.LOGGER.exception(e)\n\n    if entities:\n        output_message = 'The following IPs were submitted and analyzed in Shodan: {0} \\n'.format('\\n'.join(entities))\n\n    else:\n        output_message = 'No entities were found by Shodan.'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 3.0
+}

@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Update record in BMC Helix Remedyforce.",
+    "Id": -1,
+    "IntegrationIdentifier": "BMCHelixRemedyForce",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Update Record",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the type of the record that needs to be updated. If you don't know what kind of records are available, please execute action \"List Record Types\".",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Record Type",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the id of the record that needs to be updated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Record ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "{\"field\":\"value\"}",
+            "Description": "Specify a JSON object containing all of the needed fields and  values that need to be updated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Fields To Update",
+            "Type": 0,
+            "Value": "{\"field\":\"value\"}"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

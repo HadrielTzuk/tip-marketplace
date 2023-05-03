@@ -1,0 +1,37 @@
+[
+    {
+        "ChangeDescription": "Update insight description",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Enrich Entities",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1162"
+    },
+    {
+        "ChangeDescription": "Fixed the enrichment issue with hashes, the indicator value should be uppercase",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Enrich Entities",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1584966272,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1924"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "ThreatConnect",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    }
+]

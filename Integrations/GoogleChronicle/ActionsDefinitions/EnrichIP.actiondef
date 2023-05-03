@@ -1,0 +1,72 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381792970, 
+    "Creator": "Admin", 
+    "Description": "Enrich IP entities using information from IOCs in Google Chronicle. Supported entities: IP address.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"213.227.145.147\", \"EntityResult\": {\"sources\": [{\"confidenceScore\": {\"strRawConfidenceScore\": \"High\"}, \"rawSeverity\": \"High\", \"category\": \"Blocked\", \"description\": \"Application.JS/Adware.Sculinst.I\", \"addresses\": [{\"domain\": \"special-offers.online\"}, {\"ipAddress\": \"213.227.145.147\"}], \"firstActiveTime\": \"1970-01-01T00:00:00Z\", \"lastActiveTime\": \"2020-10-06T00:26:12Z\"}], \"uri\": [\"https://ironmountain.backstory.chronicle.security/destinationIpResults?ip=213.227.145.147&referenceTime=2020-10-04T07%3A45%3A51.723475776Z&selectedList=IpViewDistinctAssets\"]}}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "GoogleChronicle", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1535381792970, 
+    "Name": "Enrich IP", 
+    "Parameters": [
+        {
+             "Name": "Create Insight",
+             "Type": 1,
+             "Value": true,
+             "DefaultValue": true,
+             "IsMandatory": false,
+             "Description": "If enabled, action will create an insight containing information about the entities.",
+             "CustomActionId": -1,
+             "Id": -1
+        },
+        {
+             "Name": "Only Suspicious Insight",
+             "Type": 1,
+             "Value": false,
+             "DefaultValue": false,
+             "IsMandatory": false,
+             "Description": "If enabled, action will only create an insight for entities that are marked as suspicious. Note: \"Create Insight\" parameter needs to be enabled.",
+             "CustomActionId": -1,
+             "Id": -1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1572955458924, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Medium", 
+            "Description": "Specify the lowest severity that should be associated with IP in order to mark it suspicious.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1572955458924, 
+            "Name": "Lowest Suspicious Severity", 
+            "OptionalValues": [
+                "High", 
+                "Medium", 
+                "Low", 
+                "Info"
+            ], 
+            "Type": 15, 
+            "Value": "Medium"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "True", 
+            "Description": "If enabled, action will mark the entity as suspicious, if information about severity is not available.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Mark Suspicious N/A Severity", 
+            "Type": 1, 
+            "Value": "True"
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 1.0
+}

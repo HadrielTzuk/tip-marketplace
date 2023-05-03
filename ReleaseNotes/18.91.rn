@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 18.91</h2><h5>Published on 07 November, 2022</h5><hr><h3>Jobs</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     GoogleChronicle\n    </b>\n   </li>\n   <ul>\n    <li>\n     Google Chronicle - Sync Data\n    </li>\n    <ul>\n     <li>\n      New Job Added - Sync Data.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     GoogleChronicle\n    </b>\n   </li>\n   <ul>\n    <li>\n     Google Chronicle - Chronicle Alerts Connector\n    </li>\n    <ul>\n     <li>\n      REGRESSIVE! Google Chronicle - Chronicle Alerts Connector - REGRESSIVE! Connector ingests only rule based detections.\n     </li>\n     <li>\n      Google Chronicle - Chronicle Alerts Connector - Added support for OOTB enrichment.\n     </li>\n     <li>\n      Google Chronicle - Chronicle Alerts Connector - Updated Siemplify Alert structure.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "18.91",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "07/11/22",
+    "Title": "Release Notes"
+}

@@ -1,0 +1,56 @@
+{
+    "Description": "Salesforce is the world's #1 customer relationship management (CRM) platform.",
+    "DisplayName": "Salesforce",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/salesforce",
+    "Identifier": "Salesforce",
+    "Categories": [
+        "IT & Infrastructure"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Salesforce",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "http://www.salesforce.com"
+        },
+        {
+            "IntegrationIdentifier": "Salesforce",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Salesforce",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Salesforce",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Token",
+            "PropertyName": "Token",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Salesforce",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.0\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<path d=\"M9.9,19.4L9.9,19.4c-0.1,0-0.1,0-0.1,0c-0.4,0-0.7-0.1-1-0.2c-1-0.4-1.8-1.1-2.2-2.1c0,0,0-0.1-0.1,0\n\t\tc-0.7,0.1-1.5,0-2.2-0.4c-0.9-0.5-1.5-1.3-1.7-2.3c0-0.2,0-0.3-0.1-0.5c0-0.1,0-0.2,0-0.3s0-0.2,0-0.3c0.1-1.1,0.7-1.9,1.6-2.5l0,0\n\t\tv0C3.9,9.8,3.9,8.7,4.5,7.6s1.5-1.7,2.7-2c0.1,0,0.3,0,0.5,0c0.1,0,0.3,0,0.4,0c0.1,0,0.2,0,0.3,0c1,0.1,1.8,0.6,2.5,1.4l0,0\n\t\tc0.8-0.8,1.8-1.2,2.9-1.1c1.1,0.1,2,0.8,2.6,1.8c0,0,0,0,0,0c0.8-0.3,1.6-0.4,2.4-0.3c2.1,0.4,3.7,2.4,3.4,4.7\n\t\tc-0.1,1-0.5,1.8-1.1,2.5c-1.1,1.1-2.3,1.5-3.8,1.2c0,0-0.1,0-0.1,0c-0.7,1.2-2.2,1.8-3.5,1.4c-0.2,0-0.4-0.1-0.5-0.2c0,0,0,0,0,0.1\n\t\tc-0.6,1.1-1.5,1.8-2.7,2C10.2,19.4,10.1,19.4,9.9,19.4z\"/>\n</g>\n</svg>\n",
+    "Version": 7.0,
+    "MarketingDisplayName": "Salesforce"
+}

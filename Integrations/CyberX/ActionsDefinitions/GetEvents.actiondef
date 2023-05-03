@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1542558167478,
+    "Creator": "Admin",
+    "Description": "Fetch list of events reported to the event log.",
+    "Id": -1,
+    "IntegrationIdentifier": "CyberX",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542558167478,
+    "Name": "Get Events",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat, construct_csv\nfrom CyberXManager import CyberXManager\n\nACTION_NAME = 'CyberX_Get Events'\nPROVIDER = 'CyberX'\nTABLE_TITLE = 'Result Events'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n\n    config = siemplify.get_configuration(PROVIDER)\n    api_root = config['API Root']\n    access_token = config['Access Token']\n    use_ssl = config.get('Use SSL', 'false').lower() == 'true'\n\n    cyberx_manager = CyberXManager(api_root=api_root, access_token=access_token, use_ssl=use_ssl)\n\n    result_value = False\n\n    events = cyberx_manager.get_events()\n    if events:\n        siemplify.result.add_data_table(TABLE_TITLE, construct_csv(map(dict_to_flat, events)))\n        result_value = True\n        output_message = '{0} events were found.'.format(len(events))\n    else:\n        output_message = 'No events were found.'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "events",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

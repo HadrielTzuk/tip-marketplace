@@ -1,0 +1,301 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 12.5</h2><h5>Published on 19 May, 2020</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     AutoFocus
+    </b>
+   </li>
+   <ul>
+    <li>
+     AutoFocus
+    </li>
+    <ul>
+     <li>
+      Results coming from all Autofocus "hunt" actions will be returned in a JSON format.
+     </li>
+     <li>
+      Fixed a bug in all Autofocus "hunt" actions that prevented proper display of tables.
+     </li>
+     <li>
+      Applied "Results Limit" to table rows in all Autofocus "hunt" actions.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     CSV
+    </b>
+   </li>
+   <ul>
+    <li>
+     CSV
+    </li>
+    <ul>
+     <li>
+      Added support for unicode characters in output table.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     McAfeeEPO
+    </b>
+   </li>
+   <ul>
+    <li>
+     McAfeeEPO
+    </li>
+    <ul>
+     <li>
+      Improved logging for all of the actions.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     PaloAltoNGFW
+    </b>
+   </li>
+   <ul>
+    <li>
+     PaloAltoNGFW
+    </li>
+    <ul>
+     <li>
+      Removed sensitive data from logs
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     SCCM
+    </b>
+   </li>
+   <ul>
+    <li>
+     SCCM
+    </li>
+    <ul>
+     <li>
+      Updated dependencies to prevent connection errors on Linux machines.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ServiceNow
+    </b>
+   </li>
+   <ul>
+    <li>
+     ServiceNow
+    </li>
+    <ul>
+     <li>
+      Removed sensitive data from logs.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Splunk
+    </b>
+   </li>
+   <ul>
+    <li>
+     Splunk
+    </li>
+    <ul>
+     <li>
+      Prevented actions from revealing sensitive data in the logs.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     ActiveDirectory
+    </b>
+   </li>
+   <ul>
+    <li>
+     Enable Computer
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for enabling computer accounts
+     </li>
+    </ul>
+    <li>
+     Disable Computer
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for disabling computer accounts
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     CSV
+    </b>
+   </li>
+   <ul>
+    <li>
+     CSVSearchByEntity &amp; CSVSearchByString
+    </li>
+    <ul>
+     <li>
+      Fixed issues with log files naming convention.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     CrowdStrikeFalcon
+    </b>
+   </li>
+   <ul>
+    <li>
+     Close Detection
+    </li>
+    <ul>
+     <li>
+      NEW! New action Close Detection.
+     </li>
+    </ul>
+    <li>
+     Add Comment to Detection
+    </li>
+    <ul>
+     <li>
+      NEW! New action: Add Comment to Detection.
+     </li>
+    </ul>
+    <li>
+     Update Detection
+    </li>
+    <ul>
+     <li>
+      NEW! New action: Update detection.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Fortigate
+    </b>
+   </li>
+   <ul>
+    <li>
+     List Policies
+    </li>
+    <ul>
+     <li>
+      Added support for unicode data.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     McAfeeEPO
+    </b>
+   </li>
+   <ul>
+    <li>
+     GetEventsForHash
+    </li>
+    <ul>
+     <li>
+      Modified the action to work with the integration's parameter "Group Name". The action will return events for hash of hosts of a specified group only.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Shodan
+    </b>
+   </li>
+   <ul>
+    <li>
+     Get Ip Info
+    </li>
+    <ul>
+     <li>
+      Added error handling for IPs that were not found in Shodan.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     AlienVaultAnywhere
+    </b>
+   </li>
+   <ul>
+    <li>
+     AlienVault USM Anywhere Connector
+    </li>
+    <ul>
+     <li>
+      Fixed a bug, where connector would enter an infinite loop under certain circumstances
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     CBResponse
+    </b>
+   </li>
+   <ul>
+    <li>
+     CB Response Connector
+    </li>
+    <ul>
+     <li>
+      Fixed the issue with alert fields exclusion in the Connector.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     CrowdStrikeFalcon
+    </b>
+   </li>
+   <ul>
+    <li>
+     Crowdstrike Falcon Streaming Events Connector
+    </li>
+    <ul>
+     <li>
+      NEW! NEW! Added a new connector that pulls Crowdstrike Falcon streaming Events
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     SentinelOneV2
+    </b>
+   </li>
+   <ul>
+    <li>
+     SentinelOne - Threats Connector
+    </li>
+    <ul>
+     <li>
+      Added support for blacklisting and whitelisting.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

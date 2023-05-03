@@ -1,0 +1,46 @@
+{
+     "Id": -1,
+     "Creator": "admin",
+     "IsCustom": false,
+     "IsEnabled": true,
+     "IntegrationIdentifier": "FortiAnalyzer",
+     "Name": "Add Comment To Alert",
+     "Description": "Add a comment to alert in FortiAnalyzer.",
+     "CreationTimeUnixTimeInMs": 1524559211168,
+     "ModificationTimeUnixTimeInMs": 1524559211168,
+     "DynamicResultsMetadata": [
+         {
+             "ResultExample": "{\"jsonrpc\":\"2.0\",\"id\":\"string\",\"result\":{\"status\":\"done\"}}",
+             "ResultName": "JsonResult"
+         }
+     ],
+     "Parameters": [
+        {
+            "Name": "Alert ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the ID of the alert that needs to be updated.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Comment",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the comment for the alert.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+     ],
+     "ScriptResultName": "is_success",
+     "SimulationDataJson": "{\"Entities\": []}",
+     "Version": 1.0
+ }

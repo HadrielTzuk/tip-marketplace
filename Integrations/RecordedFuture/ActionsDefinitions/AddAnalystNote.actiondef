@@ -1,0 +1,92 @@
+{
+    "CreationTimeUnixTimeInMs": "1570446244",
+    "Creator": "admin",
+    "Description": "Add an analyst note to previously enriched entities in Siemplify, to Recorded Future entities. Action will add the note to the relevant scope entities. Note: If entity will not contain the Recorded Future ID field - this action will perform “Enrich IOC” action on it for better results. You can choose whether to update the entity with the enrichment data or not.",
+    "Id": -1,
+    "IntegrationIdentifier": "RecordedFuture",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Add Analyst Note",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "Note Title",
+            "Description": "Specify the title for the note",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Note Title",
+            "Type": 0,
+            "Value": "Note Title"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "Note Text",
+            "Description": "Specify the Text for the note",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Note Text",
+            "Type": 0,
+            "Value": "Note Text"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the RF ID for note source; the API explorer shows what the RF IDs are accessible to the user whose API token is enabled. For example,  VWKdVr is the RF ID for an analyst note and is only available to user in the same enterprise account in Recorded Future.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Note Source",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "None",
+            "Description": "Specify the relevant Note topic from the list, if needed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Topic",
+            "Type": 15,
+            "OptionalValues": [
+                "None",
+                "Actor Profile",
+                "Analyst On-Demand Report",
+                "Cyber Threat Analysis",
+                "Flash Report",
+                "Indicator",
+                "Informational",
+                "Malware/Tool Profile",
+                "Source Profile",
+                "Threat Lead",
+                "Validated Intelligence Event",
+                "Weekly Threat Landscape",
+                "YARA Rule"
+            ],
+            "Value": "None"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "Specify whether the action should enrich the entity with the “Enrich IOC” output.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Enrich Entity?",
+            "Type": 1,
+            "Value": true
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\", \"DestinationURL\", \"CVE\", \"HOSTNAME\", \"ADDRESS\"]}"
+}

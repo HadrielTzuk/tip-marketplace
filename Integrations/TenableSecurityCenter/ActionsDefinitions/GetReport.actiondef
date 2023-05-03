@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1561297372173,
+    "Creator": "Admin",
+    "DefaultResultValue": "",
+    "Description": "Get report content by ID or name.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"pubSites\": [\"https://test.com\", \"https://test.test\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": 0,
+    "IntegrationIdentifier": "TenableSecurityCenter",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1561297372173,
+    "Name": "Get Report",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1561297372183,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Report ID number.Can be found at the report URL.",
+            "Id": 0,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1561297372183,
+            "Name": "Report ID",
+            "OptionalValues": null,
+            "OptionalValuesJson": null,
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1561297372185,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The name of the report, as mentioned at the GUI.",
+            "Id": 0,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1561297372185,
+            "Name": "Report Name",
+            "OptionalValues": null,
+            "OptionalValuesJson": null,
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom TenableManager import TenableSecurityCenterManager\n\nSCRIPT_NAME = \"TenableSecurityCenter - GetReport\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    conf = siemplify.get_configuration('TenableSecurityCenter')\n    server_address = conf['Server Address']\n    username = conf['Username']\n    password = conf['Password']\n    use_ssl = conf['Use SSL'].lower() == 'true'\n\n    report_id = siemplify.parameters.get('Report ID')\n    report_name = siemplify.parameters.get('Report Name')\n\n    tenable_manager = TenableSecurityCenterManager(server_address, username,\n                                                   password, use_ssl)\n\n    if report_id:\n        report = tenable_manager.get_report_by_id(report_id)\n    elif report_name:\n        report = tenable_manager.get_report_by_name(report_name)\n    else:\n        raise Exception('One of Report ID or Report name must be inserted.')\n\n    if report:\n        siemplify.result.add_result_json(report)\n        output_message = 'Report found.'\n        result_value = 'true'\n    else:\n        output_message = 'Report not found.'\n        result_value = 'false'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "TimeoutSeconds": 600,
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

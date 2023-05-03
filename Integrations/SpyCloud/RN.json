@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "Added new integration \"SpyCloud\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "SpyCloud",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1625639577,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8898"
+    },
+    {
+        "ChangeDescription": "Removed unnecessary comments from the integration's code.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "SpyCloud",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1636521986,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    }
+]

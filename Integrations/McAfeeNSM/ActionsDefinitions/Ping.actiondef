@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1523545612909,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeNSM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1523545612909,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyDataModel import EntityTypes\r\nfrom SiemplifyAction import SiemplifyAction\r\nfrom NSMManager import NsmManager\r\n\r\n# Consts\r\n# Provider Sign.\r\nNSM_PROVIDER = 'McAfeeNSM'\r\n\r\n\r\ndef main():\r\n    # configurations.\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration(NSM_PROVIDER)\r\n    nsm_manager = NsmManager(conf['API Root'], conf['Username'], conf['Password'], conf['Domain ID'],\r\n                             conf['Siemplify Policy Name'], conf['Sensors Names List Comma Separated'])\r\n\r\n    # Test McAfee NSM connectivity.\r\n    nsm_manager.ping()\r\n    # End session.\r\n    nsm_manager.logout()\r\n\r\n    siemplify.end('Connection Established.', True)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

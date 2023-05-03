@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1520164191446,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "Protectwise",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1520164191446,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

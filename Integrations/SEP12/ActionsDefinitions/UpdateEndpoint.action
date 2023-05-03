@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1517733392495, 
+    "Creator": "admin", 
+    "Description": "Updates and endpoint", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SEP12", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1517733392495, 
+    "Name": "UpdateEndpoint", 
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

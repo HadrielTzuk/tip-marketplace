@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Humio.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Humio",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1638336195,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10433"
+    }
+]

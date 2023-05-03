@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "NEW! Cisco Orbital integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "CiscoOrbital",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1605622658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5298"
+    },
+    {
+        "ChangeDescription": "Fixed a bug, where action \"Execute Query\" was not working correctly, due to Cisco Orbital's API changes.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Execute Query",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1623746102,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8828"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "CiscoOrbital",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    },
+    {
+        "ChangeDescription": "Execute Query - Updated action's timeout flow.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Execute Query",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1630483516,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9631"
+    }
+]

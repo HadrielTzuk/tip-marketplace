@@ -1,0 +1,110 @@
+[
+  {
+    "Product": "Microsoft Defender ATP",
+    "EventName": "SettingsModifier",
+    "ComparisonType": 0,
+    "VisualFamily": "AV",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "Microsoft Defender ATP",
+    "EventName": "UnwantedSoftware",
+    "ComparisonType": 0,
+    "VisualFamily": "AV",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "Antivirus",
+    "EventName": "UnwantedSoftware",
+    "ComparisonType": 0,
+    "VisualFamily": "AV",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "Antivirus",
+    "EventName": "Malware",
+    "ComparisonType": 0,
+    "VisualFamily": "AV",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "Antivirus",
+    "EventName": "CredentialAccess",
+    "ComparisonType": 0,
+    "VisualFamily": "AV",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "EDR",
+    "EventName": "Discovery",
+    "ComparisonType": 0,
+    "VisualFamily": "EDR",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "EDR",
+    "EventName": "LateralMovement",
+    "ComparisonType": 0,
+    "VisualFamily": "EDR",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "EDR",
+    "EventName": "Persistence",
+    "ComparisonType": 0,
+    "VisualFamily": "EDR",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "EDR",
+    "EventName": "Execution",
+    "ComparisonType": 0,
+    "VisualFamily": "EDR",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "EDR",
+    "EventName": "CredentialAccess",
+    "ComparisonType": 0,
+    "VisualFamily": "EDR",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "Antivirus",
+    "EventName": "SuspiciousActivity",
+    "ComparisonType": 0,
+    "VisualFamily": "AV",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "Antivirus",
+    "EventName": "Exploit",
+    "ComparisonType": 0,
+    "VisualFamily": "AV",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  }
+]

@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "CheckPoint Threat Reputation integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "CheckPointThreatReputation",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1600771916,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4228"
+    },
+    {
+        "ChangeDescription": "Added marking entity as suspicious logic.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "CheckPointThreatReputation",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1601460501,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "TIPG-5015"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "CheckPointThreatReputation",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "CheckPointThreatReputation",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

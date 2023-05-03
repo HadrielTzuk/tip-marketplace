@@ -1,0 +1,40 @@
+{
+    "CreationTimeUnixTimeInMs": 1543229155761,
+    "Creator": "Admin",
+    "Description": "Delete a channel in Microsoft Teams.",
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftTeams",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543229155761,
+    "Name": "Delete Channel",
+    "Parameters": [
+        {
+            "Name": "Team Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the team in which you need to delete the channel.",
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Channel Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify a name of the channel that needs to be deleted.",
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

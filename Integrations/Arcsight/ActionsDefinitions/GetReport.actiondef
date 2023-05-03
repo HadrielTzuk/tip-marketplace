@@ -1,0 +1,142 @@
+{
+    "CreationTimeUnixTimeInMs": 1534152519522,
+    "Creator": "Admin",
+    "Description": "Get details about report in ArcSight.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Target_Zone_URI\": \"\", \"Target_Address\": \"\", \"SumAggregated_Event_Count\": \"734\"}, {\"Target_Zone_URI\": \"/All Zones/ArcSight System/Private Address Space Zones/RFC1918: 172.16.x.x-172.31.x.x\", \"Target_Address\": \"172.30.x.x\", \"SumAggregated_Event_Count\": \"93946\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Arcsight",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534152519522,
+    "Name": "Get Report",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534152519522,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specify the URI to the report. Example: /All Reports/ArcSight Foundation/MITRE ATT&CK/Mitre ATT&CK Summary",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534152519522,
+            "Name": "Report Full Path (URI)",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534152519522,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The dynamic fields for the query to generate the report",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534152519522,
+            "Name": "Field 2",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534152519522,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The dynamic fields for the query to generate the report",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534152519522,
+            "Name": "Field 3",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534152519522,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The dynamic fields for the query to generate the report",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534152519522,
+            "Name": "Field 4",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534152519522,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The dynamic fields for the query to generate the report",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534152519522,
+            "Name": "Field 5",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534152519522,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The dynamic fields for the query to generate the report",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534152519522,
+            "Name": "Field 6",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534152519522,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The dynamic fields for the query to generate the report",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534152519522,
+            "Name": "Field 7",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534152519522,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The dynamic fields for the query to generate the report",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534152519522,
+            "Name": "Field 8",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534152519522,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The dynamic fields for the query to generate the report",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534152519522,
+            "Name": "Field 9",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534152519522,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The dynamic fields for the query to generate the report",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534152519522,
+            "Name": "Field 10",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "ScriptResultName": "json_report",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

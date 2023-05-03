@@ -1,0 +1,33 @@
+{
+    "Description": "Cb Protection delivers application control and critical infrastructure protection to lock down servers, critical systems and fixed-function devices in highly regulated environments.",
+    "DisplayName": "Carbon Black Protection",
+    "Identifier": "CBProtection",
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "CBProtection",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "5",
+            "Value": "https://x.x.x.x"
+        },
+        {
+            "IntegrationIdentifier": "CBProtection",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "Api Key",
+            "PropertyType": "2",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M22.2,12.4L22.2,12.4c0-1.6,0-3.3,0-4.9c0-0.5-0.1-0.8-0.6-1c-2.8-1.6-5.7-3.2-8.5-4.9c-0.4-0.3-0.8-0.3-1.2,0\n\t\t\tC9,3.3,6.2,4.9,3.4,6.5C3,6.8,2.8,7,2.8,7.5c0,3.3,0,6.6,0,9.9c0,0.5,0.2,0.7,0.6,1c2.9,1.6,5.7,3.3,8.6,4.9\n\t\t\tc0.4,0.3,0.7,0.2,1.1,0c2.8-1.7,5.6-3.3,8.5-4.9c0.5-0.3,0.6-0.6,0.6-1.1C22.1,15.6,22.2,14,22.2,12.4z M21.3,12.5\n\t\t\tc0,1.5,0,3,0,4.5c0,0.3-0.2,0.7-0.5,0.8c-2.6,1.5-5.2,3.1-7.8,4.5c-0.2,0.1-0.7,0.1-1,0c-2.6-1.5-5.2-3-7.8-4.5\n\t\t\tc-0.3-0.2-0.5-0.6-0.5-0.9c0-3,0-5.9-0.1-8.9c0-0.5,0.2-0.8,0.6-1.1c2.5-1.5,5.1-2.9,7.6-4.4c0.4-0.3,0.8-0.3,1.2,0\n\t\t\tc2.5,1.5,5.1,2.9,7.6,4.4c0.5,0.3,0.6,0.6,0.6,1.1C21.3,9.5,21.3,11,21.3,12.5z M9.9,14.9c-1.1,0-1.9-0.8-1.9-2.3\n\t\t\tc0-1.4,0.8-2.3,1.9-2.3c0.6,0,1,0.2,1.4,0.6l0.9-1C11.7,9.4,10.9,9,9.9,9c-2,0-3.7,1.4-3.7,3.7c0,2.4,1.7,3.6,3.6,3.6\n\t\t\tc1,0,1.9-0.4,2.5-1l-0.9-1C11,14.6,10.5,14.9,9.9,14.9z M16.5,10.7c-0.6,0-1.1,0.2-1.6,0.6l0-0.8V8.6h-1.8v7.5h1.4l0.1-0.6h0\n\t\t\tc0.5,0.5,1,0.7,1.6,0.7c1.3,0,2.5-1.1,2.5-2.9C18.8,11.7,17.9,10.7,16.5,10.7z M15.9,15c-0.3,0-0.6-0.1-0.9-0.3v-2.2\n\t\t\tc0.3-0.3,0.7-0.5,1-0.5c0.7,0,1,0.5,1,1.4C17,14.5,16.5,15,15.9,15z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 6.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/carbon-black-protection",
+    "MarketingDisplayName": "VMware Carbon Black Protection"
+}

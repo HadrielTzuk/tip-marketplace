@@ -1,0 +1,17 @@
+{
+    "CreationTimeUnixTimeInMs": 1513758863670,
+    "Creator": "admin",
+    "Description": "Test connectivity to WebSense",
+    "Id": -1,
+    "IntegrationIdentifier": "Websense",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1513758863670,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import *\nfrom WebsenseManager import WebsenseAPIManager\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\tconf = siemplify.get_configuration('Websense')\n\twebsense_manager = WebsenseAPIManager(conf['ApiRoot'], conf['GatewayUser'], conf['GatewayPassword'])\n\tconn = websense_manager.test_connectivity()\n\tif conn:\n\t\toutput_message = 'Connection Established'\n\t\tresult_value = 'true'\n\telse:\n\t\toutput_message = 'Error accured'\n\t\tresult_value = 'False'\n\t\n\tsiemplify.end(output_message, result_value)\n\t\n\nif __name__ == \"__main__\":\n\tmain()",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

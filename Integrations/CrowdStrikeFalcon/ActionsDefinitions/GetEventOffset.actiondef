@@ -1,0 +1,34 @@
+{
+    "CreationTimeUnixTimeInMs": 1524560820281,
+    "Creator": "admin",
+    "Description": "Action will retrieve the event offset that is used by the Event Streaming Connector. Note: action starts processing events from 30 days ago.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"offset\":100000,\"timestamp\":1627634506826}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CrowdStrikeFalcon",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524560820281,
+    "Name": "Get Event Offset",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": 10000,
+            "Description": "Specify how many events the action needs to process starting from the offset from 30 days ago.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Max Events To Process",
+            "Type": 0,
+            "Value": 10000
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

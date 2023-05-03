@@ -1,0 +1,62 @@
+[
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "SEP12",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "New Parameter Added - \"Verify SSL\", allowing users to enable TLS validation when using the integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "SEP12",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1636521986,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "Security enhancements throughout the integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "SEP12",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1636521986,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "Integration Deprecation - Please Note - Symantec have declared EOL for version 12 of the Endpoint Protection. This integration is not going to be deleted from the Marketplace, but it will not get any more updates, fixes, or support. Please consider upgrading the Symantec Endpoint Protection to version, alongside using our other integration: \"Symantec Endpoint Protection 14\". For more information please visit https://knowledge.broadcom.com/external/article?legacyId=TECH239769",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "SEP12",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1636521986,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "SEP12",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

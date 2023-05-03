@@ -1,0 +1,57 @@
+{
+    "Description": "Websense identifies and classifies known and emerging internet security threats to provide protection with software that allows organizations to manage internet access, block malicious code and unwanted applications, and prevent the loss of confidential information.",
+    "DisplayName": "Websense",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/websense",
+    "Identifier": "Websense",
+    "Categories": [
+        "Security",
+        "Secure Web Gateway"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Websense",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api root",
+            "PropertyName": "ApiRoot",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Websense",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Gateway host",
+            "PropertyName": "GatewayHost",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Websense",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Gateway user",
+            "PropertyName": "GatewayUser",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Websense",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Gateway password",
+            "PropertyName": "GatewayPassword",
+            "PropertyType": 3,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Websense",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": false
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M14.5,17.4c-0.1-0.1-0.1-0.1-0.2-0.2c0.1-0.2,0.2-0.3,0.3-0.5c0.6-0.9,1.3-1.8,1.5-2.9c0-0.2,0-0.3-0.1-0.4\n\t\t\tc-0.3-0.3-0.6-0.7-0.8-1.1c-0.7-1.5-0.1-3.4,1.3-4.4c0.1-0.1,0.2-0.1,0.3-0.2c-0.8,0-1.4,0-2.1,0c-0.3,0-0.4,0.1-0.5,0.4\n\t\t\tc-0.4,1.7-0.9,3.4-1.4,5.1c0,0.1-0.1,0.1-0.1,0.3c-0.1-0.2-0.1-0.3-0.1-0.4c-0.5-1.7-1.1-3.4-1.6-5c-0.1-0.2-0.2-0.3-0.4-0.3\n\t\t\tc-0.7,0-1.4,0-2.1,0c-0.2,0-0.3,0.1-0.4,0.3c-0.5,1.5-0.9,3-1.4,4.5c-0.2,0.6-0.4,1.2-0.6,1.9c-0.1-0.2-0.1-0.2-0.1-0.3\n\t\t\tc-0.5-1.8-0.9-3.6-1.4-5.4C4.6,8.3,4.6,7.9,4.4,7.7c-0.2-0.2-0.6-0.1-1-0.1c-0.7,0-1.4,0-2.1,0c0,0.1,0,0.2,0,0.3\n\t\t\tc1.1,3.5,2.2,7,3.2,10.6c0.1,0.2,0.1,0.3,0.3,0.3c0.7,0,1.5,0,2.2,0c0.3,0,0.4-0.1,0.4-0.3c0.6-2,1.3-4,1.9-6\n\t\t\tc0-0.1,0.1-0.2,0.1-0.4c0.1,0.2,0.1,0.4,0.2,0.5c0.6,2,1.2,3.9,1.9,5.9c0.1,0.2,0.2,0.3,0.4,0.3c0.8,0,1.5,0,2.3,0\n\t\t\tc0.1,0,0.2,0,0.3-0.1c0.1-0.3,0.2-0.6,0.3-0.9C14.9,17.7,14.6,17.5,14.5,17.4z M21.7,12.5c-0.7-0.3-1.4-0.5-2.1-0.8\n\t\t\tc-0.4-0.2-0.9-0.3-1.3-0.6c-0.5-0.3-0.4-0.9,0.1-1.1c0.2-0.1,0.5-0.1,0.8-0.1c0.8,0,1.5,0.3,2.2,0.6c0.3,0.1,0.5,0.3,0.8,0.4\n\t\t\tc0.4-0.7,0.8-1.4,1.2-2.2c-0.6-0.3-1.1-0.5-1.6-0.7c-1.5-0.5-2.9-0.7-4.4-0.1c-1.3,0.5-2.1,1.5-2.1,2.9c-0.1,1.4,0.5,2.4,1.8,3\n\t\t\tc0.6,0.3,1.3,0.5,2,0.7c0.5,0.2,0.9,0.3,1.4,0.5c0.3,0.1,0.4,0.4,0.4,0.7c0,0.3-0.2,0.5-0.5,0.6c-0.1,0-0.2,0.1-0.4,0.1\n\t\t\tc-0.9,0.1-1.7-0.1-2.5-0.4c-0.5-0.2-1-0.5-1.5-0.8c-0.4,0.7-0.9,1.3-1.3,2c1.6,1.4,4.5,2.1,6.5,1.4c1.4-0.4,2.3-1.5,2.4-2.9\n\t\t\tC23.8,14.2,23.2,13.2,21.7,12.5z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 11.0,
+    "MarketingDisplayName": "Forcepoint Websense"
+}

@@ -1,0 +1,122 @@
+[
+    {
+        "ChangeDescription": "New integration \"Microsoft 365 Defender\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Microsoft365Defender",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1621415182,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8358"
+    },
+    {
+        "ChangeDescription": "New action \"Execute Entity Query\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Execute Entity Query",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1622632360,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8361"
+    },
+    {
+        "ChangeDescription": "New action \"Update Incident\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Update Incident",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1622632360,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8362"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Microsoft365Defender",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    },
+    {
+        "ChangeDescription": "Incidents Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Microsoft 365 Defender Incidents Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1663237003,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11824"
+    },
+    {
+        "ChangeDescription": "New Action Added - Execute Custom Query.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Execute Custom Query",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1666158033,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11529"
+    },
+    {
+        "ChangeDescription": "Microsoft 365 Defender - Incidents Connector - Regressive! Added an ability to track changes to incidents. Requires updates to application permissions.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Microsoft 365 Defender Incidents Connector",
+        "ItemType": "Connectors",
+        "New": false,
+        "PublishTime": 1678320000,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "266778248"
+    },
+    {
+        "ChangeDescription": "Microsoft 365 Defender - Incidents Connector - Added new filter options.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Microsoft 365 Defender Incidents Connector",
+        "ItemType": "Connectors",
+        "New": false,
+        "PublishTime": 1678320000,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "266403235"
+    },
+    {
+        "ChangeDescription": "New Action Added - Add Comment To Incident.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Add Comment To Incident",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1678320000,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "266778635"
+    },
+    {
+        "ChangeDescription": "Execute Custom Query, Execute Entity Query, Execute Query - Added Predefined Widgets.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Microsoft365Defender",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1680566400,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "269566773"
+    }
+]

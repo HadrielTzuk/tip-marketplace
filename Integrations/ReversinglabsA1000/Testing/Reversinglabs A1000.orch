@@ -1,0 +1,207 @@
+{
+  "Identifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": true,
+  "Name": "Reversinglabs A1000",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "17c0c71d-8508-44cc-9726-b2691c88c8db",
+      "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+      "ParentStepIdentifiers": [
+        "7dca6b06-b684-455f-8e37-ed544994c5bd"
+      ],
+      "ParentStepIdentifier": "7dca6b06-b684-455f-8e37-ed544994c5bd",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ReversinglabsA1000_Get Scan Status_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ReversinglabsA1000_Get Scan Status",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "17c0c71d-8508-44cc-9726-b2691c88c8db",
+          "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+          "Name": "ScriptName",
+          "Value": "ReversinglabsA1000_Get Scan Status",
+          "CreationTimeUnixTimeInMs": 1519212263314,
+          "ModificationTimeUnixTimeInMs": 1519212263314
+        },
+        {
+          "ParentStepIdentifier": "17c0c71d-8508-44cc-9726-b2691c88c8db",
+          "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519212263314,
+          "ModificationTimeUnixTimeInMs": 1519212263314
+        },
+        {
+          "ParentStepIdentifier": "17c0c71d-8508-44cc-9726-b2691c88c8db",
+          "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519212263314,
+          "ModificationTimeUnixTimeInMs": 1519212263314
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519212263314,
+      "ModificationTimeUnixTimeInMs": 1519212263314
+    },
+    {
+      "Identifier": "0b0ffba7-b591-4ee6-a3d3-d484db67955a",
+      "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+      "ParentStepIdentifiers": [
+        "17c0c71d-8508-44cc-9726-b2691c88c8db"
+      ],
+      "ParentStepIdentifier": "17c0c71d-8508-44cc-9726-b2691c88c8db",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ReversinglabsA1000_Get Report_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ReversinglabsA1000_Get Report",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "0b0ffba7-b591-4ee6-a3d3-d484db67955a",
+          "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+          "Name": "ScriptName",
+          "Value": "ReversinglabsA1000_Get Report",
+          "CreationTimeUnixTimeInMs": 1519212263314,
+          "ModificationTimeUnixTimeInMs": 1519212263314
+        },
+        {
+          "ParentStepIdentifier": "0b0ffba7-b591-4ee6-a3d3-d484db67955a",
+          "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519212263314,
+          "ModificationTimeUnixTimeInMs": 1519212263314
+        },
+        {
+          "ParentStepIdentifier": "0b0ffba7-b591-4ee6-a3d3-d484db67955a",
+          "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519212263314,
+          "ModificationTimeUnixTimeInMs": 1519212263314
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519212263314,
+      "ModificationTimeUnixTimeInMs": 1519212263314
+    },
+    {
+      "Identifier": "e294ed34-48f2-4766-a005-e7c5403b6843",
+      "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+      "ParentStepIdentifiers": [
+        "0b0ffba7-b591-4ee6-a3d3-d484db67955a"
+      ],
+      "ParentStepIdentifier": "0b0ffba7-b591-4ee6-a3d3-d484db67955a",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ReversinglabsA1000_Delete Sample_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ReversinglabsA1000_Delete Sample",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "e294ed34-48f2-4766-a005-e7c5403b6843",
+          "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+          "Name": "ScriptName",
+          "Value": "ReversinglabsA1000_Delete Sample",
+          "CreationTimeUnixTimeInMs": 1519212263314,
+          "ModificationTimeUnixTimeInMs": 1519212263314
+        },
+        {
+          "ParentStepIdentifier": "e294ed34-48f2-4766-a005-e7c5403b6843",
+          "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519212263314,
+          "ModificationTimeUnixTimeInMs": 1519212263314
+        },
+        {
+          "ParentStepIdentifier": "e294ed34-48f2-4766-a005-e7c5403b6843",
+          "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519212263314,
+          "ModificationTimeUnixTimeInMs": 1519212263314
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519212263314,
+      "ModificationTimeUnixTimeInMs": 1519212263314
+    },
+    {
+      "Identifier": "7dca6b06-b684-455f-8e37-ed544994c5bd",
+      "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ReversinglabsA1000_Upload File_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ReversinglabsA1000_Upload File",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "7dca6b06-b684-455f-8e37-ed544994c5bd",
+          "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+          "Name": "ScriptName",
+          "Value": "ReversinglabsA1000_Upload File",
+          "CreationTimeUnixTimeInMs": 1519212263314,
+          "ModificationTimeUnixTimeInMs": 1519212263314
+        },
+        {
+          "ParentStepIdentifier": "7dca6b06-b684-455f-8e37-ed544994c5bd",
+          "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"File Path\":\"C:\\\\Users\\\\Admin\\\\Desktop\\\\ALLrequirements.txt\"}",
+          "CreationTimeUnixTimeInMs": 1519212263314,
+          "ModificationTimeUnixTimeInMs": 1519212263314
+        },
+        {
+          "ParentStepIdentifier": "7dca6b06-b684-455f-8e37-ed544994c5bd",
+          "ParentWorkflowIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519212263314,
+          "ModificationTimeUnixTimeInMs": 1519212263314
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519212263314,
+      "ModificationTimeUnixTimeInMs": 1519212263314
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "d497f44b-9ece-49d1-8788-7ae8f0c39071",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "d38acf12-c88a-46fb-bb4e-672175b9a747",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Reversinglabs A1000",
+      "AllEnvironments": "",
+      "Id": 79,
+      "CreationTimeUnixTimeInMs": 1519212263314,
+      "ModificationTimeUnixTimeInMs": 1519212263314
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 79,
+  "CreationTimeUnixTimeInMs": 1519212263314,
+  "ModificationTimeUnixTimeInMs": 1519212263314
+}

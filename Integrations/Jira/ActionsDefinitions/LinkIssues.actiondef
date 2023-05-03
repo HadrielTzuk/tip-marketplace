@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1516267022138,
+    "Creator": "admin",
+    "Description": "Link multiple issues in Jira.",
+    "Id": -1,
+    "IntegrationIdentifier": "Jira",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1516267022138,
+    "Name": "Link Issues",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517930443646,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the inward issue id. For example, if the relation type is “Blocks”, then in the UI you would see this issue with relation \"blocks\".",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517930443646,
+            "Name": "Inward Issue ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517930443646,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of outward issue ids. For example, if the relation type is “Blocks”, then in the UI you would see this issue with relation \"blocked by\".",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517930443646,
+            "Name": "Outward Issue IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517930462609,
+            "CustomActionId": -1,
+            "DefaultValue": "Blocks",
+            "Description": "Specify the relation type that will be used to link multiple issues. A list of all available relation types are available in the action \"List Relation Types\".",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517930462609,
+            "Name": "Relation Type",
+            "Type": 0,
+            "Value": "Blocks"
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

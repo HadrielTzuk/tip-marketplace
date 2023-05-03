@@ -1,0 +1,70 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "The action will add a desired text comment to a specific threat. ",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\": \"20\", \"row\":\"1\", \"content\": \"this is my comment number:1 \", \"creationDate\": \"1610221490000\", \"creationUser\": \"Commenter\", \"creationUsername\": \"email@example.com\", \"resourceId\": \"30630xxx\", \"organizationId\": \"111\", \"eresable\": \"false\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "BlueLiv",
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Add Comment to a Threat",
+    "Parameters": [        
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the module type the resource belongs to", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Module Type", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the module ID the resource belongs to", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Module ID", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the Resource ID to add the comment to", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Resource ID", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Provide the comment you would like to add to the resource", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Comment Text", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

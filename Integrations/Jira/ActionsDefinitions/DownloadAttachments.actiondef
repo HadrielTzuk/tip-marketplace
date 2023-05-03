@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1539782144179,
+    "Creator": "Admin",
+    "Description": "Get an Issue key and download all attachments. If one of them is an EML file, download inside attachments as well",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"download_path\": \"/opt/dir/filename\"},{\"download_path\": \"/opt/dir/filename2\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Jira",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1539782144179,
+    "Name": "Download Attachments",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1539782144179,
+            "CustomActionId": 10049,
+            "DefaultValue": "",
+            "Description": "The key of the issue",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1539782144179,
+            "Name": "Issue Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1539782144179,
+            "CustomActionId": 10049,
+            "DefaultValue": "",
+            "Description": "The path where save the attachments",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1539782144179,
+            "Name": "Download Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "False", 
+            "Description": "If enabled, action download Jira issue attachmnets to the current Siemplify alert case wall.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Download Attachments to the Case Wall", 
+            "Type": 1, 
+            "Value": "False"
+        }
+    ],
+    "Script": "import os\nfrom SiemplifyAction import SiemplifyAction\nfrom JiraManager import JiraManager, JiraManagerError\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = \"Jira - Download Attachments\"\n    configurations = siemplify.get_configuration('Jira')\n    server_addr = configurations['Api Root']\n    username = configurations['Username']\n    password = configurations['Password']\n\n    jira = JiraManager(server_addr, username, password)\n\n    issue_key = siemplify.parameters.get('Issue Key')\n    local_path = siemplify.parameters.get(\"Download Path\")\n    attachments_path = []\n    all_attachments = []\n    mail_attachments = []\n\n    # Create the local path dir if it doesn't exist\n    if not os.path.exists(local_path):\n        os.makedirs(local_path)\n\n    try:\n        # Get attachment name and content\n        issue_attachments = jira.get_attachments_from_issue(issue_key)\n        all_attachments.extend(issue_attachments)\n\n        # Get eml attachments\n        eml_attachments = jira.get_attachments_from_issue(issue_key, is_mail_connector=True)\n        if eml_attachments:\n            for mail_content in eml_attachments:\n                mail_attachments = jira.extract_attachments_from_mail(mail_content)\n                all_attachments.extend(mail_attachments)\n\n        for attachment in all_attachments:\n            for attachment_name, attachment_content in attachment.items():\n                # Save to given path\n                attachment_local_path = jira.save_attachment_to_local_path(local_path, attachment_name, attachment_content)\n                attachments_path.append(unicode(attachment_local_path).encode(\"utf-8\"))\n\n    except Exception as e:\n        siemplify.LOGGER.error(\n            \"Unable to get attachment for {}: {}\".format(unicode(issue_key).encode(\"utf-8\"), str(e)))\n        siemplify.LOGGER.exception(e)\n\n    output_message = \"Downloaded {0} attachments. \\n\\nFiles:\\n{1}\".format(len(attachments_path),\n                                                                          \"\\n\".join(attachments_path))\n\n    siemplify.end(output_message, 'True')\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

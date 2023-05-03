@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1519205219630,
+    "Creator": "admin",
+    "Description": "Upload file to WildFire and retrieve report",
+    "Id": -1,
+    "IntegrationIdentifier": "Wildfire",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519205219630,
+    "Name": "DetonateFile",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519208454312,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519208454312,
+            "Name": "File Paths",
+            "Type": 0,
+            "Value": "Detonate file from path(e.g: C:\\temp\\NPPJSONViewer.dll)."
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,72 @@
+{
+    "CreationTimeUnixTimeInMs": 1519822593041,
+    "Creator": "admin",
+    "Description": "List files on a host running VMware CB Cloud Agent based on the Siemplify Host or IP entity.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"api_v6\",\"EntityResult\":{\"status\":\"COMPLETE\",\"values\":[],\"id\":\"xxxxxx\",\"name\":\"directory list\",\"result_code\":0,\"result_type\":\"WinHresult\",\"result_desc\":\"\",\"sub_keys\":[],\"files\":[{\"size\":0,\"attributes\":[\"DIRECTORY\"],\"filename\":\"xxxx\",\"alternate_name\":\"\",\"create_time\":\"2021-06-24T05:50:40Z\",\"last_access_time\":\"2021-07-26T17:42:40Z\",\"last_write_time\":\"2021-07-23T14:19:32Z\"},{\"size\":0,\"attributes\":[\"DIRECTORY\"],\"filename\":\"xxxx\",\"alternate_name\":\"\",\"create_time\":\"2021-06-24T05:50:40Z\",\"last_access_time\":\"2021-07-26T17:42:40Z\",\"last_write_time\":\"2021-07-23T14:19:32Z\"},{\"size\":767,\"attributes\":[\"ARCHIVE\"],\"filename\":\"xxxxxxx\",\"alternate_name\":\"IMAGE(~1.PNG\",\"create_time\":\"2021-07-23T12:26:59Z\",\"last_access_time\":\"2021-07-23T12:26:59Z\",\"last_write_time\":\"2021-07-23T12:26:59Z\"},{\"size\":61186,\"attributes\":[\"ARCHIVE\"],\"filename\":\"xxxxxxxx\",\"alternate_name\":\"\",\"create_time\":\"2021-07-23T13:13:39Z\",\"last_access_time\":\"2021-07-23T13:13:39Z\",\"last_write_time\":\"2021-07-23T13:13:39Z\"},{\"size\":19190,\"attributes\":[\"ARCHIVE\"],\"filename\":\"xxxxxxx\",\"alternate_name\":\"\",\"create_time\":\"2021-07-23T13:20:13Z\",\"last_access_time\":\"2021-07-23T13:20:13Z\",\"last_write_time\":\"2021-07-23T13:20:13Z\"},{\"size\":94025,\"attributes\":[\"ARCHIVE\"],\"filename\":\"xxxxxxx\",\"alternate_name\":\"\",\"create_time\":\"2021-07-23T13:31:29Z\",\"last_access_time\":\"2021-07-23T13:31:29Z\",\"last_write_time\":\"2021-07-23T13:31:29Z\"},{\"size\":99251,\"attributes\":[\"ARCHIVE\"],\"filename\":\"xxxxxx\",\"alternate_name\":\"\",\"create_time\":\"2021-07-23T14:19:32Z\",\"last_access_time\":\"2021-07-23T14:19:32Z\",\"last_write_time\":\"2021-07-23T14:19:32Z\"},{\"size\":133082,\"attributes\":[\"ARCHIVE\"],\"filename\":\"xxxxxxx\",\"alternate_name\":\"VANUHI~1.PNG\",\"create_time\":\"2021-07-23T13:01:48Z\",\"last_access_time\":\"2021-07-23T13:01:48Z\",\"last_write_time\":\"2021-07-23T13:01:48Z\"}],\"input\":{\"name\":\"directory list\",\"object\":\"folder name\"},\"create_time\":\"2021-07-26T17:55:16Z\",\"finish_time\":\"2021-07-26T17:55:17Z\",\"is_success\":false,\"step\":\"Get Device\",\"reason\":\"Unable to get device for CB-xxxxx. Error is No devices found for entity CB-xxxxx. Skipping.\"}},{\"Entity\":\"api_v3\",\"EntityResult\":{\"obj\":{\"name\":\"directory list\",\"object\":\"C:\\\\\\\\TMP\\\\\\\\\"},\"id\":\"xx\",\"name\":\"directory list\",\"username\":null,\"creation_time\":1628598855,\"completion_time\":1628598855,\"result_code\":0,\"result_type\":\"WinHresult\",\"result_desc\":\"\",\"status\":\"complete\",\"files\":[{\"size\":21,\"attributes\":[\"ARCHIVE\"],\"create_time\":1628578270,\"last_access_time\":1628589793,\"last_write_time\":1628589793,\"filename\":\"cmdoutput.log\",\"alternate_name\":\"CMDOUT~1.LOG\"},{\"size\":21,\"attributes\":[\"ARCHIVE\"],\"create_time\":1628582293,\"last_access_time\":1628582293,\"last_write_time\":1628582293,\"filename\":\"cmdoutput1.log\",\"alternate_name\":\"CMDOUT~2.LOG\"},{\"size\":10,\"attributes\":[\"ARCHIVE\"],\"create_time\":1628529239,\"last_access_time\":1628529239,\"last_write_time\":1628529239,\"filename\":\"txt.txt\",\"alternate_name\":\"\"},{\"size\":953860096,\"attributes\":[\"ARCHIVE\"],\"create_time\":1628527762,\"last_access_time\":1628527893,\"last_write_time\":1628527893,\"filename\":\"file.txt\",\"alternate_name\":\"\"},{\"size\":14,\"attributes\":[\"ARCHIVE\"],\"create_time\":1627623623,\"last_access_time\":1627623623,\"last_write_time\":1627623623,\"filename\":\"kughb\",\"alternate_name\":\"\"},{\"size\":228723,\"attributes\":[\"ARCHIVE\"],\"create_time\":1627045764,\"last_access_time\":1627045764,\"last_write_time\":1627045764,\"filename\":\"test.png\",\"alternate_name\":\"test.PNG\"}],\"step\":\"Get Device\",\"reason\":\"Unable to get device for CB-xxxxx. Error is No devices found for entity CB-xxxxx. Skipping.\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CBLiveResponse",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519822593041,
+    "Name": "List Files",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the target directory path action should list. Example: C:\\TMP\\ or /tmp/",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Remote Directory Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many rows action should return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Max Rows to Return",
+            "Type": 0,
+            "Value": "50"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "0",
+            "Description": "Specify from which row action should start to return data.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Start from Row",
+            "Type": 0,
+            "Value": "0"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "20",
+            "Description": "How many attempts action should make to get active session for the entity. Check is made every 2 seconds.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Check for active session x times",
+            "Type": 0,
+            "Value": "20"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

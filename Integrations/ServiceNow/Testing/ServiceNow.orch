@@ -1,0 +1,251 @@
+{
+  "Identifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "ServiceNow",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "7632d55d-2699-47c0-8e91-5e3c10c90bde",
+      "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+      "ParentStepIdentifiers": [
+        "1b0d1868-0ff8-4981-8bfe-c36df1bafdca"
+      ],
+      "ParentStepIdentifier": "1b0d1868-0ff8-4981-8bfe-c36df1bafdca",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ServiceNow_Get Incident_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ServiceNow_Get Incident",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "7632d55d-2699-47c0-8e91-5e3c10c90bde",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "ScriptName",
+          "Value": "ServiceNow_Get Incident",
+          "CreationTimeUnixTimeInMs": 1519145367056,
+          "ModificationTimeUnixTimeInMs": 1519145367056
+        },
+        {
+          "ParentStepIdentifier": "7632d55d-2699-47c0-8e91-5e3c10c90bde",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Incident Number\":\"INC0010043\"}",
+          "CreationTimeUnixTimeInMs": 1519145367056,
+          "ModificationTimeUnixTimeInMs": 1519145367056
+        },
+        {
+          "ParentStepIdentifier": "7632d55d-2699-47c0-8e91-5e3c10c90bde",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145367056,
+          "ModificationTimeUnixTimeInMs": 1519145367056
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145367055,
+      "ModificationTimeUnixTimeInMs": 1519145367055
+    },
+    {
+      "Identifier": "5f0ac0ec-8d58-4535-ba3a-61d7c4c28407",
+      "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+      "ParentStepIdentifiers": [
+        "7632d55d-2699-47c0-8e91-5e3c10c90bde"
+      ],
+      "ParentStepIdentifier": "7632d55d-2699-47c0-8e91-5e3c10c90bde",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ServiceNow_Update Incident_1",
+      "IsAutomatic": false,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ServiceNow_Update Incident",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "5f0ac0ec-8d58-4535-ba3a-61d7c4c28407",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "ScriptName",
+          "Value": "ServiceNow_Update Incident",
+          "CreationTimeUnixTimeInMs": 1519145367056,
+          "ModificationTimeUnixTimeInMs": 1519145367056
+        },
+        {
+          "ParentStepIdentifier": "5f0ac0ec-8d58-4535-ba3a-61d7c4c28407",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Incident Number\":\"[ServiceNow_Create Incident_1.incident_number]\",\"Short Description\":\"Changed by PB\",\"Impact\":\"2\",\"Urgency\":\"2\",\"Category\":\"\",\"Assignment group ID\":\"\",\"Assigned User ID\":\"Abel Tuter\",\"Description\":\"desc\",\"Incident State\":\"\"}",
+          "CreationTimeUnixTimeInMs": 1519145367056,
+          "ModificationTimeUnixTimeInMs": 1519145367056
+        },
+        {
+          "ParentStepIdentifier": "5f0ac0ec-8d58-4535-ba3a-61d7c4c28407",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145367056,
+          "ModificationTimeUnixTimeInMs": 1519145367056
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145367056,
+      "ModificationTimeUnixTimeInMs": 1519145367056
+    },
+    {
+      "Identifier": "56614e67-652e-4b96-9ff2-7ca01b72566c",
+      "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+      "ParentStepIdentifiers": [
+        "5f0ac0ec-8d58-4535-ba3a-61d7c4c28407"
+      ],
+      "ParentStepIdentifier": "5f0ac0ec-8d58-4535-ba3a-61d7c4c28407",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ServiceNow_Add Comment_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ServiceNow_Add Comment",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "56614e67-652e-4b96-9ff2-7ca01b72566c",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "ScriptName",
+          "Value": "ServiceNow_Add Comment",
+          "CreationTimeUnixTimeInMs": 1519145367056,
+          "ModificationTimeUnixTimeInMs": 1519145367056
+        },
+        {
+          "ParentStepIdentifier": "56614e67-652e-4b96-9ff2-7ca01b72566c",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Incident Number\":\"[ServiceNow_Create Incident_1.incident_number]\",\"Comment\":\"PB COMMENT\"}",
+          "CreationTimeUnixTimeInMs": 1519145367056,
+          "ModificationTimeUnixTimeInMs": 1519145367056
+        },
+        {
+          "ParentStepIdentifier": "56614e67-652e-4b96-9ff2-7ca01b72566c",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145367056,
+          "ModificationTimeUnixTimeInMs": 1519145367056
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145367056,
+      "ModificationTimeUnixTimeInMs": 1519145367056
+    },
+    {
+      "Identifier": "1b0d1868-0ff8-4981-8bfe-c36df1bafdca",
+      "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ServiceNow_Create Incident_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ServiceNow_Create Incident",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "1b0d1868-0ff8-4981-8bfe-c36df1bafdca",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "ScriptName",
+          "Value": "ServiceNow_Create Incident",
+          "CreationTimeUnixTimeInMs": 1519145367055,
+          "ModificationTimeUnixTimeInMs": 1519145367055
+        },
+        {
+          "ParentStepIdentifier": "1b0d1868-0ff8-4981-8bfe-c36df1bafdca",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Short Description\":\"By PB\",\"Impact\":\"1\",\"Urgency\":\"1\",\"Category\":\"network\",\"Assignment group ID\":\"CAB Approval\",\"Assigned User ID\":\"\",\"Description\":\"\"}",
+          "CreationTimeUnixTimeInMs": 1519145367055,
+          "ModificationTimeUnixTimeInMs": 1519145367055
+        },
+        {
+          "ParentStepIdentifier": "1b0d1868-0ff8-4981-8bfe-c36df1bafdca",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145367055,
+          "ModificationTimeUnixTimeInMs": 1519145367055
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145367055,
+      "ModificationTimeUnixTimeInMs": 1519145367055
+    },
+    {
+      "Identifier": "df583a8c-0edd-429d-9cb6-eb133c67cb24",
+      "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+      "ParentStepIdentifiers": [
+        "56614e67-652e-4b96-9ff2-7ca01b72566c"
+      ],
+      "ParentStepIdentifier": "56614e67-652e-4b96-9ff2-7ca01b72566c",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ServiceNow_Close Incident_1",
+      "IsAutomatic": false,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ServiceNow_Close Incident",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "df583a8c-0edd-429d-9cb6-eb133c67cb24",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "ScriptName",
+          "Value": "ServiceNow_Close Incident",
+          "CreationTimeUnixTimeInMs": 1519145367056,
+          "ModificationTimeUnixTimeInMs": 1519145367056
+        },
+        {
+          "ParentStepIdentifier": "df583a8c-0edd-429d-9cb6-eb133c67cb24",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Incident Number\":\"[ServiceNow_Create Incident_1.incident_number]\",\"Close Reason\":\"PB CLOSE\"}",
+          "CreationTimeUnixTimeInMs": 1519145367056,
+          "ModificationTimeUnixTimeInMs": 1519145367056
+        },
+        {
+          "ParentStepIdentifier": "df583a8c-0edd-429d-9cb6-eb133c67cb24",
+          "ParentWorkflowIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145367056,
+          "ModificationTimeUnixTimeInMs": 1519145367056
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145367056,
+      "ModificationTimeUnixTimeInMs": 1519145367056
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "73556253-0cd9-4808-a461-6884c1447b15",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "42a838a2-2fb4-427e-88b4-f4a64768548f",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "ServiceNow",
+      "AllEnvironments": "",
+      "Id": 51,
+      "CreationTimeUnixTimeInMs": 1519145367056,
+      "ModificationTimeUnixTimeInMs": 1519145367056
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 51,
+  "CreationTimeUnixTimeInMs": 1519145367055,
+  "ModificationTimeUnixTimeInMs": 1519145367055
+}

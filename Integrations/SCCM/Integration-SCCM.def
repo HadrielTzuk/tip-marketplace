@@ -1,0 +1,50 @@
+{
+    "Description": "System Center Configuration Manager (SCCM) is a systems management software product developed by Microsoft for managing large groups of computers running Windows NT, Windows Embedded, macOS (OS X), Linux or UNIX, as well as Windows Phone, Symbian, iOS, and Android mobile operating systems. Configuration Manager provides remote control, patch management, software distribution, operating system deployment, network access protection and hardware, and software inventory. Users that will be specified in the integration configuration should be a member of the SMS admins group.",
+    "DisplayName": "SCCM",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/sccm",
+    "Identifier": "SCCM",
+    "Categories": [
+        "IT & Infrastructure",
+        "Endpoint Management"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "SCCM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Server Address",
+            "PropertyName": "Server Address",
+            "PropertyType": "2",
+            "Value": "x.x.x.x"
+        },
+        {
+            "IntegrationIdentifier": "SCCM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Domain",
+            "PropertyName": "Domain",
+            "PropertyType": "2",
+            "Value": "domain"
+        },
+        {
+            "IntegrationIdentifier": "SCCM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "SCCM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M22.8,10.9l-0.1-0.5c-0.8-3.4-6-4.8-10.6-5.4c0.4-2.1-0.9-3.3-0.9-3.3l-0.2-0.2l-0.3,0.1C7.4,2.7,5.9,3.8,6,4.6\n\t\t\tc0.1,0.5,0.7,0.8,1.4,0.9C7.7,5.8,8.8,7,8.9,8.8c0.1,1.8-0.7,3.7-2.5,5.7c-0.6,0.3-1.1,0.7-1.6,1c-1.5,1.2-2.2,2.4-1.9,3.5\n\t\t\tc0.4,2.2,3.9,3.2,4,3.2c0.1,0,2,0.5,5.3,0.5c0.7,0,1.4,0,2.1-0.1l0-1l-1,0c2.3-3.5,1.8-8.1,1.6-9.4c3.9-1,7.2-1.4,7.3-1.4\n\t\t\tL22.8,10.9z M7,4.4C7.4,4,8.9,3.2,10.7,2.5c0.2,0.3,0.6,1.1,0.5,2.2L7.6,4.6C7.3,4.5,7.1,4.5,7,4.4z M12.2,21.8\n\t\t\tc-3.1,0-4.9-0.5-4.9-0.5c-0.8-0.2-3.1-1.2-3.3-2.5c-0.1-0.8,0.4-1.6,1.6-2.6c0.4-0.3,0.9-0.7,1.5-1l7.1-2.6\n\t\t\tC14.3,14.3,14.6,18.7,12.2,21.8z M8.4,13.5c1.1-1.6,1.6-3.3,1.4-4.8C9.8,7.3,9.2,6.3,8.7,5.6c3.8,0.2,11.4,1.1,12.8,4.5\n\t\t\tC19.6,10.4,13.2,11.4,8.4,13.5z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 12.0,
+    "MarketingDisplayName": "Microsoft SCCM"
+}

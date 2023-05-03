@@ -1,0 +1,59 @@
+{
+    "Description": "Devo is the cloud-native logging and security analytics solution that delivers real-time visibility for security and operations teams.",
+    "DisplayName": "Devo",
+    "Identifier": "Devo",
+    "PythonVersion": 2,
+    "Categories": [
+        "SIEM",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Devo",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API URL",
+            "PropertyName": "API URL",
+            "PropertyType": "2",
+            "Value": "https://apiv2-us.devo.com"
+        },
+        {
+            "IntegrationIdentifier": "Devo",
+            "IsMandatory": false,
+            "PropertyDisplayName": "API Token",
+            "PropertyName": "API Token",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Devo",
+            "IsMandatory": false,
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Devo",
+            "IsMandatory": false,
+            "PropertyDisplayName": "API Secret",
+            "PropertyName": "API Secret",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Devo",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": true
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" data-name=\"Layer 1\" viewBox=\"0 0 25 25\" fill=\"currentColor\"><path d=\"M10.5 5a1.07 1.07 0 0 1 .63.22 1.27 1.27 0 0 1 .42.57 1.55 1.55 0 0 1 .06.74 1.31 1.31 0 0 1-.31.66 1.1 1.1 0 0 1-.58.35 1 1 0 0 1-.65-.07A1.16 1.16 0 0 1 9.56 7a1.39 1.39 0 0 1-.19-.72 1.37 1.37 0 0 1 .33-.9 1.07 1.07 0 0 1 .8-.38ZM14.24 5h5.68a1.07 1.07 0 0 1 .8.38 1.32 1.32 0 0 1 .34.9 1.35 1.35 0 0 1-.34.91 1.07 1.07 0 0 1-.8.38h-5.68a1.07 1.07 0 0 1-.8-.38 1.39 1.39 0 0 1-.33-.91 1.37 1.37 0 0 1 .33-.9 1.07 1.07 0 0 1 .8-.38ZM8.6 15.85h14.27a1.07 1.07 0 0 0 .8-.38 1.37 1.37 0 0 0 .33-.9 1.39 1.39 0 0 0-.33-.91 1.07 1.07 0 0 0-.8-.38H8.6a1.07 1.07 0 0 0-.8.38 1.39 1.39 0 0 0-.33.91 1.37 1.37 0 0 0 .33.9 1.07 1.07 0 0 0 .8.38ZM19.84 11.7h3a1.07 1.07 0 0 0 .8-.38 1.37 1.37 0 0 0 .33-.9 1.39 1.39 0 0 0-.33-.91 1.07 1.07 0 0 0-.8-.38h-3a1.07 1.07 0 0 0-.8.38 1.35 1.35 0 0 0-.34.91 1.32 1.32 0 0 0 .34.9 1.07 1.07 0 0 0 .8.38ZM19.84 20a1.07 1.07 0 0 0 .63-.22 1.25 1.25 0 0 0 .41-.57 1.44 1.44 0 0 0 .07-.74 1.39 1.39 0 0 0-.31-.66 1.1 1.1 0 0 0-.58-.35 1 1 0 0 0-.66.07 1.19 1.19 0 0 0-.5.47 1.39 1.39 0 0 0-.2.72 1.32 1.32 0 0 0 .34.9 1.07 1.07 0 0 0 .8.38ZM2.13 11.7h14.06a1.07 1.07 0 0 0 .8-.38 1.37 1.37 0 0 0 .33-.9 1.39 1.39 0 0 0-.32-.91 1.07 1.07 0 0 0-.8-.38H2.13a1.07 1.07 0 0 0-.8.38 1.39 1.39 0 0 0-.33.91 1.37 1.37 0 0 0 .33.9 1.07 1.07 0 0 0 .8.38ZM13 20h3.16a1.07 1.07 0 0 0 .8-.38 1.37 1.37 0 0 0 .33-.9 1.39 1.39 0 0 0-.33-.91 1.07 1.07 0 0 0-.8-.38H13a1.07 1.07 0 0 0-.8.38 1.39 1.39 0 0 0-.33.91 1.37 1.37 0 0 0 .33.9 1.07 1.07 0 0 0 .8.38ZM5.22 13.29a1 1 0 0 1 .63.22 1.27 1.27 0 0 1 .42.57 1.34 1.34 0 0 1 .06.74 1.31 1.31 0 0 1-.31.66 1.06 1.06 0 0 1-.58.35 1 1 0 0 1-.65-.07 1.21 1.21 0 0 1-.51-.47 1.46 1.46 0 0 1-.19-.72 1.37 1.37 0 0 1 .33-.9 1.09 1.09 0 0 1 .8-.38Z\"\/><path d=\"M2.13 11.7h14.06a1.07 1.07 0 0 0 .8-.38 1.37 1.37 0 0 0 .33-.9 1.39 1.39 0 0 0-.32-.91 1.07 1.07 0 0 0-.8-.38H2.13a1.07 1.07 0 0 0-.8.38 1.39 1.39 0 0 0-.33.91 1.37 1.37 0 0 0 .33.9 1.07 1.07 0 0 0 .8.38ZM13 20h3.16a1.07 1.07 0 0 0 .8-.38 1.37 1.37 0 0 0 .33-.9 1.39 1.39 0 0 0-.33-.91 1.07 1.07 0 0 0-.8-.38H13a1.07 1.07 0 0 0-.8.38 1.39 1.39 0 0 0-.33.91 1.37 1.37 0 0 0 .33.9 1.07 1.07 0 0 0 .8.38ZM5.22 13.29a1 1 0 0 1 .63.22 1.27 1.27 0 0 1 .42.57 1.34 1.34 0 0 1 .06.74 1.31 1.31 0 0 1-.31.66 1.06 1.06 0 0 1-.58.35 1 1 0 0 1-.65-.07 1.21 1.21 0 0 1-.51-.47 1.46 1.46 0 0 1-.19-.72 1.37 1.37 0 0 1 .33-.9 1.09 1.09 0 0 1 .8-.38Z\"\/><\/svg>",
+    "Version": 4.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/devo",
+    "MarketingDisplayName": "Devo"
+}

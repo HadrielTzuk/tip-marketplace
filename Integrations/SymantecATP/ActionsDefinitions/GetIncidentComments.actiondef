@@ -1,0 +1,45 @@
+{
+    "CreationTimeUnixTimeInMs": 1530543579170,
+    "Creator": "admin",
+    "Description": "Retrieve comments related to the incident.",
+    "DynamicResultsMetadata": [
+    {
+         "ResultExample": "{\"comment\": \"awawdaq\", \"user_id\": \"100000\", \"incident_responder_name\": \"SEDR API\", \"time\": \"2020-05-18T08:17:18.895Z\"}",
+         "ResultName": "JsonResult"
+    }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SymantecATP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530543579170,
+    "Name": "Get Incident Comments",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530543579170,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the UUID of the incident.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530543579170,
+            "Name": "Incident UUID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530543579170,
+            "CustomActionId": -1,
+            "DefaultValue": "20",
+            "Description": "Specify how many comments to return. Maximum is 1000 comments. This is a Symantec ATP limitation. ",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530543579170,
+            "Name": "Max Comments To Return",
+            "Type": 0,
+            "Value": "20"
+        }
+    ],
+    "ScriptResultName": "is_success ",
+    "Version": 1.0
+}

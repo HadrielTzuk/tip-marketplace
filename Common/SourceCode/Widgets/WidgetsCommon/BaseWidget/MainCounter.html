@@ -1,0 +1,77 @@
+<style>
+{% macro get_main_counter_style() %}
+.main-counter {
+    font-style: var(--widget-font-style);
+
+    padding: 12px 4% 12px 4%;
+    
+    justify-content: center;
+    clear: both;
+}
+
+.counter {
+    font-weight: var(--font-weight-bold);
+    font-family: var(--widget-number-font);
+
+    color: var(--dark-gray-100);
+
+    font-size: 64px;
+    line-height: 0;
+
+    align-items: center;
+    text-align: center;
+}
+
+.counter-title {
+    font-weight: var(--font-weight-semibold);
+    font-family: var(--widget-text-font);
+
+    color: var(--dark-gray-100);
+
+    font-size: 20px;
+
+    text-transform: uppercase;
+    text-align: center;
+}
+{%- endmacro -%}
+</style>
+
+
+{% macro get_main_counter_html(main_text) %}
+<div class="main-counter">
+  <h1 class="counter" id="counter"></h1>
+  <h2 class="counter-title" id="counter-title"></h2>
+</div>
+{%- endmacro -%}
+
+
+<script>
+{% macro get_main_counter_script(count, json_result_has_entities, count_fn, main_text_singular, main_text_plural, entity_result_list_path) %}
+{% if count is defined and count.startswith('[') and count.endswith(']') and count_fn is defined %}
+const dataCount = {{ count_fn }}({{ count }});
+{% elif count is defined and count.startswith('[') and count.endswith(']') and count_fn is undefined %}
+const dataCount = {{ count }};
+{% elif count is defined and count_fn is defined %}
+const dataCount = {{ count_fn }}(actionListData.{{ count }});
+{% elif count is defined and count_fn is undefined %}
+const dataCount = jsonListData.{{ count }};
+{% elif count is undefined and count_fn is defined %}
+const dataCount = {{ count_fn }}(actionListData);
+{% elif not json_result_has_entities | default(false, true) and count is undefined %}
+const dataCount = actionListData.length;
+{% elif json_result_has_entities | default(false, true) and count is undefined %}
+const dataCount = el.{{ entity_result_list_path | default("EntityResult", true) }}.length;
+{% else %}
+const dataCount;  // Missing configuration for what to count!
+{% endif %}
+{% if main_text_plural is defined and main_text_singular is defined %}
+if (dataCount === 1) {
+    $("#counter-title").html("{{ main_text_singular }}");
+} else {
+    $("#counter-title").html("{{ main_text_plural }}");
+}
+{% endif %}
+
+$("#counter").html(dataCount);
+{%- endmacro -%}
+</script>

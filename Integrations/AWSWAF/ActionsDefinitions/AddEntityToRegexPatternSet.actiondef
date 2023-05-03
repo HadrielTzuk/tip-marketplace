@@ -1,0 +1,69 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Add string patterns based on entities to the Regex Pattern Set in AWS WAF. Note: Regex Pattern Set can only contain 10 patterns per set",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSWAF",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Add Entity To Regex Pattern Set",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the comma-separated list of Regex Pattern set names. Example: name_1,name_2",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Regex Pattern Set Names",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "CloudFront",
+            "Description": "Specify what should be the scope for the creation of Regex Pattern sets. If \u201cBoth\u201d is selected, action will add patterns base on entities to Regex Pattern sets in Regional and CloudFront scopes.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Scope",
+            "OptionalValues": [
+                "CloudFront",
+                "Regional",
+                "Both"
+            ],
+            "Type": 15,
+            "Value": "CloudFront"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "If enabled, action will retrieve domain part out of urls and create a regex pattern based on them. If enabled, action will retrieve domain part out of urls and create a regex pattern based on them. Example: http://test.com/folder will be converted to a pattern ^(http|https)(:\\/\\/)(\\Qtest.com\\E).*",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Domain Pattern",
+            "Type": 1,
+            "Value": "True"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "If enabled, action will construct a proper regex pattern out of IP address instead of using raw value. Example: 10.0.0.1 will be converted into ^(http|https)(:\\/\\/)(\\Q10.0.0.1\\E).*",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "IP Pattern",
+            "Type": 1,
+            "Value": "True"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\", \"ADDRESS\"]}",
+    "Version": 1.0
+}

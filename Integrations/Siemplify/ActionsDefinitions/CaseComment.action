@@ -1,0 +1,30 @@
+{
+    "CreationTimeUnixTimeInMs": 1506519591338,
+    "Creator": "admin",
+    "Description": "Add a comment to the case the current alert has been grouped to",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506519591338,
+    "Name": "Case Comment",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1510914819465,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comment to be added to the case.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914819465,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import *\n\ndef main():\n    siemplify = SiemplifyAction()\n    comment = siemplify.parameters[\"Comment\"]\n    siemplify.add_comment(comment)\n\n    output_message = \"Comment added to case:\\n %s\" % comment    \n    siemplify.end(output_message, \"true\")\n\nif __name__ == '__main__':\n\tmain()\n",
+    "ScriptResultName": "SuccessStatus",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

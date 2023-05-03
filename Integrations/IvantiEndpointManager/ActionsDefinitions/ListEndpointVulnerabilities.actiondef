@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List vulnerabilities on the endpoints in Ivanti Endpoint Manager. Supported entities: IP Address, Mac Address, Hostname.",
+    "Id": -1,
+    "IntegrationIdentifier": "IvantiEndpointManager",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Endpoint Vulnerabilities",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"005056A24xxx\",\"EntityResult\":[{\"Name\":\"Ivanti 11.0.30 Adaptive Settings\",\"ID\":\"9xx\",\"Severity\":\"High\",\"Language\":\"INTL\",\"DatePublished\":\"7/9/2020 12:00:00 AM\",\"Repairable\":\"AllFixable\",\"SilentInstall\":\"No\",\"Reboot\":\"3\",\"AutoFix\":\"false\",\"SeverityCode\":\"2\",\"VulId\":\"LDMS11xx.ADAPTIVESETTINGS.0\"},{\"Name\":\"Ivanti 11.0.30 Adaptive Settings\",\"ID\":\"9xx\",\"Severity\":\"High\",\"Language\":\"INTL\",\"DatePublished\":\"7/9/2020 12:00:00 AM\",\"Repairable\":\"AllFixable\",\"SilentInstall\":\"No\",\"Reboot\":\"3\",\"AutoFix\":\"false\",\"SeverityCode\":\"2\",\"VulId\":\"LDMS11xx.ADAPTIVESETTINGS.0\"}]},{\"Entity\":\"172.030.202.xxx\",\"EntityResult\":[{\"Name\":\"Ivanti 11.0.30 Adaptive Settings\",\"ID\":\"9xx\",\"Severity\":\"High\",\"Language\":\"INTL\",\"DatePublished\":\"7/9/2020 12:00:00 AM\",\"Repairable\":\"AllFixable\",\"SilentInstall\":\"No\",\"Reboot\":\"3\",\"AutoFix\":\"false\",\"SeverityCode\":\"2\",\"VulId\":\"LDMS11xx.ADAPTIVESETTINGS.0\"},{\"Name\":\"Ivanti 11.0.30 Adaptive Settings\",\"ID\":\"9xx\",\"Severity\":\"High\",\"Language\":\"INTL\",\"DatePublished\":\"7/9/2020 12:00:00 AM\",\"Repairable\":\"AllFixable\",\"SilentInstall\":\"No\",\"Reboot\":\"3\",\"AutoFix\":\"false\",\"SeverityCode\":\"2\",\"VulId\":\"LDMS11xx.ADAPTIVESETTINGS.0\"}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Severity Filter",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify a comma-separated list of severities that will be used, when returning information about vulnerabilities. If nothing is provided, action will return all vulnerabilities. Possible values: ServicePack, Critical, High, Medium, Low, N/A, Unknown.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Vulnerabilities To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many vulnerabilities to return per entity. Default: 50.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\",\"HOSTNAME\",\"MacAddress\"]}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

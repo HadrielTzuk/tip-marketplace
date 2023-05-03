@@ -1,0 +1,40 @@
+{
+    "CreationTimeUnixTimeInMs": 1542188059113,
+    "Creator": "Admin",
+    "Description": "Add a note to the threat in SentinelOne.",
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOneV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542188059113,
+    "Name": "Add Threat Note",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the id of the threat for which you want to add a note.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Threat ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the note that needs to be added to the threat.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Note",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

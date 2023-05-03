@@ -1,0 +1,207 @@
+{
+  "Identifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "mcafee",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "a92f36b5-6356-449b-82a0-3504b1b7dd85",
+      "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+      "ParentStepIdentifiers": [
+        "0ae2b016-32be-4b77-b27f-6db99261b211"
+      ],
+      "ParentStepIdentifier": "0ae2b016-32be-4b77-b27f-6db99261b211",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "McAfeeWebGateway_Unblock IP_1",
+      "IsAutomatic": false,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "McAfeeWebGateway_Unblock IP",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "a92f36b5-6356-449b-82a0-3504b1b7dd85",
+          "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+          "Name": "ScriptName",
+          "Value": "McAfeeWebGateway_Unblock IP",
+          "CreationTimeUnixTimeInMs": 1521104114835,
+          "ModificationTimeUnixTimeInMs": 1521104114835
+        },
+        {
+          "ParentStepIdentifier": "a92f36b5-6356-449b-82a0-3504b1b7dd85",
+          "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Group Name\":\"Siemplify-Blacklist\"}",
+          "CreationTimeUnixTimeInMs": 1521104114835,
+          "ModificationTimeUnixTimeInMs": 1521104114835
+        },
+        {
+          "ParentStepIdentifier": "a92f36b5-6356-449b-82a0-3504b1b7dd85",
+          "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1521104114835,
+          "ModificationTimeUnixTimeInMs": 1521104114835
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1521104114834,
+      "ModificationTimeUnixTimeInMs": 1521104114834
+    },
+    {
+      "Identifier": "0ae2b016-32be-4b77-b27f-6db99261b211",
+      "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+      "ParentStepIdentifiers": [
+        "7e9d6a91-06cc-4b36-93db-e7a547ec4fcf"
+      ],
+      "ParentStepIdentifier": "7e9d6a91-06cc-4b36-93db-e7a547ec4fcf",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "McAfeeWebGateway_Remove Item From Group_1",
+      "IsAutomatic": false,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "McAfeeWebGateway_Remove Item From Group",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "0ae2b016-32be-4b77-b27f-6db99261b211",
+          "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+          "Name": "ScriptName",
+          "Value": "McAfeeWebGateway_Remove Item From Group",
+          "CreationTimeUnixTimeInMs": 1521104114834,
+          "ModificationTimeUnixTimeInMs": 1521104114834
+        },
+        {
+          "ParentStepIdentifier": "0ae2b016-32be-4b77-b27f-6db99261b211",
+          "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Group Name\":\"Siemplify-Blacklist\",\"Item To Delete\":\"10.0.0.4/32\"}",
+          "CreationTimeUnixTimeInMs": 1521104114834,
+          "ModificationTimeUnixTimeInMs": 1521104114834
+        },
+        {
+          "ParentStepIdentifier": "0ae2b016-32be-4b77-b27f-6db99261b211",
+          "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1521104114834,
+          "ModificationTimeUnixTimeInMs": 1521104114834
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1521104114834,
+      "ModificationTimeUnixTimeInMs": 1521104114834
+    },
+    {
+      "Identifier": "0ce21e15-7a77-425c-8687-a69c250846ab",
+      "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "McAfeeWebGateway_Block IP_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "McAfeeWebGateway_Block IP",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "0ce21e15-7a77-425c-8687-a69c250846ab",
+          "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+          "Name": "ScriptName",
+          "Value": "McAfeeWebGateway_Block IP",
+          "CreationTimeUnixTimeInMs": 1521104114834,
+          "ModificationTimeUnixTimeInMs": 1521104114834
+        },
+        {
+          "ParentStepIdentifier": "0ce21e15-7a77-425c-8687-a69c250846ab",
+          "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Group Name\":\"Siemplify-Blacklist\",\"Description\":\"pb test\"}",
+          "CreationTimeUnixTimeInMs": 1521104114834,
+          "ModificationTimeUnixTimeInMs": 1521104114834
+        },
+        {
+          "ParentStepIdentifier": "0ce21e15-7a77-425c-8687-a69c250846ab",
+          "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1521104114834,
+          "ModificationTimeUnixTimeInMs": 1521104114834
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1521104114833,
+      "ModificationTimeUnixTimeInMs": 1521104114833
+    },
+    {
+      "Identifier": "7e9d6a91-06cc-4b36-93db-e7a547ec4fcf",
+      "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+      "ParentStepIdentifiers": [
+        "0ce21e15-7a77-425c-8687-a69c250846ab"
+      ],
+      "ParentStepIdentifier": "0ce21e15-7a77-425c-8687-a69c250846ab",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "McAfeeWebGateway_Insert Item To Group_1",
+      "IsAutomatic": false,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "McAfeeWebGateway_Insert Item To Group",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "7e9d6a91-06cc-4b36-93db-e7a547ec4fcf",
+          "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+          "Name": "ScriptName",
+          "Value": "McAfeeWebGateway_Insert Item To Group",
+          "CreationTimeUnixTimeInMs": 1521104114834,
+          "ModificationTimeUnixTimeInMs": 1521104114834
+        },
+        {
+          "ParentStepIdentifier": "7e9d6a91-06cc-4b36-93db-e7a547ec4fcf",
+          "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Group Name\":\"Siemplify-Blacklist\",\"Item To Insert\":\"10.0.0.4/32\",\"Description\":\"pb insert item test\"}",
+          "CreationTimeUnixTimeInMs": 1521104114834,
+          "ModificationTimeUnixTimeInMs": 1521104114834
+        },
+        {
+          "ParentStepIdentifier": "7e9d6a91-06cc-4b36-93db-e7a547ec4fcf",
+          "ParentWorkflowIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1521104114834,
+          "ModificationTimeUnixTimeInMs": 1521104114834
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1521104114834,
+      "ModificationTimeUnixTimeInMs": 1521104114834
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "f8e93927-3ac8-4bf9-81d9-32dc083dc638",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "3ba47d90-54ee-4ec0-8346-7d159286734d",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "mcafee",
+      "AllEnvironments": "",
+      "Id": 5,
+      "CreationTimeUnixTimeInMs": 1521104114835,
+      "ModificationTimeUnixTimeInMs": 1521104114835
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 5,
+  "CreationTimeUnixTimeInMs": 1521104114829,
+  "ModificationTimeUnixTimeInMs": 1521104114829
+}

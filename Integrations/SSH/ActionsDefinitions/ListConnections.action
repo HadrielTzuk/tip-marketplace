@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 1515632215291,
+    "Creator": "admin",
+    "Description": "List all  connections on a remote machine",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Results\": [\"Proto,Recv-Q,Send-Q,Local,Address,Foreign,Address,State,PID/Program,name\", \"tcp,0,0,0.0.0.0:111,0.0.0.0:*,LISTEN,1/systemd\", \"tcp,0,0,0.0.0.0:22,0.0.0.0:*,LISTEN,10624/sshd\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SSH",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515632215291,
+    "Name": "List Connections",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516072658484,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Remote server address(e.g: x.x.x.x).",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072658484,
+            "Name": "Remote Server",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072658484,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072658484,
+            "Name": "Remote Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072658484,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072658484,
+            "Name": "Remote Password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072658484,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516072658484,
+            "Name": "Remote Port",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "results",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

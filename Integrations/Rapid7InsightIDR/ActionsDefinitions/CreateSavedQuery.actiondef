@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Create Rapid7 InsightIDR saved query based on the specified action input parameters. Note: Action is not working with Siemplify Entities.",
+    "Id": -1,
+    "IntegrationIdentifier": "Rapid7InsightIDR",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Create Saved Query",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"id\":\"xxxxxxxxxx-0003-xxxx-0000-00000000xxxx\",\"name\":\"test name\",\"leql\":{\"statement\":\"where(bar=foo)\",\"during\":{\"time_range\":null,\"to\":1608531516963,\"from\":1608517116963}},\"logs\":[\"xxxxxxxx-fb95-xxxx-9810-12b15970xxxx\",\"xxxxxxxx-db5f-xxxx-b063-7aa2eaaaxxxx\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Name for the new saved query",
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Statement",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "A statement to execute in query, should follow LEQL syntax, for example: where(foo=bar)",
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Time Frame",
+            "Type": 0,
+            "DefaultValue": 4,
+            "Value": 4,
+            "IsMandatory": true,
+            "Description": "Specify a time frame in hours for which query should fetch data.",
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Logs",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Log names query should execute against. Parameter accepts multiple values as a comma separated string.",
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

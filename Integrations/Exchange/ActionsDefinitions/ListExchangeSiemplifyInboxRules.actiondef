@@ -1,0 +1,83 @@
+{
+    "CreationTimeUnixTimeInMs": 1511698992392,
+    "Creator": "admin",
+    "Description": "Action will get as a parameter a rule name, from the Exchange-Siemplify Inbox rules, and will list it. If no mailboxes to list for will be provided, the rules for the logged in user will be listed. NOTICE - to perform operation, please configure EDiscovery Group and Author permissions. For full details, please visit: https://integrations.siemplify.co/doc/exchang. NOTE: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed.",
+    "Id": -1,
+    "IntegrationIdentifier": "Exchange",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511698992392,
+    "Name": "List Exchange-Siemplify Inbox Rules",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\":\"xxxxxMTj5uI=\",\"name\":\"Siemplify - Domains List - Move To Junk\",\"priority\":1,\"is_enabled\":true,\"conditions\":{\"domains\":[\"GMAIL.COM\",\"SIEMPLIFY.CO\"],\"addresses\":[]},\"actions\":[\"Move To Folder\"]},{\"id\":\"xxxxxMTj5uY=\",\"name\":\"Siemplify - Senders List - Delete\",\"priority\":3,\"is_enabled\":true,\"conditions\":{\"domains\":[],\"addresses\":[\"example@gmail.com\"]},\"actions\":[\"Delete\"]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Rule Name To List",
+            "Type": 15,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the Rule name you would like to list from the relevant mailboxes",
+            "OptionalValues": [
+                "Siemplify - Senders List - Move To Junk",
+                "Siemplify - Senders List - Delete",
+                "Siemplify - Senders List - Permanently Delete",
+                "Siemplify - Domains List - Move To Junk",
+                "Siemplify - Domains List - Delete",
+                "Siemplify - Domains List - Permanently Delete",
+                "All available Exchange-Siemplify Senders Rules",
+                "All available Exchange-Siemplify Domains Rules",
+                "All available Exchange-Siemplify Rules"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Mailboxes list to perform on",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Filter condition, If you have a specific list of mailboxes you would like to conduct the operation on, for better timing, please provide them here. Should accept a comma separated list of mail addresses to list the rules from. If a mailboxes list is provided, \"Perform Action in all Mailboxes\" parameter will be ignored.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "Perform action in all mailboxes",
+            "Type": 1,
+            "DefaultValue": false,
+            "Value": false,
+            "IsMandatory": false,
+            "Description": "If checked, action will be performed in all mailboxes accessible with current impersonalization settings",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "How many mailboxes to process in a single batch",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "In case \"Perform action in all mailboxes\" is checked, action works in batches, this parameter controls how many mailboxes action should process in single batch (single connection to mail server).",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

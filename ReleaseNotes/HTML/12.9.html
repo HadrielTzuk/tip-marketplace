@@ -1,0 +1,447 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 12.9</h2><h5>Published on 14 July, 2020</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     ElasticSearch
+    </b>
+   </li>
+   <ul>
+    <li>
+     ElasticSearch
+    </li>
+    <ul>
+     <li>
+      Added libraries to the integration.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ElasticSearchV7
+    </b>
+   </li>
+   <ul>
+    <li>
+     ElasticSearchV7
+    </li>
+    <ul>
+     <li>
+      Added libraries to the integration.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     IronPort
+    </b>
+   </li>
+   <ul>
+    <li>
+     IronPort
+    </li>
+    <ul>
+     <li>
+      Integration configuration page updated: - added separate fields to specify AsyncOS REST API and SSH ports - added a "Use SSL" checkbox to specify whether AsynOS REST API should be accessed over HTTP or HTTPS.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     McAfeeESM
+    </b>
+   </li>
+   <ul>
+    <li>
+     McAfee ESM
+    </li>
+    <ul>
+     <li>
+      Added support for McAfee ESM version 11.2 and 11.3.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     MicrosoftTeams
+    </b>
+   </li>
+   <ul>
+    <li>
+     MicrosoftTeams
+    </li>
+    <ul>
+     <li>
+      NEW! Added support for different redirect URLs for configuration.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     RecordedFuture
+    </b>
+   </li>
+   <ul>
+    <li>
+     RecordedFuture
+    </li>
+    <ul>
+     <li>
+      Added ability to get information about related entities from enrichment actions.
+     </li>
+     <li>
+      Updated output message for enrichment actions, when no entities were found.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ServiceNow
+    </b>
+   </li>
+   <ul>
+    <li>
+     ServiceNow
+    </li>
+    <ul>
+     <li>
+      Added ability to change the default table that will be used in incidents actions.
+     </li>
+     <li>
+      Minor improvements across the whole integration.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     AzureActiveDirectory
+    </b>
+   </li>
+   <ul>
+    <li>
+     List Groups
+    </li>
+    <ul>
+     <li>
+      Removed the "Order By Field" parameter due to API limitations.
+     </li>
+     <li>
+      Added support for pagination and added a non mandatory "Results Limit" parameter to limit the number of groups that are returned by the action.
+     </li>
+    </ul>
+    <li>
+     List Users
+    </li>
+    <ul>
+     <li>
+      Updated the possible values of the "Order By Field" parameter due to API limitations.
+     </li>
+     <li>
+      Added "Mobile Phone" column to the user data table.
+     </li>
+     <li>
+      Added support for pagination and added a non mandatory "Results Limit" parameter to limit the number of users that are returned by the action.
+     </li>
+     <li>
+      Updated the JSON results example to match the actual returned data.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     CSV
+    </b>
+   </li>
+   <ul>
+    <li>
+     CSV Search By String
+    </li>
+    <ul>
+     <li>
+      Fixed a bug that caused incorrect row count to be returned by the action.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     IronPort
+    </b>
+   </li>
+   <ul>
+    <li>
+     GetAllRecipientsBySubject
+    </li>
+    <ul>
+     <li>
+      Action refactored. Action now supports unicode in email subjects. Action input parameters were updated: - New mandatory action input parameter was added - Search Emails for Last X Days. Parameter has a default value. - New mandatory action input parameter was added - Max Recipients to Return. Parameter has a default value.
+     </li>
+    </ul>
+    <li>
+     GetAllRecipientsBySender
+    </li>
+    <ul>
+     <li>
+      Action refactored. Action input parameters were updated: - New mandatory action input parameter was added - Search Emails for Last X Days. Parameter has a default value. - New mandatory action input parameter was added - Max Recipients to Return. Parameter has a default value.
+     </li>
+    </ul>
+    <li>
+     Ping
+    </li>
+    <ul>
+     <li>
+      Action refactored.
+     </li>
+    </ul>
+    <li>
+     AddSendertoBlocklsit
+    </li>
+    <ul>
+     <li>
+      Action refactored.
+     </li>
+    </ul>
+    <li>
+     GetReport
+    </li>
+    <ul>
+     <li>
+      Action refactored. In action, mail_sender_ip_hostname_detail and mail_incoming_ip_hostname_detail reports work based on Siemplify IP or Host entities;  mail_users_detail works on Siemplify User entity (with email address). Other reports are working without Siemplify entities. Action input parameters were updated: - New mandatory action input parameter was added - Search Reports Data for Last X Days. Parameter has a default value. - New mandatory action input parameter was added - Max Records to Return. Parameter has a default value.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     MISP
+    </b>
+   </li>
+   <ul>
+    <li>
+     Get Related Events
+    </li>
+    <ul>
+     <li>
+      Added "Events Limit" parameter to limit the number of events fetched by the action.
+     </li>
+    </ul>
+    <li>
+     Add Tag To An Attribute
+    </li>
+    <ul>
+     <li>
+      Added ability to directly specify in which object of the event to add tag to attribute.
+     </li>
+    </ul>
+    <li>
+     Remove Tag From An Attribute
+    </li>
+    <ul>
+     <li>
+      Added ability to directly specify in which object of the event to remove attribute.
+     </li>
+    </ul>
+    <li>
+     Delete An Attribute
+    </li>
+    <ul>
+     <li>
+      Added ability to directly specify in which object of the event to add tag to attribute.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     McAfeeEPO
+    </b>
+   </li>
+   <ul>
+    <li>
+     Get System Information
+    </li>
+    <ul>
+     <li>
+      Added support for tasks that contain Unicode data in their name.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     MicrosoftTeams
+    </b>
+   </li>
+   <ul>
+    <li>
+     Generate Token
+    </li>
+    <ul>
+     <li>
+      Updated error message when URL without code parameter is used for authorization.
+     </li>
+    </ul>
+    <li>
+     Wait For Reply
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action Wait For Reply.
+     </li>
+    </ul>
+    <li>
+     List Teams
+    </li>
+    <ul>
+     <li>
+      Fixed List Teams to work with unicode
+     </li>
+    </ul>
+    <li>
+     List Users
+    </li>
+    <ul>
+     <li>
+      Fixed List Users to work with unicode
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     SentinelOneV2
+    </b>
+   </li>
+   <ul>
+    <li>
+     Create Path Exclusion Record
+    </li>
+    <ul>
+     <li>
+      NEW! Added new properties ‘Site IDs’ and ‘Group IDs’ in the action and align action results.
+     </li>
+    </ul>
+    <li>
+     Create Hash Exclusion Record
+    </li>
+    <ul>
+     <li>
+      NEW! NEW action for creating a hash exclusion for a white list.
+     </li>
+    </ul>
+    <li>
+     Mitigate Threat
+    </li>
+    <ul>
+     <li>
+      NEW! NEW action for applying a mitigation action to a group of threats.
+     </li>
+    </ul>
+    <li>
+     Mark As Threat
+    </li>
+    <ul>
+     <li>
+      NEW! NEW action for marking suspicious threats as a threat.
+     </li>
+    </ul>
+    <li>
+     Resolve Threat
+    </li>
+    <ul>
+     <li>
+      NEW! NEW action for resolving threats.
+     </li>
+    </ul>
+    <li>
+     Get Threats
+    </li>
+    <ul>
+     <li>
+      NEW! NEW action for getting threats list.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ServiceNow
+    </b>
+   </li>
+   <ul>
+    <li>
+     CreateRecord
+    </li>
+    <ul>
+     <li>
+      Added JSON Result to action "Create Record".
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Slack
+    </b>
+   </li>
+   <ul>
+    <li>
+     WaitForReply
+    </li>
+    <ul>
+     <li>
+      Fixed a bug, where action wouldn't execute even with proper parameters.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     EmailV2
+    </b>
+   </li>
+   <ul>
+    <li>
+     Generic IMAP Email Connector
+    </li>
+    <ul>
+     <li>
+      Fixed a bug in marking email as read functionality that caused the connector to fail with Fastmail provider.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     FireEyeHX
+    </b>
+   </li>
+   <ul>
+    <li>
+     FireEye HX Alerts Connector
+    </li>
+    <ul>
+     <li>
+      NEW! FireEye HX alerts Siemplify connector added.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     QRadar
+    </b>
+   </li>
+   <ul>
+    <li>
+     Qradar Correlation Events Connector V2
+    </li>
+    <ul>
+     <li>
+      Fixed bug QRadar offense partially matched events are missing.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

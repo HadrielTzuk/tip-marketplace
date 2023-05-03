@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 18.46</h2><h5>Published on 01 September, 2022</h5><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     CBCloud\n    </b>\n   </li>\n   <ul>\n    <li>\n     VMware Carbon Black Cloud Alerts and Events Tracking Connector\n    </li>\n    <ul>\n     <li>\n      VMware Carbon Black Cloud Alerts and Events Tracking Connector - Improved processing of backlogged alerts and related events.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "18.46",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "01/09/22",
+    "Title": "Release Notes"
+}

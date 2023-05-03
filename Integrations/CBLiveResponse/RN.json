@@ -1,0 +1,110 @@
+[
+    {
+        "ChangeDescription": "CB Endpoint Standard Live Response integration added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "VMware Carbon Black Endpoint Standard Live Response",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1603795796,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5166"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "VMware Carbon Black Endpoint Standard Live Response",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Updated the integration's code to work with Python version 3.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "CBLiveResponse",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1628067574,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8788"
+    },
+    {
+        "ChangeDescription": "Support for Live Response API v6 - integration now supports both v3 and v6 versions of Live Response API, and is configurable on the integration configuration page. Please refer to the documentation site for more information.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "CBLiveResponse",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1628067574,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8788"
+    },
+    {
+        "ChangeDescription": "\"Kill Process\", \"List Process\" Actions  - added detailed logging information to the JSON results in cases of failure.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "CBLiveResponse",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1628067574,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8788"
+    },
+    {
+        "ChangeDescription": "New action added - \"Download File\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Download File",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1628067574,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7614"
+    },
+    {
+        "ChangeDescription": "New action added - \"List Files\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "CBLiveResponse",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1628067574,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8788"
+    },
+    {
+        "ChangeDescription": "New actions added - \"Put File\", \"Execute File\", \"Create Memdump\", \"Delete File\", \"List Files in Cloud Storage\", \"Delete File from Cloud Storage\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "CBLiveResponse",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1628667443,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9545"
+    },
+    {
+        "ChangeDescription": "\"Download File\", \"Put File\", \"Execute File\", \"Create Memdump\", \"Delete File\" actions - improved handling of file parameters and file entities",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "CBLiveResponse",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1635312036,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9750"
+    }
+]

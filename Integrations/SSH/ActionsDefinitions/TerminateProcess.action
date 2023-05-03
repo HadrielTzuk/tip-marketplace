@@ -1,0 +1,77 @@
+{
+    "CreationTimeUnixTimeInMs": 1515552027321,
+    "Creator": "admin",
+    "Description": "Terminate process on a remote machine",
+    "Id": -1,
+    "IntegrationIdentifier": "SSH",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515552027321,
+    "Name": "Terminate Process",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516045683512,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Remote server address(e.g: x.x.x.x)",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516045683512,
+            "Name": "Remote Server",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516045683512,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516045683512,
+            "Name": "Remote Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516045683512,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516045683512,
+            "Name": "Remote Password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516045683512,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516045683512,
+            "Name": "Remote Port",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516045683512,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Process to terminate.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516045683512,
+            "Name": "PROCESS",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

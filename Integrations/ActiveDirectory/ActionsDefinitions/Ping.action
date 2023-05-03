@@ -1,0 +1,17 @@
+{
+    "CreationTimeUnixTimeInMs": 1512934634064,
+    "Creator": "admin",
+    "Description": "Test Active Directory connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "ActiveDirectory",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1512934634064,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import *\nfrom ActiveDirectoryManager import *\t\t\n\t\t\ndef main():\n\t#List groups a user account is a member of\n\tsiemplify = SiemplifyAction()\n\tconf = siemplify.get_configuration('ActiveDirectory')\n\tserver = conf['Server']\n\tusername = conf['Username']\n\tpassword = conf['Password']\n\tdomain = conf['Domain']\n\n\tad = ActiveDirectoryManager(server,domain,username,password)\n\tconnectivity = ad.test_conectivity()\n\t\n\toutput_message = \"Connected Successfully\"\n\tsiemplify.end(output_message, connectivity)\n\t\n\t\nif __name__ == \"__main__\":\n\tmain()\n",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

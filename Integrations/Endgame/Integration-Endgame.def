@@ -1,0 +1,50 @@
+{
+    "Description": "Endpoint protection built to stop advanced attacks before damage and loss occurs",
+    "DisplayName": "Endgame",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/endgame",
+    "Identifier": "Endgame",
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAMAAACScZ2GAAAAq1BMVEX////vMSXvMyb1eXH7zsr7xsL//f3/+/vwOCzwOS7+8fDyWlD5sa31fnbxST7zZFvxRjv2hn/84N7wNSnwPjL7yMT0b2f/+fn/9fX4paD82dbyVErxUUfwQjf+9/b+7u36vbn4p6L0dW395OL5rKf2kYr95+X808/3l5D93935uLT3m5T+6unxTkP7y8f5s6/zamH93Nn4oJr2jIT6wLz1iYHzYVfyV031g3syimsnAAADeElEQVRo3u2U63aiMBCAB5RwEVcryE1RV1S832v7/k+2ZGLAWLs9dvtrz3w/JDNjmC+cJEAQBEEQBEEQBEEQBEEQxP9Ap67QYfiIAHEwYNm1mCdrU5k8SOJmMF6NZgxKopHruruZDBc405QTMFrjoyIfwGc0dYUps/ljJfoZfPzLfJFVK20cZ5XI776nIfY4AckIc1MZtnCeAYKaznE7ukKafK6nKRR62M8Qenxc6Gk3bGIGyGzvVdlUZsOaJiZJPQxbDgZbCyO3oyn4z+pp7YOip1DD1slGSfbWgCSWiHeKnviazi/tB/SQRvSpnv4SAjgXEXi+jR0yEEylrqno+TkAm2vf06sZkozrIa9M1evH8fGljSV7C2yi85H12k3yXaBbLgicVPasSz1BwCCxFT17J5t2o7/rzau41PNcVS/gxewda+PQecNlL3HHme6EgSDmaTSvqXr6Mgw0RS+dwdeg3tS5EqKewN/e6XHCPS48w4oeM1AZoPXc4tNnUk/QP+p3eons+pWe374yl3rotbjTqw5fd4qVDMBcxoJdCABnrpAOA5RkpZ7H16LjqNLzZNNN9oVeyavQ83oYBeePejOfB0u8Pi6F0aAhz8KwcB3z0QmWeAM5pV5Nrnm/eXA07MWTetYSm+qXj3pr1Nuhxx7u9JKUdzuAg0foXOr9PmmIf+h/R8+zrpyuesYCGyCqXo4fwsBUL7rTW+G5cQYDLF8GpZ4jlruMbvVk0/QrvWb3ykHqwdl6rDfH5Swm+P4t33vH49wTes4G/99qtd7wX3mpB3UfX3Gr5++6gm0Ez1wsqMfmj/RYN8U7O+z4mBsCZ20LvYmm8l7psROepFJPvVie14MouNMLQ6fe9DG1BBPPhr5fQ8HBEnoNTcUelnrgbPQJfFOv3ZBMTakHWb/SU9mHALkQ9Zur1dgWey/HjCfAaySu9OC8D1U9r9eQ5CP++1hPoVbpQZ4+1uvxrcxi/y47xFe9jQQtDAaVXuiAqlehG7gtntRjk0d6+ngNnPBo36bbk04qPpjA0PA9Ug/5WT0wXz/o6a1RCAJWv5Rpr7lgeKv4jqxuxIb9R71JTeE3axa/zQMg5ksRnEz3Wmye3AxuMI33xq92ux+sZkWwwvkgwUnvGWYNmQynPNyuaypJd1wAPw+Lhg4DgiAIgiAIgiAIgiAIgniOP2KiTm3z7t3lAAAAAElFTkSuQmCC",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Endgame",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https://name.endgame.com"
+        },
+        {
+            "IntegrationIdentifier": "Endgame",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Endgame",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Endgame",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\r\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\r\n\t viewBox=\"0 0 32 32\" style=\"enable-background:new 0 0 32 32;\" xml:space=\"preserve\">\r\n<title>ElasticSearch_IntegrationImage</title>\r\n<g>\r\n\t<path d=\"M11,24.7v-6.4h15.5V13H11V7.4h16.1V2H4.4v28h23.1c0,0,0.1,0,0.1-0.1v-5.3h-0.1L11,24.7L11,24.7z\"/>\r\n</g>\r\n</svg>\r\n",
+    "Version": 8.0,
+    "MarketingDisplayName": ""
+}

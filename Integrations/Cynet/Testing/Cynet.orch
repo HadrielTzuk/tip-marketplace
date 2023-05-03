@@ -1,0 +1,207 @@
+{
+  "Identifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": true,
+  "Name": "Cynet",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "a7648346-f6d8-4bf2-9440-2da17c418a8d",
+      "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+      "ParentStepIdentifiers": [
+        "1a3fac7b-bba2-4ff0-9ad0-48752503fa76"
+      ],
+      "ParentStepIdentifier": "1a3fac7b-bba2-4ff0-9ad0-48752503fa76",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Cynet_Delete Hash In Hosts_1",
+      "IsAutomatic": false,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Cynet_Delete Hash In Hosts",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "a7648346-f6d8-4bf2-9440-2da17c418a8d",
+          "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+          "Name": "ScriptName",
+          "Value": "Cynet_Delete Hash In Hosts",
+          "CreationTimeUnixTimeInMs": 1520759267548,
+          "ModificationTimeUnixTimeInMs": 1520759267548
+        },
+        {
+          "ParentStepIdentifier": "a7648346-f6d8-4bf2-9440-2da17c418a8d",
+          "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520759267548,
+          "ModificationTimeUnixTimeInMs": 1520759267548
+        },
+        {
+          "ParentStepIdentifier": "a7648346-f6d8-4bf2-9440-2da17c418a8d",
+          "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520759258391,
+          "ModificationTimeUnixTimeInMs": 1520759258391
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520759258390,
+      "ModificationTimeUnixTimeInMs": 1520759258390
+    },
+    {
+      "Identifier": "1a3fac7b-bba2-4ff0-9ad0-48752503fa76",
+      "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+      "ParentStepIdentifiers": [
+        "97eb78a7-ee34-4c45-8f8e-d55652b598fe"
+      ],
+      "ParentStepIdentifier": "97eb78a7-ee34-4c45-8f8e-d55652b598fe",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Cynet_Kill Hash In Hosts_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Cynet_Kill Hash In Hosts",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "1a3fac7b-bba2-4ff0-9ad0-48752503fa76",
+          "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+          "Name": "ScriptName",
+          "Value": "Cynet_Kill Hash In Hosts",
+          "CreationTimeUnixTimeInMs": 1520759267548,
+          "ModificationTimeUnixTimeInMs": 1520759267548
+        },
+        {
+          "ParentStepIdentifier": "1a3fac7b-bba2-4ff0-9ad0-48752503fa76",
+          "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520759267548,
+          "ModificationTimeUnixTimeInMs": 1520759267548
+        },
+        {
+          "ParentStepIdentifier": "1a3fac7b-bba2-4ff0-9ad0-48752503fa76",
+          "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520759256867,
+          "ModificationTimeUnixTimeInMs": 1520759256867
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520759256867,
+      "ModificationTimeUnixTimeInMs": 1520759256867
+    },
+    {
+      "Identifier": "97eb78a7-ee34-4c45-8f8e-d55652b598fe",
+      "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+      "ParentStepIdentifiers": [
+        "ccb8a459-8ff6-4fbe-9e93-f7d512dfd407"
+      ],
+      "ParentStepIdentifier": "ccb8a459-8ff6-4fbe-9e93-f7d512dfd407",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Cynet_Quarantine Hash In Hosts_1",
+      "IsAutomatic": false,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Cynet_Quarantine Hash In Hosts",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "97eb78a7-ee34-4c45-8f8e-d55652b598fe",
+          "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+          "Name": "ScriptName",
+          "Value": "Cynet_Quarantine Hash In Hosts",
+          "CreationTimeUnixTimeInMs": 1520759267548,
+          "ModificationTimeUnixTimeInMs": 1520759267548
+        },
+        {
+          "ParentStepIdentifier": "97eb78a7-ee34-4c45-8f8e-d55652b598fe",
+          "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520759267548,
+          "ModificationTimeUnixTimeInMs": 1520759267548
+        },
+        {
+          "ParentStepIdentifier": "97eb78a7-ee34-4c45-8f8e-d55652b598fe",
+          "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520759252515,
+          "ModificationTimeUnixTimeInMs": 1520759252515
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520759252515,
+      "ModificationTimeUnixTimeInMs": 1520759252515
+    },
+    {
+      "Identifier": "ccb8a459-8ff6-4fbe-9e93-f7d512dfd407",
+      "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Cynet_Hash Query_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Cynet_Hash Query",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "ccb8a459-8ff6-4fbe-9e93-f7d512dfd407",
+          "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+          "Name": "ScriptName",
+          "Value": "Cynet_Hash Query",
+          "CreationTimeUnixTimeInMs": 1520759267548,
+          "ModificationTimeUnixTimeInMs": 1520759267548
+        },
+        {
+          "ParentStepIdentifier": "ccb8a459-8ff6-4fbe-9e93-f7d512dfd407",
+          "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520759267548,
+          "ModificationTimeUnixTimeInMs": 1520759267548
+        },
+        {
+          "ParentStepIdentifier": "ccb8a459-8ff6-4fbe-9e93-f7d512dfd407",
+          "ParentWorkflowIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520759249680,
+          "ModificationTimeUnixTimeInMs": 1520759249680
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520759249680,
+      "ModificationTimeUnixTimeInMs": 1520759249680
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "05ee150f-0e4f-4b55-8f8f-32807634c918",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "d6a18ecb-c9e9-4bc3-bb4e-6a04dab5f64e",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Cynet",
+      "AllEnvironments": "",
+      "Id": 44,
+      "CreationTimeUnixTimeInMs": 1520759267548,
+      "ModificationTimeUnixTimeInMs": 1520759267548
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 44,
+  "CreationTimeUnixTimeInMs": 1520759236878,
+  "ModificationTimeUnixTimeInMs": 1520759236878
+}

@@ -1,0 +1,49 @@
+{
+    "Description": "The FireEye HX series is a threat prevention platform that helps drive faster, more accurate decisions about potential security incidents on endpoints.",
+    "DisplayName": "FireEye HX",
+    "Identifier": "FireEyeHX",
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "FireEyeHX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "6",
+            "Value": "https://x.x.x.x:<port>"
+        },
+        {
+            "IntegrationIdentifier": "FireEyeHX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "FireEyeHX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "FireEyeHX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M17.8304 5.66197C18.04 5.69192 18.2496 5.57213 18.2496 5.33255C18.2796 4.31434 18.2496 1.85866 16.6025 1.25972C14.4763 0.481087 11.0323 1.55919 8.39698 3.0865C5.70173 4.61382 2.34763 8.1476 1 11.8012C1 11.8012 5.97125 7.48876 11.0623 6.26092C14.9255 5.3026 17.0218 5.51224 17.8304 5.66197Z\" \/>\r\n<path d=\"M5.31241 11.9509C5.25252 11.7413 5.01294 11.6514 4.80331 11.7413C3.90489 12.1905 1.80858 13.4782 2.10805 15.2152C2.49737 17.4612 5.16268 19.8869 7.79804 21.4143C10.4334 22.9715 15.225 24.1095 19.0283 23.4507C19.0283 23.4507 12.8292 21.2945 9.17561 17.4912C6.45041 14.6162 5.58194 12.6996 5.31241 11.9509Z\" \/>\r\n<path d=\"M17.0518 19.7372C16.902 19.9169 16.9619 20.1565 17.1117 20.2463C17.9502 20.7854 20.1064 21.9833 21.484 20.8453C23.2508 19.4078 23.9995 15.874 23.9995 12.8194C24.0295 9.73481 22.622 5.03308 20.1363 2.06829C20.1363 2.06829 21.3642 8.50697 19.8967 13.5681C18.8186 17.4013 17.5908 19.1083 17.0518 19.7372Z\" \/>\r\n<\/svg>",
+    "Version": 14.0,
+    "MarketingDisplayName": "FireEye HX"
+}

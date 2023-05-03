@@ -1,0 +1,163 @@
+{
+  "Identifier": "db943531-5e15-4e1f-a7ce-2c7c3efa8130",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "XForce",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "0ee4e90f-d792-40d9-bf77-2c4d832b96fa",
+      "ParentWorkflowIdentifier": "db943531-5e15-4e1f-a7ce-2c7c3efa8130",
+      "ParentStepIdentifiers": [
+        "7237eeb2-f4cf-4401-9c2b-c7775f9e4e15"
+      ],
+      "ParentStepIdentifier": "7237eeb2-f4cf-4401-9c2b-c7775f9e4e15",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "XForce_Get IP Info_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "XForce_Get IP Info",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "0ee4e90f-d792-40d9-bf77-2c4d832b96fa",
+          "ParentWorkflowIdentifier": "db943531-5e15-4e1f-a7ce-2c7c3efa8130",
+          "Name": "ScriptName",
+          "Value": "XForce_Get IP Info",
+          "CreationTimeUnixTimeInMs": 1519146987584,
+          "ModificationTimeUnixTimeInMs": 1519146987584
+        },
+        {
+          "ParentStepIdentifier": "0ee4e90f-d792-40d9-bf77-2c4d832b96fa",
+          "ParentWorkflowIdentifier": "db943531-5e15-4e1f-a7ce-2c7c3efa8130",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519146987584,
+          "ModificationTimeUnixTimeInMs": 1519146987584
+        },
+        {
+          "ParentStepIdentifier": "0ee4e90f-d792-40d9-bf77-2c4d832b96fa",
+          "ParentWorkflowIdentifier": "db943531-5e15-4e1f-a7ce-2c7c3efa8130",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519146987584,
+          "ModificationTimeUnixTimeInMs": 1519146987584
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519146987584,
+      "ModificationTimeUnixTimeInMs": 1519146987584
+    },
+    {
+      "Identifier": "7237eeb2-f4cf-4401-9c2b-c7775f9e4e15",
+      "ParentWorkflowIdentifier": "db943531-5e15-4e1f-a7ce-2c7c3efa8130",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "XForce_Get Hash Info_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "XForce_Get Hash Info",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "7237eeb2-f4cf-4401-9c2b-c7775f9e4e15",
+          "ParentWorkflowIdentifier": "db943531-5e15-4e1f-a7ce-2c7c3efa8130",
+          "Name": "ScriptName",
+          "Value": "XForce_Get Hash Info",
+          "CreationTimeUnixTimeInMs": 1519146987583,
+          "ModificationTimeUnixTimeInMs": 1519146987583
+        },
+        {
+          "ParentStepIdentifier": "7237eeb2-f4cf-4401-9c2b-c7775f9e4e15",
+          "ParentWorkflowIdentifier": "db943531-5e15-4e1f-a7ce-2c7c3efa8130",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519146987584,
+          "ModificationTimeUnixTimeInMs": 1519146987584
+        },
+        {
+          "ParentStepIdentifier": "7237eeb2-f4cf-4401-9c2b-c7775f9e4e15",
+          "ParentWorkflowIdentifier": "db943531-5e15-4e1f-a7ce-2c7c3efa8130",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519146987584,
+          "ModificationTimeUnixTimeInMs": 1519146987584
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519146987583,
+      "ModificationTimeUnixTimeInMs": 1519146987583
+    },
+    {
+      "Identifier": "9dade1a7-dffb-480e-9504-fa881af9691a",
+      "ParentWorkflowIdentifier": "db943531-5e15-4e1f-a7ce-2c7c3efa8130",
+      "ParentStepIdentifiers": [
+        "0ee4e90f-d792-40d9-bf77-2c4d832b96fa"
+      ],
+      "ParentStepIdentifier": "0ee4e90f-d792-40d9-bf77-2c4d832b96fa",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "XForce_Get Url Info_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "XForce_Get Url Info",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "9dade1a7-dffb-480e-9504-fa881af9691a",
+          "ParentWorkflowIdentifier": "db943531-5e15-4e1f-a7ce-2c7c3efa8130",
+          "Name": "ScriptName",
+          "Value": "XForce_Get Url Info",
+          "CreationTimeUnixTimeInMs": 1519146987584,
+          "ModificationTimeUnixTimeInMs": 1519146987584
+        },
+        {
+          "ParentStepIdentifier": "9dade1a7-dffb-480e-9504-fa881af9691a",
+          "ParentWorkflowIdentifier": "db943531-5e15-4e1f-a7ce-2c7c3efa8130",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519146987584,
+          "ModificationTimeUnixTimeInMs": 1519146987584
+        },
+        {
+          "ParentStepIdentifier": "9dade1a7-dffb-480e-9504-fa881af9691a",
+          "ParentWorkflowIdentifier": "db943531-5e15-4e1f-a7ce-2c7c3efa8130",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519146987584,
+          "ModificationTimeUnixTimeInMs": 1519146987584
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519146987584,
+      "ModificationTimeUnixTimeInMs": 1519146987584
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "36846e99-01e8-4c4c-a7ea-915eac3d299a",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "db943531-5e15-4e1f-a7ce-2c7c3efa8130",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "XForce",
+      "AllEnvironments": "",
+      "Id": 59,
+      "CreationTimeUnixTimeInMs": 1519146987584,
+      "ModificationTimeUnixTimeInMs": 1519146987584
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 59,
+  "CreationTimeUnixTimeInMs": 1519146987583,
+  "ModificationTimeUnixTimeInMs": 1519146987583
+}

@@ -1,0 +1,54 @@
+{
+    "CreationTimeUnixTimeInMs": 1548084675677, 
+    "Creator": "System", 
+    "Description": "Assign a role to a user", 
+    "DynamicScriptResultNamesJson": "[\"ResultJson\"]", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Okta", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1548084675758, 
+    "Name": "Assign Role", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1548084675798, 
+            "CustomActionId": 699, 
+            "DefaultValue": "", 
+            "Description": "Ids of users in Okta", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084675798, 
+            "Name": "User IDs", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1548084675798, 
+            "CustomActionId": 699, 
+            "DefaultValue": "", 
+            "Description": "The type of role to assign to the users", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1548084675798, 
+            "Name": "Role Types", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1548084675799, 
+            "CustomActionId": 699, 
+            "DefaultValue": "false", 
+            "Description": "Whether to run on entities as well as the input", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084675799, 
+            "Name": "Also Run On Scope", 
+            "Type": 1, 
+            "Value": "false"
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyDataModel import EntityTypes\nfrom SiemplifyUtils import construct_csv, dict_to_flat\nfrom OktaManager import OktaManager\nimport json\n\nPROVIDER = \"Okta\"\nACTION_NAME = \"Okta - AssignRole\"\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    user_ids = siemplify.parameters.get('User IDs', \"\")\n    role_types = siemplify.parameters['Role Types']\n    is_scope = siemplify.parameters.get('Also Run On Scope', \"false\").lower() == \"true\"\n    roles = []\n    ids = []\n    res = {}\n    ret = {}\n    output_message = \"\"\n    okta = OktaManager(api_root=conf['Api Root'], api_token=conf['Api Token'],\n                       verify_ssl=conf['Verify SSL'].lower() == 'true')\n    if user_ids:\n        for _id in user_ids.split(','):\n            _id = _id.strip()\n            ids.append(_id)\n    if role_types:\n        for role in role_types.split(','):\n            role = role.strip()\n            roles.append(role)\n    message = \"\"\n    if ids:\n        for _id in ids:\n            if roles:\n                ret[_id] = []\n                for role in roles:\n                    try:\n                        res = okta.assign_role(_id, role)\n                        if res:\n                            ret[_id].append(res)\n                            message += \"The user with id {0} was assigned the role {1}.\\n\\n\".format(_id, role)\n                        else:\n                            message += \"The user with id {0} couldn't be assigned the role {1}.\\n\\n\".format(_id, role)\n                    except Exception as err:\n                        siemplify.LOGGER.exception(err)\n                        siemplify.LOGGER.error(_id + \", \" + role + \": \" + err.message)\n                        pass\n    if is_scope:\n        entitiesAssigned = []\n        for entity in siemplify.target_entities:\n            if entity.entity_type == EntityTypes.USER or entity.entity_type == EntityTypes.HOSTNAME:\n                _id = okta.login_to_id(entity.identifier)\n                if _id:\n                    if roles:\n                        ret[entity.identifier] = []\n                        for role in roles:\n                            try:\n                                res = okta.assign_role(_id, role)\n                                if res:\n                                    entitiesAssigned.append(entity)\n                                    ret[entity.identifier].append(res)\n                                    message += \"The user \\\"{0}\\\" was assigned the role {1}.\\n\\n\".format(entity.identifier, role)\n                                else:\n                                    message += \"The user \\\"{0}\\\" couldn't be assigned the role {1}.\\n\\n\".format(entity.identifier, role)\n                            except Exception as err:\n                                siemplify.LOGGER.exception(err)\n                                siemplify.LOGGER.error(entity.identifier + \", \" + role + \": \" + err.message)\n                                pass\n                else:\n                    message += \"Couldn't find the user \\\"{0}\\\".\\n\\n\".format(entity.identifier)\n                    continue\n            else:\n                continue\n    if ret:\n        flag = False\n        output_message = message\n        for user, roles in ret.items():\n            rows = []\n            if roles:\n                for role in roles:\n                    if role:\n                        flat_role = dict_to_flat(role)\n                        rows.append(flat_role)\n            if rows:\n                flag = True\n                csv_output = construct_csv(rows)\n                siemplify.result.add_data_table(\"Okta - User \\\"{}\\\" Roles\".format(user), csv_output)\n        if not flag:\n            output_message = \"No users were assigned roles. {}\".format(message)\n    else:\n        output_message = \"No users were assigned roles. {}\".format(message)\n    siemplify.end(output_message, json.dumps(ret))\n\nif __name__ == '__main__':\n    main()", 
+    "ScriptResultName": "ScriptResult", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"USERUNIQNAME\"]}", 
+    "Version": 13.0
+}

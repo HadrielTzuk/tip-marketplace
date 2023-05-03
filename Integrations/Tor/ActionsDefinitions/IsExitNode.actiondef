@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1529220633677, 
+    "Creator": "admin", 
+    "Description": "Check whether an IP address is used as an exit node or not", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[\"5.2.77.146\", \"185.86.151.21\"]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Tor", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1529220633677, 
+    "Name": "Is Exit Node", 
+    "Parameters": [], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom TorManager import TorManager\nimport json\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(\"Tor\")\n    use_ssl = conf.get('Use SSL', 'False')\n\n    if use_ssl.lower() == 'true':\n        use_ssl = True\n    else:\n        use_ssl = False\n\n    tor_manager = TorManager(use_ssl=use_ssl)\n\n    exit_nodes = []\n\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.ADDRESS:\n            try:\n                if tor_manager.is_exit_node(\n                        entity.identifier):\n                    exit_nodes.append(entity)\n\n            except Exception as e:\n                # An error occurred - skip entity and continue\n                siemplify.LOGGER.error(\n                    \"An error occurred on entity: {}.\\n{}.\".format(\n                        entity.identifier, str(e)))\n                siemplify.LOGGER.exception(e)\n\n    if exit_nodes:\n        entities_names = [entity.identifier for entity in exit_nodes]\n\n        output_message = 'Tor: The following entities are exit nodes :\\n' + '\\n'.join(\n            entities_names)\n        siemplify.end(output_message, json.dumps(entities_names))\n\n    else:\n        output_message = 'Tor: No entities are exit nodes.'\n        siemplify.end(output_message, json.dumps(exit_nodes))\n\n\nif __name__ == '__main__':\n    main()", 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 1.0
+}

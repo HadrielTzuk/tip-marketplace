@@ -1,0 +1,57 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244,
+    "Creator": "admin",
+    "Description": "Update note for the endpoint or detection.",
+    "Id": -1,
+    "IntegrationIdentifier": "Vectra",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Update Note",
+    "Parameters": [
+      {
+            "CreationTimeUnixTimeInMs": 1572450486,
+            "CustomActionId": -1,
+            "DefaultValue": "Endpoint",
+            "Description": "Select on which item type you want to update a note.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1572450486,
+            "Name": "Item Type",
+            "Type": 15,
+            "OptionalValues": [
+                "Endpoint",
+                "Detection"
+            ],
+            "Value": "Endpoint"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1572450486,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify ID of the detection/endpoint.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1572450486,
+            "Name": "Item ID",
+            "Type": 0,
+            "Value": ""
+        },
+                {
+            "CreationTimeUnixTimeInMs": 1572450486,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what note you want to have on the detection/endpoint.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1572450486,
+            "Name": "Note",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

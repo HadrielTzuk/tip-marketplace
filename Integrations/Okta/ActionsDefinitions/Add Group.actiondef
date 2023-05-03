@@ -1,0 +1,42 @@
+{
+    "Name": "Add Group",
+    "Description": "Add a group",
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import construct_csv, dict_to_flat\nfrom OktaManager import OktaManager\nimport json\n\n\nPROVIDER = \"Okta\"\nACTION_NAME = \"Okta - AddGroup\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    name = siemplify.parameters['Group Name']\n    description = siemplify.parameters.get('Group Description', '')\n    okta = OktaManager(api_root=conf['Api Root'], api_token=conf['Api Token'],\n                       verify_ssl=conf['Verify SSL'].lower() == 'true')\n    group = {}\n    profile = {}\n    profile['name'] = name\n    profile['description'] = description\n    try:\n        group = okta.add_group(profile)\n    except Exception as err:\n        siemplify.LOGGER.exception(err)\n        siemplify.LOGGER.error(err.message)\n        pass\n    if group:\n        output_message = \"A group with the name \\\"{}\\\" was successfully created.\".format(name)\n        flat_group = dict_to_flat(group)\n        csv_output = construct_csv([flat_group])\n        siemplify.result.add_data_table(\"Okta - Group \".format(name), csv_output)\n    else:\n        output_message = \"The group wasn't created.\"\n        try:\n            groups = okta.list_groups(q=profile['name'])\n            if isinstance(groups, list):\n                for g in groups:\n                    if g['profile']['name'] == profile['name']:\n                        flat_group = dict_to_flat(g)\n                        csv_output = construct_csv([flat_group])\n                        siemplify.result.add_data_table(\"Okta - Group {}\".format(name), csv_output)\n                        siemplify.end(\"The group already exists.\", json.dumps(g))\n            else:\n                flat_group = dict_to_flat(group)\n                csv_output = construct_csv([flat_group])\n                siemplify.result.add_data_table(\"Okta - Group {}\".format(name), csv_output)\n                siemplify.end(\"The group already exists.\", json.dumps(groups))\n        except Exception as err:\n            siemplify.LOGGER.exception(err)\n            siemplify.LOGGER.error(err.message)\n            pass\n    siemplify.end(output_message, json.dumps(group))\n\nif __name__ == '__main__':\n    main()",
+    "IntegrationIdentifier": "Okta",
+    "ScriptResultName": "ScriptResult",
+    "DynamicScriptResultNamesJson": "[\"ResultJson\"]",
+    "Creator": "System",
+    "IsEnabled": true,
+    "IsCustom": false,
+    "Version": 9.0,
+    "Parameters": [
+        {
+            "CustomActionId": 698,
+            "IsMandatory": true,
+            "DefaultValue": "",
+            "Description": "The name of the group in Okta",
+            "Name": "Group Name",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1548084076433,
+            "ModificationTimeUnixTimeInMs": 1548084076433
+        },
+        {
+            "CustomActionId": 698,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "The description for the group",
+            "Name": "Group Description",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1548084076439,
+            "ModificationTimeUnixTimeInMs": 1548084076439
+        }
+    ],
+    "Id": -1,
+    "CreationTimeUnixTimeInMs": 1548084076293,
+    "ModificationTimeUnixTimeInMs": 1548084076325,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

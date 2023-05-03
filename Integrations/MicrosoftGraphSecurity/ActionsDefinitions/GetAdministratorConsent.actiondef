@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1544542794634,
+    "Creator": "admin",
+    "Description": "Run the action and browse to the received url TO grant the permissions your app needs at the Azure portal",
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftGraphSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1544542794634,
+    "Name": "Get Administrator Consent",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1544542794636,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Use the redirect url you registered to request an authorization.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1544542794636,
+            "Name": "Redirect URL",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom MicrosoftGraphSecurityManager import MicrosoftGraphSecurityManager, URL_AUTHORIZATION\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n\r\n    conf = siemplify.get_configuration(\"MicrosoftGraphSecurity\")\r\n    client_id = conf[\"Client ID\"]\r\n    tenant = conf[\"Tenant\"]\r\n    redirect_uri = siemplify.parameters['Redirect URL']\r\n\r\n    url = URL_AUTHORIZATION.format(tenant=tenant, client_id=client_id, redirect_uri=redirect_uri)\r\n\r\n    siemplify.result.add_link(\"Browse to this authorization link\", url)\r\n    output_message = \"Your browser should be redirected with a code in the address bar. In order to complete the registration, run 'Generate Token' action with the received url in the address bar.\" if url else \"Failed to create an authorization url\"\r\n    result_value = 'true' if url else 'false'\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()",
+    "ScriptResultName": "is_connected",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

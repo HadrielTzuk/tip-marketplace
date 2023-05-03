@@ -1,0 +1,45 @@
+{
+    "Description": "AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure. CloudTrail provides event history of your AWS account activity, including actions taken through the AWS Management Console, AWS SDKs, command line tools, and other AWS services. This event history simplifies security analysis, resource change tracking, and troubleshooting. In addition, you can use CloudTrail to detect unusual activity in your AWS accounts. These capabilities help simplify operational analysis and troubleshooting.",
+    "DisplayName": "AWS Cloud Trail",
+    "Identifier": "AWSCloudTrail",
+    "PythonVersion": 2,
+    "Categories": [
+        "Cloud Security",
+        "Audit",
+        "Cloud",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "AWSCloudTrail",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Access Key ID",
+            "PropertyName": "AWS Access Key ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AWSCloudTrail",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Secret Key",
+            "PropertyName": "AWS Secret Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AWSCloudTrail",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Default Region",
+            "PropertyName": "AWS Default Region",
+            "PropertyType": "2",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/aws-cloud-trail",
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"><g><g><path d=\"M10.3,12c0,0.1,0.1,0.2,0.1,0.3c0.1,0.1,0.1,0.1,0.3,0.1v0h0.6c0.1,0,0.2,0,0.3-0.1c0.1-0.1,0.1-0.1,0.1-0.3l1.1-4.5l1.1,4.5c0,0.1,0.1,0.2,0.1,0.3c0.1,0.1,0.2,0.1,0.3,0.1h0.6c0.1,0,0.2,0,0.3-0.1c0.1,0,0.1-0.1,0.1-0.3L17,6.6c0-0.1,0-0.1,0.1-0.2c0,0,0-0.1,0-0.1c0-0.1-0.1-0.2-0.2-0.2h-0.7c-0.1,0-0.2,0-0.3,0.1c-0.1,0-0.1,0.1-0.1,0.3l-1.2,4.7l-1.1-4.7c0-0.1-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.3-0.1h-0.6c-0.1,0-0.2,0-0.3,0.1c-0.1,0-0.1,0.1-0.1,0.3L11,11.1L9.8,6.5c0-0.1-0.1-0.2-0.1-0.3C9.6,6.2,9.6,6.2,9.4,6.2H8.7c-0.1,0-0.2,0.1-0.2,0.2c0,0.1,0,0.1,0.1,0.3L10.3,12z M17.8,12.2c0.2,0.1,0.5,0.2,0.8,0.3c0.3,0.1,0.7,0.1,1.1,0.1c0.4,0,0.7-0.1,1-0.1c0.3-0.1,0.6-0.2,0.8-0.4c0.2-0.2,0.4-0.4,0.5-0.6c0.1-0.2,0.2-0.5,0.2-0.8c0-0.4-0.1-0.7-0.3-1c-0.2-0.3-0.6-0.5-1.1-0.7l-1-0.3c-0.4-0.1-0.6-0.3-0.8-0.4c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.3,0.1-0.5,0.3-0.6s0.5-0.2,0.9-0.2c0.5,0,0.9,0.1,1.3,0.3c0.1,0.1,0.2,0.1,0.3,0.1c0.1,0,0.2-0.1,0.2-0.2V6.8c0-0.1,0-0.2-0.1-0.2c0-0.1-0.1-0.1-0.2-0.2c-0.1,0-0.2-0.1-0.3-0.1c-0.1,0-0.3-0.1-0.4-0.1c-0.2,0-0.3-0.1-0.5-0.1c-0.2,0-0.3,0-0.5,0c-0.3,0-0.6,0-0.9,0.1c-0.3,0.1-0.5,0.2-0.7,0.4c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.8c0,0.4,0.1,0.7,0.3,1c0.2,0.3,0.6,0.5,1.1,0.7l1,0.3c0.3,0.1,0.6,0.2,0.7,0.4c0.1,0.1,0.2,0.3,0.2,0.5c0,0.3-0.1,0.5-0.4,0.7c-0.2,0.2-0.6,0.2-1,0.2c-0.3,0-0.5,0-0.8-0.1c-0.3-0.1-0.5-0.1-0.8-0.2c-0.1,0-0.1-0.1-0.2-0.1c0,0-0.1,0-0.1,0c-0.1,0-0.2,0.1-0.2,0.2v0.4c0,0.1,0,0.1,0,0.2C17.6,12,17.7,12.1,17.8,12.2z M6,8.8c-0.3,0-0.5-0.1-0.7-0.1c-0.7,0-1.3,0.2-1.7,0.5s-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.5,1.3c0.3,0.3,0.8,0.5,1.4,0.5c0.8,0,1.5-0.3,2.1-1C6.9,11.7,7,11.9,7,12c0.1,0.1,0.2,0.2,0.3,0.3c0.1,0.1,0.1,0.1,0.2,0.1c0.1,0,0.1,0,0.2-0.1l0.4-0.3c0.1-0.1,0.1-0.1,0.1-0.2c0-0.1,0-0.1-0.1-0.2c-0.1-0.2-0.2-0.4-0.2-0.5c-0.1-0.2-0.1-0.4-0.1-0.6h0V8.3c0-0.8-0.2-1.3-0.6-1.7C7,6.2,6.3,6,5.5,6c-0.4,0-0.7,0-1.1,0.1C4.1,6.2,3.8,6.3,3.5,6.5c-0.1,0-0.2,0.1-0.2,0.1c0,0.1-0.1,0.1-0.1,0.2v0.3c0,0.1,0,0.2,0.1,0.2c0,0,0.1,0,0.1,0c0.1,0,0.1,0,0.2-0.1C4,7.2,4.3,7.1,4.5,7C4.8,7,5.1,7,5.3,7c0.5,0,0.9,0.1,1.1,0.3c0.2,0.2,0.3,0.6,0.3,1.1v0.5C6.5,8.8,6.2,8.8,6,8.8z M6.8,10c0,0.2,0,0.4-0.1,0.6c0,0.2-0.1,0.3-0.2,0.4c-0.2,0.2-0.4,0.4-0.7,0.4c-0.3,0.1-0.5,0.1-0.7,0.1c-0.3,0-0.6-0.1-0.8-0.3c-0.2-0.2-0.3-0.4-0.3-0.7c0-0.3,0.1-0.6,0.3-0.8c0.2-0.2,0.6-0.3,1-0.3c0.2,0,0.4,0,0.7,0c0.2,0,0.4,0.1,0.6,0.1V10z M20.7,15.4c-2.6,1.1-5.4,1.6-7.9,1.6c-3.8,0-7.4-1-10.4-2.8c-0.3-0.2-0.4,0.1-0.2,0.3c2.7,2.5,6.4,4,10.4,4c2.9,0,6.2-0.9,8.5-2.6C21.4,15.7,21,15.3,20.7,15.4z M22.9,14.1c-0.3-0.3-2.4-0.6-3.7,0.3c-0.2,0.1-0.2,0.3,0.1,0.3c0.8-0.1,2.4-0.3,2.7,0.1c0.3,0.4-0.3,1.9-0.6,2.6c-0.1,0.2,0.1,0.3,0.3,0.1C22.8,16.6,23.2,14.4,22.9,14.1z\"/></g></g></svg>",
+    "Version": 3.0,
+    "MarketingDisplayName": "AWS Cloud Trail"
+}

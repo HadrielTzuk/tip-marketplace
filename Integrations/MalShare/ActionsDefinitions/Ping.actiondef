@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1526543678807,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "MalShare",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1526543678807,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom MalShareManager import MalShareManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    # Configuration.\n    conf = siemplify.get_configuration('MalShare')\n    api_key = conf['Api Key']\n    malshare = MalShareManager(api_key)\n\n    malshare.test_connectivity()\n\n    # If no exception occur - then connection is successful\n    siemplify.end(\"Connected successfully.\", 'true')\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_connect",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

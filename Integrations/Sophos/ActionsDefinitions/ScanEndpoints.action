@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1519312963015,
+    "Creator": "admin",
+    "Description": "Initiate a scan on endpoints in Sophos. Supported entities: IP Address, Hostname.",
+    "Id": -1,
+    "IntegrationIdentifier": "Sophos",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519312963015,
+    "Name": "Scan Endpoints",
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

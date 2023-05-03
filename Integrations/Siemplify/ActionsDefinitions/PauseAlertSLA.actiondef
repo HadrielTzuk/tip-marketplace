@@ -1,0 +1,28 @@
+{
+    "CreationTimeUnixTimeInMs": 1506521112194,
+    "Creator": "Admin",
+    "Description": "Automatically pause the alert SLA",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506521112194,
+    "Name": "Pause Alert SLA",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1510914848491,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Pause Reason",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1510914848491,
+            "Name": "Message",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

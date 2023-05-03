@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 16.75</h2><h5>Published on 05 January, 2022</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     AnomaliThreatStream\n    </b>\n   </li>\n   <ul>\n    <li>\n     AnomaliThreatStream\n    </li>\n    <ul>\n     <li>\n      NEW! New Integration Added - Anomali ThreatStream\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     FortinetFortiSIEM\n    </b>\n   </li>\n   <ul>\n    <li>\n     Fortinet FortiSIEM\n    </li>\n    <ul>\n     <li>\n      NEW! New integration added - Fortinet FortiSIEM.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     Exchange\n    </b>\n   </li>\n   <ul>\n    <li>\n     Exchange EML Connector\n    </li>\n    <ul>\n     <li>\n      Exchange EML Connector - Improved the logic behind subject extraction.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "16.75",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "05/01/22",
+    "Title": "Release Notes"
+}

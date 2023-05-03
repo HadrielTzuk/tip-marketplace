@@ -1,0 +1,40 @@
+    {
+    "CreationTimeUnixTimeInMs": 1543164953601,
+    "Creator": "admin",
+    "Description": "Mark ticket as spam in Zoho Desk.",
+    "Id": -1,
+    "IntegrationIdentifier": "ZohoDesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543164953601,
+    "Name": "Mark Ticket As Spam",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify an id of the ticket that needs to be marked as spam.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Ticket ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "Name": "Mark Contact",
+            "Type": 1,
+            "Value": true,
+            "DefaultValue": true,
+            "IsMandatory": false,
+            "Description": "If enabled, the contact that created the ticket will be marked as spammer.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

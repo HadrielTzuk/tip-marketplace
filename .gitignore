@@ -1,0 +1,12 @@
+.idea/*
+.vscode/*
+*.pyc
+.DS_Store
+venv/
+.pytest_cache/*
+*.iml
+
+# Lets exclude some coverage files
+htmlcov/
+.coverage
+/PythonSDK/

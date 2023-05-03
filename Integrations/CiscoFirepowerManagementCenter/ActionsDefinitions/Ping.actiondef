@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1528796950021,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "CiscoFirepowerManagementCenter",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1528796950021,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CiscoFirepowerManager import CiscoFirepowerManager\n\nINTEGRATION_PROVIDER = 'CiscoFirepower'\n\n\ndef main():\n\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(INTEGRATION_PROVIDER)\n    cisco_firepower_manager = CiscoFirepowerManager(conf['API Root'],\n                                                    conf['Username'],\n                                                    conf['Password'],\n                                                    conf['Verify SSL'])\n\n    # Invoke connection function.\n    result_value = cisco_firepower_manager.get_domain_uuid_and_update_headers()\n\n    if result_value:\n        output_message = 'Connection Established.'\n    else:\n        output_message = 'Connection Failed.'\n\n    siemplify.end(output_message, True)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is succeed",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

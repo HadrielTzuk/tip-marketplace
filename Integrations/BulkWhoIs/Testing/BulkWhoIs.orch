@@ -1,0 +1,75 @@
+{
+  "Identifier": "0ee8c9b9-d45c-469d-972a-799ad4ae44ee",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "BulkWhoIs",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "0153c425-6d8f-4bcf-a939-3993ae8a44ea",
+      "ParentWorkflowIdentifier": "0ee8c9b9-d45c-469d-972a-799ad4ae44ee",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "BulkWhoIs_WhoIs Details_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "BulkWhoIs_WhoIs Details",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "0153c425-6d8f-4bcf-a939-3993ae8a44ea",
+          "ParentWorkflowIdentifier": "0ee8c9b9-d45c-469d-972a-799ad4ae44ee",
+          "Name": "ScriptName",
+          "Value": "BulkWhoIs_WhoIs Details",
+          "CreationTimeUnixTimeInMs": 1519140549945,
+          "ModificationTimeUnixTimeInMs": 1519140549945
+        },
+        {
+          "ParentStepIdentifier": "0153c425-6d8f-4bcf-a939-3993ae8a44ea",
+          "ParentWorkflowIdentifier": "0ee8c9b9-d45c-469d-972a-799ad4ae44ee",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519140549945,
+          "ModificationTimeUnixTimeInMs": 1519140549945
+        },
+        {
+          "ParentStepIdentifier": "0153c425-6d8f-4bcf-a939-3993ae8a44ea",
+          "ParentWorkflowIdentifier": "0ee8c9b9-d45c-469d-972a-799ad4ae44ee",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519140549945,
+          "ModificationTimeUnixTimeInMs": 1519140549945
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519140549945,
+      "ModificationTimeUnixTimeInMs": 1519140549945
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "b14633f9-0e55-447d-8607-42f631e56445",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "0ee8c9b9-d45c-469d-972a-799ad4ae44ee",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "BulkWhoIs",
+      "AllEnvironments": "",
+      "Id": 41,
+      "CreationTimeUnixTimeInMs": 1519140549945,
+      "ModificationTimeUnixTimeInMs": 1519140549945
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 41,
+  "CreationTimeUnixTimeInMs": 1519140549945,
+  "ModificationTimeUnixTimeInMs": 1519140549945
+}

@@ -1,0 +1,40 @@
+{
+    "CreationTimeUnixTimeInMs": 1543229155761,
+    "Creator": "Admin",
+    "Description": "Remove users from the private channel in Microsoft Teams. Supported entities: Username, Email Address (username that matches email regex).",
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftTeams",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543229155761,
+    "Name": "Remove Users From Channel",
+    "Parameters": [
+        {
+            "Name": "Team Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the team in which you want to search for the channel.",
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Channel Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify a name of the channel in which you want to remove users.",
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}"
+}

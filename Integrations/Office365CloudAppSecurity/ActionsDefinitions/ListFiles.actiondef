@@ -1,0 +1,81 @@
+{
+    "IntegrationIdentifier": "Office365CloudAppSecurity",
+    "Id": -1,
+    "Creator": "admin",
+    "Name": "List Files",
+    "Description": "List available files in Microsoft Cloud App Security.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"_id\":\"62d006xxxxxxxxx\",\"_tid\":80000000,\"appId\":20000000,\"id\":\"3a5a3xxxxxxxxxxxxxxxx\",\"alternateLink\":\"https://siemplifycyarx.sharepoint.com/sites/HDB/SiteAssets/__siteIcon__.jpg\",\"collaborators\":[{\"id\":\"xx\",\"name\":\"HDB Owners\",\"role\":1,\"accessLevel\":1,\"type\":2}],\"createdDate\":1657786571000,\"driveId\":\"3a5a3xxxxxxxxxxxxxxxx\",\"effectiveParents\":[\"3a5a3xxxxxxxxxxxxxxxx\",\"3a5a3xxxxxxxxxxxxxxxx\"],\"emails\":[],\"externalShares\":[],\"facl\":1,\"fileAccessLevel\":[1,\"INTERNAL\"],\"fileExtension\":\"jpg\",\"filePath\":\"/sites/HDB/SiteAssets/__siteIcon__.jpg\",\"fileSize\":12096,\"fileStatus\":[0,\"EXISTS\"],\"fileType\":[5,\"IMAGE\"],\"fstat\":0,\"ftype\":5,\"groupIds\":[\"/sites/HDB|3\",\"/sites/HDB|4\",\"/sites/HDB|5\"],\"groups\":[\"HDB Owners\",\"HDB Members\",\"HDB Visitors\"],\"instId\":0,\"isFolder\":false,\"isForeign\":false,\"listId\":\"c85fexxxxxxxxxxx\",\"mimeType\":\"image/jpeg\",\"modifiedDate\":1659960775000,\"name\":\"__siteIcon__.jpg\",\"name_l\":\"__siteicon__.jpg\",\"noGovernance\":false,\"ownerExternal\":false,\"ownerName\":\"System Account\",\"parentId\":\"3a5a3xxxxxxxxxxxxxxxx\",\"parentIds\":[\"3a5a3xxxxxxxxxxxxxxxx\"],\"saasId\":2000000,\"scanVersion\":4,\"sharepointItem\":{\"Author\":{\"Email\":\"\",\"LoginName\":\"SHAREPOINT\\\\system\",\"Title\":\"System Account\",\"externalUser\":false,\"idInSiteCollection\":\"107xxxxxxx\",\"name\":\"System Account\",\"sipAddress\":\"\",\"sourceBitmask\":0},\"UniqueId\":\"28057xxxxxxxxx\",\"hasUniqueRoleAssignments\":false},\"siteCollection\":\"/sites/HDB\",\"siteCollectionId\":\"3a5axxxxxxxxxxxx\",\"sitePath\":\"/sites/HDB\",\"snapshotLastModifiedDate\":\"2022-08-08T19:25:54.766Z\",\"spDomain\":\"https://siemplifycyarx.sharepoint.com\",\"unseenScans\":0,\"originalId\":\"62d0xxxxxxxxxx\",\"dlpScanResults\":[],\"fTags\":[],\"enriched\":true,\"display_collaborators\":[{\"label\":\"Group: HDB Owners\",\"type\":\"group\",\"id\":\"HDB Owners\",\"allowRemoveCollaborator\":true},{\"label\":\"Group: HDB Members\",\"type\":\"group\",\"id\":\"HDB Members\",\"allowRemoveCollaborator\":true},{\"label\":\"Group: HDB Visitors\",\"type\":\"group\",\"id\":\"HDB Visitors\",\"allowRemoveCollaborator\":true}],\"appName\":\"Microsoft SharePoint Online\",\"actions\":[{\"task_name\":\"RemoveCollaboratorPermissionFileTask\",\"display_title\":\"TASKS_ADALIBPY_REMOVE_COLLABORATOR_PERMISSION_FILE_CHANGE_USER_DISPLAY_TITLE\",\"type\":\"file\",\"governance_type\":\"collaborator\",\"bulk_support\":false,\"has_icon\":true,\"display_description\":{\"template\":\"TASKS_ADALIBPY_REMOVE_COLLABORATOR_PERMISSION_FILE_CHANGE_USER_DISPLAY_DESCRIPTION_EXTENDED\",\"parameters\":{\"fileType\":{\"template\":\"ENUM_FILE_TYPE_FILE\"},\"fileName\":\"__siteIcon__.jpg\"}},\"bulk_display_description\":null,\"preview_only\":false,\"display_alert_text\":null,\"display_alert_success_text\":null,\"is_blocking\":null,\"confirm_button_style\":\"red\",\"optional_notify\":null,\"uiGovernanceCategory\":2,\"alert_display_title\":null,\"confirmation_button_text\":null,\"confirmation_link\":null}]}]",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "Name": "Filter Key",
+            "Type": 15,
+            "DefaultValue": "Select One",
+            "Value": "Select One",
+            "IsMandatory": false,
+            "Description": "Specify the key that needs to be used to filter files. Possible values for \"File Type\": Other, Document, Spreadsheet, Presentation, Text, Image, Folder. Possible values for \"Share Status\": Public (Internet), Public, External, Internal, Private.",
+            "OptionalValues": [
+                "Select One",
+                "ID",
+                "Filename",
+                "File Type",
+                "Share Status"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Filter Logic",
+            "Type": 15,
+            "DefaultValue": "Not Specified",
+            "Value": "Not Specified",
+            "IsMandatory": false,
+            "Description": "Specify what filter logic should be applied. Filtering logic is working based on the value  provided in the \"Filter Key\" parameter. Note: only File Name and ID work with Contains logic.",
+            "OptionalValues": [
+                "Not Specified",
+                "Equal",
+                "Contains"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Filter Value",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what value should be used in the filter. If \"Equal\" is selected, action will try to find the exact match among results and if \"Contains\" is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the value  provided in the \"Filter Key\" parameter.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Records To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many records to return. If nothing is provided, action will return 50 records. Note: for contains logic, action will only look at 1000 results for matching.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

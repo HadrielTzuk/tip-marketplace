@@ -1,0 +1,74 @@
+{
+    "Description": "McAfee MVISION Endpoint Detection and Response (MVISION EDR) is a cloud-delivered service that enables you to detect advanced device threats, fully investigate, and quickly respond. Continuous data collection and advanced analytics detect suspicious behavior.",
+    "DisplayName": "McAfee Mvision EDR V2",
+    "Identifier": "McAfeeMvisionEDRV2",
+    "ImageBase64": "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",
+    "PythonVersion": 2,
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "McAfeeMvisionEDRV2",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "6",
+            "Value": "https://api.mvision.mcafee.com"
+        },
+        {
+            "IntegrationIdentifier": "McAfeeMvisionEDRV2",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeMvisionEDRV2",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client Secret",
+            "PropertyName": "Client Secret",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeMvisionEDRV2",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeMvisionEDRV2",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Scopes",
+            "PropertyName": "Scopes",
+            "PropertyType": "2",
+            "Value": "epo.device.r epo.device.w epo.evt.r epo.taggroup.r epo.taggroup.w epo.tags.r epo.tags.w mi.user.investigate soc.inv.ade"
+        },
+        {
+            "IntegrationIdentifier": "McAfeeMvisionEDRV2",
+            "IsMandatory": true,
+            "PropertyDisplayName": "IAM Root",
+            "PropertyName": "IAM Root",
+            "PropertyType": "6",
+            "Value": "https://iam.mcafee-cloud.com"
+        },
+        {
+            "IntegrationIdentifier": "McAfeeMvisionEDRV2",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "IsAvailableForCommunity": false,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?> <!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --> <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"> <path d=\"M4.5,22C4.2,22,4,21.8,4,21.5V3.5C4,3.2,4.2,3,4.5,3h3.7c0.3,0,0.5,0.1,0.6,0.3l3.6,13.1c0,0.1,0.1,0.1,0.1,0.1 c0.1,0,0.1,0,0.1-0.1l3.6-13.1C16.4,3.1,16.6,3,16.8,3h3.7C20.8,3,21,3.2,21,3.5v18.1c0,0.3-0.2,0.5-0.5,0.5h-2 c-0.3,0-0.5-0.2-0.5-0.5V8.2C18.1,8.1,18,8,18,8c0,0-0.1,0-0.1,0.1l-4.2,13.5c-0.1,0.2-0.3,0.3-0.6,0.3h-1.2c-0.3,0-0.5-0.1-0.6-0.3 L7.1,8.1C7.1,8,7.1,8,7,8c0,0-0.1,0.1-0.1,0.1v13.4c0,0.3-0.2,0.5-0.5,0.5H4.5z\"/></svg>",
+    "Version": 1.0,
+    "MarketingDisplayName": ""
+}

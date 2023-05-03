@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1521982947910, 
+    "Creator": "admin", 
+    "Description": "Reconnect a disconnected agent to the network", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SentinelOne", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1521982947910, 
+    "Name": "Reconnect Agent To The Network", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SentinelOneManager import SentinelOneManager\nfrom SiemplifyDataModel import EntityTypes\n\n\n# Consts.\nSENTINEL_ONE_PROVIDER = 'SentinelOne'\nADDRESS = EntityTypes.ADDRESS\nHOSTNAME = EntityTypes.HOSTNAME\n\n\ndef main():\n    # Define variables.\n    entities_successed = []\n    result_value = False\n    # Configuration.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(SENTINEL_ONE_PROVIDER)\n    sentinel_one_manager = SentinelOneManager(conf['Api Root'], conf['Username'], conf['Password'])\n\n    # Get scope entities.\n    scope_entities = [entity for entity in siemplify.target_entities if entity.entity_type == ADDRESS or\n                      entity.entity_type == HOSTNAME]\n\n    # Initiate full scan.\n    for entity in scope_entities:\n        if entity.entity_type == ADDRESS:\n            action_status = sentinel_one_manager.reconnect_agent_to_network(entity.identifier, is_ip_address=True)\n        else:\n            action_status = sentinel_one_manager.reconnect_agent_to_network(entity.identifier)\n\n        if action_status:\n            result_value = True\n            entities_successed.append(entity)\n\n    # Form output message.\n    if entities_successed:\n        output_message = 'The following entities were reconnected from the network: {0}'.format(\n            \",\".join([entity.identifier for entity in entities_successed]))\n    else:\n        output_message = 'No target entities were reconnected from the network.'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

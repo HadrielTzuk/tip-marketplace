@@ -1,0 +1,17 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Unisolate endpoints in Trend Micro Apex Central. Supported entities: IP Address, Hostname, MAC Address. Note: this action can take several minutes to finish, so consider increasing the timeout in the IDE.",
+    "Id": -1,
+    "IntegrationIdentifier": "TrendMicroApexCentral",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Unisolate Endpoints",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\",\"HOSTNAME\",\"MacAddress\"]}",
+    "IsAsync": true
+}

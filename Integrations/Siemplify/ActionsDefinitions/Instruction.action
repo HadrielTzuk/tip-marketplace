@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1519551480800,
+    "Creator": "admin",
+    "Description": "Set an instruction for the analyst",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519551480800,
+    "Name": "Instruction",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519558829875,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Instruction content.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519558829875,
+            "Name": "Instruction",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

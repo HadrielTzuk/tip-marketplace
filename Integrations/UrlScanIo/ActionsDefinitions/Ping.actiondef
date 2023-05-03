@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1523801138757,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "UrlScanIo",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1523801138757,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from UrlScanManager import UrlScanManager\nfrom SiemplifyAction import SiemplifyAction\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('UrlScan')\n    api_key = conf.get('ApiKey')\n    url_scan_manager = UrlScanManager(api_key)\n\n    is_connected = url_scan_manager.test_connectivity()\n\n    if is_connected:\n        output_message = \"Connection Established\"\n        result_value = 'true'\n    else:\n        output_message = \"Connection Failed\"\n        result_value = 'false'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

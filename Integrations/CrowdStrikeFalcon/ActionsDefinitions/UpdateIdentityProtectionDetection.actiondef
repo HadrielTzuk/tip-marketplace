@@ -1,0 +1,66 @@
+{
+    "Id": -1,
+    "Creator": "Admin",
+    "IntegrationIdentifier": "CrowdStrikeFalcon",
+    "Name": "Update Identity Protection Detection",
+    "Description": "Update an identity protection detection in Crowdstrike. Note: this action requires an Identity Protection license.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 1560871511871,
+    "ModificationTimeUnixTimeInMs": 1560871511871,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"added_privileges\":[\"DomainAdminsRole\"],\"aggregate_id\":\"aggind:27fe4e476ca3490b8476b2xxxxx:xxxxxxxx-xxxx-xxxx-xxxx-4ED8DB047549\",\"cid\":\"27fxxxxxxxxxxxxxxxxxxxxxa74\",\"composite_id\":\"27fe4e4xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-4ED8DB047549\",\"confidence\":20,\"context_timestamp\":\"2022-11-15T12:58:15.629Z\",\"crawl_edge_ids\":{\"Sensor\":[\"N6KIxxxxxxxxxCA4lr/\"]},\"crawl_vertex_ids\":{\"Sensor\":[\"ind:27fe4e47xxxxxxxxxxxxxxxxxxxxxxxxxxxx4ED8DB047549\"]},\"crawled_timestamp\":\"2022-11-15T13:58:17.251061883Z\",\"created_timestamp\":\"2022-11-15T12:59:17.239585706Z\",\"description\":\"A user received new privileges\",\"display_name\":\"Privilege escalation (user)\",\"end_time\":\"2022-11-15T12:58:15.629Z\",\"falcon_host_link\":\"https://falcon.crowdstrike.com/identity-protection/detections/nd:27fe4e476caxxxxxxxxxxxxxxxxxxxxxxxxxxxxED8DB047549\",\"id\":\"ind:27fe4e476caxxxxxxxxxxxxxxxxxxxxxxxxxxxxED8DB047549\",\"name\":\"IdpEntityPrivilegeEscalationUser\",\"objective\":\"Gain Access\",\"pattern_id\":51113,\"previous_privileges\":\"0\",\"privileges\":\"8321\",\"product\":\"idp\",\"scenario\":\"privilege_escalation\",\"severity\":2,\"show_in_ui\":true,\"source_account_domain\":\"test\",\"source_account_name\":\"Mailbox438\",\"source_account_object_sid\":\"S-1-5-21-3479765008-4256118348-3151044947-3595\",\"start_time\":\"2022-11-15T12:58:15.629Z\",\"status\":\"new\",\"tactic\":\"Privilege Escalation\",\"tactic_id\":\"TA0xxx\",\"tags\":[\"red_team\"],\"technique\":\"Valid Accounts\",\"technique_id\":\"Txxx8\",\"timestamp\":\"2022-11-15T12:58:17.239Z\",\"type\":\"idp-user-endpoint-app-info\",\"updated_timestamp\":\"2023-03-03T10:24:48.744735285Z\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Detection ID",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the ID of the detection that needs to be updated.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "ModificationTimeUnixTimeInMs": 1516389592057
+        },
+        {
+            "Name": "Status",
+            "Type": 15,
+            "Value": "Select One",
+            "DefaultValue": "Select One",
+            "IsMandatory": false,
+            "Description": "Specify the status for the detection.",
+            "OptionalValues": [
+                "Select One",
+                "Closed",
+                "In Progress",
+                "New",
+                "Reopened"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "ModificationTimeUnixTimeInMs": 1516389592057
+        },
+        {
+            "Name": "Assign To",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specify the name of the analyst to whom the detection needs to be assigned. If \"Unassign\" is provided, action will remove assignment from the detection. Note: API will accept any value that is provided, even if the underlying user doesn't exist.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "ModificationTimeUnixTimeInMs": 1516389592057
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "TimeoutSeconds": 600,
+    "Version": 1.0
+}

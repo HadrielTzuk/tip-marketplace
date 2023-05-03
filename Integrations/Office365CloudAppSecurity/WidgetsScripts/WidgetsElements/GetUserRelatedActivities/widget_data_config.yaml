@@ -1,0 +1,54 @@
+### Json Structure Params ###
+json_result_has_entities: yes
+entity_result_list_path: EntityResult
+
+### HTML Structure Params ###
+main_text_singular: RELATED ACTIVITY FOUND
+main_text_plural: RELATED ACTIVITIES FOUND
+
+import_svg_from_integration: yes
+
+### Table Structure Params ###
+table_data:
+  - header: Activity Name
+    th_style:
+      width: 30%
+    value:
+      keys_to_display:
+        - description
+
+  - header: Severity
+    th_style:
+      width: 10%
+    value:
+      keys_to_display:
+        - severity
+
+  - header: IP
+    th_style:
+      width: 15%
+    value:
+      keys_to_display:
+        - device.clientIP
+
+  - header: User
+    value:
+      keys_to_display:
+        - user.userName
+
+  - header: Application
+    value:
+      keys_to_display:
+        - appName
+
+  - header: Country
+    th_style:
+      width: 10%
+    value:
+      keys_to_display:
+        - device.countryCode
+
+  - header: User Agent
+    value:
+      keys_to_display:
+        - device.userAgent

@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1521378304285,
+    "Creator": "admin",
+    "Description": "Test connectivity to the LogRhythm with parameters provided at the integration configuration page on the Marketplace tab.",
+    "Id": -1,
+    "IntegrationIdentifier": "LogRhythm",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1521378304285,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

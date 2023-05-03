@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1525002829777,
+    "Creator": "admin",
+    "Description": "Check if a key is listed in a specific reference map. ",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"last_seen\":1586154232667,\"key\":\"1001\",\"first_seen\":1586154232667,\"source\":\"reference data api\",\"value\":\"jack\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "QRadar",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1525002829777,
+    "Name": "Lookup for a Key in Reference Map",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1525002829777,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The name of the reference map to check a key.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1525002829777,
+            "Name": "Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525002829777,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The key to check in a referenced map.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1525002829777,
+            "Name": "Key",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

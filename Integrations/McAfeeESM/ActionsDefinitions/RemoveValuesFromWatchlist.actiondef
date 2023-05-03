@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1572450486,
+    "Creator": "admin",
+    "Description": "Remove values from a watchlist in McAfee ESM.",
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeESM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1572450486,
+    "Name": "Remove Values From Watchlist",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1572450486,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the watchlist that needs to be updated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1572450486,
+            "Name": "Watchlist Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1572450486,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of values that need to be removed from a watchlist.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1572450486,
+            "Name": "Values to Remove",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

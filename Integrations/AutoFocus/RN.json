@@ -1,0 +1,59 @@
+[
+    {
+        "ChangeDescription": "Added support for Unicode data",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "AutoFocus",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2684"
+    },
+    {
+        "ChangeDescription": "Results coming from all Autofocus \"hunt\" actions will be returned in a JSON format.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "AutoFocus",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2999"
+    },
+    {
+        "ChangeDescription": "Fixed a bug in all Autofocus \"hunt\" actions that prevented proper display of tables.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "AutoFocus",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2839"
+    },
+    {
+        "ChangeDescription": "Applied \"Results Limit\" to table rows in all Autofocus \"hunt\" actions.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "AutoFocus",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1589864814,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2742"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "AutoFocus",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    }
+]

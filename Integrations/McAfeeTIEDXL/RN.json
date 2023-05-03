@@ -1,0 +1,49 @@
+[
+    {
+        "ChangeDescription": "Added missing Linux dependency",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "McAfee TIE",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-566"
+    },
+    {
+        "ChangeDescription": "Fixed the enrichment logic and added JSON results",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Get File Reputation",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1593317912,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3635"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "McAfee TIE",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Added the ability to enrich with all reputations using a new parameter 'Enrich with all services'",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Get File Reputation",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1605622658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5640"
+    }
+]

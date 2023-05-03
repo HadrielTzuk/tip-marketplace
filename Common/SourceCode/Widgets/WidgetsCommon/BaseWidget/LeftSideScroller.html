@@ -1,0 +1,106 @@
+{% import 'CommonScripts.html' as common_scripts %}
+<style>
+{% macro get_left_scroller_styles() %}
+.left-side {
+    padding-right: 8px;
+    max-width: 180px;
+    min-width: 180px;
+    width: 180px;
+
+    overflow: scroll;
+}
+
+.left-menu-item {
+    font-family: var(--widget-text-font);
+    font-weight: var(--font-weight-regular);
+    font-style: var(--widget-font-style);
+    font-size: var(--font-size-medium);
+
+    color: var(--dark-gray-200);
+
+    padding-left: 10px;
+    line-height: 38px;
+    height: 38px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+}
+
+.left-menu-item.active {
+    background: var(--dark-gray-500);
+
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-medium);
+
+    color: var(--dark-gray-100);
+}
+{%- endmacro -%}
+
+
+</style>
+{% macro get_left_side_scroller_html() %}
+<div class="left-side" id="left-menu"></div>
+{%- endmacro -%}
+<script>
+
+
+{% macro _get_function_createLeftMenu(display_value) %}
+function createLeftMenu() {
+    let string = "";
+    actionListData.forEach((el, index) => {
+        const displayValue = {{ display_value }};
+        const cleanDisplayValue = removeSpecialSymbols(displayValue) +
+            "_" +
+            Math.floor(Math.random() * 1_000_000_000_000_000);
+
+        index ?
+            string += `<div class="left-menu-item" id="${cleanDisplayValue}">${displayValue}</div>` :
+            string += `<div class="left-menu-item active" id="${cleanDisplayValue}">${displayValue}</div>`;
+    });
+
+    $("#left-menu").html(string);
+}
+{%- endmacro -%}
+
+
+{# This macro needs to be called in a "call" block to define what would happen on a click #}
+{% macro add_left_side_scroller_logic(json_result_has_entities, json_result_list, value_to_display) %}
+        entityDisplayed(actionListData[0]);
+
+        createLeftMenu();
+
+        $(".left-side").click(event => {
+            const arrayLeftSide = $(".left-menu-item");
+            const id = event.target.id;
+
+            $.each(arrayLeftSide, (key, value) => {
+                if (value.id === id) {
+                    $(`#${value.id}`).addClass("active");
+                } else {
+                    $(`#${value.id}`).removeClass("active");
+                }
+            });
+
+            const object = actionListData.find(el => {
+                if ({{ value_to_display }}) {
+                    return removeSpecialSymbols({{ value_to_display }}) === id.split("_")[0];
+                }
+            });
+
+            entityDisplayed(object);
+
+            $("#right-menu").scrollTop(0);
+        });
+
+        function entityDisplayed(el) {
+    {{ caller() | indent }}
+        }
+
+        {{ _get_function_createLeftMenu(value_to_display) | indent(8) }}
+
+        {{ common_scripts.get_function_removeSpecialSymbols() | indent(8) }}
+{% endmacro -%}
+</script>

@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1514193714040, 
+    "Creator": "admin", 
+    "Description": "Get malicious domains for an IP address", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"192.168.0.2\": [\"d.applovin.com.doesntexist.com\", \"atdmt.com.doesntexist.com\", \"adservice.google.com.doesntexist.com\"]}", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "CiscoUmbrella", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1514193714040, 
+    "Name": "Get Malicious Domains", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

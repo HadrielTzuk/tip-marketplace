@@ -1,0 +1,63 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List available policies in Tenable.io.",
+    "Id": -1,
+    "IntegrationIdentifier": "TenableIO",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Policies",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"no_target\":\"false\",\"template_uuid\":\"731a8e52-3ea6-a291-ec0a-d2ff0619cxxxxxxxxxxxxxxxxxx\",\"description\":null,\"name\":\"Koko\",\"owner\":\"hparker@siemplify.co\",\"visibility\":\"private\",\"shared\":0,\"user_permissions\":128,\"last_modification_date\":1625744218,\"creation_date\":1625744218,\"owner_id\":2,\"id\":73},{\"no_target\":\"false\",\"template_uuid\":\"731a8e52-3ea6-a291-ec0a-d2ff0619cxxxxxxxxxxxxxxxxx\",\"description\":null,\"name\":\"Koko_01\",\"owner\":\"hparker@siemplify.co\",\"visibility\":\"private\",\"shared\":0,\"user_permissions\":128,\"last_modification_date\":1625744230,\"creation_date\":1625744230,\"owner_id\":2,\"id\":74}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1554655351176,
+            "CustomActionId": -1,
+            "DefaultValue": "Equal",
+            "Description": "Specify what filter logic should be applied.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1554655351176,
+            "Name": "Filter Logic",
+            "Type": 15,
+            "OptionalValues": [
+                "Equal",
+                "Contains"
+            ],
+            "Value": "Equal"
+        },
+        {
+            "Name": "Filter Value",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what value should be used in the filter. If \"Equal\" is selected, action will try to find the exact match among record types and if \"Contains\" is selected, action will try to find items that contain that substring. If nothing is provided in this parameter, the filter will not be applied.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Policies To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many policies to return. Default: 50. Max: 100.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

@@ -1,0 +1,249 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 12.6</h2><h5>Published on 02 June, 2020</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     McAfeeMvisionEDR
+    </b>
+   </li>
+   <ul>
+    <li>
+     McAfee Mvision EDR
+    </li>
+    <ul>
+     <li>
+      NEW! NEW! McAfee Mvision EDR integration
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Splunk
+    </b>
+   </li>
+   <ul>
+    <li>
+     Splunk
+    </li>
+    <ul>
+     <li>
+      Added support for token authentication.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     VirusTotal
+    </b>
+   </li>
+   <ul>
+    <li>
+     VirusTotal
+    </li>
+    <ul>
+     <li>
+      Added dedicated error messages for reaching API request limit in all actions.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     APIVoid
+    </b>
+   </li>
+   <ul>
+    <li>
+     Get Ip Reputation
+    </li>
+    <ul>
+     <li>
+      Updated action logic to skip internal IPs.
+     </li>
+     <li>
+      Updated action logic to prevent it from failing because of a single entity failure. Action will be considered as successful if at least one entity is enriched.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     CiscoAMP
+    </b>
+   </li>
+   <ul>
+    <li>
+     Get Computers By Network Activity (Ip)
+    </li>
+    <ul>
+     <li>
+      Fixed a bug that caused the action to always output a success message, even if it didn't find any information.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     CiscoUmbrella
+    </b>
+   </li>
+   <ul>
+    <li>
+     Get Whois
+    </li>
+    <ul>
+     <li>
+      Fixed a parsing issue that caused the action to fail.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     SymantecATP
+    </b>
+   </li>
+   <ul>
+    <li>
+     Add Comment To Incident
+    </li>
+    <ul>
+     <li>
+      Fixed a bug, where action wouldn't work even with valid action parameters.
+     </li>
+    </ul>
+    <li>
+     Enrich File Hash
+    </li>
+    <ul>
+     <li>
+      Fixed a bug, where action wouldn't work even with valid hashes.
+     </li>
+    </ul>
+    <li>
+     Get Events Free Query
+    </li>
+    <ul>
+     <li>
+      Fixed a bug, where action wouldn't work with valid queries.
+     </li>
+    </ul>
+    <li>
+     Close Incident Action
+    </li>
+    <ul>
+     <li>
+      Fixed a bug, where action wouldn't work with valid action parameters.
+     </li>
+    </ul>
+    <li>
+     Get Events Free Entity
+    </li>
+    <ul>
+     <li>
+      Fixed a bug, where action wouldn't work even with valid action parameters.
+     </li>
+    </ul>
+    <li>
+     Add To WhiteList
+    </li>
+    <ul>
+     <li>
+      Added a special message that Symantec ATP doesn't support MD5 hashes in whitelist.
+     </li>
+    </ul>
+    <li>
+     Isolate Endpoint
+    </li>
+    <ul>
+     <li>
+      Fixed a bug, where action wouldn't find the existing host.
+     </li>
+    </ul>
+    <li>
+     Rejoin Endpoint
+    </li>
+    <ul>
+     <li>
+      Fixed a bug, where action wouldn't find the existing host.
+     </li>
+    </ul>
+    <li>
+     Update Incident Resolution
+    </li>
+    <ul>
+     <li>
+      NEW! New action Update Incident Resolution
+     </li>
+    </ul>
+    <li>
+     Delete BlackList Policy
+    </li>
+    <ul>
+     <li>
+      NEW! New action Delete BlackList Policy
+     </li>
+    </ul>
+    <li>
+     Get Incident Comments
+    </li>
+    <ul>
+     <li>
+      NEW! New action Get Incident Comments
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     VirusTotal
+    </b>
+   </li>
+   <ul>
+    <li>
+     Get Domain Report
+    </li>
+    <ul>
+     <li>
+      Fixed a bug that caused the action to fail on entities that don't have categories in the VirusTotal report.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     XForce
+    </b>
+   </li>
+   <ul>
+    <li>
+     Get IP Malware
+    </li>
+    <ul>
+     <li>
+      Fixed a bug in CSV table building that caused the action to fail on non-malicious IPs.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     SymantecATP
+    </b>
+   </li>
+   <ul>
+    <li>
+     Symantec ATP - Incidents Connector
+    </li>
+    <ul>
+     <li>
+      NEW! New connector "Incident Connector"
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

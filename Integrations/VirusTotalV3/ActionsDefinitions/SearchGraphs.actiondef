@@ -1,0 +1,67 @@
+{
+    "CreationTimeUnixTimeInMs": "1570446244",
+    "Creator": "admin",
+    "Description": "Search graphs based on custom filters in VirusTotal.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"attributes\": {\"graph_data\": {\"description\": \"WannaCry\", \"version\": \"5.0.0\"}}, \"id\": \"g8a8c71844d5444f98fd3ef10e3ccc94f894c32f05f86417cbxxxxx\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "VirusTotalV3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Search Graphs",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the query filter for the graph. Please refer to the documentation portal for more details.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Query",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "Name",
+            "Description": "Specify what should be the sort field.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Sort Field",
+            "Type": 15,
+            "OptionalValues": [
+                "Name",
+                "Owner",
+                "Creation Date",
+                "Last Modified Date",
+                "Views Count",
+                "Comments Count"
+            ],
+            "Value": "Name"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "10",
+            "Description": "Specify how many graphs to return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Max Graphs To Return",
+            "Type": 0,
+            "Value": "10"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Type": 0,
+    "Version": 1.0
+}

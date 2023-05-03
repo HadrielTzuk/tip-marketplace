@@ -1,0 +1,36 @@
+{
+    "CreationTimeUnixTimeInMs": 1527004402683,
+    "Creator": "Siemplify System",
+    "Description": "Collect cases and connector logs from Publisher.",
+    "Id": -1,
+    "Integration": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "IsSystem": true,
+    "ModificationTimeUnixTimeInMs": 1527004402683,
+    "Name": "Cases Collector DB",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527521072245,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1527521072245,
+            "Name": "Publisher Id",
+            "Type": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1527521072245,
+            "DefaultValue": "False",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1527521072245,
+            "Name": "Verify SSL",
+            "Type": 0
+        }
+    ],
+    "RunIntervalInSeconds": 60,
+    "Version": 1
+}

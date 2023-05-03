@@ -1,0 +1,83 @@
+{
+    "CreationTimeUnixTimeInMs": 1525009522717,
+    "Creator": "System",
+    "Description": "Execute a predefined AQL query to find flows related to the specified Siemplify IP address entity.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"10.0.xx.xx\", \"EntityResult\": [{\"destinationflags\": 27, \"destinationpackets\": 4.0, \"sourcebytes\": 902.0, \"protocolid\": \"xx\", \"sourceip\": \"10.0.xx.xx\", \"destinationbytes\": 381.0, \"lastpackettime\": 1611130664808, \"sourceflags\": 27, \"sourcepackets\": 6.0, \"qid\": \"5325xxx\", \"flowtype\": 0, \"destinationip\": \"172.30.xx.xx\", \"firstpackettime\": 1611130663789, \"category\": 18448}, {\"destinationflags\": 26, \"destinationpackets\": 20.0, \"sourcebytes\": 7238.0, \"protocolid\": \"xx\", \"sourceip\": \"10.0.xx.xx\", \"destinationbytes\": 34133.0, \"lastpackettime\": 1611130667352, \"sourceflags\": 26, \"sourcepackets\": 22.0, \"qid\": \"5325xxx\", \"flowtype\": 0, \"destinationip\": \"172.30.xx.xx\", \"firstpackettime\": 1611130664473, \"category\": 18448}, {\"destinationflags\": 27, \"destinationpackets\": 11.0, \"sourcebytes\": 903.0, \"protocolid\": \"xx\", \"sourceip\": \"10.0.xx.xx\", \"destinationbytes\": 799.0, \"lastpackettime\": 1611130662089, \"sourceflags\": 27, \"sourcepackets\": 6.0, \"qid\": \"5325xxx\", \"flowtype\": 0, \"destinationip\": \"172.30.xx.xx\", \"firstpackettime\": 1611130628768, \"category\": 18448}, {\"destinationflags\": 16, \"destinationpackets\": 1.0, \"sourcebytes\": 64.0, \"protocolid\": \"xx\", \"sourceip\": \"10.0.xx.xx\", \"destinationbytes\": 58.0, \"lastpackettime\": 1611130622755, \"sourceflags\": 17, \"sourcepackets\": 1.0, \"qid\": \"5325xxx\", \"flowtype\": 0, \"destinationip\": \"172.30.xx.xx\", \"firstpackettime\": 1611130598337, \"category\": 18448}, {\"destinationflags\": 27, \"destinationpackets\": 16.0, \"sourcebytes\": 2078.0, \"protocolid\": \"xx\", \"sourceip\": \"10.0.xx.xx\", \"destinationbytes\": 5250.0, \"lastpackettime\": 1611130659361, \"sourceflags\": 27, \"sourcepackets\": 16.0, \"qid\": \"5325xxx\", \"flowtype\": 0, \"destinationip\": \"172.30.xx.xx\", \"firstpackettime\": 1611130657293, \"category\": 18448}, {\"destinationflags\": 27, \"destinationpackets\": 4.0, \"sourcebytes\": 902.0, \"protocolid\": \"xx\", \"sourceip\": \"10.0.xx.xx\", \"destinationbytes\": 381.0, \"lastpackettime\": 1611130667602, \"sourceflags\": 27, \"sourcepackets\": 6.0, \"qid\": \"5325xxx\", \"flowtype\": 0, \"destinationip\": \"172.30.xx.xx\", \"firstpackettime\": 1611130666583, \"category\": 18448}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "QRadar",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1525009522717,
+    "Name": "Similar Flows Query",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1525009522717,
+            "CustomActionId": -1,
+            "DefaultValue": "10",
+            "Description": "Fetch flows for the last X minutes. The parameter accepts numeric values for example, 10.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525009522717,
+            "Name": "Time Delta In Minutes",
+            "Type": 0,
+            "Value": "10"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525009522717,
+            "CustomActionId": -1,
+            "DefaultValue": "25",
+            "Description": "Limit how many flows the action can return, parameter accepts numeric values for example, 10.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1525009522717,
+            "Name": "Flows Limit To Fetch",
+            "Type": 0,
+            "Value": "25"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525009522717,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The fields to fetch from the flow in addition to predefined ones, if not set - return predefined fields for the flow.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525009522717,
+            "Name": "Fields To Display",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525009522717,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Fields that represents Source IP Address Field of flow.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525009522717,
+            "Name": "Source IP Address Field Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525009522717,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Fields that represents Destination IP Address Field of flow.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525009522717,
+            "Name": "Destination IP Address Field Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}",
+    "IsAsync": true
+}

@@ -1,0 +1,39 @@
+{
+    "Description": "Rapid7's InsightIDR is your security center for incident detection and response, authentication monitoring, and endpoint visibility. InsightIDR identifies unauthorized access from external and internal threats and highlights suspicious activity so you don't have to weed through thousands of data streams.",
+    "DisplayName": "Rapid7 InsightIDR",
+    "Identifier": "Rapid7InsightIDR",
+    "Categories": ["SIEM", "Security"],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Rapid7InsightIDR",
+            "PropertyName": "API Root",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://[region].api.insight.rapid7.com"
+        },
+        {
+            "IntegrationIdentifier": "Rapid7InsightIDR",
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Rapid7InsightIDR",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": false,
+            "Value": "True"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path d=\"M9.35 21.3H.9c.15-.15.25-.3.4-.4C5.75 16.55 7 8.45 2.3 3.7h15.1c3.5 0 6.7 3.8 6.7 9.2 0 5.4-5.6 8.4-7 8.4h-3.15c1.75-4.65 3.5-9.25 5.3-13.95h-9.8c-.1 0-.3.2-.35.35-.15.6-.3 1.25-.45 1.9-.1.5-.2 1.05-.35 1.65h5.05C12 14.7 10.65 18 9.35 21.3z\"\/>\r\n<\/svg>\r\n",
+    "Version": 3.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/rapid7-insightidr"
+}

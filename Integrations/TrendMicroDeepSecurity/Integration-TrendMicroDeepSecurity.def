@@ -1,0 +1,49 @@
+{
+    "Description": "Hybrid cloud security that matches the performance and flexibility of today's virtualised data centre",
+    "DisplayName": "Trend Micro Deep Security",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/trend-micro-deep-security",
+    "Identifier": "TrendMicroDeepSecurity",
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "TrendMicroDeepSecurity",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://<host or IP>:<port>"
+        },
+        {
+            "IntegrationIdentifier": "TrendMicroDeepSecurity",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Secret Key",
+            "PropertyName": "Api Secret Key",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "TrendMicroDeepSecurity",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Version",
+            "PropertyName": "Api Version",
+            "PropertyType": "2",
+            "Value": "v1"
+        },
+        {
+            "IntegrationIdentifier": "TrendMicroDeepSecurity",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M6.3,23.1c3-0.9,5.8-2.4,8.1-4.5c0.9-0.8,1.7-1,2.9-0.8c-0.8,1.8-1.6,3.6-2.5,5.5c1.5,0,2.7,0,4,0\n\t\t\tc-0.3,1.5-0.4,1.6-1.7,1.6c0,0-0.1,0-0.1,0c-3,0-3.1,0-4.2,2.9c-0.6,1.6-1.2,3.3-1.4,5c-0.5,3.6,1.4,5.5,5,5.6\n\t\t\tc2.9,0.1,5.5-0.9,8-2.1c6-2.9,10.9-7.1,14.4-12.8c1.3-2.1,2.1-4.3,2.4-6.8c0.4-4.1-1.8-7-5.7-7.9c-3.3-0.7-6.4-0.1-9.5,0.9\n\t\t\tc-0.4,0.1-0.8,0.3-1.3,0.5c0,0-0.1,0-0.2-0.1c5-2.2,9.9-3.9,15.4-2.5c0.9,0.2,1.6,0.6,2.3,1.1C37.9,4.1,31.8,1.3,25,1.3\n\t\t\tC11.9,1.3,1.3,11.9,1.3,25c0,4.4,1.2,8.4,3.2,11.9c-0.5-1.7-0.4-3.5,0.2-5.4c0.6-1.9,1.4-3.6,2.2-5.4C7,25.8,7.2,25.5,7.4,25\n\t\t\tc-1,0-1.9,0-2.8,0C4.8,23.9,5.3,23.4,6.3,23.1z\"/>\n\t\t\t<path d=\"M45.4,12.9c0.8,2.3,0.6,4.7-0.3,7.3c-1.5,4.3-4.1,7.9-7.2,11.1c-4.8,5-10.4,8.7-17,10.9c-3.4,1.1-6.9,1.7-10.4,0.8\n\t\t\tc-0.6-0.1-1.1-0.3-1.6-0.6c4.2,3.9,9.9,6.3,16.1,6.3c13.1,0,23.8-10.6,23.8-23.8C48.8,20.6,47.5,16.4,45.4,12.9z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 3.0,
+    "MarketingDisplayName": "Trend Micro Deep Security"
+}

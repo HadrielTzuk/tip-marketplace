@@ -1,0 +1,86 @@
+[
+    {
+        "ChangeDescription": "New integration \"Tenable.io\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Tenable.io",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1627371945,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9224"
+    },
+    {
+        "ChangeDescription": "Improved the integration's visibility in the marketplace.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Tenable.io",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1627557527,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9434"
+    },
+    {
+        "ChangeDescription": "New Action Added - Scan Endpoints",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Scan Endpoints",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1628667444,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9229"
+    },
+    {
+        "ChangeDescription": "New Action Added - List Scanners",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "List Scanners",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1628667444,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9418"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Tenable",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1628667444,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9554"
+    },
+    {
+        "ChangeDescription": "Integration - Added a special header to all API requests.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Tenable",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1637151679,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10342"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "TenableIO",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

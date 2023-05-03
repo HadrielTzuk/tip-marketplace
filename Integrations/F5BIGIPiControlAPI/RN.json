@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - \"F5 BIG-IP iControl API\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "F5 BIG-IP iControl API",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1628667444,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9303"
+    }
+]

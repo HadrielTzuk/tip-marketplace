@@ -1,0 +1,48 @@
+{
+    "CreationTimeUnixTimeInMs": 1534756953009,
+    "Creator": "Admin",
+    "Description": "ServiceNow - Wait For Status Update",
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534756953009,
+    "Name": "Wait For Status Update",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"parent\": \"\", \"made_sla\": \"true\", \"caused_by\": \"\", \"watch_list\": \"\", \"upon_reject\": \"Cancel all future Tasks\", \"sys_updated_on\": \"2020-11-22 09:51:20\", \"child_incidents\": \"0\", \"hold_reason\": \"\", \"approval_history\": \"\", \"skills\": \"\", \"number\": \"INC0010xxx\", \"resolved_by\": {\"display_value\": \"System Administrator\", \"link\": \"https://dev98xxx.service-now.com/api/now/v1/table/sys_user/6816f79cc0a8016401c5a33bxxxx\"}, \"sys_updated_by\": \"admin\", \"opened_by\": {\"display_value\": \"System Administrator\", \"link\": \"https://dev98xxx.service-now.com/api/now/v1/table/sys_user/6816f79cc0a8016401c5a33bxxxx\"}, \"user_input\": \"\", \"sys_created_on\": \"2020-11-22 09:40:35\", \"sys_domain\": {\"display_value\": \"global\", \"link\": \"https://dev98xxx.service-now.com/api/now/v1/table/sys_user_group/global\"}, \"state\": \"Resolved\", \"sys_created_by\": \"Admin\", \"knowledge\": \"false\", \"order\": \"\", \"calendar_stc\": \"645\", \"closed_at\": \"\", \"cmdb_ci\": \"\", \"delivery_plan\": \"\", \"contract\": \"\", \"impact\": \"2 - Medium\", \"active\": \"true\", \"work_notes_list\": \"\", \"business_service\": \"\", \"priority\": \"4 - Low\", \"sys_domain_path\": \"/\", \"rfc\": \"\", \"time_worked\": \"\", \"expected_start\": \"\", \"opened_at\": \"2020-11-22 09:40:35\", \"business_duration\": \"0 Seconds\", \"group_list\": \"\", \"work_end\": \"\", \"caller_id\": {\"display_value\": \"System Administrator\", \"link\": \"https://dev98xxx.service-now.com/api/now/v1/table/sys_user/6816f79cc0a8016401c5a33bxxxx\"}, \"reopened_time\": \"\", \"resolved_at\": \"2020-11-22 09:51:20\", \"approval_set\": \"\", \"subcategory\": null, \"work_notes\": \"\", \"short_description\": \"short description\", \"close_code\": \"Closed/Resolved by Caller\", \"correlation_display\": \"\", \"delivery_task\": \"\", \"work_start\": \"\", \"assignment_group\": \"\", \"additional_assignee_list\": \"\", \"business_stc\": \"0\", \"description\": \"\", \"calendar_duration\": \"10 Minutes\", \"close_notes\": \"Closed by Caller\", \"notify\": \"Do Not Notify\", \"service_offering\": \"\", \"sys_class_name\": \"Incident\", \"closed_by\": \"\", \"follow_up\": \"\", \"parent_incident\": \"\", \"sys_id\": \"aada0a4f2f6c2010c518532a27xxxx\", \"contact_type\": null, \"reopened_by\": \"\", \"incident_state\": \"Resolved\", \"urgency\": \"3 - Low\", \"problem_id\": \"\", \"company\": \"\", \"reassignment_count\": \"0\", \"activity_due\": \"UNKNOWN\", \"assigned_to\": \"\", \"severity\": \"3 - Low\", \"comments\": \"\", \"approval\": \"Not Yet Requested\", \"sla_due\": \"UNKNOWN\", \"comments_and_work_notes\": \"\", \"due_date\": \"\", \"sys_mod_count\": \"2\", \"reopen_count\": \"0\", \"sys_tags\": \"\", \"escalation\": \"Normal\", \"upon_approval\": \"Proceed to Next Task\", \"correlation_id\": \"\", \"location\": \"\", \"category\": \"Inquiry / Help\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534756953009,
+            "CustomActionId": 202,
+            "DefaultValue": null,
+            "Description": "Specify number of the incident. Format: INCxxxxxxx",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534756953009,
+            "Name": "Incident Number",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534756953009,
+            "CustomActionId": 202,
+            "DefaultValue": null,
+            "Description": "Specify what statuses of the incident are expected. Example: In Progress,Resolved.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534756953009,
+            "Name": "Statuses",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "# Imports\nimport sys\nfrom SiemplifyAction import SiemplifyAction\nfrom ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_INPROGRESS\nfrom ServiceNowManager import ServiceNowManager, STATES\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = 'ServiceNow - Wait For Status Update'\n    siemplify.LOGGER.info(\"=======Action START=======\")\n\n    statuses = siemplify.parameters['Statuses']\n    output_message = \"Waiting till status update.\"\n    siemplify.end(output_message, statuses, EXECUTION_STATE_INPROGRESS)\n\n\ndef query_job():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = 'ServiceNow - Wait For Status Update'\n    # Configuration.\n    conf = siemplify.get_configuration('ServiceNow')\n    username = conf['Username']\n    password = conf['Password']\n    api_root = conf['Api Root']\n    service_now_manager = ServiceNowManager(api_root, username, password, default_incident_table)\n\n    # Parameters\n    incident_number = siemplify.parameters['Incident Number']\n\n    is_updated = False\n    # Extract statues\n    statuses = siemplify.parameters[\"additional_data\"]\n    if statuses:\n        # Split string to list.\n        statuses_list = statuses.split(',')\n    else:\n        statuses_list = []\n\n    # Get ticket status\n    ticket = service_now_manager.get_ticket(incident_number)\n    ticket_numeric_status = ticket.get('result').get('state')\n    # Convert ticket numeric status to text.\n    ticket_status = [key for key, value in STATES.iteritems() if ticket_numeric_status == value]\n\n    if ticket_status:\n        if ticket_status[0] in statuses_list:\n            # Incident state was updated\n            is_updated = True\n\n    if is_updated:\n        siemplify.LOGGER.info(\"Incident {0} Status: {1}\".format(incident_number, ticket_status[0]))\n        siemplify.LOGGER.info(\"=======Action DONE=======\")\n        output_message = \"Incident {0} Status: {1}\".format(incident_number, ticket_status[0])\n        siemplify.end(output_message, ticket_status[0], EXECUTION_STATE_COMPLETED)\n    else:\n        output_message = \"Continuing...waiting for incident {0} status to be updated\".format(incident_number)\n        siemplify.LOGGER.info(\"Incident {0} status still not changed\".format(incident_number))\n        siemplify.end(output_message, statuses, EXECUTION_STATE_INPROGRESS)\n\n\nif __name__ == \"__main__\":\n    if len(sys.argv) < 3 or sys.argv[2] == 'True':\n        main()\n    else:\n        query_job()\n",
+    "ScriptResultName": "new_status",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

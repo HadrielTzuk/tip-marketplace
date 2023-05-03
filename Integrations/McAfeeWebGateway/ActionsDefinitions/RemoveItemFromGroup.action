@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1519310100660,
+    "Creator": "admin",
+    "Description": "Remove a network object to a group (ip, url, etc.). \\n*Please note - that each group is type stricted",
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeWebGateway",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519310100660,
+    "Name": "Remove Item From Group",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519540070501,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The group name",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519540070501,
+            "Name": "Group Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519540070501,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The item to delete from the group. Default: x.x.x.x/32",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519540070501,
+            "Name": "Item To Delete",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_unblocked",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

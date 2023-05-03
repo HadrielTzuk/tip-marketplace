@@ -1,0 +1,36 @@
+{
+    "CreationTimeUnixTimeInMs": 1664259235000,
+    "Creator": "admin",
+    "Description": "Wait for a User reply to a message sent with a webhook - action periodically check the provided webhook to see if the User had provided any reply to it. Action can be used with the 'Send Advanced Message' action, if the block message with webhook was sent, to check if the user's response was provided to the webhook. Note: action is async, please adjust the timeout for action in Siemplify IDE. Action is not running on Siemplify entities.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"uuid\": \"10953f8e-7ef8-4bde-9e9b-212005e0e737\", \"type\": \"web\", \"token_id\": \"47289ba5-277e-4ab9-9238-eb31080530ca\", \"ip\": \"0000:a000000:ad80:000:20ea:653:fb97\", \"hostname\": \"webhook.site\", \"method\": \"GET\", \"user_agent\": \"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/15.4 Safari\/605.1.15\", \"content\": \"\", \"query\": {\"Answer\": \"yes\"}, \"headers\": {\"connection\": [\"close\"], \"accept-encoding\": [\"gzip, deflate, br\"], \"accept-language\": [\"en-US,en;q=0.9\"], \"user-agent\": [\"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/15.4 Safari\/605.1.15\"], \"cookie\": [\"_ga=GA\"], \"accept\": [\"text\/html,application\/xhtml+xml,application\/xml;q=0.9,*\/*;q=0.8\"], \"host\": [\"webhook.site\"], \"content-length\": [\"\"], \"content-type\": [\"\"]}, \"url\": \"https:\/\/webhook.site\/47289ba5-277e-4ab9-9238-xx0000000xx?Answer=yes\", \"size\": 0, \"files\": [], \"created_at\": \"2022-10-14 19:45:40\", \"updated_at\": \"2022-10-14 19:45:40\", \"sorting\": 1665776740032262, \"custom_action_output\": []}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "Slack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1664195744000,
+    "Name": "Wait For Reply With Webhook",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1664259235000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the Webhook token UUID to monitor for the user’s response.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1664259235000,
+            "Name": "Webhook Token UUID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

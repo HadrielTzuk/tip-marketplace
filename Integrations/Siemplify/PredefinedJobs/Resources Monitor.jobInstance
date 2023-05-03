@@ -1,0 +1,34 @@
+{
+	"Name": "Machine Resource Utilization",
+	"Category": "Siemplify",
+	"Creator": "Siemplify System",
+	"RunIntervalInSeconds": 21600,
+	"Description": "System monitoring notification - Machine resource utilization warning",
+	"IsEnabled": true,
+	"IsCustom": false,
+	"Version": 1.0,
+	"Params": [{
+		"Name": "CPU Limit",
+		"Value": "90",
+		"Type": 1,
+		"IsMandatory": true
+	},
+	{
+		"Name": "Memory Limit",
+		"Value": "85",
+		"Type": 1,
+		"IsMandatory": true
+	},
+	{
+		"Name": "Drives Limit",
+		"Value": "80",
+		"Type": 1,
+		"IsMandatory": true
+	},
+	{
+		"Name": "Disks",
+		"Value": "",
+		"Type": 2,
+		"IsMandatory": false
+	}]
+}

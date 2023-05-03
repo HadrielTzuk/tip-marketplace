@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1517737701996,
+    "Creator": "admin",
+    "Description": "Add a comment to a ServiceNow incident",
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517737701996,
+    "Name": "Add Comment",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517835376849,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify number of the incident. Format: INCxxxxxxx",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517835376849,
+            "Name": "Incident Number",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517835376849,
+            "CustomActionId": -1,
+            "DefaultValue": "test",
+            "Description": "Specify what comment to add to the incident.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517835376849,
+            "Name": "Comment",
+            "Type": 11,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

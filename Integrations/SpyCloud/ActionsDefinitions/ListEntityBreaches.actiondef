@@ -1,0 +1,89 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Return information about breaches related to entities. Supported entity types: IP Address, Username, Email Address (Username entity that matches email regex), Domain (action will strip domain part from URL entity).",
+    "Id": -1,
+    "IntegrationIdentifier": "SpyCloud",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Entity Breaches",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"zena19@example.com\",\"EntityResult\":{\"user_browser\":\"Google Chrome New\",\"password\":\"xxxxxxxxx\",\"ip_addresses\":[\"118.71.221.126\"],\"infected_path\":\"C:\\\\Users\\\\TOAN\\\\AppData\\\\Local\\\\Temp\\\\7ZipSfx.000\\\\Nei.exe.com\",\"user_os\":\"Windows 10 Enterprise LTSC 2019 64-bit(x64) build: 17763 release: 1809\",\"infected_machine_id\":\"011c55b5-5951-42d8-aefa-xxxxxxxxxx\",\"source_id\":37592,\"target_url\":\"127.0.0.1\",\"email\":\"zena19@example.com\",\"user_sys_registered_owner\":\"TOAN\",\"user_hostname\":\"DELL\",\"infected_time\":\"2021-05-23T11:38:44Z\",\"spycloud_publish_date\":\"2021-06-03T00:00:00Z\",\"email_domain\":\"example.com\",\"email_username\":\"zena19\",\"domain\":\"example.com\",\"password_type\":\"plaintext\",\"password_plaintext\":\"xxxxxxxx\",\"severity\":25,\"document_id\":\"31f3bdff-564c-4c52-a0e5-xxxxxxxxxx\",\"sighting\":1}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Catalog Filter",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the name of the category in which you want to search for breaches.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Time Frame",
+            "Type": 15,
+            "DefaultValue": "Last Week",
+            "Value": "Last Week",
+            "IsMandatory": true,
+            "Description": "Specify a time frame for the search. If \"Custom\" is selected, you also need to provide \"Start Time\".",
+            "OptionalValues": [
+                "Last Week",
+                "Last Month",
+                "Last Year",
+                "Custom"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Start Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the start time for the search. This parameter is mandatory, if \"Custom\" is selected for the \"Time Frame\" parameter. Format: ISO 8601. Note: action will only take the datetime for action execution.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "End Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the end time for the search. Format: ISO 8601. If nothing is provided and \"Custom\" is selected for the \"Time Frame\" parameter then this parameter will use current time. Note: action will only take the datetime for action execution.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Breaches To Return",
+            "Type": 0,
+            "DefaultValue": 1,
+            "Value": 1,
+            "IsMandatory": false,
+            "Description": "Specify how many breaches to return per entity. Default: 1. Maximum: 1000.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"USERUNIQNAME\", \"DestinationURL\"]}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

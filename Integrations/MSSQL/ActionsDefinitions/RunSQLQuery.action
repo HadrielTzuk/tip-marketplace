@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1518944383854,
+    "Creator": "admin",
+    "Description": "Run a SQL query",
+    "Id": -1,
+    "IntegrationIdentifier": "MSSQL",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518944383854,
+    "Name": "RunSQLQuery",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Name\": \"Actions Monitor Siemplify System\", \"Creator\": \"System\", \"Integration\": \"Siemplify\", \"VersionId\": \"AAAAAAAAAAAA\", \"ModificationTimenixTimeInMs\": 1558278307098, \"Description\": \"Notifies of all the actions, that have individually failed at least 3 times, in the last 3 hours\"}, {\"Name\": \"Jobs Monitor Siemplify System\", \"Creator\": \"System\", \"Integration\": \"Siemplify\", \"VersionId\": \"ZZZZZZZZZZZZZ\", \"ModificationTimenixTimeInMs\": 1558278307098, \"Description\": \"Notifies of all the jobs, that have individually failed at least 3 times, in the last 3 hours\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518944463840,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The DB name to run the query on",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518944463840,
+            "Name": "Database Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518944463840,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The query to run. Defualt: SELECT * FROM <>",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518944463840,
+            "Name": "Query",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "results",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

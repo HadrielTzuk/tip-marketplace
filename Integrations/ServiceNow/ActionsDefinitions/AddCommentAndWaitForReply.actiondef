@@ -1,0 +1,42 @@
+{
+    "CreationTimeUnixTimeInMs": 1533725706168,
+    "Creator": "Admin",
+    "Description": "Wait for new comment to be added to the given incident. Action result is the content of the new comments",
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1533725706168,
+    "Name": "Add Comment And Wait For Reply",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1533725706168,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specify number of the incident. Format: INCxxxxxxx",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1533725706168,
+            "Name": "Incident Number",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1533725706168,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what comment to add to the incident.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1533725706168,
+            "Name": "Comment",
+            "Type": 11,
+            "Value": ""
+        }
+    ],
+    "Script": "# Imports\nimport sys\nfrom SiemplifyAction import SiemplifyAction\nfrom dateutil import parser\nfrom ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_INPROGRESS\nfrom ServiceNowManager import ServiceNowManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = 'ServiceNow - Wait For New Comment'\n    siemplify.LOGGER.info(\"=======Action START=======\")\n\n    # Configuration.\n    conf = siemplify.get_configuration('ServiceNow')\n    username = conf['Username']\n    password = conf['Password']\n    api_root = conf['Api Root']\n    service_now_manager = ServiceNowManager(api_root, username, password, default_incident_table)\n\n    # Parameters\n    incident_number = siemplify.parameters['Incident Number']\n    siemplify.LOGGER.info(\"Fetch {0} comments\".format(incident_number))\n\n    try:\n        comments_list = service_now_manager.get_incident_comments(incident_number)\n    except Exception as e:\n        siemplify.LOGGER.error('Error. {0}'.format(e))\n        raise\n    last_comment_creation_time = comments_list[0]['sys_created_on']\n    siemplify.LOGGER.info(\"Last comment was posted at: {0}. Comment: {1}\".format(str(last_comment_creation_time),\n                                                                                 comments_list[0]['value']))\n\n    output_message = \"Last comment {0}\".format(last_comment_creation_time)\n    siemplify.end(output_message, str(last_comment_creation_time), EXECUTION_STATE_INPROGRESS)\n\n\ndef query_job():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = 'ServiceNow - Wait For New Comment'\n    # Configuration.\n    conf = siemplify.get_configuration('ServiceNow')\n    username = conf['Username']\n    password = conf['Password']\n    api_root = conf['Api Root']\n    service_now_manager = ServiceNowManager(api_root, username, password, default_incident_table)\n\n    # Parameters\n    incident_number = siemplify.parameters['Incident Number']\n\n    # Extract last comment creation time\n    last_comment_creation_time = siemplify.parameters[\"additional_data\"]\n\n    # A list of message objects with filtering\n    siemplify.LOGGER.info(\"Search new comments in {0} since {1}\".format(incident_number, last_comment_creation_time))\n    comments_list = service_now_manager.get_incident_comments(incident_number)\n\n    new_comment = ''\n    if comments_list:\n        # Check if there is new comment\n        for comment in comments_list:\n            if parser.parse(comment['sys_created_on']) > parser.parse(last_comment_creation_time):\n                if new_comment:\n                    new_comment = '{0}, {1}'.format(new_comment, comment['value'])\n                else:\n                    new_comment = comment['value']\n    if new_comment:\n        siemplify.LOGGER.info(\"New comment: {0}\".format(new_comment))\n        siemplify.LOGGER.info(\"=======Action DONE=======\")\n        output_message = \"Incident {0} has new comments: {1}\".format(incident_number, new_comment)\n        siemplify.end(output_message, new_comment, EXECUTION_STATE_COMPLETED)\n    else:\n        output_message = \"Continuing...waiting for new comment to be added to {0} incident\".format(incident_number)\n        siemplify.LOGGER.info(\"Not found new comment yet\")\n        siemplify.end(output_message, str(last_comment_creation_time), EXECUTION_STATE_INPROGRESS)\n\n\nif __name__ == \"__main__\":\n    if len(sys.argv) < 3 or sys.argv[2] == 'True':\n        main()\n    else:\n        query_job()\n",
+    "ScriptResultName": "new_comment",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

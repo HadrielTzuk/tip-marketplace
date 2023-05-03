@@ -1,0 +1,64 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Update security event in Stellar Cyber Starlight.",
+    "Id": -1,
+    "IntegrationIdentifier": "StellarCyberStarlight",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Update Security Event",
+    "Parameters": [
+        {
+            "Name": "Index",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the index of the security event.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "ID",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the ID of the security event.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Comment",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specify a comment for the security event.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "CustomActionId": -1,
+            "DefaultValue": "Select One",
+            "Description": "Specify the new status for the security event.",
+            "Id": -1,
+            "IsMandatory": true,
+            "Name": "Status",
+            "OptionalValues": [
+                "Select One",
+                "New",
+                "In Progress",
+                "Ignored",
+                "Closed"
+            ],
+            "Type": 15,
+            "Value": "Select One"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

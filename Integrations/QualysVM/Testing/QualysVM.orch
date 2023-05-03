@@ -1,0 +1,834 @@
+{
+	"identifier": "206ab997-5632-4ce5-952b-56939a3a68f0",
+	"version": "0",
+	"isEnabled": true,
+	"name": "QualysVM",
+	"creator": "Admin",
+	"priority": 1,
+	"description": "",
+	"environment": "",
+	"category": null,
+	"creationTime": "0001-01-01T00:00:00",
+	"originalPlaybookIdentifier": null,
+	"creationTimeUnixTimeInMs": 1538047411326,
+	"trigger": {
+		"identifier": "965f1740-7b0c-4ab2-b3f3-896029ac60ce",
+		"type": 8,
+		"value": "",
+		"matchType": 0,
+		"description": "This will trigger the playbook for each alert ingested into Siemplify.",
+		"typeName": "All"
+	},
+	"steps": [{
+		"workflowIdentifier": "206ab997-5632-4ce5-952b-56939a3a68f0",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "ee3490d7-cb7c-4734-b9ab-667e3f6a8c05",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "QualysVM_Launch VM Scan And Fetch Results_1",
+		"name": "QualysVM_Launch VM Scan And Fetch Results",
+		"integration": "QualysVM",
+		"description": "Launch vulnerability scan on a host in your network and fetch results. NOTICE! This action will automatically new hosts to Qualys as assets. Please note that your license limit number of hosts depends on your subscription.",
+		"actionProvider": "Scripts",
+		"actionName": "QualysVM_Launch VM Scan And Fetch Results",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "QualysVM_Launch VM Scan And Fetch Results",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{\"Scan Title\":\"Test\",\"Priority\":\"0\",\"Option Profile\":\"Initial Options\",\"Scanner Appliance\":\"External\",\"Network ID\":\"0\"}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-09-27T11:23:31.333Z",
+		"modificationTime": "2018-09-27T11:23:31.333Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "Launch VM Scan And Fetch Results"
+	},
+	{
+		"workflowIdentifier": "206ab997-5632-4ce5-952b-56939a3a68f0",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "4f64d0de-f45a-43e4-bda8-c7654749b2b4",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "QualysVM_List Vulnerabilities_1",
+		"name": "QualysVM_List Vulnerabilities",
+		"integration": "QualysVM",
+		"description": "List the vulnerabilities from Qualys' KnowledgeBase.",
+		"actionProvider": "Scripts",
+		"actionName": "QualysVM_List Vulnerabilities",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "QualysVM_List Vulnerabilities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{\"Days Backwards\":\"2\"}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-09-27T11:23:31.333Z",
+		"modificationTime": "2018-09-27T11:23:31.333Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "List Vulnerabilities"
+	},
+	{
+		"workflowIdentifier": "206ab997-5632-4ce5-952b-56939a3a68f0",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "e46bb383-752a-481b-b6dc-659a8733fa65",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "QualysVM_Download Report_1",
+		"name": "QualysVM_Download Report",
+		"integration": "QualysVM",
+		"description": "Fetch report by ID",
+		"actionProvider": "Scripts",
+		"actionName": "QualysVM_Download Report",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "QualysVM_Download Report",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{\"Report ID\":\"[QualysVM_Launch Patch Report_1.report_id]\"}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-09-27T11:23:31.333Z",
+		"modificationTime": "2018-09-27T11:23:31.333Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "Download Report"
+	},
+	{
+		"workflowIdentifier": "206ab997-5632-4ce5-952b-56939a3a68f0",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "285be2dc-ee6f-4cc2-864f-26110f49d60a",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "QualysVM_Launch Patch Report_1",
+		"name": "QualysVM_Launch Patch Report",
+		"integration": "QualysVM",
+		"description": "Launch a patch report",
+		"actionProvider": "Scripts",
+		"actionName": "QualysVM_Launch Patch Report",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "QualysVM_Launch Patch Report",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{\"Report Title\":\"Patch\",\"Report Type\":\"\\tQualys Patch Report\",\"Output Format\":\"pdf\",\"IPs/Ranges\":\"1.1.1.1\",\"Asset Groups\":\"\"
+		}","type":0,"isMandatory":false,"defaultValue":null,"creationTime":"0001-01-01T00: 00: 00","modificationTime":"0001-01-01T00: 00: 00","modificationTimeUnixTimeInMs":0,"additionalProperties":{}},{"name":"SelectedScopeName","value":"Allentities","type":0,"isMandatory":false,"defaultValue":null,"creationTime":"0001-01-01T00: 00: 00","modificationTime":"0001-01-01T00: 00: 00","modificationTimeUnixTimeInMs":0,"additionalProperties":{}}],"creationTime":"2018-09-27T11: 23: 31.333Z","modificationTime":"2018-09-27T11: 23: 31.333Z","modificationTimeUnixTimeInMs":0,"additionalProperties":{},"type":0,"displayName":"LaunchPatchReport"},{"workflowIdentifier":"206ab997-5632-4ce5-952b-56939a3a68f0","workflowInstanceIdentifier":0,"caseId":0,"indicatorIdentifier":null,"status":0,"executingUser":null,"resultCode":0,"message":null,"resultValue":null,"results":[],"targetEntities":[],"dueDateUnixM":0,"properties":{},"actionDef":null,"identifier":"ffc3ef01-3ce3-440d-aa31-7d385afd51af","isAutomatic":true,"isSkippable":false,"instanceName":"QualysVM_LaunchComplianceReport_1","name":"QualysVM_LaunchComplianceReport","integration":"QualysVM","description":"Launchacompliancereport","actionProvider":"Scripts","actionName":"QualysVM_LaunchComplianceReport","parameters":[{"name":"ScriptName","value":"QualysVM_LaunchComplianceReport","type":0,"isMandatory":false,"defaultValue":null,"creationTime":"0001-01-01T00: 00: 00","modificationTime":"0001-01-01T00: 00: 00","modificationTimeUnixTimeInMs":0,"additionalProperties":{}},{"name":"ScriptParametersEntityFields","value":"{
+			\"Report Title\":\"Compliance\",\"Report Type\":\"Qualys Top 20 Report\",\"Output Format\":\"pdf\",\"IPs/Ranges\":\"\",
+			\"Asset Groups\":\"All\",\"Scan Reference\":\"\"
+		}","type":0,"isMandatory":false,"defaultValue":null,"creationTime":"0001-01-01T00: 00: 00","modificationTime":"0001-01-01T00: 00: 00","modificationTimeUnixTimeInMs":0,"additionalProperties":{}},{"name":"SelectedScopeName","value":"Allentities","type":0,"isMandatory":false,"defaultValue":null,"creationTime":"0001-01-01T00: 00: 00","modificationTime":"0001-01-01T00: 00: 00","modificationTimeUnixTimeInMs":0,"additionalProperties":{}}],"creationTime":"2018-09-27T11: 23: 31.334Z","modificationTime":"2018-09-27T11: 23: 31.334Z","modificationTimeUnixTimeInMs":0,"additionalProperties":{},"type":0,"displayName":"LaunchComplianceReport"},{"workflowIdentifier":"206ab997-5632-4ce5-952b-56939a3a68f0","workflowInstanceIdentifier":0,"caseId":0,"indicatorIdentifier":null,"status":0,"executingUser":null,"resultCode":0,"message":null,"resultValue":null,"results":[],"targetEntities":[],"dueDateUnixM":0,"properties":{},"actionDef":null,"identifier":"9d14b01a-5c4a-40dc-b8d4-644bd8698bcc","isAutomatic":true,"isSkippable":false,"instanceName":"QualysVM_LaunchRemediationReport_1","name":"QualysVM_LaunchRemediationReport","integration":"QualysVM","description":"Launcharemediationreport","actionProvider":"Scripts","actionName":"QualysVM_LaunchRemediationReport","parameters":[{"name":"ScriptName","value":"QualysVM_LaunchRemediationReport","type":0,"isMandatory":false,"defaultValue":null,"creationTime":"0001-01-01T00: 00: 00","modificationTime":"0001-01-01T00: 00: 00","modificationTimeUnixTimeInMs":0,"additionalProperties":{}},{"name":"ScriptParametersEntityFields","value":"{
+			\"Report Title\":\"Remediation\",\"Report Type\":\"Executive Remediation Report\",\"Output Format\":\"pdf\",\"IPs/Ranges\":\"1.1.1.1\",\"Asset Groups\":\"\",
+			\"Display Results For All tickets\":\"true\"}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-09-27T11:23:31.334Z",
+		"modificationTime": "2018-09-27T11:23:31.334Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "Launch Remediation Report"
+	},
+	{
+		"workflowIdentifier": "206ab997-5632-4ce5-952b-56939a3a68f0",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "25dfeb3f-2688-43e8-8464-3571404c3652",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "QualysVM_List Reports_1",
+		"name": "QualysVM_List Reports",
+		"integration": "QualysVM",
+		"description": "List reports",
+		"actionProvider": "Scripts",
+		"actionName": "QualysVM_List Reports",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "QualysVM_List Reports",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-09-27T11:23:31.334Z",
+		"modificationTime": "2018-09-27T11:23:31.334Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "List Reports"
+	},
+	{
+		"workflowIdentifier": "206ab997-5632-4ce5-952b-56939a3a68f0",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "46f67c6f-1359-4fd6-8fdd-977d23bb6b46",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "QualysVM_List Groups_1",
+		"name": "QualysVM_List Groups",
+		"integration": "QualysVM",
+		"description": "List asset groups.",
+		"actionProvider": "Scripts",
+		"actionName": "QualysVM_List Groups",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "QualysVM_List Groups",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-09-27T11:23:31.334Z",
+		"modificationTime": "2018-09-27T11:23:31.334Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "List Groups"
+	},
+	{
+		"workflowIdentifier": "206ab997-5632-4ce5-952b-56939a3a68f0",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "5f2be7c1-9316-4555-8809-d76436f14494",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "QualysVM_Download Vm Scan Results_1",
+		"name": "QualysVM_Download Vm Scan Results",
+		"integration": "QualysVM",
+		"description": "Fetch vulnerability scan results by scan id (scan reference)",
+		"actionProvider": "Scripts",
+		"actionName": "QualysVM_Download Vm Scan Results",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "QualysVM_Download Vm Scan Results",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{\"Scan ID\":\"[QualysVM_Launch VM Scan_1.scan_ref]\"}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-09-27T11:23:31.334Z",
+		"modificationTime": "2018-09-27T11:23:31.334Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "Download Vm Scan Results"
+	},
+	{
+		"workflowIdentifier": "206ab997-5632-4ce5-952b-56939a3a68f0",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "decfbc97-f9a0-483c-9150-54ce09832da3",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "QualysVM_Ping_1",
+		"name": "QualysVM_Ping",
+		"integration": "QualysVM",
+		"description": "Test connectivity.",
+		"actionProvider": "Scripts",
+		"actionName": "QualysVM_Ping",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "QualysVM_Ping",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-09-27T11:23:31.334Z",
+		"modificationTime": "2018-09-27T11:23:31.334Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "Ping"
+	},
+	{
+		"workflowIdentifier": "206ab997-5632-4ce5-952b-56939a3a68f0",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "24785301-7570-4cc2-bb4c-88d5e2bedd83",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "QualysVM_List Ips_1",
+		"name": "QualysVM_List Ips",
+		"integration": "QualysVM",
+		"description": "List IP address of host in the account",
+		"actionProvider": "Scripts",
+		"actionName": "QualysVM_List Ips",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "QualysVM_List Ips",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-09-27T11:23:31.334Z",
+		"modificationTime": "2018-09-27T11:23:31.334Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "List Ips"
+	},
+	{
+		"workflowIdentifier": "206ab997-5632-4ce5-952b-56939a3a68f0",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "5c1c9a9d-4a54-4f75-80da-0a46a5864ef1",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "QualysVM_Enrich Host_1",
+		"name": "QualysVM_Enrich Host",
+		"integration": "QualysVM",
+		"description": "Enrich host with information from Qualys VM. NOTICE! AssetView module is required.",
+		"actionProvider": "Scripts",
+		"actionName": "QualysVM_Enrich Host",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "QualysVM_Enrich Host",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-09-27T11:23:31.334Z",
+		"modificationTime": "2018-09-27T11:23:31.334Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "Enrich Host"
+	}],
+	"stepsRelations": [{
+		"condition": "",
+		"fromStep": "24785301-7570-4cc2-bb4c-88d5e2bedd83",
+		"toStep": "ee3490d7-cb7c-4734-b9ab-667e3f6a8c05",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "ee3490d7-cb7c-4734-b9ab-667e3f6a8c05",
+		"toStep": "4f64d0de-f45a-43e4-bda8-c7654749b2b4",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "ffc3ef01-3ce3-440d-aa31-7d385afd51af",
+		"toStep": "e46bb383-752a-481b-b6dc-659a8733fa65",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "5f2be7c1-9316-4555-8809-d76436f14494",
+		"toStep": "285be2dc-ee6f-4cc2-864f-26110f49d60a",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "9d14b01a-5c4a-40dc-b8d4-644bd8698bcc",
+		"toStep": "ffc3ef01-3ce3-440d-aa31-7d385afd51af",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "285be2dc-ee6f-4cc2-864f-26110f49d60a",
+		"toStep": "9d14b01a-5c4a-40dc-b8d4-644bd8698bcc",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "decfbc97-f9a0-483c-9150-54ce09832da3",
+		"toStep": "25dfeb3f-2688-43e8-8464-3571404c3652",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "25dfeb3f-2688-43e8-8464-3571404c3652",
+		"toStep": "46f67c6f-1359-4fd6-8fdd-977d23bb6b46",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "4f64d0de-f45a-43e4-bda8-c7654749b2b4",
+		"toStep": "5f2be7c1-9316-4555-8809-d76436f14494",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "46f67c6f-1359-4fd6-8fdd-977d23bb6b46",
+		"toStep": "24785301-7570-4cc2-bb4c-88d5e2bedd83",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "e46bb383-752a-481b-b6dc-659a8733fa65",
+		"toStep": "5c1c9a9d-4a54-4f75-80da-0a46a5864ef1",
+		"destinationActionStatus": 0
+	}]
+}

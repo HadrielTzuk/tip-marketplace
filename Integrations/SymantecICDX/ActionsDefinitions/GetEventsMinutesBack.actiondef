@@ -1,0 +1,77 @@
+{
+    "CreationTimeUnixTimeInMs": 1554655351159,
+    "Creator": "Admin",
+    "DefaultResultValue": "",
+    "Description": "Get events for query, minutes back.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SymantecICDX",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1554655351163,
+    "Name": "Get Events Minutes Back",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1554655351176,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Request query.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1554655351176,
+            "Name": "Query",
+            "OptionalValuesJson": null,
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1554655351177,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Received events amount limit.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1554655351177,
+            "Name": "Limit",
+            "OptionalValuesJson": null,
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1554655351178,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Fetch events minutes back parameter.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1554655351178,
+            "Name": "Minutes Back",
+            "OptionalValuesJson": null,
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1554655351178,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specific event fields to bring(Comma separated.)",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1554655351178,
+            "Name": "Fields",
+            "OptionalValuesJson": null,
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecICDXManager import SymantecICDXManager\nfrom SiemplifyUtils import dict_to_flat, construct_csv\nimport time\n\nPROVIDER = \"SymantecICDX\"\nACTION_NAME = \"SymantecICDX - Get Event\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.action_definition_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    verify_ssl = conf.get('Verify SSL').lower() == 'true'\n    icdx_manager = SymantecICDXManager(api_root=conf.get('Api Root'),\n                                       api_key=conf.get('Api Token'),\n                                       verify_ssl=verify_ssl)\n    result_value = False\n\n    query = siemplify.parameters.get('Query')\n    limit = int(siemplify.parameters.get('Limit', 10))\n    minutes_back = int(siemplify.parameters.get('Minutes Back', 60))\n    fields = siemplify.parameters.get('fields')\n\n    time_milliseconds = int(time.time() * 1000.0) - minutes_back * 60000\n\n    if fields:\n        fields = fields.split(',')\n        events = icdx_manager.find_events(query=query, limit=limit, start_time=time_milliseconds, fields=fields)\n    else:\n        events = icdx_manager.find_events(query=query, limit=limit, start_time=time_milliseconds)\n\n    if events:\n        siemplify.result.add_result_json(events)\n        open(r'i:\\text.text', 'a+').write(str(events))\n        siemplify.result.add_data_table(query, construct_csv(map(dict_to_flat, events)))\n        output_message = 'Found events for query: {0}'.format(query)\n        result_value = True\n    else:\n        output_message = 'Not found events for query: {0}'.format(query)\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "events_count",
+    "TimeoutSeconds": 600,
+    "Version": 4.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

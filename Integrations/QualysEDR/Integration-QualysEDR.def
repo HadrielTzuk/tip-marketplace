@@ -1,0 +1,51 @@
+{
+    "Description": "Qualys Multi-Vector EDR unifies different context vectors like asset discovery, rich normalized software inventory, end-of-life visibility, vulnerabilities and exploits, misconfigurations, in-depth endpoint telemetry, and network reachability with a powerful backend to correlate it all for accurate assessment, detection and response – all in a single, cloud-based app.",
+    "DisplayName": "Qualys EDR",
+    "Identifier": "QualysEDR",
+    "MarketingDisplayName": "Qualys EDR",
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAYAAAClr220AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAleSURBVHgB7Z1LbFRVGMfPtKUVgeLGmlg3yMKSgHEh4NaWLa8ujC8oicQotKIbA0UTE6USXQi0BCKQ8BKIC6B14QJat5R2QyBpWbGhJrCj5Vla8P4O/YYzlzuvjvSc0u+XTO7M3HPvDJ7//L/HubemHkcYRZliyoyieECFp3hBhad4QYWneEGFp3hBhad4QYWneEGFp3hBhad4QYWneEGFp3hBhad4QYWneEGFp3hBhad4ocIEyOORETPac86MXx00D/svRq+HzaN/h9L7U/OqTdnrtaY8elS8u8xU1NVF2+VGmT6kQroQdKy/19zb12HFViwIsfL9FealT5vscyVsghBeKYJLYvYXzZEAN0TOOM8oYeJdeHd/aTP3/ziScwwONisKqcJ4FHbH8oiUY6oPHVP3CxSvwru3r93c29+RdX/VqrWmanWjzeOSeNB1xp7Dzf9cyAVf+btHnS9AvFa12UKruNWcH3dmFR0gTIT10idNifvjRYkSDsFVtdlC5PjVATM2OGDKa2ujfW9k7H/521aTqq627hcH8Snh4VV4SW4UFx35H4VHXECVkdu9/GVLeiwFxcO+3mdyv/Gh6zldMxvXr183Q0NDpjoS9KJFi4wPRqK20q1bt8z8+fPNvBcsXQiqgUzodEV3b3+7LT6SXGs0yu+GP1tnxqJenzA3Cs1lUV43WZjo9vZ2s3TpUtPQ0GDWr19v1qxZY19v3brVCnEq2bFjh/0e586dMy8aQQlvduRgwoPO09bpcoFj3v56k204Q9lEQ3kyDAwMmNWrV5uOjg4zPDxsna42CutseX3mzBmzbt06c/78eaOUTjDCK39rUcztOgo6DvHdP344/ZoQXCw4Ge7GlrB67Ngx09fXZ3p6euyW14iQ/du2bTODg4NGKY1ghFfxVl36OQ3lYqpRN6+rqCs+H8PJcLVly5ZZkbF14TUiXLt2rR23adOm9D7CM/ngyITruuTa19vba44cOWJOnz6dDuGM5ZGNXPuT9vEZOPRUpwiFEIzwXLcbL/I/1Lgj0mIbxkyOFBE7d+7MmcS3trbacYy/ePGJ2Mm/yMPIx+Ik5Wgci9Bx2La2Nuug9fX1NrfkPcZnEwpj2S+f7f4bJCeVzyA35fXmzZvtc1KFkPAqvJRTCDxOcIXJnSezECmvfSPnsd3d3XbLxBFOc4HocD3AqYpFRIdw+KympibT3NxsHZXcMp8zrVixwm4RqYuISr4bTkrOynk5Pz8mnDokvLZT3BUFVzD5xBLHDdPFNoxlsgttmdTV1WUcVwwIhuMQXWdnZ4a74n4IJhcIC4EiXMI3x3M+EV5jY2PGd0PYiHXDhg3BtWO8Ol65ExbdVYzySEjFtEXcaji+GpLKc56pnBApSpJCOs6Eo+aC/ZJ/Hj582G4Js4DAxLFlDGGWNlBobgd+hecUAo+chX/EUvXp+oLOMfuLlsyG8/GnrsF5yh03TEImm9BUCJJf5QvLSchnJB3L9yjkR4CLgaQIR48etVsJszKmpaXFnhM3JIfUHM9hVqzndr/zad6EoGix5IIxs79sTr+m9+eG2sr3G0w+JG9iIvOFT7eokOOEbFWtiwgu2+eMFJDn4macBxGTZ7Lldfz74KBnz55NCxLnGykhj/6/8et4kbDchi+rEW5rpPrQUXtxZxKsz7qiQ3B3f/05Y8ys+uRjXWQiCUeEplyTQx4mOZpMtOSGkncJPI+7aLbiQN4rNCSKmKhy3dfAZ5IryvckrMt3lLAcAt7bKVz25HL7+61p1yJUzt21116lEm+TPOw5b8MqPb/R6DnLZ26BIlckFwKTA7J6Ea9YmTBaEvTECF/0+gR3dYNjmXQeVK9xZyMEMhaREv6kj8dYioZCkXArSFEBCJ4fCN+Xc7t9QgTIcz7X9wpMEFcg2zVXx+myXaHC9XeE07ECrlRGrFVFrGIw8XEnQlRMpDgRoiGnilfATCLu4zqWFALs27t3b9rtEDfOGhcl4pGeYn9/v833CI/kZu7xgrRlcDv54eT6t5DzEX45vzhx/JxTSRDC45KnWx+syXgP0XHFSdwRgZ4fTvew76IZi47lpiDX7RAcwisWnAC3iIMAEQZOk60AYEIRmazzMl4mOL4SAoyV/cuXL7djEBmfJePFYZOOxzH5zKSVFvk+uB0/HATmjkGw/Hh8tliCudmHy5+4EiUOBQi5XK67yAjNuCbbUi95Z8JwC7cKZJKYOB4+XULAGVmVQKQs5U1Hyn+IMAFQ8fY7dulr/GrmAjxiIsSO/tNtUpWVpixyALc354qO9+cf/7Ok+yxwGMQledPo6Kh1pkuXLpmFCxcmustUQyilJ7h9+3Zv1wqWSlC3NwLFBdVtLqiGaT4jMERJmEV0VMH5WjCTQRb7Q5lk0gG+i1vNTjeCEx4UcueZy/MUnfJ8CFJ4wPV4SfdQxNHbGKcnwQoP8t2+WLWq8cmNPnr74rQjaOEBokN8D5y8j9BKpZvttkYlfIIXniDux2oEV6Ooy01vpo3wlBcL/ft4ihdUeIoXgvzDjFPJnTt37CMbNTU1dnvz5s3E95OIj803fiYy44V38OAh092dfb2zq+us3ba2fveMoJYsWWw2bvzMLFiwIOP93bv3mMuXrzxzLhb2P/74QxWhUeGlaWv7Ke8YhPbRRx/a57jkiROnzJYt31jxrVq1MmPsnDlzorXUbenXN27ctCK/cuVKJMzf7P6ZjApvgsWLF+cd8+qrNRnjuJwJdzt58pRpaKjPEBPP3bE8TaWM2bVrj7lwodeOn8locVEiuB3u19X1V96xIsSkHHCmocIrEZyNnO3atWt5x0reF88JZyIaaifYuPHzZ94jRytEJK+9VpNYGZPPCYgOV0Sk772n/2sEFd4EVJtxSikACKdUwi7kdYRmRYWXhlbHZLl9+46ZOzdTpDibVMq4IdUv7830albQHK9EcDbyOyrcOAiNB+GadguhVguLJ6jwSgAno51SSN4m/b8DBw4ZRUNtGrcQcMGtJDwiNMaxpSGMgz0Jo1/lXY3gHLgePT8KDZrRMxkV3gTxQkA4ePD3tPC4rVD+DARCQzwrV640b75ZWHtEwi3iW7Ik/0rJi4xej6d4QXM8xQsqPMULKjzFCyo8xQsqPMULKjzFCyo8xQsqPMULKjzFCyo8xQsqPMULKjzFCyo8xQsqPMULKjzFCyo8xQsqPMULKjzFCyo8xQv/AbLquysiM3vmAAAAAElFTkSuQmCC",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "QualysEDR",
+            "PropertyName": "API Root",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "http://x.x.x.x"
+        },
+        {
+            "IntegrationIdentifier": "QualysEDR",
+            "PropertyName": "Username",
+            "PropertyDisplayName": "Username",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "QualysEDR",
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "QualysEDR",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg width=\"21\" height=\"25\" viewBox=\"0 0 21 25\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M20.2501 4.5002C20.2501 4.3002 20.1501 4.0502 19.9501 3.9502C19.7501 3.7502 19.5001 3.5002 19.2001 3.3002C17.4501 2.1502 15.5501 1.3002 13.5001 0.950197C8.90011 0.200197 4.75011 0.950197 1.10011 3.9502C0.900106 4.0502 0.750106 4.3002 0.750106 4.5002C0.650106 6.4502 0.650106 8.3502 0.550106 10.3002C0.450106 13.5002 1.40011 16.3502 3.45011 18.8502C5.25011 21.1002 7.60011 22.9002 10.2001 24.3002C10.3001 24.4002 10.6501 24.4002 10.8501 24.3002C11.8001 23.6502 12.8001 23.1002 13.7501 22.5002C15.4501 21.3002 16.9501 19.8502 18.1501 18.2002C19.3501 16.6002 20.2001 14.9002 20.3001 12.8502C20.4001 11.4502 20.5001 10.0502 20.5001 8.8002C20.3501 7.3002 20.3501 5.9002 20.2501 4.5002ZM16.5001 14.5502C16.2001 15.1002 15.6501 15.6002 15.2001 16.1502C15.1001 16.2502 14.9001 16.3502 14.7501 16.3502C13.9001 16.1502 13.1501 15.9002 12.4001 15.7002L12.3001 15.6002C12.9501 14.8502 13.7001 14.3002 14.2501 13.5502C16.0501 11.3002 15.4501 8.5002 13.5001 7.0002C11.5501 5.3002 8.60011 5.5002 6.85011 7.5502C5.45011 9.1502 5.25011 11.1002 6.00011 13.1002C6.55011 14.6002 7.70011 15.5502 9.00011 16.3002C10.4001 17.1502 12.0001 17.5002 13.6001 17.8002C14.2501 17.9002 14.8001 18.0002 15.5501 18.1002C15.2501 18.4002 15.0001 18.7502 14.7001 18.9502C13.5001 20.1002 13.5001 20.1002 12.0001 19.8002C10.2001 19.3502 8.45011 18.7502 6.85011 17.5502C4.40011 15.8502 3.10011 13.5002 3.20011 10.5002C3.30011 7.5002 4.80011 5.3502 7.60011 4.2002C10.6001 2.9002 13.9001 3.7502 15.8501 6.1502C18.0001 8.5502 18.3001 11.7502 16.5001 14.5502Z\" fill=\"currentColor\"/></svg>",
+    "Version": 1.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/qualys-edr"
+}

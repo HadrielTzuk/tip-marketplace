@@ -1,0 +1,34 @@
+{
+    "CreationTimeUnixTimeInMs": 1532861679148,
+    "Creator": "admin",
+    "Description": "Retrieve information about alert images in IntSights.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"image_name\":\"5b59daf4bdafd90xxxxxx\",\"image_base64_content\":\"image content in base64\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Intsights",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1532861679148,
+    "Name": "Get Alert Image",
+    "Parameters": [        
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the comma-separated list of alert image IDs. Example: id1,id2.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Alert Image IDs", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

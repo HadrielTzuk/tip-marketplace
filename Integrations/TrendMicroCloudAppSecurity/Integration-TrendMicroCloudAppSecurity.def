@@ -1,0 +1,44 @@
+{
+    "Description": "Trend Micro Cloud App Security enables you to embrace the efficiency of cloud services while maintaining security. It protects incoming and internal Office 365 email from advanced malware and other threats, and enforces compliance on other cloud file-sharing services, including Box, Dropbox, Google Drive, SharePoint® Online, and OneDrive® for Business. Cloud App Security integrates directly with Office 365 and other services using APIs, maintaining all user functionality without rerouting email traffic or setting up a web proxy.",
+    "DisplayName": "Trend Micro Cloud App Security",
+    "Identifier": "TrendMicroCloudAppSecurity",
+    "Categories": [
+        "Cloud Security",
+        "Security",
+        "Cloud"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "TrendMicroCloudAppSecurity",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https://api-eu.tmcas.trendmicro.com"
+        },
+        {
+            "IntegrationIdentifier": "TrendMicroCloudAppSecurity",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "TrendMicroCloudAppSecurity",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": true
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion":2,
+    "SVGImage": "<svg width=\"23\" height=\"23\" viewBox=\"0 0 23 23\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M11.5 0C5.16854 0 0 5.16854 0 11.5C0 17.8638 5.16854 23 11.5 23C17.8638 23 23 17.8315 23 11.5C23.0323 5.16854 17.8638 0 11.5 0ZM15.764 16.9593C10.8216 20.8357 5.13624 21.8371 3.06882 19.1882C1.77669 17.5407 2.09972 14.8272 3.8441 12.0815H2.48736L2.81039 11.3385C2.81039 11.3385 5.16854 10.8539 7.55899 8.68961H8.52809L7.33287 11.3062H9.27107L8.91573 12.0815H7.00983C5.36236 15.2795 5.58848 16.3132 5.87921 17.0885C6.62219 19.2205 10.757 18.639 14.7949 15.4733C18.8329 12.3076 20.7065 7.91433 18.9298 5.68539C17.4115 3.71489 13.5997 4.07022 9.98174 6.26685C14.4396 3.35955 19.1559 2.8427 20.9972 5.20084C23.0646 7.81742 20.7065 13.1152 15.764 16.9593Z\" fill=\"currentColor\"/></svg>",
+    "Version": 3.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/trend-micro-cloud-app-security",
+    "MarketingDisplayName": "Trend Micro Cloud App Security"
+}

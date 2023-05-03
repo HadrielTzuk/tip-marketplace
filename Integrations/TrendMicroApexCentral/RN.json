@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "New integration \"Trend Micro Apex Central\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "TrendMicroApexCentral",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1617105997,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2832"
+    },
+    {
+        "ChangeDescription": "Added MAC Address entity support to \"Isolate Endpoints\" and \"Unisolate Endpoints\" actions.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "TrendMicroApexCentral",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1617794120,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8031"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "TrendMicroApexCentral",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

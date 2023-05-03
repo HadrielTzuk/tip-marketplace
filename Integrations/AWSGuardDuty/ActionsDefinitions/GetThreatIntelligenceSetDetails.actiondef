@@ -1,0 +1,55 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Get details about a threat intelligence set in AWS GuardDuty.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSGuardDuty",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"EntityResult\": {\"ResponseMetadata\": {\"RequestId\": \"34c2992c-4bce-412b-ae6d-6cc2b7aa3ce5\", \"HTTPStatusCode\": 200, \"HTTPHeaders\": {\"date\": \"Tue, 20 Oct 2020 11:12:03 GMT\", \"content-type\": \"application/json\", \"content-length\": \"195\", \"connection\": \"keep-alive\", \"x-amzn-requestid\": \"34c2992c-4bce-412b-ae6d-6cc2b7aa3ce5\", \"x-amz-apigw-id\": \"UtPgdESBIAMF67g=\", \"x-amzn-trace-id\": \"Root=1-5f8ec602-00fe46b9722778852039359a;Sampled=0\"}, \"RetryAttempts\": 0}, \"Name\": \"Test4\", \"Format\": \"PROOF_POINT\", \"Location\": \"https://s3.amazonaws.com/siemplifytest/file.txt\", \"Status\": \"INACTIVE\", \"Tags\": {\"tt\": \"22\", \"test\": \"tag\"}}, \"Entity\": \"96b15ef2cb93412897b2b9dadbe429cf\"}]",
+		"ResultName": "JsonResult"
+	}],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Get Threat Intelligence Set Details",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the detector ID that should be used to get threat intelligence sets details. This parameter can be found in the \"Settings\" tab.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Detector ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the comma-separated list of ids of threat intelligence sets. Example: id_1,id_2.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Threat Intelligence Set IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1660914084000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Optionally specify the AWS Region to be used in the action that can be different from the default region specified in the integration configuration page.",
+            "Id": -1,
+            "IsMandatory": false,
+            "Name": "AWS Region",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

@@ -1,0 +1,51 @@
+{
+    "Description": "FireEye Network Security is an effective cyber threat protection solution that helps organizations minimize the risk of costly breaches by accurately detecting and immediately stopping advanced, targeted and other evasive attacks hiding in Internet traffic. It facilitates efficient resolution of detected security incidents in minutes with concrete evidence, actionable intelligence and response workflow integration.",
+    "DisplayName": "FireEye NX",
+    "Identifier": "FireEyeNX",
+    "Categories": [
+        "Network Security",
+        "Security"
+    ],
+    "PythonVersion": 2,
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "FireEyeNX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": 2,
+            "Value": "https://<address>:<port>/"
+        },
+        {
+            "IntegrationIdentifier": "FireEyeNX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "FireEyeNX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "FireEyeNX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": "True"
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M17.8304 5.66197C18.04 5.69192 18.2496 5.57213 18.2496 5.33255C18.2796 4.31434 18.2496 1.85866 16.6025 1.25972C14.4763 0.481087 11.0323 1.55919 8.39698 3.0865C5.70173 4.61382 2.34763 8.1476 1 11.8012C1 11.8012 5.97125 7.48876 11.0623 6.26092C14.9255 5.3026 17.0218 5.51224 17.8304 5.66197Z\" \/>\r\n<path d=\"M5.31241 11.9509C5.25252 11.7413 5.01294 11.6514 4.80331 11.7413C3.90489 12.1905 1.80858 13.4782 2.10805 15.2152C2.49737 17.4612 5.16268 19.8869 7.79804 21.4143C10.4334 22.9715 15.225 24.1095 19.0283 23.4507C19.0283 23.4507 12.8292 21.2945 9.17561 17.4912C6.45041 14.6162 5.58194 12.6996 5.31241 11.9509Z\" \/>\r\n<path d=\"M17.0518 19.7372C16.902 19.9169 16.9619 20.1565 17.1117 20.2463C17.9502 20.7854 20.1064 21.9833 21.484 20.8453C23.2508 19.4078 23.9995 15.874 23.9995 12.8194C24.0295 9.73481 22.622 5.03308 20.1363 2.06829C20.1363 2.06829 21.3642 8.50697 19.8967 13.5681C18.8186 17.4013 17.5908 19.1083 17.0518 19.7372Z\" \/>\r\n<\/svg>",
+    "Version": 6.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/fireeye-nx",
+    "MarketingDisplayName": "FireEye NX"
+}

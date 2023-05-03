@@ -1,0 +1,88 @@
+{
+    "CreationTimeUnixTimeInMs": 1533211249615,
+    "Creator": "Admin",
+    "Description": "Launch a compliance report",
+    "Id": -1,
+    "IntegrationIdentifier": "QualysVM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1533211249615,
+    "Name": "Launch Compliance Report",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1533211249615,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "A user-defined report title. The title may have a maximum of 128 characters. For a PCI compliance report, the report title is provided by Qualys and cannot be changed.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1533211249615,
+            "Name": "Report Title",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1533211249615,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Template name. For example: Qualys Top 20 Report, Payment Card Industry (PCI).",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1533211249615,
+            "Name": "Report Type",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1533211249615,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "One output format may be specified. When output_format=pdf is specified, the Secure PDF Distribution may be used. e.g: pdf, mht and html.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1533211249615,
+            "Name": "Output Format",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1533211249615,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify IPs/ranges to change (override) the report target, as defined in the patch report template. Multiple IPs/ranges are comma separated.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1533211249615,
+            "Name": "IPs/Ranges",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1533211249615,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Asset groups.if more than one has to be comma separated.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1533211249615,
+            "Name": "Asset Groups",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1533211249615,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Show only a scan with a certain scan reference code.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1533211249615,
+            "Name": "Scan Reference",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "report_id",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

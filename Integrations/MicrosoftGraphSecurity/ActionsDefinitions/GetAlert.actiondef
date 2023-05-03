@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1544542895231,
+    "Creator": "Admin",
+    "Description": "Retrieve the properties and relationships of an alert by ID",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"feedback\": \"@odata.type: microsoft.graph.alertFeedback\", \"recommendedActions\": [\"String\"], \"networkConnections\": [{\"applicationName\": \"String\", \"natDestinationPort\": \"String\", \"destinationAddress\": \"String\", \"localDnsName\": \"String\", \"natDestinationAddress\": \"String\", \"destinationUrl\": \"String\", \"natSourceAddress\": \"String\", \"sourceAddress\": \"String\", \"direction\": \"@odata.type: microsoft.graph.connectionDirection\", \"domainRegisteredDateTime\": \"String (timestamp)\", \"status\": \"@odata.type: microsoft.graph.connectionStatus\", \"destinationDomain\": \"String\", \"destinationPort\": \"String\", \"sourcePort\": \"String\", \"protocol\": \"@odata.type: microsoft.graph.securityNetworkProtocol\", \"natSourcePort\": \"String\", \"riskScore\": \"String\", \"urlParameters\": \"String\"}], \"cloudAppStates\": [{\"destinationServiceIp\": \"String\", \"riskScore\": \"String\", \"destinationServiceName\": \"String\"}], \"detectionIds\": [\"String\"], \"id\": \"String (identifier)\", \"category\": \"String\", \"fileStates\": [{\"path\": \"String\", \"riskScore\": \"String\", \"name\": \"String\", \"fileHash\": {\"hashType\": \"@odata.type: microsoft.graph.fileHashType\", \"hashValue\": \"String\"}}], \"severity\": \"@odata.type: microsoft.graph.alertSeverity\", \"title\": \"String\", \"sourceMaterials\": [\"String\"], \"comments\": [\"String\"], \"assignedTo\": \"String\", \"eventDateTime\": \"String (timestamp)\", \"activityGroupName\": \"String\", \"status\": \"@odata.type: microsoft.graph.alertStatus\", \"description\": \"String\", \"tags\": [\"String\"], \"confidence\": 1024, \"vendorInformation\": {\"providerVersion\": \"String\", \"vendor\": \"String\", \"subProvider\": \"String\", \"provider\": \"String\"}, \"userStates\": [{\"emailRole\": \"@odata.type: microsoft.graph.emailRole\", \"logonId\": \"String\", \"domainName\": \"String\", \"onPremisesSecurityIdentifier\": \"String\", \"userPrincipalName\": \"String\", \"userAccountType\": \"@odata.type: microsoft.graph.userAccountSecurityType\", \"logonIp\": \"String\", \"logonDateTime\": \"String (timestamp)\", \"logonType\": \"@odata.type: microsoft.graph.logonType\", \"logonLocation\": \"String\", \"aadUserId\": \"String\", \"accountName\": \"String\", \"riskScore\": \"String\", \"isVpn\": \"true\"}], \"malwareStates\": [{\"category\": \"String\", \"wasRunning\": \"true\", \"name\": \"String\", \"family\": \"String\", \"severity\": \"String\"}], \"processes\": [{\"processId\": 1024, \"integrityLevel\": \"@odata.type: microsoft.graph.processIntegrityLevel\", \"name\": \"String\", \"fileHash\": {\"hashType\": \"@odata.type: microsoft.graph.fileHashType\", \"hashValue\": \"String\"}, \"parentProcessId\": 1024, \"createdDateTime\": \"String (timestamp)\", \"commandLine\": \"String\", \"parentProcessName\": \"String\", \"accountName\": \"String\", \"isElevated\": \"true\", \"path\": \"String\", \"parentProcessCreatedDateTime\": \"String (timestamp)\"}], \"azureTenantId\": \"String\", \"triggers\": [{\"type\": \"String\", \"name\": \"String\", \"value\": \"String\"}], \"createdDateTime\": \"String (timestamp)\", \"vulnerabilityStates\": [{\"cve\": \"String\", \"severity\": \"String\", \"wasRunning\": \"true\"}], \"hostStates\": [{\"isAzureAadRegistered\": \"true\", \"riskScore\": \"String\", \"fqdn\": \"String\", \"isHybridAzureDomainJoined\": \"true\", \"netBiosName\": \"String\", \"publicIpAddress\": \"String\", \"isAzureAadJoined\": \"true\", \"os\": \"String\", \"privateIpAddress\": \"String\"}], \"lastModifiedDateTime\": \"String (timestamp)\", \"registryKeyStates\": [{\"processId\": 1024, \"oldKey\": \"String\", \"oldValueName\": \"String\", \"valueType\": \"@odata.type: microsoft.graph.registryValueType\", \"oldValueData\": \"String\", \"hive\": \"@odata.type: microsoft.graph.registryHive\", \"valueData\": \"String\", \"key\": \"String\", \"valueName\": \"String\", \"operation\": \"@odata.type: microsoft.graph.registryOperation\"}], \"closedDateTime\": \"String (timestamp)\", \"azureSubscriptionId\": \"String\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftGraphSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1544542895231,
+    "Name": "Get Alert",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1544542895237,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": null,
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1544542895237,
+            "Name": "Alert ID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\nfrom MicrosoftGraphSecurityManager import MicrosoftGraphSecurityManager\nimport json\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('MicrosoftGraphSecurity')\n    client_id = conf[\"Client ID\"]\n    secret_id = conf[\"Secret ID\"]\n    tenant = conf[\"Tenant\"]\n    token = conf.get(\"Refresh Token\")\n\n    mtm = MicrosoftGraphSecurityManager(client_id, secret_id, tenant, token)\n\n    alert_id = siemplify.parameters['Alert ID']\n\n    alert_details = mtm.get_alert_details(alert_id)\n\n    if alert_details:\n        flat_report = dict_to_flat(alert_details)\n        csv_output = flat_dict_to_csv(flat_report)\n        siemplify.result.add_data_table(\"Alert details - {0}\".format(alert_id), csv_output)\n        output_message = 'Found details for alert with ID - {0}'.format(alert_id)\n        result_value = json.dumps(alert_details)\n    else:\n        output_message = 'No details found for alert with ID - {0}.'.format(alert_id)\n        result_value = json.dumps({})\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "alert_details",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

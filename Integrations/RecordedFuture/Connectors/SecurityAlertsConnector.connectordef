@@ -1,0 +1,217 @@
+{
+   "CreationTimeUnixTimeInMs": 1570446244,
+   "Creator": "admin",
+   "Description": "Pull security alerts from Recorded Future. \nWhitelist and blacklist work with Recorded Future rule names.",
+   "Id": -1,
+   "Integration": "RecordedFuture",
+   "IsConnectorRulesSupported": false,
+   "IsCustom": false,
+   "IsEnabled": true,
+   "ModificationTimeUnixTimeInMs": 1570446244,
+   "Name": "Recorded Future - Security Alerts Connector",
+   "Parameters": [
+      {
+         "Name": "DeviceProductField",
+         "Type": 2,
+         "DefaultValue": "title",
+         "IsMandatory": true,
+         "Description": "Enter the source field name in order to retrieve the Product Field name.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 0
+      },
+      {
+         "Name": "EventClassId",
+         "Type": 2,
+         "DefaultValue": "id",
+         "IsMandatory": true,
+         "Description": "Enter the source field name in order to retrieve the Event Field name.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 0
+      },
+      {
+         "Name": "Environment Field Name",
+         "Type": 2,
+         "DefaultValue": "",
+         "IsMandatory": false,
+         "Description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 2
+      },
+      {
+         "Name": "Environment Regex Pattern",
+         "Type": 2,
+         "DefaultValue": ".*",
+         "IsMandatory": false,
+         "Description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 2
+      },
+      {
+         "Name": "PythonProcessTimeout",
+         "Type": 1,
+         "DefaultValue": 180,
+         "IsMandatory": true,
+         "Description": "Timeout limit for the python process running the current script.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 2
+      },
+      {
+         "Name": "API URL",
+         "Type": 2,
+         "DefaultValue": "https://api.recordedfuture.com",
+         "IsMandatory": true,
+         "Description": "API Root of the Recorded Future instance.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 2
+      },
+      {
+         "Name": "API Key",
+         "Type": 3,
+         "DefaultValue": "",
+         "IsMandatory": true,
+         "Description": "API Key of the Recorded Future.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 2
+      },
+      {
+         "Name": "Fetch Max Hours Backwards",
+         "Type": 1,
+         "DefaultValue": 1,
+         "IsMandatory": false,
+         "Description": "Amount of hours from where to fetch events.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 2
+      },
+      {
+         "Name": "Max Alerts To Fetch",
+         "Type": 1,
+         "DefaultValue": 100,
+         "IsMandatory": false,
+         "Description": "How many alerts to process per one connector iteration.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 2
+      },
+      {
+         "Name": "Severity",
+         "Type": 2,
+         "DefaultValue": "Medium",
+         "IsMandatory": true,
+         "Description": "Severity will be one from the following values Low, Medium, High, Critical. Will be assigned to Siemplify alerts created from this connector.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 2
+      },
+      {
+         "Name": "Get Alert's Details",
+         "Type": 0,
+         "DefaultValue": false,
+         "IsMandatory": true,
+         "Description": "Get alert's full details from Recorded Future. Note: each query \"costs\" 1 Recorded Future API credit.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 2
+      },
+      {
+         "Name": "Use whitelist as a blacklist",
+         "Type": 0,
+         "DefaultValue": false,
+         "IsMandatory": true,
+         "Description": "If enabled, whitelist will be used as a blacklist.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 2
+      },
+      {
+         "Name": "Verify SSL",
+         "Type": 0,
+         "DefaultValue": false,
+         "IsMandatory": true,
+         "Description": "If enabled, verify the SSL certificate for the connection to the Recorded Future server is valid.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 2
+      },
+      {
+         "Name": "Proxy Server Address",
+         "Type": 2,
+         "DefaultValue": "",
+         "IsMandatory": false,
+         "Description": "The address of the proxy server to use.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 2
+      },
+      {
+         "Name": "Proxy Username",
+         "Type": 2,
+         "DefaultValue": "",
+         "IsMandatory": false,
+         "Description": "The proxy username to authenticate with.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 2
+      },
+      {
+         "Name": "Proxy Password",
+         "Type": 3,
+         "DefaultValue": "",
+         "IsMandatory": false,
+         "Description": "The proxy password to authenticate with.",
+         "ConnectorDefinitionId": -1,
+         "CreationTimeUnixTimeInMs": 1570446244,
+         "ModificationTimeUnixTimeInMs": 1570446244,
+         "Id": -1,
+         "Mode": 2
+      }
+   ],
+   "ProductToVisualFamilyRecords": [
+   ],
+   "Rules": [
+   ],
+   "SimulationUseCases":  {
+      "CasesForUseCase": [
+      ],
+      "UseCaseName": null
+   },
+   "Version": 1,
+   "DocumentationLink": "https://integrations.siemplify.co/doc/recorded-future#recorded-future-security-alerts-connector"
+}

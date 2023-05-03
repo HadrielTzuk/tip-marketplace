@@ -1,0 +1,46 @@
+{
+     "CreationTimeUnixTimeInMs": 1524559211168,
+     "Creator": "admin",
+     "Description": "Get information about ioc related to entities using information from Mandiant. Supported entities: Hostname, IP Address, URL, File Hash, Threat Actor.",
+     "DynamicResultsMetadata": [
+         {
+             "ResultExample": "[{\"Entity\":\"UNCxxx\",\"EntityResult\":{\"hash\":[\"edce844a21xxxxx\",\"4b9a1e5603xxxxx\"],\"url\":[],\"fqdn\":[\"feticost.com\",\"checksoffice.me\"],\"ip\":[\"64.227.xxx.xxx\",\"64.227.xxx.xxx\"],\"email\":[]}},{\"Entity\":\"celomito.com\",\"EntityResult\":{\"hash\":[\"27c1574b82xxxxx\",\"d5a461610xxxxxx\"],\"url\":[],\"fqdn\":[\"infosportals.com\",\"feticost.com\"],\"ip\":[],\"email\":[]}}]",
+             "ResultName": "JsonResult"
+         }
+     ],
+     "Id": -1,
+     "IntegrationIdentifier": "Mandiant",
+     "IsCustom": false,
+     "IsEnabled": true,
+     "ModificationTimeUnixTimeInMs": 1524559211168,
+     "Name": "Get Related Entities",
+     "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify the lowest severity score that will be used to return related indicators. Maximum: 100.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Lowest Severity Score",
+            "Type": 0,
+            "Value": "50"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": "100",
+            "Description": "Specify how many indicators action needs to process per entity. Default: 100.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Max IOCs To Return",
+            "Type": 0,
+            "Value": "100"
+        }
+     ],
+     "ScriptResultName": "is_success",
+     "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\", \"DestinationURL\", \"FILEHASH\", \"THREATACTOR\"]}",
+     "Version": 1.0
+ }

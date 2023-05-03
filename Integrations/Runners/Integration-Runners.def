@@ -1,0 +1,15 @@
+{
+    "Description": "Run commands as different users. Permission to replace a process level token is required (in local policies)",
+    "DisplayName": "Runners",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/runners",
+    "Identifier": "Runners",
+    "Categories": [
+        "IT & Infrastructure"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAMAAACScZ2GAAAAbFBMVEX///9ul87N2ezv8/nE0+qxxeOnvuCcttx7n9Le5/T3+v2Gp9XX4fHS3/C6zOdymtD8/f7n7veSsNmBpdV2ndHz9vupweKKq9jt8vnk7PbJ2O2/0emtxOTb5vPh6vW7zuiXtdyhvOCfut+zyOUJpViaAAACiUlEQVRo3u3Y2ZKiMBQG4P9ACGETEMWlXXp5/3eciSGEJnGZG4uqOd+N6UMaf+NJqBKMMcYYY4wxxhhjj2XphtTXAct0pZv6iCWKyDpjOZrqJH9KADuy1liMsiNtd8CRRjkWorKJNgd8kdViGbYbsopmP463WIYrOdXYfR0W4pOcE3oyjrDicbeIGO+3I+cLKzPo4cXTBN7KX71S6W/2iHA8ivBuq1+9h6Y97wEv3vuPQ3/ndk1TXZPTNdrO46VASRqAyC5jogexKUSI0r8vqxzwC7eaJP1nBjuhRCxv98lFcWuc6MmTrL6MS/l58OKheBRPDv9ZxAgUkKc0SGAntOoWUr8YKwRVZkJxwbn2dsEYT5gvNxzPSRAoQNJIDBPU7eNmSMmKEZYf++9T1aCqyRGh3hNP4ykECpkeSNPnKp9OiDGsm5AJHsvlNF699+OluB8vQkv3CtI+xZVeMDtBCSEAM8IDTVtWVbYFtj05Jy+ewP14EkB6r7CmiWiYUOi847VVjrDL97B3d6LBWbl9/CyenKYRLq9fUF481z2lrZcIaCQ53QV7d6vp1hgXwsUbS+HljJ7Fi2Bk9moWSLemqbpEFo6X2d5zH129HK8wW8SyEyxRkCbhkfTbJkYfjIfU3NI1TkKvxjPvknnxnFIFH0kHmpPYh+PFNJwKLVmvxjNLX+h8IhWzeCRso6SY6714dY5dMB4Se8gW/xzPP5ZdvOmVuY48FZJwvNj2b2ZbWb0cD/J5vHWOuZo8wjy+6iKdxYOwp1Ur9Tq2kK/HQyZM7wjM4glpLkTwke8D++p8iLEEwXjLwfH+r3gCy1F+9J+7Tm30SbLpivX3z3EpPw8wxhhjjDHGGGMv+wPIFxlzoBDiqAAAAABJRU5ErkJggg==",
+    "IntegrationProperties": [],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M23.2,27.3c-2-0.7-4.1-0.6-6.2-0.5c-1.5,0-2.9,0.3-4.3,0.8c-4.7,1.7-7.9,5.8-8,10.7c-0.1,3,0,5.9,0,8.9\n\t\t\tc0,0.4,0.2,0.4,0.5,0.4c4.3,0.8,8.7,1,13.2,1.1c4.4,0,8.8-0.3,13.2-1.1c0.3-0.1,0.4-0.2,0.4-0.5c0-2.8,0.1-5.7,0.1-8.5\n\t\t\tc0-0.6,0-1.2-0.2-1.8C30.8,31.9,27.8,28.8,23.2,27.3z M45.4,30.1c0.1-4.6-3.1-8.4-7.2-10c-3.1-1.1-6.2-1-9.4-0.5\n\t\t\tc-0.2,0-0.5,0.3-0.6,0.5c-1,1.7-2.2,3.2-3.9,4.3c-0.1,0.1-0.3,0.2-0.4,0.3c6.9,2.5,10.9,7.1,11.1,14.3c0.1,0,0.1,0,0.2,0\n\t\t\tc3.2-0.1,6.5-0.4,9.7-1c0.4-0.1,0.5-0.2,0.5-0.5C45.4,35,45.4,32.5,45.4,30.1z M17.9,23.8c4.8,0,8.8-3.9,8.8-8.8\n\t\t\tc0-4.8-3.9-8.8-8.7-8.8c-4.8,0-8.8,3.9-8.8,8.7C9.1,19.8,13,23.8,17.9,23.8z M29.3,14.9c0,0.2,0,0.4,0,0.7\n\t\t\tc-0.1,0.6,0.1,0.8,0.6,1.1c5.1,2.5,11.2-1.1,11.5-6.8C41.6,6,39,2.5,35.3,1.6c-3.8-0.9-7.7,1-9.3,4.6c-0.2,0.4-0.2,0.6,0.1,0.9\n\t\t\tC28.2,9.3,29.2,11.9,29.3,14.9z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 3.0,
+    "MarketingDisplayName": "Runners"
+}

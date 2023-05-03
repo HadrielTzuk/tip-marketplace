@@ -1,0 +1,57 @@
+{
+    "Description": "Google Rapid Response (GRR) is an incident response framework focused on remote live forensics. Used to communicate with the clients connected to GRR server.",
+    "DisplayName": "Google Rapid Response (GRR)",
+    "Identifier": "GoogleGRR",
+    "PythonVersion": 2,
+    "Categories": [
+        "Endpoint Security",
+        "Google",
+        "Cloud",
+        "Security"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAYAAAClr220AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAwFSURBVHgB7Z3RbxTHHceHEmyE7di1IcJOU58lbFI4CwJGiqlUGynJA0kEpA+t+oL5C+z8BZi/APNYtZKdF+pKUYE2jRRAwu4DDwWDEW4a7LQ+J+Ecge3Y2EaxHUTmO3e/vdll7273dtbjwO8jrbjb253dnfnO7/eb38yaTU8lgmHWmZ8JhrEAC4+xAguPsQILj7ECC4+xAguPsQILj7ECC4+xAguPsQILj7ECC4+xAguPsQILj7ECC4+xAguPsQILj7ECC4+xAguPsQILj7ECC4+xAguPscJLwiJDDx+JS+lZkVpeEaPzyyL1eEXtnzx6UCS2lQvm+WXdhTe/9oM4NzEt+uSGz8yLyboKD4Lr/fxrFhyzPsKDCz11Y0K5Vj/212wTnTuqReO2raJmy2a1Mc83sQtvdP6xODI89oyVq9nykuhurhc9csNn5sUi1hb/aOqB6LrxpWtfEMFBqBhw1JRtloOMrcoadsgNlnE9gaUeevAo9HmJinJ5zy/7/jaQeiCmsoOoKOyrqZD1UeE7CDsjw5mooG1wjXzPEZVNcf3tFD9Lh0q6cPhXRQWU+HTEt3FwXk9zgzjZ+IqIE3SYntFUpFgUz4p7RSfTQZ3kCzlKoXfPa+K03HQ2fXxdmALPcXZ/QhxvqBMmiUV4sBRHhsac9AhA77zWsTeQWyWrgIZHmsXbUCjrwuHXY0m5oMO8cXVUmKJvX5NLfKaF53cNk8IDaLPbb+8zWt+xJJAxkNBFhxsOKjrQlXhF9eKzskKvdSRVXq+/bZfz4BDjG1fuiIsyB2iaD+/8X5hkQFrPuOmbSIs4yaTAzF7DeIwHa6X3aCW6zmSkAQTKgBixIR1zJpuSOXH9nhg4tMuo64XF00GMkxlxB+vtsNToECgnE1q8XvB4PFPH9nBx1PDMI1XPBDo5tnwWCZ02DPNrT5TQdONh2kobF543sD299zWjJhoxDco7dTMzaMHgBaKAOKICMXtjUljcsMBa4/5O7yn+7BB22I4DsaaWv3eJYX71iRDb8h8flq7EDvHzS//WyjebezXqatEL9V6irFQMAwGUq/fiU1J8JpLSqvE0MDotFT00iINExVbX9/m1NWESeKg401xGhfeMtfOMtkwC8fVkA2qIHbMiLxLrMZddHWMi35ik9Ul+ABdSSuUgNkJZyOHly1MRGHwMPVyQx1XKPF8uToL1gxuCBSuUU4tCxi0/CXRsZjbGrPVYj2nHhYDPVwrGamPYE3yeDBlX6NNqEBsaFZVLI9x8Arz91n7Xd1jdvqz1Q4NT0G06F3Xx/ncyjpsIdCyEX0qsWAh0Th2v641KKpvOImrKzHYcY6XB8uiECfbxkEiPoIH0JVGo3BPXv5CzBwsqj1TMaiCgx7EXDu92ro+yEXtiBIz9phOhURlIPQw9YvQOLFBfhTwDDcTCcPH+nOs7vI9JjAkv9fh75zMEEsbNnrj+XyU6b+oBDwvBQZSI4QrFjBAXNu9aPnzGSHhB9t5TN/4nOo9Wb6i5YdVhH4pIHHu1tuDveuqlVLp31QuTmBPe8qrzOcycKqwa4rr+thbf3yESTD0hf+e1qu5yHiu3nE/wEC2sy6X0nJG8H9IN2PJhevYgH5ixwMxFXKD+UXcb1uKVGuxSgF5IrJispgFDIQoNIpQVrihTiw82EnhuPwucmS50J7Nx3HFp3dC5kLvE5yDWO1+9oC5SnjnxzuxiDH2RQBweIlafg4qjKaj+Q82+1ojW3qGi8z3gQkBRFxMVrHKYSpyPcVRHYGSeLx6mWZrc/fyg6jBsmirfwMZvTh0eqLt5Z+yxsLE8nn+DPlVWCpt3FEYg3YFzC+XhLqbnXNehYBqbft1CsQzKQMMVioe8CWM/ixAEEzEV8Ft5AjFiNG0inYL6QwytexuaijSxtKoQxiwe3NjofKYyyPLoDTks47PjDc82eiaG+IV80G/U8d74CxWAhiw2IqWRMRqlv63Z9ZuyvKOTKh4qNuiBC6MlWWgElBkmZvVzkVHozQpPFwJiVXRkLDGLmkhG/cMiYvZH7+C92evFNQlgTHhI4lKFUw4ID4UYARYPlYWH8LOMGDygsTHvCpHB9ehLouCOipl+NED/oV2qAocejDjxD8pAhUL0vQEq8YQ8r0+zvkFiSz9wbVNJ3l5Vb5tl2JJy9qn1jtJNYgGGCfEho9Al0y4fadYa4kO2wtuRTWDM1e6vdo96yLVS/EJvl+UD4sLDoxKwuiMzI1GhEsQ9zcGG8hAXXAfoy75YBNFhSRaVXYxu2QmiNiTON71aGp3Tu8qEYrR8YUxYBmT5XgsHg4H1iaWEHIUwJrxjHjd6buJb9W+3tsS92CuNEA4EArFhgxhLaUDv1F2YZDYt40JqJuy1ycLjfBOrZbzgnm6/5U6kqxDj6h21atoEfnElWVeT4jO6AllfXYvKmTx6QP2L+IRiBhJXVGiKLSPOnLVFll4P7uF+o66QCTovq1tK7zn0m3d/HPO4XoFsxJfjjQoPrrTnzqTzHS7ybDa5CXNNMaBfrwqDNw0A6wjrhO9Nn444x6HCMZPBbDyMLos6KTP5eu+Fa6XZBn0EBuv3oSbQMMCiYqRJooMFJZfotwj1eWJldVUsLi46G77/FMr2w/jLPnBz+qQ0xUz412up1DyqFEeQKSycg5SIPuSn+V2vOwfexaJB+eOf/iyqqqqc7+VlW8RvP/hAfV5cWhLn/zIo2g4cEAcPHlD7/v7JP8WS3J/jqTjc3i7u3h0T9fX1YmxsTJSV51xdVWWleP+9d9XnmyO3XL+vrqyIg7Lsmbk5MT097ToH17t8+YqorcuN7tvkvqHhf3me4Kks/z3xD3lfOniOd95+R5wfHBSdHb8Ru1syU5T4jvsdGhp2lf3r9jfFZ1euuspINP5SHWsC4zMXaHDMh5JAIBgsAkCuiERIy59S2RRK73++VukPvDuL92iRE1TLolafqPxfZpTrTmnoc5QIrHXRlZLdJ6qqKsUffv875/v5wb86n0dGRmTFv6lElWxNysYsU/vff/eoI9aP/3ZBCihnLZLJpBJIrrxB1/XaZUPubsmkK1JTU2JyMiXNwSYlwIb6nWo/hJlKTYlEotERTJm8dl1WKN77hcWq37lTHOnsEN7nQGcYkYIHVNaKvN98ZePZCL0DRSWWKTME9KOaO6R3bB3xyX9hGc+oPFFmdqAv+4d8igErB1HRqNHvpXGsvSs1oEYjkLWAu6mU1gbA2i0uLqnG2b69TtySjdcuRQh0q7MkG72svCzw9cbG7orx8XHneq3JvSI9/a0UWkqk05k3u16Wom6VQoegvriXOXZ2dlbua1Wf9fsVRRwYrOeRjg55zieqXNAkRTcjy6OyYcFxPXAzK1IAcTYlEsIEsQhPZcOlZdPdqnpfVYqR3C69NQYBQjyFkrQ0OX6ycYcrTYE40StWiDLKPGO5FA1cIRr22vCwYzXQUC3NLeJ+elrU1tYpsSSzjQPXpbvntOYm5+Zm5bG5BaNkJYlkslVZvJu3bsm4J2OFIDyUtz1rdWCBICoIhcSytraq7hWQ6yYgolnprum6OBdunIBVhzv+7PJl5/cdmptNTaXE4qNF9fnVhgatbsxZvNj+kgDwm4QG+Ua1tHye3mjCqle/5e8QKUTnTZyizN490QYUcKPU22HhIKKGhnplfcgVAeyHS0WjwRLogoJ1xPEQTzrt7hiwGHV1tU4Z5ZpbuyfF3CAbGqKfmcm9M4xjEk0JcS9rkdQ+KbpW6cbvyhgR/3pBWbh/As8AIeN+cL/0fLCsfmWjk41PjCsPQOB8OjcqsQoP5PtLUTSwyMR1wXoSyjjz+VfPlAWLCPfaFfOftmDMEbvwCO8SHx36M2UYWDRW5FacYLEBlkSNLiyrpdh+sx6I+fItuWI2LusmPADrR6tNokIrY4PO4zIbi3UVHoHY7NyX0yUJEBbumBw8dHmS1cxPCyvCI2jJEfJ+eHMKI1/XK3XZ5epYcrWvuoLF9hxhVXjMiwv/PxeMFVh4jBVYeIwVWHiMFVh4jBVYeIwVWHiMFVh4jBVYeIwVWHiMFVh4jBVYeIwVWHiMFVh4jBVYeIwVWHiMFVh4jBVYeIwVWHiMFVh4jBVYeIwVfgSwnigUMoM2YQAAAABJRU5ErkJggg==",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "GoogleGRR",
+            "IsMandatory": true,
+            "PropertyDescription": "Server URL including port.",
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "http://172.30.201.62:8000"
+        },
+        {
+            "IntegrationIdentifier": "GoogleGRR",
+            "IsMandatory": true,
+            "PropertyDescription": "The username of the GRR server.",
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleGRR",
+            "IsMandatory": true,
+            "PropertyDescription": "Server URL including port.",
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleGRR",
+            "IsMandatory": false,
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the GRR server.",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": false
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColornone\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M4.11776 12.6931C4.026 15.1735 5.92246 18.297 9.1342 19.43C12.4377 20.5937 16.0165 19.4606 18.0353 16.674L16.9647 15.7859C15.5577 17.5008 13.4471 18.7257 11.2448 18.5113C8.73656 18.2664 6.96245 16.9496 5.95305 14.6223C5.67775 14.0098 5.46364 13.3668 5.40246 12.6624H4.11776V12.6931Z\" \/>\r\n<path d=\"M17.5153 9.78392C17.9436 9.60019 18.3412 9.38583 18.7389 9.20209C17.5153 6.32358 13.9671 4.48623 11.3671 4.88432V6.10922C14.1812 6.0786 16.1695 7.36474 17.5153 9.78392Z\" \/>\r\n<path d=\"M21.1859 9.53894C19.9012 9.53894 18.8306 10.3964 18.4942 11.56C17.3624 11.5294 15.5577 11.56 14.4565 11.56C14.1201 10.3964 13.0495 9.53894 11.7648 9.53894C10.2048 9.53894 8.95068 10.7945 8.95068 12.3562C8.95068 13.918 10.2048 15.1735 11.7648 15.1735C12.8659 15.1735 13.8448 14.5304 14.3036 13.5811H14.3342C15.5883 13.5505 17.3624 13.5505 18.6471 13.5811C18.953 14.2242 19.473 14.7141 20.1153 14.9897C19.7483 16.0003 19.0753 17.2558 18.3412 18.0826C16.2 20.4712 13.5695 21.543 10.3577 21.0836C8.03304 20.7468 6.16716 19.5525 4.72953 17.6845C3.32247 15.8472 2.77189 13.7648 3.07777 11.4375C3.32247 9.56956 4.08718 7.94657 5.34129 6.59918C6.8401 4.97619 8.70597 4.02689 10.9695 3.84315C11.0918 3.84315 11.3365 3.84315 11.3365 3.84315V2.0058C10.5107 1.97518 9.68479 2.06705 8.92009 2.25078C6.65657 2.83261 4.7907 4.08813 3.32247 5.92549C1.48719 8.2528 0.72249 10.917 1.08955 13.8261C1.42602 16.429 2.61895 18.6032 4.63776 20.2874C7.29892 22.5535 10.3577 23.4722 13.753 22.7679C17.8518 21.9104 20.8188 18.9707 22.1647 14.9591C23.2353 14.561 24 13.5505 24 12.3256C24 10.7945 22.7459 9.53894 21.1859 9.53894Z\" \/>\r\n<\/svg>",
+    "Version": 5.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/google-rapid-response-grr",
+    "MarketingDisplayName": "Google Rapid Response (GRR)"
+}

@@ -1,0 +1,48 @@
+{
+    "CreationTimeUnixTimeInMs": 1527004348780,
+    "Creator": "Siemplify System",
+    "Description": "Sends an email report of various system measurement to configured admins",
+    "Id": -1,
+    "Integration": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527004348780,
+    "Name": "Measurement Monitor",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527521072245,
+            "DefaultValue": "Insights@siemplify.co",
+            "Description": "This job will send an email to the recipients defined in this parameter and in Siemplify Integration Configuration",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1527521072245,
+            "Name": "Additional Email Recipients",
+            "Type": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1527521072245,
+            "DefaultValue": "",
+            "Description": "Output folder location. For each job run a CSV output containing the metrics will be saved here",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1527521072245,
+            "Name": "Metrics Output Folder",
+            "Type": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1527521072245,
+            "DefaultValue": "100",
+            "Description": "The maximum amount of CSV output files to save under Metrics Output Folder",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1527521072245,
+            "Name": "Max CSV Files Count Retention",
+            "Type": 1
+        }
+    ],
+    "RunIntervalInSeconds": 86400,
+    "Version": 1
+}

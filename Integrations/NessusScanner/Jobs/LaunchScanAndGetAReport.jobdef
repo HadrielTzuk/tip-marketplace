@@ -1,0 +1,66 @@
+{
+    "CreationTimeUnixTimeInMs": 1522748226631,
+    "Creator": "admin",
+    "Description": "Job for initiating scan in Nessus and get scan report",
+    "Id": -1,
+    "Integration": "NessusScanner",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1522748226631,
+    "Name": "LaunchScanAndGetAReport",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1522748226631,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1522748226631,
+            "Name": "Api Root",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522748226631,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1522748226631,
+            "Name": "Access Key",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522748226631,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1522748226631,
+            "Name": "Secret Key",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522748226631,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1522748226631,
+            "Name": "Scan Name",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522748226631,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1522748226631,
+            "Name": "Scan Download Path",
+            "Type": 2
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Script": "# ==============================================================================\n# title           :LaunchScanAndGetAReport.py\n# description     :Job for initiating scan in Nessus and get scan report\n# author          :zivh@siemplify.co\n# date            :01-02-18\n# python_version  :2.7\n# ==============================================================================\n\n# =====================================\n#              IMPORTS                #\n# =====================================\nfrom NessusScannerManager import NessusScanner\nfrom SiemplifyJob import SiemplifyJob\nimport urllib3\nimport requests\nimport datetime\nimport os\n\n# =====================================\n#             CONSTANTS               #\n# =====================================\n\nTIME_STAMP_STR_FORMAT = \"%Y-%m-%d_%H:%M:%S:%f\"\nTIME_FORMAT = '%Y.%m.%d-%H.%M.%S.%f'\nTIME_STAMP_FILE_INITIATE_BACKWARDS = 0  # In days\n\n\n# =====================================\n#              CLASSES                #\n# =====================================\n\ndef write_scan_to_local_file(scan_report, scan_name, file_path):\n    \"\"\"\n    Write the scan report to local file\n    :param scan_report: {string} file data\n    :param scan_name: {string} file download name\n    :param file_path: {string} file download full path\n    :return: {string} file path\n    \"\"\"\n    # create file path if not exist\n    if not os.path.exists(file_path):\n        os.makedirs(file_path)\n\n    time = datetime.datetime.utcnow().strftime(TIME_FORMAT)[:-3]\n    file_name = '{0}_{1}.{2}'.format(scan_name, time, 'html')\n    new_path = os.path.join(file_path, file_name)\n\n    scan_file = open(new_path, \"a\").write(scan_report)\n    return new_path\n\n\ndef main():\n    urllib3.disable_warnings()\n    requests.packages.urllib3.disable_warnings()\n    siemplify = SiemplifyJob()\n    siemplify.script_name = 'NessusJob'\n\n    try:\n        siemplify.LOGGER.info(\"-----Job Started-----\")\n\n        # Parameters\n        access_key = siemplify.parameters['Access Key']\n        secret_key = siemplify.parameters['Secret Key']\n        server_address = siemplify.parameters['Api Root']\n        scan_name = siemplify.parameters['Scan Name']\n        scan_path = siemplify.parameters['Scan Download Path']\n\n        nessus_client = NessusScanner(access_key, secret_key, server_address)\n\n        siemplify.LOGGER.info(\"Launch scan and wait for result\")\n        scan_id = nessus_client.launch_scan_and_wait(scan_name)\n\n        siemplify.LOGGER.info(\"Get scan report\")\n        report = nessus_client.download_scan(scan_name)\n\n        siemplify.LOGGER.info(\"Write scan report to local file\")\n        name = scan_name.replace(':', '-')\n        scan_file_path = write_scan_to_local_file(report, name, scan_path)\n\n        siemplify.LOGGER.info(\"-----Job Finished-----\")\n\n    except Exception as e:\n        siemplify.LOGGER._log.exception(e)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "Version": 1
+}

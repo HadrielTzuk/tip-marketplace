@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Delete Rapid7 InsightIDR saved query. Note: Action is not working with Siemplify Entities.",
+    "Id": -1,
+    "IntegrationIdentifier": "Rapid7InsightIDR",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Delete Saved Query",
+    "Parameters": [
+        {
+            "Name": "Saved Query ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "ID of the saved query to delete in the format 00000000-0003-7218-0000-000000000000",
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

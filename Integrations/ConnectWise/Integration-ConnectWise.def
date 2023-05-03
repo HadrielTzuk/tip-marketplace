@@ -1,0 +1,57 @@
+{
+    "Description": "Seamlessly transition projects and tasks to keep your communication flowing without ever worrying about accountability and visibility.",
+    "DisplayName": "ConnectWise",
+    "Identifier": "ConnectWise",
+    "Categories": [
+        "IT & Infrastructure",
+        "Endpoint Management"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ConnectWise",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "6",
+            "Value": "https://{Company URL}/v4_6_Release/apis/3.0/"
+        },
+        {
+            "IntegrationIdentifier": "ConnectWise",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Company Name",
+            "PropertyName": "Company Name",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ConnectWise",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Public Key",
+            "PropertyName": "Public Key",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ConnectWise",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Private Key",
+            "PropertyName": "Private Key",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ConnectWise",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client Id",
+            "PropertyName": "Client Id",
+            "PropertyType": "2",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M48.6,15.8c-13.2,0.6-22.1,7.8-22.1,7.8s-8.7-7.2-21.9-7.8c-0.4,0-0.6,0.5-0.2,0.8c4.9,2.7,19.9,11.9,20.8,25.1\n\t\t\tc0.1,0.8,0.3,1.9,1.1,1.9h0.2c0.8,0,1.4-1.1,1.5-1.9c1-13.2,16-22.5,20.8-25.1C49.2,16.3,49,15.8,48.6,15.8z M10,13.3\n\t\t\tc7.4,1.2,14.6,5.9,16.2,6.9c0.2,0.1,0.4,0.1,0.6,0c3.8-3.4,13.6-6.1,16.5-6.8c0.4-0.1,0.5-0.5,0.2-0.8C29.5-0.6,13.7,9.6,9.8,12.5\n\t\t\tC9.5,12.7,9.6,13.2,10,13.3z M8.1,22.7c0.5-0.4,0.5-1.1,0.1-1.5c-0.9-1-2-1.3-2.7-1.4c-0.3-0.1-0.7,0.1-0.9,0.3\n\t\t\tc-3.8,3.6-3.3,12.9-3.1,15.5c0,0.4,0.3,0.8,0.7,0.9c1.9,0.6,3.1,0.3,3.8-0.1c0.5-0.3,0.7-0.9,0.5-1.4C3.4,27.9,6.5,24,8.1,22.7z\n\t\t\t M18.5,31c-0.2-0.3-0.6-0.3-0.8-0.1c-0.8,1-2.7,2.7-4.9,0.9c-2.2-1.9-0.5-4.6,0.5-5.8c0.3-0.3,0.2-0.8-0.1-1.1l-1.9-1.6\n\t\t\tc-0.3-0.2-0.7-0.2-1,0c-1.1,0.9-3.7,3.3-3.1,7.1c0.6,3.5,3.4,6.3,6.9,6.7c1.9,0.2,4.1-0.2,6.2-2.2c0.2-0.1,0.2-0.4,0.1-0.6\n\t\t\tL18.5,31z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 14.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/connectwise",
+    "MarketingDisplayName": "ConnectWise"
+}

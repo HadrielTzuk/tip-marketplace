@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1523436998378,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "IPVoid",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1523436998378,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom IPVoidManager import IPVoidManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(\"IPVoid\")\n    use_ssl = conf.get('Use SSL', 'False')\n\n    if use_ssl.lower() == 'true':\n        use_ssl = True\n    else:\n        use_ssl = False\n\n    ipvoid_manager = IPVoidManager(use_ssl=use_ssl)\n\n    # Test connectivity\n    ipvoid_manager.test_connectivity()\n    siemplify.end(\"Connected successfully.\", 'true')\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

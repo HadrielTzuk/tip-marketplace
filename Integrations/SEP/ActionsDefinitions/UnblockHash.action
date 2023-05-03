@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1517495638394, 
+    "Creator": "admin", 
+    "Description": "Unblock a particular hash", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SEP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1517495638394, 
+    "Name": "UnblockHash", 
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

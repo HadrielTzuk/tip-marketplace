@@ -1,0 +1,50 @@
+{
+    "Description": "ArcSight Logger is a comprehensive solution for security event log management.",
+    "DisplayName": "ArcSight Logger",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/arcsight-logger",
+    "Identifier": "ArcSightLogger",
+    "Categories": [
+        "Log Management",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ArcSightLogger",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Server Address",
+            "PropertyName": "Server Address",
+            "PropertyType": "6",
+            "Value": "https://<host>:<port>"
+        },
+        {
+            "IntegrationIdentifier": "ArcSightLogger",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ArcSightLogger",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ArcSightLogger",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 24.1.3, SVG Export Plug-In. SVG Version: 6.00 Build 0) --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"><path d=\"M21.8,19.4c-1.4-0.5-2.8-1.1-4.3-1.6c-0.9-0.4-1.8-0.7-2.6-1c0.2-1.3,0.4-2.6,0.4-3.8c0-1.3-0.3-2.5-0.4-3.8 c0.2-0.1,0.6-0.2,0.9-0.4c2-0.8,4-1.5,5.9-2.2c0.1,0,0.2-0.2,0.2-0.2c0-0.5,0-0.9,0-1.4c-2.6,1-5.2,2-7.8,3C13,5.3,11.1,3.3,8.6,2 C8.4,2,8.2,2,8.2,2C7.9,2.3,7.6,2.6,7.2,3c2.6,1.1,4.4,2.9,5.7,5.4c-0.5,0.2-0.9,0.3-1.3,0.5c-2.5,1-5,1.9-7.6,2.9 c-1,0.4-1,0.4-1,1.5c0,0.1,0,0.3,0,0.4c0.1,0.1,0.2,0.3,0.3,0.4c0.5,0.2,1,0.4,1.6,0.6c2.2,0.8,4.3,1.6,6.5,2.5 c0.5,0.2,1,0.4,1.6,0.6c-0.6,0.8-1,1.6-1.6,2.3c-1.1,1.4-2.5,2.4-4.2,3.1c0.4,0.3,0.6,0.6,0.9,0.9C8.1,24,8.3,24,8.4,24 c2.5-1.2,4.4-3.1,5.7-5.6c0-0.1,0.3-0.2,0.4-0.2c1.8,0.7,3.6,1.4,5.5,2.1c0.7,0.3,1.3,0.5,2,0.8c0-0.5,0-0.9,0-1.4 C22,19.6,21.9,19.5,21.8,19.4z M13.4,16.2c-2.8-1.1-5.6-2.1-8.3-3.2c0,0,0-0.1,0-0.1c2.8-1.1,5.5-2.1,8.3-3.2 C14.1,11.9,14.1,14,13.4,16.2z\"/></svg>",
+    "Version": 4.0,
+    "MarketingDisplayName": "ArcSight Logger"
+}

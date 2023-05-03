@@ -1,0 +1,21 @@
+{
+    "CreationTimeUnixTimeInMs": 1542187723175,
+    "Creator": "Admin",
+    "Description": "Fetch system status.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"system_status\": {\"data\": {\"health\": \"ok\"}}, \"db_status\": {\"data\": {\"health\": \"ok\"}}, \"cache_status\": {\"data\": {\"health\": \"ok\"}}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOneV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542187723175,
+    "Name": "Get System Status",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

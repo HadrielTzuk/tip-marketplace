@@ -1,0 +1,106 @@
+{
+    "CreationTimeUnixTimeInMs": 1542188059113,
+    "Creator": "Admin",
+    "Description": "Get a list of all the items available in the blacklist in SentinelOne.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"userName\": \"Zivh\", \"description\": \"test\", \"userId\": \"8237415437026xxxxx\", \"scopeName\": \"Siemplify.co\", \"value\": \"cf23df2207d99a74fbe169e3eba035e633bxxxxx\", \"source\": \"user\", \"updatedAt\": \"2020-02-27T15:02:54.686991Z\", \"osType\": \"windows\", \"scope\": {\"siteIds\": [\"8237406459034xxxxx\"]}, \"type\": \"black_hash\", \"id\": \"8353960925573xxxxx\", \"createdAt\": \"2020-02-27T15:02:54.687675Z\"}, {\"description\": \"Detected by SentinelOne Cloud\", \"userId\": null, \"scopeName\": \"Siemplify.co\", \"value\": \"3395856ce81f2b7382dee72602f798b642fxxxxx\", \"source\": \"cloud\", \"updatedAt\": \"2020-03-18T14:42:02.730095Z\", \"osType\": \"linux\", \"scope\": {\"siteIds\": [\"8237406459034xxxxx\"]}, \"type\": \"black_hash\", \"id\": \"8498811050050xxxxx\", \"createdAt\": \"2020-03-18T14:42:02.730449Z\"}, {\"description\": \"Detected by SentinelOne Cloud\", \"userId\": null, \"scopeName\": \"Siemplify.co\", \"value\": \"df531d66173235167ac502b867f3cae2170xxxxx\", \"source\": \"cloud\", \"updatedAt\": \"2020-04-08T07:27:35.686775Z\", \"osType\": \"linux\", \"scope\": {\"siteIds\": [\"8237406459034xxxxx\"]}, \"type\": \"black_hash\", \"id\": \"8648827291549xxxxx\", \"createdAt\": \"2020-04-08T07:27:35.687168Z\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOneV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542188059113,
+    "Name": "Get Blacklist",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of hashes that need to be checked in blacklist. Only hashes that were found will be returned. If nothing is specified here action will return all hashes. Note: if \"Hash\" parameter is provided then \"Limit\" parameter is ignored.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Hash",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of site ids, which should be used to return blacklist items.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Site IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of group ids, which should be used to return blacklist items.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Group IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of account ids, which should be used to return blacklist items.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Account IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many blacklist items should be returned. Note: if \"Hash\" parameter has values, then this parameter is ignored. Maximum is 1000.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Limit",
+            "Type": 0,
+            "Value": 50
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the query that needs to be used in order to filter the results.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Query",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will also return hashes from the global blacklist.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Use Global Blacklist",
+            "Type": 1,
+            "Value": "False"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

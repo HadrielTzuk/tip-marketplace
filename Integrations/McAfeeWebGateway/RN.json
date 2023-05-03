@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "Fixed misspelling in integration name",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "McAfee Web Gateway",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1581944285,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1762"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "McAfee Web Gateway",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Security enhancements throughout the integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "McAfee Web Gateway",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1636521986,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "McAfee Web Gateway",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

@@ -1,0 +1,160 @@
+{
+    "CreationTimeUnixTimeInMs": 1667480734,
+    "Creator": "admin",
+    "Description": "Search logs in FortiAnalyzer. Note: Action is running as async, adjust the script timeout value in Siemplify IDE for action as needed.",
+    "Id": -1,
+    "IntegrationIdentifier": "FortiAnalyzer",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1667480734,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "{\"sessionid\":\"1111\",\"srcip\":\"1.1.1.1\",\"dstip\":\"1.1.1.1\",\"srcport\":\"11111\",\"dstport\":\"443\",\"trandisp\":\"noop\",\"duration\":\"1\",\"proto\":\"6\",\"sentbyte\":\"216\",\"rcvdbyte\":\"112\",\"sentpkt\":\"4\",\"rcvdpkt\":\"2\",\"logid\":\"0001000014\",\"service\":\"HTTPS\",\"app\":\"HTTPS\",\"appcat\":\"unscanned\",\"srcintfrole\":\"undefined\",\"dstintfrole\":\"undefined\",\"eventtime\":\"1665752066921638736\",\"srccountry\":\"Reserved\",\"dstcountry\":\"Somewhere\",\"srcintf\":\"root\",\"dstintf\":\"port1\",\"dstowner\":\"540\",\"tz\":\"-0700\",\"devid\":\"FGVMQWERKQ61YQD5\",\"vd\":\"root\",\"csf\":\"FortiNetFabric\",\"dtime\":\"2022-10-14 05:54:27\",\"itime_t\":\"1665752069\",\"devname\":\"FGVMEV2YKQ61QWER\"}",
+		"ResultName": "JsonResult"
+	}],
+    "Name": "Search Logs",
+    "Parameters": [
+        {
+            "Name": "Log Type",
+            "Type": 15,
+            "DefaultValue": "Traffic",
+            "Value": "Traffic",
+            "IsMandatory": false,
+            "Description": "Specify the log type that needs to be searched.",
+            "OptionalValues": [
+                "Traffic",
+                "App Control",
+                "Attack",
+                "Content",
+                "DLP",
+                "Email Filter",
+                "Event",
+                "History",
+                "Virus",
+                "VOIP",
+                "Web Filter",
+                "Netscan",
+                "FCT Event",
+                "FCT Traffic",
+                "WAF",
+                "GTP"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Case Sensitive Filter",
+            "Type": 1,
+            "DefaultValue": false,
+            "Value": false,
+            "IsMandatory": false,
+            "Description": "If enabled, the filter is case sensitive.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1664133744476,
+            "ModificationTimeUnixTimeInMs": 1664133744476
+        },
+        {
+            "Name": "Query Filter",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the query filter for the search.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1664133744476,
+            "ModificationTimeUnixTimeInMs": 1664133744476
+        },
+        {
+            "Name": "Device ID",
+            "Type": 0,
+            "DefaultValue": "All_Fortigate",
+            "Value": "All_Fortigate",
+            "IsMandatory": false,
+            "Description": "Specify the ID of the device that needs to be searched. If nothing is provided, the action searches in All_Fortigate. Examples of values: All_FortiGate, All_FortiMail, All_FortiWeb, All_FortiManager, All_Syslog, All_FortiClient, All_FortiCache, All_FortiProxy, All_FortiAnalyzer, All_FortiSandbox, All_FortiAuthenticator, All_FortiDDoS.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1664133744476,
+            "ModificationTimeUnixTimeInMs": 1664133744476
+        },
+        {
+            "Name": "Time Frame",
+            "Type": 15,
+            "DefaultValue": "Last Month",
+            "Value": "Last Month",
+            "IsMandatory": false,
+            "Description": "Specify a time frame for the results. If \"Custom\" is selected, you also need to provide the \"Start Time\" parameter.",
+            "OptionalValues": [
+                "Last Hour",
+                "Last 6 Hours",
+                "Last 24 Hours",
+                "Last Week",
+                "Last Month",
+                "Custom"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Start Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the start time for the results. This parameter is mandatory, if \"Custom\" is selected for the \"Time Frame\" parameter. Format: ISO 8601",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1664133744476,
+            "ModificationTimeUnixTimeInMs": 1664133744476
+        },
+        {
+            "Name": "End Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the end time for the results. Format: ISO 8601. If nothing is provided and \"Custom\" is selected for the \"Time Frame\" parameter then this parameter uses current time.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1664133744476,
+            "ModificationTimeUnixTimeInMs": 1664133744476
+        },
+        {
+            "Name": "Time Order",
+            "Type": 15,
+            "DefaultValue": "DESC",
+            "Value": "DESC",
+            "IsMandatory": false,
+            "Description": "Specify the time ordering in the search.",
+            "OptionalValues": [
+                "DESC",
+                "ASC"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Logs To Return",
+            "Type": 0,
+            "DefaultValue": 20,
+            "Value": 20,
+            "IsMandatory": false,
+            "Description": "Specify the number of logs you want to return. Default: 20. Maximum: 1000.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1664133744476,
+            "ModificationTimeUnixTimeInMs": 1664133744476
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

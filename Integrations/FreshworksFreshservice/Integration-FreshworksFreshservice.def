@@ -1,0 +1,43 @@
+{
+    "Description": "Freshservice is a cloud-based IT Help Desk and service management solution that enables organizations to simplify their IT operations. The solution offers features that include a ticketing system, self-service portal and knowledge-base.",
+    "DisplayName": "Freshworks Freshservice",
+    "Identifier": "FreshworksFreshservice",
+    "PythonVersion": 2,
+    "Categories": [
+        "IT & Infrastructure",
+        "ITSM"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "FreshworksFreshservice",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https://yourdomain.freshservice.com"
+        },
+        {
+            "IntegrationIdentifier": "FreshworksFreshservice",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "FreshworksFreshservice",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": true
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<svg viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 12.5C2 18.3085 6.71885 23 12.5112 23C18.3035 23 23 18.3085 23 12.4777V4.61383C23 3.18404 21.8371 2 20.3834 2H12.5112C6.69649 2 2 6.71383 2 12.5ZM12.7571 17.6383C12.6677 17.7723 12.4888 17.7947 12.3546 17.7053C12.2428 17.616 12.198 17.4819 12.2651 17.3702L13.4951 13.6617H8.50793C8.19483 13.6617 8.01591 13.3043 8.19483 13.0585L8.95521 11.9862L12.2651 7.38405C12.3546 7.25 12.5335 7.22766 12.6677 7.31702C12.7795 7.40639 12.8242 7.54043 12.7795 7.65213L11.5495 11.3606H16.5143C16.8274 11.3606 17.0063 11.7181 16.8274 11.9638L16.067 13.0362L12.7571 17.6383Z\"\/>\r\n<\/svg>",
+    "Version": 8.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/freshworks-freshservice",
+    "MarketingDisplayName": "Freshworks Freshservice"
+}

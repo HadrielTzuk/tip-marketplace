@@ -1,0 +1,101 @@
+{
+    "CreationTimeUnixTimeInMs": 1544543055847,
+    "Creator": "Admin",
+    "Description": "Update an editable alert property",
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftGraphSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1544543055847,
+    "Name": "Update Alert",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1544543055856,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The ID of the alert to update.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1544543055856,
+            "Name": "Alert ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1544543055858,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Name of the analyst the alert is assigned to for triage, investigation, or remediation.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1544543055858,
+            "Name": "Assigned To",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1544543055858,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Time at which the alert was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1544543055858,
+            "Name": "Closed Date Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1544543055858,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Analyst comments on the alert (for customer alert management), separated by comma. This method can update the comments field with the following values only: Closed in IPC, Closed in MCAS.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1544543055858,
+            "Name": "Comments",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1544543055861,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1544543055861,
+            "Name": "Feedback",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1544543055861,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Alert lifecycle status (stage). Possible values are: unknown, newAlert, inProgress, resolved.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1544543055861,
+            "Name": "Status",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1544543055862,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "User-definable labels that can be applied to an alert. Separated by comma",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1544543055862,
+            "Name": "Tags",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom MicrosoftGraphSecurityManager import MicrosoftGraphSecurityManager\n\nSPLIT_CHAR = \",\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration(\"MicrosoftGraphSecurity\")\n    client_id = conf[\"Client ID\"]\n    secret_id = conf[\"Secret ID\"]\n    tenant = conf[\"Tenant\"]\n    token = conf.get(\"Refresh Token\")\n\n    mtm = MicrosoftGraphSecurityManager(client_id, secret_id, tenant, token)\n\n    alert_id = siemplify.parameters.get('Alert ID')\n    assigned_to = siemplify.parameters.get('Assigned To') or None\n    closed_date_time = siemplify.parameters.get('Closed Date Time') or None\n    comments = siemplify.parameters.get('Comments') or None\n    feedback = siemplify.parameters.get('Feedback') or None\n    status = siemplify.parameters.get('Status') or None\n    tags = siemplify.parameters.get('Tags') or None\n\n    comments_list = []\n    tags_list = []\n    if comments:\n        comments_list = comments.split(SPLIT_CHAR)\n    if tags:\n        tags_list = tags.split(SPLIT_CHAR)\n\n    alert_after_update = mtm.update_alert(alert_id, assigned_to=assigned_to, closed_date_time=closed_date_time,\n                                          comments=comments_list, feedback=feedback, status=status, tags=tags_list)\n\n    if alert_after_update:\n        output_message = \"Microsoft Graph Security Alert - {0} successfully updated.\".format(alert_id)\n        result_value = 'true'\n\n    else:\n        output_message = \"Failed to update Microsoft Graph Security Alert - {0}.\".format(alert_id)\n        result_value = 'false'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n\n",
+    "ScriptResultName": "is_updated",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

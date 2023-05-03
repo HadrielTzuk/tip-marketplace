@@ -1,0 +1,34 @@
+{
+    "CreationTimeUnixTimeInMs": 1542187500928,
+    "Creator": "Admin",
+    "Description": "Retrieve detailed information about the provided groups.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\":{\"inherits\":\"False\",\"name\":\"Default Group\",\"creator\":\"Chris Goodman\",\"filterName\":\"None\",\"updatedAt\":\"2020-11-07T13:34:05.250729Z\",\"filterId\":\"None\",\"rank\":\"None\",\"registrationToken\":\"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\"siteId\":\"XXXXXXXXXXXXXX\",\"isDefault\":\"True\",\"creatorId\":\"XXXXXXXXXXXXXXX\",\"totalAgents\":\"0\",\"type\":\"static\",\"id\":\"XXXXXXXXXXXXXXXXXXX\",\"createdAt\":\"2020-02-11T13:05:37.175034Z\"},\"Entity\":\"Default Group\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOneV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542187500928,
+    "Name": "Get Group Details",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542187388209,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of group names for which you want to retrieve details.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542187388209,
+            "Name": "Group Names",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 2.0
+}

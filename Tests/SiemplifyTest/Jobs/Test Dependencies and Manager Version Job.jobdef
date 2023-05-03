@@ -1,0 +1,16 @@
+{
+  "Name": "Test Dependencies and Manager Version Job",
+  "Integration": "SiemplifyTest",
+  "Script": "from SiemplifyJob import SiemplifyJob\nfrom SiemplifyUtils import output_handler\nfrom TestManager1 import TestManager1\nfrom TestManager2 import TestManager2\nimport pyjokes\nimport cowsay\n\n\n@output_handler\ndef main(stdout_handler=None):\n    siemplify = SiemplifyJob(stdout_handler=stdout_handler)\n    siemplify.script_name = \"DummyJob\" # In order to use the SiemplifyLogger, you must assign a name to the script.\n    \n    t1 = TestManager1()\n    assert t1.get_version() == \"A1\"\n\n    t2 = TestManager2()\n    assert t2.get_version() == \"A2\"\n\n    cowsay.cheese(\"YAY\")\n    pyjokes.get_joke()\n\n    assert pyjokes.__version__ == \"0.5.0\"\n    proc = subprocess.Popen(\"pip freeze\", stdout=subprocess.PIPE, shell=True)\n    out, err = proc.communicate()\n    assert \"cowsay==2.0.3\" in out\n        \n    siemplify.LOGGER.info(\"Job started\") # Logs will be found at C:\\Siemplify_Server\\Scripting\\SiemplifyJob\\<\"Script_Name\">\n    # SCRIPT LOGIC HERE:\n    siemplify.LOGGER.info(\"Job Finished\")\n\nif __name__ == \"__main__\":\n    main()",
+  "Creator": "Admin",
+  "RunIntervalInSeconds": 900,
+  "Description": "",
+  "IsEnabled": true,
+  "IsCustom": false,
+  "Version": 5,
+  "IsSystem": false,
+  "Parameters": [],
+  "Id": 0,
+  "CreationTimeUnixTimeInMs": 1561380999790,
+  "ModificationTimeUnixTimeInMs": 1561380999804
+}

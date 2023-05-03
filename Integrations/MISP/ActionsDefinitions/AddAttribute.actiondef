@@ -1,0 +1,126 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583, 
+    "Creator": "admin", 
+    "Description": "Add attributes based on entities to the event in MISP. Supported hashes: MD5, SHA1, SHA224, SHA256, SHA384, SHA512, SSDeep.",
+    "Id": -1, 
+    "IntegrationIdentifier": "MISP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530451212583, 
+    "Name": "Add Attribute",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Attribute\": {\"id\": \"xxxx\", \"event_id\": \"xx\", \"object_id\": \"xx\", \"object_relation\": null, \"category\": \"External analysis\", \"type\": \"domain\", \"value1\": \"xxxxx.com\", \"value2\": \"\", \"to_ids\": true, \"uuid\": \"76b41f31-abe9-40a5-9de6-xxxx\", \"timestamp\": \"1610724106\", \"distribution\": \"1\", \"sharing_group_id\": \"xx\", \"comment\": \"\", \"deleted\": false, \"disable_correlation\": false, \"first_seen\": null, \"last_seen\": null, \"value\": \"xxxxx.com\"}}, {\"Attribute\": {\"id\": \"xxxx\", \"event_id\": \"xx\", \"object_id\": \"xx\", \"object_relation\": null, \"category\": \"External analysis\", \"type\": \"md5\", \"value1\": \"f925daf782826be42d26fdd3xxxx\", \"value2\": \"\", \"to_ids\": true, \"uuid\": \"844923b9-81cf-4e37-b3d6-xxxxx\", \"timestamp\": \"1610724106\", \"distribution\": \"1\", \"sharing_group_id\": \"xx\", \"comment\": \"\", \"deleted\": false, \"disable_correlation\": false, \"first_seen\": null, \"last_seen\": null, \"value\": \"f925daf782826be42d26fxxxx\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "TheSpecify the ID or UUID of the event, for which you want to add attributes.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Event ID", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "",
+            "Description": "Specify the category for attributes. Possible values: Targeting data, Payload delivery, Artifacts dropped, Payload installation, Persistence mechanism, Network activity, Attribution, External analysis, Social network.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Category", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Community",
+            "Description": "Specify the distribution of the attribute. Possible values: 0 - Organisation, 1 - Community, 2 - Connected, 3 - All, 5 - Inherit. You can either provide a number or a string.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Distribution", 
+            "Type": 0, 
+            "Value": "Community"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "false",
+            "Description": "If enabled, attribute will be labeled as eligible to create an IDS signature out of it.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "For Intrusion Detection System", 
+            "Type": 1, 
+            "Value": "false"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "",
+            "Description": "Specify comment related to attribute.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Comment", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "Source Address",
+            "Description": "Specify what should be the fallback attribute type for the IP address entity.",
+            "Name": "Fallback IP Type",
+            "Value": "Source Address",
+            "Type": 15,
+            "OptionalValues": [
+                "Source Address",
+                "Destination Address"
+            ],
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1572955458924,
+            "ModificationTimeUnixTimeInMs": 1572955458924
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "Source Email Address",
+            "Description": "Specify what should be the fallback attribute type for the email address entity.",
+            "Name": "Fallback Email Type",
+            "Value": "Source Email Address",
+            "Type": 15,
+            "OptionalValues": [
+                "Source Email Address",
+                "Destination Email Address"
+            ],
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1572955458924,
+            "ModificationTimeUnixTimeInMs": 1572955458924
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "true",
+            "Description": "If enabled, action will extract domain out of URL entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Extract Domain",
+            "Type": 1,
+            "Value": "true"
+        }
+    ], 
+    "ScriptResultName": "success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\", \"FILEHASH\", \"ADDRESS\", \"USER\", \"FILENAME\", \"EMAILSUBJECT\", \"THREATCAMPAIGN\", \"THREATACTOR\", \"PHONENUMBER\"]}",
+    "Version": 1.0
+}

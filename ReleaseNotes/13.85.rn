@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 13.85</h2><h5>Published on 24 November, 2020</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     AWSGuardDuty\n    </b>\n   </li>\n   <ul>\n    <li>\n     AWSGuardDuty\n    </li>\n    <ul>\n     <li>\n      New Actions:\nCreate Sample Findings, Archive/Unarchive Findings, Update Findings Feedback, Get Detector Details, Delete a Trusted IP List/Threat Intelligence Set, Create/Update/Delete a detector, List Detectors\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     Exchange\n    </b>\n   </li>\n   <ul>\n    <li>\n     Exchange\n    </li>\n    <ul>\n     <li>\n      Exchange - Added integration parameter - \"Autodiscover\" - To enable the Autodiscover service using the integration with Exchange. You can read more on our documentation site.\n     </li>\n     <li>\n      Exchange - Fixed a bug where async actions failed due to Exchange network errors. Added a fallback mechanism to handle the issue. Also, added new integration parameter to handle the issues better - Auto Discover. You can read more about it in the documentation site.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "13.85",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "24/11/20",
+    "Title": "Release Notes"
+}

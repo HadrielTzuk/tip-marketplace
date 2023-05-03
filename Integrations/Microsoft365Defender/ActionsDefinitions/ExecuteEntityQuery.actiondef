@@ -1,0 +1,231 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Execute a hunting query based on entities in Microsoft 365 Defender. Note: this action prepares a where filter based on entities. Please refer to the documentation for more details. Supported entities: IP, Host, User, Hash, URL.",
+    "Id": -1,
+    "IntegrationIdentifier": "Microsoft365Defender",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Execute Entity Query",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Timestamp\":\"2021-04-29T10:04:27.9049321Z\",\"AlertId\":\"\",\"ServiceSource\":\"\",\"EntityType\":\"\",\"EvidenceRole\":\"\",\"EvidenceDirection\":\"\",\"FileName\":\"\",\"FolderPath\":\"\",\"SHA1\":\"\",\"SHA256\":\"\",\"FileSize\":null,\"ThreatFamily\":\"\",\"RemoteIP\":\"\",\"RemoteUrl\":\"\",\"AccountName\":\"\",\"AccountDomain\":\"\",\"AccountSid\":\"\",\"AccountObjectId\":\"\",\"AccountUpn\":\"\",\"DeviceId\":\"4404d21581b65a3dbxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"DeviceName\":\"desktop-xxxxxx\",\"LocalIP\":\"\",\"NetworkMessageId\":\"\",\"EmailSubject\":\"\",\"ApplicationId\":null,\"Application\":\"\",\"OAuthApplicationId\":\"\",\"ProcessCommandLine\":\"\",\"AdditionalFields\":\"{\\\"IsLocalLogon\\\":true}\",\"RegistryKey\":\"\",\"RegistryValueName\":\"\",\"RegistryValueData\":\"\",\"Title\":\"\",\"Category\":\"\",\"Severity\":\"\",\"DetectionSource\":\"\",\"AttackTechniques\":\"\",\"ClientVersion\":\"\",\"PublicIP\":\"\",\"OSArchitecture\":\"\",\"OSPlatform\":\"\",\"OSBuild\":null,\"IsAzureADJoined\":null,\"AadDeviceId\":\"\",\"LoggedOnUsers\":\"\",\"RegistryDeviceTag\":\"\",\"OSVersion\":\"\",\"MachineGroup\":\"\",\"ReportId\":2826,\"OnboardingStatus\":\"\",\"DeviceCategory\":\"\",\"DeviceType\":\"\",\"DeviceSubType\":\"\",\"Model\":\"\",\"Vendor\":\"\",\"OSDistribution\":\"\",\"OSVersionInfo\":\"\",\"MergedDeviceIds\":\"\",\"MergedToDeviceId\":\"\",\"DeviceObjectId\":\"\",\"NetworkAdapterName\":\"\",\"MacAddress\":\"\",\"NetworkAdapterType\":\"\",\"NetworkAdapterStatus\":\"\",\"TunnelType\":\"\",\"ConnectedNetworks\":\"\",\"DnsAddresses\":\"\",\"IPv4Dhcp\":\"\",\"IPv6Dhcp\":\"\",\"DefaultGateways\":\"\",\"IPAddresses\":\"\",\"NetworkAdapterVendor\":\"\",\"ActionType\":\"LogonFailed\",\"LogonType\":\"Network\",\"Protocol\":\"Kerberos\",\"FailureReason\":\"\",\"IsLocalAdmin\":null,\"LogonId\":null,\"RemoteDeviceName\":\"\",\"RemoteIPType\":\"\",\"RemotePort\":null,\"InitiatingProcessAccountDomain\":\"nt authority\",\"InitiatingProcessAccountName\":\"system\",\"InitiatingProcessAccountSid\":\"S-1-5-18\",\"InitiatingProcessAccountUpn\":\"\",\"InitiatingProcessAccountObjectId\":\"\",\"InitiatingProcessIntegrityLevel\":\"\",\"InitiatingProcessTokenElevation\":\"None\",\"InitiatingProcessSHA1\":\"75c5a97f521f760e32a4a9639axxxxxxxxxxxxxx\",\"InitiatingProcessSHA256\":\"\",\"InitiatingProcessMD5\":\"9520a99e77d6196d0d0xxxxxxxxxxxxx\",\"InitiatingProcessFileName\":\"svchost.exe\",\"InitiatingProcessFileSize\":null,\"InitiatingProcessVersionInfoCompanyName\":\"\",\"InitiatingProcessVersionInfoProductName\":\"\",\"InitiatingProcessVersionInfoProductVersion\":\"\",\"InitiatingProcessVersionInfoInternalFileName\":\"\",\"InitiatingProcessVersionInfoOriginalFileName\":\"\",\"InitiatingProcessVersionInfoFileDescription\":\"\",\"InitiatingProcessId\":3020,\"InitiatingProcessCommandLine\":\"svchost.exe -k netsvcs -p -s Winmgmt\",\"InitiatingProcessCreationTime\":\"2021-04-29T09:59:11.8716716Z\",\"InitiatingProcessFolderPath\":\"C:\\\\Windows\\\\System32\",\"InitiatingProcessParentId\":728,\"InitiatingProcessParentFileName\":\"\\\\Device\\\\HarddiskVolume4\\\\Windows\\\\System32\\\\services.exe\",\"InitiatingProcessParentCreationTime\":\"2021-04-29T09:59:09.9224656Z\",\"AppGuardContainerId\":\"\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Table Names",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify what tables should be queried.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Time Frame",
+            "Type": 15,
+            "DefaultValue": "Last Hour",
+            "Value": "Last Hour",
+            "IsMandatory": false,
+            "Description": "Specify a time frame for the results. If \"Custom\" is selected, you also need to provide \"Start Time\".",
+            "OptionalValues": [
+                "Last Hour",
+                "Last 6 Hours",
+                "Last 24 Hours",
+                "Last Week",
+                "Last Month",
+                "Custom"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Start Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the start time for the results. This parameter is mandatory, if \"Custom\" is selected for the \"Time Frame\" parameter. Format: ISO 8601",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "End Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the end time for the results. Format: ISO 8601. If nothing is provided and \"Custom\" is selected for the \"Time Frame\" parameter then this parameter will use current time.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Fields To Return",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what fields to return.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Sort Field",
+            "Type": 0,
+            "DefaultValue": "Timestamp",
+            "Value": "Timestamp",
+            "IsMandatory": false,
+            "Description": "Specify what parameter should be used for sorting.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Sort Order",
+            "Type": 15,
+            "DefaultValue": "ASC",
+            "Value": "ASC",
+            "IsMandatory": false,
+            "Description": "Specify the order of sorting.",
+            "OptionalValues": [
+                "ASC",
+                "DESC"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many results to return. Default: 50.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "IP Entity Key",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what key should be used with IP entities. Please refer to the action documentation for details.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Hostname Entity Key",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what key should be used with Hostname entities. Please refer to the action documentation for details.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "File Hash Entity Key",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what key should be used with File Hash entities. Please refer to the action documentation for details.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "User Entity Key",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what key should be used with User entities. Please refer to the action documentation for details.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "URL Entity Key",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what key should be used with URL entities. Please refer to the action documentation for details.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Email Address Entity Key",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what key should be used with Email Address (User entity with email regex) entities. Please refer to the action documentation for details.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Stop If Not Enough Entities",
+            "Type": 1,
+            "DefaultValue": true,
+            "Value": true,
+            "IsMandatory": true,
+            "Description": "If enabled, action will not start execution, unless all of the entity types are available for the specified “.. Entity Keys”. Example: if “IP Entity Key” and “File Hash Entity Key” are specified, but in the scope there are no file hashes then if this parameter is enabled, action will not execute the query.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Cross Entity Operator",
+            "Type": 15,
+            "DefaultValue": "OR",
+            "Value": "OR",
+            "IsMandatory": true,
+            "Description": "Specify what should be the logical operator used between different entity types.",
+            "OptionalValues": [
+                "OR",
+                "AND"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"HOSTNAME\", \"USERUNIQNAME\", \"FILEHASH\", \"DestinationURL\"]}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

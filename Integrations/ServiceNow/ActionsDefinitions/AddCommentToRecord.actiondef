@@ -1,0 +1,88 @@
+{
+    "CreationTimeUnixTimeInMs": 1533725706168,
+    "Creator": "Admin",
+    "Description": "Add a comment to a specific table record in ServiceNow. Note: Action is running as async if \"Wait For Reply\" is enabled, please adjust script timeout value in Siemplify IDE for action as needed.",
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1533725706168,
+    "Name": "Add Comment To Record",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"sys_id\":\"e58d380b07a63010ff23f6xxxxxxxxxx\",\"sys_created_on\":\"2021-09-16 18:19:28\",\"name\":\"incident\",\"element_id\":\"57af7aec73d42300272866xxxxxxxxxx\",\"sys_tags\":\"\",\"value\":\"test reply\",\"sys_created_by\":\"admin\",\"element\":\"comments\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Table Name",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the table to which you want to add a comment or work note. Example: incident.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1533725706168,
+            "ModificationTimeUnixTimeInMs": 1533725706168
+        },
+        {
+            "Name": "Type",
+            "Type": 15,
+            "Value": "Comment",
+            "DefaultValue": "Comment",
+            "IsMandatory": true,
+            "Description": "Specify whether comment or work note should be added to the record.",
+            "OptionalValues": [
+                "Comment",
+                "Work Note"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1533725706168,
+            "ModificationTimeUnixTimeInMs": 1533725706168
+        },
+        {
+            "Name": "Record Sys ID",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the record ID to which you want to add a comment or work note.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1533725706168,
+            "ModificationTimeUnixTimeInMs": 1533725706168
+        },
+        {
+            "Name": "Text",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the content of the comment or work note.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1533725706168,
+            "ModificationTimeUnixTimeInMs": 1533725706168
+        },
+        {
+            "Name": "Wait For Reply",
+            "Type": 1,
+            "Value": false,
+            "DefaultValue": false,
+            "IsMandatory": true,
+            "Description": "If enabled, action will wait for reply. Note: action will track comments, if comments are sent and work notes, if work notes are sent.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1533725706168,
+            "ModificationTimeUnixTimeInMs": 1533725706168
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

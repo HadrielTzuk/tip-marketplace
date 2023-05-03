@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1517403679848,
+    "Creator": "admin",
+    "Description": "Close a ServiceNow incident",
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517403679848,
+    "Name": "Close Incident",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517836174195,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify number of the incident. Format: INCxxxxxxx",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517836174195,
+            "Name": "Incident Number",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517836174195,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the reason, why incident was closed.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517836174195,
+            "Name": "Close Reason",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

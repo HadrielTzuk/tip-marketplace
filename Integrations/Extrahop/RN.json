@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Extrahop.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Extrahop",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1644399582,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10987"
+    },
+    {
+        "ChangeDescription": "Detections Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Detections Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1657087429,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11931"
+    }
+]

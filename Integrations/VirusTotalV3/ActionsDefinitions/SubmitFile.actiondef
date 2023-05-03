@@ -1,0 +1,144 @@
+{
+    "CreationTimeUnixTimeInMs": "1570446244",
+    "Creator": "admin",
+    "Description": "Submit a file and return results from VirusTotal.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"results\": [{\"Entity\": \"/opt/siemplify/siemplify_xxxx/filename.txt\", \"EntityResult\": {\"attributes\": {\"downloadable\": false, \"exiftool\": {\"FileType\": \"TXT\", \"FileTypeExtension\": \"txt\", \"LineCount\": \"1\", \"MIMEEncoding\": \"us-ascii\", \"MIMEType\": \"text/plain\", \"Newlines\": \"(none)\", \"WordCount\": \"5\"}, \"first_submission_date\": 1605871686, \"last_analysis_date\": 1607708121, \"last_analysis_results\": {\"ALYac\": {\"category\": \"undetected\", \"engine_name\": \"ALYac\", \"engine_update\": \"20201211\", \"engine_version\": \"1.1.1.5\", \"method\": \"blacklist\", \"result\": null}, \"APEX\": {\"category\": \"type-unsupported\", \"engine_name\": \"APEX\", \"engine_update\": \"20201210\", \"engine_version\": \"6.107\", \"method\": \"blacklist\", \"result\": null}, \"Symantec\": {\"category\": \"undetected\", \"engine_name\": \"Symantec\", \"engine_update\": \"20201211\", \"engine_version\": \"1.13.0.0\", \"method\": \"blacklist\", \"result\": null}, \"SymantecMobileInsight\": {\"category\": \"type-unsupported\", \"engine_name\": \"SymantecMobileInsight\", \"engine_update\": \"20200813\", \"engine_version\": \"2.0\", \"method\": \"blacklist\", \"result\": null}, \"TACHYON\": {\"category\": \"undetected\", \"engine_name\": \"TACHYON\", \"engine_update\": \"20201211\", \"engine_version\": \"2020-12-11.02\", \"method\": \"blacklist\", \"result\": null}, \"Tencent\": {\"category\": \"undetected\", \"engine_name\": \"Tencent\", \"engine_update\": \"20201211\", \"engine_version\": \"1.0.0.1\", \"method\": \"blacklist\", \"result\": null}, \"TotalDefense\": {\"category\": \"undetected\", \"engine_name\": \"TotalDefense\", \"engine_update\": \"20201211\", \"engine_version\": \"37.1.62.1\", \"method\": \"blacklist\", \"result\": null}, \"Trapmine\": {\"category\": \"type-unsupported\", \"engine_name\": \"Trapmine\", \"engine_update\": \"20200727\", \"engine_version\": \"3.5.0.1023\", \"method\": \"blacklist\", \"result\": null}, \"TrendMicro\": {\"category\": \"undetected\", \"engine_name\": \"TrendMicro\", \"engine_update\": \"20201211\", \"engine_version\": \"11.0.0.1006\", \"method\": \"blacklist\", \"result\": null}, \"TrendMicro-HouseCall\": {\"category\": \"undetected\", \"engine_name\": \"TrendMicro-HouseCall\", \"engine_update\": \"20201211\", \"engine_version\": \"10.0.0.1040\", \"method\": \"blacklist\", \"result\": null}, \"Trustlook\": {\"category\": \"type-unsupported\", \"engine_name\": \"Trustlook\", \"engine_update\": \"20201211\", \"engine_version\": \"1.0\", \"method\": \"blacklist\", \"result\": null}, \"VBA32\": {\"category\": \"undetected\", \"engine_name\": \"VBA32\", \"engine_update\": \"20201211\", \"engine_version\": \"4.4.1\", \"method\": \"blacklist\", \"result\": null}, \"VIPRE\": {\"category\": \"undetected\", \"engine_name\": \"VIPRE\", \"engine_update\": \"20201211\", \"engine_version\": \"88852\", \"method\": \"blacklist\", \"result\": null}, \"ViRobot\": {\"category\": \"undetected\", \"engine_name\": \"ViRobot\", \"engine_update\": \"20201211\", \"engine_version\": \"2014.3.20.0\", \"method\": \"blacklist\", \"result\": null}, \"Webroot\": {\"category\": \"type-unsupported\", \"engine_name\": \"Webroot\", \"engine_update\": \"20201211\", \"engine_version\": \"1.0.0.403\", \"method\": \"blacklist\", \"result\": null}, \"Yandex\": {\"category\": \"undetected\", \"engine_name\": \"Yandex\", \"engine_update\": \"20201211\", \"engine_version\": \"5.5.2.24\", \"method\": \"blacklist\", \"result\": null}, \"Zillya\": {\"category\": \"undetected\", \"engine_name\": \"Zillya\", \"engine_update\": \"20201210\", \"engine_version\": \"2.0.0.4242\", \"method\": \"blacklist\", \"result\": null}, \"ZoneAlarm\": {\"category\": \"undetected\", \"engine_name\": \"ZoneAlarm\", \"engine_update\": \"20201211\", \"engine_version\": \"1.0\", \"method\": \"blacklist\", \"result\": null}, \"Zoner\": {\"category\": \"undetected\", \"engine_name\": \"Zoner\", \"engine_update\": \"20201211\", \"engine_version\": \"0.0.0.0\", \"method\": \"blacklist\", \"result\": null}, \"eGambit\": {\"category\": \"type-unsupported\", \"engine_name\": \"eGambit\", \"engine_update\": \"20201211\", \"engine_version\": null, \"method\": \"blacklist\", \"result\": null}}, \"last_analysis_stats\": {\"confirmed-timeout\": 0, \"failure\": 0, \"harmless\": 0, \"malicious\": 0, \"suspicious\": 0, \"timeout\": 0, \"type-unsupported\": 16, \"undetected\": 60}, \"last_modification_date\": 1607708175, \"last_submission_date\": 1607708121, \"magic\": \"ASCII text, with no line terminators\", \"md5\": \"14f7cd7d7236f90f5f89f8c29xxxx\", \"meaningful_name\": \"filename.txt\", \"names\": [\"filename.txt\"], \"reputation\": 0, \"sha1\": \"18e8b90568bf4a3597d8763369079ab8xxxx\", \"sha256\": \"4373067a02da95c57bbc073ac3a68ce33ed11a545dcxxxx\", \"size\": 40, \"ssdeep\": \"3:i1wJDNVYD3uK:i1EDxxxx\", \"tags\": [\"text\"], \"times_submitted\": 11, \"tlsh\": \"TNULL\", \"total_votes\": {\"harmless\": 0, \"malicious\": 0}, \"type_description\": \"Text\", \"type_extension\": \"txt\", \"type_tag\": \"text\", \"unique_sources\": 1}, \"id\": \"4373067a02da95c57bbc073ac3a68ce33ed11a545dcxxxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/files/4373067a02da95c57bbc073ac3a68ce33ed11a545dcxxxx\"}, \"type\": \"file\"}}], \"is_risky\": false}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "VirusTotalV3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Submit File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of absolute file paths. Note: if \"Linux Server Address\" is specified, action will try to fetch file from remote server.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "File Paths",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify how many engines should mark the file as malicious or suspicious, for Siemplify to label it as risky. Note: if \"Engine Whitelist\" contains values, action will only count results from those engines.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Engine Threshold",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the percentage of engines should mark the entity as malicious or suspicious, for Siemplify to label it as suspicious. Note: if \"Engine Whitelist\" contains values, action will only count the percentage from those engines. If both \"Engine Threshold\" and \"Engine Percentage Threshold\" are provided, \"Engine Threshold\" will be used. Maximum value: 100. Minimum: 0.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Engine Percentage Threshold",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of engines that should be used to retrieve information, whether an entity is malicious or not. Example: AlienVault,Kaspersky. Note: if nothing is specified in this parameter, action will take results from every available engine. If the engine didn't return any information about the entity it’s not going to be counted for the parameters \"Engine Threshold\" and \"Engine Percentage Threshold\".",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Engine Whitelist",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will retrieve comments about the entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Retrieve Comments",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will retrieve sigma analysis for the file.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Retrieve Sigma Analysis",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many comments to return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Max Comments To Return",
+            "Type": 0,
+            "Value": "50"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the IP address of the remote linux server, where the file is located.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Linux Server Address",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the username of the remote linux server, where the file is located.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Linux Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the password of the remote linux server, where the file is located.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Linux Password",
+            "Type": 12,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

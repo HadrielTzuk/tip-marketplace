@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1534436861977,
+    "Creator": "Admin",
+    "Description": "Test connectivity to the Proofpoint TAP with parameters provided at the integration configuration page on the Marketplace tab.",
+    "Id": -1,
+    "IntegrationIdentifier": "ProofPointTAP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534436861977,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

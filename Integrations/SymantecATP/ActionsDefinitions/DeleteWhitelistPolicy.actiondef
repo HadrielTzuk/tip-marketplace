@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1542547744044,
+    "Creator": "Admin",
+    "Description": "Delete WhiteList policy for entity.",
+    "Id": -1,
+    "IntegrationIdentifier": "SymantecATP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542547744044,
+    "Name": "Delete WhiteList Policy",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecATPManager import SymantecATPManager\nfrom SiemplifyDataModel import EntityTypes\nfrom SymantecATPManager import ATPEntityTypes\n\n\nATP_PROVIDER = 'SymantecATP'\nACTION_NAME = \"SymantecATP_Delete whitelist policy\"\nINSIGHT_MESSAGE = '{0} was Whitelisted.'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(ATP_PROVIDER)\n    verify_ssl = conf.get('Verify SSL').lower() == 'true'\n    atp_manager = SymantecATPManager(conf.get('API Root'), conf.get('Client ID'), conf.get('Client Secret'), verify_ssl)\n\n    errors = []\n    whitelisted_entities = []\n    result_value = False\n\n    for entity in siemplify.target_entities:\n        try:\n            atp_manager.delete_whitelist_policy_by_identifier(entity.identifier)\n            result_value = True\n        except Exception as err:\n            error_message = 'Error deleting whitelist policy for entity \"{0}\", Error: {1}'.format(\n                entity.identifier, err.message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    if result_value:\n        output_message = \"{0} whitelist policies were deleted.\".format(\",\".join([entity.identifier for entity in\n                                                                                 whitelisted_entities]))\n    else:\n        output_message = \"No whitelist policies were deleted.\"\n\n    # Attach errors if exists.\n    if errors:\n        output_message = \"{0}, \\n \\n  ERRORS: \\n {1} \".format(output_message, ' \\n '.join(errors))\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

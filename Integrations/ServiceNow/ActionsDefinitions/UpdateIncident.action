@@ -1,0 +1,143 @@
+{
+    "CreationTimeUnixTimeInMs": 1517416644721,
+    "Creator": "admin",
+    "Description": "Update incident information",
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517416644721,
+    "Name": "Update Incident",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"sys_tags\": \"\", \"user_input\": \"\", \"calendar_stc\": \"2102\", \"subcategory\": \"\", \"watch_list\": \"\", \"follow_up\": \"\", \"made_sla\": \"true\", \"sys_created_by\": \"admin\", \"sla_due\": \"\", \"number\": \"INC0010041\", \"group_list\": \"\", \"reassignment_count\": \"0\", \"assigned_to\": \"\", \"sys_mod_count\": \"10\", \"notify\": \"1\", \"resolved_by\": {\"link\": \"https://dev92294.service-now.com/api/now/v1/table/sys_user/6816f79cc0a8016401c5a33be04be441\", \"value\": \"6816f79cc0a8016401c5a33be04be441\"}, \"upon_reject\": \"cancel\", \"additional_assignee_list\": \"\", \"category\": \"inquiry\", \"closed_at\": \"2020-07-10 12:53:06\", \"parent_incident\": \"\", \"cmdb_ci\": \"\", \"contact_type\": \"\", \"impact\": \"1\", \"rfc\": \"\", \"expected_start\": \"\", \"knowledge\": \"false\", \"sys_updated_by\": \"admin\", \"caused_by\": \"\", \"comments\": \"\", \"closed_by\": {\"link\": \"https://dev92294.service-now.com/api/now/v1/table/sys_user/6816f79cc0a8016401c5a33be04be441\", \"value\": \"6816f79cc0a8016401c5a33be04be441\"}, \"priority\": \"1\", \"state\": \"7\", \"sys_id\": \"f562fd272f351010f170c886f699b669\", \"opened_at\": \"2020-07-10 12:18:04\", \"child_incidents\": \"0\", \"work_notes\": \"\", \"delivery_task\": \"\", \"short_description\": \"sdf\", \"comments_and_work_notes\": \"\", \"time_worked\": \"\", \"upon_approval\": \"proceed\", \"company\": \"\", \"business_stc\": \"0\", \"correlation_display\": \"\", \"sys_class_name\": \"incident\", \"delivery_plan\": \"\", \"escalation\": \"0\", \"description\": \"\", \"parent\": \"\", \"close_notes\": \"Closed by Caller\", \"business_duration\": \"1970-01-01 00:00:00\", \"problem_id\": \"\", \"sys_updated_on\": \"2020-07-10 13:13:57\", \"approval_history\": \"\", \"approval_set\": \"\", \"business_service\": \"\", \"reopened_by\": \"\", \"calendar_duration\": \"1970-01-01 00:35:02\", \"caller_id\": {\"link\": \"https://dev92294.service-now.com/api/now/v1/table/sys_user/6816f79cc0a8016401c5a33be04be441\", \"value\": \"6816f79cc0a8016401c5a33be04be441\"}, \"active\": \"false\", \"approval\": \"not requested\", \"service_offering\": \"\", \"sys_domain_path\": \"/\", \"hold_reason\": \"\", \"activity_due\": \"2020-07-10 14:33:28\", \"severity\": \"3\", \"incident_state\": \"7\", \"resolved_at\": \"2020-07-10 12:53:06\", \"location\": \"\", \"due_date\": \"\", \"work_start\": \"\", \"work_end\": \"\", \"work_notes_list\": \"\", \"sys_created_on\": \"2020-07-10 12:18:04\", \"correlation_id\": \"\", \"contract\": \"\", \"reopened_time\": \"\", \"opened_by\": {\"link\": \"https://dev92294.service-now.com/api/now/v1/table/sys_user/6816f79cc0a8016401c5a33be04be441\", \"value\": \"6816f79cc0a8016401c5a33be04be441\"}, \"close_code\": \"Closed/Resolved by Caller\", \"assignment_group\": \"\", \"sys_domain\": {\"link\": \"https://dev92294.service-now.com/api/now/v1/table/sys_user_group/global\", \"value\": \"global\"}, \"order\": \"\", \"urgency\": \"1\", \"reopen_count\": \"0\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify number of the incident. Format: INCxxxxxxx",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Incident Number",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify short description of the incident.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Short Description",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify impact of the incident. Possible values: 1 for High, 2 for Medium and 3 for Low.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Impact",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify urgency of the incident. Possible values: 1 for High, 2 for Medium and 3 for Low.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Urgency",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify category of the incident.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Category",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify full name of the group that was assigned to the incident.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Assignment group ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify full name of the user that was assigned to the incident.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Assigned User ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify description of the incident.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Description",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Status name or status id.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Incident State",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530170754765,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of fields and values. Format: field_1:value_1,field_2:value_2",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530170754765,
+            "Name": "Custom Fields",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "incident_number",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

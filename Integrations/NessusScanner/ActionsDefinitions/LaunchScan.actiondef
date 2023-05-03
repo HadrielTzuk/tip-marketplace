@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1517347998754,
+    "Creator": "admin",
+    "Description": "Launch scan on the Nessus server",
+    "Id": -1,
+    "IntegrationIdentifier": "NessusScanner",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517347998754,
+    "Name": "Launch Scan",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517387980182,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Scam display name.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517387980182,
+            "Name": "Scan Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "# Imports\r\nfrom SiemplifyAction import SiemplifyAction\r\nfrom NessusScanner import NessusScanner\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n\r\n    # Configuration.\r\n    conf = siemplify.get_configuration('NessusScanner')\r\n    access_key = conf['Access Key']\r\n    secret_key = conf['Secret Key']\r\n    server_address = conf['Api Root']\r\n    nessus_client = NessusScanner(access_key, secret_key, server_address)\r\n\r\n    # Parameters\r\n    scan_name = siemplify.parameters['Scan Name']\r\n\r\n    # Get scan id base on scan name\r\n    scan_details = nessus_client.get_scan_details(scan_name)\r\n    scan_id = scan_details['info']['object_id']\r\n\r\n    # Launch scan\r\n    scan = nessus_client.launch_scan_by_id(scan_id)\r\n    scan_details = nessus_client.get_scan_details(scan_name)\r\n    targets = scan_details['info']['targets']\r\n\r\n    if scan:\r\n        output_message = 'Scan - {0}, initiated for: \\n{1}'.format(scan_name, targets)\r\n        result_value = 'true'\r\n    else:\r\n        output_message = 'Failed to launch scan {0}.'.format(scan_name)\r\n        result_value = 'false'\r\n\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()",
+    "ScriptResultName": "is_succeed",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

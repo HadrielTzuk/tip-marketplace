@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1516022322464,
+    "Creator": "admin",
+    "Description": "Add Url to the Checkpoint FireWall Group",
+    "Id": -1,
+    "IntegrationIdentifier": "CheckPointFirewall",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1516022322464,
+    "Name": "Add Url To Group",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the group to which you want to add URL.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "URLs Group Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_blocked", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

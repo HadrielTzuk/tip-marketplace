@@ -1,0 +1,140 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List users present in account.",
+    "Id": -1,
+    "IntegrationIdentifier": "GSuite",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Users",
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"kind\": \"admin#directory#user\",\"id\": \"XXXXXXXXXXXXXXXXXXXXXXXXX\",\"etag\": \"\\\"XXXXXXXXXXXXXXXXXXXXXXXXXX\\\"\",\"primaryEmail\": \"XXXXXXXX@XXXXXXX.XXX\",\"name\": {\"givenName\": \"XXXXXXXX\",\"familyName\": \"XXXXXX\",\"fullName\": \"XXXXXXXXX\"},\"isAdmin\":\"True\",\"isDelegatedAdmin\":\"False\",\"lastLoginTime\": \"2020-12-22T09:45:34.000Z\",\"creationTime\": \"2020-07-22T09:23:28.000Z\",\"agreedToTerms\":\"True\",\"suspended\":\"False\",\"archived\":\"False\",\"changePasswordAtNextLogin\":\"False\",\"ipWhitelisted\":\"False\",\"emails\": [{\"address\": \"XXXXXXXX@XXXXXXX.XXX\",\"primary\":\"True\"},{\"address\": \"XXXXXXXXXX@XXXXXXXX.com.test-google-a.com\"}],\"relations\": [{\"value\": \"XXXXXXXX@smplylab.com\",\"type\": \"manager\"}],\"organizations\": [{\"primary\":\"True\",\"customType\": \"\",\"department\": \"XXXXXXXX\"}],\"nonEditableAliases\": [\"XXXXXXXX@XXXXXXXX.com.test-google-a.com\"],\"customerId\": \"XXXXXXXXX\",\"orgUnitPath\": \"\/Management\",\"isMailboxSetup\":\"True\",\"isEnrolledIn2Sv\":\"False\",\"isEnforcedIn2Sv\":\"False\",\"includeInGlobalAddressList\":\"True\",\"recoveryEmail\": \"XXXXXXX@XXXXXXXXX.XX\"},{\"kind\": \"admin#directory#user\",\"id\": \"XXXXXXXXXXXXXXXXXX\",\"etag\": \"\\\"XXXXXXXXXXXXXXXXXXXXX\\\"\",\"primaryEmail\": \"XXXXXXX@XXXXXXXX.com\",\"name\": {\"givenName\": \"XXXXXXXX\",\"familyName\": \"XXXXXXXXXX\",\"fullName\": \"Siemplify LAB Siemplify LAB\"},\"isAdmin\":\"True\",\"isDelegatedAdmin\":\"False\",\"lastLoginTime\": \"2020-12-25T13:02:42.000Z\",\"creationTime\": \"2020-05-14T14:00:52.000Z\",\"agreedToTerms\":\"True\",\"suspended\":\"False\",\"archived\":\"False\",\"changePasswordAtNextLogin\":\"False\",\"ipWhitelisted\":\"False\",\"emails\": [{\"address\": \"XXXXXXX-XXXX@XXXXXXXXX.com\",\"primary\":\"True\"},{\"address\": \"XXXXXXXX-XXXX@XXXXXXXX.com.test-google-a.com\"}],\"nonEditableAliases\": [\"XXXXXXXX-XXXX@XXXXXXXX.com.test-google-a.com\"],\"customerId\": \"XXXXXXXX\",\"orgUnitPath\": \"\/Management\",\"isMailboxSetup\":\"True\",\"isEnrolledIn2Sv\":\"False\",\"isEnforcedIn2Sv\":\"False\",\"includeInGlobalAddressList\":\"True\",\"recoveryEmail\": \"XXXXXXX@XXXXXXX.co\"}]",
+        "ResultName": "JsonResult"
+    }],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The unique ID for the customer's G Suite account. If not provided, will be set to my_customer automatically to represent current account Customer ID.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Customer ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a domain to search for users in.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Domain",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The email address of a user's manager either directly or up the management chain.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Manager Email",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "false",
+            "Description": "Specify whether to return only admin accounts.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Return only Admin Accounts?",
+            "Type": 1,
+            "Value": "false"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "false",
+            "Description": "Specify whether to return only delegated admin accounts.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Return only Delegated Admin Accounts?",
+            "Type": 1,
+            "Value": "false"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "false",
+            "Description": "Specify whether to return only suspended accounts.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Return only Suspended Users?",
+            "Type": 1,
+            "Value": "false"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The full path of an org unit to retrieve users from. This matches all org unit chains under the target.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Org Unit Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The department within the organization to retrieve users from.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Department",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "20",
+            "Description": "Specify how many records can be returned by the action.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Record Limit",
+            "Type": 0,
+            "Value": "20"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Optional. Specify custom query parameter you want to add to the list users search call. For example, orgName='Human Resources' For reference on which fields can be used see https://developers.google.com/admin-sdk/directory/v1/guides/search-users#fields",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Custom Query Parameter",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

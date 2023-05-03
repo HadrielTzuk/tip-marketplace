@@ -1,0 +1,43 @@
+{
+    "Description": "Cisco Orbital is a service that uses Osquery to provide you and your applications with information about your hosts. Osquery exposes an entire operating system as a relational database that you can query with SQL to gather information about the host. Orbital can be used by both Cisco customers and their applications to query their computers wherever Orbital has been deployed.",
+    "DisplayName": "Cisco Orbital",
+    "Identifier": "CiscoOrbital",
+    "Categories": [
+        "Data Enrichment",
+        "IT & Infrastructure"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "CiscoOrbital",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CiscoOrbital",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client Secret",
+            "PropertyName": "Client Secret",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CiscoOrbital",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": "True"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path d=\"M22 13.556c0-.486-.41-.866-.91-.866-.51 0-.92.39-.92.866v1.826c0 .486.41.876.92.876.5 0 .91-.39.91-.876v-1.826zm-4.037-2.407c0-.475-.41-.866-.92-.866-.511 0-.921.39-.921.866v4.233c0 .486.41.876.92.876s.921-.39.921-.876v-4.233zm-4.037-3.283c0-.486-.41-.866-.92-.866s-.921.39-.921.866v9.258c0 .485.41.876.92.876s.921-.39.921-.876V7.866zm-4.048 3.283c0-.475-.41-.866-.92-.866s-.921.39-.921.866v4.233c0 .486.41.876.92.876.511 0 .921-.39.921-.876v-4.233zm-4.036 2.407c0-.486-.41-.866-.921-.866-.51 0-.921.39-.921.866v1.826c0 .486.41.876.92.876.511 0 .922-.39.922-.876v-1.826z\"\/>\r\n<\/svg>",
+    "Version": 4.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/cisco-orbital",
+    "MarketingDisplayName": "Cisco Orbital"
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "McAfee Mvision EDR V2 integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "McAfee Mvision EDR V2",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1605249110,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

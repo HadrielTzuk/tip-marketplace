@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Add a record to a table in AppSheet.",
+    "Id": -1,
+    "IntegrationIdentifier": "AppSheet",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Add Record",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"_RowNumber\": \"61\", \"Name\": \"New Park\", \"State\": \"IL\", \"Visited?\": \"Y\", \"Location\": \"44.350000, -68.210000\", \"Year Established\": \"2021\", \"Area (Acres)\": \"21\", \"Recreation Visitors (2013)[6]\": \"\", \"Image\": \"\", \"Photo\": \"\", \"Description\": \"\", \"Wikipedia URL\": \"\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Table Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the JSON object of the record that needs to be updated. You need to provide the unique identifier key and fields that you want to update.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Record JSON Object",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the JSON object of the record that needs to be added.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1663074959000,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftGraphMail",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1663074959000,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom MicrosoftGraphMailManager import MicrosoftGraphMailManager\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n\r\n    conf = siemplify.get_configuration(\"MicrosoftGraphMail\")\r\n    azure_ad_endpoint = conf[\"Azure AD Endpoint\"]\r\n    microsoft_graph_endpoint = conf[\"Microsoft Graph Endpoint\"]\r\n    client_id = conf[\"Client ID\"]\r\n    secret_id = conf[\"Secret ID\"]\r\n    tenant = conf[\"Tenant\"]\r\n    verify_ssl = conf[\"Verify SSL\"]\n\r\n    MicrosoftGraphMailManager(client_id, secret_id, tenant, azure_ad_endpoint, microsoft_graph_endpoint, verify_ssl)\r\n    siemplify.end(\"Connection Established\", 'true')\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n\r\n",
+    "ScriptResultName": "is_connected",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

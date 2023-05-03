@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Symantec Email Security.Cloud.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "SymantecEmailSecurityCloud",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1650451092,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11559"
+    }
+]

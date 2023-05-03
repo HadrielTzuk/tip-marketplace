@@ -1,0 +1,89 @@
+{
+    "CreationTimeUnixTimeInMs": 1529502958683,
+    "Creator": "admin",
+    "Description": "Update an existing incident",
+    "Id": -1,
+    "IntegrationIdentifier": "MicroFocusITSMA",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1529502958683,
+    "Name": "Update Incident",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529502958683,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The ID of the incident",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502958683,
+            "Name": "Incident ID",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502958683,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The updated display label of the incident",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502958683,
+            "Name": "Display Label",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502958683,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The updated description of the incident",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502958683,
+            "Name": "Description",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502958683,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The updated impact score of the incident",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502958683,
+            "Name": "Impact Scope",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502958683,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The updated urgency of the incident",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502958683,
+            "Name": "Urgency",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502958683,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The updated Id of the category of the incident",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502958683,
+            "Name": "Service ID",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom MicroFocusITSMAManager import MicroFocusITSMAManager\n\n\nITSMA_PROVIDER = 'MicroFocusITSMA'\n\n\ndef main():\n    # Configuration\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(ITSMA_PROVIDER)\n    itsma_manager = MicroFocusITSMAManager(conf['API Root'], conf['Username'], conf['Password'], conf['Tenant ID'],\n                                           conf['External System'], conf['External ID'], conf['Verify SSL'])\n\n    # Parameters.\n    incident_id = siemplify.parameters.get('Incident ID')\n    display_label = siemplify.parameters.get('Display Label')\n    description = siemplify.parameters.get('Description')\n    impact_scope = siemplify.parameters.get('Impact Scope')\n    urgency = siemplify.parameters.get('Urgency')\n    service_id = siemplify.parameters.get('Service ID')\n\n    result_value = itsma_manager.update_incident(incident_id, display_label, description, impact_scope, urgency,\n                                                 service_id)\n\n    if result_value:\n        updated_params = [param for param, value in siemplify.parameters.iteritems() if value]\n        output_message = 'An incident with id \"{0}\" was successfully updated. \\n Updated parameters: {1}'.format(\n            incident_id, \",\".join(updated_params))\n    else:\n        output_message = 'No ticket was updated.'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_succeed",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

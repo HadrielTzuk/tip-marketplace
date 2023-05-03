@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1519539814920, 
+    "Creator": "admin", 
+    "Description": "Delete IP addresses from an \"IP range\"-type group. \\n*Please note - This group should be a part of rule used to block IP addresses", 
+    "Id": -1, 
+    "IntegrationIdentifier": "McAfeeWebGateway", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1519539814920, 
+    "Name": "Unblock IP", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519540073988, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The group name to unblock the IP in", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1519540073988, 
+            "Name": "Group Name", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_unblocked", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

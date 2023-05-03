@@ -1,0 +1,94 @@
+{
+    "CreationTimeUnixTimeInMs": 1511698992392,
+    "Creator": "admin",
+    "Description": "Use this action to fetch the responses of a vote mail sent by the \"Send Vote Mail\" action, in order to wait for the responses and get them inside Siemplify.",
+    "Id": -1,
+    "IntegrationIdentifier": "Exchange",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511698992392,
+    "Name": "Wait for Vote Mail Results",
+    "DynamicResultsMetadata": [{
+        "ResultExample": "{\"Responses\":[{\"recipient\":\"test1@example.com\",\"vote\":\"Approve\"},{\"recipient\":\"test2@example.com\",\"vote\":\"Reject\"}]}",
+        "ResultName": "JsonResult"
+    }],
+    "Parameters": [
+        {
+            "Name": "Vote Mail message_id",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Message_id of the vote email, which current action would be waiting for. If message has been sent using Send Vote Mail action, please select SendVoteMail.JSONResult.message_id field as a placeholder.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "Mail Recipients",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Comma-separated list of recipient emails, response from which current action would be waiting for. Please select SendVoteMail.JSONResult.to_recipients field as a placeholder.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "Folder to Check for Reply",
+            "Type": 0,
+            "DefaultValue": "Inbox",
+            "Value": "Inbox",
+            "IsMandatory": true,
+            "Description": "Parameter can be used to specify mailbox email folder (mailbox that was used to send the email with question) to search for the user reply in this folder. Parameter should also accept comma separated list of folders to check the user response in multiple folders. Parameter is case sensitive.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "Folder to check for Sent Mail",
+            "Type": 0,
+            "DefaultValue": "Sent Items",
+            "Value": "Sent Items",
+            "IsMandatory": true,
+            "Description": "Parameter can be used to specify mailbox email folder (mailbox that was used to send the email with question) to search for the sent mail in this folder. Parameter should also accept comma separated list of folders to check the user response in multiple folders. Parameter is case sensitive.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "How long to wait for recipient reply (minutes)",
+            "Type": 0,
+            "DefaultValue": 1440,
+            "Value": 1440,
+            "IsMandatory": true,
+            "Description": "How long in minutes to wait for the user's reply before marking it timed out.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "Wait for All Recipients to Reply?",
+            "Type": 1,
+            "DefaultValue": true,
+            "Value": true,
+            "IsMandatory": false,
+            "Description": "Parameter can be used to define if there are multiple recipients - should the Action wait for responses from all of recipients until timeout, or Action should wait for first reply to proceed.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "ModificationTimeUnixTimeInMs": 1511800055323
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

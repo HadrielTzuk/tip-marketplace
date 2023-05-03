@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1525020055162,
+    "Creator": "System",
+    "Description": "Close incident in CA ServiceDesk manager",
+    "Id": -1,
+    "IntegrationIdentifier": "CaServiceDesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1525020055162,
+    "Name": "Close Ticket",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1525020055162,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Incident number",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1525020055162,
+            "Name": "Ticket ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525020055162,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "description which can be used in the Close activity log.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1525020055162,
+            "Name": "Close Reason",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom CaSoapManager import CaSoapManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('CaServiceDesk')\n    api_root = conf['Api Root']\n    username = conf['Username']\n    password = conf['Password']\n    \n    ca_manager = CaSoapManager(api_root, username, password)\n    \n    ticket_id = siemplify.parameters['Ticket ID']\n    close_reason = siemplify.parameters['Close Reason']\n\n    incident_id = ca_manager.close_incident(ticket_id, close_reason)\n\n    if incident_id:\n        output_message = 'Incident {0} closed successfully.'.format(ticket_id)\n        result_value = 'true'\n\n    else:\n        output_message = 'There was a problem closing ticket number {0}.'.format(ticket_id)\n        result_value = 'false'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_succeed",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

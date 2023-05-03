@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1519203073816, 
+    "Creator": "admin", 
+    "Description": "Get a detonation report from WildFire", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Wildfire", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1519203073816, 
+    "Name": "GetReport", 
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

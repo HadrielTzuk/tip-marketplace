@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1542187859748, 
+    "Creator": "Admin", 
+    "Description": "Initiate a full disk scan on the endpoint in SentinelOne.",
+    "Id": -1, 
+    "IntegrationIdentifier": "SentinelOneV2", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1542187859748, 
+    "Name": "Initiate Full Scan", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 2.0
+}

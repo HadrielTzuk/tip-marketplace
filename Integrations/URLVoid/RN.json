@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "Fixed a bug that affected reputation fetching of URL entities.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Ping",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1589363691,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2886"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "URLVoid",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "URLVoid",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    },
+    {
+        "ChangeDescription": "Security enhancements throughout the integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "URLVoid",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1636521986,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    }
+]

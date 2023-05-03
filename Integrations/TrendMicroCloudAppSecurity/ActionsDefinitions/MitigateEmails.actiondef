@@ -1,0 +1,61 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Delete or quarantine emails using Trend Micro Cloud App Security. Note: for Gmail you can only delete emails. Note: Currently action only initiates a mitigation, but doesn't check the status of mitigation execution.",
+    "Id": -1,
+    "IntegrationIdentifier": "TrendMicroCloudAppSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Mitigate Emails",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "Delete",
+            "Description": "Specify what mitigation action should be applied.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Mitigation Action",
+            "Type": 15,
+            "OptionalValues": [
+                "Delete",
+                "Quarantine"
+            ],
+            "Value": "Delete"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "Gmail",
+            "Description": "Specify the service the is used for emails.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Service",
+            "Type": 15,
+            "OptionalValues": [
+                "Gmail",
+                "Exchange"
+            ],
+            "Value": "Gmail"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of message ids that need to be mitigated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Message IDs",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

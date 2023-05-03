@@ -1,0 +1,207 @@
+{
+  "Identifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": true,
+  "Name": "Test RSA ",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "68e9aeef-1a69-4aeb-85e6-17485f6385fc",
+      "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+      "ParentStepIdentifiers": [
+        "ff523723-9ae6-47a9-8c17-8976a171e1cc"
+      ],
+      "ParentStepIdentifier": "ff523723-9ae6-47a9-8c17-8976a171e1cc",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "RSA_Query NetWitness For Events Around Host_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "RSA_Query NetWitness For Events Around Host",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "68e9aeef-1a69-4aeb-85e6-17485f6385fc",
+          "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+          "Name": "ScriptName",
+          "Value": "RSA_Query NetWitness For Events Around Host",
+          "CreationTimeUnixTimeInMs": 1520255481496,
+          "ModificationTimeUnixTimeInMs": 1520255481496
+        },
+        {
+          "ParentStepIdentifier": "68e9aeef-1a69-4aeb-85e6-17485f6385fc",
+          "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520255481496,
+          "ModificationTimeUnixTimeInMs": 1520255481496
+        },
+        {
+          "ParentStepIdentifier": "68e9aeef-1a69-4aeb-85e6-17485f6385fc",
+          "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520255456269,
+          "ModificationTimeUnixTimeInMs": 1520255456269
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520255456268,
+      "ModificationTimeUnixTimeInMs": 1520255456268
+    },
+    {
+      "Identifier": "1f42f5fa-98ee-4c2b-98eb-312d4f8df2fe",
+      "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+      "ParentStepIdentifiers": [
+        "4d4bd2c6-849f-4b6b-aceb-e7870a63f36c"
+      ],
+      "ParentStepIdentifier": "4d4bd2c6-849f-4b6b-aceb-e7870a63f36c",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "RSA_Query NetWitness For Events Around User_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "RSA_Query NetWitness For Events Around User",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "1f42f5fa-98ee-4c2b-98eb-312d4f8df2fe",
+          "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+          "Name": "ScriptName",
+          "Value": "RSA_Query NetWitness For Events Around User",
+          "CreationTimeUnixTimeInMs": 1520255481497,
+          "ModificationTimeUnixTimeInMs": 1520255481497
+        },
+        {
+          "ParentStepIdentifier": "1f42f5fa-98ee-4c2b-98eb-312d4f8df2fe",
+          "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520255481497,
+          "ModificationTimeUnixTimeInMs": 1520255481497
+        },
+        {
+          "ParentStepIdentifier": "1f42f5fa-98ee-4c2b-98eb-312d4f8df2fe",
+          "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520255461578,
+          "ModificationTimeUnixTimeInMs": 1520255461578
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520255461578,
+      "ModificationTimeUnixTimeInMs": 1520255461578
+    },
+    {
+      "Identifier": "ff523723-9ae6-47a9-8c17-8976a171e1cc",
+      "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "RSA_Ping_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "RSA_Ping",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "ff523723-9ae6-47a9-8c17-8976a171e1cc",
+          "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+          "Name": "ScriptName",
+          "Value": "RSA_Ping",
+          "CreationTimeUnixTimeInMs": 1520255481496,
+          "ModificationTimeUnixTimeInMs": 1520255481496
+        },
+        {
+          "ParentStepIdentifier": "ff523723-9ae6-47a9-8c17-8976a171e1cc",
+          "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520255481496,
+          "ModificationTimeUnixTimeInMs": 1520255481496
+        },
+        {
+          "ParentStepIdentifier": "ff523723-9ae6-47a9-8c17-8976a171e1cc",
+          "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520255454162,
+          "ModificationTimeUnixTimeInMs": 1520255454162
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520255454150,
+      "ModificationTimeUnixTimeInMs": 1520255454150
+    },
+    {
+      "Identifier": "4d4bd2c6-849f-4b6b-aceb-e7870a63f36c",
+      "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+      "ParentStepIdentifiers": [
+        "68e9aeef-1a69-4aeb-85e6-17485f6385fc"
+      ],
+      "ParentStepIdentifier": "68e9aeef-1a69-4aeb-85e6-17485f6385fc",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "RSA_Query NetWitness For Events Around IP_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "RSA_Query NetWitness For Events Around IP",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "4d4bd2c6-849f-4b6b-aceb-e7870a63f36c",
+          "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+          "Name": "ScriptName",
+          "Value": "RSA_Query NetWitness For Events Around IP",
+          "CreationTimeUnixTimeInMs": 1520255481497,
+          "ModificationTimeUnixTimeInMs": 1520255481497
+        },
+        {
+          "ParentStepIdentifier": "4d4bd2c6-849f-4b6b-aceb-e7870a63f36c",
+          "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520255481497,
+          "ModificationTimeUnixTimeInMs": 1520255481497
+        },
+        {
+          "ParentStepIdentifier": "4d4bd2c6-849f-4b6b-aceb-e7870a63f36c",
+          "ParentWorkflowIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520255460218,
+          "ModificationTimeUnixTimeInMs": 1520255460218
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520255460218,
+      "ModificationTimeUnixTimeInMs": 1520255460218
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "4d701d7a-389e-42b7-8a04-3f69a710ee7c",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "d41d1617-eaa0-4284-804a-d51eac7b2fef",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Test RSA ",
+      "AllEnvironments": "",
+      "Id": 10003,
+      "CreationTimeUnixTimeInMs": 1520255481471,
+      "ModificationTimeUnixTimeInMs": 1520255481471
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 10003,
+  "CreationTimeUnixTimeInMs": 1520255113291,
+  "ModificationTimeUnixTimeInMs": 1520255113291
+}

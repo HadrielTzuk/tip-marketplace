@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "NEW! Anomali Staxx integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "AnomaliStaxx",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1595922985,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3996"
+    },
+    {
+        "ChangeDescription": "Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "AnomaliStaxx",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Indicators Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Indicators Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1666158033,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12038"
+    }
+]

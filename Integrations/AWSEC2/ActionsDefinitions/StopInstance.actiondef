@@ -1,0 +1,45 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Stop an Amazon EBS-backed instance. When you stop an instance, we attempt to shut it down forcibly after a short while. It can take a few minutes for the instance to stop. The instance can be started at any time. Notice that you can't stop an instance store-backed instance.  For more information about instance store-backed instances, see https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSEC2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"CurrentState\": \"stopped\", \"InstanceId\": \"i-123456789\", \"PreviousState\": \"stopped\"}]",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Stop Instance",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "One or more instance IDs. Separated by comma.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Instance IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "Forces the instances to stop. The instances do not have an opportunity to flush file system caches or file system metadata. If you use this option, you must perform file system check and repair procedures. This option is not recommended for Windows instances.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Force",
+            "Type": 1,
+            "Value": false
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

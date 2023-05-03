@@ -1,0 +1,50 @@
+{
+    "Description": "Panorama network security management simplifies management tasks while delivering comprehensive controls and deep visibility into network-wide traffic and security threats",
+    "DisplayName": "Palo Alto Panorama",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/palo-alto-panorama",
+    "Identifier": "PaloAltoPanorama",
+    "Categories": [
+        "Network Security",
+        "Policy Manager",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "PaloAltoPanorama",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://x.x.x.x/api"
+        },
+        {
+            "IntegrationIdentifier": "PaloAltoPanorama",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "PaloAltoPanorama",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "PaloAltoPanorama",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M22.8,15.7v-0.3c-0.1,0-0.1,0.1-0.2,0.1c-0.7,0.2-1.1-0.2-1-0.9c0-0.3,0.1-0.5,0.1-0.8c0.1-0.6,0.4-1,1-1.1v-0.3\n\t\t\tc0-2.2,0-4.4,0-6.7c0-0.2,0-0.4-0.1-0.6c-0.3-1.4-1.7-2.5-3-2.5c-4.8,0-9.5,0-14.3,0c-0.2,0-0.4,0-0.6,0.1C3.4,3,2.4,4.3,2.4,5.7\n\t\t\tc0,4.8,0,9.6,0,14.3c0,0.1,0,0.2,0,0.4C2.8,22.1,4,23,5.8,23c4.6,0,9.1,0,13.7,0c0.3,0,0.6,0,0.9-0.1c1.4-0.3,2.5-1.6,2.5-3\n\t\t\tC22.8,18.5,22.8,17.1,22.8,15.7z M4.9,16.5c-0.1,0.4-0.6,0.7-1.1,0.7c-0.4,0-0.7-0.4-0.6-0.8c0.1-0.4,0.1-0.8,0.2-1.2\n\t\t\tc0.1-0.4,0.5-0.8,0.9-0.8c0.5-0.1,0.8,0.2,0.8,0.9C5.1,15.6,5,16.1,4.9,16.5z M7.9,16.6c-0.1,0.8-0.3,1.7-0.4,2.5\n\t\t\tc-0.1,0.6-0.6,1-1.2,0.9c-0.4-0.1-0.6-0.4-0.6-0.8c0.2-1.2,0.4-2.3,0.6-3.5c0.1-0.5,0.1-0.9,0.6-1.2c0.3-0.1,0.6-0.2,0.9,0\n\t\t\tc0.2,0.1,0.3,0.4,0.3,0.6C8.1,15.6,8,16.1,7.9,16.6z M11.2,15c-0.2,1-0.4,2.1-0.5,3.1c-0.2,1-0.3,2-0.5,3\n\t\t\tc-0.1,0.5-0.7,0.9-1.2,0.8c-0.4-0.1-0.6-0.5-0.5-1c0.4-2.1,0.8-4.3,1.1-6.4c0.1-0.4,0.1-0.7,0.2-1.1c0.1-0.4,0.5-0.8,0.9-0.8\n\t\t\tc0.4,0,0.8,0.3,0.8,0.7C11.4,13.9,11.3,14.4,11.2,15z M15.1,9.9c-0.2,1.1-0.4,2.3-0.6,3.4c-0.2,1.1-0.4,2.3-0.6,3.4\n\t\t\tc-0.2,1.1-0.4,2.2-0.6,3.4c-0.1,0.5-0.5,0.8-1,0.8c-0.5,0-0.8-0.5-0.7-0.9c0.3-1.5,0.5-3,0.8-4.5c0.3-1.7,0.6-3.4,0.9-5.1\n\t\t\tc0-0.3,0.1-0.5,0.1-0.8c0.1-0.5,0.7-0.8,1.2-0.7C15,9.2,15.2,9.5,15.1,9.9z M18.1,10.5c-0.2,1-0.4,2.1-0.5,3.1c-0.2,1-0.3,2-0.5,3\n\t\t\tc-0.1,0.5-0.7,0.9-1.2,0.8c-0.4-0.1-0.6-0.5-0.5-1c0.4-2.1,0.8-4.3,1.1-6.4c0.1-0.4,0.1-0.7,0.2-1.1c0.1-0.4,0.5-0.8,0.9-0.8\n\t\t\tc0.4,0,0.8,0.3,0.8,0.7C18.3,9.5,18.2,10,18.1,10.5z M20.3,14.7c-0.1,0.5-0.5,0.9-1,0.9c-0.5,0-0.8-0.4-0.7-0.9\n\t\t\tc0.2-1.3,0.4-2.5,0.6-3.8c0.1-0.5,0.3-0.8,0.8-0.9c0.6-0.2,1.1,0.2,1,0.9C20.8,12.1,20.6,13.4,20.3,14.7z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 23.0,
+    "MarketingDisplayName": "Palo Alto Panorama"
+}

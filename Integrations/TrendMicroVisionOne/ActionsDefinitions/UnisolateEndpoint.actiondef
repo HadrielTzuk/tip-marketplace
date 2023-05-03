@@ -1,0 +1,35 @@
+{
+     "CreationTimeUnixTimeInMs": 1524559211168,
+     "Creator": "admin",
+     "Description": "Unisolate endpoints in Trend Micro Vision One. Supported entities: IP Address, Hostname. Action is running as async, please adjust script timeout value in Chronicle SOAR IDE for action as needed.",
+     "DynamicResultsMetadata": [
+         {
+             "ResultExample": "[{\"Entity\":\"172.xx.xxx.xxx\",\"EntityResult\":{\"task_id\": \"1\", \"status\":\"succeeded\"}}]",
+             "ResultName": "JsonResult"
+         }
+     ],
+     "Id": -1,
+     "IntegrationIdentifier": "TrendMicroVisionOne",
+     "IsCustom": false,
+     "IsEnabled": true,
+     "ModificationTimeUnixTimeInMs": 1524559211168,
+     "Name": "Unisolate Endpoint",
+     "Parameters": [
+         {
+            "Name": "Description",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specify the reasoning for the unisolation of the endpoints.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+     ],
+     "ScriptResultName": "is_success",
+     "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}",
+     "Version": 1.0,
+     "IsAsync": true
+ }

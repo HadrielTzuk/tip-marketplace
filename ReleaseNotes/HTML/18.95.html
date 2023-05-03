@@ -1,0 +1,157 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 18.95</h2><h5>Published on 09 November, 2022</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     BMCHelixRemedyForce
+    </b>
+   </li>
+   <ul>
+    <li>
+     BMCHelixRemedyForce
+    </li>
+    <ul>
+     <li>
+      BMC Helix Remedyforce - Added ability to connect to Salesforce sandbox environments by providing https://test.salesforce.com in the "Login API Root" integration configuration parameter.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Exchange
+    </b>
+   </li>
+   <ul>
+    <li>
+     Exchange
+    </li>
+    <ul>
+     <li>
+      REGRESSIVE! Exchange EML Connector, Exchange Mail Connector, Exchange Mail Connector v2 - REGRESSIVE! Updated handling of situation when "Use Domain For Authentication" checkbox is enabled and username connector parameter is provided in username@domain.com format. In that case connector will not try to concatenate Username and Domain values specified in connector parameters, only the Username will be provided as is for authentication on the mail server.
+     </li>
+     <li>
+      Exchange Mail Connector v2 and Exchange Mail Connector v2 with Oauth Authentication Connectors - Updated handling of Case Name Template connector parameter.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     PaloAltoNGFW
+    </b>
+   </li>
+   <ul>
+    <li>
+     PaloAltoNGFW
+    </li>
+    <ul>
+     <li>
+      Palo Alto Next Gen Firewall - Added certificate verification for the integration configuration.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Twilio
+    </b>
+   </li>
+   <ul>
+    <li>
+     Twilio
+    </li>
+    <ul>
+     <li>
+      Twilio - Security Enhancements.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     Exchange
+    </b>
+   </li>
+   <ul>
+    <li>
+     Send Thread Reply
+    </li>
+    <ul>
+     <li>
+      NEW! New Action Added - Send Thread Reply.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     Exchange
+    </b>
+   </li>
+   <ul>
+    <li>
+     Exchange
+    </li>
+    <ul>
+     <li>
+      REGRESSIVE! Exchange EML Connector, Exchange Mail Connector v2 and Exchange Mail Connector v2 with Oauth Authentication connectors - REGRESSIVE! Updated the handling of urls to support urls that contain ";" symbol. Make sure to update the Siemplify Ontology mapping after the update.
+     </li>
+     <li>
+      Exchange Mail Connector v2 and Exchange Mail Connector v2 with Oauth Authentication connectors - improved handling of time fields when creating Siemplify alerts.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     FireEyeEX
+    </b>
+   </li>
+   <ul>
+    <li>
+     FireEyeEXAlertsConnector
+    </li>
+    <ul>
+     <li>
+      Alerts Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     FireEyeHelix
+    </b>
+   </li>
+   <ul>
+    <li>
+     Alerts Connector
+    </li>
+    <ul>
+     <li>
+      Alerts Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     MicrosoftGraphMail
+    </b>
+   </li>
+   <ul>
+    <li>
+     Microsoft Graph Mail Connector
+    </li>
+    <ul>
+     <li>
+      Microsoft Graph Mail Connector - Updated handling of Case Name Template connector parameter.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

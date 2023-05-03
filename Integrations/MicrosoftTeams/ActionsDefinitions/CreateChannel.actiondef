@@ -1,0 +1,72 @@
+{
+    "CreationTimeUnixTimeInMs": 1543229155761,
+    "Creator": "Admin",
+    "Description": "Create a channel in Microsoft Teams.",
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftTeams",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543229155761,
+    "Name": "Create Channel",
+    "DynamicResultsMetadata": [{
+		"ResultExample": "{\"@odata.context\": \"https: //graph.microsoft.com/beta/$metadata#teams('947e8bdb-27b6-4ba4-9ee4-7cxxxxxxxxxx')/channels/$entity\",\"id\": \"19:a04023d482da48e48518f5xxxxxxxxxx@thread.xxxxx\",\"createdDateTime\": \"2021-11-22T15:13:02.0443425Z\",\"displayName\": \"test name\",\"description\": \"testing\",\"isFavoriteByDefault\": false,\"email\": \"\",\"webUrl\": \"https://teams.microsoft.com/l/channel/19%3aa04023d482da48e48518f5xxxxxxxxxx%40thread.xxxxx/test+name?groupId=ee820b05-6cb4-4496-b441-b6xxxxxxxxxx&tenantId=d48f52ca-5b1a-4708-8ed0-ebxxxxxxxxxx\",\"membershipType\": \"standard\",\"moderationSettings\": {\"userNewMessageRestriction\": \"everyone\",\"replyRestriction\": \"everyone\",\"allowNewMessageFromBots\": true,\"allowNewMessageFromConnectors\": true}}",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "Name": "Team Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the team in which you need to create the channel.",
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Channel Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify a unique name of the channel.",
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Channel Type",
+            "Type": 15,
+            "DefaultValue": "Standard",
+            "Value": "Standard",
+            "IsMandatory": true,
+            "Description": "Specify the type of the channel that needs to be created. Standard channel is accessible to all members of the team, while private channel will require users to be added to it.",
+            "OptionalValues": [
+                "Standard",
+                "Private"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Description",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify a description for the channel.",
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

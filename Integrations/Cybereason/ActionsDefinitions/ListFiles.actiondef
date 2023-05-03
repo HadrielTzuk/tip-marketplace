@@ -1,0 +1,58 @@
+{
+    "CreationTimeUnixTimeInMs": 1524559211168,
+    "Creator": "admin",
+    "Description": "Get information about files from Cybereason.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"simpleValues\":{\"size\":{\"totalValues\":1,\"values\":[\"28160\"]},\"sha1String\":{\"totalValues\":1,\"values\":[\"3de58e6c504a9daXXXXXXXd20a5c9576d280065d\"]},\"isSigned\":{\"totalValues\":1,\"values\":[\"false\"]},\"modifiedTime\":{\"totalValues\":1,\"values\":[\"1585124888222\"]},\"maliciousClassificationType\":{\"totalValues\":1,\"values\":[\"indifferent\"]},\"md5String\":{\"totalValues\":1,\"values\":[\"21f73cd5562XXXXXXXbce53eafbef128\"]},\"signatureVerified\":{\"totalValues\":1,\"values\":[\"false\"]},\"createdTime\":{\"totalValues\":1,\"values\":[\"1585124888221\"]},\"elementDisplayName\":{\"totalValues\":1,\"values\":[\"python_sb_609645112_bs_1718922.exe\"]},\"correctedPath\":{\"totalValues\":1,\"values\":[\"c:\\\\program files\\\\safebreach\\\\safebreach endpoint simulator\\\\app\\\\20.1.10\\\\simvenv\\\\scripts\\\\python_sb_609645112_bs_1718922.exe\"]}},\"elementValues\":{\"ownerMachine\":{\"totalValues\":1,\"elementValues\":[{\"elementType\":\"Machine\",\"guid\":\"1589170329.1198000000051518743\",\"name\":\"dasdfp-sb01\",\"hasSuspicions\":false,\"hasMalops\":false}],\"totalSuspicious\":0,\"totalMalicious\":0,\"guessedTotal\":0}},\"suspicions\":{\"blackListedFileSuspicion\":1601020416198},\"filterData\":{\"sortInGroupValue\":\"1589170329.999000000000785885\",\"groupByValue\":\"FileHashRuntime:0.-8076888620413037613 \"},\"isMalicious\":false,\"suspicionCount\":1,\"guidString\":\"1589170329.999000000000785885\",\"labelsIds\":\"None\",\"malopPriority\":\"None\",\"malicious\":false,\"suspect\":true}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Cybereason",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524559211168,
+    "Name": "List files",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of file hashes for which you want to return data. Note: action only supports SHA-1 and MD5 hashes. If you provide values for this parameter, then parameter “Results Limit“ is ignored. Action will try to find information about all provided hashes. ",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "File Hash",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": 100,
+            "Description": "Specify how many files to return.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Results Limit",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of fields that you want to return. If nothing is provided, action will work with predefined fields. Possible values: md5String,ownerMachine,avRemediationStatus,isSigned,signatureVerified,sha1String,maliciousClassificationType,createdTime,modifiedTime,size,correctedPath,productName,productVersion,companyName,internalName,elementDisplayName.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Fields To Return",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "num_of_files",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

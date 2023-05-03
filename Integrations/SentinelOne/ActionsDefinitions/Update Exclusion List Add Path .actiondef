@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1521987118211,
+    "Creator": "admin",
+    "Description": "Add a path to an existing exclusion list (Note - OS can be: Windows, OSX, Linux or Android)",
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOne",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1521987118211,
+    "Name": "Update Exclusion List Add Path ",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1521987118211,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Exclusion list name.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1521987118211,
+            "Name": "List Name",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1521987118211,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Path to add to the list.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1521987118211,
+            "Name": "Path",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1521987118211,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Operation system, can be: windows, osx, linux or android.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1521987118211,
+            "Name": "Operation System",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SentinelOneManager import SentinelOneManager\n\n\n# Consts.\nSENTIAL_ONE_PROVIDER = 'SentinelOne'\n\n\ndef main():\n    # Configuration.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(SENTIAL_ONE_PROVIDER)\n    sentinel_one_manager = SentinelOneManager(conf['Api Root'], conf['Username'], conf['Password'])\n\n    # Parameters.\n    list_name = siemplify.parameters['List Name']\n    file_directory = siemplify.parameters['Path']\n    operation_system = siemplify.parameters['Operation System']\n\n    # Get system status.\n    system_status = sentinel_one_manager.create_path_in_exclusion_list(list_name, file_directory, operation_system)\n\n    # Form output message.\n    output_message = 'Directory {0} added to exclusion list {1}'.format(list_name, file_directory)\n\n    siemplify.end(output_message, True)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

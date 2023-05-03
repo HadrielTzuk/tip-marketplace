@@ -1,0 +1,40 @@
+{
+    "Description": "Digital Risk Protection that turns intelligence into actions to proactively and effectively defend businesses against cyber threats.",
+    "DisplayName": "Cyberint",
+    "Identifier": "Cyberint",
+    "MarketingDisplayName": "Cyberint",
+    "Categories": ["Threat Intelligence", "Security"],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Cyberint",
+            "PropertyName": "API Root",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://{instance}.cyberint.io"
+        },
+        {
+            "IntegrationIdentifier": "Cyberint",
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Cyberint",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": "true"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg id=\"Layer_1\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M23,8a7.85,7.85,0,0,1-.8,3.44,8.88,8.88,0,0,1-2.28,2.92,10.59,10.59,0,0,1-3.4,1.95,12.06,12.06,0,0,1-8,0,10.59,10.59,0,0,1-3.4-1.95A8.88,8.88,0,0,1,2.8,11.44,7.85,7.85,0,0,1,2,8Z\"/></svg>",
+    "Version": 2.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/cyberint"
+}

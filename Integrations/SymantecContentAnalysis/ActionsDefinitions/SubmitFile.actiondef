@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1530796869901,
+    "Creator": "admin",
+    "Description": "Upload file to Symantec Content Analysis for a scan",
+    "Id": -1,
+    "IntegrationIdentifier": "SymantecContentAnalysis",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530796869901,
+    "Name": "Submit File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530796869901,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Submit file from path.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530796869901,
+            "Name": "File Path",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecContentAnalysisManager import SymantecContentAnalysisManager\n\nINTEGRATION_PROVIDER = 'SymantecContentAnalysis'\nACTION_NAME = 'SymantecContentAnalysis_Submit File'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(INTEGRATION_PROVIDER)\n\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    symantec_manager = SymantecContentAnalysisManager(conf.get('API Root'), conf.get('API Key'), verify_ssl)\n\n    # Parameters\n    file_path = siemplify.parameters.get('File Path')\n\n    result_id = symantec_manager.submit_file(file_path)\n\n    if result_id:\n        output_message = '\"{0}\" submitted successfully. \\n \\n Result id: {1}'.format(file_path, result_id)\n    else:\n        output_message = '\"{0}\" was not submitted.'.format(file_path)\n\n    siemplify.end(output_message, result_id)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "file_reputation_score",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

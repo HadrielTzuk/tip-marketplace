@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1515513905800, 
+    "Creator": "admin", 
+    "Description": "Test Connectivity", 
+    "Id": -1, 
+    "IntegrationIdentifier": "DomainTools", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1515513905800, 
+    "Name": "Ping", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

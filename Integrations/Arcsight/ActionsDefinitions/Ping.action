@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1512913041426,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "Arcsight",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1512913041426,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,89 @@
+{
+    "CreationTimeUnixTimeInMs": 1517851161038,
+    "Creator": "admin",
+    "Description": "Create new ticket in CA ServiceDesk.",
+    "Id": -1,
+    "IntegrationIdentifier": "CaServiceDesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517851161038,
+    "Name": "Create Ticket",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517851635323,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Incident's summary text",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517851635323,
+            "Name": "Summary",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517851635323,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Incident's description text",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517851635323,
+            "Name": "Description",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517851635323,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Incident's area name. e.g. Software",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517851635323,
+            "Name": "Category Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517851635323,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Group name. e.g. Test",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517851635323,
+            "Name": "Group Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517851635323,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "User name",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517851635323,
+            "Name": "Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1668002358901,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a JSON object containing all of the needed fields and values. The structure is the following: {\"field”:”value\"}. If the same field is provided in the “Custom Fields“ parameter and other parameters, the “Custom Fields“  parameter value has priority.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1668002358901,
+            "Name": "Custom Fields",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyDataModel import EntityTypes\r\nfrom SiemplifyAction import SiemplifyAction\r\nfrom CaSoapManager import CaSoapManager\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration('CaServiceDesk')\r\n    api_root = conf['Api Root']\r\n    username = conf['Username']\r\n    password = conf['Password']\r\n       \r\n    ca_manager = CaSoapManager(api_root, username, password)\r\n    \r\n    summary = siemplify.parameters['Summary']\r\n    description = siemplify.parameters['Description']\r\n    area = siemplify.parameters['Category Name']\r\n    group = siemplify.parameters['Group Name']\r\n    username = siemplify.parameters['Username']\r\n\r\n    incident_id = ca_manager.create_incident_openreq(summary=summary, description=description, area=area,group=group, username=username)\r\n    \r\n    if incident_id:\r\n        output_message = 'Incident {0} was Opened.'.format(incident_id)\r\n        result_value = incident_id\r\n\r\n    else:\r\n        output_message = 'There was a problem creating a ticket.'\r\n        result_value = 'false'\r\n\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n",
+    "ScriptResultName": "ticket_id",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

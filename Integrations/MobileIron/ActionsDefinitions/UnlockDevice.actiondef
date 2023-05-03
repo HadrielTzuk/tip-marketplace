@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1544614232870, 
+    "Creator": "Admin", 
+    "Description": "Ulock device by it's IP address.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "MobileIron", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1544614232870, 
+    "Name": "Unlock Device", 
+    "Parameters": [], 
+    "Script": "# Imports\nfrom MobileIronManager import MobileIronManager\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyDataModel import EntityTypes\n\n# Consts.\nPROVIDER_NAME = 'MobileIron'\nACTION_NAME = 'MobileIron_Unlock Device'\nTABLE_HEADER = 'Devices'\n\n\ndef main():\n    # Variables Definition.\n    result_value = False\n    success_entities = []\n    errors = []\n\n    # Configuration.\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    configuretion_settings = siemplify.get_configuration(PROVIDER_NAME)\n    api_root = configuretion_settings['API Root']\n    username = configuretion_settings['Username']\n    password = configuretion_settings['Password']\n    admin_device_id = configuretion_settings.get('Admin Device ID', 1)\n    connected_cloud = configuretion_settings.get('Connected Cloud', 'false').lower() == 'true'\n    verify_ssl = configuretion_settings.get('Verify SSL', 'false').lower() == 'true'\n\n    mobile_iron_manager = MobileIronManager(api_root, username, password, admin_device_id, connected_cloud, verify_ssl)\n\n    target_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.ADDRESS]\n\n    for entity in target_entities:\n        try:\n            device_uuid = mobile_iron_manager.get_device_uuid_by_ip_address(entity.identifier)\n            mobile_iron_manager.unlock_device_by_uuid(device_uuid=device_uuid)\n        except Exception as err:\n            error_message = \"Failed fetching system information for '{0}', ERROR: {1}\".format(entity.identifier,\n                                                                                              err.message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    if success_entities:\n        output_message = \"System information fetched for {0}\".format(\",\".join([entity.identifier for entity in\n                                                                               success_entities]))\n    else:\n        output_message = \"No information was fetched for entities.\"\n\n    if errors:\n        output_message = \"{0}\\n\\nErrors:\\n{1}\".format(output_message, \"\\n\".join(errors))\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 2.0
+}

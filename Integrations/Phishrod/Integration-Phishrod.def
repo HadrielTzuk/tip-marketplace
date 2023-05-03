@@ -1,0 +1,73 @@
+{
+    "DisplayName": "Phishrod",
+    "Identifier": "Phishrod",
+    "Description": "PhishRod is an integrated & analytics driven solution for phishing readiness, security awareness automation, threat advisory & policy compliance management. It helps organizations to empower end users and cascade the actionable human intelligence across the organization to deter cyber attacks.",
+    "MarketingDisplayName": "Phishrod",
+    "Categories": [
+        "Email Security",
+        "Cloud"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Phishrod",
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyDescription": "API root of the Phishrod instance.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://{instance}.phishrod.co"
+        },
+        {
+            "IntegrationIdentifier": "Phishrod",
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyDescription": "API Key of the Phishrod account.",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Phishrod",
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyDescription": "Client ID of the Phishrod account.",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Phishrod",
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyDescription": "Username of the Phishrod account.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Phishrod",
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyDescription": "Password of the Phishrod account. ",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Phishrod",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Phishrod is valid.",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M6.28 11.23c.39.44 1.13.74 1.45.84.09.27 1.87 2.4 1.94 2.69-.18.5-1.94 1.1-3.04.82-.52-.89-.43-3.04-.34-4.35ZM14.32 5.28c.43.3.57.69.69.97 1.26.4 2.85 1.67 3.49 1.82.59-.31.82-2.23.45-3.19-.85-.37-4.23-.09-4.62.4Z\"/><path d=\"M7.87 1.38c3.21-.48 10.87 7.29 9.4 15.93-1.17-2.4-2.39-4.22-8.21-5.16C4.85 11 5.01 7.51 5.09 5.88c.02-.37.03-.64-.01-.77.55.78 1.25 1.63 2.04 1.03-.23-1.33-.23-3.93.76-4.76Zm1.4 4.35c.43 0 .77-.35.77-.77s-.35-.77-.77-.77-.77.35-.77.77.35.77.77.77Z\" style=\"fill-rule:evenodd\"/><path d=\"M9.63 4.95c0 .2-.16.36-.36.36s-.36-.16-.36-.36.16-.36.36-.36.36.16.36.36ZM17.47 17.66c1.43-.36 4.28.82 5.53 1.46-4.8-1.15-7.26 2.32-9.02 4.51.58-1.86 2.06-5.61 3.49-5.97ZM2.36 3.24s-.09.08-.16.08c-.04 0-.08-.01-.11-.03A.196.196 0 0 1 2 3.12c0-.11.09-.2.2-.2.05 0 .09.02.13.05.04.04.07.09.07.15 0 .05-.02.09-.04.12Z\"/><path d=\"M2.36 3.24c.12.17.47.58 1.97.86 1.75.19 1.96.9 1.84 1.23-.13 1.42-1.58.87-1.95.26-.14-.24-.32-.41-.46-.51-.06-.05-.12-.08-.15-.1h-.05c.32.2.24.19.49.57.67 1.3 2.31 1.2 2.41-.22.07-1.13-1.33-1.44-2.13-1.46-1.19-.14-1.42-.29-1.71-.47-.08-.05-.16-.1-.27-.16Z\"/></svg>",
+    "Version": 1.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/phishrod"
+}

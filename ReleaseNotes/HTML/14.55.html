@@ -1,0 +1,172 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 14.55</h2><h5>Published on 02 March, 2021</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     AWSCloudTrail
+    </b>
+   </li>
+   <ul>
+    <li>
+     AWSCloudTrail
+    </li>
+    <ul>
+     <li>
+      NEW! New integration "AWS Cloud Trail"
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     AWSEC2
+    </b>
+   </li>
+   <ul>
+    <li>
+     AWSEC2
+    </li>
+    <ul>
+     <li>
+      NEW! NEW! AWS EC2 integration.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     IronPort
+    </b>
+   </li>
+   <ul>
+    <li>
+     IronPort
+    </li>
+    <ul>
+     <li>
+      Updated Get all Recipients by Sender and Get all Recipients by Subject actions to be able to specify less time frame to search for.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Splunk
+    </b>
+   </li>
+   <ul>
+    <li>
+     Splunk
+    </li>
+    <ul>
+     <li>
+      Updated action description for actions "Ping", "SplunkQuery", "Get Host Events", "Submit Event".
+     </li>
+     <li>
+      Updated connector description and parameter's description for connectors "Splunk Connector", "Splunk Query Connector".
+     </li>
+     <li>
+      Update action parameter description for actions "SplunkQuery", "Get Host Events", "Submit Event"
+     </li>
+     <li>
+      Added new optional parameters for actions "Get Host Events", "SplunkQuery"
+     </li>
+     <li>
+      Migrated to python 3 and restructured the code.
+     </li>
+     <li>
+      Added support for CA certificate.
+     </li>
+     <li>
+      Deprecated action "SplunkCsvViewer".
+     </li>
+     <li>
+      REMOVED! Removed connector "Splunk Connector"
+     </li>
+     <li>
+      Fixed a bug, where the selected multivalued fields were not parsed properly for Siemplify Events in "Notable Events Connector"
+     </li>
+     <li>
+      Fixed a bug, where connector "Notable Events Connector" was not ingesting all available fields for base events
+     </li>
+     <li>
+      Improved Siemplify Alert descriptions that were ingested by "Notable Events Connector" connector.
+     </li>
+     <li>
+      Updated the way base events are extracted for "Notable Events Connector".
+     </li>
+     <li>
+      Added new parameter "Query Filter" to the connector "Notable Events Connector". This parameter allows users to modify the query that is sent to Splunk to get notable events. Please refer to documentation portal for more details.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Sumologic
+    </b>
+   </li>
+   <ul>
+    <li>
+     Sumologic
+    </li>
+    <ul>
+     <li>
+      Sumo Logic - Update - Updated the integration's code to work with Python version 3.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     Sumologic
+    </b>
+   </li>
+   <ul>
+    <li>
+     Search
+    </li>
+    <ul>
+     <li>
+      Update - Added the ability to delete jobs after a search is completed.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     AlienVaultAnywhere
+    </b>
+   </li>
+   <ul>
+    <li>
+     AlienVault USM Anywhere Connector
+    </li>
+    <ul>
+     <li>
+      Improve connector timestamp mechanism
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Sumologic
+    </b>
+   </li>
+   <ul>
+    <li>
+     Sumologic Connector
+    </li>
+    <ul>
+     <li>
+      Connector Improvement - Add the ability to run complex saved queries to identify alerts that need to be investigated using the whitelist.  Improve timestamp mechanism to be more accurate.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

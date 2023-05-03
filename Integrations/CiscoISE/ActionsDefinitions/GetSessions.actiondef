@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1527774143124,
+    "Creator": "admin",
+    "Description": "Get a list of active sessions",
+    "Id": -1,
+    "IntegrationIdentifier": "CiscoISE",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527774143124,
+    "Name": "Get Sessions",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CiscoISEManager import CiscoISEManager\nfrom SiemplifyUtils import construct_csv, dict_to_flat\n\nCISCOISE_PROVIDER = \"CiscoISE\"\nTABLE_HEADER = 'Sessions'\n\n\ndef main():\n    # Configuration.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(CISCOISE_PROVIDER)\n    cim = CiscoISEManager(conf['API Root'], conf['Username'], conf['Password'], conf['Verify SSL'])\n\n    # Variables.\n    result_value = False\n\n    session_list = cim.get_sessions()\n    \n    if session_list:\n        csv = construct_csv(map(dict_to_flat, session_list))\n        \n        siemplify.result.add_data_table(TABLE_HEADER, csv)\n        \n        result_value = True\n        \n        output_message = \"Active sessions found.\"\n    else:\n        output_message = \"No active sessions found.\"\n        \n    siemplify.end(output_message, result_value)\n    \n    \nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

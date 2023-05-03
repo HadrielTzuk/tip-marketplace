@@ -1,0 +1,217 @@
+{
+   "CreationTimeUnixTimeInMs":1530621343817,
+   "Creator":"admin",
+   "Description":"FireEye HX Alerts Connector",
+   "Id":-1,
+   "Integration":"FireEyeHX",
+   "IsConnectorRulesSupported":false,
+   "IsCustom":false,
+   "IsEnabled":true,
+   "ModificationTimeUnixTimeInMs":1530621343817,
+   "Name":"FireEye HX Alerts Connector",
+   "Parameters":[
+      {
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1532871487965,
+         "DefaultValue":"Product Name",
+         "Description":"Enter the source field name in order to retrieve the Product Field name.",
+         "Id":-1,
+         "IsMandatory":true,
+         "Mode":0,
+         "ModificationTimeUnixTimeInMs":1532871487965,
+         "Name":"DeviceProductField",
+         "Type":2
+      },
+      {
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1532871487965,
+         "DefaultValue":"event_type",
+         "Description":"Enter the source field name in order to retrieve the Event Field name.",
+         "Id":-1,
+         "IsMandatory":true,
+         "Mode":0,
+         "ModificationTimeUnixTimeInMs":1532871487965,
+         "Name":"EventClassId",
+         "Type":2
+      },
+      {
+         "Name":"PythonProcessTimeout",
+         "Type":1,
+         "DefaultValue":180,
+         "IsMandatory":true,
+         "Description":"Timeout limit for the python process running the current script.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"API Root",
+         "Type":2,
+         "DefaultValue":"https://x.x.x.x:<port>",
+         "IsMandatory":true,
+         "Description":"FireEye HX Server API Root URL.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Username",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":true,
+         "Description":"FireEye HX user to authenticate with.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Password",
+         "Type":3,
+         "DefaultValue":"",
+         "IsMandatory":true,
+         "Description":"FireEye HX user password to authenticate with.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Offset time in hours",
+         "Type":1,
+         "DefaultValue":24,
+         "IsMandatory":true,
+         "Description":"Fetch alerts from X hours backwards.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Max Alerts Per Cycle",
+         "Type":1,
+         "DefaultValue":25,
+         "IsMandatory":true,
+         "Description":"How many alerts should be processed during one connector run.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Alert Type",
+         "Type":2,
+         "DefaultValue":"active_threat",
+         "IsMandatory":false,
+         "Description":"Specify what FireEye HX alert types to ingest.  By default its set to active_threat to return alerts in ALERT and QUARANTINED/partial_block state. Other valid parameter is ALERT, which will return open alerts only.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Use whitelist as a blacklist",
+         "Type":0,
+         "DefaultValue":false,
+         "IsMandatory":true,
+         "Description":"If enabled, whitelist will be used as a blacklist.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Verify SSL",
+         "Type":0,
+         "DefaultValue":true,
+         "IsMandatory":true,
+         "Description":"If specified, connector will check if FireEye HX is configured with valid SSL certificate. If certificate is not valid, connector will return error.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Environment Field Name",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Environment Regex Pattern",
+         "Type":2,
+         "DefaultValue":".*",
+         "IsMandatory":false,
+         "Description":"A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Server Address",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"The address of the proxy server to use.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Username",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"The proxy username to authenticate with.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Password",
+         "Type":3,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"The proxy password to authenticate with.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      }
+   ],
+   "ProductToVisualFamilyRecords":[
+   ],
+   "Rules":[
+   ],
+   "SimulationUseCases":{
+      "CasesForUseCase":[
+      ],
+      "UseCaseName":null
+   },
+   "Version": 1,
+   "DocumentationLink": "https://integrations.siemplify.co/doc/fireeye-hx#fireeye-hx-alerts-connector"
+}

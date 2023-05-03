@@ -1,0 +1,58 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Download an object from a Cloud Storage bucket.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleCloudStorage",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"object_name\": \"text.txt\", \"download_path\": \"/opt/dir/text.txt\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Download an Object From a Bucket",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the bucket in which the object resides.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Bucket Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the object in the bucket to download. Please note, for objects which are stored inside folders in the bucket, you should also specify the inner folder. E.g: folder/object_name",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Object Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "/{folder_1}/{folder_2}",
+            "Description": "Specify the absolute path, where to download the file. Example: /folder_1/folder_2",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Download Path",
+            "Type": 0,
+            "Value": "/{folder_1}/{folder_2}"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

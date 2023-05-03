@@ -1,0 +1,28 @@
+{
+    "CreationTimeUnixTimeInMs": 1506521112194,
+    "Creator": "admin",
+    "Description": "Automatically change the alert priority to the given input. Note: This action is compatible only with Siemplify version 5.6 and higher.",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506521112194,
+    "Name": "Change Alert Priority",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1510914848491,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Priority to which the alert should be moved to.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914848491,
+            "Name": "Alert Priority",
+            "Type": 7,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0
+}

@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Create a Google Cloud IAM Role.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleCloudIAM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"name\": \"projects\/XXXXXX-XXXXXX\/roles\/XXXXXXX\",\"role_id\":\"XXXXXXX\",\"title\":\"XXXXXX\",\"description\":\"XXXXX XXXXXX\",\"includedPermissions\": [\"XXXXXXXXXXXX.XXXXXXXXX.XXXX\"],\"stage\": \"XX\",\"etag\": \"XXXXXXXXXXXX\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Create Role",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify role id for newly created IAM role.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Role ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify JSON policy document to use as the role definition.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Role Definition",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

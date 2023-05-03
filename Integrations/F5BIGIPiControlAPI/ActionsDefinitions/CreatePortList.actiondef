@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Create a port list in F5 BIG-IP.",
+    "Id": -1,
+    "IntegrationIdentifier": "F5BIGIPiControlAPI",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Create Port List",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"kind\":\"tm:security:firewall:port-list:port-liststate\",\"name\":\"koko\",\"fullPath\":\"koko\",\"generation\":895,\"selfLink\":\"https://localhost/mgmt/tm/security/firewall/port-list/koko?ver=16.0.1.1\",\"ports\":[{\"name\":\"22\"},{\"name\":\"53\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the port list that needs to be created. Note: name shouldn't contain whitespace. This is F5 BIG-IP limitation.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Ports",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify a comma-separated list of ports that will be a part of the new port list.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

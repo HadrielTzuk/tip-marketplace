@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "Fixed a bug in CSV table building that caused the action to fail on non-malicious IPs.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "Get IP Malware",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1590381108,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2984"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "XForce",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 12.0,
+        "ItemName": "XForce",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Integration's Actions - Added support for unicode characters.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 13.0,
+        "ItemName": "XForce",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1678838400,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "247490349"
+    }
+]

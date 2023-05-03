@@ -1,0 +1,62 @@
+{
+    "CreationTimeUnixTimeInMs": 1663657983320,
+    "Creator": "admin",
+    "Description": "Create a rule list in Cloudflare.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"id\":\"xxx589d629f140c0b961c467feadf99d\",\"name\":\"123\",\"description\": \"This is a note.\",\"kind\":\"ip\",\"num_items\":0,\"num_referencing_filters\":0,\"created_on\":\"2022-07-25T12:13:46Z\",\"modified_on\":\"2022-07-25T12:13:46Z\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "Cloudflare",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1663657983320,
+    "Name": "Create Rule List",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1663657983320,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name for the rule list.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1663657983320,
+            "Name": "Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663657983320,
+            "CustomActionId": -1,
+            "DefaultValue": "IP Address",
+            "Description": "Specify the type for the rule list.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1663657983320,
+            "Name": "Type",
+            "Type": 15,
+            "OptionalValues": [
+                "IP Address",
+                "Redirect"
+            ]
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663657983320,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the description for the rule list.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1663657983320,
+            "Name": "Description",
+            "Type": 0
+        }
+    ],
+    "Script": "",
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Type": 0,
+    "Version": 1.0
+}

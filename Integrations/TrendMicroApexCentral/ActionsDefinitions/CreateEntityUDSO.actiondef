@@ -1,0 +1,63 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Create a User-defined suspicious object based on the entities in Trend Micro Apex Central. Supported entities: IP, URL, Hash. Note: only SHA-1 hashes are supported.",
+    "Id": -1,
+    "IntegrationIdentifier": "TrendMicroApexCentral",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"X.X.X.X.X\",\"EntityResult\":{\"type\":\"ip\",\"content\":\"X.X.X.X.X\",\"notes\":\"my note\", \"scan_action\":\"log\",\"expiration_utc_date\":\"2021-03-26T12:26:49.753\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Name": "Create Entity UDSO",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Block",
+            "Description": "Specify what action should be applied to the UDSO.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Action",
+            "OptionalValues": [
+                "Block",
+                "Log"
+            ],
+            "Type": 15,
+            "Value": "Block"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify an additional note for the provided UDSO. Warning: this note can't contain more than 256 characters.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Note",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify in how many days the UDSO should expire. If nothing is provided, UDSO will never expire.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Expire In (Days)",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\",\"FILEHASH\",\"ADDRESS\"]}"
+}

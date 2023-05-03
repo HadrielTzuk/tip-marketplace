@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1669215361000,
+    "Creator": "admin",
+    "Description": "Test connectivity to the Varonis Data Security Platform with parameters provided at the integration configuration page on the Marketplace tab.",
+    "Id": -1,
+    "IntegrationIdentifier": "VaronisDataSecurityPlatform",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1669215361000,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

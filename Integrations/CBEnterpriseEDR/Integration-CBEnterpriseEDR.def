@@ -1,0 +1,57 @@
+{
+    "Description": "The VMware Carbon Black Enterprise EDR is an advanced threat hunting and incident response solution delivering continuous visibility for top security operations centers (SOCs) and incident response (IR) teams. Enterprise EDR is delivered through the VMware Carbon Black Cloud, a next-generation endpoint protection platform that consolidates security in the cloud using a single agent, console and dataset.",
+    "DisplayName": "VMware Carbon Black Enterprise EDR",
+    "Identifier": "CBEnterpriseEDR",
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "CBEnterpriseEDR",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CBEnterpriseEDR",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Organization Key",
+            "PropertyName": "Organization Key",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CBEnterpriseEDR",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API ID",
+            "PropertyName": "API ID",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CBEnterpriseEDR",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Secret Key",
+            "PropertyName": "API Secret Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CBEnterpriseEDR",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"><path d=\"M3.8,8.8c-0.3-0.6-1-0.9-1.6-0.6c-0.7,0.3-0.9,1-0.6,1.6l2.7,5.8c0.4,0.9,0.9,1.4,1.7,1.4c0.9,0,1.3-0.5,1.7-1.4 c0,0,2.3-5.1,2.4-5.1c0,0,0.1-0.2,0.3-0.2c0.2,0,0.3,0.2,0.3,0.4v4.9c0,0.7,0.4,1.4,1.2,1.4c0.8,0,1.3-0.6,1.3-1.4v-4.1 c0-0.8,0.6-1.3,1.3-1.3c0.7,0,1.3,0.5,1.3,1.3v4.1c0,0.7,0.4,1.4,1.2,1.4c0.8,0,1.3-0.6,1.3-1.4v-4.1c0-0.8,0.6-1.3,1.3-1.3 s1.3,0.5,1.3,1.3v4.1c0,0.7,0.4,1.4,1.2,1.4c0.8,0,1.3-0.6,1.3-1.4V11c0-1.7-1.4-2.9-3-2.9s-2.7,1.1-2.7,1.1 c-0.6-0.7-1.3-1.1-2.6-1.1c-1.4,0-2.5,1.1-2.5,1.1c-0.5-0.7-1.5-1.1-2.2-1.1c-1.2,0-2.1,0.5-2.7,1.8l-1.7,4L3.8,8.8\"/></svg>",
+    "MinimumSystemVersion": 5.1,
+    "Version": 4.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/vmware-carbon-black-enterprise-edr",
+    "MarketingDisplayName": "VMware Carbon Black Enterprise EDR"
+}

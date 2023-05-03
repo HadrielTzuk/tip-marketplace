@@ -1,0 +1,43 @@
+{
+    "CreationTimeUnixTimeInMs": 1670498679147,
+    "Creator": "admin",
+    "Description": "Add a comment to model breach in Darktrace.",
+    "Id": -1,
+    "IntegrationIdentifier": "Darktrace",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1670498679147,
+    "Name": "Add Comment To Model Breach",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"response\":\"SUCCESS\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Model Breach ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the ID of the model breach to which you want to add a comment.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1670498679147,
+            "ModificationTimeUnixTimeInMs": 1670498679147
+        },
+        {
+            "Name": "Comment",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the comment for the model breach.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1670498679147,
+            "ModificationTimeUnixTimeInMs": 1670498679147
+        }
+    ]
+}

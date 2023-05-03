@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244, 
+    "Creator": "admin", 
+    "Description": "Fetch information about the file using hashes or file names. Only MD5 and SHA256 are supported. Requires RSA Netwitness Respond license, endpoint server service running in the background, configured Web Username and Web Password in the integration configuration.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"34261adf58ac3c8e38724d5fbfba21037d868a2c0b6291e2a61e5a023b55c3f9\",\"EntityResult\":{\"firstFileName\":\"AM_Delta_Patch_1.321.1947.0.exe\",\"reputationStatus\":\"KnownGood\",\"globalRiskScore\":0,\"firstSeenTime\":\"2020-08-23T00:46:25.288Z\",\"machineOsType\":\"windows\",\"signature\":{\"timeStamp\":\"2020-08-22T21:01:55.552Z\",\"thumbprint\":\"c6573d9ba5efc55b1ad1c59b9cafc33d232b13cc\",\"context\":[\"microsoft\",\"signed\",\"valid\"],\"signer\":\"MicrosoftCorporation\"},\"size\":441280,\"checksumMd5\":\"40d93a5ed9d2d55e35857c1f1de162db\",\"checksumSha1\":\"3096e9e4ac4cc46dcfa11a053583c2d3e14b14b8\",\"checksumSha256\":\"34261adf58ac3c8e38724d5fbfba21037d868a2c0b6291e2a61e5a023b55c3f9\",\"pe\":{\"timeStamp\":\"2020-08-22T20:57:28.000Z\",\"imageSize\":454656,\"numberOfExportedFunctions\":0,\"numberOfNamesExported\":0,\"numberOfExecuteWriteSections\":0,\"context\":[\"file.exe\",\"file.arch64\",\"file.versionInfoPresent\",\"file.resourceDirectoryPresent\",\"file.relocationDirectoryPresent\",\"file.debugDirectoryPresent\",\"file.tlsDirectoryPresent\",\"file.richSignaturePresent\",\"file.companyNameContainsText\",\"file.descriptionContainsText\",\"file.versionContainsText\",\"file.internalNameContainsText\",\"file.legalCopyrightContainsText\",\"file.originalFilenameContainsText\",\"file.productNameContainsText\",\"file.productVersionContainsText\",\"file.standardVersionMetaPresent\"],\"resources\":{\"originalFileName\":\"AM_Delta_Patch_1.321.1947.0.exe\",\"company\":\"MicrosoftCorporation\",\"description\":\"MicrosoftAntimalwareWUStub\",\"version\":null},\"sectionNames\":[\".text\",\".rdata\",\".data\",\".pdata\",\".rsrc\",\".reloc\"],\"importedLibraries\":[\"ADVAPI32.dll\",\"KERNEL32.dll\",\"RPCRT4.dll\",\"ntdll.dll\"]},\"elf\":null,\"macho\":null,\"entropy\":7.378079119412321,\"format\":\"pe\",\"fileStatus\":\"Neutral\",\"remediationAction\":\"Unblock\"}},{\"Entity\":\"AM_Delta_Patch_1.321.1947.0.exe\",\"EntityResult\":{\"firstFileName\":\"AM_Delta_Patch_1.321.1947.0.exe\",\"reputationStatus\":\"KnownGood\",\"globalRiskScore\":0,\"firstSeenTime\":\"2020-08-23T00:46:25.288Z\",\"machineOsType\":\"windows\",\"signature\":{\"timeStamp\":\"2020-08-22T21:01:55.552Z\",\"thumbprint\":\"c6573d9ba5efc55b1ad1c59b9cafc33d232b13cc\",\"context\":[\"microsoft\",\"signed\",\"valid\"],\"signer\":\"MicrosoftCorporation\"},\"size\":441280,\"checksumMd5\":\"40d93a5ed9d2d55e35857c1f1de162db\",\"checksumSha1\":\"3096e9e4ac4cc46dcfa11a053583c2d3e14b14b8\",\"checksumSha256\":\"34261adf58ac3c8e38724d5fbfba21037d868a2c0b6291e2a61e5a023b55c3f9\",\"pe\":{\"timeStamp\":\"2020-08-22T20:57:28.000Z\",\"imageSize\":454656,\"numberOfExportedFunctions\":0,\"numberOfNamesExported\":0,\"numberOfExecuteWriteSections\":0,\"context\":[\"file.exe\",\"file.arch64\",\"file.versionInfoPresent\",\"file.resourceDirectoryPresent\",\"file.relocationDirectoryPresent\",\"file.debugDirectoryPresent\",\"file.tlsDirectoryPresent\",\"file.richSignaturePresent\",\"file.companyNameContainsText\",\"file.descriptionContainsText\",\"file.versionContainsText\",\"file.internalNameContainsText\",\"file.legalCopyrightContainsText\",\"file.originalFilenameContainsText\",\"file.productNameContainsText\",\"file.productVersionContainsText\",\"file.standardVersionMetaPresent\"],\"resources\":{\"originalFileName\":\"AM_Delta_Patch_1.321.1947.0.exe\",\"company\":\"MicrosoftCorporation\",\"description\":\"MicrosoftAntimalwareWUStub\",\"version\":null},\"sectionNames\":[\".text\",\".rdata\",\".data\",\".pdata\",\".rsrc\",\".reloc\"],\"importedLibraries\":[\"ADVAPI32.dll\",\"KERNEL32.dll\",\"RPCRT4.dll\",\"ntdll.dll\"]},\"elf\":null,\"macho\":null,\"entropy\":7.378079119412321,\"format\":\"pe\",\"fileStatus\":\"Neutral\",\"remediationAction\":\"Unblock\"}}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "RSANetWitnessPlatform", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1570446244, 
+    "Name": "Enrich File", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928, 
+            "CustomActionId": -1, 
+            "DefaultValue": 50, 
+            "Description": "Specify risk threshold for the file. If the file exceeds the threshold, the related entity will be marked as suspicious. If nothing is specified, action won\u2019t check the risk score.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1534420803928, 
+            "Name": "Risk Score Threshold", 
+            "Type": 0, 
+            "Value": 50
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\", \"FILENAME\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

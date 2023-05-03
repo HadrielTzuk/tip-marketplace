@@ -1,0 +1,36 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Return information about the reporter related to the report from Cofense Triage.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"id\": \"1\", \"type\": \"reporters\", \"attributes\": {\"email\": \"ha.oullette@example.com\", \"reports_count\": 3, \"last_reported_at\": \"2016-02-18T00:24:45.000Z\", \"reputation_score\": -5, \"vip\": false, \"created_at\": \"2019-04-12T02:58:17.401Z\", \"updated_at\": \"2019-04-12T02:59:22.287Z\"}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "CofenseTriage",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Get Report Reporters",
+    "Parameters": [        
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the id of the report for which you want to retrieve reporters.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Report ID", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}
+

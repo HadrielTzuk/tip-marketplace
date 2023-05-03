@@ -1,0 +1,51 @@
+{
+    "Description": "Proofpoint Targeted Attack Protection\u2122 is the industry's first comprehensive solution for combatting targeted threats using a full lifecycle approach, monitoring suspicious messages containing malicious URLs or malicious attachments, and observing user clicks as they attempt to reach out.",
+    "DisplayName": "ProofPoint TAP",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/proofpointtap",
+    "Identifier": "ProofPointTAP",
+    "Categories": [
+        "Email Security",
+        "Security",
+        "Threat Intelligence"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ProofPointTAP",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://tap-api-v2.proofpoint.com"
+        },
+        {
+            "IntegrationIdentifier": "ProofPointTAP",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ProofPointTAP",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ProofPointTAP",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SvgImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<path d=\"M18.9,29.8c0,4.5,0,8.6,0,12.7c-2.2,0-4.2,0-6.3,0c0-11.3,0-22.6,0-34.1c2.1,0,4.1,0,6.2,0c0.1,0.9,0.1,1.7,0.2,2.7\n\t\tc0.4-0.2,0.6-0.3,0.7-0.4c5.9-5.7,14.2-3.8,16.9,3.9c1.3,3.7,1.2,7.5,0.1,11.3C34.6,32.8,25.9,36.9,18.9,29.8z M30.6,20.2\n\t\tc0-0.3,0-1.2-0.1-2c-0.5-3-2.3-4.8-5.1-5.2c-2.2-0.3-4.6,0.9-5.5,3c-1.3,3-1.3,6-0.1,9c1,2.3,3.6,3.5,6.2,3\n\t\tC29.2,27.1,30.6,24.9,30.6,20.2z\"/>\n</g>\n</svg>\n",
+    "Version": 6.0,
+    "MarketingDisplayName": "Proofpoint TAP"
+}

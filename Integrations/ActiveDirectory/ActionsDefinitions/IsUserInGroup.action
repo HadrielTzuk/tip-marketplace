@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1515496283624,
+    "Creator": "admin",
+    "Description": "Check whether a user is a member of a specific group",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": true, \"Entity\": \"VICKIE.B@SIEMPLIFY.CO\"}, {\"EntityResult\": false, \"Entity\": \"F.ATTACKER4@GMAIL.COM\"}, {\"EntityResult\": true, \"Entity\": \"test.user10@siemplifylab.local\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "ActiveDirectory",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515496283624,
+    "Name": "Is User In Group",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1515502378734, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Group name to be checked. e.g. Administrators. Please make sure group name is spelled correctly, and exists in Active Directory.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1515502378734, 
+            "Name": "GroupName", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Type": 0, 
+    "Version": 2.0
+}

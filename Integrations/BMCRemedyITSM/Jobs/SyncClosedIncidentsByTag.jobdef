@@ -1,0 +1,76 @@
+{
+    "CreationTimeUnixTimeInMs": 1534248991561,
+    "Creator": "Admin",
+    "Description": "This job will synchronize BMC Remedy ITSM incidents that were created within Siemplify Case playbook and Siemplify cases. Note: in BMC Remedy ITSM statuses \"Cancelled\", \"Closed\" and \"Resolved\" are treated as closed. Additionally, in order for the job to work, it's required for the case to have 2 tags. First tag should be \"BMC Remedy ITSM\" and the second should be with the prefix \"BMC Remedy ITSM:{Incident ID}\". Job can only close incidents that are assigned in BMC Remedy ITSM.",
+    "Id": -1,
+    "Integration": "BMCRemedyITSM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534248991561,
+    "Name": "Sync Closed Incidents By Tag",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "HPD:IncidentInterface",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Incident Table",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "https://{IP}:{port}",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "API Root",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Username",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Password",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "24",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Max Hours Backwards",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": true,
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Verify SSL",
+            "Type": 0
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Script": "",
+    "Version": 1
+}

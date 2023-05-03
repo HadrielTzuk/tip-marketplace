@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1527691085476,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "ThreatCrowd",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527691085476,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom ThreadCrowdManager import ThreadCrowdManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    # Configuration.\n    conf = siemplify.get_configuration('ThreatCrowd')\n    use_ssl = conf['Use SSL'].lower() == 'true'\n    threat_crowd_manager = ThreadCrowdManager(use_ssl)\n\n    is_connected = threat_crowd_manager.test_connectivity()\n\n    if is_connected:\n        output_message = \"Connection Established\"\n        result_value = 'true'\n    else:\n        output_message = \"Connection Failed\"\n        result_value = 'false'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "is_connect",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

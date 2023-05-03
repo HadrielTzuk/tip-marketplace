@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1519220936730,
+    "Creator": "admin",
+    "Description": "Test connectivity to Anomali ThreatStream",
+    "Id": -1,
+    "IntegrationIdentifier": "Anomali",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519220936730,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583,
+    "Creator": "admin",
+    "Description": "Remove tags from event in MISP.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"saved\": true, \"success\": \"Tag removed.\", \"check_publish\": true}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "MISP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530451212583,
+    "Name": "Remove Tag from an Event",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID or UUID of the event, from which you want to remove tags.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Event ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of tags that you want to remove from events.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Tag Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

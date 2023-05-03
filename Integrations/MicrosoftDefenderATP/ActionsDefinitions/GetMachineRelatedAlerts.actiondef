@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 1575015001, 
+    "Creator": "klim.lyapin@siemplify.co", 
+    "Description": "Get Machine Related Alerts", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [{\"last_update_time\": \"2020-05-31T10:39:41.7366667Z\", \"last_event_time\": \"2020-05-22T14:34:28.6016656Z\", \"classification\": null, \"alert_processes\": null, \"investigation_state\": \"TerminatedBySystem\", \"threat_family_name\": null, \"id\": \"da637257464665944733_-2050268322\", \"category\": \"Ransomware\", \"severity\": \"Medium\", \"title\": \"Ransomware associated with an exploitation campaign\", \"comments\": [], \"resolved_time\": null, \"status\": \"New\", \"description\": \"This file is a ransomware threat associated with exploitation of vulnerable internet-facing web services.  It might encrypt content on this computer, rendering it unusable to users.  In server environments, this may disrupt web services provided.\", \"alert_creation_time\": \"2020-05-22T12:14:26.5788604Z\", \"alert_domains\": null, \"alert_ips\": null, \"detection_source\": \"WindowsDefenderAtp\", \"determination\": null, \"alert_files\": [], \"incident_id\": 36, \"investigation_id\": 24, \"first_event_time\": \"2020-05-22T12:09:22.1963961Z\", \"assigned_to\": null, \"alert_user\": null, \"machine_id\": \"ac5fd76f04a07106948b39b4f3f3618554731d00\"}, {\"last_update_time\": \"2020-05-31T10:39:41.7366667Z\", \"last_event_time\": \"2020-05-22T14:34:28.6016656Z\", \"classification\": null, \"alert_processes\": null, \"investigation_state\": \"TerminatedBySystem\", \"threat_family_name\": null, \"id\": \"da637257464677148781_-975260009\", \"category\": \"Ransomware\", \"severity\": \"Medium\", \"title\": \"Ransomware associated with an exploitation campaign\", \"comments\": [], \"resolved_time\": null, \"status\": \"New\", \"description\": \"This file is a ransomware threat associated with exploitation of vulnerable internet-facing web services.  It might encrypt content on this computer, rendering it unusable to users.  In server environments, this may disrupt web services provided.\", \"alert_creation_time\": \"2020-05-22T12:14:27.6992552Z\", \"alert_domains\": null, \"alert_ips\": null, \"detection_source\": \"WindowsDefenderAtp\", \"determination\": null, \"alert_files\": [], \"incident_id\": 36, \"investigation_id\": 24, \"first_event_time\": \"2020-05-22T12:09:22.1963961Z\", \"assigned_to\": null, \"alert_user\": null, \"machine_id\": \"ac5fd76f04a07106948b39b4f3f3618554731d00\"}], \"Entity\": \"EXAMPLE-HOST\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "MicrosoftDefenderATP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1575015001, 
+    "Name": "Get Machine Related Alerts", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1578672183844, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Unknown, New, InProgress, Resolved", 
+            "Description": "Statuses of the alert to look for. Comma-separated string", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1578672183844, 
+            "Name": "Status", 
+            "Type": 0, 
+            "Value": null
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1578672183844, 
+            "CustomActionId": -1, 
+            "DefaultValue": "UnSpecified, Informational, Low, Medium, High", 
+            "Description": "Severities of the alert to look for. Comma-separated string.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1578672183844, 
+            "Name": "Severity", 
+            "Type": 0, 
+            "Value": null
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1578672183844, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Categories of the alert to look for. Comma-separated string.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1578672183844, 
+            "Name": "Category", 
+            "Type": 0, 
+            "Value": null
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1578672183844, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Microsoft Defender Incident ID for which you want to find related alerts.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1578672183844, 
+            "Name": "Incident ID", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

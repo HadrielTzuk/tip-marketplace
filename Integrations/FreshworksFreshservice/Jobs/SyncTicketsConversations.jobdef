@@ -1,0 +1,115 @@
+{
+    "CreationTimeUnixTimeInMs": 1534248991561,
+    "Creator": "Admin",
+    "Description": "Sync conversations (considered both replies and notes) between Siemplify alert's case and corresponding Freshservice ticket. Sync mechanism works in both ways, Siemplify → Freshservice and Freshservice → Siemplify. Note: The job supports Siemplify cases with the \"Freshservice\" tag only.",
+    "Id": -1,
+    "Integration": "FreshworksFreshservice",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534248991561,
+    "Name": "Freshservice Sync Tickets Conversations Job",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "https://yourdomain.freshservice.com",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "API Root",
+            "Description": "Freshservice instance API Root URL.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "API Key",
+            "Description": "Freshservice API Key to use in job.",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": true,
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Verify SSL",
+            "Description": "If enabled, integration will try to verify that API Root is configured with a valid certificate.",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": 24,
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Offset time in hours",
+            "Description": "Sync tickets conversations from X hours backwards.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "SIEMPLIFY:",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Siemplify Comment Prefix",
+            "Description": "Prefix that will be added by the sync job to comments created for Freshservice tickets.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "Freshservice Comment Sync Job:",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Freshservice Comment Prefix",
+            "Description": "Prefix that will be added by the sync job to the Siemplify alert's case comments.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "Replies, Notes",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Conversation Types To Sync",
+            "Description": "Specify Freshservice conversation types job should sync. Parameter accepts multiple values as a comma separated string.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": false,
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Fetch Private Notes?",
+            "Description": "If enabled, will fetch both public and private notes for related Freshservice tickets.",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "Private Note",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Sync Comment from Siemplify as X",
+            "Description": "Specify which conversation type job should use to add a comment from Siemplify. Possible values: Private Note, Public note, Reply.",
+            "Type": 2
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Script": "",
+    "Version": 1
+}

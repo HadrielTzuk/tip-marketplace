@@ -1,0 +1,95 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451304337,
+    "Creator": "admin",
+    "Description": "Upload a file to a MISP event.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"id\":\"XXX\",\"orgc_id\":\"1\",\"org_id\":\"1\",\"date\":\"2020-12-25\",\"threat_level_id\":\"3\",\"info\":\"information...\",\"published\":false,\"uuid\":\"567XXXXX-XXXXX-XXXXX-XXXXXd39\",\"attribute_count\":\"24\",\"analysis\":\"0\",\"timestamp\":\"1609149632\",\"distribution\":\"0\",\"proposal_email_lock\":false,\"locked\":false,\"publish_timestamp\":\"0\",\"sharing_group_id\":\"0\",\"disable_correlation\":false,\"extends_uuid\":\"\",\"event_creator_email\":\"admin@admin.test\",\"Org\":{\"id\":\"1\",\"name\":\"ORGNAME\",\"uuid\":\"09b0XXXXXX-XXXXX-XXXXXXXX-XX41\",\"local\":true},\"Orgc\":{\"id\":\"1\",\"name\":\"ORGNAME\",\"uuid\":\"09b0XXXXXX-XXXXX-XXXXXXXX-XX41\",\"local\":true},\"Attribute\":[],\"ShadowAttribute\":[],\"RelatedEvent\":[{\"Event\":{\"id\":\"XX\",\"date\":\"2020-12-25\",\"threat_level_id\":\"3\",\"info\":\"information...\",\"published\":false,\"uuid\":\"XXXXX-XXXXX-XXXXX-XXXXXX\",\"analysis\":\"0\",\"timestamp\":\"1609146844\",\"distribution\":\"0\",\"org_id\":\"1\",\"orgc_id\":\"1\",\"Org\":{\"id\":\"1\",\"name\":\"ORGNAME\",\"uuid\":\"09b0XXXXXX-XXXXX-XXXXXXXX-XX41\"},\"Orgc\":{\"id\":\"1\",\"name\":\"ORGNAME\",\"uuid\":\"09b0XXXXXX-XXXXX-XXXXXXXX-XX41\"}}}],\"Galaxy\":[],\"Object\":[{\"id\":\"XXX\",\"name\":\"file\",\"meta-category\":\"file\",\"description\":\"File object describing a file with meta-information\",\"template_uuid\":\"XXXXXXX-XXXXXXX-XXXXXX-XXXXX\",\"template_version\":\"20\",\"event_id\":\"XXX\",\"uuid\":\"XXXXXX-XXXX-XXXX-XXXXXXXX\",\"timestamp\":\"1609149360\",\"distribution\":\"1\",\"sharing_group_id\":\"0\",\"comment\":\"\",\"deleted\":false,\"first_seen\":null,\"last_seen\":null,\"ObjectReference\":[],\"Attribute\":[{\"id\":\"XXX\",\"type\":\"malware-sample\",\"category\":\"Payload installation\",\"to_ids\":true,\"uuid\":\"88XXXXXX-XXXXXX-XXXXXX-XXXXd\",\"event_id\":\"XXX\",\"distribution\":\"1\",\"timestamp\":\"1609349360\",\"comment\":\"\",\"sharing_group_id\":\"0\",\"deleted\":false,\"disable_correlation\":false,\"object_id\":\"XXX\",\"object_relation\":\"malware-sample\",\"first_seen\":null,\"last_seen\":null,\"value\":\"test_file.png|38XXXXXXXXXXXXXXXXXXXXXXXXXXXX9\",\"Galaxy\":[],\"data\":\"UEsDBBQACQAIAABioB......A2QAAAPsnAAAAAA==\",\"ShadowAttribute\":[]},{\"id\":\"XXX\",\"type\":\"filename\",\"category\":\"Payload installation\",\"to_ids\":false,\"uuid\":\"5eXXX-XXXXX-XXXXXX-XXXXXXa\",\"event_id\":\"XXX\",\"distribution\":\"1\",\"timestamp\":\"1609149360\",\"comment\":\"\",\"sharing_group_id\":\"0\",\"deleted\":false,\"disable_correlation\":false,\"object_id\":\"XXXX\",\"object_relation\":\"filename\",\"first_seen\":null,\"last_seen\":null,\"value\":\"test_file.png\",\"Galaxy\":[],\"ShadowAttribute\":[]},{\"id\":\"XXX\",\"type\":\"md5\",\"category\":\"Payload installation\",\"to_ids\":true,\"uuid\":\"XXXXXX-XXXXXX-XXXXXX-XXXXXX\",\"event_id\":\"XXX\",\"distribution\":\"1\",\"timestamp\":\"1609149360\",\"comment\":\"\",\"sharing_group_id\":\"0\",\"deleted\":false,\"disable_correlation\":false,\"object_id\":\"XX\",\"object_relation\":\"md5\",\"first_seen\":null,\"last_seen\":null,\"value\":\"XXXXXXXXXXXXXXXXXXXXXXXX\",\"Galaxy\":[],\"ShadowAttribute\":[]},{\"id\":\"XXX\",\"type\":\"sha1\",\"category\":\"Payload installation\",\"to_ids\":true,\"uuid\":\"XXXXXX-XXXX-XXXX-XXX-XXXXXXX\",\"event_id\":\"XXX\",\"distribution\":\"1\",\"timestamp\":\"1609149360\",\"comment\":\"\",\"sharing_group_id\":\"0\",\"deleted\":false,\"disable_correlation\":false,\"object_id\":\"XX\",\"object_relation\":\"sha1\",\"first_seen\":null,\"last_seen\":null,\"value\":\"XXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\"Galaxy\":[],\"ShadowAttribute\":[]},{\"id\":\"XXX\",\"type\":\"shaXXX\",\"category\":\"Payload installation\",\"to_ids\":true,\"uuid\":\"XXXXXXXX-XXXXXXX-XXXXXXX-XXXXX\",\"event_id\":\"XXX\",\"distribution\":\"1\",\"timestamp\":\"1609149360\",\"comment\":\"\",\"sharing_group_id\":\"0\",\"deleted\":false,\"disable_correlation\":false,\"object_id\":\"XXX\",\"object_relation\":\"shaXXX\",\"first_seen\":null,\"last_seen\":null,\"value\":\"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\"Galaxy\":[],\"ShadowAttribute\":[]},{\"id\":\"XXX\",\"type\":\"size-in-bytes\",\"category\":\"Other\",\"to_ids\":false,\"uuid\":\"XXXXXX-XXXXXX-XXXXXX-XXXXXX\",\"event_id\":\"XXX\",\"distribution\":\"1\",\"timestamp\":\"1609149360\",\"comment\":\"\",\"sharing_group_id\":\"0\",\"deleted\":false,\"disable_correlation\":true,\"object_id\":\"XX\",\"object_relation\":\"size-in-bytes\",\"first_seen\":null,\"last_seen\":null,\"value\":\"106367\",\"Galaxy\":[],\"ShadowAttribute\":[]}]}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "MISP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530451304337,
+    "Name": "Upload File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451304337,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID or UUID of the event to which you want to upload this file.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530451304337,
+            "Name": "Event ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451304337,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of absolute filepaths of the files that you want to upload to MISP.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530451304337,
+            "Name": "File Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451304337,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the category for the uploaded file. Possible values: External Analysis, Payload Delivery, Artifacts Dropped, Payload Installation.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451304337,
+            "Name": "Category",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451342720,
+            "CustomActionId": -1,
+            "DefaultValue": "Community",
+            "Description": "Specify the distribution for the uploaded file. Possible values: 0 - Organisation, 1 - Community, 2 - Connected, 3 - All. You can either provide a number or a string.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451342720,
+            "Name": "Distribution",
+            "Type": 0,
+            "Value": "Community"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451304337,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, uploaded file will be used for intrusion detection systems.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530451304337,
+            "Name": "For Intrusion Detection System",
+            "Type": 1,
+            "Value": "False"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451304337,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify additional comments related to the uploaded file.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451304337,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom MISPManager import MISPManager\nimport json\n\nSCRIPT_NAME = \"MISP - Upload File\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    conf = siemplify.get_configuration(\"MISP\")\n    server_address = conf[\"Api Root\"]\n    api_key = conf[\"Api Key\"]\n    use_ssl = conf.get('Use SSL', 'False').lower() == 'true'\n\n    event_id = int(siemplify.parameters.get('Event ID')) if siemplify.parameters.get('Event ID') else None\n    file_path = siemplify.parameters['File Path']\n    category = siemplify.parameters.get('Category', 'External analysis')\n    distribution = int(siemplify.parameters.get('Distribution') or 1)\n    threat_level_id = int(siemplify.parameters.get('Threat Level') or 0)\n    analysis = int(siemplify.parameters.get('Analysis') or 0)\n    info = siemplify.parameters.get(\"Info\")\n    to_ids = siemplify.parameters.get('For Intrusion Detection System', \"False\").lower() == 'true'\n    comment = siemplify.parameters.get('Comment')\n\n    misp_manager = MISPManager(server_address, api_key, use_ssl=use_ssl)\n    event_id = misp_manager.upload_file(\n        file_path=file_path,\n        event_id=event_id,\n        distribution=distribution,\n        to_ids=to_ids,\n        category=category,\n        info=info,\n        analysis=analysis,\n        threat_level_id=threat_level_id,\n        comment=comment\n    )\n\n    siemplify.end(\"Successfully uploaded file {} to event {}\".format(file_path, event_id), json.dumps(event_id))\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "event_id",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

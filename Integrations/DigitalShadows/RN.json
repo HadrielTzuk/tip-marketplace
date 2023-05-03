@@ -1,0 +1,62 @@
+[
+    {
+        "ChangeDescription": "Created the Integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "DigitalShadows",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1584362488,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1902"
+    },
+    {
+        "ChangeDescription": "Added new connector \"Incident Connector\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Incident Connector",
+        "ItemType": "Connector",
+        "New": true,
+        "PublishTime": 1604395162,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5301"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "DigitalShadows",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "DigitalShadows",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "DigitalShadows",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

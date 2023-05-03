@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1517733866116, 
+    "Creator": "admin", 
+    "Description": "Disable NTP on endpoints", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SEP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1517733866116, 
+    "Name": "DisableNTP", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519119162612, 
+            "CustomActionId": -1, 
+            "DefaultValue": "5", 
+            "Description": "", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1519119162612, 
+            "Name": "Time Period", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

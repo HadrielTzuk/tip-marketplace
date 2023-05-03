@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1521035774215,
+    "Creator": "admin",
+    "Description": "Revert to a specific snapshot",
+    "Id": -1,
+    "IntegrationIdentifier": "VSphere",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1521035774215,
+    "Name": "Revert To Snapshot",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1521035997449,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The name of the target VM.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1521035997449,
+            "Name": "Vm Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1521035997449,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The name of the target snapshot.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1521035997449,
+            "Name": "Snapshot Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

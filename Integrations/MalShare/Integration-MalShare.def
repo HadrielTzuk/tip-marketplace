@@ -1,0 +1,34 @@
+{
+    "Description": "The MalShare Project is a collaborative effort to create a community driven public malware repository that works to build additional tools to benefit the security community at large. ",
+    "DisplayName": "MalShare",
+    "Identifier": "MalShare",
+    "Categories": [
+        "Threat Intelligence",
+        "Free to use",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "MalShare",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "Api Key",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MalShare",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\r\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\r\n\t viewBox=\"0 0 32 32\" style=\"enable-background:new 0 0 32 32;\" xml:space=\"preserve\">\r\n<title>ElasticSearch_IntegrationImage</title>\r\n<g>\r\n\t<g>\r\n\t\t<path d=\"M28.2,8.1L16.7,1.5c-0.4-0.2-1-0.2-1.4,0L3.8,8.1C3.4,8.4,3.1,8.9,3.1,9.3v13.3c0,0.5,0.3,1,0.7,1.2l11.5,6.7\r\n\t\t\tc0.4,0.2,1,0.2,1.4,0l11.5-6.7c0.4-0.2,0.7-0.7,0.7-1.2V9.3C28.9,8.9,28.6,8.4,28.2,8.1z M8.7,7.5l7.2-4.2c0.1-0.1,0.2-0.1,0.3,0\r\n\t\t\tl7.2,4.4c0.2,0.1,0.2,0.4,0,0.5L21.9,9c-0.1,0.1-0.2,0-0.3,0l-5.5-3.5c-0.1-0.1-0.2-0.1-0.3,0l-5.6,3.3c-0.1,0.1-0.2,0.1-0.3,0\r\n\t\t\tL8.7,8C8.5,7.9,8.5,7.6,8.7,7.5z M22.4,23.2c0,0.1-0.1,0.2-0.2,0.3L16.1,27C16,27,15.9,27,15.8,27l-6.1-3.4\r\n\t\t\tc-0.1-0.1-0.2-0.2-0.2-0.3v-1.8c0-0.2,0.2-0.4,0.4-0.3l5.9,3.2c0.1,0,0.2,0,0.3,0l5.9-3.2c0.2-0.1,0.4,0,0.4,0.3V23.2z M24.2,22.9\r\n\t\t\tV12.4c-0.8,0.4-1.4,0.8-2.1,1.1c-1.8,1-3.6,2.1-5.4,3.1c-0.5,0.2-1.2,0.2-1.7,0c-2.4-1.3-4.8-2.8-7.4-4.2v10.5\r\n\t\t\tc-2-0.5-2.1-0.6-2.1-2.4c0-3.1,0-6.2,0-9.2c0-1.7,0.6-2,2-1.1c2.5,1.4,5,2.8,7.4,4.3c0.7,0.4,1.2,0.4,1.9,0c2.5-1.5,5-2.9,7.5-4.3\r\n\t\t\tc1.3-0.7,1.8-0.5,1.8,1c0,3.1,0,6.2,0,9.4C26.2,22.2,26.2,22.2,24.2,22.9z\"/>\r\n\t</g>\r\n</g>\r\n</svg>\r\n",
+    "Version": 6.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/malshare",
+    "MarketingDisplayName": "MalShare"
+}

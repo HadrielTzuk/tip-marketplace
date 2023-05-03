@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 18.3</h2><h5>Published on 10 August, 2022</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     VirusTotalV3\n    </b>\n   </li>\n   <ul>\n    <li>\n     VirusTotalV3\n    </li>\n    <ul>\n     <li>\n      Enrich Hash, Enrich URL, Enrich IP, Get Domain Details, Enrich IOC - Made widget fetching optional.\n     </li>\n     <li>\n      Updated error handling to be more intuitive.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     VirusTotalV3\n    </b>\n   </li>\n   <ul>\n    <li>\n     VirusTotal - Livehunt Notifications Connector\n    </li>\n    <ul>\n     <li>\n      Livehunt Notifications Connector - Improved logging.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "18.3",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "10/08/22",
+    "Title": "Release Notes"
+}

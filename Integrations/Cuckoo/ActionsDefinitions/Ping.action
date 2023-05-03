@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1519891531193,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "Cuckoo",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519891531193,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

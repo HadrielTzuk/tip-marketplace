@@ -1,0 +1,145 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Update a GSuite Directory user. Note: action is not working on Siemplify entities",
+    "Id": -1,
+    "IntegrationIdentifier": "GSuite",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Update User",
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"kind\":\"admin#directory#user\",\"id\":\"XXXXXXXX\",\"etag\":\"\\\"XXXXXXXXXXXXXXXXXX\\\"\",\"primaryEmail\":\"XXXXXX@XXXXXX.com\",\"name\":{\"givenName\":\"XXXXXXX\",\"familyName\":\"XXXXXXXX\"},\"isAdmin\":\"False\",\"isDelegatedAdmin\":\"False\",\"lastLoginTime\":\"2020-12-22T15:07:44.000Z\",\"creationTime\":\"2020-12-22T14:38:52.000Z\",\"agreedToTerms\":\"True\",\"suspended\":\"False\",\"archived\":\"False\",\"changePasswordAtNextLogin\":\"False\",\"ipWhitelisted\":\"False\",\"emails\":[{\"address\":\"XXXXXX@XXXXXX.com\",\"primary\":\"True\"},{\"address\":\"XXXXX@XXXXXX.com.test-google-a.com\"}],\"organizations\":[{\"name\":\"update_org\",\"customType\":\"\",\"department\":\"\"}],\"phones\":[{\"value\":\"XXXXXXX\",\"type\":\"custom\",\"customType\":\"\"}],\"nonEditableAliases\":[\"XXXXXX@XXXXXX.com.test-google-a.com\"],\"gender\":{\"type\":\"female\"}, \"customerId\":\"XXXXXXX\",\"orgUnitPath\":\"\/\",\"isMailboxSetup\":\"True\",\"includeInGlobalAddressList\":\"True\",\"recoveryEmail\":\"\"}]",
+        "ResultName": "JsonResult"
+    }],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "User primary email address that is used to specify which user to update.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Email Address",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The user's first name",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Given Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The user's last name",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Family Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The password of the user.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The phone number of the user.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Phone",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The gender of the user. Valid values: female, male, other, unknown.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Gender",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The name of the department of the user.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Department",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The name of the organization of the user.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Organization",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "Whether to force the user to change his password on next login.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Change Password At Next Login",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1675853369000,
+            "CustomActionId": -1,
+            "DefaultValue": "Not Changed",
+            "Description": "Specify if user status should be updated to blocked or unblocked. By default action is no changing the user status.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1675853369000,
+            "Name": "User Status",
+            "Type": 15,
+            "OptionalValues": [
+                "Not Changed",
+                "Blocked",
+                "Unblocked"
+            ],
+            "Value": "Not Changed"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

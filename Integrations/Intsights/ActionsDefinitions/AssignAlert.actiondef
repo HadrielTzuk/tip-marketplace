@@ -1,0 +1,52 @@
+{
+    "CreationTimeUnixTimeInMs": 1532861679148,
+    "Creator": "admin",
+    "Description": "Assign alert to an analyst in IntSights.",
+    "Id": -1,
+    "IntegrationIdentifier": "Intsights",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1532861679148,
+    "Name": "Assign Alert",
+    "Parameters": [        
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the ID of the alert on which you want to change the assignment.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Alert ID", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the ID of the analyst that should be assigned to the alert. Note: If both Assignee ID and Assignee Email Address are specified, action will prioritize Assignee ID.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Assignee ID", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the email address of the analyst that should be assigned to the alert. Note: If both Assignee ID and Assignee Email Address are specified, action will prioritize Assignee ID.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Assignee Email Address", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

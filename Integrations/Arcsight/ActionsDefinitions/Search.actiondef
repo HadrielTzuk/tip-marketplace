@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1534152831684,
+    "Creator": "Admin",
+    "Description": "Search for available resources in ArcSight",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"score\": 1.2440307, \"uuid\": \"TyJnM2jwBABCMzP5h6xxxx==\", \"uri\": \"/All_Fields/ArcSight_Foundation/Variables_Library/IPv6/Attacker_IPv6_Address\", \"name\": \"Attacker IPv6 Address\"}, {\"score\": 1.2440307, \"uuid\": \"TyJnM2jwBABCMzP5h6xxxx==\", \"uri\": \"/All_Fields/ArcSight_Foundation/Variables_Library/IPv6/Attacker_IPv6_Address\", \"name\": \"Attacker IPv6 Address\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Arcsight",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534152831684,
+    "Name": "Search",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534152831684,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specify the search query.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534152831684,
+            "Name": "Search Query",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530543579170,
+            "CustomActionId": -1,
+            "DefaultValue": "100",
+            "Description": "Specify how many items to return in the response.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530543579170,
+            "Name": "Max Items To Return",
+            "Type": 0,
+            "Value": "100"
+        }
+    ],
+    "ScriptResultName": "success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

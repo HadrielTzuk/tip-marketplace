@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1519048348858,
+    "Creator": "admin",
+    "Description": "Wait for scan to complete and get results of the scan",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"severity_summary\": [{\"count\": \"0\", \"severity\": {\"id\": \"4\", \"name\": \"Critical\", \"description\": \"Critical Severity\"}}, {\"count\": \"0\", \"severity\": {\"id\": \"3\", \"name\": \"High\", \"description\": \"High Severity\"}}, {\"count\": \"3\", \"severity\": {\"id\": \"2\", \"name\": \"Medium\", \"description\": \"Medium Severity\"}}], \"results\": [{\"name\": \"DNS Server Recursive Query Cache Poisoning Weakness\", \"family\": \"DNS\", \"hostTotal\": \"1\", \"pluginID\": \"10539\", \"total\": \"1\", \"severity\": \"Medium\"}, {\"name\": \"DNS Server Spoofed Request Amplification DDoS\", \"family\": \"DNS\", \"hostTotal\": \"1\", \"pluginID\": \"35450\", \"total\": \"1\", \"severity\": \"Medium\"}, {\"name\": \"SSL Medium Strength Cipher Suites Supported\", \"family\": \"General\", \"hostTotal\": \"1\", \"pluginID\": \"42873\", \"total\": \"1\", \"severity\": \"Medium\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "TenableSecurityCenter",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519048348858,
+    "Name": "Get Scan Results",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519286884436,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The scan results ID.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519286884436,
+            "Name": "Scan Result ID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,74 @@
+{
+    "CreationTimeUnixTimeInMs": 1532861679148,
+    "Creator": "admin",
+    "Description": "Close alert in IntSights.",
+    "Id": -1,
+    "IntegrationIdentifier": "Intsights",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1532861679148,
+    "Name": "Close Alert",
+    "Parameters": [        
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the ID of the alert which you want to close.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Alert ID", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify additional information explaining why the alert should be closed.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Additional Info", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the rating of the alert. Maximum is 5.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Rate", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Problem Solved",
+            "Description": "Specify the reason why the alert needs to be closed.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Reason",
+            "OptionalValues": [
+                "Problem Solved",
+                "Informational Only",
+                "Problem We Are Aware Of",
+                "Company Owned Domain",
+                "Legitimate Application/Profile",
+                "Not Related To My Company",
+                "False Positive",
+                "Other"
+            ],
+            "Type": 15,
+            "Value": "Problem Solved"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1518546090797, 
+    "Creator": "admin", 
+    "Description": "Run a query on RSA NetWitness to retreive all events for a specific query (conditions) for a given IP address in the alert", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [{\"payload.req\": \"110\", \"ubc.req\": \"44\", \"netname\": \"private dst\", \"lifetime\": \"0\", \"rid\": \"792830\", \"payload\": \"110\", \"size\": \"242\", \"service\": \"0\", \"mcb.req\": \"48\", \"eth.src\": \"11:6C:AC:61:11:11\", \"tcp.flags\": \"24\", \"tcp.dstport\": \"39497\", \"direction\": \"lateral\", \"medium\": \"1\", \"ip.dst\": \"1.1.1.1\", \"alert\": \"test App rule\", \"sessionid\": \"792831\", \"eth.type\": \"2048\", \"ip.src\": \"1.1.1.1\", \"mcbc.req\": \"9\", \"eth.dst\": \"00:50:56:A5:45:70\", \"did\": \"nwappliance5805\", \"tcp.srcport\": \"389\", \"packets\": \"2\", \"streams\": \"1\", \"time\": 1547467411, \"entropy.req\": \"5075\", \"ip.proto\": \"6\"}, {\"payload.req\": \"110\", \"ubc.req\": \"44\", \"netname\": \"private dst\", \"lifetime\": \"0\", \"rid\": \"792830\", \"payload\": \"110\", \"size\": \"242\", \"service\": \"0\", \"mcb.req\": \"48\", \"eth.src\": \"11:6C:AC:61:11:11\", \"tcp.flags\": \"24\", \"tcp.dstport\": \"39497\", \"direction\": \"lateral\", \"medium\": \"1\", \"ip.dst\": \"1.1.1.1\", \"alert\": \"test App rule\", \"sessionid\": \"2968695\", \"eth.type\": \"2048\", \"ip.src\": \"1.1.1.1\", \"mcbc.req\": \"9\", \"eth.dst\": \"00:50:56:A5:45:70\", \"did\": \"nwappliance5805\", \"tcp.srcport\": \"389\", \"packets\": \"2\", \"streams\": \"1\", \"time\": 1547467411, \"entropy.req\": \"5075\"}], \"Entity\": \"1.1.1.1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "RSANetWitnessPlatform", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1518546090797, 
+    "Name": "Query NetWitness For Events Around IP", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928, 
+            "CustomActionId": -1, 
+            "DefaultValue": 1, 
+            "Description": "Specify how many hours backwards to fetch events. Default is 1 hour.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1534420803928, 
+            "Name": "Max Hours Backwards", 
+            "Type": 0, 
+            "Value": 1
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928, 
+            "CustomActionId": -1, 
+            "DefaultValue": 50, 
+            "Description": "Specify how many events to return. If nothing is specified, action will return 50 events.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1534420803928, 
+            "Name": "Max Events To Return", 
+            "Type": 0, 
+            "Value": 50
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

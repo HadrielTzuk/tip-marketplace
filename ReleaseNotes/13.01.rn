@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 13.01</h2><h5>Published on 05 August, 2020</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     MISP\n    </b>\n   </li>\n   <ul>\n    <li>\n     MISP\n    </li>\n    <ul>\n     <li>\n      Updated integration to run with Python 3.7.\n     </li>\n     <li>\n      Fixed a bug that caused object creation action to fail on some MISP instances.\n     </li>\n     <li>\n      Added missing JSON result examples for object creation actions.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Actions</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     FalconSandbox\n    </b>\n   </li>\n   <ul>\n    <li>\n     Submit File\n    </li>\n    <ul>\n     <li>\n      NEW! New action for submitting file/s for analysis.\n     </li>\n    </ul>\n    <li>\n     Wait For Job and Fetch Report\n    </li>\n    <ul>\n     <li>\n      NEW! New action for getting a summary of multiple submissions and downloading report data.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     MISP\n    </b>\n   </li>\n   <ul>\n    <li>\n     List Event Objects\n    </li>\n    <ul>\n     <li>\n      NEW! Add an ability to list event objects.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "13.01",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "05/08/20",
+    "Title": "Release Notes"
+}

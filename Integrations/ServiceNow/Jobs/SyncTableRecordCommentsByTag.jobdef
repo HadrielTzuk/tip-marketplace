@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 1534248991561,
+    "Creator": "Admin",
+    "Description": "This job will synchronize comments in ServiceNow table records and Siemplify cases. Additionally, in order for the job to work, it’s required for the case to have 2 tags. First tag should be \"ServiceNow {table name}\", for example, \"ServiceNow incident\" and the second should be with the prefix \"ServiceNow SysID: {sys id}\".",
+    "Id": -1,
+    "Integration": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534248991561,
+    "Name": "Sync Table Record Comments By Tag",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "https://{dev-instance}.service-now.com/api/now/v1/",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "API Root",
+            "Description": "API root of the ServiceNow instance.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Username",
+            "Description": "Username of the ServiceNow account.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Password",
+            "Description": "Password of the ServiceNow account.",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Table Name",
+            "Description": "Name of the table, where you want to search for the record. Example: incident.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": true,
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Verify SSL",
+            "Description": "If enabled, verify the SSL certificate for the connection to the ServiceNow server is valid.",
+            "Type": 0
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Script": "",
+    "Version": 1
+}

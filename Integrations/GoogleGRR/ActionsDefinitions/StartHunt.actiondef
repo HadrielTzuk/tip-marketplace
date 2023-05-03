@@ -1,0 +1,32 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Use this to start a newly created hunt. New hunts are created in the PAUSED state, so you’ll need to do this to run them. Hunts that reach their client limit will also be set to PAUSED, use this to restart them after you have removed the client limit.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleGRR",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"Hunt_ID\": \"123456\", \"State\": \"STARTED\"}]",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Start a Hunt",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "ID of the hunt to start. Comma separated",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Hunt ID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\":[]}",
+    "Version": 1.0
+}

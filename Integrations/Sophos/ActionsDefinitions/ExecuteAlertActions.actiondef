@@ -1,0 +1,61 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Initiate action execution on the alert in Sophos. Use action \"List Alert Actions\" to get a list of available actions for the alert.",
+    "Id": -1,
+    "IntegrationIdentifier": "Sophos",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Execute Alert Actions",
+    "Parameters": [
+        {
+            "Name": "Alert ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the ID of the alert on which you want to execute the action.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "CustomActionId": -1,
+            "DefaultValue": "Acknowledge",
+            "Description": "Specify an action that should be executed on the alert.",
+            "Id": -1,
+            "IsMandatory": true,
+            "Name": "Action",
+            "OptionalValues": [
+                "Acknowledge",
+                "Clean PUA",
+                "Clean Virus",
+                "Auth PUA",
+                "Clear Threat",
+                "Clear HMPA",
+                "Send Message PUA",
+                "Send Message Threats"
+            ],
+            "Type": 15,
+            "Value": "Acknowledge"
+        },
+        {
+            "Name": "Message",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify a message explaining why the action was executed.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

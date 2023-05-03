@@ -1,0 +1,33 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "The action will list all the currently active sessions in the F5 BIG-IP Access Policy Manager.",
+    "Id": -1,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"sessionID\": \"2e9e6xxx\", \"nestedStats\": {\"entries\": {\"clientIp\": {\"description\": \"10.0.0.0\"}, \"logonUser\": {\"description\": \"n/a\"}}}}]",
+        "ResultName": "JsonResult"
+    }],
+    "IntegrationIdentifier": "F5BIGIPAccessPolicyManager",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "List Active Sessions",
+    "Parameters": [        
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the maximum number of entries you would like to get in the action.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Limit", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

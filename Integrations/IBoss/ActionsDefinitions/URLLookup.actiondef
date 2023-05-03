@@ -1,0 +1,32 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244, 
+    "Creator": "admin", 
+    "Description": "Perform URL Lookup.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"HTTP://MARKOSSOLOMON.COM/F1Q7QX.PHP\", \"EntityResult\": {\"action\": \"Allowed because of Allow List\", \"categories\": \"\", \"message\": \"\"}}, {\"Entity\": \"google.com\", \"EntityResult\": {\"action\": \"Not Blocked\", \"categories\": \"Search Engine\", \"message\": \"Url Known.\"}}, {\"Entity\": \"asdasdas\", \"EntityResult\": {\"action\": \"Not Blocked\", \"categories\": \"Informational\", \"message\": \"Url Known.\"}}, {\"Entity\": \"sme.sk\", \"EntityResult\": {\"action\": \"Not Blocked\", \"categories\": \"Entertainment, News, Shopping\", \"message\": \"Url Known.\"}}, {\"Entity\": \"customer.com\", \"EntityResult\": {\"action\": \"Not Blocked\", \"categories\": \"Informational\", \"message\": \"Url Known.\"}}, {\"Entity\": \"example.com\", \"EntityResult\": {\"action\": \"Not Blocked\", \"categories\": \"Technology\", \"message\": \"Url Known.\"}}, {\"Entity\": \"example2.com\", \"EntityResult\": {\"action\": \"Not Blocked\", \"categories\": \"Mobile Phones, Technology\", \"message\": \"Url Known.\"}}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "IBoss", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "Name": "URL Lookup", 
+    "Parameters": [
+        {
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify for which group to perform  a URL Lookup. If nothing is specified, \u201cDefault\u201d group will be used.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Name": "Group ID", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

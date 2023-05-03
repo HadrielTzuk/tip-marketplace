@@ -1,0 +1,18 @@
+{
+    "BulkWhoIs": 8.0, 
+    "CSV": 18.0, 
+    "Cybereason": 2.0, 
+    "EmailV2": 3.0, 
+    "Endgame": 5.0, 
+    "MISP": 5.0, 
+    "McAfeeESM": 18.0, 
+    "MicrosoftAzureSentinel": 2.0, 
+    "MicrosoftGraphSecurity": 6.0, 
+    "MitreAttck": 2.0, 
+    "Office365CloudAppSecurity": 3.0, 
+    "RecordedFuture": 3.0, 
+    "ScreenshotMachine": 4.0, 
+    "Slack": 10.0, 
+    "Sophos": 4.0, 
+    "VirusTotal": 20.0
+}

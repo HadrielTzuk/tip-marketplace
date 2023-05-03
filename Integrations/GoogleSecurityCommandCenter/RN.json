@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Google Security Command Center.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "GoogleSecurityCommandCenter",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1656489978,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11839"
+    },
+    {
+        "ChangeDescription": "New Connector Added - Google Security Command Center - Findings Connector.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Findings Connector",
+        "ItemType": "Connector",
+        "New": true,
+        "PublishTime": 1665057489,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11764"
+    }
+]

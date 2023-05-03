@@ -1,0 +1,1 @@
+# The SiemplifyTest needs to be source controled - but the Platform flag IsSystem wasn't approved for entire integration, so we can't add it the the \integrations folder. For that reason it is placed here, in the \Tests folder.

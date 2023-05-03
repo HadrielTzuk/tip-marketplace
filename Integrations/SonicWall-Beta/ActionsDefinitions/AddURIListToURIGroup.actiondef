@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244,
+    "Creator": "admin",
+    "Description": "Add URI List to SonicWall URI Group. Caution: Successful action execution commits all uncommitted changes. This is a SonicWall limitation. Requires SonicOS 6.5.3 or higher.",
+    "Id": -1,
+    "IntegrationIdentifier": "SonicWall-Beta",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Add URI List to URI Group",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify which URI List you want to add the URI Group. URI Lists that contain unicode characters are not supported. This is a SonicWall limitation.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "URI List Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify to which URI Group you want to add the URI List. URI Groups that contain unicode characters are not supported. This is a SonicWall limitation.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "URI Group Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,28 @@
+{
+    "CreationTimeUnixTimeInMs": 1535370016389, 
+    "Creator": "Admin", 
+    "Description": "Create contain host task on the FireEye HX server based on the Siemplify IP or Host Siemplify entities. Note: Action is not supported for Linux hosts by Fireye HX.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "FireEyeHX", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1535370016389, 
+    "Name": "Contain Host", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518700571020, 
+            "CustomActionId": -1, 
+            "DefaultValue": "false", 
+            "Description": "Specify if containment request for host should be automatically approved to create contain host task on FireEye HX server. If not approved automatically, containment request can be approved in FireEye HX web console.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1518700571020, 
+            "Name": "Approve Containment", 
+            "Type": 1, 
+            "Value": "false"
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

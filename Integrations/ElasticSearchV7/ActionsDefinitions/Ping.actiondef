@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1516506542307,
+    "Creator": "admin",
+    "Description": "Verifies connectivity to Elastic Search server",
+    "Id": -1,
+    "IntegrationIdentifier": "ElasticSearchV7",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1516506542307,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyDataModel import EntityTypes\r\nfrom ElasticsearchManager import ElasticsearchManager\r\nfrom SiemplifyAction import SiemplifyAction\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration('ElasticSearchV7')\r\n    elasticsearch_wrapper = ElasticsearchManager(conf[\"Server Address\"], int(conf[\"Port\"]))\r\n    \r\n    connectivity = elasticsearch_wrapper.test_connectivity()\r\n    output_message = \"Connected Successfully\"\r\n\r\n    siemplify.end(output_message, connectivity)\r\n    \r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n",
+    "ScriptResultName": "is_success",
+    "Version": 0.0
+}

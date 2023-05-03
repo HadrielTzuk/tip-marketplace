@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New integration \"Site24x7\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Site24x7",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1622632360,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8588"
+    }
+]

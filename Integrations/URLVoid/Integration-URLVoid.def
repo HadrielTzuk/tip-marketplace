@@ -1,0 +1,41 @@
+{
+    "Description": "URLVoid is a service that analyzes a website through multiple blacklist engines and online reputation tools to facilitate the detection of fraudulent and malicious websites.",
+    "DisplayName": "URLVoid",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/urlvoid",
+    "Identifier": "URLVoid",
+    "Categories": [
+        "Threat Intelligence",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "URLVoid",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Url",
+            "PropertyName": "ApiUrl",
+            "PropertyType": "2",
+            "Value": "https://endpoint.apivoid.com"
+        },
+        {
+            "IntegrationIdentifier": "URLVoid",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "ApiKey",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "URLVoid",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.2802 2.75958C12.7034 2.35139 12.503 2 12.503 2C12.503 2 12.3027 2.35112 11.7259 2.75969C11.1088 3.19674 10.061 3.69954 8.36654 3.90862C5.08812 4.30798 3.26618 4.21462 3.26618 4.21462C3.26618 4.21462 2.18573 10.0805 4.37841 15.0751C6.34335 19.5354 10.2997 21.9316 12.4977 23C14.6956 21.9316 18.6573 19.5354 20.6169 15.0751C22.8149 10.0805 21.7345 4.20943 21.7345 4.20943C21.7345 4.20943 19.9125 4.30279 16.6341 3.90343C14.943 3.6971 13.8966 3.1959 13.2802 2.75958ZM12.5062 12.3819V4.14105C12.4888 4.11459 12.4809 4.1 12.4809 4.1C12.4809 4.1 11.7959 5.36407 9.17826 5.70406C6.56066 6.03969 5.10597 5.96123 5.10597 5.96123C5.10597 5.96123 4.56948 9.02706 5.20124 12.3819H12.5062ZM12.5062 12.3819L19.5753 12.3818C19.4096 13.2011 19.1619 14.0392 18.8001 14.8472C17.2826 18.243 14.223 20.0757 12.5062 20.9L12.5062 12.3819Z\" \/>\r\n<\/svg>",
+    "Version": 10.0,
+    "MarketingDisplayName": "URLVoid"
+}

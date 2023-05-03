@@ -1,0 +1,51 @@
+{
+    "Description": "FortiSIEM brings together visibility, correlation, automated response, and remediation in a single, scalable solution. It reduces the complexity of managing network and security operations to effectively free resources, improve breach detection, and even prevent breaches.",
+    "DisplayName": "Fortinet FortiSIEM",
+    "Identifier": "FortinetFortiSIEM",
+    "MarketingDisplayName": "Fortinet FortiSIEM",
+    "Categories": [
+        "SIEM",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "FortinetFortiSIEM",
+            "PropertyName": "API Root",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://x.x.x.x:port"
+        },
+        {
+            "IntegrationIdentifier": "FortinetFortiSIEM",
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "FortinetFortiSIEM",
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "FortinetFortiSIEM",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": false,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg id=\"Layer_1\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M9.45,9a4.24,4.24,0,0,1,4.1-1.66,4.59,4.59,0,0,1,1.18.34v.05a4.56,4.56,0,0,1,.82.49h0a3.93,3.93,0,0,1,.92,1.07A4,4,0,0,1,17,11.9a4.21,4.21,0,0,1-4.82,3.34,4.11,4.11,0,0,1-3.49-4.61c0-.15.06-.25.06-.34A1.84,1.84,0,0,1,9,9.74v0A4.39,4.39,0,0,1,9.45,9ZM22.21,13a1.75,1.75,0,0,0-1.54.79l-2.3-1a4.88,4.88,0,0,0,.2-2.26,5.93,5.93,0,0,0-1-2.35,6.46,6.46,0,0,0-.88-.93l2.42-2.11a1.81,1.81,0,0,0,1,.29A1.77,1.77,0,0,0,22,3.72a1.82,1.82,0,0,0-3.63,0,1.8,1.8,0,0,0,.2.73L15.91,6.66a3.42,3.42,0,0,0-.62-.35A4.43,4.43,0,0,0,14,5.92a5.12,5.12,0,0,0-1.74-.1,5.84,5.84,0,0,0-2.56.94,4.91,4.91,0,0,0-1.18,1c-.05,0-.1.1-.1.15l-.31.44L4.58,6.85a.58.58,0,0,0,.06-.29A1.78,1.78,0,0,0,2.85,4.84,1.83,1.83,0,0,0,1,6.56,1.79,1.79,0,0,0,2.85,8.27a1.69,1.69,0,0,0,1.33-.58L7.61,9.15v0a3.9,3.9,0,0,0-.36,1,5.43,5.43,0,0,0,0,1.56v0a4.3,4.3,0,0,0,.36,1.43l.05.14a4,4,0,0,0,.46.84L3.92,18.37a2.41,2.41,0,0,0-.87-.19,1.78,1.78,0,0,0-1.8,1.72,1.83,1.83,0,0,0,3.65,0A2,2,0,0,0,4.64,19l4-4a5.69,5.69,0,0,0,2.46,1.52,6,6,0,0,0,1.08.2l0,2.06A1.73,1.73,0,0,0,11,20.43a1.71,1.71,0,0,0,1.79,1.72,1.71,1.71,0,0,0,1.79-1.72,1.73,1.73,0,0,0-1.38-1.66v-2a7.41,7.41,0,0,0,1.13-.19l.56-.14,4.51,6.07a1.12,1.12,0,0,0,.51.4s.05,0,.05,0a2.43,2.43,0,0,1,.26.05,1.25,1.25,0,0,0,.92-.19l.11-.1a1.3,1.3,0,0,0,.56-.78,1.06,1.06,0,0,0,0-.47,1.13,1.13,0,0,0-.22-.42l-4.4-6,.35-.49a4.65,4.65,0,0,0,.52-.83l.31.15s2,.88,2,.92a1.8,1.8,0,0,0,1.85,1.73,1.72,1.72,0,1,0,0-3.44Z\"/><path d=\"M13.5,12.35l.36-2.41V8.72H12.22V9.89l.25,2.46Z\"/><path d=\"M13.71,13.47a.73.73,0,0,0-.72-.73.77.77,0,0,0-.77.73.7.7,0,0,0,.77.69A.66.66,0,0,0,13.71,13.47Z\"/></svg>",
+    "Version": 2.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/fortinet-fortisiem"
+}

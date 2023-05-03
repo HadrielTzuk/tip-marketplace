@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New BIG-IP Access Policy Manager integration added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "F5BIGIPAccessPolicyManager",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1614072507,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7298"
+    },
+    {
+        "ChangeDescription": "Security enhancements throughout the integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "F5BIGIPAccessPolicyManager",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1636521986,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    }
+]

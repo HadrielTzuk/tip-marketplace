@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 15.61</h2><h5>Published on 29 July, 2021</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     GoogleCloudIAM\n    </b>\n   </li>\n   <ul>\n    <li>\n     GoogleCloudIAM\n    </li>\n    <ul>\n     <li>\n      Improved the integration's visibility in the marketplace.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     Splash\n    </b>\n   </li>\n   <ul>\n    <li>\n     Splash\n    </li>\n    <ul>\n     <li>\n      Improved the integration's visibility in the marketplace.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     TenableIO\n    </b>\n   </li>\n   <ul>\n    <li>\n     Tenable.io\n    </li>\n    <ul>\n     <li>\n      Improved the integration's visibility in the marketplace.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "15.61",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "29/07/21",
+    "Title": "Release Notes"
+}

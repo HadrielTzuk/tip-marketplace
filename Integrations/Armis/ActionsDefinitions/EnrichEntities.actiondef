@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Enrich entities using information from Armis. Supported entities: IP, Mac Address.",
+    "Id": -1,
+    "IntegrationIdentifier": "Armis",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Enrich Entities",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"XX.XXX.XXX.XX\",\"EntityResult\":{\"accessSwitch\":\"XXXX\",\"category\":\"XXXXXXX\",\"dataSources\":[],\"firstSeen\":\"XXXX-XX-XXTXX:XX:XX.XXXXXX+XX:XX\",\"id\":\"XXXX\",\"ipAddress\":\"XX.XXX.XXX.XX\",\"ipv6\":\"XXXX\",\"lastSeen\":\"XXXX-XX-XXTXX:XX:XX.XXXXXX+XX:XX\",\"macAddress\":\"XX:XX:XX:XX:XX:XX\",\"manufacturer\":\"XXXXXX\",\"model\":\"XXXXXXXXXX\",\"name\":\"XXXXXXXXXXX\",\"operatingSystem\":\"XXXX\",\"operatingSystemVersion\":\"XXXX\",\"purdueLevel\":\"X\",\"riskLevel\":\"X\",\"sensor\":{\"name\":\"XXXXXXXX\",\"type\":\"XXXXXXXXXXX\"},\"site\":{\"location\":\"XXXXXXXX\",\"name\":\"XXXXXXXXXXXXXXX\"},\"tags\":[\"XXX\"],\"type\":\"XXXX\",\"user\":\"\",\"visibility\":\"XXXX\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "If enabled, action will create an insight containing information about the endpoints.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Create Endpoint Insight",
+            "Type": 1,
+            "Value": "True"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"MacAddress\"]}",
+    "Version": 1.0
+}

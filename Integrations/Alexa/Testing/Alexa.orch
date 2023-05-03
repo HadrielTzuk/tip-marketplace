@@ -1,0 +1,75 @@
+{
+  "Identifier": "918b38da-e904-4bd5-b8c8-d69772d3ecc3",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "Alexa",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "3ec1028d-54f6-4d0e-b4cb-af6abbf07e92",
+      "ParentWorkflowIdentifier": "918b38da-e904-4bd5-b8c8-d69772d3ecc3",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Alexa_Get UrlI Rank_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Alexa_Get UrlI Rank",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "3ec1028d-54f6-4d0e-b4cb-af6abbf07e92",
+          "ParentWorkflowIdentifier": "918b38da-e904-4bd5-b8c8-d69772d3ecc3",
+          "Name": "ScriptName",
+          "Value": "Alexa_Get UrlI Rank",
+          "CreationTimeUnixTimeInMs": 1519206288650,
+          "ModificationTimeUnixTimeInMs": 1519206288650
+        },
+        {
+          "ParentStepIdentifier": "3ec1028d-54f6-4d0e-b4cb-af6abbf07e92",
+          "ParentWorkflowIdentifier": "918b38da-e904-4bd5-b8c8-d69772d3ecc3",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Threshold\":\"0\"}",
+          "CreationTimeUnixTimeInMs": 1519206288650,
+          "ModificationTimeUnixTimeInMs": 1519206288650
+        },
+        {
+          "ParentStepIdentifier": "3ec1028d-54f6-4d0e-b4cb-af6abbf07e92",
+          "ParentWorkflowIdentifier": "918b38da-e904-4bd5-b8c8-d69772d3ecc3",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519206288650,
+          "ModificationTimeUnixTimeInMs": 1519206288650
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519206288650,
+      "ModificationTimeUnixTimeInMs": 1519206288650
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "6387d0a5-6ba5-403d-b84b-99c842ad62b0",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "918b38da-e904-4bd5-b8c8-d69772d3ecc3",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Alexa",
+      "AllEnvironments": "",
+      "Id": 68,
+      "CreationTimeUnixTimeInMs": 1519206288650,
+      "ModificationTimeUnixTimeInMs": 1519206288650
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 68,
+  "CreationTimeUnixTimeInMs": 1519206288650,
+  "ModificationTimeUnixTimeInMs": 1519206288650
+}

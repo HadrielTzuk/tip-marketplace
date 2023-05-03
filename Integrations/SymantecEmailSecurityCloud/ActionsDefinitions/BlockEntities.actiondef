@@ -1,0 +1,54 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Block entities in Symantec Email Security.Cloud. Supported entities: Hostname, IP address, URL, Filehash, Email Subject, Email Address (user entity that matches email regex). Note: only MD5 and SHA256 hashes are supported. All of the entities are treated as \"sender IOCs\" during blocking.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"172.30.xxx.xx\",\"EntityResult\":{\"status\":\"Failure\",\"reason\":\"Invalid value\"}},{\"Entity\":\"url.com\",\"EntityResult\":{\"status\":\"Success\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "SymantecEmailSecurityCloud",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Block Entities",
+    "Parameters": [
+        {
+            "Name": "Remediation Action",
+            "Type": 15,
+            "DefaultValue": "Block and Delete",
+            "Value": "Block and Delete",
+            "IsMandatory": false,
+            "Description": "Specify the remediation action for the entities.",
+            "OptionalValues": [
+                "Block and Delete",
+                "Quarantine",
+                "Redirect",
+                "Tag Subject",
+                "Append Header"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Description",
+            "Type": 0,
+            "DefaultValue": "Blocked by Siemplify",
+            "Value": "Blocked by Siemplify",
+            "IsMandatory": true,
+            "Description": "Specify a description that should be added to the blocked entities.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"HOSTNAME\", \"USERUNIQNAME\", \"DestinationURL\", \"FILEHASH\", \"EMAILSUBJECT\"]}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

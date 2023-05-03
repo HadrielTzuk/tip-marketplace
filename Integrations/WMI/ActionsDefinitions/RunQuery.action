@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 1519140054401,
+    "Creator": "admin",
+    "Description": "Run an arbitary query using WQL on the system",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Caption\": \"C:\", \"Description\": \"Local Fixed Disk\", \"DeviceID\": \"C:\"}, {\"Caption\": \"I:\", \"Description\": \"Local Fixed Disk\", \"DeviceID\": \"I:\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "WMI",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519140054401,
+    "Name": "RunQuery",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519140277176,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519140277176,
+            "Name": "Server Address",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519140277176,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519140277176,
+            "Name": "Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519140277176,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519140277176,
+            "Name": "Password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519140277176,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Query content(e.g: SELECT Caption, Description FROM Win32_LogicalDisk WHERE DriveType <> 3).",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519140277176,
+            "Name": "WQL Query",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "results",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

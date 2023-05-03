@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1521035333863,
+    "Creator": "admin",
+    "Description": "Power on a VM",
+    "Id": -1,
+    "IntegrationIdentifier": "VSphere",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1521035333863,
+    "Name": "Power On",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1521035389481,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1521035389481,
+            "Name": "Vm Name",
+            "Type": 0,
+            "Value": "Target VM name."
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

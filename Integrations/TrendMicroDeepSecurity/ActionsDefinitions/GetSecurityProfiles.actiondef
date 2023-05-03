@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1538566617159,
+    "Creator": "Admin",
+    "Description": "Get all of the policies from Deep Security",
+    "Id": -1,
+    "IntegrationIdentifier": "TrendMicroDeepSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1538566617159,
+    "Name": "Get Security Profiles",
+    "Parameters": [],
+    "Script": "from TrendmicroDeepSecurityManager import TrendmicroManager\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import construct_csv\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('TrendMicro')\n    api_key = conf.get('Api Secret Key')\n    api_version = conf.get('Api Version')\n    server_address = conf.get('Server Address')\n    use_ssl = conf.get(\"Verify SSL\")\n    trendmicro_manager = TrendmicroManager(api_key, server_address, api_version, use_ssl)\n\n    result_value = 'false'\n    output_message = 'Failed to lists all security profiles'\n    csv_results = []\n\n    policies_list = trendmicro_manager.get_all_security_profiles()\n    if policies_list:\n        for policy in policies_list:\n            # Build csv table\n            csv_results.append({\"Name\": policy.get('name'), \"Description\": policy.get('description'), \"ID\": policy.get(\"ID\")})\n        siemplify.result.add_data_table(\"All Security Profiles\", construct_csv(csv_results))\n        result_value = 'true'\n        output_message = 'Successfully lists all policies'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

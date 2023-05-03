@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 18.11</h2><h5>Published on 14 July, 2022</h5><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     MicrosoftAzureSentinel\n    </b>\n   </li>\n   <ul>\n    <li>\n     Microsoft Azure Sentinel Incident Connector v2\n    </li>\n    <ul>\n     <li>\n      Microsoft Azure Sentinel Incident Connector v2 - Updated time handling for Azure Sentinel Scheduled alerts to support the time format change on Azure's API side.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "18.11",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "14/07/22",
+    "Title": "Release Notes"
+}

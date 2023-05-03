@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "The VMware Carbon Black Enterprise EDR is an advanced threat hunting and incident response solution delivering continuous visibility for top security operations centers (SOCs) and incident response (IR) teams",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "VMware Carbon Black Enterprise EDR",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1590900355,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2544"
+    },
+    {
+        "ChangeDescription": "Fixed an issue with fetching results of a query.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "ProcessSearch",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1600771916,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4380"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "VMware Carbon Black Enterprise EDR",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "VMware Carbon Black Enterprise EDR",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

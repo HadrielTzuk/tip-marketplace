@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Remove deceptive server from Illusive Networks.",
+    "Id": -1,
+    "IntegrationIdentifier": "IllusiveNetworks",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1615981279206,
+    "Name": "Remove Deceptive Server",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1615981279206,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the deceptive server that needs to be removed.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1615981279206,
+            "Name": "Server Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,62 @@
+[
+    {
+        "ChangeDescription": "New integration \"Mimecast\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Mimecast",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1625040975,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8833"
+    },
+    {
+        "ChangeDescription": "Simple Archive Search - Updated action to reflect the changes to the API.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Simple Archive Search",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1633519274,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9821"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Mimecast",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Message Tracking Connector - Updated the logic to properly track ingested messages.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Message Tracking Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1660812224,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11390"
+    },
+    {
+        "ChangeDescription": "Message Tracking Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Message Tracking Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1660812224,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11909"
+    }
+]

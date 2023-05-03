@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 1520155328775, 
+    "Creator": "admin", 
+    "Description": "Remove IP addresses from an address group", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"success\":[\"1.1.1.1\",\"2.2.2.2\"],\"didn't_exist_initially\":[\"1.1.1.1\",\"2.2.2.2\"]}",
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "PaloAltoNGFW", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1520155328775, 
+    "Name": "Remove Ips from group", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1520155454644, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The device name in which the group is located. The default device name of NGFW is localhost.localdomain. In case configured differently, please refer to https://<NGFWIP>/php/rest/browse.php/config::devices for the list of all the device names and select the relevant device.", 
+            "Id": -1, 
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1520155454644, 
+            "Name": "Device Name", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1520155454644, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The vsys in which the group is located. The default vsys name of NGFW is vsys1. In case configured differently, please refer to https://<NGFW IP>/php/rest/browse.php/config::devices::entry[@name='<DEVICE NAME>']::vsys for the list of all the vsys names of the device and select the relevant vsys.", 
+            "Id": -1, 
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1520155454644, 
+            "Name": "Vsys Name", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1520155454644, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The name of the required address group.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520155454644, 
+            "Name": "Address Group Name", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1520155470744,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will use shared objects instead of vsys. Note: action will not create a shared address group, if it doesn't exist.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1520155470744,
+            "Name": "Use Shared Objects",
+            "Type": 1,
+            "Value": false
+        }
+    ], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

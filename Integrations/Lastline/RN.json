@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "New Lastline integration added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Lastline",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1617794120,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5996"
+    },
+    {
+        "ChangeDescription": "Updated the \"Verify SSL\" logic of the integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Lastline",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1630483516,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9685"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Lastline",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Lastline",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

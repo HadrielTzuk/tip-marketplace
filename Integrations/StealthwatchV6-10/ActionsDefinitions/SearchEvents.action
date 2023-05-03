@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1521377957352, 
+    "Creator": "admin", 
+    "Description": "Get a host's security events for a given time frame", 
+    "Id": -1, 
+    "IntegrationIdentifier": "StealthwatchV6-10", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1521377957352, 
+    "Name": "Search Events", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1521378333340, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Time frame in hours.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1521378333340, 
+            "Name": "Timeframe", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

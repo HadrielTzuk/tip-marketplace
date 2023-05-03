@@ -1,0 +1,16 @@
+{
+    "IntegrationIdentifier": "GoogleChat",
+    "Id": -1,
+    "Creator": "admin",
+    "Name": "Ping",
+    "Description": "Test connectivity to the Google Chat service with parameters provided at the integration configuration page on the Marketplace tab.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

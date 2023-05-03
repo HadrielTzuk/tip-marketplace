@@ -1,0 +1,59 @@
+{
+    "Description": "The VMware Carbon Black Cloud is a cloud-native endpoint protection platform (EPP) that combines the intelligent system hardening and behavioral prevention needed to keep emerging threats at bay, using a single lightweight agent, and an easy-to-use console.",
+    "DisplayName": "Vmware Carbon Black Cloud",
+    "Identifier": "CBCloud",
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "CBCloud",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CBCloud",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Organization Key",
+            "PropertyName": "Organization Key",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CBCloud",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API ID",
+            "PropertyName": "API ID",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CBCloud",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Secret Key",
+            "PropertyName": "API Secret Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CBCloud",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"><path d=\"M3.8,8.8c-0.3-0.6-1-0.9-1.6-0.6c-0.7,0.3-0.9,1-0.6,1.6l2.7,5.8c0.4,0.9,0.9,1.4,1.7,1.4c0.9,0,1.3-0.5,1.7-1.4 c0,0,2.3-5.1,2.4-5.1c0,0,0.1-0.2,0.3-0.2c0.2,0,0.3,0.2,0.3,0.4v4.9c0,0.7,0.4,1.4,1.2,1.4c0.8,0,1.3-0.6,1.3-1.4v-4.1 c0-0.8,0.6-1.3,1.3-1.3c0.7,0,1.3,0.5,1.3,1.3v4.1c0,0.7,0.4,1.4,1.2,1.4c0.8,0,1.3-0.6,1.3-1.4v-4.1c0-0.8,0.6-1.3,1.3-1.3 s1.3,0.5,1.3,1.3v4.1c0,0.7,0.4,1.4,1.2,1.4c0.8,0,1.3-0.6,1.3-1.4V11c0-1.7-1.4-2.9-3-2.9s-2.7,1.1-2.7,1.1 c-0.6-0.7-1.3-1.1-2.6-1.1c-1.4,0-2.5,1.1-2.5,1.1c-0.5-0.7-1.5-1.1-2.2-1.1c-1.2,0-2.1,0.5-2.7,1.8l-1.7,4L3.8,8.8\"/></svg>",
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "PythonVersion": 2,
+    "Version": 27.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/vmware-carbon-black-cloud",
+    "MarketingDisplayName": "VMware Carbon Black Cloud"
+}

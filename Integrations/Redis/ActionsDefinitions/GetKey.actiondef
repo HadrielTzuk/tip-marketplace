@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1529480846636,
+    "Creator": "admin",
+    "Description": "Return the value at the selected key, or return None if the key doesn't exist",
+    "Id": -1,
+    "IntegrationIdentifier": "Redis",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1529480846636,
+    "Name": "Get Key",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529480846636,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Target key name.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529480846636,
+            "Name": "Key Name",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom RedisManager import RedisManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('Redis')\n    server = conf['Server Address']\n    port = int(conf['Port'])\n\n    redis_manager = RedisManager(server, port, 0)\n    key = siemplify.parameters['Key Name']\n\n    key_value = redis_manager.get_key(key)\n    if key_value:\n        result_value = \"true\"\n        output_message = \"Key {key} value is:{value}.\".format(value=key_value, key=key)\n    else:\n        result_value = \"false\"\n        output_message = \"Can not find value for {key}.\".format(key=key)\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "key_value",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,83 @@
+{
+    "CreationTimeUnixTimeInMs": 1517823216621,
+    "Creator": "admin",
+    "Description": "Block and unblock applications. Each application is added to or removed from a given policy",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[\"1und1-mail\", \"Filter\", \"Group1\", \"SiemplifyAppBlacklist\", \"apple-siri\", \"google-analytics\"]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "PaloAltoPanorama",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517823216621,
+    "Name": "Edit Blocked Applications",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518700582700,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what kind of application should be blocked. Example: apple-siri,windows-azure.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518700582700,
+            "Name": "Applications To Block",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518700582700,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what kind of application should be unblocked. Example: apple-siri,windows-azure.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518700582700,
+            "Name": "Applications To UnBlock",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518700582700,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify name of the device. The default device name for Palo Alto Panorama is localhost.localdomain. Visit action documentation to get more insights on where you can find this value.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518700582700,
+            "Name": "Device Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518700582700,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify name of the device group. Visit action documentation to get more insights on where you can find this value.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518700582700,
+            "Name": "Device Group Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518700582700,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify name of the policy.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518700582700,
+            "Name": "Policy Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

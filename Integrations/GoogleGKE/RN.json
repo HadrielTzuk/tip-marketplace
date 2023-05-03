@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - \"Google Kubernetes Engine\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "GoogleGKE",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1631589407,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9002"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "GoogleGKE",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Improved support for SaaS environments in integration configuration, other integration configuration updates.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "GoogleGKE",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1679443200,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "265187292"
+    }
+]

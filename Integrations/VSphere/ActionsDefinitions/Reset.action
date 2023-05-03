@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1521035405982,
+    "Creator": "admin",
+    "Description": "Hard reset a VM",
+    "Id": -1,
+    "IntegrationIdentifier": "VSphere",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1521035405982,
+    "Name": "Reset",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1521035455858,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The name of the target VM.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1521035455858,
+            "Name": "Vm Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

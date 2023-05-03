@@ -1,0 +1,77 @@
+{
+    "CreationTimeUnixTimeInMs": 1513614105103,
+    "Creator": "admin",
+    "Description": "Send an interactive message to a channel or a user and when based on the provided Webhook UUID check a user's response. Action is similar to the 'Send Advanced Message' action, but it allows to send only 'block' content (not plain text messages) and also requires a webhook UUID to check a user's response to a webhook. Action is async, please adjust action timeout in IDE accordingly. Action is not working on Siemplify entities. Please configure the Slack app used in integration to allow interactive messages as described here - https://api.slack.com/legacy/interactive-messages#readying_app.",
+    "Id": -1,
+    "IntegrationIdentifier": "Slack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1663342003000,
+    "Name": "Send Interactive Message",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"uuid\": \"10953f8e-7ef8-4bde-9e9b-212005e0e737\", \"type\": \"web\", \"token_id\": \"47289ba5-277e-4ab9-9238-eb31080530ca\", \"ip\": \"0000:a000000:ad80:000:20ea:653:fb97\", \"hostname\": \"webhook.site\", \"method\": \"GET\", \"user_agent\": \"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/15.4 Safari\/605.1.15\", \"content\": \"\", \"query\": {\"Answer\": \"yes\"}, \"headers\": {\"connection\": [\"close\"], \"accept-encoding\": [\"gzip, deflate, br\"], \"accept-language\": [\"en-US,en;q=0.9\"], \"user-agent\": [\"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/15.4 Safari\/605.1.15\"], \"cookie\": [\"_ga=GA\"], \"accept\": [\"text\/html,application\/xhtml+xml,application\/xml;q=0.9,*\/*;q=0.8\"], \"host\": [\"webhook.site\"], \"content-length\": [\"\"], \"content-type\": [\"\"]}, \"url\": \"https:\/\/webhook.site\/47289ba5-277e-4ab9-9238-xx0000000xx?Answer=yes\", \"size\": 0, \"files\": [], \"created_at\": \"2022-10-14 19:45:40\", \"updated_at\": \"2022-10-14 19:45:40\", \"sorting\": 1665776740032262, \"custom_action_output\": []}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1513614626960,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the recipient to send a message to.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513614626960,
+            "Name": "Recipient",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1513614626960,
+            "CustomActionId": -1,
+            "DefaultValue": "Name",
+            "Description": "Specify channel or user name (full name) to send message to. Optionally channel or user id can be specified, or email address of a user.",
+            "OptionalValues": [
+                "Name",
+                "Email",
+                "Channel or User ID"
+            ],
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513614626960,
+            "Name": "Recipient Type",
+            "Type": 15,
+            "Value": "Name"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1513614626960,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the message content to send.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513614626960,
+            "Name": "Message",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663342003000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the Webhook token UUID to monitor for the user’s response.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1663342003000,
+            "Name": "Webhook Token UUID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

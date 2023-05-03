@@ -1,0 +1,49 @@
+{
+    "Description": "SysAid is an IT service management solution that offers all the ITIL essentials. It's everything you need for easy and efficient ITSM in a single tool.",
+    "DisplayName": "SysAid",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/sysaid",
+    "Identifier": "SysAid",
+    "Categories": [
+        "IT & Infrastructure",
+        "ITSM"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "SysAid",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://{account}.sysaidit.com/api/v1"
+        },
+        {
+            "IntegrationIdentifier": "SysAid",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "SysAid",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "SysAid",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SvgImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<path d=\"M12.7,5.1c-1,2.8-2,5.5-2.9,8.2c-0.9,2.5-1.8,4.9-2.6,7.4c-0.4,1.2-0.8,1.5-2.1,1.5c-0.3,0-0.6,0-1,0\n\t\tc0.1-0.2,0.1-0.3,0.2-0.5c2.2-6.2,4.5-12.3,6.7-18.5c0.1-0.3,0.2-0.5,0.6-0.4c0.4,0,0.9,0,1.4,0c1.2,0,1.8,0.5,2.2,1.6\n\t\tc1.2,3.2,2.3,6.3,3.5,9.5c0.8,2.1,1.5,4.2,2.3,6.3c0.1,0.4,0.2,0.9,0.1,1.3c0,0.4-0.4,0.7-0.8,0.7c0,0,0,0,0,0\n\t\tc-1.2,0.1-1.2,0.1-1.6-1.1c-1.8-5.2-3.7-10.3-5.5-15.5C12.9,5.5,12.8,5.3,12.7,5.1z\"/>\n\t<path d=\"M10,16.6c0-1.5,1.2-2.6,2.6-2.6c1.4,0,2.6,1.1,2.6,2.6c0,1.5-1.1,2.6-2.6,2.6C11.2,19.2,10,18.1,10,16.6z\"/>\n</g>\n</svg>\n",
+    "Version": 4.0,
+    "MarketingDisplayName": "SysAidS"
+}

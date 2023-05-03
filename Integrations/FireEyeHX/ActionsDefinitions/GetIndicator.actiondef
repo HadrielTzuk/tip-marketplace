@@ -1,0 +1,44 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381262567,
+    "Creator": "Admin",
+    "Description": "Get information on specific Indicator from FireEye HX server.",
+    "Id": -1,
+    "IntegrationIdentifier": "FireEyeHX",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535381262567,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "{\"category\": {\"url\": \"/hx/api/v3/indicator_categories/mandiant_unrestricted\", \"_id\": 7, \"uri_name\": \"mandiant_unrestricted\", \"name\": \"Mandiant Unrestricted Intel\", \"share_mode\": \"unrestricted\"}, \"display_name\": \"FIREEYE END2END TEST\", \"description\": \"IOC used for testing HX appliances and content packages to ensure that things work end to end\", \"create_actor\": {\"username\": \"mandiant\", \"_id\": 3}, \"active_since\": \"2020-05-28T13:08:08.513Z\", \"url\": \"/hx/api/v3/indicators/mandiant_unrestricted/2b4753b0_9972_477e_ba16_1a7c29058cee\", \"_revision\": \"20200528130929238120103414\", \"create_text\": \"General_Windows_unrestricted_2020.05.270833\", \"created_by\": \"General_Windows_unrestricted_2020.05.270833\", \"update_actor\": {\"username\": \"mandiant\", \"_id\": 3}, \"meta\": null, \"signature\": null, \"platforms\": [\"win\", \"osx\", \"linux\"], \"stats\": {\"source_alerts\": 0, \"alerted_agents\": 1, \"active_conditions\": 7}, \"_id\": \"2b4753b0-9972-477e-ba16-1a7c29058cee\", \"uri_name\": \"2b4753b0-9972-477e-ba16-1a7c29058cee\", \"name\": \"FIREEYE END2END TEST\"}",
+		"ResultName": "JsonResult"
+	}],
+    "Name": "Get Indicator",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381262567,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specify indicator category uri_name value. uri_name can be found by running “Get Indicators” action. ",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381262567,
+            "Name": "Indicator Category",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381262567,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specify indicator uri_name value. uri_name can be found by running “Get Indicators” action. ",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381262567,
+            "Name": "Indicator Name",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

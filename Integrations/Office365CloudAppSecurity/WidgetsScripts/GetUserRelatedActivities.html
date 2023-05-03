@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i"
+    rel="stylesheet">
+  <link
+    href='https://fonts.googleapis.com/css?family=Source Sans Pro'
+    rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <title>Query Widget</title>
+  <style>
+      :root {
+          --dark-gray-100: hsl(0, 0%, 1000%);
+          --dark-gray-200: hsl(216, 45%, 84%);
+          --dark-gray-300: hsl(220, 22%, 62%);
+          --dark-gray-400: hsl(221, 26%, 46%);
+          --dark-gray-500: hsl(221, 30%, 33%);
+          --dark-gray-600: hsl(221, 32%, 27%);
+          --dark-gray-700: hsl(221, 35%, 23%);
+          --dark-gray-800: hsl(221, 35%, 20%);
+          --dark-gray-900: hsl(240, 25%, 12%);
+          
+          --color-table-even-row: hsl(226, 32%, 15%);
+          --color-link: hsl(217, 89%, 76%);
+
+          --widget-width-in-screen: 100%;
+          --widget-height-in-screen: 100%;
+
+          --widget-font-style: normal;
+
+          --widget-text-font: 'Source Sans Pro', sans-serif;
+          --widget-number-font: 'Open Sans', sans-serif;
+
+          --font-weight-bold: 700;
+          --font-weight-semibold: 600;
+          --font-weight-regular: 400;
+
+          --font-size-big: 16px;
+          --font-size-medium: 14px;
+
+          --default-line-height: 16px;
+
+          --scrollbar-size: 12px;
+      }
+
+      html {
+          height: var(--widget-height-in-screen);
+          width: var(--widget-width-in-screen);
+      }
+
+      body {
+          background-color: var(--dark-gray-800);
+
+          height: var(--widget-height-in-screen);
+          width: var(--widget-width-in-screen);
+
+          padding: 0;
+          margin: 0;
+
+          overflow: hidden;
+      }
+
+      .logo {
+          padding-bottom: 8px;
+          padding-top: 8px;
+
+          float: right;
+      }
+
+      .logo svg {
+          height: 32px;
+
+          vertical-align: top;
+      }
+
+      .main-counter {
+          font-style: var(--widget-font-style);
+
+          padding: 12px 4% 12px 4%;
+          
+          justify-content: center;
+          clear: both;
+      }
+
+      .counter {
+          font-weight: var(--font-weight-bold);
+          font-family: var(--widget-number-font);
+
+          color: var(--dark-gray-100);
+
+          font-size: 64px;
+          line-height: 0;
+
+          align-items: center;
+          text-align: center;
+      }
+
+      .counter-title {
+          font-weight: var(--font-weight-semibold);
+          font-family: var(--widget-text-font);
+
+          color: var(--dark-gray-100);
+
+          font-size: 20px;
+
+          text-transform: uppercase;
+          text-align: center;
+      }
+      
+      .main-table {
+          font-family: var(--widget-text-font);
+          font-style: var(--widget-font-style);
+
+          line-height: var(--default-line-height);
+
+          color: var(--dark-gray-100);
+
+          overflow-x: scroll;
+      }
+
+      .main-table table {
+          font-size: var(--font-size-medium);
+
+          width: 100%;
+
+          border-collapse: collapse;
+          word-break: keep-all;
+      }
+
+      .main-table th {
+          font-weight: var(--font-weight-semibold);
+          line-height: var(--default-line-height);
+
+          background-color: var(--dark-gray-600);
+
+          padding: 8px 16px;
+
+          text-transform: uppercase;
+          vertical-align: top;
+          text-align: left;
+          white-space: nowrap;
+      }
+
+      .main-table tr {
+          font-weight: var(--font-weight-regular);
+      }
+
+      .main-table tr:nth-child(even) {
+          background-color: var(--color-table-even-row);
+      }
+
+      .main-table td {
+          padding: 8px 16px;
+
+          vertical-align: top;
+      }
+      
+  
+      .card-container {
+          height: var(--widget-height-in-screen);
+          width: var(--widget-width-in-screen);
+
+          display: flex;
+      }
+
+      .right-side {
+          border-left: 1px solid var(--dark-gray-400);
+          padding: 8px 16px;
+          width: 100%;
+          gap: 24px;
+
+          overflow: scroll;
+      }
+
+      .left-side {
+          padding-right: 8px;
+          max-width: 180px;
+          min-width: 180px;
+          width: 180px;
+
+          overflow: scroll;
+      }
+
+      .left-menu-item {
+          font-family: var(--widget-text-font);
+          font-weight: var(--font-weight-regular);
+          font-style: var(--widget-font-style);
+          font-size: var(--font-size-medium);
+
+          color: var(--dark-gray-200);
+
+          padding-left: 10px;
+          line-height: 38px;
+          height: 38px;
+
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          cursor: pointer;
+          display: block;
+      }
+
+      .left-menu-item.active {
+          background: var(--dark-gray-500);
+
+          font-weight: var(--font-weight-semibold);
+          font-size: var(--font-size-medium);
+
+          color: var(--dark-gray-100);
+      }
+
+      .top-title {
+          font-family: var(--widget-text-font);
+
+          color: var(--dark-gray-100);
+
+          border-bottom: 1px solid var(--dark-gray-400);
+          margin-bottom: 4px;
+
+          justify-content: space-between;
+          align-items: center;
+          display: flex;
+      }
+
+      .top-title-display-value {
+          font-weight: var(--font-weight-semibold);
+
+          line-height: 25px;
+          font-size: 20px;
+          max-width: 70%;
+
+          text-overflow: ellipsis;
+          overflow: hidden;
+      }
+
+      ::-webkit-scrollbar {
+          width: var(--scrollbar-size);
+          height: var(--scrollbar-size);
+      }
+
+      ::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          border: 3px solid transparent;
+          background: var(--dark-gray-400);
+          background-clip: content-box;
+      }
+
+      ::-webkit-scrollbar-track {
+          background-color: transparent;
+      }
+
+      ::-webkit-scrollbar-corner {
+          background-color: transparent;
+      }
+
+      .link {
+          color: var(--color-link);
+
+          font-family: var(--widget-text-font);
+          font-weight: var(--font-weight-regular);
+          font-style: var(--widget-font-style);
+          font-size: var(--font-size-medium);
+
+          line-height: var(--default-line-height);
+
+          text-decoration-line: underline;
+          align-items: center;
+      }
+  </style>
+</head>
+  <body>
+<div class="card-container">
+  <div class="left-side" id="left-menu"></div>
+  <div class="right-side" id="right-menu">
+    <div class="top-title">
+      <div class="top-title-display-value" id="title-display-value"></div>
+      <div class="logo">
+        <svg fill="currentColor" height="25" viewbox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg">
+              <path clip-rule="evenodd" d="M13.05 2.75V12h9.2V2.75h-9.2zm0 19.5h9.2V13h-9.2v9.25zM2.75 12h9.2V2.75h-9.2V12zm0 10.25h9.2V13h-9.2v9.25z" fill-rule="evenodd">
+              </path>
+            </svg>
+        </div>
+    </div>
+    <div class="main-counter">
+      <h1 class="counter" id="counter"></h1>
+      <h2 class="counter-title" id="counter-title"></h2>
+    </div>
+    <div class="main-table">
+      <table id="main-table">
+        <thead>
+        <tr>
+          <th style="width: 30%;">
+            Activity Name
+          </th>
+          <th style="width: 10%;">
+            Severity
+          </th>
+          <th style="width: 15%;">
+            IP
+          </th>
+          <th>
+            User
+          </th>
+          <th>
+            Application
+          </th>
+          <th style="width: 10%;">
+            Country
+          </th>
+          <th>
+            User Agent
+          </th>
+        </tr>
+        </thead>
+        <tbody id="main-table-body"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script>
+    $(document).ready(() => {
+        if ($("body").css("background-color") === "rgb(255, 255, 255)") {
+            $(".logo svg path").attr("fill", "black");
+        } else {
+            $(".logo svg path").attr("fill", "white");
+        }
+        
+        const actionListData = [{stepInstanceName}.JsonResult];
+        if (!actionListData.length) {
+            return;
+        }
+
+        entityDisplayed(actionListData[0]);
+
+        createLeftMenu();
+
+        $(".left-side").click(event => {
+            const arrayLeftSide = $(".left-menu-item");
+            const id = event.target.id;
+
+            $.each(arrayLeftSide, (key, value) => {
+                if (value.id === id) {
+                    $(`#${value.id}`).addClass("active");
+                } else {
+                    $(`#${value.id}`).removeClass("active");
+                }
+            });
+
+            const object = actionListData.find(el => {
+                if (el.Entity) {
+                    return removeSpecialSymbols(el.Entity) === id.split("_")[0];
+                }
+            });
+
+            entityDisplayed(object);
+
+            $("#right-menu").scrollTop(0);
+        });
+
+        function entityDisplayed(el) {
+            const dataCount = el.EntityResult.length;
+            if (dataCount === 1) {
+                $("#counter-title").html("RELATED ACTIVITY FOUND");
+            } else {
+                $("#counter-title").html("RELATED ACTIVITIES FOUND");
+            }
+
+            $("#counter").html(dataCount);
+            $("#title-display-value").html(el.Entity)
+
+            const iterListData = el.EntityResult;
+            let mhtml = "";
+            $.each(iterListData, (key, el) => {
+                mhtml += "<tr>";
+
+                mhtml += "<td>" +
+                    fieldExists(el.description)
+                    + "</td>";
+
+                mhtml += "<td>" +
+                    fieldExists(el.severity)
+                    + "</td>";
+
+                mhtml += "<td>" +
+                    fieldExists(el.device.clientIP)
+                    + "</td>";
+
+                mhtml += "<td>" +
+                    fieldExists(el.user.userName)
+                    + "</td>";
+
+                mhtml += "<td>" +
+                    fieldExists(el.appName)
+                    + "</td>";
+
+                mhtml += "<td>" +
+                    fieldExists(el.device.countryCode)
+                    + "</td>";
+
+                mhtml += "<td>" +
+                    fieldExists(el.device.userAgent)
+                    + "</td>";
+
+                mhtml += "</tr>";
+            });
+
+            $("#main-table-body").html(mhtml);
+
+            // Toggle off a column if all the values in it are "N/A"
+            $("th").each(function (idx, _) {
+                const check = Boolean(
+                    $("tbody tr").find("td:eq(" + idx + ")").filter(function () {
+                        return ["N/A", ""].includes($.trim($(this).text())) ? 0 : 1;
+                    }).length
+                );
+
+                $("tr").find("td:eq(" + idx + "), th:eq(" + idx + ")").toggle(check);
+            });
+
+            function fieldExists(field) {
+                return [undefined, ""].includes(field) ? "N/A" : field;
+            }
+
+        }
+
+        function createLeftMenu() {
+            let string = "";
+            actionListData.forEach((el, index) => {
+                const displayValue = el.Entity;
+                const cleanDisplayValue = removeSpecialSymbols(displayValue) +
+                    "_" +
+                    Math.floor(Math.random() * 1_000_000_000_000_000);
+
+                index ?
+                    string += `<div class="left-menu-item" id="${cleanDisplayValue}">${displayValue}</div>` :
+                    string += `<div class="left-menu-item active" id="${cleanDisplayValue}">${displayValue}</div>`;
+            });
+
+            $("#left-menu").html(string);
+        }
+
+        function removeSpecialSymbols(el) {
+            return el.replaceAll(/[\s ;:.,/%!&?-]/g, "").replaceAll("\\", "");
+        }
+        
+        
+    });
+</script>
+</body>
+</html>

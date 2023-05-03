@@ -1,0 +1,49 @@
+{
+  "DisplayName": "Trend Vision One",
+  "Identifier": "TrendVisionOne",
+  "MarketingDisplayName": "Trend Vision One",
+  "Description": "Trend Vision One is a purpose-built threat defense platform that provides added value and new benefits beyond XDR solutions, allowing you to see more and respond faster. Providing deep and broad extended detection and response.",
+  "Categories": [
+    "Network Security",
+    "Cloud Security",
+    "Email Security",
+    "Cloud"
+  ],
+  "ImageBase64": "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",
+  "IntegrationProperties": [
+    {
+      "IntegrationIdentifier": "TrendVisionOne",
+      "PropertyName": "API Root",
+      "PropertyDisplayName": "API Root",
+      "PropertyDescription": "API root of the Trend Vision One instance.",
+      "PropertyType": 2,
+      "IsMandatory": true,
+      "Value": "https://{instance}"
+    },
+    {
+      "IntegrationIdentifier": "TrendVisionOne",
+      "PropertyName": "API Token",
+      "PropertyDisplayName": "API Token",
+      "PropertyDescription": "API Token of the Trend Vision One account.",
+      "PropertyType": 3,
+      "IsMandatory": true,
+      "Value": ""
+    },
+    {
+      "IntegrationIdentifier": "TrendVisionOne",
+      "PropertyName": "Verify SSL",
+      "PropertyDisplayName": "Verify SSL",
+      "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Trend Vision One server is valid.",
+      "PropertyType": 0,
+      "IsMandatory": false,
+      "Value": true
+    }
+  ],
+  "PythonVersion": 2,
+  "MinimumSystemVersion": 5.3,
+  "SvgImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M12.5 1C6.16854 1 1 6.16854 1 12.5C1 18.8638 6.16854 24 12.5 24C18.8638 24 24 18.8315 24 12.5C24.0323 6.16854 18.8638 1 12.5 1ZM16.764 17.9593C11.8216 21.8357 6.13624 22.8371 4.06882 20.1882C2.77669 18.5407 3.09972 15.8272 4.8441 13.0815H3.48736L3.81039 12.3385C3.81039 12.3385 6.16854 11.8539 8.55899 9.68961H9.52809L8.33287 12.3062H10.2711L9.91573 13.0815H8.00983C6.36236 16.2795 6.58848 17.3132 6.87921 18.0885C7.62219 20.2205 11.757 19.639 15.7949 16.4733C19.8329 13.3076 21.7065 8.91433 19.9298 6.68539C18.4115 4.71489 14.5997 5.07022 10.9817 7.26685C15.4396 4.35955 20.1559 3.8427 21.9972 6.20084C24.0646 8.81742 21.7065 14.1152 16.764 17.9593Z\" fill=\"currentColor\"\/><\/svg>",
+  "Version": 1.0,
+  "IsCustom": false,
+  "IsAvailableForCommunity": true,
+  "DocumentationLink": "https://integrations.siemplify.co/doc/trendvisionone"
+}

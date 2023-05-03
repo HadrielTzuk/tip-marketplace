@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Submit a file for analysis.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"C:\\\\Users\\\\User1\\\\Downloads\\test_file.exe\": {\"4e553bce90f0b39cd71ba633da5990259e185979c2859ec2e04dd8efcdafe356\": {\"family_name\": \"Turla\", \"analysis_id\": \"548e6b8b-20b1-445c-9922-af6b52a8abc3\", \"sub_verdict\": \"known_malicious\", \"analysis_url\": \"https://analyze.intezer.com/#/analyses/548e6b8b-20b1-445c-9922-af6b52a8abc3\", \"verdict\": \"malicious\", \"sha256\": \"4e553bce90f0b39cd71ba633da5990259e185979c2859ec2e04dd8efcdafe356\", \"is_private\": true, \"analysis_time\": \"Thu, 14 Feb 2019 08:58:27 GMT\"}}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Intezer",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Submit File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The paths of the file to analyze.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "File Paths",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "ScriptResultName": "verdicts",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Add entities to the watchlist in Exabeam Advanced Analytics. Note: Watchlists with category 'AssetLabels' and 'UserLabels' are not supported in this action.",
+    "Id": -1,
+    "IntegrationIdentifier": "ExabeamAdvancedAnalytics",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Add Entity To Watchlist",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the title of the watchlist of which you want to add entities.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Watchlist Title",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"USERUNIQNAME\", \"HOSTNAME\"]}"
+}

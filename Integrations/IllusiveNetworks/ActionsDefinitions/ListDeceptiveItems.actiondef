@@ -1,0 +1,69 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "List available deceptive items in Illusive Networks.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"users\": [{\"username\": \"Administrator\", \"password\": \"xxxxx\", \"domainName\": \"siemplifylab.xxxx\", \"policyNames\": [\"Full Protection\"], \"adUser\": true, \"activeUser\": true, \"deceptiveState\": \"APPROVED\"}, {\"username\": \"accountpriv\", \"password\": \"xxxxxx\", \"domainName\": \"siemplifylab.xxxx\", \"policyNames\": [], \"adUser\": false, \"activeUser\": false, \"deceptiveState\": \"SUGGESTED\"}], \"servers\": [{\"host\": \"ex001.xxxx.local\", \"serviceTypes\": [\"WEB\", \"SSH\", \"SHARE\", \"DB\"], \"policyNames\": [\"Full Protection\"], \"adHost\": true, \"deceptiveState\": \"APPROVED\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "IllusiveNetworks",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "List Deceptive Items",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "All",
+            "Description": "Specify what kind of deceptive items should be returned.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Deceptive Type",
+            "Type": 15,
+            "OptionalValues": [
+                "All",
+                "Only Users",
+                "Only Servers"
+            ],
+            "Value": "All"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "All",
+            "Description": "Specify what kind of deceptive items should be returned based on state.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Deceptive State",
+            "Type": 15,
+            "OptionalValues": [
+                "All",
+                "Only Approved",
+                "Only Suggested"
+            ],
+            "Value": "All"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many items to return. Default: 50. If nothing is specified, action will return all items.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "Name": "Max Items To Return",
+            "Type": 0,
+            "Value": 50
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

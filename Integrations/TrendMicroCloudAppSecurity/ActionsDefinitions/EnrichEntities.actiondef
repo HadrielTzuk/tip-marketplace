@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Enrich entities with information from Trend Micro Cloud App Security. Supported entities: URL, Hash and Email (User entity that matches email address pattern). Note: action will use the domain part out of the URL during the enrichment.",
+    "Id": -1,
+    "IntegrationIdentifier": "TrendMicroCloudAppSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"blocked_urls\": [\"https://url.com\"], \"blocked_senders\": [\"test1@test.com\", \"test2@test.com\"],\"blocked_hashes\": [\"85136c79cbf9fe36bb9d05d0639c70c265c18xxx\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Enrich Entities",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\",\"FILEHASH\", \"USER\"]}"
+}

@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1514127776974,
+    "Creator": "admin",
+    "Description": "Add files to Slack and share them with your teammates to help you collaborate. Uploaded files are stored, searchable, and shareable across your workspace. Note that action is not working on Siemplify entities.",
+    "Id": -1,
+    "IntegrationIdentifier": "Slack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1514127776974,
+    "Name": "Upload File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517932609612,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name(title) that should be used to show in Slack for the uploaded file.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517932609612,
+            "Name": "File Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517932609612,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the full file path on the Siemplify server for the file to upload.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517932609612,
+            "Name": "File Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517932609612,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the Slack channel or the email address of the user to whom to send the message.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517932609612,
+            "Name": "Channel",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

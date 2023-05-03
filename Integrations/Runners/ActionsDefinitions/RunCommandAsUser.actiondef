@@ -1,0 +1,77 @@
+{
+    "CreationTimeUnixTimeInMs": 1529571555568,
+    "Creator": "admin",
+    "Description": "Run a command as a user (Windows only)",
+    "Id": -1,
+    "IntegrationIdentifier": "Runners",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1529571555568,
+    "Name": "Run Command As User",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529571555568,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The command to run, e.g: whoami",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529571555568,
+            "Name": "Command",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529571555568,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529571555568,
+            "Name": "Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529571555568,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "User's domain.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529571555568,
+            "Name": "Domain",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529571555568,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529571555568,
+            "Name": "Password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529571555568,
+            "CustomActionId": -1,
+            "DefaultValue": "true",
+            "Description": "Whether to run in the background or not",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529571555568,
+            "Name": "Daemon",
+            "Type": 1,
+            "Value": "true"
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nimport pywintypes\nimport win32api\nimport win32security\nimport win32con\nimport win32process\nimport win32file\nimport win32pipe\nimport win32profile\nimport win32event\nimport winerror\nimport random\n\nPIPE_NAME = r'\\\\.\\pipe\\vmpie-{}'\nBUFFER_SIZE = 4096\n\n\ndef create_named_pipe(sids=None):\n    \"\"\"\n    Create a named pipe.\n    :param sids: {list} The sids to grant access to the pipe\n    :return: {tuple} (The pipe, the name of the pipe)\n    \"\"\"\n    if sids is None:\n        sattrs = None\n    else:\n        # Create the security attributes of the pipe\n        sattrs = create_security_attributes(\n            sids,\n            access=win32con.PROCESS_ALL_ACCESS\n        )\n\n    # Try to create a named pipe (find a free name)\n    for i in range(100):\n        name = PIPE_NAME.format(random.randint(0, 999999))\n        try:\n            # Try to create the named pipe\n            pipe = win32pipe.CreateNamedPipe(\n                name,\n                win32con.PIPE_ACCESS_DUPLEX,\n                0, 1, 65536, 65536,\n                100000, sattrs\n\n            )\n\n            # Set the inheritance info of the pipe\n            win32api.SetHandleInformation(\n                pipe,\n                win32con.HANDLE_FLAG_INHERIT,\n                0)\n\n        except WindowsError, e:\n            if e.winerror != winerror.ERROR_PIPE_BUSY:\n                # Pipe name is taken - try again with another name\n                raise\n        else:\n            return pipe, name\n\n    raise Exception(\"Could not create pipe after 100 attempts.\")\n\n\ndef create_security_attributes(sids, inherit=False,\n                               access=win32con.GENERIC_READ |\n                                      win32con.GENERIC_WRITE):\n    \"\"\"\n    Create a SECURITY_ATTRIBUTES structure.\n    :param sids: {list} The sids to grant access to in the security attributes\n    :param inherit: {bool} Whether to inherit handles or not\n    :param access: {int} The access to grant\n    :return: {SECURITY_ATTRIBUTES} The security attributes\n    \"\"\"\n\n    attr = win32security.SECURITY_ATTRIBUTES()\n    attr.bInheritHandle = inherit\n\n    desc = win32security.SECURITY_DESCRIPTOR()\n    dacl = win32security.ACL()\n\n    for sid in sids:\n        dacl.AddAccessAllowedAce(\n            win32security.ACL_REVISION_DS, access, sid\n        )\n\n    desc.SetSecurityDescriptorDacl(True, dacl, False)\n\n    attr.SECURITY_DESCRIPTOR = desc\n    return attr\n\n\ndef lookup_sid(domain, username):\n    \"\"\"\n    Get the sid of a user by domain and username\n    :param domain: {str} The domain\n    :param username: {str} The username\n    :return: {PySID} The sid\n    \"\"\"\n    return win32security.LookupAccountName(domain, username)[0]\n\n\ndef create_startup_info(stdin_name,\n                        stdout_name,\n                        stderr_name,\n                        daemon=False):\n    \"\"\"\n    Create the startup info for a process\n    :param stdin_name: {str} The name of the stdin pipe\n    :param stdout_name: {str} The name of the stdout pipe\n    :param stderr_name: {str} The name of the stderr pipe\n    :param daemon: {bool} Thether to run in the background or not\n    :return: {STARTUPINFO} The startup info\n    \"\"\"\n    startupinfo = win32process.STARTUPINFO()\n    startupinfo.dwFlags |= win32con.STARTF_USESTDHANDLES | win32con.STARTF_USESHOWWINDOW\n\n    if daemon:\n        # Hide the window\n        startupinfo.wShowWindow = win32con.SW_HIDE\n\n    else:\n        # Show the window\n        startupinfo.wShowWindow = win32con.SW_SHOWNORMAL\n\n    # Get the named pipes\n    stdin_pipe = win32file.CreateFile(stdin_name,\n                                      win32con.GENERIC_READ,\n                                      0, None,\n                                      win32con.OPEN_EXISTING,\n                                      0, None)\n\n    # Make sure the pipe handles are inherited\n    win32api.SetHandleInformation(stdin_pipe,\n                                  win32con.HANDLE_FLAG_INHERIT,\n                                  1)\n    stdout_pipe = win32file.CreateFile(stdout_name,\n                                       win32con.GENERIC_WRITE,\n                                       0, None,\n                                       win32con.OPEN_EXISTING,\n                                       0, None)\n    # Make sure the pipe handles are inherited\n    win32api.SetHandleInformation(stdout_pipe,\n                                  win32con.HANDLE_FLAG_INHERIT,\n                                  1)\n    stderr_pipe = win32file.CreateFile(stderr_name,\n                                       win32con.GENERIC_WRITE,\n                                       0, None,\n                                       win32con.OPEN_EXISTING,\n                                       0, None)\n    # Make sure the pipe handles are inherited\n    win32api.SetHandleInformation(stderr_pipe,\n                                  win32con.HANDLE_FLAG_INHERIT,\n                                  1)\n    # Set the process's std pipes\n    startupinfo.hStdInput = stdin_pipe\n    startupinfo.hStdOutput = stdout_pipe\n    startupinfo.hStdError = stderr_pipe\n\n    return startupinfo\n\n\ndef get_current_sid():\n    \"\"\"\n    Get the current process's / thread's sid\n    :return: {PySID} The sid\n    \"\"\"\n    try:\n        # Try to get the token of the current thread\n        token = win32security.OpenThreadToken(\n            win32api.GetCurrentThread(),\n            win32con.MAXIMUM_ALLOWED, True)\n    except:\n        # Try to get the token of the current process\n        token = win32security.OpenProcessToken(\n            win32api.GetCurrentProcess(),\n            win32con.MAXIMUM_ALLOWED)\n\n    # Get the sid by token\n    return win32security.GetTokenInformation(\n        token,\n        win32security.TokenUser\n    )[0]\n\n\ndef run_as(command, username, domain, password, deamon=False):\n    \"\"\"\n    Run a command as another user\n    :param command: {str} The command to run\n    :param username: {str} The username\n    :param domain: {str} The domain\n    :param password: {str} The password\n    :param deamon: {bool} Whether to run in the background or not\n    :return:  {int, PyHANDLE, PyHANDLE, PyHANDLE, PyHANDLE} pid, process_handle, stdin_pipe, stdout_pipe, stderr_pipe\n    \"\"\"\n    # Get user's token\n    usertoken = win32security.LogonUser(\n        username, domain, password,\n        win32con.LOGON32_LOGON_INTERACTIVE,\n        win32con.LOGON32_PROVIDER_DEFAULT,\n    )\n\n    # Get the sid's of the current user and the given user to run the process as\n    sids = [get_current_sid(), lookup_sid(domain, username)]\n\n    # Create security attributes\n    if sids is None:\n        sattrs = None\n    else:\n        sattrs = create_security_attributes(\n            sids,\n            inherit=True,\n            access=win32con.PROCESS_ALL_ACCESS\n        )\n\n    # Create the named pipes\n    stdin_pipe, stdin_name = create_named_pipe(sids)\n    stdout_pipe, stdout_name = create_named_pipe(sids)\n    stderr_pipe, stderr_name = create_named_pipe(sids)\n\n    # Make sure that the parent process's pipe ends are not inherited\n    win32api.SetHandleInformation(stdin_pipe,\n                                  win32con.HANDLE_FLAG_INHERIT,\n                                  0)\n    win32api.SetHandleInformation(stdout_pipe,\n                                  win32con.HANDLE_FLAG_INHERIT,\n                                  0)\n    win32api.SetHandleInformation(stderr_pipe,\n                                  win32con.HANDLE_FLAG_INHERIT,\n                                  0)\n\n    environment = win32profile.CreateEnvironmentBlock(usertoken, False)\n    profile_dir = win32profile.GetUserProfileDirectory(usertoken)\n\n    # Create process's startup info\n    startup_info = create_startup_info(stdin_name,\n                                       stdout_name,\n                                       stderr_name,\n                                       deamon\n                                       )\n\n    # Create process\n    res = win32process.CreateProcessAsUser(\n        usertoken, None, command, sattrs, None, True,\n        win32con.CREATE_NEW_CONSOLE,\n        environment, profile_dir,\n        startup_info)\n\n    process_handle = res[0]  # The process handle\n    res[1].Close()  # Close the thread handle - not relevant\n    pid = res[2]  # The pid\n\n    # Connect to the pipes\n    win32pipe.ConnectNamedPipe(stdin_pipe)\n    win32pipe.ConnectNamedPipe(stdout_pipe)\n    win32pipe.ConnectNamedPipe(stderr_pipe)\n\n    return pid, process_handle, stdin_pipe, stdout_pipe, stderr_pipe\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    command = siemplify.parameters['Command']\n    username = siemplify.parameters['Username']\n    password = siemplify.parameters['Password']\n    domain = siemplify.parameters['Domain']\n    daemon = siemplify.parameters['Daemon'].lower() == 'true'\n\n    pid, process_handle, stdin_pipe, stdout_pipe, stderr_pipe = run_as(\n        command, username, domain, password, daemon)\n\n    # Wait for the process to complete\n    win32event.WaitForSingleObject(process_handle, win32event.INFINITE)\n\n    # Get return code\n    return_code = win32process.GetExitCodeProcess(process_handle)\n\n    # Close the process handle\n    process_handle.Close()\n\n    stdout = \"\"\n    stderr = \"\"\n\n    try:\n        while True:\n            # Read from stdout\n            stdout += win32file.ReadFile(stdout_pipe, BUFFER_SIZE)[1]\n    except pywintypes.error as e:\n        if e.winerror == winerror.ERROR_BROKEN_PIPE:\n            # Pipe is closed - no more data to read from the pipe\n            pass\n        else:\n            raise\n\n    try:\n        while True:\n            # Read from stderr\n            stderr += win32file.ReadFile(stderr_pipe, BUFFER_SIZE)[1]\n    except pywintypes.error as e:\n        if e.winerror == winerror.ERROR_BROKEN_PIPE:\n            # Pipe is closed - no more data to read from the pipe\n            pass\n        else:\n            raise\n\n    # Close the std pipes\n    stdout_pipe.Close()\n    stderr_pipe.Close()\n\n\n    if return_code:\n        siemplify.end(stderr, 'false')\n\n    siemplify.end(stdout, 'true')\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

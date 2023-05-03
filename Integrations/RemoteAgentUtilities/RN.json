@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "New action for serializing files.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Serialize A File",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1605008252,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4603"
+    },
+    {
+        "ChangeDescription": "New action for deserializing files.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Deserialize A File",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1605008252,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4602"
+    },
+    {
+        "ChangeDescription": "Updated integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Remote Agent Utilities",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1670388158,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13385"
+    }
+]

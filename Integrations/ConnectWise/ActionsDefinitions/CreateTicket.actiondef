@@ -1,0 +1,103 @@
+{
+    "CreationTimeUnixTimeInMs": 1515694824063,
+    "Creator": "admin",
+    "Description": "Create a ConnectWise ticket",
+    "Id": -1,
+    "IntegrationIdentifier": "ConnectWise",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515694824063,
+    "Name": "Create Ticket",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516115246049,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Company identifier",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516115246049,
+            "Name": "Company",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516115246049,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "ConnectWise member name to assign this ticket to, e.g. connectwise_user_1.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516115246049,
+            "Name": "Owner Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516115246049,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Board name",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516115246049,
+            "Name": "Board",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516115246049,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516115246049,
+            "Name": "Summary",
+            "Type": 11,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516115246049,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "e.g. Unassigned",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516115246049,
+            "Name": "Status",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516115246049,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "e.g. Priority 3 - Normal Response",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516115246049,
+            "Name": "Priority",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CustomActionId": 0,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of email addresses that should receive all of the notes via email.",
+            "Name": "Email Note CC",
+            "Value": "",
+            "Type": 0,
+            "OptionalValues": null,
+            "OptionalValuesJson": null,
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1654514846560,
+            "ModificationTimeUnixTimeInMs": 1654514846560
+        }
+    ],
+    "Script": "from SiemplifyDataModel import EntityTypes\r\n# Imports\r\nfrom SiemplifyAction import SiemplifyAction\r\nfrom ConnectWiseManager import ConnectWiseManager\r\n\r\n\r\ndef main():\r\n\r\n    # Variables Definitions.\r\n    output_message = ''\r\n    result_value = False\r\n\r\n    siemplify = SiemplifyAction()\r\n    # Configuration.\r\n    configuration_settings = siemplify.get_configuration('ConnectWise')\r\n    company_url = configuration_settings['Api Root']\r\n    company_name = configuration_settings['Company Name']\r\n    public_key = configuration_settings['Public Key']\r\n    private_key = configuration_settings['Private Key']\r\n    connectwise_manager = ConnectWiseManager(company_url, company_name, public_key, private_key)\r\n\r\n    # Parameters.\r\n    company = siemplify.parameters['Company']\r\n    board = siemplify.parameters['Board']\r\n    summary = siemplify.parameters['Summary']\r\n    status = siemplify.parameters['Status']\r\n    priority_id = siemplify.parameters['Priority']\r\n\r\n    # Execute Create Ticket.\r\n    ticket_id = connectwise_manager.create_ticket(summary, company, board, status, priority_id)\r\n\r\n    if ticket_id:\r\n        output_message = \"Created ticket with id: {0}\".format(ticket_id)\r\n        result_value = ticket_id\r\n    else:\r\n        output_message = 'There was a problem creating ticket.'\r\n\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n",
+    "ScriptResultName": "ticket_id",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

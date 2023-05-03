@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1532525447106, 
+    "Creator": "admin", 
+    "Description": "Reverse DNS lookup returns domain name associated with specific IP", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [{\"IP Address\": \"1.1.1.1\", \"Type\": \"PTR\", \"Domain Name\": \"google-public-dns-a.google.com\", \"TTL\": \"24 hrs\"}], \"Entity\": \"1.1.1.1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "MXToolBox", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1532525447106, 
+    "Name": "Reverse DNS Lookup", 
+    "Parameters": [], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom MXToolBoxManager import MXToolBoxManager\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\n\nMXTOOLBOX_PROVIDER = 'MXToolBox'\nSCRIPT_NAME = 'MXToolBox_DNS_Lookup'\nTABLE_NAME = 'Results'\n\ndef main():\n    # Configurations.\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    conf = siemplify.get_configuration(MXTOOLBOX_PROVIDER)\n    verify_ssl = True if conf['Verify SSL'] == 'true' else False\n    mx_tool_box_manager = MXToolBoxManager(conf['API Root'], conf['API Key'], verify_ssl)\n\n    # Variables.\n    errors = []\n    success_entities = []\n    result_domains = []\n    result_dict = {}\n    result_value = False\n\n    target_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.ADDRESS]\n\n    for entity in target_entities:\n        try:\n            result = mx_tool_box_manager.address_ptr_lookup(entity.identifier)\n            if result:\n                success_entities.append(entity)\n                result_value = True\n                result_domains.extend([recoed.get('Domain Name') for record in result])\n                result_dict[entity.identifier] = \";\".join([recoed.get('Domain Name') for record in result])\n        except Exception as err:\n            error_message = 'Error fetching DNS lookup data for \"{0}\", ERROR: {1}'.format(entity.identifier,\n                                                                                         unicode(err))\n            errors.append(error_message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n\n    if result_value:\n        output_message = \"Found results for: {0}\".format(\",\".join([entity.identifier for entity in success_entities]))\n        siemplify.result.add_entity_table(TABLE_NAME, flat_dict_to_csv(result_dict))\n\n    else:\n        output_message = 'Not found data for target entities.'\n\n    if errors:\n        output_message = \"{0}  \\n \\n {1}\".format(output_message, \" \\n \".join(errors))\n\n    siemplify.end(output_message, \",\".join(result_domains))\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "ptr_domains", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 1.0
+}

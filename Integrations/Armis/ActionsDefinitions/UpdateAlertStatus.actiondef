@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Update status of the alert in Armis.",
+    "Id": -1,
+    "IntegrationIdentifier": "Armis",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Update Alert Status",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the id of the alert for which you want to update status.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Alert ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Unhandled",
+            "Description": "Specify what status should be set for the alert.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Status",
+            "OptionalValues": [
+                "Unhandled",
+                "Suppressed",
+                "Resolved"
+            ],
+            "Type": 15,
+            "Value": "Unhandled"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "SimulationDataJson": "{\"Entities\":[]}",
+    "Version": 1.0
+}

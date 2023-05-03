@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1534436861977,
+    "Creator": "Admin",
+    "Description": "Test McAfeeATD connectivity.",
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeATD",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534436861977,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom McAfeeATDManager import McAfeeATDManager\n\nPROVIDER = \"McAfeeATD\"\nACTION_NAME = \"McAfeeATD_Ping\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.action_definition_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    atd_manager = McAfeeATDManager(server_address=conf.get('Server Address'),\n                                   username=conf.get('Username'),\n                                   password=conf.get('Password'),\n                                   verify_ssl=verify_ssl)\n    atd_manager.logout()\n\n    siemplify.end('Connection Established', True)\n\n\nif __name__ == \"__main__\":\n    main()",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

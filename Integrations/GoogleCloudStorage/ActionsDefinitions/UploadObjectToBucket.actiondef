@@ -1,0 +1,58 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Upload an object to a Cloud Storage bucket.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleCloudStorage",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"object_id\":\"XXXXXX/myFile/11111\",\"Object_name\":\"myFile\",\"md5_hash\":\"XXXXXXXX\",\"object_path\":\"/dir/myFile\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Upload an Object To a Bucket",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the bucket in which to upload the object.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Bucket Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "/{local}/{path_to}/{filename}",
+            "Description": "Specify the absolute path to the file that needs to be uploaded. Example: /loca/path/to/filename",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Source File Path",
+            "Type": 0,
+            "Value": "/{local}/{path_to}/{filename}"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the uploaded object within the bucket.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Object Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

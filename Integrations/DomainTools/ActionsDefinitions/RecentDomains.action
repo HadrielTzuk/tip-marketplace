@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1515581493987,
+    "Creator": "admin",
+    "Description": "Search for new domains containing a  particular word",
+    "Id": -1,
+    "IntegrationIdentifier": "DomainTools",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515581493987,
+    "Name": "Recent Domains",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1515585338359,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Search for new domains containing a particular word",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1515585338359,
+            "Name": "String Query",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

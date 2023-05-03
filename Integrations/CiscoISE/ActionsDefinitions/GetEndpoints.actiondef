@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1527667507811,
+    "Creator": "admin",
+    "Description": "Get requested endpoint data from endpoints monitored by Cisco ISE",
+    "Id": -1,
+    "IntegrationIdentifier": "CiscoISE",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527667507811,
+    "Name": "Get Endpoints",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CiscoISEManager import CiscoISEManager\nfrom SiemplifyUtils import dict_to_flat, construct_csv\n\nCISCOISE_PROVIDER = \"CiscoISE\"\nTABLE_HEADER = \"Endpoints Data\"\n\n\ndef main():\n    # Configuration.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(CISCOISE_PROVIDER)\n    cim = CiscoISEManager(conf['API Root'], conf['Username'], conf['Password'], conf['Verify SSL'])\n\n    # Variables.\n    result_value = False\n\n    endpoints_objects_list = cim.get_endpoints()\n    if endpoints_objects_list:\n        endpoints_objects_list = map(dict_to_flat, endpoints_objects_list)\n        csv_result = construct_csv(endpoints_objects_list)\n\n        siemplify.result.add_data_table(TABLE_HEADER, csv_result)\n        result_value = True\n        output_message = \"Endpoints found.\"\n    else:\n        output_message = \"No Endpoints found.\"\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

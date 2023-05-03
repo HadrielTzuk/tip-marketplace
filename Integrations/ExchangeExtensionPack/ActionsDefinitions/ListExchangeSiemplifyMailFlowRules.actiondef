@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Action will get as a parameter a rule name and will list it. Note - to use this action, please make sure you have Organization Management permissions, as stated here: https://docs.microsoft.com/en-us/exchange/permissions-exo/feature-permissions",
+    "Id": -1,
+    "IntegrationIdentifier": "ExchangeExtensionPack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Exchange-Siemplify Mail Flow Rules",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Priority\":0,\"ManuallyModified\":false,\"Description\":\"If the message:\\r\\n\\tIs received from 'test@example1.com' or 'test@example2.com'\\r\\nTake the following actions:\\r\\n\\tDelete the message without notifying the recipient or sender\\r\\n\",\"Conditions\":[\"Microsoft.Exchange.MessagingPolicies.Rules.Tasks.FromPredicate\"],\"Actions\":[\"Microsoft.Exchange.MessagingPolicies.Rules.Tasks.DeleteMessageAction\"],\"State\":\"Enabled\",\"Mode\":\"Enforce\",\"FromAddressContainsWords\":null,\"Identity\":\"Siemplify - Senders List - Permanently Delete\",\"Name\":\"Siemplify - Senders List - Permanently Delete\",\"DistinguishedName\":\"CN=Siemplify - Senders List - Permanently Delete,CN=TransportVersioned,CN=Rules,CN=Transport Settings,CN=mwc,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=exlab,DC=local\",\"IsValid\":true,\"From\":[\"test@example1.com\",\"test@example2.com\"],\"Guid\":\"xxxxx426-b665-41f9-82e0-0f1fd63xxxxx\",\"ImmutableId\":\"xxxxx426-b665-41f9-82e0-0f1fd63xxxxx\",\"WhenChanged\":\"/Date(1621952909000)/\",\"ExchangeVersion\":\"0.1 (8.0.535.0)\",\"OrganizationId\":\"\",\"ObjectState\":\"Unchanged\"},{\"Priority\":1,\"ManuallyModified\":false,\"Description\":\"If the message:\\r\\n\\tIncludes these words in the sender's address: 'example1.com' or 'example2.com'\\r\\nTake the following actions:\\r\\n\\tDelete the message without notifying the recipient or sender\\r\\n\",\"Conditions\":[\"Microsoft.Exchange.MessagingPolicies.Rules.Tasks.FromAddressContainsPredicate\"],\"Actions\":[\"Microsoft.Exchange.MessagingPolicies.Rules.Tasks.DeleteMessageAction\"],\"State\":\"Enabled\",\"Mode\":\"Enforce\",\"FromAddressContainsWords\":[\"example1.com\",\"example2.com\"],\"Identity\":\"Siemplify - Domains List - Permanently Delete\",\"Name\":\"Siemplify - Domains List - Permanently Delete\",\"DistinguishedName\":\"CN=Siemplify - Domains List - Permanently Delete,CN=TransportVersioned,CN=Rules,CN=Transport Settings,CN=mwc,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=exlab,DC=local\",\"IsValid\":true,\"From\":null,\"Guid\":\"xxxxx697-e143-41aa-8dee-b783a78xxxxx\",\"ImmutableId\":\"xxxxx697-e143-41aa-8dee-b783a78xxxxx\",\"WhenChanged\":\"/Date(1621952960000)/\",\"ExchangeVersion\":\"0.1 (8.0.535.0)\",\"OrganizationId\":\"\",\"ObjectState\":\"Unchanged\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Rule Name To List",
+            "Type": 15,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the Rule name you would like to list",
+            "OptionalValues": [
+                "Siemplify - Senders List - Permanently Delete",
+                "Siemplify - Domains List - Permanently Delete",
+                "All available Exchange-Siemplify Mail Flow Rules"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

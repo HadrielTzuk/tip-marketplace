@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "List reports related to threat indicators in Cofense Triage.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\": \"string\", \"type\": \"string\", \"links\": {\"self\": \"string\"}, \"attributes\": {\"location\": \"string\", \"risk_score\": null, \"from_address\": null, \"subject\": \"string\", \"received_at\": \"string\", \"reported_at\": \"string\", \"raw_headers\": \"string\", \"md5\": \"string\", \"sha256\": \"string\", \"match_priority\": \"string\", \"tags\": [], \"categorization_tags\": [], \"processed_at\": null, \"created_at\": \"string\", \"updated_at\": \"string\"}, \"meta\": {\"risk_score_summary\": null}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "CofenseTriage",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "List Reports Related To Threat Indicators",
+    "Parameters": [        
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": false, 
+            "Description": "If enabled, action will create a case wall table with information about reports,", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Create Case Wall Table", 
+            "Type": 1, 
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "100", 
+            "Description": "Specify how many reports to return.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Max Reports To Return", 
+            "Type": 0, 
+            "Value": "100"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

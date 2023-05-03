@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1542639124241,
+    "Creator": "Admin",
+    "Description": "Fetch mail message's EML information.",
+    "Id": -1,
+    "IntegrationIdentifier": "Email",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542639124241,
+    "Name": "Get Mail EML File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542639124241,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": null,
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542639124241,
+            "Name": "Message ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542639124241,
+            "CustomActionId": -1,
+            "DefaultValue": "true",
+            "Description": null,
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542639124241,
+            "Name": "Base64 Encode",
+            "Type": 1,
+            "Value": "true"
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom EmailManager import EmailManager\nfrom base64 import b64encode\nimport os\nimport json\n\nPROVIDER = \"Email\"\nACTIONS_NAME = 'Email_Get Mail EML File.'\nEML_FILE_NAME_PATTERN = '{0}.eml'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTIONS_NAME\n\n    # Configuration\n    conf = siemplify.get_configuration(PROVIDER)\n    from_address = conf[\"Sender's address\"]\n    imap_host = conf['IMAP Server Address']\n    imap_port = str(conf['IMAP Port'])\n    username = conf['Username']\n    password = conf['Password']\n    use_ssl = True if conf['IMAP USE SSL'] == 'True' else False\n\n    email_manager = EmailManager(from_address)\n\n    # IMAP Login\n    email_manager.login_imap(host=imap_host, port=imap_port, username=username, password=password, use_ssl=use_ssl)\n\n    message_id = siemplify.parameters.get(\"Message ID\")\n    is_result_value_base64 = siemplify.parameters.get('Return Base64', 'false').lower() == 'true'\n\n    eml_json_data = email_manager.get_message_data_by_message_id(message_id)\n    eml_base64 = email_manager.get_message_data_by_message_id(message_id, is_base64=True)\n    siemplify.result.add_attachment(message_id, EML_FILE_NAME_PATTERN.format(message_id), eml_json_data)\n\n    siemplify.end(output_message, eml_base64 if is_result_value_base64 else json.dumps(eml_json_data))\n\n\nif __name__ == \"__main__\":\n    main()\n\n\n\n",
+    "ScriptResultName": "eml_base64",
+    "Version": 3.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

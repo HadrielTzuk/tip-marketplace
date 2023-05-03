@@ -1,0 +1,34 @@
+{
+    "CreationTimeUnixTimeInMs": 1524560820281,
+    "Creator": "klim.lyapin@siemplify.co",
+    "Description": "Get Details of the Azure Sentinel Scheduled Alert Rule",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Kind\": \"MLBehaviorAnalytics\", \"Name\": \"872ddb07-0415-4e57-b519-xxxx\", \"ID\": \"/subscriptions/a052d33b-b7c4-4dc7-9e17-xxxx/resourceGroups/Sentinel-Check/providers/Microsoft.OperationalInsights/workspaces/sentinelWork01/providers/Microsoft.SecurityInsights/alertRules/872ddb07-0415-4e57-b519-xxxx\", \"ETag\": \"\\\"62003e11-0000-0d00-0000-xxxx\\\"\", \"Type\": \"Microsoft.SecurityInsights/alertRules\", \"Properties\": {\"Tactics\": [\"InitialAccess\"], \"Severity\": \"Medium\", \"Suppression_Enabled\": null, \"Query_Period\": null, \"Enabled\": true, \"Query_Frequency\": null, \"Alert_Rule_Template_Name\": \"fa118b98-de46-4e94-87f9-xxxx\", \"Display_Name\": \"(Preview) Anomalous SSH Login Detection\", \"Description\": \"This detection uses machine learning (ML) to identify anomalous Secure Shell (SSH) login activity, based on syslog data. Scenarios include:\\n\\n* Impossible travel \\u2013 when two successful login events occur from two locations that are impossible to reach within the timeframe of the two login events.\\n* Unexpected location \\u2013 the location from where a successful login event occurred is suspicious. For example, the location has not been seen recently.\\n\\nAllow two weeks after this alert is enabled for Azure Sentinel to build a profile of normal activity for your environment.\\n\\nThis detection requires a specific configuration of the data source. [Learn more](https://aka.ms/SentinelAnomalousSSHLoginDetection)\", \"Last_Modified_UTC\": \"2020-01-04T04:23:03.5607962Z\", \"Suppression_Duration\": null, \"Trigger\": null, \"Query\": null}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftAzureSentinel",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524560820281,
+    "Name": "Get Alert Rule Details",
+    "Parameters": [
+        {
+            "CustomActionId": -1,
+            "IsMandatory": true,
+            "DefaultValue": "",
+            "Description": "Alert Rule ID",
+            "Name": "Alert Rule ID",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

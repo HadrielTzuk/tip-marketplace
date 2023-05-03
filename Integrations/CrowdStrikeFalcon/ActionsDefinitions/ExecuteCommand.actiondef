@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1530453435544,
+    "Creator": "admin",
+    "Description": "Execute commands on the hosts in Crowdstrike Falcon. Supported entities: IP Address and Hostname.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Entity\":\"XXX.XXX.XXX\",\"EntityResult\":{\"session_id\":\"2a066818-XXXX-XXXX-XXXX-c295ed7295b3\",\"task_id\":\"84846f59-XXXX-XXXX-XXXX-12af4af88a8b\",\"complete\":true,\"stdout\":\"\",\"stderr\":\"\",\"base_command\":\"get\"}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "CrowdStrikeFalcon",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530453435544,
+    "Name": "Execute Command",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what command to execute on the hosts.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Command",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}",
+    "Version": 1.0,
+    "IsAsync": true
+}

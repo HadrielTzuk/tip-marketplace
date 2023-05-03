@@ -1,0 +1,51 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Action will get as a parameter a list of Domains, and will be able to remove the provided domains from the existing rules. Note - to use this action, please make sure you have Organization Management permissions, as stated here: https://docs.microsoft.com/en-us/exchange/permissions-exo/feature-permissions",
+    "Id": -1,
+    "IntegrationIdentifier": "ExchangeExtensionPack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Remove Domains from Exchange-Siemplify Mail Flow Rules",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"success\":[\"test1.com\",\"test2.com\"],\"didn't_exist\":[\"test3.com\"],\"invalid\":[\"invalid\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Domains",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the Domains you would like to remove from the rule, in a comma separated list.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Rule to remove Domains from",
+            "Type": 15,
+            "DefaultValue": "Siemplify - Domains List - Permanently Delete",
+            "Value": "Siemplify - Domains List - Permanently Delete",
+            "IsMandatory": true,
+            "Description": "Specify the rule to remove the Domains from. If the rule doesn't exist - action will do nothing.",
+            "OptionalValues": [
+                "Siemplify - Domains List - Permanently Delete"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

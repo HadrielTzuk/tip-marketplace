@@ -1,0 +1,96 @@
+{
+    "CreationTimeUnixTimeInMs": 1517417120995,
+    "Creator": "admin",
+    "Description": "Add a note to a request. Note: Please update the actual time you would like the action to run in the IDE timeout section for this action.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"response_status\": {\"status_code\": 2000, \"status\": \"success\"}, \"request_note\": {\"created_time\": {\"display_value\": \"Nov 10, 2020 01:14 AM\", \"value\": \"16xxx99678651\"}, \"request\": {\"subject\": \"New Subject Dropdown\", \"id\": \"54\"}, \"show_to_requester\": false, \"description\": \"New Note\", \"id\": \"00\", \"created_by\": {\"email_id\": null, \"name\": \"administrator\", \"is_vipuser\": false, \"id\": \"4\", \"department\": null}}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "ServiceDeskPlusV3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517417120995,
+    "Name": "Add Note And Wait For Reply",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517835376849,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The requests' ID.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517835376849,
+            "Name": "Request ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517835376849,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The note's content.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517835376849,
+            "Name": "Note",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "Specify whether the note should be shown to the requester or not.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Show To Requester",
+            "Type": 1,
+            "Value": "False"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "Specify whether the note should be shown to the requester or not ",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Notify Technician",
+            "Type": 1,
+            "Value": "False"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "Specify whether this note should be marked as first response",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Mark First Response",
+            "Type": 1,
+            "Value": "False"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "Specify whether this note should be added to the linked requests",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Add To Linked Requests",
+            "Type": 1,
+            "Value": "False"
+        }   
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

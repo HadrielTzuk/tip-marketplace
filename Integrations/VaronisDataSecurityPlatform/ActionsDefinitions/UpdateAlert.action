@@ -1,0 +1,62 @@
+{
+    "CreationTimeUnixTimeInMs": 1669683440000,
+    "Creator": "admin",
+    "Description": "Update status of alerts ingested from the Varonis Data Security Platform connector with parameters provided at the integration configuration page on the Marketplace tab.",
+    "Id": -1,
+    "IntegrationIdentifier": "VaronisDataSecurityPlatform",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1669683440000,
+    "Name": "Update Alert",
+    "Parameters": [
+        {
+            "Name": "Alert GUID",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify alert GUID for the update. This action can run on multiple alerts. Multiple alerts can be specified as a comma-separated string.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Alert Status",
+            "Type": 15,
+            "Value": "Select One",
+            "DefaultValue": "Select One",
+            "IsMandatory": true,
+            "Description": "Specify the alert status to update to.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "OptionalValues": [
+                "Select One",
+                "Open",
+                "Under Investigation",
+                "Closed"
+            ]
+        },
+        {
+            "Name": "Closing Reason",
+            "Type": 15,
+            "Value": "Not Provided",
+            "DefaultValue": "Not Provided",
+            "IsMandatory": false,
+            "Description": "Specify the closing reason for the alert. When the alert status is changed to \"closed\", closing reason must be specified.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "OptionalValues": [
+                "Not Provided",
+                "Resolved",
+                "Misconfiguration",
+                "Threat model disabled or deleted",
+                "Account misclassification",
+                "Legitimate activity",
+                "Other"
+            ]
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

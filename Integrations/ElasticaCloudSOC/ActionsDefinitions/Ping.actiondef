@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1529506605650,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "ElasticaCloudSOC",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1529506605650,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom ElasticaCloudSOCManager import ElasticaCloudSOCManager\n\nELASTICA_PROVIDER = 'ElasticaCloudSOC'\n\n\ndef main():\n    # Configurations.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(ELASTICA_PROVIDER)\n    elastica_manager = ElasticaCloudSOCManager(conf['API Root'],\n                                               conf['Key ID'],\n                                               conf['Key Secret'],\n                                               conf['Verify SSL'])\n\n    result_value = elastica_manager.ping()\n\n    if result_value:\n        output_message = 'Connection Established.'\n    else:\n        output_message = 'Connection Failed.'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n\n",
+    "ScriptResultName": "is_succeed",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

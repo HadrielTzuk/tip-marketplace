@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244, 
+    "Creator": "admin", 
+    "Description": "Add user to a specific Azure AD group. Action expects Siemplify user entity in username@domain format and group id in 00e40000-1971-439d-80fc-d0e000001dbd format.",
+    "Id": -1, 
+    "IntegrationIdentifier": "AzureActiveDirectory", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1570446244, 
+    "Name": "Add User To a Group", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1570446244, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Azure AD group id in 00e40000-1971-439d-80fc-d0e000001dbd format.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1570446244, 
+            "Name": "Group ID", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

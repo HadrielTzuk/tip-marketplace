@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1533147975892,
+    "Creator": "Admin",
+    "Description": "Get PCAP files for events in an alert",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"#0-1B09DN3B0D2011E985730AS799BFE5BC\": \"obLD1AACAAQAAAAAAAAAAAAABdwAAAABV+kUZQAHyFMAAAXqAAAF6gr3GgnfOwobLz7Y6wgARQAF3Dd3QABnBvvXVduqw6wfLg8MmgG7xmc2dMr3EdxQEAD+OgAAABcDAwdVAAAAAAAAAASEw70Ys0kQbz8wdaj1lsHAAA==\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "AlienVaultAppliance",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1533147975892,
+    "Name": "Get PCAP Files For Events",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import construct_csv\nfrom AlienVaultManager import AlienVaultManager, AlienVaultManagerError\nimport base64\n\nPROVIDER = 'AlienVaultAppliance'\nTABLE_NAME = 'PCAP Records'\nPCAP_FILE_NAME = '{0}_{1}.pcap'\nACTION_NAME = 'CBResponse_Get PCAP For Events'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    configurations = siemplify.get_configuration(PROVIDER)\n    server_address = configurations['Api Root']\n    username = configurations['Username']\n    password = configurations['Password']\n\n    alienvault_manager = AlienVaultManager(server_address, username, password)\n\n    result_value = False\n    errors = []\n\n    for event in siemplify.current_alert.security_events:\n        try:\n            pcap_content = alienvault_manager.get_event_pcap(event.event_id)\n            if pcap_content:\n                siemplify.result.add_attachment(event.name,\n                                                PCAP_FILE_NAME.fomat(event.name, event.event_id),\n                                                base64.b64encode(pcap_content))\n                result_value = True\n        except Exception as err:\n            error_message = 'Error fetching PCAP file for event {0}_{1}, ERROR: {2}'.format(event.name, event.event_id,\n                                                                                            str(err))\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(errors)\n\n    if result_value:\n        output_message = 'Found PCAP files for events.'\n    else:\n        output_message = 'Not found PCAP files for events.'\n\n    if errors:\n        output_message = '{0} \\n \\n Errors: \\n \\n  {1}'.format(output_message, ' \\n '.join(errors))\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n\n\n\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

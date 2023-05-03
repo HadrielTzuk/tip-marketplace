@@ -1,0 +1,64 @@
+INTEGRATION_IDENTIFIER = 'Jira'
+SYNC_CLOSURE_SCRIPT = '{} - SyncClosure'.format(INTEGRATION_IDENTIFIER)
+SYNC_COMMENTS_SCRIPT = '{} - SyncComments'.format(INTEGRATION_IDENTIFIER)
+JIRA_CLOSED_STATUS = 'Done'
+DEFAULT_DAYS_BACKWARDS = 1
+CASE_STATUS_CLOSED = 2
+CASE_STATUS_OPEN = 1
+MIN_DAYS_BACKWARDS = 1
+DEFAULT_SIEMPLIFY_COMMENT_PREFIX = 'SIEMPLIFY:'
+DEFAULT_JIRA_COMMENT_PREFIX = 'Jira Comment Sync Job:'
+JIRA_TAG = 'Jira'
+REASON = 'Maintenance'
+ROOT_CAUSE = 'None'
+COMMENT = 'Alert was closed by {}'.format(SYNC_CLOSURE_SCRIPT)
+DEFAULT_DATE_FORMAT = "YYYY/MM/DD"
+MAIL_ATTACHMENT_EXTENSION = ['.eml']
+
+# Action Script Names
+PING_SCRIPT_NAME = "{} - Ping".format(INTEGRATION_IDENTIFIER)
+GET_ISSUES_SCRIPT_NAME = "{} - Get Issues".format(INTEGRATION_IDENTIFIER)
+CREATE_ISSUE_SCRIPT_NAME = "{} - Create Issue".format(INTEGRATION_IDENTIFIER)
+DELETE_ISSUE_SCRIPT_NAME = "{} - Delete Issue".format(INTEGRATION_IDENTIFIER)
+ADD_COMMENT_SCRIPT_NAME = "{} - Add Comment".format(INTEGRATION_IDENTIFIER)
+ASSIGN_ISSUE_SCRIPT_NAME = "{} - Assign Issue".format(INTEGRATION_IDENTIFIER)
+CREATE_ALERT_ISSUE_SCRIPT_NAME = "{} - Create an Alert Issue".format(INTEGRATION_IDENTIFIER)
+LIST_ISSUES_SCRIPT_NAME = "{} - List Issues".format(INTEGRATION_IDENTIFIER)
+UPDATE_ISSUE_SCRIPT_NAME = "{} - Update Issue".format(INTEGRATION_IDENTIFIER)
+UPLOAD_ATTACHMENT_SCRIPT_NAME = "{} - Upload Attachment".format(INTEGRATION_IDENTIFIER)
+DOWNLOAD_ATTACHMENTS_SCRIPT_NAME = "{} - Download Attachments".format(INTEGRATION_IDENTIFIER)
+LINK_ISSUES_SCRIPT_NAME = "{} - Link Issues".format(INTEGRATION_IDENTIFIER)
+LIST_RELATION_TYPES_SCRIPT_NAME = "{} - List Relation Types".format(INTEGRATION_IDENTIFIER)
+
+ENDPOINTS = {
+    "get_relation_types": "/rest/api/{api_version}/issueLinkType"
+}
+
+# Jira Connector
+PRODUCT = 'Atlassian'
+VENDOR = "Atlassian"
+RULE_GENERATOR = DEFAULT_NAME = 'Jira'
+JIRA_TIME_FORMAT = '%Y/%m/%d %H:%M'
+DEFAULT_TIMEOUT_IN_SECONDS = 180
+MSG_ID_ERROR_MSG = "Can't get issue key"
+CRITICAL_PRIORITY = 100
+HIGH_PRIORITY = 80
+MEDIUM_PRIORITY = 60
+LOW_PRIORITY = 40
+PRIORITY_MAPPING = {'High': HIGH_PRIORITY, 'Medium': MEDIUM_PRIORITY, 'Low': LOW_PRIORITY, 'Highest': CRITICAL_PRIORITY}
+
+# ATTACHMENTS SIZE LIMIT
+ATTACHMENT_SIZE_LIMIT_MB = 3
+
+FILTER_KEY_VALUES = {
+    "Select One": "",
+    "Name": "name",
+    "Inward": "inward",
+    "Outward": "outward"
+}
+
+FILTER_STRATEGY_MAPPING = {
+    "Not Specified": "",
+    "Equal": lambda item, value: str(item).lower() == str(value).lower(),
+    "Contains": lambda item, value: str(value).lower() in str(item).lower()
+}

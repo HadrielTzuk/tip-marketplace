@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 16.25</h2><h5>Published on 27 October, 2021</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     CBLiveResponse\n    </b>\n   </li>\n   <ul>\n    <li>\n     CBLiveResponse\n    </li>\n    <ul>\n     <li>\n      \"Download File\", \"Put File\", \"Execute File\", \"Create Memdump\", \"Delete File\" actions - improved handling of file parameters and file entities\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "16.25",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "27/10/21",
+    "Title": "Release Notes"
+}

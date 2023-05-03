@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791, 
+    "Creator": "admin", 
+    "Description": "Add URL To Blacklist in RSA Netwitness EDR.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Domains\": [\"HTTP://MARKOSXXX.COM/F1Q7QX.PHP\", \"example.com\"]}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "RSANetWitnessEDR", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1518545061791, 
+    "Name": "Add URL To Blacklist", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

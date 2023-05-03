@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1515581449779, 
+    "Creator": "admin", 
+    "Description": "Find IPs that point to a particular domain", 
+    "Id": -1, 
+    "IntegrationIdentifier": "DomainTools", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1515581449779, 
+    "Name": "Reverse Domain", 
+    "Parameters": [], 
+    "ScriptResultName": null, 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

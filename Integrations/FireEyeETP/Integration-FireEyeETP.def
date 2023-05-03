@@ -1,0 +1,43 @@
+{
+    "Description": "FireEye Email Threat Prevention Cloud (ETP) is different from traditional email security. It is a complete, cloud-based email security solution that delivers automatic protection from the targeted, spear-phishing attacks. Plus, it includes industry-leading FireEye Advanced Threat Intelligence.",
+    "DisplayName": "FireEye ETP",
+    "Identifier": "FireEyeETP",
+    "Categories": [
+        "Email Security",
+        "Security"
+    ],
+    "PythonVersion": 2,
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "FireEyeETP",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": 2,
+            "Value": "https://etp.us.fireeye.com"
+        },
+        {
+            "IntegrationIdentifier": "FireEyeETP",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "FireEyeETP",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M17.8304 5.66197C18.04 5.69192 18.2496 5.57213 18.2496 5.33255C18.2796 4.31434 18.2496 1.85866 16.6025 1.25972C14.4763 0.481087 11.0323 1.55919 8.39698 3.0865C5.70173 4.61382 2.34763 8.1476 1 11.8012C1 11.8012 5.97125 7.48876 11.0623 6.26092C14.9255 5.3026 17.0218 5.51224 17.8304 5.66197Z\" \/>\r\n<path d=\"M5.31241 11.9509C5.25252 11.7413 5.01294 11.6514 4.80331 11.7413C3.90489 12.1905 1.80858 13.4782 2.10805 15.2152C2.49737 17.4612 5.16268 19.8869 7.79804 21.4143C10.4334 22.9715 15.225 24.1095 19.0283 23.4507C19.0283 23.4507 12.8292 21.2945 9.17561 17.4912C6.45041 14.6162 5.58194 12.6996 5.31241 11.9509Z\" \/>\r\n<path d=\"M17.0518 19.7372C16.902 19.9169 16.9619 20.1565 17.1117 20.2463C17.9502 20.7854 20.1064 21.9833 21.484 20.8453C23.2508 19.4078 23.9995 15.874 23.9995 12.8194C24.0295 9.73481 22.622 5.03308 20.1363 2.06829C20.1363 2.06829 21.3642 8.50697 19.8967 13.5681C18.8186 17.4013 17.5908 19.1083 17.0518 19.7372Z\" \/>\r\n<\/svg>",
+    "Version": 4.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/fireeye-etp",
+    "MarketingDisplayName": "FireEye ETP"
+}

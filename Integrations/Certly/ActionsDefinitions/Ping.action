@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1515334668954,
+    "Creator": "admin",
+    "Description": "Validate the asset configuration for connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "Certly",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515334668954,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

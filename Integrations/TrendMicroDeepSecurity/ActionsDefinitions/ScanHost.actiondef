@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1538566794392, 
+    "Creator": "Admin", 
+    "Description": "Request a malware scan", 
+    "Id": -1, 
+    "IntegrationIdentifier": "TrendMicroDeepSecurity", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1538566794392, 
+    "Name": "Scan Host", 
+    "Parameters": [], 
+    "Script": "from TrendmicroDeepSecurityManager import TrendmicroManager\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyDataModel import EntityTypes\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('TrendMicro')\n    api_key = conf.get('Api Secret Key')\n    api_version = conf.get('Api Version')\n    server_address = conf.get('Server Address')\n    use_ssl = conf.get(\"Verify SSL\")\n    trendmicro_manager = TrendmicroManager(api_key, server_address, api_version, use_ssl)\n\n    entities = []\n\n    # TODO: Need to double check the development\n\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.HOSTNAME and not entity.is_internal:\n            scan = trendmicro_manager.scan_computers_for_malware(entity.identifier)\n            if scan:\n                entities.append(entity.identifier)\n\n    if entities:\n        result_value = 'true'\n        output_message = 'Successfully request a malware scan on {0}'.format(entity.identifier)\n    else:\n        result_value = 'false'\n        output_message = 'Faild to request a malware scan'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Version": 1.0
+}

@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Enrich entities using information from Tenable.io. Supported entities: IP Address, Hostname.",
+    "Id": -1,
+    "IntegrationIdentifier": "TenableIO",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Enrich Entities",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"EX201xxxxx\",\"EntityResult\":{\"id\":\"fa86dd27-ca05-4161-a5a9-9aec95bxxxxx\",\"has_agent\":false,\"created_at\":\"2021-07-06T09:51:36.087Z\",\"updated_at\":\"2021-07-06T09:51:41.188Z\",\"first_seen\":\"2021-07-06T09:51:34.900Z\",\"last_seen\":\"2021-07-06T09:51:34.900Z\",\"last_scan_target\":\"172.30.202.xxx\",\"last_authenticated_scan_date\":null,\"last_licensed_scan_date\":\"2021-07-06T09:51:34.900Z\",\"last_scan_id\":\"f03741ed-6683-42f9-b872-2f9f861xxxxx\",\"last_schedule_id\":\"template-f8a9d0e5-f3bc-b4b6-d55a-388e89db5cc19fd96897844xxxxx\",\"sources\":[{\"name\":\"NESSUS_SCAN\",\"first_seen\":\"2021-07-06T09:51:34.900Z\",\"last_seen\":\"2021-07-06T09:51:34.900Z\"}],\"tags\":[],\"interfaces\":[{\"name\":\"UNKNOWN\",\"fqdn\":[],\"mac_address\":[\"00:50:56:a2:xx:xx\"],\"ipv4\":[\"172.30.202.xxx\"],\"ipv6\":[]}],\"network_id\":[\"00000000-0000-0000-0000-0000000xxxxx\"],\"ipv4\":[\"172.30.202.xxx\"],\"ipv6\":[],\"fqdn\":[],\"mac_address\":[\"00:50:56:a2:xx:xx\"],\"netbios_name\":[\"EX201xxxxx\"],\"operating_system\":[\"Microsoft Windows\"],\"system_type\":[\"general-purpose\"],\"tenable_uuid\":[],\"hostname\":[],\"agent_name\":[],\"bios_uuid\":[],\"aws_ec2_instance_id\":[],\"aws_ec2_instance_ami_id\":[],\"aws_owner_id\":[],\"aws_availability_zone\":[],\"aws_region\":[],\"aws_vpc_id\":[],\"aws_ec2_instance_group_name\":[],\"aws_ec2_instance_state_name\":[],\"aws_ec2_instance_type\":[],\"aws_subnet_id\":[],\"aws_ec2_product_code\":[],\"aws_ec2_name\":[],\"azure_vm_id\":[],\"azure_resource_id\":[],\"gcp_project_id\":[],\"gcp_zone\":[],\"gcp_instance_id\":[],\"ssh_fingerprint\":[],\"mcafee_epo_guid\":[],\"mcafee_epo_agent_guid\":[],\"qualys_asset_id\":[],\"qualys_host_id\":[],\"servicenow_sysid\":[],\"installed_software\":[\"cpe:/a:microsoft:exchange_server:\",\"cpe:/a:microsoft:exchange_server:15.1.22xx.x\",\"cpe:/a:microsoft:iis:10.0\",\"cpe:/a:microsoft:outlook_web_access:15.1.22xx.x\"],\"bigfix_asset_id\":[],\"security_protection_level\":null,\"security_protections\":[],\"exposure_confidence_value\":null}},{\"Entity\":\"172.30.202.xxx\",\"EntityResult\":{\"id\":\"6fd54284-7f0a-4cd2-afd5-49b8474xxxxx\",\"has_agent\":false,\"created_at\":\"2020-07-29T09:36:39.253Z\",\"updated_at\":\"2021-07-06T10:21:33.889Z\",\"first_seen\":\"2020-07-29T09:36:25.336Z\",\"last_seen\":\"2021-07-06T10:21:31.194Z\",\"last_scan_target\":\"172.30.202.xxx\",\"last_authenticated_scan_date\":null,\"last_licensed_scan_date\":\"2021-07-06T10:21:31.194Z\",\"last_scan_id\":\"0dec9fa1-dccf-41d7-acd8-b5c0f2cxxxxx\",\"last_schedule_id\":\"template-6e1a45e4-aee8-3c16-b1d0-d2c911747440267fa5001a3xxxxx\",\"sources\":[{\"name\":\"NESSUS_SCAN\",\"first_seen\":\"2020-07-29T09:36:25.336Z\",\"last_seen\":\"2021-07-06T10:21:31.194Z\"}],\"tags\":[],\"interfaces\":[{\"name\":\"UNKNOWN\",\"fqdn\":[],\"mac_address\":[\"00:50:56:a2:xx:xx\"],\"ipv4\":[\"172.30.202.xxx\"],\"ipv6\":[]}],\"network_id\":[\"00000000-0000-0000-0000-0000000xxxxx\"],\"ipv4\":[\"172.30.202.xxx\"],\"ipv6\":[],\"fqdn\":[],\"mac_address\":[\"00:50:56:a2:xx:xx\"],\"netbios_name\":[],\"operating_system\":[\"Linux Kernel 4.4 on Ubuntu 16.04 (xenial)\"],\"system_type\":[\"general-purpose\"],\"tenable_uuid\":[],\"hostname\":[],\"agent_name\":[],\"bios_uuid\":[],\"aws_ec2_instance_id\":[],\"aws_ec2_instance_ami_id\":[],\"aws_owner_id\":[],\"aws_availability_zone\":[],\"aws_region\":[],\"aws_vpc_id\":[],\"aws_ec2_instance_group_name\":[],\"aws_ec2_instance_state_name\":[],\"aws_ec2_instance_type\":[],\"aws_subnet_id\":[],\"aws_ec2_product_code\":[],\"aws_ec2_name\":[],\"azure_vm_id\":[],\"azure_resource_id\":[],\"gcp_project_id\":[],\"gcp_zone\":[],\"gcp_instance_id\":[],\"ssh_fingerprint\":[],\"mcafee_epo_guid\":[],\"mcafee_epo_agent_guid\":[],\"qualys_asset_id\":[],\"qualys_host_id\":[],\"servicenow_sysid\":[],\"installed_software\":[\"cpe:/a:openbsd:openssh:7.2\"],\"bigfix_asset_id\":[],\"security_protection_level\":null,\"security_protections\":[],\"exposure_confidence_value\":null}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Create Insight",
+            "Type": 1,
+            "DefaultValue": true,
+            "Value": true,
+            "IsMandatory": false,
+            "Description": "If enabled, action will create an insight containing all of the retrieved information about the entity.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"HOSTNAME\"]}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

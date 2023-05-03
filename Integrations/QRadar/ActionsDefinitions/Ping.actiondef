@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1514971813297,
+    "Creator": "admin",
+    "Description": "Test connectivity to a Qradar instance",
+    "Id": -1,
+    "IntegrationIdentifier": "QRadar",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1514971813297,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyDataModel import EntityTypes\r\nfrom SiemplifyAction import SiemplifyAction\r\nfrom QRadarManager import QRadarWrapper\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration('QRadar')\r\n    # CR: Change ServerAddress to Api Root in all actions\r\n    # CR: Change ApiToken to Api Token in all actions\r\n    qradar_wrapper = QRadarWrapper(conf['API Root'], conf['Api Token'])\r\n    connectivity = qradar_wrapper.test_connectivity()\r\n\r\n    output_message = \"Connected Successfully\"\r\n    siemplify.end(output_message, connectivity)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n",
+    "ScriptResultName": "is_success",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

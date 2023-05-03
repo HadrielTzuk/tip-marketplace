@@ -1,0 +1,97 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805, 
+    "Creator": "Admin", 
+    "Description": "List reputation overrides configured in VMware Carbon Black Cloud. Note that action is not working on Siemplify entities.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"results\":[{\"id\":\"bea48f4a9d4211eb9f49a5XXXXXXXXXX\",\"created_by\":\"XXXXXXXXXX\",\"create_time\":\"XXXX-XX-XXTXX:XX:XX.XXXZ\",\"override_list\":\"BLACK_LIST\",\"override_type\":\"SHA256\",\"description\":\"XXXXXXXXX\",\"source\":\"APP\",\"source_ref\":\"None\",\"sha256_hash\":\"5ebf807272af0775f15ece08fdce4a6ddc2a08f70864bcf65bae63XXXXXXXXXX\",\"filename\":\"XXXXXXXXXXXXXXX.XXX\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1, 
+    "IntegrationIdentifier": "CBCloud", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1560351300805, 
+    "Name": "List Reputation Overrides", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Not Specified",
+            "Description": "Specify override list action should return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Reputation Override List",
+            "OptionalValues": [
+                "Not Specified",
+                "WHITE_LIST",
+                "BLACK_LIST"
+            ],
+            "Type": 15,
+            "Value": "Not Specified"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Not Specified",
+            "Description": "Specify override type action should return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Reputation Override Type",
+            "OptionalValues": [
+                "Not Specified",
+                "CERT",
+                "SHA256",
+                "IT_TOOL"
+            ],
+            "Type": 15,
+            "Value": "Not Specified"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": 0, 
+            "Description": "Specify from which row action should fetch data.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Start from Row", 
+            "Type": 0, 
+            "Value": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": 50, 
+            "Description": "Specify how many rows action should return.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Max Rows to Return", 
+            "Type": 0, 
+            "Value": 50
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "ASC",
+            "Description": "Specify sort order for the returned rows. Rows are sorted based on \"create_time\" value.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Rows Sort Order",
+            "OptionalValues": [
+                "ASC",
+                "DESC"
+            ],
+            "Type": 15,
+            "Value": "ASC"
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": []}", 
+    "Version": 1.0
+}

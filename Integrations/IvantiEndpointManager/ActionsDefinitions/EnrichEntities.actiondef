@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Enrich entities using information from Ivanti Endpoint Manager. Supported entities: IP Address, Hostname, MAC Address.",
+    "Id": -1,
+    "IntegrationIdentifier": "IvantiEndpointManager",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Enrich Entities",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"IVANTI-xxx\",\"EntityResult\":{\"guid\":\"{3F78627C-A425-4F45-9D82-xxxxxxxxxxx}\",\"DeviceName\":\"\",\"DomainName\":\"\",\"LastLogin\":\"\",\"IPAddress\":\"\",\"SubNetMask\":\"\",\"MACAddress\":\"\",\"OSName\":\"\",\"column_set_info\":{\"Computer_DisplayName\":\"IVANTI-xxx\"}}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Custom Column Set",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "If specified, action will also try to return information about endpoints using custom column sets. If not specified, action will only return basic information.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Create Insight",
+            "Type": 1,
+            "DefaultValue": true,
+            "Value": true,
+            "IsMandatory": false,
+            "Description": "If enabled, action will create an insight containing all of the retrieved information about the entity.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"HOSTNAME\", \"MacAddress\"]}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

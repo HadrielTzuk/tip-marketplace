@@ -1,0 +1,75 @@
+{
+  "Identifier": "956f3024-5e66-4859-91b9-42516965cb63",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "SCCM",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "d9b01098-37c9-4ac4-a319-54c00a83abf3",
+      "ParentWorkflowIdentifier": "956f3024-5e66-4859-91b9-42516965cb63",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "SCCM_GetComputerProperties_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "SCCM_GetComputerProperties",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "d9b01098-37c9-4ac4-a319-54c00a83abf3",
+          "ParentWorkflowIdentifier": "956f3024-5e66-4859-91b9-42516965cb63",
+          "Name": "ScriptName",
+          "Value": "SCCM_GetComputerProperties",
+          "CreationTimeUnixTimeInMs": 1519210501953,
+          "ModificationTimeUnixTimeInMs": 1519210501953
+        },
+        {
+          "ParentStepIdentifier": "d9b01098-37c9-4ac4-a319-54c00a83abf3",
+          "ParentWorkflowIdentifier": "956f3024-5e66-4859-91b9-42516965cb63",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519210501953,
+          "ModificationTimeUnixTimeInMs": 1519210501953
+        },
+        {
+          "ParentStepIdentifier": "d9b01098-37c9-4ac4-a319-54c00a83abf3",
+          "ParentWorkflowIdentifier": "956f3024-5e66-4859-91b9-42516965cb63",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519210501953,
+          "ModificationTimeUnixTimeInMs": 1519210501953
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519210501953,
+      "ModificationTimeUnixTimeInMs": 1519210501953
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "f6103e9e-f664-41e5-9b17-73e8628295cb",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "956f3024-5e66-4859-91b9-42516965cb63",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "SCCM",
+      "AllEnvironments": "",
+      "Id": 77,
+      "CreationTimeUnixTimeInMs": 1519210501953,
+      "ModificationTimeUnixTimeInMs": 1519210501953
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 77,
+  "CreationTimeUnixTimeInMs": 1519210501953,
+  "ModificationTimeUnixTimeInMs": 1519210501953
+}

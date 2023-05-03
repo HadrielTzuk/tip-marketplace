@@ -1,0 +1,57 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583, 
+    "Creator": "admin", 
+    "Description": "Report message in Mimecast. Note: only messages with status \"Held\", \"Archived\", \"Bounced\" can be reported.",
+    "Id": -1, 
+    "IntegrationIdentifier": "Mimecast", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530451212583, 
+    "Name": "Report Message",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the ID of the message that needs to be reported.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Message ID", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the comment for the report.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Spam",
+            "Description": "Specify the report type for the message.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Report As",
+            "OptionalValues": [
+                "Spam",
+                "Malware",
+                "Phishing"
+            ],
+            "Type": 15,
+            "Value": "Spam"
+        }
+    ], 
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

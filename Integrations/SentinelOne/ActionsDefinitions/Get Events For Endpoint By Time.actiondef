@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1521991572300, 
+    "Creator": "admin", 
+    "Description": "Get all events related to an endpoint", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SentinelOne", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1521991572300, 
+    "Name": "Get Events For Endpoint By Time", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1521991572300, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "How match time back fetch events from.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1521991572300, 
+            "Name": "Hours Back", 
+            "Type": 0, 
+            "Value": null
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1521991572300, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "Events amount limit.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1521991572300, 
+            "Name": "Events Amount Limit", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "Script": "# ==============================================================================\r\n# Remarks:\r\n\r\n#  'get_events_for_endpoint_by_date' return 404 from API.\r\n\r\n# ==============================================================================\r\nfrom SiemplifyAction import SiemplifyAction\r\nfrom SentinelOneManager import SentinelOneManager\r\nfrom SiemplifyDataModel import EntityTypes\r\nimport datetime\r\n\r\n# Consts.\r\nSENTINEL_ONE_PROVIDER = 'SentielOne'\r\nSENTINEL_PREFIX = 'SENO_'\r\nADDRESS = EntityTypes.ADDRESS\r\nHOSTNAME = EntityTypes.HOSTNAME\r\n\r\n\r\ndef main():\r\n    # Define Variables.\r\n    entities_successed = []\r\n    result_value = False\r\n    # Configuration.\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration(SENTINEL_ONE_PROVIDER)\r\n    sentiel_one_manager = SentinelOneManager(conf['Api Root'], conf['Username'], conf['Password'])\r\n\r\n    # Parameters.\r\n    delta_in_hours = siemplify.parameters['Hours Back']\r\n    limit = siemplify.parameters['Events Amount Limit']\r\n\r\n    # Convert times to datetime.\r\n    from_date_datetime = datetime.datetime.now() - datetime.timedelta(hours=int(delta_in_hours))\r\n    to_date_datetime = datetime.datetime.now()\r\n\r\n    # Get scope entities.\r\n    scope_entities = [entity for entity in siemplify.target_entities if entity.entity_type == ADDRESS or\r\n                      entity.entity_type == HOSTNAME]\r\n\r\n    # Run on entities.\r\n    for entity in scope_entities:\r\n        if entity.entity_type == ADDRESS:\r\n            event_for_endpoint = sentiel_one_manager.get_events_for_endpoint_by_date(entity.identifier,\r\n                                                                                     from_date=from_date_datetime,\r\n                                                                                     to_date=to_date_datetime,\r\n                                                                                     limit=int(limit),\r\n                                                                                     is_ip_address=True,\r\n                                                                                     csv_output=True)\r\n        elif entity.entity_type == HOSTNAME:\r\n            event_for_endpoint = sentiel_one_manager.get_events_for_endpoint_by_date(entity.identifier,\r\n                                                                                     from_date=from_date_datetime,\r\n                                                                                     to_date=to_date_datetime,\r\n                                                                                     limit=int(limit),\r\n                                                                                     is_ip_address=False,\r\n                                                                                     csv_output=True)\r\n\r\n            if event_for_endpoint:\r\n                entities_successed.append(entity)\r\n                result_value = True\r\n                # Add entity table.\r\n                siemplify.result.add_entity_table(entity.identifier, event_for_endpoint)\r\n\r\n    if entities_successed:\r\n        output_message = 'Found events for: {0}'.format(\",\".join([entity.identifier for entity\r\n                                                                  in entities_successed]))\r\n    else:\r\n        output_message = 'No events were found for target entities.'\r\n\r\n    siemplify.update_entities(entities_successed)\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n\r\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

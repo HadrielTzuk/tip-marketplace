@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1668078112000,
+    "Creator": "admin",
+    "Description": "Execute a command on the endpoint in Automox. Supported entities: Hostname, IP Address. Note: Action is running as async, please adjust script timeout value in Chronicle SOAR for action as needed.",
+    "Id": -1,
+    "IntegrationIdentifier": "Automox",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1668078112000,
+    "Name": "Execute Device Command",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"111.11.111.111\", \"EntityResult\": {\"id\": \"8527028217\", \"server_id\": \"2263017\", \"command_id\": \"164850699\", \"organization_id\": \"104513\", \"args\": \"ASD\", \"reboot\": \"0\", \"exec_time\": \"2022-10-25T08:02:43+0000\", \"response\": [\"0\", \"Installing MS updates: ASD\\r\\nCouldn't find update for ASD, skipping.\\r\\nNothing left to do\", \"null\"], \"response_time\": \"2022-10-25T08:22:14+0000\", \"policy_id\": \"null\", \"agent_command_type\": \"0\", \"command_type_name\": \"InstallUpdate\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1668078112000,
+            "CustomActionId": -1,
+            "DefaultValue": "Scan Device",
+            "Description": "Specify a command that needs to be executed on the device. Note: if \"Install Specific Patches\" is provided, parameter \"Patch Names\" is mandatory.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1668078112000,
+            "Name": "Command",
+            "OptionalValues": [
+                "Scan Device",
+                "Install Specific Patches",
+                "Install All Available Patches",
+                "Restart Device"
+            ],
+            "Type": 15,
+            "Value": "Scan Device"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1668078112000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of patches that need to be installed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1668078112000,
+            "Name": "Patch Names",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

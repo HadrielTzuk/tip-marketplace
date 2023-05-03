@@ -1,0 +1,44 @@
+{
+    "Description": "FortiGate utilize purpose-built security processors and threat intelligence security services from AI-powered FortiGuard labs to deliver top-rated protection, high performance inspection of clear-texted and encrypted traffic. Next-generation firewalls reduce cost and complexity with full visibility into applications, users and networks and provides best of breed security. As an integral part of the Fortinet Security Fabric next-generation firewalls can communicate within Fortinet’s comprehensive security portfolio as well as third-party security solutions in a multivendor environment.",
+    "DisplayName": "Fortigate",
+    "Identifier": "Fortigate",
+    "MarketingDisplayName": "Fortigate",
+    "Categories": [
+        "Network Security",
+        "Firewall",
+        "Security"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAALYAAABjCAMAAAAB3QqqAAABQVBMVEX///8AAADNOypSUlLCwsJaWlooKCj7+/sbGxvabmJtbW1QUFA2NjbBwcFZWVnS0tLQ0NC8vLw4ODjJycmWlpaCgoLQRTX9/f0yMjLYZVd/f3/VWktKSkrDw8PrsqtWVlbX19fvwbvYYlTzzci3t7fUVkg9PT0cHBwYGBgVFRX99/bh4eHd3d2goKDopJ2Pj4/fgHUFBQX43dr108/Ly8vExMTwxcDrsauVlZXkkongiH17e3vgdmrccmViYmIkJCQQEBDy8vL98vDt7e3l5eXPz8/vv7q5ubmtra2Xl5fmmpGGhoZGRkbSSzwtLS0rKysgICD65uT119TvvrnuurS0tLSxsbGvr6/qrqeJiYl3d3dzc3Pdem5paWlcXFzYZ1pMTEwLCwv4+Pj66uj01dKpqanzlYrki4HORDTfQC3MOyqSMEYqAAADDElEQVR42u3WeVPaQBgG8EcEFCIoIsRKESrIISCiqOCJ931f9az2br//B+gum4MkyBhsp9PO+/tDdl92l2c2mxgQQgghhBBCCCGEEEIIIYQQQgj5T91InSZS5zpwshhmPsMTrhvGHPt7sAsmLxlGx7wD62C8knGVIuISWysHFIwTlop5cEnJ/MN92DEtcoNnZDqserH63cFNIeKoG8edg5sDELSML+0BKJmKKWzxjzIQs0wYArNnKV/h0VTJ4hn9HVZxfP2pxP4gYr/HhGhMAn0dVklg2VSKYVpsAbzW8RUAA01WWTJVBu3EzuGHCJnAgbrbHtFYbB77rfWyPRpim600i31huTDLrWKnos4GPmeXvOCpm0RVNGYwLhpVJXZFnTIdSLHuIVD2OaP7rNkvvvHF4WyI7Q4qysF5Xt4WsWuBaMMPryHuc07zHU9Ho/XKRqvYS7BBxF6DpqDvyn39cKh8DbH7oTtm/ZCInYFVRWyD0Cq2JHdpPsoA5PPZYWb2EzQJUUkosX3KFFle4Rf2GHUufl6ssU2H9JD150Xs7Ir609CE+MV5SeyndLcmuw9gzCHMQKWe7REldlab8iTOoI3Ybv4sUc52t1gn0523G9skzWMfqLekZkJUFnhsK2+bsXXxV8bO8thhe7GP8Ddi11I9msGHFx0StzYlzY92vs3YJfeRW2jjkPhhIs9svmM2V6E5PeOVsykldp8+VmLdhzZjZ2Wo7MeO2X8ABqHhz+H9NmNn8IrYnTAZ84y8YUYmMScam9gVjW9K7CgUIpXUZuxaMtBg3Rhb3ri8WLMTW3YICYyq/9wXlVvyd8Y22zHG3giFQl/sxEbV0eJV6o/FLhhjB7eury5bvLj2wGw1bNlt44vrFjQxPVVKPAwVyfpNIAbUoCux/j2PZ1bUtqEEprzXm9xBc0N+l78Ii5O70UgkcooJ/hEZPUeVN3bB5Pwulz8OTUFfocKa11DF2UBXTgyYh+6W9beBgN9l5HeC22Zf34LpCgaSORBCCCGEEEIIIYQQQgghhBBC/km/ACsoXHfaPpp1AAAAAElFTkSuQmCC",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Fortigate",
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "IsMandatory": true,
+            "Value": "https://{{ip address}}"
+        },
+        {
+            "IntegrationIdentifier": "Fortigate",
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyType": "3",
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Fortigate",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M1.2,14.7h6.4v-4.3H1.2V14.7z M9.3,8.6h6.4V4.3H9.3V8.6z M9.3,20.7h6.4v-4.3H9.3V20.7z M17.4,14.7h6.4v-4.3h-6.4V14.7z\n\t\t\t M1.2,8.1v0.6h6.4V4.3L5,4.3C2.9,4.3,1.2,6,1.2,8.1z M20,4.3l-2.6,0v4.3h6.4V8.1C23.8,6,22.1,4.3,20,4.3z M1.2,16.9\n\t\t\tc0,2.1,1.7,3.8,3.8,3.8l2.6,0v-4.3H1.2V16.9z M17.4,20.7l2.6,0c2.1,0,3.8-1.7,3.8-3.8v-0.6h-6.4V20.7z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 9.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/fortigate"
+}

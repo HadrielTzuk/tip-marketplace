@@ -1,0 +1,42 @@
+{
+    "Creator": "admin",
+    "Description": "Action gets a value stored under a specified key in the Siemplify database for a connector context. Action is not working on Siemplify entities.",
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "Name": "Get Connector Context Value",
+    "DynamicResultsMetadata": [{
+        "ResultExample": "{\"Value\": \"example_value\", \"Key_Name\": \"example_key\"}",
+        "ResultName": "JsonResult"
+    }],
+    "Parameters": [
+        {
+            "DefaultValue": "",
+            "Description": "Specify connector identifier to list context keys for. Parameter works together with \"Connector Identifier Filter Logic\" parameter",
+            "IsMandatory": true,
+            "Name": "Connector Identifier",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "DefaultValue": "",
+            "Description": "Optionally specify the key name to get context value for.",
+            "IsMandatory": true,
+            "Name": "Key Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "DefaultValue": true,
+            "Description": "If enabled, the case wall table will be created as part of action results.",
+            "IsMandatory": false,
+            "Name": "Create Case Wall Table",
+            "Type": 1,
+            "Value": true
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

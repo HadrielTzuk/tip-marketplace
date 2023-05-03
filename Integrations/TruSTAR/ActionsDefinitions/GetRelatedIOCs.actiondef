@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Get information about IOCs that are related to the provided entities. Supported entities: All.",
+    "Id": -1,
+    "IntegrationIdentifier": "TruSTAR",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"SOFTWARE\":[ \"X:\\\\XXXXXXX\\\\XXXXXXXX\\\\XXXXXX.XXX\"],\"URL\":[\"XXXXXX.XXX.XXXX\"],\"IP\":[\"X.X.X.X\"],\"EMAIL_ADDRESS\":[\"XXXX@XXXX.XXXX.XXXXX\"],\"MD5\":[\"XXXXXXXXXXXXXXXXXXXXXX\"],\"SHA1\":[\"XXXXXXXXXXXXXXXXXXXXXX\"],\"CIDR_BLOCK\":[ \"XXX.XX.XX.XX\/XX\"]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Get Related IOCs",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many IOCs to return. Default: 50. Maximum: 1000.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max IOCs To Return",
+            "Type": 0,
+            "Value": 50
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of enclave names that should be used during the enrichment.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Enclave Filter",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\",\"FILEHASH\", \"USER\", \"HOSTNAME\", \"USERUNIQNAME\", \"ADDRESS\", \"MacAddress\", \"PROCESS\", \"FILENAME\", \"THREATSIGNATURE\", \"EMAILSUBJECT\", \"USB\", \"CREDITCARD\", \"PHONENUMBER\", \"CVE\", \"THREATACTOR\", \"THREATCAMPAIGN\", \"GENERICENTITY\"]}",
+    "Version": 1.0
+}

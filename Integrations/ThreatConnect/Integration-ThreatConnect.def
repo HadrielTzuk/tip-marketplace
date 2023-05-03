@@ -1,0 +1,49 @@
+{
+    "Description": "Identify Manage and Block Threats Faster with Intelligence. Make informed decisions with ThreatConnect's in-platform analytics and automation.",
+    "DisplayName": "Threat Connect",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/threatconnect",
+    "Identifier": "ThreatConnect",
+    "Categories": [
+        "Threat Intelligence",
+        "Security"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAMAAACScZ2GAAABg1BMVEX///9ZWlz+/f1aW13zbyHx8fFjZGZgYWOwsLF2d3hcXV96e31rbG74+PjGxseioqN/f4FwcHL7+/vt7e2RkpNpamzb29toaGpmZ2j0ciG9vb6ysrN8fX/zbSH1fiD39/f19fXz8/Pk5OSlpaacnZ6ampxeX2Ho6OjZ2trOzs/Ly8y6u7uGh4jxVyLzaiH8/PzR0tLDw8Sio6OVlpeBgYNfYGLxWiP1fCD0eSD+9vHd3d3959nU1NW4uLm0tbanqKmPj5GJiYtyc3VtbnDyZyLyYCL0diH0dCH0cyH6+vrv7/D+8ej+7uPg4OD928bBwcL807qtra6UlJWNjo94eHr4pXH2ikr1gDryZCP/+fb83sz7zrOXmJqDhIb2mWX3lVj1gET2kD/1gib1dSTzcCTq6ur+7+nV1dX94tT83dL7y676wJ75s5P4sIX4rX74q3f0gln2lkj1hkL2hzT0dzDyYS76xLL6vIz2mnn4p2j3o1/2kE/zfk3ybDzzay30cyv1gCgOTAUHAAADi0lEQVRo3u3VV1MaURjG8ec9yy4szV2yCAKGXgIoJjQ1scdo7L1GjZree28fPWcpk4sYIZlccHF+F8wwu2fmf9osBEEQBEEQBEEQBEEQBEFo296r3u0VNN17UXn7Dh1ky2Lp3d5Fw4e+vr7KEDrHaY/FcmcedVffVnjfQ3SOw9keyxZrbO2X6Uql7+s/rl7BxfDfDW2+2lyAia3cnp6erryoL57b0RAbdQzjHB4PTMPjTv9kMo12NYd6GNqx8Pjw+s7O9M6TxusjiqKQxH8yXXQJ5xg/ADeQorJeJl8E7WPrDuDaKtrwrLe///r1nW9L+OWC3QmuRd6kAiCdkgIMciCOv1BwEuAJo7WnFkutbx9n5WUTinPMEy4Zw9oo5op+JR8DljWrz5hDwmpfzyFJQTRE4lNl1RZGuJR0q1bHIpYdAwnFl3CZB8Y6ZWNAbNyvaFmWkGg9iDbMn/Yc7T3t77+NM/O81rxfGpCtU77UaFgvx+M+XS7k1a4DmoBhl7Qg0+1zqLvpoFBSJcMjW71SaINCsJnjveRGgFRbnkYRU6hUnCwVJsqkjaEN+zOz+1i40394dp4exQgFZSutuZAjm8u1Sm5EwSK6ncGr8CavEkFdjooMkbw5G8qC+ew8Tw3jMsU9Tn/UFVUmYVAAiMhw+Qlt2bwxc7S3aen9w+otA26yyVYpCtyimiCymp2IXLU8ptpjqFujDIBlWpWtOgBV4nkjwDW6ckEiUxlOPimu7byrgzduzMz28PP3CGdejUaeD0CCgt1cdIAc7sXJRh7ilGTgokjSAIAR8/VQM+9yPS81leEjh6FLkXqejxhaWzgebPZ9X2qVd4k0GTcDnlXKISPxPJUuMVxwSl1pFov701kKyUg7pdhveQUtFWDIdKOLijLuBllBJ3frvpXX1cHBweePn22b37cnu+fn8d1N6ZK0eD/lL0leMg8j5YFunUxqGgnzOQXxWx66veT30jqiG6RMkSLDJlGo1aX9eFKtVl+vmHv82dzfrQdoiKwlwV02MkDGyIaLtb9stKRO8FnnNC0wYniAwPgVAHfHNHUiKAMsd1B7Hi6OARgzkDXuAzGDNy7e2ghdSQNzcW1jbRh8E8YTON+nixer1R/1Pd3dMvveMHSOk4vc++YdmTH7HqBzvOR1x0NoeM7vx5t5dI6rxycvl9A0dHS6/QiCIAiCIAiCIAiCIAiCIAj/4iecDXxuPVVyNgAAAABJRU5ErkJggg==",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ThreatConnect",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Access Id",
+            "PropertyName": "ApiAccessId",
+            "PropertyType": "2",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "ThreatConnect",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Secret Key",
+            "PropertyName": "ApiSecretKey",
+            "PropertyType": "2",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "ThreatConnect",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Default Org",
+            "PropertyName": "ApiDefaultOrg",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ThreatConnect",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "ApiBaseUrl",
+            "PropertyType": "2",
+            "Value": "https://sandbox.threatconnect.com/api"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<path d=\"M11.5,15.6c2.7-0.5,4.5-2.9,4.2-5.6c-0.2-2.1-1.8-3.9-3.9-4.4c-0.3-0.1-0.5-0.1-0.8-0.2h-0.8C9.9,5.5,9.6,5.5,9.4,5.6\n\tc-2,0.5-3.6,2.2-3.9,4.2c0,0.1,0,0.2-0.1,0.3V11c0,0.2,0.1,0.4,0.1,0.6C6.1,14.2,8.6,16.2,11.5,15.6z M37,18.1\n\tc1.3-1.1,2.7-2,4.3-2.7c0.6-0.3,1.2-0.6,1.7-1.1c0.8-0.8,1.4-1.8,1.5-3c0-0.1,0-0.3,0.1-0.4v-0.7c-0.1-0.3-0.1-0.6-0.2-0.9\n\tc-0.5-2-2.2-3.6-4.3-3.9c-0.1,0-0.2,0-0.4-0.1H39c-0.3,0.1-0.6,0.1-0.9,0.2c-1.7,0.5-2.9,1.5-3.5,3.1c-1.7,4.1-4.6,6.8-8.9,8\n\tc-0.6,0.2-1.2,0.3-1.9,0.4c-3.5,0.9-6.4,3.9-7,7.5c-0.6,3.7-2.6,6.5-5.6,8.6c-0.8,0.6-1.7,1-2.7,1.4c-1.9,0.8-2.9,2.2-3.2,4.2\n\tc0,0,0,0.1,0,0.1v0.9c0,0.2,0.1,0.4,0.1,0.7c0.4,2.1,2.2,3.7,4.3,4c0.1,0,0.2,0,0.3,0.1H11c0.3-0.1,0.6-0.1,0.8-0.2\n\tc1.5-0.4,2.7-1.3,3.4-2.8c0.9-2,2.1-3.8,3.6-5.4c1-1.1,2.2-2,3.6-2.6c2.1-0.9,4.1-0.6,6.1,0.4c1.4,0.8,2.5,1.8,3.4,3\n\tc1.1,1.4,2,2.9,2.8,4.4c0.8,1.8,2.3,2.8,4.2,3c0,0,0.1,0,0.1,0h0.8c0.3-0.1,0.6-0.1,0.9-0.2c2-0.5,3.6-2.2,3.8-4.3\n\tc0-0.1,0-0.2,0.1-0.4v-0.7c0-0.3-0.1-0.6-0.1-0.8c-0.4-1.7-1.4-2.8-3-3.6c-1.9-0.9-3.7-2.1-5.3-3.5c-0.9-0.8-1.6-1.7-2.2-2.8\n\tc-0.6-1.2-1-2.4-0.9-3.7c0.1-1.2,0.4-2.2,1-3.2C34.9,20.1,35.9,19.1,37,18.1z M25,27.7c-1.5,0-2.7-1.2-2.7-2.7\n\tc0-1.5,1.2-2.7,2.7-2.7c1.5,0,2.7,1.2,2.7,2.7C27.7,26.5,26.5,27.7,25,27.7z\"/>\n</svg>",
+    "Version": 10.0,
+    "MarketingDisplayName": "ThreatConnect"
+}

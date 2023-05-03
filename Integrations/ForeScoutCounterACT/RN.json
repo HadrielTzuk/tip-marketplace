@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "Added new integration \"ForeScout CounterACT\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "ForeScoutCounterACT",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1625639577,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8981"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "ForeScoutCounterACT",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

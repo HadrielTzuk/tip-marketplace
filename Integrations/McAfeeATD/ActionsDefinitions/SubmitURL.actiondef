@@ -1,0 +1,48 @@
+{
+    "CreationTimeUnixTimeInMs": 1534435434108, 
+    "Creator": "Admin", 
+    "Description": "Submit URL for Analysis.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"Summary\": {\"JSONversion\": \"1.002\", \"SubmitterName\": \"User\", \"Subject\": {\"sha-1\": \"6BDA9FCFB56CE2B34168D499EE04970F640ADD9A\", \"Timestamp\": \"2018-08-21 08:29:48\", \"FileType\": \"2\", \"sha-256\": \"74834D752D73B4C81EAD10184A091C12AA30BD809D575FD9CFA07B0EBBD7A0D7\", \"parent_archive\": \"Not Available\", \"Name\": \"events.txt\", \"md5\": \"11FBEF3A9916BF50EC5002B5795B23C3\", \"Type\": \"ASCII text\", \"size\": \"481231\"}, \"Process\": [{\"Reason\": \"processed by down selectors\", \"Name\": \"events.txt\", \"Severity\": \"0\"}], \"Data\": {\"compiled_with\": \"Not Available\", \"analysis_seconds\": \"181\", \"sandbox_analysis\": \"0\"}, \"SUMversion\": \"1.1.1.1\", \"JobId\": \"95\", \"SubmitterType\": \"STAND_ALONE\", \"Behavior\": [\"Identified as --- by GTI File Reputation\", \"Identified as --- by Anti-Malware\"], \"hasDynamicAnalysis\": \"false\", \"TaskId\": \"95\", \"Verdict\": {\"Description\": \"No malicious activity was detected, but this does NOT mean that execution of the sample is safe\", \"Severity\": \"0\"}, \"OSversion\": \"StaticAnalysis\", \"Selectors\": [{\"Engine\": \"GTI File Reputation\", \"Severity\": \"0\", \"MalwareName\": \"---\"}, {\"Engine\": \"Anti-Malware\", \"Severity\": \"0\", \"MalwareName\": \"---\"}, {\"Engine\": \"Sandbox\", \"Severity\": \"0\", \"MalwareName\": \"---\"}], \"MISversion\": \"1.1.1.1\", \"DETversion\": \"1.1.1.1\"}}, \"Entity\": \"http://google.com\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "McAfeeATD", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1534435434108, 
+    "Name": "Submit URL", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534435434108, 
+            "CustomActionId": 20337, 
+            "DefaultValue": null, 
+            "Description": "The ID of the analyzer profile to analyze the urls with", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1534435434108, 
+            "Name": "Analyzer Profile ID", 
+            "Type": 0, 
+            "Value": null
+        },
+        {
+            "Name": "Create Insight",
+            "Type": 1,
+            "DefaultValue": true,
+            "Value": true,
+            "IsMandatory": false,
+            "Description": "If enabled, action will create an insight containing all of the retrieved information about the entity.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import construct_csv\nfrom McAfeeATDManager import McAfeeATDManager\nfrom SiemplifyDataModel import EntityTypes\n\nPROVIDER = \"McAfeeATD\"\nACTION_NAME = \"McAfeeATD_Submit URL\"\nTABLE_NAME = 'Result Task IDs'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(PROVIDER)\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    atd_manager = McAfeeATDManager(server_address=conf.get('Server Address'),\n                                   username=conf.get('Username'),\n                                   password=conf.get('Password'),\n                                   verify_ssl=verify_ssl)\n\n    result_value = False\n    results = []\n    task_ids = []\n    errors = []\n\n    # Parameters\n    analyzer_profile_id = siemplify.parameters.get('Analyzer Profile ID')\n\n    target_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.URL]\n\n    for entity in target_entities:\n        try:\n            task_id = atd_manager.submit_url(entity.identifier, analyzer_profile_id)\n            results.append({\"URL\": entity.identifier,\n                            \"Task ID\": task_id})\n            task_ids.append(task_id)\n        except Exception as err:\n            error_message = 'Error submitting URL \"{0}\", Error: {1}'.format(\n                entity.identifier,\n                err.message\n            )\n            errors.append(error_message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n\n    if results:\n        result_value = True\n        siemplify.result.add_data_table(TABLE_NAME, construct_csv(results))\n\n    if result_value:\n        output_message = 'Target URLs were submitted.'\n    else:\n        output_message = 'No URLs were submitted.'\n\n    if errors:\n        output_message = \"{0} \\n \\n Errors: \\n {1}\".format(output_message, ' \\n '.join(errors))\n\n    siemplify.end(output_message, ','.join(task_ids))\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "report", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Version": 1.0,
+    "IsAsync": true
+}

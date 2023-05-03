@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 16.06</h2><h5>Published on 05 October, 2021</h5><hr><h3>Actions</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     SiemplifyUtilities\n    </b>\n   </li>\n   <ul>\n    <li>\n     Parse EML to JSON\n    </li>\n    <ul>\n     <li>\n      Parse EML to JSON - Updated the action's functionality. Note - Due to some improvements, we might have slight changes in the JSON result of this action. Please refer to: https://integrations.siemplify.co/doc/siemplify-utilities#parse-eml-to-json for additional information.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "16.06",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "05/10/21",
+    "Title": "Release Notes"
+}

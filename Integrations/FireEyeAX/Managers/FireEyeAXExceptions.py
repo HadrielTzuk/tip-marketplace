@@ -1,0 +1,2 @@
+class FireEyeAXException(Exception):
+    pass

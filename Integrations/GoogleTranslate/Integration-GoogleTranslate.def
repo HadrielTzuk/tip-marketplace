@@ -1,0 +1,46 @@
+{
+    "Description": "Cloud Translation lets you dynamically translate between languages using pre-trained or custom ML models based on your content needs. Requires GCP account.",
+    "DisplayName": "Google Translate",
+    "Identifier": "GoogleTranslate",
+    "MarketingDisplayName": "Google Translate",
+    "Categories": [
+        "Google",
+        "Free to use"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAYAAAClr220AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAA/ySURBVHgB7Z0LdBTV/ce/M/vevEhCgBACGAIBQnhDwAR5HEBFXlKt8P+Xv0XxX88pioBQabXHf/+2p1r7ftlKLfjAVqxAS1FsQZEEAyUhvCQSEkkQEhJCEvLY7HN6793M7uzsZhOhdLeZ+zlnMrNz7+xMku/+XvfOrCARwOH8mxHB4UQALjxORODC40QELjxORODC40QELjxORODC40QELjxORODC40QEPTRAm13CW0UOHCzzoJ1sy2M1dCWQxdO5luSd/pV3m7wQBO+a7n/ufhPGDNKBc+NowuJtPejAuyfcTHRKZLEJIY5R71MeefqiB5ybQxPCO1rp8Vs51ci0LDD1gLWk6qMU4gefuMC5OTQhPOpqqZBCTYfoaoaET2ydJlF2s3TflesS6q7zuRU3gyaEp7ZYFAl+0YWTkDLuExR9D3Crd1NoQniSagnbkSIoNoXQx5y+6AbnxtFUOUXqYu170WkWZZfsCaNUmmC02bm7vVE0Izxl9hrgZlU+V+7HFiG8hTxwhlu9G0UTdbwAC6dWoDJwU/eXgvcpKapw4e6x+Jeh12vi38HQxm+qFJhaaF2IK1TZxXd4p2Wk7ra88hLiYwL/jMq7CeRt9TrUNhVeamqqJgSonRhPafaEMM1S94fL0Lc5UmWCw+GAx+Nh4lEKrCvRyW3qxeVyob6+HlpAO7ZdiRTsOvMz3cjL9CA9SYLVCLQ7gJJqEYXlOpTVCr7jFCu2PlVjxh3D2uF0OmEwGEhcKIQ+ZQiLF6pPR0cHtICmYjwZpTT6xkp4bI6TCC6wDxVfPhEiXXYd12FXafDYLNVQeb0RNqcAi0EKEh8Vkryt3BcK2q6lG/40Y/GUkwCkzhdUdJvucpK1t0+7Q0DheYGUSQSkkLYJQ7ymkVq+UFZSnjhArd7UwTa2Txafmu5EpbW7TDUjPFqTU+cXSya4faJ7/4yIN4/6/xy0vW+p1+1WNwhBeYlSJ0eqLD7hUaj4lAmC0vLx25i9aMPVqmIzCrV2NKajFJQHi45ytcXvlENUXXxcatb73K0MTRR0Oq977okb5a62F0ONjjwakTXAP7Wp8LxXIMyqkR8jUz0+S6iEJhzFVaLvvWSd2Jwizl81IifVHtC/9NPP4HC5iQBFTBqZgXBwV9uLkd0tRSksmrUq4z+WVAwPnnPnFZ4xpAU9edkcJLzTFdX4vO4a4mIs3QpPaxZPU0Nm8lr977UYlYVc9BjftCnCqcsm5m6Dzkve8HprO4/tVGgnxlNNN66+5hfJ4ERq9fz9txzS4+VD/tebFzgxcoBEYj4x2Np1vi91t28drIDJU+M7Z921Zl/PN979CBazCTpRIMVmiVhfZfEYmDlpNFL6xEMraMbVyvdNyIopqxGY66RZ6+o7nHhml4GVU4DgJISKjlJ1DUHtyhfnGuLQx3FKYd0En1Cra68ydxpjMUMkfsZNxCeR0Q7q/ml/u0Nb8/u0VcdTxHhtRGS0hLJ0gjeR2Hy3Cz/br0d9q98S0iTjkRl+QewsURSRldNYOmt8bms2Nj6QEnRupZt993AJKi/VY17uWIwcmhayjxbQ1MiFuiSy87ieiM7FEonByRJe/LITZ2u9YS8tIFNrJ/MOEZ1SlKHqK+3E3dKRjH6WJvbabDTAaPD/iZtJrHfqfDWxfCLSUpKgZTRVx1OOlcmu92USz9W3uHDvRG8WO2pAYDbbTkYx3jkuYt8ZlbVTbPpmWZE3PVVjgr2mhLnWvHEjkT9+pM+aFZ4oY+vsjEHE5ZoCzsPreL0QQTGzWFl/k/dRy1dQLvksn5VkuVeJdatqEHGoXPDFft4DAlZB20UXzFgzdSQRXgGKz1ZgzLB0JMRambWj5RV6PipICp3RQgWnNdFRtGXxEFjLU945Rt3oO8d1XY9QdHZUhXa+4TBZODS7tesGYvLoYTj2yXns+vAIls7KxZv7Ctj5qAWkQvRfm7YEJ6O5R1goK20Swt+43dUcPmUt0Ju0dIqvc//Jy0bMmTwG/RITcIWUVLbu+QDX29rRPynBZ+0CTqNB8WnyLjOpi7agg1TrAH3I8+s6X9K6nKxNOopBuXd2LkwkwbA7nDAZDOx1l9eoMfFp76E9cowmBY48+NqkoK4hhRngZlX9G9p0LLs99kmFrz7XQcRHM9qwl8aHzHoZKmUEPM7CF6yF6K/erRhtkKc5KS2dkp1FtSguq2DllAV5E5nlKzxxFgWlZxH2UjUiPs3U8ZTiENSNqj5d1f0CDlPeqBO0ATR50tCfiG35/HwW29HuewuLUdBZUskfPwpaRlM3+4SL89DFfmbh4Beauq+g7Ky4NeO6KwGLZs9loqPkZA4mlm8S26bi687y9XY0NzulyyxWkvwL/G7V14YwWbDKlct9yhqSA/pS8d1DxUf6FZSW4ZCGxacJ4cUY/dtKMQXcbgiFNVTFWV3mH6GyDsWu8qvGoDYqvlWL57CYL/T9aNpA0MJ3me0uceK3+x1s+4uOEoQsswhdNcrC9Y+QvLjkSsCUeBlWYjH6bwqSExa6ZGSEnzTaG9BEcrFkogExJgEfn3OHf9COEPxI2q6orbehrs5/g48U+DY+TlzUY1qGM+h4tehCbfdmNDMtam62ni3/Kt54+zK2H670CSXICJKN9IFGIrpB6CnKMk1vhz/1/QaZOzM1INNVx37JSXqsXT2w2/dRulitiI7ChXeD9E+xIGd0YkiPnJToFZ3FHP7PG+o5K1qBC+8mGEuEJyPrJqmPHk8Q0dH1F4UPmXF6RM5o/yxi6iUtJIFhokvU5rOQvghceDcBtXj9+po7685Sj0WnRdeqhgvvJpk305tArLyvP9IGmrrtr0wm1NB9cXFx0ALcJ9wkY7OTcE9TE6ZPCi8YX9lFITjltiiKiI+PR2JiIrSAJkYuONEHd7WciMCFx4kIURfjOVwSfv+Rgwzsu9Du8EYBfWMFfGmKAQ9MM0K8RcX9h//2TaTHpeLZaY+Bc+uJKuG53cCa12yob5awMt+A3GF6uD3AsUoX/n7GhQXjDEiwRn5Y6dixElyqqQnaP3vWHYi/BVlpQ0MDjp84hblzZqG3EFWudmuBHZ/Ve/D8cgtWEOuWkSJieH8RK6Yb8bvV1qgQHYNko3a7A9XVF/HhwQK2TZfW1lbcClpa27Dnr++G7WPr6MBvt/z+P6Y+GFUW79CnLswdbcCIAd1/HhwnitH2+u/g+qwChuyxiHtkDXSDhrA2T+NBeD77HqTWMxDiJ0M34nkI1izWduCME28WudDhlDAjS4eyGg/W3RlYf3PX1qBt20uwFx+FfmgG4tZshH7wUF/75EkT2FL26Tm8+ccd+PJ99wZdH31KAC2RyNsU+bW6X6i6Hn2UbbgvWlG3u4m7KDxchIdX/Y/vEbjdnTuSRJXwqhskLJvi/wM1tkn4xh9tAX3+a7oBeYZKND29HqbpMxA7bwE69u3BtfWPIvFHL0GX2AF36VKIKYsgZn4F0pUdcB3Nhz73CM41DcELex24M0ePUWki/vCxExeueuBWGgnyD2x6Zj2EmBjEPbYJrrOn0Pjko0j+9esQk/uGvf6TJ0+juOQ4mltaUFtTiw3rHycW8RD+QVwzJT0tDau+uhIGgx4v/uinyMwchuLiUjbcdtf8uZg9eybKz1dg26vb4XI7ERcbhwdXrgg4x+GPj+AvxPpRy2a1WLD8gfswiLzvCz/4MWv/v+eex5xZMzAj/3bs+vMeFB35B4iskXHbEKx++KtR861BUfUxSCZJRPVV/0NzDOSDO43EebmdS3WDh1gqAbbdO6AfOAgJm/8flvkLkfjCLyCRf5T94H64K78DwTwEuuxXIA5cCd2E3RB0sfB8vgWvFTqRlSpi3V0m3JVjwFOLzEHX4Cwvg6uyHDHLH4SnrgYdhR8SaxlDrGhDt9ffSArJhUQYE8ePw7q1axBLxEu/euCJx7+Ob37jSQjE6vx5z144nS6cK69gVuhbmzdi8eKFeOMPbzErtuPtnZg0cTzZvwnTcqegpvZKwDk8kgfLlixi7TPy87Dtte0wGg1YseJ+1r7qwf/GhPFjse/9v6Pk+Als2vAENm5Yy2Y8v/f+fkQLUWXxZmTp8cFZN4npJCbCWLOAh2Z671s4f8WN1w8DaUkCPO3tRJUG/9N4dHqIJgvcjdfIEAHJUIwDSJv8q5E++gRIzjo2ppoU43dpcUR36ixZsrWz9fWffB+GzCzEb3gGxjHjgB66qoyMobhjRp7vdb+UFLyy9VV2HSK53ustzeStvK6VWqWEhHjkTc/F1m2vw2azIStrBAoOf0ySKg/GZI9C1ojhqCKxpExq/wHMku3d9zf0SUhAy/UWFl+mD/JOOB2cPoi52sNFR4kgjdjxp51sf2NjI7G8x7BwwZ2IBqLK4q0gbtRskLBhuw0nL7rhJKUVG4nFTla78fTbHRg1UIfsNB1MU6bBVVXJ4jypw4aOA+/BXVfL9gtJsyA1H4Z0lbgjTzuxWrsgtZ2B2HcRctJFFF9wk7jOzUo1H551eZ8Cr0CfkQnBYIQpbyYSvvUc9GnpaH3lV3DX13V7/fStqPuTOXHqNN5+ZzeWLV2MRx9ZhSGD0+HsfLIAtXYmY/DY7pfuXYyHiDt2Ohx4ectWZgFl7HY7fv7LlzAyazi+/uhq5OdNJwIN/dWlDtJ33NgxyJ06hS2LFi7AkkX3IFqIKouXEifixRUWPLfbjsdJWaWPVWBGjcZ6k4bqiWs0MQtlnrsAjtJjaFz/NYhJyfBca0DsVx6CaSq1NLeTAz6Cq3QxBGMKJPsViEPWQuy3BMuSgKLzbqx51QarUYAuxMdOTEhE3FPPouWH30XHfpJJEgHo0obAuuR+fFFs7TbExsZgxPBMZuHqevAFeTQzzc+bhhXL78ewYbfhr3v3YerUyazNTq6lqbkZucQF901OZiUWmlRQdKI3oWgi7j6ZtN1OrOiFC1W4+855MJlMzMVbLVZEC1FXQE7tI+KXD1pQdsmNM5e98V5Oui4g0xVIgJzw1HdYHOb6/CIMtw0j4kiXW6HL2Q4x49tA+zligrJIouDNaI3kt312mRk1Td5v16aubz2xrlaTgK+NXQ6zzmuBLLPmwzR+Mpxln0CkcVp2z12tEmpx9ux9D+s3bmYWjlq8nhzzq5e2wGI2o62tnQlQhtYIly5ZiKefIb87EXTawFQiKm+carGYybE52LT528yyzZ83F795+RWsXbcJZmKFzWYTnlz3OKIFTU0S2E+K0D/ZZ8fmxWY2GvJaoQNVJJnZ9r9W3MrbHZqamtk/3mw296g/TTJaWlphtVqYtVJDv+HRQZKF+PjgYjV1x3oS/+o6PyhUvA6nA4l9+iCa0JTwnMQr/eaAHbtKnKRcAYwmMeMTpIY3IpUPWf+74dOiOBGBf9Q5EYELjxMRuPA4EYELjxMRuPA4EYELjxMRuPA4EYELjxMRuPA4EYELjxMRuPA4EYELjxMR/glnlgAkq3GThgAAAABJRU5ErkJggg==",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "GoogleTranslate",
+            "IsMandatory": true,
+            "PropertyDescription": "API root of the Google Translate instance.",
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https://translation.googleapis.com"
+        },
+        {
+            "IntegrationIdentifier": "GoogleTranslate",
+            "IsMandatory": true,
+            "PropertyDescription": "API key of the Google Translate account.",
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleTranslate",
+            "IsMandatory": true,
+            "PropertyDescription": "If enabled, verifies that the SSL certificate for the connection to the Google Translate server is valid.",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" id=\"Layer_1\" data-name=\"Layer 1\" viewBox=\"0 0 25 25\" fill=\"currentColor\"><path d=\"M24,22.49A1.53,1.53,0,0,1,22.47,24H13.53l-1.35-3.83h6.39l-1.1-3.38.52-.53c.68.74,1.56,1.63,2.7,2.69l.74-.74c-1.22-1.11-2.12-2-2.77-2.69a8.16,8.16,0,0,0,2-3.55h1.95v-.9H18.23V9.61H16.82v1.46H15.6l-1.82-5.6,8.69.15A1.52,1.52,0,0,1,24,7.12Z\"/><path d=\"M15.9,12l.33,1h.62s0,.44,1.13,1.77A7.93,7.93,0,0,0,19.56,12Z\"/><path d=\"M16.87,15l.24.72.2-.19C17.15,15.3,17,15.13,16.87,15Z\"/><path d=\"M1,2.53A1.54,1.54,0,0,1,2.53,1h8.94l6,18.66H2.53A1.54,1.54,0,0,1,1,18.13Z\"/><path d=\"M7.59,12.9a2,2,0,0,0,2.1-1.73H7.6V9.94H11a3.1,3.1,0,0,1,.09.73,3.32,3.32,0,0,1-3.46,3.52A3.6,3.6,0,0,1,7.59,7,3.46,3.46,0,0,1,10,7.94l-.95.91a2.09,2.09,0,0,0-1.46-.56,2.31,2.31,0,0,0,0,4.61Z\" style=\"fill: rgb(79, 80, 100)\"/></svg>",
+    "Version": 2.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/google-translate"
+}

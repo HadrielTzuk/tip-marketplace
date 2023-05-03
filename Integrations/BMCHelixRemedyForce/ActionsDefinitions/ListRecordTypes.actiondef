@@ -1,0 +1,61 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "List available record types from BMC Helix Remedyforce. ",
+    "Id": -1,
+    "IntegrationIdentifier": "BMCHelixRemedyForce",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "List Record Types",
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"activateable\": false, \"associateEntityType\": null, \"associateParentEntity\": null, \"createable\": false, \"custom\": false, \"customSetting\": false, \"deepCloneable\": false, \"deletable\": false, \"deprecatedAndHidden\": false, \"feedEnabled\": false, \"hasSubtypes\": false, \"isInterface\": false, \"isSubtype\": false, \"keyPrefix\": null, \"label\": \"Accepted Event Relation\", \"labelPlural\": \"Accepted Event Relations\", \"layoutable\": false, \"mergeable\": false, \"mruEnabled\": false, \"name\": \"AcceptedEventRelation\", \"queryable\": true, \"replicateable\": false, \"retrieveable\": true, \"searchable\": false, \"triggerable\": false, \"undeletable\": false, \"updateable\": false, \"urls\": {\"rowTemplate\": \"/services/data/v51.0/sobjects/AcceptedEventRelation/{ID}\", \"defaultValues\": \"/services/data/v51.0/sobjects/AcceptedEventRelation/defaultValues?recordTypeId&fields\", \"describe\": \"/services/data/v51.0/sobjects/AcceptedEventRelation/describe\", \"sobject\": \"/services/data/v51.0/sobjects/AcceptedEventRelation\"}}]",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what value should be used in the filter. If \"Equal\" is selected, action will try to find the exact match among record types and if \"Contains\" is selected, action will try to find record types that contain that substring. If nothing is provided in this parameter, the filter will not be applied.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Filter Value",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many record types to return. Default: 50.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Record Types To Return",
+            "Type": 0,
+            "Value": "50"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Equal",
+            "Description": "Specify what filter logic should be applied.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Filter Logic",
+            "OptionalValues": [
+                "Equal",
+                "Contains"
+            ],
+            "Type": 15,
+            "Value": "Equal"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

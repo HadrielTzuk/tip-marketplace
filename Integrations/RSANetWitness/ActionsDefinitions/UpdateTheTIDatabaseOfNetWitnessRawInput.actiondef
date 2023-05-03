@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1547373994046,
+    "Creator": "Admin",
+    "Description": "Set custom feed configuration in NetWitness to enrich entities with specific metadata keys and values. \\nThese will be later correlated in the NetWitness correlation rules.",
+    "Id": -1,
+    "IntegrationIdentifier": "RSANetWitness",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1547373994055,
+    "Name": "Update The TI Database Of NetWitness Raw Input",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1547373994065,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comma separated identifiers list.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1547373994065,
+            "Name": "Identifiers",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547373994068,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comma separated values when each value is a key value pair separated by colon, Example: key:val,key:val",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1547373994068,
+            "Name": "Key And Value Items",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction, ScriptResult\nfrom RSAManager import RSA\n\n# Consts.\nRSA_PROVIDER = 'RSANetWitness'\nACTION_NAME = 'RSANetWitness_Update The TI Database Of NetWitness Raw Input'\n\n\ndef main():\n    # Siemplify object and log definition.\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n\n    # Variables Definition.\n    result_value = True\n    errors = []\n\n    # Configuration.\n    config = siemplify.get_configuration(RSA_PROVIDER)\n\n    # Configuration Parameters.\n    concentrator_uri = config['Concentrator Api Root']\n    decoder_uri = config['Decoder Api Root']\n    username = config['Username']\n    password = config['Password']\n    verify_ssl = config.get('Verify SSL', 'false').lower() == 'true'\n\n    rsa_manager = RSA(concentrator_uri=concentrator_uri,\n                      decoder_uri=decoder_uri, username=username,\n                      password=password,\n                      verify_ssl=verify_ssl)\n\n    # Parameters.\n    identifiers = siemplify.parameters.get('Identifiers').split(',')\n    key_value_items = siemplify.parameters.get('Key And Value Items', '')\n\n    for identifier in identifiers:\n        try:\n            rsa_manager.upload_parsers_feeds(identifier, key_value_items)\n        except Exception as err:\n            error_massage = 'Failed uploading item: \"{0}\", Error: {1}'.format(\n                identifier,\n                err.message\n            )\n            siemplify.LOGGER.error(error_massage)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_massage)\n            result_value = False\n\n    if result_value:\n        output_message = 'TI database updated successfully'\n    else:\n        output_message = 'TI database was updated partially or not updated at all.'\n\n    if errors:\n        output_message = \"{0}\\n\\nErrors:\\n{1}\".format(\n            output_message,\n            \"\\n\".join(errors)\n        )\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 7.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

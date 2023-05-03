@@ -1,0 +1,17 @@
+{
+    "CreationTimeUnixTimeInMs": 1513525130286,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "OpswatMetadefender",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1513525130286,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import *\nfrom OpswatMetadefenderManager import OpswatMetadefenderManager\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\t\n\tconf = siemplify.get_configuration(\"OpswatMetadefender\")\n\tom = OpswatMetadefenderManager(conf['ApiRoot'])\n\t\n\t\n\toutput_message = 'Connection Established'\n\tresult_value = 'true'\n\tsiemplify.end(output_message, result_value)\n\t\n\nif __name__ == \"__main__\":\n\tmain()",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

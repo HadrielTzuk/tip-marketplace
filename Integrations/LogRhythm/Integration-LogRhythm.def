@@ -1,0 +1,44 @@
+{
+    "Description": "LogRhythm's security intelligence and analytics platform enables organizations to detect, contain and neutralize cyber threats with threat lifecycle management.",
+    "DisplayName": "LogRhythm",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/logrhythm",
+    "Identifier": "LogRhythm",
+    "Categories": [
+        "SIEM",
+        "Security",
+        "XDR"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "LogRhythm",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https://{IP}:{PORT}"
+        },
+        {
+            "IntegrationIdentifier": "LogRhythm",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Token",
+            "PropertyName": "API Token",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "LogRhythm",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SvgImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.4 7.9499C20.75 7.9499 21.7999 6.8999 21.7999 5.5499C21.7999 4.2499 20.6999 3.1499 19.4 3.1499C18.0999 3.1499 17 4.2499 17 5.5499C17 6.8999 18.0999 7.9499 19.4 7.9499ZM12.5 3.1499C11.15 3.1499 10.1 4.1999 10.1 5.5499C10.1 6.8499 11.2 7.9499 12.5 7.9499C13.8 7.9499 14.9 6.8999 14.9 5.5499C14.9 4.2499 13.85 3.1499 12.5 3.1499ZM19.4 10.0999C18.0499 10.0999 17 11.1499 17 12.4999C17 13.7999 18.0999 14.8999 19.4 14.8999C20.6999 14.8999 21.7999 13.8499 21.7999 12.4999C21.8499 11.1499 20.75 10.0999 19.4 10.0999ZM12.5 10.0999C11.15 10.0999 10.1 11.1499 10.1 12.4999C10.1 13.7999 11.2 14.8999 12.5 14.8999C13.8 14.8999 14.9 13.8499 14.9 12.4999C14.9 11.1499 13.85 10.0999 12.5 10.0999ZM5.59995 10.0999C4.24995 10.0999 3.19995 11.1499 3.19995 12.4999C3.19995 13.7999 4.29995 14.8999 5.59995 14.8999C6.89995 14.8999 7.99995 13.7999 7.99995 12.4999C7.99995 11.1499 6.89995 10.0999 5.59995 10.0999ZM12.5 17.0499C11.15 17.0499 10.1 18.0999 10.1 19.4499C10.1 20.7499 11.2 21.8499 12.5 21.8499C13.8 21.8499 14.9 20.7999 14.9 19.4499C14.9 18.0999 13.85 17.0499 12.5 17.0499ZM5.59995 17.0499C4.24995 17.0499 3.19995 18.0999 3.19995 19.4499C3.19995 20.7499 4.29995 21.8499 5.59995 21.8499C6.89995 21.8499 7.99995 20.7999 7.99995 19.4499C7.99995 18.0999 6.89995 17.0499 5.59995 17.0499Z\" \/>\r\n<\/svg>",
+    "Version": 14.0,
+    "MarketingDisplayName": "LogRhythm"
+}

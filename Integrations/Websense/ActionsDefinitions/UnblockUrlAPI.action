@@ -1,0 +1,42 @@
+{
+    "CreationTimeUnixTimeInMs": 1513760482919, 
+    "Creator": "admin", 
+    "Description": "Unblock URL in WebSense API category", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Websense", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1513760482919, 
+    "Name": "Unblock Url API", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1513763783622, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The API manage category name.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1513763783622, 
+            "Name": "CategoryName", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1513763783622, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The url to block.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1513763783622, 
+            "Name": "URL", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "Script": "from SiemplifyAction import *\nfrom WebsenseManager import WebsenseAPIManager\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\toutput_message = 'Error accured'\n\tresult_value = 'False'\n\tconf = siemplify.get_configuration('Websense')\n\t\n\twebsense_manager = WebsenseAPIManager(conf['ApiRoot'], conf['GatewayUser'], conf['GatewayPassword'])\n\turl = siemplify.parameters['Url']\n\tcategory = siemplify.parameters['CategoryName']\n\tresult = websense_manager.remove_url_form_category(url, category)\n\n\tif result:\n\t\toutput_message = 'Url:{0} removed from category:{1}'.format(url, category)\n\t\tresult_value = 'true'\n\t\n\tsiemplify.end(output_message, result_value)\n\t\n\nif __name__ == \"__main__\":\n\tmain()", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 2.0
+}

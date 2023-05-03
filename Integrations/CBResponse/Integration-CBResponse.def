@@ -1,0 +1,42 @@
+{
+    "Description": "Highly scalable, real-time EDR with unparalleled visibility for top security operations centers and incident response teams",
+    "DisplayName": "Carbon Black Response",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/carbon-black-response",
+    "Identifier": "CBResponse",
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "CBResponse",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "5",
+            "Value": "https://x.x.x.x"
+        },
+        {
+            "IntegrationIdentifier": "CBResponse",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "Api Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CBResponse",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Version",
+            "PropertyName": "Version",
+            "PropertyType": "2",
+            "Value": "6.3"
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M22.2,12.4L22.2,12.4c0-1.6,0-3.3,0-4.9c0-0.5-0.1-0.8-0.6-1c-2.8-1.6-5.7-3.2-8.5-4.9c-0.4-0.3-0.8-0.3-1.2,0\n\t\t\tC9,3.3,6.2,4.9,3.4,6.5C3,6.8,2.8,7,2.8,7.5c0,3.3,0,6.6,0,9.9c0,0.5,0.2,0.7,0.6,1c2.9,1.6,5.7,3.3,8.6,4.9\n\t\t\tc0.4,0.3,0.7,0.2,1.1,0c2.8-1.7,5.6-3.3,8.5-4.9c0.5-0.3,0.6-0.6,0.6-1.1C22.1,15.6,22.2,14,22.2,12.4z M21.3,12.5\n\t\t\tc0,1.5,0,3,0,4.5c0,0.3-0.2,0.7-0.5,0.8c-2.6,1.5-5.2,3.1-7.8,4.5c-0.2,0.1-0.7,0.1-1,0c-2.6-1.5-5.2-3-7.8-4.5\n\t\t\tc-0.3-0.2-0.5-0.6-0.5-0.9c0-3,0-5.9-0.1-8.9c0-0.5,0.2-0.8,0.6-1.1c2.5-1.5,5.1-2.9,7.6-4.4c0.4-0.3,0.8-0.3,1.2,0\n\t\t\tc2.5,1.5,5.1,2.9,7.6,4.4c0.5,0.3,0.6,0.6,0.6,1.1C21.3,9.5,21.3,11,21.3,12.5z M9.9,14.9c-1.1,0-1.9-0.8-1.9-2.3\n\t\t\tc0-1.4,0.8-2.3,1.9-2.3c0.6,0,1,0.2,1.4,0.6l0.9-1C11.7,9.4,10.9,9,9.9,9c-2,0-3.7,1.4-3.7,3.7c0,2.4,1.7,3.6,3.6,3.6\n\t\t\tc1,0,1.9-0.4,2.5-1l-0.9-1C11,14.6,10.5,14.9,9.9,14.9z M16.5,10.7c-0.6,0-1.1,0.2-1.6,0.6l0-0.8V8.6h-1.8v7.5h1.4l0.1-0.6h0\n\t\t\tc0.5,0.5,1,0.7,1.6,0.7c1.3,0,2.5-1.1,2.5-2.9C18.8,11.7,17.9,10.7,16.5,10.7z M15.9,15c-0.3,0-0.6-0.1-0.9-0.3v-2.2\n\t\t\tc0.3-0.3,0.7-0.5,1-0.5c0.7,0,1,0.5,1,1.4C17,14.5,16.5,15,15.9,15z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 27.0,
+    "MarketingDisplayName": "VMware Carbon Black Response"
+}

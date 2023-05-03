@@ -1,0 +1,51 @@
+{
+    "CreationTimeUnixTimeInMs": "1570446244",
+    "Creator": "admin",
+    "Description": "Get related urls to the provided entities from VirusTotal. Note: this action requires a VT Enterprise token. Supported entities: IP, URL, Filehash, Hostname. Note: only MD5, SHA-1 and SHA-256 are supported.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"url\": [\"http://mozcxxxx.ru/test/configif.bin\", \"http://ctldl.windowsupxxx.com/msdownload/update/v3/static/trustedr/en/disallowxxxx.cab\", \"http://ctldl.windowsupxxx.com/msdownload/update/v3/static/trustedr/en/disalloxxx.cab?adbe4374axxxx\", \"http://ctldl.windowsupxxx.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab?5067cf5xxxx\", \"http://tl.symcd.com/MFEwTzBNMEswSTAJBgUrDgMCGgxxxxxjxN+WY73bfUnSOp7HDKJ/bx0wQUV4abVLi+pimK5PbC4hMYiYXN3LcCEH0bGAxxxxx=\", \"http://ctldl.windowsupxxx.com/msdownload/update/v3/static/trustedr/en/authrxxxx.cab\", \"http://t2.symcb.com/MFEwTzBNMEswSTAJBgUrDgMCGgUABBxxxx/yl6nWPkczAQUe1tFz6/Oy3r9MZIaarbzRutXSFACEHGgtzaV3bxxxxx=\"],\"EntityResults\":[{\"Entity\":\"192.xxx.xx.xx\",\"EntityResult\":[\"http://www.update-info-account.info/login\",\"http://apple-gps.live/map/?location=xxx\"]},{\"Entity\":\"www.example.com\",\"EntityResult\":[\"https://www.example.com/desktopmodules/telerikwebui/radeditorprovider\",\"http://www.example.com/activity/\"]}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "VirusTotalV3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Get Related URLs",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "Combined",
+            "Description": "Specify how the JSON  result should look like. If \"Combined\" is selected then action will return all of the unique results that were found among the provided entities. If \"Per Entity\" is selected, then action will return all of the unique items per entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Results",
+            "Type": 15,
+            "Value": "Combined",
+            "OptionalValues": [
+                "Combined",
+                "Per Entity"
+            ]
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": 40,
+            "Description": "Specify how many URLs to return. Depending on the parameter \"Results\", this parameter will behave differently. For \"Combined\" the limit will define how many results to return from ALL entities. For \"Per Entity\" this parameter dictates how many results to return per entity. Default: 40.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Max URLs To Return",
+            "Type": 0,
+            "Value": 40
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\", \"DestinationURL\", \"ADDRESS\", \"HOSTNAME\"]}",
+    "Type": 0,
+    "Version": 1.0
+}

@@ -1,0 +1,58 @@
+{
+    "CreationTimeUnixTimeInMs": 1534152519522,
+    "Creator": "Admin",
+    "Description": "Get results for the provided query in ArcSight",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Target User Name\": \"user\", \"Attacker Address\": \"1.1.1.1\", \"External ID\": \"127\", \"Name\": \"A Kerberos authentication ticket (TGT) was requested.\", \"Target Address\": \"1.1.1.1\", \"Connector Information\": \"172.30.xx.xx|Manager Internal Agent|RFC1918: 172.16.0.0-172.xx.xx.xx\", \"Priority\": \"3\", \"Total\": \"7\"}, {\"Target User Name\": \"user\", \"Attacker Address\": \"1.1.1.1\", \"External ID\": \"127\", \"Name\": \"A Kerberos authentication ticket (TGT) was requested.\", \"Target Address\": \"1.1.1.1\", \"Connector Information\": \"172.30.xx.xx|Manager Internal Agent|RFC1918: 172.16.0.0-172.xx.xx.xx\", \"Priority\": \"3\", \"Total\": \"7\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Arcsight",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534152519522,
+    "Name": "Get Query Results",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534152519522,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID of the query for which you want to return results. Note: parameter “Query ID“ takes priority over “Query Name“. Example: cyUJKRz4BABCFwS9iFPq+aA==",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534152519522,
+            "Name": "Query ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530543579170,
+            "CustomActionId": -1,
+            "DefaultValue": "100",
+            "Description": "Specify how many items to return in the response.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530543579170,
+            "Name": "Max Items To Return",
+            "Type": 0,
+            "Value": "100"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534152519522,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the query for which you want to return results. Note: parameter “Query ID“ takes priority over “Query Name“.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534152519522,
+            "Name": "Query Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

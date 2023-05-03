@@ -1,0 +1,63 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List available templates in AlgoSec.",
+    "Id": -1,
+    "IntegrationIdentifier": "AlgoSec",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Templates",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\":142,\"name\":\"110: Multi-Approval Request\",\"description\":\"Create a traffic change request which requires multiple approvals\",\"type\":\"Traffic Change\",\"enabled\":true},{\"id\":597,\"name\":\"190: Verbatim Rule Addition\",\"description\":\"Create a traffic change request for bulk rules addition exactly as specified\",\"type\":\"Traffic Change\",\"enabled\":true},{\"id\":550,\"name\":\"Basic Change Traffic Request\",\"description\":\"Create a basic change traffic request\",\"type\":\"Traffic Change\",\"enabled\":true}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1554655351176,
+            "CustomActionId": -1,
+            "DefaultValue": "Equal",
+            "Description": "Specify what filter logic should be applied.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1554655351176,
+            "Name": "Filter Logic",
+            "Type": 15,
+            "OptionalValues": [
+                "Equal",
+                "Contains"
+            ],
+            "Value": "Equal"
+        },
+        {
+            "Name": "Filter Value",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what value should be used in the filter. If \"Equal\" is selected, action will try to find the exact match among record types and if \"Contains\" is selected, action will try to find items that contain that substring. If nothing is provided in this parameter, the filter will not be applied.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Templates To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many templates to return. Default: 50.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

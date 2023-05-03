@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1507460191935,
+    "Creator": "admin",
+    "Description": "Add a general insight configurable message to the case",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1507460191935,
+    "Name": "Add General Insight",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1510914771177,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The title of the insight.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914771177,
+            "Name": "Title",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1510914771177,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The message that will be placed on the insight.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914771177,
+            "Name": "Message",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1510914771177,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "A description for the cause of this insight",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1510914771177,
+            "Name": "Triggered By",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

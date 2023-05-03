@@ -1,0 +1,59 @@
+{
+    "Description": "Real-time threat detection and automated response backed by a powerful, open, and intelligent SIEM (Security Information and Event Management).",
+    "DisplayName": "Arcsight",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/arcsight",
+    "Identifier": "Arcsight",
+    "Categories": [
+        "SIEM",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Arcsight",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://{IP_ADDR}:{PORT}"
+        },
+        {
+            "IntegrationIdentifier": "Arcsight",
+            "IsMandatory": true,
+            "PropertyDisplayName": "User name",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Arcsight",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Arcsight",
+            "IsMandatory": false,
+            "PropertyDisplayName": "CA Certificate File",
+            "PropertyName": "CA Certificate File",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Arcsight",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": false
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M15.5,12.4c0-1.3-0.3-2.5-0.8-3.6L22,5.9l-0.6-1.5L14,7.3c-2-3.6-5.4-5.8-5.6-6L7.5,2.7c0,0,3.1,2.1,5,5.2l-9.1,3.5\n\t\t\tc-0.4,0.2-0.7,0.5-0.7,1s0.3,0.8,0.7,1l9.3,3.5c-1.1,1.9-2.8,3.7-5.2,5.5l0.9,1.3c2.7-2,4.6-4,5.8-6.2l7.3,2.8l0.6-1.5L14.9,16\n\t\t\tC15.3,14.8,15.5,13.6,15.5,12.4z M5.3,12.4l7.9-3.1c0.4,1,0.7,2,0.7,3.1c0,1-0.2,2-0.5,3L5.3,12.4z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 35.0,
+    "MarketingDisplayName": "ArcSight Enterprise Security Manager (ESM)"
+}

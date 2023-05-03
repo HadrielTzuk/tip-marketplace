@@ -1,0 +1,56 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Update event in Attivo.",
+    "Id": -1,
+    "IntegrationIdentifier": "Attivo",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Update Event",
+    "Parameters": [        
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the ID of the event, which needs to be updated.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Event ID",
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CustomActionId": -1,
+            "DefaultValue": "Select One",
+            "Description": "Specify the status for the event.",
+            "Id": -1,
+            "IsMandatory": false,
+            "Name": "Status",
+            "OptionalValues": [
+                "Select One",
+                "Acknowledge",
+                "Unacknowledge"
+            ],
+            "Type": 15,
+            "Value": "Select One"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify a comment that needs to be added to the event.",
+            "Id": -1, 
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Comment",
+            "Type": 0, 
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

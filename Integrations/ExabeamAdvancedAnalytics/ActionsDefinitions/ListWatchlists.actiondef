@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List available watchlists in Exabeam Advanced Analytics.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"watchlistId\":\"XXXXXXXXXXX\",\"title\":\"Service Accounts\",\"category\":\"UserLabels\"},{\"watchlistId\":\"XXXXXXXXXXX\",\"title\":\"Executive Users\",\"category\":\"UserLabels\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "ExabeamAdvancedAnalytics",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Watchlists",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "100",
+            "Description": "Specify how many watchlists should be returned.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Watchlists To Return",
+            "Type": 0,
+            "Value": "100"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

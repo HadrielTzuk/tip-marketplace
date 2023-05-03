@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 12.93</h2><h5>Published on 25 July, 2020</h5><hr><h3>Actions</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     Siemplify\n    </b>\n   </li>\n   <ul>\n    <li>\n     Create Entity\n    </li>\n    <ul>\n     <li>\n      REGRESSIVE! Revert of the spelling mistake fix\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "12.93",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "25/07/20",
+    "Title": "Release Notes"
+}

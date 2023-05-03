@@ -1,0 +1,122 @@
+[
+    {
+        "ChangeDescription": "NEW! Cofense Triage integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "CofenseTriage",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1606820480,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-6088"
+    },
+    {
+        "ChangeDescription": "Added new action \"List Reports Related To Threat Indicators\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "List Reports Related To Threat Indicators",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1610445739,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-6623"
+    },
+    {
+        "ChangeDescription": "Added an ability to select location for the reports in the \"Reports Connector\". Added source link to the reports ingested by the \"Reports Connector\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Reports Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1610445739,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-6624"
+    },
+    {
+        "ChangeDescription": "Fixed a bug, where action was trying to validate the SSL connection, even if \"Verify SSL\" was set to false.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "CofenseTriage",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1620208381,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7869"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "CofenseTriage",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    },
+    {
+        "ChangeDescription": "Reports Connector - Updated connector to have more data related to the report.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Reports Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1638336195,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10443"
+    },
+    {
+        "ChangeDescription": "Get Threat Indicator Details - Added proper support for user and subject entity types.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Get Threat Indicator Details",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1638336195,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10444"
+    },
+    {
+        "ChangeDescription": "New Action Added - List Playbooks.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "List Playbooks",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1671012672,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13282"
+    },
+    {
+        "ChangeDescription": "New Action Added - Execute Playbook.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Execute Playbook",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1671012672,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13283"
+    },
+    {
+        "ChangeDescription": "Cofense Triage - Reports Connector - Added an ability to provide padding time period",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Reports Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1671012672,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13395"
+    }
+]

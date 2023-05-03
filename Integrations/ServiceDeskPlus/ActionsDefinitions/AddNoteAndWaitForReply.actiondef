@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1533725706168,
+    "Creator": "Admin",
+    "Description": "Add a note and wait for new notes to be added to the given request.",
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceDeskPlus",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1533725706168,
+    "Name": "Add Note And Wait For Reply",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517835376849,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The requests' ID.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517835376849,
+            "Name": "Request ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517835376849,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The note's content.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517835376849,
+            "Name": "Note",
+            "Type": 11,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517835376849,
+            "CustomActionId": -1,
+            "DefaultValue": "false",
+            "Description": "Whether to make the note public or not.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517835376849,
+            "Name": "Is Public",
+            "Type": 1,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "new_notes",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

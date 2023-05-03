@@ -1,0 +1,31 @@
+{
+	"CreationTimeUnixTimeInMs": 1570446244,
+	"Creator": "admin",
+	"Description": "List groups that are available in McAfee Mvision ePO.",
+	"DynamicResultsMetadata": [{
+		"ResultExample": "[{\"id\": 1, \"name\": \"GlobalRoot\", \"userFriendlyName\": \"Global Root\", \"type\": \"7\", \"parentId\": \"0\", \"description\": \"\", \"textPath\": \"GlobalRoot\", \"links \": [{\"rel\": \"self\",\"href\": \"1\"}, {\"rel\": \"parent \", \"href\": \"0\"}]}]",
+		"ResultName": "JsonResult"
+	}],
+	"Id": -1,
+	"IntegrationIdentifier": "McAfeeMvisionEPO",
+	"IsCustom": false,
+	"IsEnabled": true,
+	"ModificationTimeUnixTimeInMs": 1570446244,
+	"Name": "List Groups",
+	"Parameters": [{
+		"CreationTimeUnixTimeInMs": 1530543579170,
+		"CustomActionId": -1,
+		"DefaultValue": "100",
+		"Description": "Specify how many groups to return.",
+		"Id": -1,
+		"IsMandatory": false,
+		"ModificationTimeUnixTimeInMs": 1530543579170,
+		"Name": "Max Groups to Return",
+		"Type": 0,
+		"Value": "100"
+	}],
+	"ScriptResultName": "is_success",
+	"Type": 0,
+	"Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

@@ -1,0 +1,53 @@
+{
+	"Cases": [{
+			"Events": [{
+					"_fields": {
+						"BaseEventIds": "[]",
+						"ParentEventId": -1,
+						"DeviceProduct": "HTTP",
+						"StartTime": "1529399987612",
+						"EndTime": "1529399987612"
+					},
+					"_rawDataFields": {
+						"sourcetype": "HTTP",
+						"DeviceVendor": "HTTP",
+						"StartTime": "1529399987612",
+						"EndTime": "1529399987612",
+						"EventId": "220",
+						"Name": "HTTP",
+						"Mail_OriginalEmailBody": "Hello, You have an important email from the Human Resources Department with regards to your December 2015 Paycheck\r\n\r\nThis email is enclosed in the Marquette University secure network, hence access it below\r\n\r\nAccess the documents here <http://markossolomon.com/F1q7QX.php<link removed>\r\n\r\n***Ensure your login credentials are correct to avoid cancellations**\r\n\r\nFaithfully \r\nHuman Resources \r\nUniversity of California, Berkeley\r\n\r",
+						"Severity": "High",
+						"CategoryOutcome": "allowed",
+						"DeviceEventClassId": "HTTP",
+						"SourceUserName": "source@email.com",
+						"DestinationUserName": "destination@email.co",
+						"DestinationURL": "http://markossolomon.com/F1q7QX.php",
+						"sentTime": "1498647816000",
+						"message_id": "220",
+						"subject": "HTTP",
+						"body": "Hello, You have an important email from the Human Resources Department with regards to your December 2015 Paycheck\r\n\r\nThis email is enclosed in the Marquette University secure network, hence access it below\r\n\r\nAccess the documents here <http://markossolomon.com/F1q7QX.php<link removed>\r\n\r\n***Ensure your login credentials are correct to avoid cancellations**\r\n\r\nFaithfully \r\nHuman Resources \r\nUniversity of California, Berkeley\r\n\r"
+					},
+					"Environment": null,
+					"SourceSystemName": null
+				}
+			],
+			"Environment": null,
+			"SourceSystemName": "Splunk",
+			"TicketId": "d6f179fb-15ed-4fd5-9de3-666ce5ac7156 HTTP",
+			"Description": "HTTP",
+			"DisplayId": "d6f179fb-15ed-4fd5-9de3-666ce5ac7156 HTTP",
+			"Reason": "HTTP",
+			"Name": "HTTP",
+			"DeviceVendor": "HTTP",
+			"DeviceProduct": "HTTP",
+			"StartTime": 1529399987612,
+			"EndTime": 1529399987612,
+			"IsTestCase": false,
+			"Priority": 80,
+			"RuleGenerator": "HTTP",
+			"PlaybookTriggerKeywords": [],
+			"Extensions": []
+		}
+	],
+	"IsTestCase": false
+}

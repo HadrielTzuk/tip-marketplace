@@ -1,0 +1,32 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Creates a single Amazon GuardDuty detector. A detector is a resource that represents the GuardDuty service.You can have only one detector per account per Region.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSGuardDuty",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "{\"detectorId\": \"123456abcd\"}",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Create a Detector",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "false",
+            "Description": "Specifies whether the detector is to be enabled",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Enable",
+            "Type": 1,
+            "Value": "false"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

@@ -1,0 +1,62 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - \"Google Alert Center\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "GoogleAlertCenter",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1644399582,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11080"
+    },
+    {
+        "ChangeDescription": "Google Alert Center Alerts Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Google Alert Center - Alerts Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1655285435,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11469"
+    },
+    {
+        "ChangeDescription": "Alerts Connector -  Connector parameters re-organized in \"Basic\" and \"Advanced\" parameters sections.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Google Alert Center - Alerts Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1665057489,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12799"
+    },
+    {
+        "ChangeDescription": "Added integration parameters description.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "GoogleAlertCenter",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1678320000,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "265188300"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "GoogleAlertCenter",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

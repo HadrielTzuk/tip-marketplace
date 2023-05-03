@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1521992144852, 
+    "Creator": "admin", 
+    "Description": "Enrich endpoint entity with its system information", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SentinelOne", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1521992144852, 
+    "Name": "Enrich Endpoint", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom SentinelOneManager import SentinelOneManager\r\nfrom SiemplifyDataModel import EntityTypes\r\nfrom SiemplifyUtils import add_prefix_to_dict_keys, dict_to_flat, flat_dict_to_csv\r\n\r\n# Consts.\r\nSENTINEL_ONE_PROVIDER = 'SentinelOne'\r\nSENTINEL_PREFIX = 'SENO_'\r\nADDRESS = EntityTypes.ADDRESS\r\nHOSTNAME = EntityTypes.HOSTNAME\r\n\r\n\r\ndef main():\r\n    # Define Variables.\r\n    entities_successed = []\r\n    result_value = False\r\n    system_information = None\r\n    # Configuration.\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration(SENTINEL_ONE_PROVIDER)\r\n    sentinel_one_manager = SentinelOneManager(conf['Api Root'], conf['Username'], conf['Password'])\r\n\r\n    # Get scope entities.\r\n    scope_entities = [entity for entity in siemplify.target_entities if entity.entity_type == ADDRESS or\r\n                      entity.entity_type == HOSTNAME]\r\n\r\n    # Run on entities.\r\n    for entity in scope_entities:\r\n        if entity.entity_type == ADDRESS:\r\n            system_information = sentinel_one_manager.get_endpoint_system_information(entity.identifier,\r\n                                                                                      is_ip_address=True)\r\n        elif entity.entity_type == HOSTNAME:\r\n            system_information = sentinel_one_manager.get_endpoint_system_information(entity.identifier)\r\n\r\n        if system_information:\r\n            entities_successed.append(entity)\r\n            result_value = True\r\n            # Organize output.\r\n            system_information_flat = dict_to_flat(system_information)\r\n            csv_output = flat_dict_to_csv(system_information_flat)\r\n            # Add entity table.\r\n            siemplify.result.add_entity_table(entity.identifier, csv_output)\r\n            # Enrich entity.\r\n            entity.additional_properties.update(add_prefix_to_dict_keys(system_information_flat, SENTINEL_PREFIX))\r\n\r\n    if entities_successed:\r\n        output_message = 'Found system information for: {0}'.format(\",\".format([entity.identifier for entity\r\n                                                                                in entities_successed]))\r\n    else:\r\n        output_message = 'No system information found.'\r\n\r\n    siemplify.update_entities(entities_successed)\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

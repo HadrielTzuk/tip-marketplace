@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Outpost24",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Outpost24",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1634730849,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8262"
+    },
+    {
+        "ChangeDescription": "Outpost24 - Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Outpost24",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1663749893,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11417"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Outpost24",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

@@ -1,0 +1,65 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Close EasyVista ticket based on the provided parameters. Note: action is not working on Siemplify entities, ticket identifier (rfc_number) should be provided.",
+    "Id": -1,
+    "IntegrationIdentifier": "EasyVista",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Close EasyVista Ticket",
+        "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "EasyVista ticket identifier, eg S201001_000001.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Ticket Identifier",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comment explaining the closing of the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Closing date of open actions associated with the ticket and the anticipated closure action. Date should be in the following format: MM/DD/YYYY HH:MM:SS. If the wrong format is provided, action will use current datetime as close date.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Actions Close Date",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "Specify whether to delete the ticket's ongoing actions on ticket closing.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Delete ongoing actions?",
+            "Type": 1,
+            "Value": "False"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

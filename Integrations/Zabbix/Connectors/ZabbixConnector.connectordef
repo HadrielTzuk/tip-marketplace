@@ -1,0 +1,176 @@
+{
+    "CreationTimeUnixTimeInMs": 1522146614069, 
+    "Creator": "admin", 
+    "Description": "Zabbix connector - fetches events from Zabbix.", 
+    "Id": -1, 
+    "Integration": "Zabbix", 
+    "IsConnectorRulesSupported": false, 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "MappingRules": [], 
+    "ModificationTimeUnixTimeInMs": 1522146614069, 
+    "Name": "Zabbix Connector", 
+    "Parameters": [
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1522146614069, 
+            "DefaultValue": "Product Field Name", 
+            "Description": "The field name used to determine the device product", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 0, 
+            "ModificationTimeUnixTimeInMs": 1522146614069, 
+            "Name": "DeviceProductField", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1522146614069, 
+            "DefaultValue": "Event Field Name", 
+            "Description": "The field name used to determine the event name (sub-type)", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 0, 
+            "ModificationTimeUnixTimeInMs": 1522146614069, 
+            "Name": "EventClassId", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1522146614069, 
+            "DefaultValue": "300", 
+            "Description": "The timeout limit (in seconds) for the python process running current script", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 0, 
+            "ModificationTimeUnixTimeInMs": 1522146614069, 
+            "Name": "PythonProcessTimeout", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1522146614069, 
+            "DefaultValue": null, 
+            "Description": "", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 2, 
+            "ModificationTimeUnixTimeInMs": 1522146614069, 
+            "Name": "Api Root", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1522146614069, 
+            "DefaultValue": null, 
+            "Description": "", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 2, 
+            "ModificationTimeUnixTimeInMs": 1522146614069, 
+            "Name": "Username", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1522146614069, 
+            "DefaultValue": null, 
+            "Description": "", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 2, 
+            "ModificationTimeUnixTimeInMs": 1522146614069, 
+            "Name": "Password", 
+            "Type": 3
+        },
+        {
+            "ConnectorDefinitionId": -1,
+            "CreationTimeUnixTimeInMs": 1543500772807,
+            "DefaultValue": "False",
+            "Description": "If enabled, only problematic triggers will be considered.",
+            "Id": -1,
+            "IsMandatory": true,
+            "Mode": 2,
+            "ModificationTimeUnixTimeInMs": 1543500772807,
+            "Name": "Only Problematic Triggers",
+            "Type": 0
+        },
+        {
+            "ConnectorDefinitionId": -1,
+            "CreationTimeUnixTimeInMs": 1543498113263,
+            "DefaultValue": 24,
+            "Description": "Max amount of hours from where to fetch alerts.",
+            "Id": -1,
+            "IsMandatory": true,
+            "Mode": 0,
+            "ModificationTimeUnixTimeInMs": 1543498113263,
+            "Name": "Fetch Max Hours Backwards",
+            "Type": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1574099687000, 
+            "Name": "Proxy Server Address", 
+            "ModificationTimeUnixTimeInMs": 1574099687000, 
+            "Type": 2, 
+            "DefaultValue": null, 
+            "Description": "The address of the proxy server to use.", 
+            "ConnectorDefinitionId": -1, 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 2
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1574099687000, 
+            "Name": "Proxy Username", 
+            "ModificationTimeUnixTimeInMs": 1574099687000, 
+            "Type": 2, 
+            "DefaultValue": null, 
+            "Description": "The proxy username to authenticate with.", 
+            "ConnectorDefinitionId": -1, 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 2
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1525167465721, 
+            "Name": "Proxy Password", 
+            "ModificationTimeUnixTimeInMs": 1525167465721, 
+            "Type": 3, 
+            "DefaultValue": null, 
+            "Description": "The proxy password to authenticate with.", 
+            "ConnectorDefinitionId": -1, 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 2
+        },
+        {
+             "Name": "Verify SSL",
+             "Type": 0,
+             "DefaultValue": false,
+             "IsMandatory": true,
+             "Description": "If enabled, verify the SSL certificate for the connection to the Zabbix server is valid.",
+             "ConnectorDefinitionId": -1,
+             "CreationTimeUnixTimeInMs": 1656934964000,
+             "Id": -1,
+             "Mode": 2,
+             "ModificationTimeUnixTimeInMs": 1656934964000
+      }
+    ], 
+    "ProductToVisualFamilyRecords": [], 
+    "Rules": [
+        {
+            "ConnectorDefinitionId": 2, 
+            "CreationTimeUnixTimeInMs": 1522146614069, 
+            "Id": 2, 
+            "ModificationTimeUnixTimeInMs": 1522146614069, 
+            "RuleName": "tag_name:value", 
+            "RuleType": 0
+        }
+    ], 
+    "Script": "# ============================================================================#\n# title           :ZabbixConnector.py\n# description     :This Module contain all Zabbix connector functionality, Fetch events by triggers (events that are caused by discovery rules and internal events are not supported and not fetched).\n# author          :avital@siemplify.co\n# date            :21-01-2018\n# python_version  :2.7\n# ============================================================================#\n\n# ============================= IMPORTS ===================================== #\n\nimport os\nimport logging\nfrom logging.handlers import RotatingFileHandler\n\nfrom SiemplifyUtils import *\nfrom SiemplifyConnectors import CaseInfo, SiemplifyConnectorExecution\nfrom ZabbixManager import ZabbixManager\n\n# ============================== CONSTS ===================================== #\nVENDOR = PRODUCT = \"Zabbix\"\nLOG_FILE_PATH = r\"C:\\Siemplify_Server\\ConnectorsProcessingFolder\\LOGS\\ZabbixConnector\\connector.log\"\nLOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nMAX_LOG_SIZE = 1000000  # 1 MB\nLOG_BACKUP_COUNT = 5\nPRIORITIES = {\n    '1': 20,\n    '2': 40,\n    '3': 60,\n    '4': 80,\n    '5': 100\n}\n\n\n# ============================= CLASSES ===================================== #\n\n\nclass ZabbixConnectorException(Exception):\n    pass\n\n\n# ============================ FUNCTIONS ==================================== #\n\ndef configure_logging():\n    \"\"\"\n    Configures logging\n    \"\"\"\n\n    # Create log path\n    if not os.path.exists(os.path.dirname(LOG_FILE_PATH)):\n        os.makedirs(os.path.dirname(LOG_FILE_PATH))\n\n    logger = logging.getLogger()\n    handler = RotatingFileHandler(LOG_FILE_PATH,\n                                  maxBytes=MAX_LOG_SIZE,\n                                  backupCount=LOG_BACKUP_COUNT)\n    formatter = logging.Formatter(LOG_FORMAT)\n    handler.setFormatter(formatter)\n    logger.addHandler(handler)\n    logger.setLevel(logging.INFO)\n\n\ndef get_alerts(zabbix_manager, tags):\n    \"\"\"\n    Get alerts from zabbix\n    :param zabbix_manager: {ZabbixManager} A zabbix manager instance\n    :param tags: {dict} A dict containing tags to filter by\n    :return: {list} List of the newly created alerts\n    \"\"\"\n    alerts = []\n    events = []\n\n    logging.info(\"Collecting problematic triggers.\")\n    # Get problematic triggers with their last event and filter them by given tags\n    for trigger in zabbix_manager.get_triggers(problematic=True,\n                                               select_last_event=True):\n\n        if tags:\n            if trigger['tags']:\n                # There are tags to filter\n                for tag_obj in trigger['tags']:\n                    logging.info(str(tag_obj))\n                    tag = tag_obj['tag']\n                    value = tag_obj['value']\n\n                    if tag in tags.keys() and (\n                            value in tags[tag] or tags[tag] == '*'):\n                        # Trigger has passed the tags filter\n                        event_id = trigger['lastEvent']['eventid']\n                        event = zabbix_manager.get_events(eventids=event_id)[0]\n                        event['trigger'] = trigger\n                        if not event in events:\n                            events.append(event)\n\n        else:\n            # Trigger has passed the tags filter\n            event_id = trigger['lastEvent']['eventid']\n            event = zabbix_manager.get_events(eventids=event_id)[0]\n            event['trigger'] = trigger\n            events.append(event)\n\n    logging.info(\"Found {} events.\".format(len(events)))\n    for event in events:\n        try:\n\n            hosts = []\n            for host in event['hosts']:\n                host = zabbix_manager.get_hosts(hostids=host['hostid'])[0]\n                hosts.append(host)\n\n            event['hosts'] = hosts\n\n            # Create the alert\n            case_info = CaseInfo()\n            case_info.name = event['trigger']['description']\n            case_info.identifier = event['eventid']\n\n            logging.info(\"Alert ID: {}.\".format(case_info.identifier))\n\n            case_info.ticket_id = case_info.identifier\n            case_info.reason = case_info.name\n            case_info.priority = PRIORITIES[event['trigger']['priority']]\n            case_info.device_vendor = VENDOR\n            case_info.device_product = PRODUCT\n            case_info.source_system_name = \"Custom\"\n            case_info.display_id = case_info.identifier\n\n            case_info.rule_generator = case_info.name  # Expression is too long...\n            case_info.environment = None  # No matching field in data\n\n            logging.info(\"Flattening data\")\n            # Flatter specific areas of the dict\n            event = dict_to_flat(event)\n            logging.info(event)\n            event['start_time'] = event['end_time'] = event['clock']\n            case_info.events = [event]\n            case_info.start_time = case_info.end_time = event['clock']\n\n            alerts.append(case_info)\n\n        except KeyError as error:\n            logging.exception(\"Data missing mandatory key: {key}\".format(\n                key=error.message\n            ))\n\n    logging.info(\"Finishes handling events.\")\n    return alerts\n\n\ndef main():\n    configure_logging()\n    connector_scope = SiemplifyConnectorExecution()\n    output_variables = {}\n    log_items = []\n\n    try:\n        logging.info(\"Connecting to Zabbix\")\n        server_address = connector_scope.parameters['Api Root']\n        username = connector_scope.parameters['Username']\n        password = connector_scope.parameters['Password']\n\n        tags = {}\n\n        # Collect tags from whitelist\n        for item in connector_scope.whitelist:\n            tag, value = item.split(\":\")\n            tags[tag] = value\n\n        zabbix_manager = ZabbixManager(server_address, username, password)\n\n        # Get alerts\n        logging.info(\"Getting alerts from Zabbix.\")\n        cases = get_alerts(zabbix_manager, tags)\n\n        # Return data\n        connector_scope.return_package(cases, output_variables, log_items)\n\n    except Exception as e:\n        logging.exception(e.message)\n\n\nif __name__ == '__main__':\n    main()", 
+    "SimulationUseCases": {
+        "CasesForUseCase": [], 
+        "UseCaseName": null
+    }, 
+    "Version": 1
+}

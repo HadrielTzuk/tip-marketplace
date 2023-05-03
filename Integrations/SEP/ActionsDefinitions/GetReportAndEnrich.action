@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1517321857104,
+    "Creator": "admin",
+    "Description": "Get command status report and enrich entities",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"computerName\": \"HOST_3\", \"subStateId\": 0, \"hardwareKey\": \"36817A7B13C3A6317932AD9819097123\", \"computerId\": \"9C9850840A0000BD3566F8ECC8417123\", \"domainName\": \"Default\", \"stateId\": 0, \"computerIp\": \"1.1.1.1\", \"currentLoginUserName\": \"admin\"}, {\"computerName\": \"HOST_4\", \"subStateId\": 0, \"hardwareKey\": \"36817A7B13C3A6317932AD9819097123\", \"computerId\": \"9C9850840A0000BD3566F8ECC8417123\", \"domainName\": \"Default\", \"stateId\": 0, \"computerIp\": \"1.1.1.1\", \"currentLoginUserName\": \"admin\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SEP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517321857104,
+    "Name": "Get Report And Enrich",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517322102448,
+            "CustomActionId": -1,
+            "DefaultValue": "7E975C32C71349E9BE495EC2220B902F",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517322102448,
+            "Name": "Command IDS",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "reports",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

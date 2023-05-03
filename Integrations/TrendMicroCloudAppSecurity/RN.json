@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "New integration \"Trend Micro Cloud App Security\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "TrendMicroCloudAppSecurity",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1616583583,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7674"
+    },
+    {
+        "ChangeDescription": "New action \"Enrich Entities\" added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Enrich Entities",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1617794120,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7675"
+    },
+    {
+        "ChangeDescription": "New action \"Mitigate Accounts\" added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Mitigate Accounts",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1618312410,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7682"
+    }
+]

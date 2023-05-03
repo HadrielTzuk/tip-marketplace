@@ -1,0 +1,116 @@
+
+{
+  "IsAvailableForCommunity": true,
+  "Identifier": "McAfeeESM",
+  "ShouldInstalledInSystem": false,
+  "Version": 34.0,
+  "DisplayName": "McAfeeESM",
+  "Description": "McAfee® Enterprise Security Manager, the industry-leading SIEM solution from McAfee, provides an intelligent, actionable, and integrated platform to protect your customers’ business and grow yours.",
+  "ImageBase64": "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",
+  "SvgImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M21.5,3c0-0.2,0-0.4,0-0.7c-0.3,0.1-0.5,0.2-0.7,0.3c-2.6,1.2-5.1,2.4-7.7,3.6c-0.4,0.2-0.7,0.2-1.2,0\n\t\t\tC9.7,5.1,7.5,4.1,5.3,3C4.7,2.8,4.2,2.5,3.6,2.2c0,0.1,0,0.2,0,0.2c0,5.3,0,10.6,0,15.8c0,0.4,0.2,0.5,0.5,0.6\n\t\t\tc2.7,1.2,5.3,2.5,8,3.7c0.3,0.1,0.7,0.1,1,0c2.7-1.2,5.3-2.4,7.9-3.6c0.4-0.2,0.6-0.4,0.6-0.9C21.5,13,21.5,8,21.5,3z M17.3,16.6\n\t\t\tc-1.5,0.6-2.9,1.3-4.3,2c-0.2,0.1-0.6,0.1-0.8,0c-1.5-0.7-3-1.4-4.5-2.1c-0.2-0.1-0.4-0.4-0.4-0.5c0-2.6,0-5.3,0-8\n\t\t\tc1.4,0.7,2.8,1.2,4,1.9c0.9,0.5,1.6,0.5,2.5,0c1.1-0.6,2.2-1.1,3.4-1.6c0.2-0.1,0.4-0.2,0.7-0.3v1.9c0,2,0,3.9,0,5.9\n\t\t\tC17.8,16.2,17.7,16.5,17.3,16.6z\"/>\n\t</g>\n</g>\n</svg>\n",
+  "IsCustom": false,
+  "PythonVersion": 2,
+  "IntegrationProperties": [
+    {
+      "IntegrationIdentifier": "McAfeeESM",
+      "PropertyName": "API Root",
+      "PropertyDescription": "API root for the instance.",
+      "PropertyDisplayName": "API Root",
+      "PropertyType": 2,
+      "IsMandatory": true,
+      "Value": "https://{ip}/rs/",
+      "Id": 251,
+      "CreationTimeUnixTimeInMs": 1674223417633,
+      "ModificationTimeUnixTimeInMs": 1674223417633
+    },
+    {
+      "IntegrationIdentifier": "McAfeeESM",
+      "PropertyName": "Username",
+      "PropertyDescription": "Username for the instance.",
+      "PropertyDisplayName": "Username",
+      "PropertyType": 2,
+      "IsMandatory": true,
+      "Value": "",
+      "Id": 252,
+      "CreationTimeUnixTimeInMs": 1674223417633,
+      "ModificationTimeUnixTimeInMs": 1674223417633
+    },
+    {
+      "IntegrationIdentifier": "McAfeeESM",
+      "PropertyName": "Password",
+      "PropertyDescription": "Password for the instance.",
+      "PropertyDisplayName": "Password",
+      "PropertyType": 3,
+      "IsMandatory": true,
+      "Value": "",
+      "Id": 253,
+      "CreationTimeUnixTimeInMs": 1674223417633,
+      "ModificationTimeUnixTimeInMs": 1674223417633
+    },
+    {
+      "IntegrationIdentifier": "McAfeeESM",
+      "PropertyName": "Product Version",
+      "PropertyDescription": "Product version. Possible values: 11.1-11.5",
+      "PropertyDisplayName": "Product Version",
+      "PropertyType": 2,
+      "IsMandatory": true,
+      "Value": "",
+      "Id": 254,
+      "CreationTimeUnixTimeInMs": 1674223417633,
+      "ModificationTimeUnixTimeInMs": 1674223417633
+    },
+    {
+      "IntegrationIdentifier": "McAfeeESM",
+      "PropertyName": "Verify SSL",
+      "PropertyDescription": "If enabled, verifies that the SSL certificate for the connection to the McAfee ESM server is valid.",
+      "PropertyDisplayName": "Verify SSL",
+      "PropertyType": 0,
+      "IsMandatory": false,
+      "Value": "",
+      "Id": 255,
+      "CreationTimeUnixTimeInMs": 1674223417633,
+      "ModificationTimeUnixTimeInMs": 1674223417633
+    },
+    {
+      "IntegrationIdentifier": "McAfeeESM",
+      "PropertyName": "RunRemotely",
+      "PropertyDescription": null,
+      "PropertyDisplayName": "Run Remotely",
+      "PropertyType": 0,
+      "IsMandatory": false,
+      "Value": "False",
+      "Id": 256,
+      "CreationTimeUnixTimeInMs": 1674223417633,
+      "ModificationTimeUnixTimeInMs": 1674223417633
+    },
+    {
+      "IntegrationIdentifier": "McAfeeESM",
+      "PropertyName": "AgentIdentifier",
+      "PropertyDescription": null,
+      "PropertyDisplayName": "Agent",
+      "PropertyType": 9,
+      "IsMandatory": false,
+      "Value": null,
+      "Id": 257,
+      "CreationTimeUnixTimeInMs": 1674223417633,
+      "ModificationTimeUnixTimeInMs": 1674223417633
+    }
+  ],
+  "IntegrationSupportedActions": [],
+  "Categories": [
+    "SIEM",
+    "Security"
+  ],
+  "HasConnectors": false,
+  "DocumentationLink": "https://integrations.siemplify.co/doc/mcafee-esm",
+  "IsCertified": true,
+  "UploaderFullName": null,
+  "PublishComment": null,
+  "UploaderEmail": null,
+  "UploaderImageBase64": null,
+  "UploaderProfileLink": null,
+  "MinimumSystemVersion": 5.3,
+  "Id": 39,
+  "CreationTimeUnixTimeInMs": 1674223417633,
+  "ModificationTimeUnixTimeInMs": 1674223417633
+}

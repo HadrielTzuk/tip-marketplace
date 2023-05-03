@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 1544701350598,
+    "Creator": "Admin",
+    "Description": "Provide operations on lists.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"results\": {\"count\": 6, \"data\": [\"item\", \"item1\", \"item2\"]}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SiemplifyUtilities",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1544701350598,
+    "Name": "List Operations",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1544701350608,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comma separated string list. For example: value1,value2,value3.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1544701350608,
+            "Name": "First List",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1544701350610,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comma separated string list. For example: value1,value2,value3.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1544701350610,
+            "Name": "Second List",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1544701350610,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Define a symbol, which is used for separation of values in both lists.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1544701350610,
+            "Name": "Delimiter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1544701350611,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Has to be one of the following: intersection, union, subtract or xor.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1544701350611,
+            "Name": "Operator",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtilitiesManager import intersect_lists, union_lists, subtract_lists, xor_lists\n\nACTION_NAME = 'Siemplify_List Operations'\n\nOPERATORS = ['intersection', 'union', 'subtract', 'xor']\n\n\ndef validate_operator(operator):\n    \"\"\"\n    Validate operator string.\n    :param operator: {string} Operator to validate.\n    :return: {void}\n    \"\"\"\n    if operator not in OPERATORS:\n        raise Exception('Operator is not valid, must be one of {0}'.format(\",\".join(OPERATORS)))\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n\n    # Parameters.\n    delimiter = siemplify.parameters.get('Delimiter', ',')\n    first_list = siemplify.parameters.get('First List', '').split(delimiter)\n    second_list = siemplify.parameters.get('Second List', '').split(delimiter)\n    operator = validate_operator(siemplify.parameters.get('Operator'))\n\n    if operator == 'intersection':\n        result_list = intersect_lists(first_list, second_list)\n    elif operator == 'union':\n        result_list = union_lists(first_list, second_list)\n    elif operator == 'subtract':\n        result_list = subtract_lists(first_list, second_list)\n    else:\n        result_list = xor_lists(first_list, second_list)\n\n    output_message = \"Performed {0} on {1}, {2}\\nThe result is: {3}\".format(delimiter, first_list, second_list,\n                                                                            result_list)\n\n    siemplify.end(output_message, delimiter.join(result_list))\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "result_list",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1517733820227, 
+    "Creator": "admin", 
+    "Description": "Enable Download Insight on endpoints", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SEP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1517733820227, 
+    "Name": "EnableDownloadInsight", 
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

@@ -1,0 +1,98 @@
+{
+    "CreationTimeUnixTimeInMs": 1676288241000,
+    "Creator": "admin",
+    "Description": "List accounts available in the CyberArk PAM based on provided criteria. Note: This action doesn’t run on Chronicle SOAR entities.",
+        "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"categoryModificationTime\": \"1667915248\", \"platformId\": \"\", \"safeName\": \"XXXXX\", \"id\": \"12_23\", \"name\": \"xxxx\", \"userName\": \"xxxx\", \"secretType\": \"password\", \"secretManagement_automaticManagementEnabled\": \"True\", \"secretManagement_lastModifiedTime\": \"1667918145\", \"createdTime\": \"1667915248\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CyberArkPAM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1676288241000,
+    "Name": "List Accounts",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1676288241000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the search query to use in action.",
+            "Id": -1,
+            "ModificationTimeUnixTimeInMs": 1676288241000,
+            "IsMandatory": false,
+            "Name": "Search Query",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1676288241000,
+            "CustomActionId": -1,
+            "DefaultValue": "contains",
+            "Description": "Specify the search operator action should use to search based on the provided search query.",
+            "Id": -1,
+            "ModificationTimeUnixTimeInMs": 1676288241000,
+            "IsMandatory": false,
+            "Name": "Search operator",
+            "OptionalValues": [
+                "contains",
+                "startswith"
+            ],
+            "Type": 15,
+            "Value": "contains"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1676288241000,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many records to return. If nothing is provided, action will return 50 records (API default).",
+            "Id": -1,
+            "ModificationTimeUnixTimeInMs": 1676288241000,
+            "IsMandatory": false,
+            "Name": "Max Records To Return",
+            "Type": 0,
+            "Value": 50
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1676288241000,
+            "CustomActionId": -1,
+            "DefaultValue": 0,
+            "Description": "Specify the offset the action should use to return the values.",
+            "Id": -1,
+            "ModificationTimeUnixTimeInMs": 1676288241000,
+            "IsMandatory": false,
+            "Name": "Records Offset",
+            "Type": 0,
+            "Value": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1676288241000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the filter query action should use. Filter can be based on safeName or modificationTime parameters.",
+            "Id": -1,
+            "ModificationTimeUnixTimeInMs": 1676288241000,
+            "IsMandatory": false,
+            "Name": "Filter Query",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1676288241000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the saved filter query action should use. Takes priority over the Filter Query parameter.",
+            "Id": -1,
+            "ModificationTimeUnixTimeInMs": 1676288241000,
+            "IsMandatory": false,
+            "Name": "Saved Filter",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

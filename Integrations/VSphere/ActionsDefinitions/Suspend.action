@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1521035462580,
+    "Creator": "admin",
+    "Description": "Suspend a VM",
+    "Id": -1,
+    "IntegrationIdentifier": "VSphere",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1521035462580,
+    "Name": "Suspend",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1521035508388,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The name of the target VM.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1521035508388,
+            "Name": "Vm Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

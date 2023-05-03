@@ -1,0 +1,32 @@
+{
+    "CreationTimeUnixTimeInMs": 1524559211168,
+    "Creator": "admin",
+    "Description": "Enrich entities using information from LogRhythm. Supported entities: Hostname, IP Address.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"EntityIdentifier\", \"EntityResult\": {\"id\":2,\"entity\":{\"id\":2,\"name\":\"EntityIdentifier\"},\"name\":\"EntityIdentifier\",\"shortDesc\":\"LogRhythm ECHO\",\"riskLevel\":\"None\",\"threatLevel\":\"None\",\"threatLevelComments\":\"\",\"recordStatusName\":\"Active\",\"hostZone\":\"Internal\",\"location\":{\"id\":-1},\"os\":\"Windows\",\"osVersion\":\"Microsoft Windows NT 6.2.9200.0\",\"useEventlogCredentials\":false,\"osType\":\"Server\",\"dateUpdated\":\"2021-04-14T09:18:17.677Z\",\"hostRoles\":[],\"hostIdentifiers\":[{\"type\":\"IPAddress\",\"value\":\"22.2.2.22\",\"dateAssigned\":\"2021-04-14T09:17:31Z\"},{\"type\":\"WindowsName\",\"value\":\"EntityIdentifier\",\"dateAssigned\":\"2021-04-14T09:17:31Z\"}]}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "LogRhythm",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524559211168,
+    "Name": "Enrich Entities",
+    "Parameters": [
+        {
+            "Name": "Create Insight",
+            "Type": 1,
+            "Value": true,
+            "DefaultValue": true,
+            "IsMandatory": false,
+            "Description": "If enabled, action will create an insight containing all of the retrieved information about the entity.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}",
+    "Version": 1.0
+}

@@ -1,0 +1,33 @@
+{
+    "CreationTimeUnixTimeInMs": 1517341350168, 
+    "Creator": "admin", 
+    "Description": "Retrieve user login history from MS SCCM instance based on the provided Siemplify user entity.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [{\"Username\": \"pc-01\\\\local_users\", \"LoginCount\": 22, \"LastLoggedIn\": \"20170815103710.000000+***\"}], \"Entity\": \"pc-01\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "SCCM", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1517341350168, 
+    "Name": "Get Login History", 
+    "Parameters": [
+        {
+            "CustomActionId": -1, 
+            "DefaultValue": 100, 
+            "Description": "Maximum number of records to return in the action.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Name": "Number of Records to Return", 
+            "Type": 0, 
+            "Value": 100
+        }
+    ], 
+    "ScriptResultName": "is_succeed", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

@@ -1,0 +1,96 @@
+{
+    "CreationTimeUnixTimeInMs": 1519822593041,
+    "Creator": "admin",
+    "Description": "Execute file on a host running VMware CB Cloud Agent based on the Siemplify Host or IP entity. Note: The File name can be provided either as a Siemplify File entity (artifact) or as an action input parameter. If the File name is passed to action both as an entity and input parameter - action will be executed on the input parameter. File name is case insensitive. File name will be appended to Remote Directory Path to get the resulting file paths that CB Cloud API accepts. File Name also can be specified as a \"full path\" having both path and a file name, or having file name and file path as separate parameters",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"api_v6\",\"EntityResult\":[{\"status\":\"COMPLETE\",\"values\":[],\"process_details\":{\"pid\":\"xxx\",\"return_code\":0},\"id\":\"xx\",\"name\":\"create process\",\"filename\":\"filename_v6\",\"result_code\":0,\"result_type\":\"WinHresult\",\"result_desc\":\"\",\"sub_keys\":[],\"files\":[],\"input\":{\"wait\":true,\"name\":\"create process\",\"output_file\":\"C:\\\\\\\\TMP\\\\\\\\cmdoutput.log\",\"object\":\"C:\\\\\\\\Windows\\\\\\\\system32\\\\\\\\cmd.exe /C whoami\"},\"create_time\":\"2021-08-10T10:03:13Z\",\"finish_time\":\"2021-08-10T10:03:14Z\",\"processes\":[],\"step\":\"Command Check\",\"reason\":\"Command with id xx ready with no result.\",\"is_success\":false}]}, {\"Entity\":\"api_v3\",\"EntityResult\":[{\"obj\":{\"wait\":false,\"name\":\"create process\",\"output_file\":\"C://TMP//xxxx.log\",\"object\":\"C:\\\\\\\\Windows\\\\\\\\system32\\\\\\\\xxxx.exe /C whoami\"},\"id\":\"xx\",\"name\":\"create process\",\"filename\":\"filename_v3\",\"username\":null,\"creation_time\":1628256284,\"completion_time\":1628256284,\"result_code\":0,\"result_type\":\"WinHresult\",\"result_desc\":\"\",\"status\":\"complete\",\"pid\":\"40xxx\",\"return_code\":-1,\"files\":[],\"processes\":[],\"step\":\"Command Check\",\"reason\":\"Command with id xx ready with no result.\",\"is_success\":false}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CBLiveResponse",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519822593041,
+    "Name": "Execute File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the file name to execute. File name is case insensitive. File Name can be specified as a \"full path\" having both path and a file name, in that case Remote Directory Path parameter will not be used.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "File Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the remote directory path for the file to execute. Example: C:\\TMP\\",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Remote Directory Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the output log file action should save the redirected output to. Example: C:\\TMP\\cmdoutput.log",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Output Log File on Remote Host",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the command arguments to pass for executing the file. Example, here we specify \"/C whoami\" to execute whoami command with cmd: C:\\Windows\\system32\\cmd.exe /C whoami",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Command Arguments to Pass to File",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will wait for the command to complete.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Wait for the Result",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "20",
+            "Description": "How many attempts action should make to get active session for the entity. Check is made every 2 seconds.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Check for active session x times",
+            "Type": 0,
+            "Value": "20"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\", \"FILENAME\"]}",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

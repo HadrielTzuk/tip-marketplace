@@ -1,0 +1,65 @@
+{
+    "Description": "MobileIron's mobile device management (MDM) capabilities give you the fundamental visibility and IT controls needed to secure, manage, and monitor any corporate- or employee-owned mobile device or desktop that accesses business critical data.",
+    "DisplayName": "MobileIron",
+    "Identifier": "MobileIron",
+    "Categories": [
+        "Endpoint Management",
+        "Operational"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "MobileIron",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "6",
+            "Value": "https://x.x.x.x/"
+        },
+        {
+            "IntegrationIdentifier": "MobileIron",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MobileIron",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MobileIron",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Admin Device ID",
+            "PropertyName": "Admin Device ID",
+            "PropertyType": "1",
+            "Value": "1"
+        },
+        {
+            "IntegrationIdentifier": "MobileIron",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Cloud Instance",
+            "PropertyName": "Cloud Instance",
+            "PropertyType": "0",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MobileIron",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\"><g><path d=\"M2.7,22.8c0.6-3.4,1.5-6.6,3.4-9.6C10.7,5.7,19.7,1.6,28.7,3.1c8.8,1.4,16,8.1,17.9,16.7c1.7,7.6-0.1,14.3-5.2,20.2c-0.3,0.4-0.7,0.7-1.3,1.2C36,28.6,31.4,16.3,22.7,5.7c-0.5,0.9-0.9,1.5-1.3,2.2c-2.1,3.9-4.3,7.8-6.4,11.8c-0.6,1.2-1.1,1.1-1.7,0.1c-1.2-2.1-2.5-4.1-3.9-6.5c-1.9,6.3-3.7,12.3-5.4,18.2c-0.1,0-0.3,0-0.4,0c-0.3-1.4-0.7-2.9-1-4.3C2.7,25.7,2.7,24.3,2.7,22.8z\"/><path d=\"M9.9,18.8c1.5,2.8,2.9,5.3,4.4,8c2.8-4.2,5.5-8.2,8.4-12.7c1.1,2,2,3.7,2.8,5.4c3.6,7.9,5.7,16.2,7.4,24.7c0.2,1.2-0.1,1.6-1.3,2C21.2,49.5,9.8,44.7,5,34.7c-0.4-0.8-0.5-2-0.2-2.8c1.4-4,2.9-8,4.4-12C9.3,19.7,9.5,19.4,9.9,18.8z\"/></g></svg>",
+    "Version": 3.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/mobileiron",
+    "MarketingDisplayName": "MobileIron"
+}

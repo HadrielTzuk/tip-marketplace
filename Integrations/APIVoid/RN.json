@@ -1,0 +1,138 @@
+[
+    {
+        "ChangeDescription": "Fixed a bug that caused the action to fail.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Get Domain Reputation",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-238"
+    },
+    {
+        "ChangeDescription": "Fixed Integration test button always succeeding regardless of outcome",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "API Void",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-495"
+    },
+    {
+        "ChangeDescription": "Updated Threshold parameter description",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Get Domain Reputation",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-940"
+    },
+    {
+        "ChangeDescription": "Updated Threshold parameter description",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Get Ip Reputation",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-940"
+    },
+    {
+        "ChangeDescription": "Updated action logic to skip internal IPs.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Get Ip Reputation",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2602"
+    },
+    {
+        "ChangeDescription": "Updated action logic to prevent it from failing because of a single entity failure. Action will be considered as successful if at least one entity is enriched.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Get Ip Reputation",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2602"
+    },
+    {
+        "ChangeDescription": "New action for getting URL reputation.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Get URL Reputation",
+        "ItemType": "Action",
+        "New": true,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3928"
+    },
+    {
+        "ChangeDescription": "New action for capturing screenshots of URLs.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Get Screenshot",
+        "ItemType": "Action",
+        "New": true,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3929"
+    },
+    {
+        "ChangeDescription": "New action for verifying an email.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Verify Email",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1595134415,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3930"
+    },
+    {
+        "ChangeDescription": "APIVoid - Updated Integration - Added ability to enable/disable automatic insight creation for actions \"Get IP Reputation\" and \"Get Domain Reputation\" using the checkbox parameter \"Create Insight\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "APIVoid",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604395162,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5336"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "API Void",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "APIVoid",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

@@ -1,0 +1,17 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805, 
+    "Creator": "Admin", 
+    "DefaultResultValue": "", 
+    "Description": "Create disable bypass mode task for devices on the VMware Carbon Black Cloud server based on the Siemplify IP or Host Siemplify entities.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "CBCloud", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1560351300805, 
+    "Name": "Disable Bypass Mode for Device", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "TimeoutSeconds": 600, 
+    "Version": 1.0
+}

@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1532523417395, 
+    "Creator": "Admin", 
+    "Description": "Removes a URL/Domain/IP from the white-listed URLs", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Zscaler", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1532523417395, 
+    "Name": "Remove From Whitelist", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

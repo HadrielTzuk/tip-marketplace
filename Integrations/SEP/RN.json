@@ -1,0 +1,74 @@
+[
+    {
+        "ChangeDescription": "Fixed a bug in the ListEndpoints action for empty computer name parameter. ",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "SEP",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1575893538,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1070"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "SEP",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Security enhancements throughout the integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "SEP",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1636521986,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 12.0,
+        "ItemName": "SEP",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Symantec Endpoint Protection 14 - Added certificate verification for the integration configuration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 13.0,
+        "ItemName": "SEP",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1669201484,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10835"
+    },
+    {
+        "ChangeDescription": "Symantec Endpoint Protection 14 - Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 13.0,
+        "ItemName": "SEP",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1669201484,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13022"
+    }
+]

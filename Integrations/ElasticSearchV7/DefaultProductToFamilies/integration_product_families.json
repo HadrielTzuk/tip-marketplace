@@ -1,0 +1,200 @@
+[
+  {
+    "Product": "endpoint.events.network",
+    "EventName": "Web Service",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Network Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "endpoint.events.process",
+    "EventName": "System Owner/User Discovery",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "windows.sysmon_operational",
+    "EventName": "System Owner/User Discovery",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "endpoint.events.process",
+    "EventName": "OS Credential Dumping",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "windows.sysmon_operational",
+    "EventName": "Account Discovery",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "endpoint.events.network",
+    "EventName": "",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Network Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "endpoint.events.network",
+    "EventName": "Steal or Forge Kerberos Tickets",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Network Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "windows.sysmon_operational",
+    "EventName": "Remote System Discovery",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "endpoint.events.process",
+    "EventName": "Remote System Discovery",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "windows.sysmon_operational",
+    "EventName": "Permission Groups Discovery",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "endpoint.events.process",
+    "EventName": "Permission Groups Discovery",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "endpoint.events.process",
+    "EventName": "Remote Services",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "windows.sysmon_operational",
+    "EventName": "Remote Services",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "endpoint.events.network",
+    "EventName": "Remote Access Software",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Network Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "windows.sysmon_operational",
+    "EventName": "Process Injection",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "endpoint.events.process",
+    "EventName": "Process Injection",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "endpoint.events.registry",
+    "EventName": "Boot or Logon Autostart Execution",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "endpoint.events.process",
+    "EventName": "Scheduled Task/Job",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "endpoint.events.registry",
+    "EventName": "",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "endpoint.events.file",
+    "EventName": "Masquerading",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "windows.sysmon_operational",
+    "EventName": "Masquerading",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "windows.sysmon_operational",
+    "EventName": "Command and Scripting Interpreter",
+    "ComparisonType": 0,
+    "VisualFamily": "Elastic Generic Endpoint Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  }
+]

@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Cuckoo",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Added the option to add CA Certificate file to the integration configuration page. Please note - the certificate file should be parsed into base64 string and put into the configuration parameter for now. It will be changed to accept a file soon.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Cuckoo",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1605622658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5334"
+    },
+    {
+        "ChangeDescription": "Integration - Added support for environments that require API authentication.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Cuckoo",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1637151679,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10282"
+    },
+    {
+        "ChangeDescription": "DetonateURL - Updated logic behind \"Warning Threshold\" parameter.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Detonate Url",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1637151679,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10430"
+    }
+]

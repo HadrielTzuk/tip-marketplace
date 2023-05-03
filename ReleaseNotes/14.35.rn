@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 14.35</h2><h5>Published on 03 February, 2021</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     ExabeamAdvancedAnalytics\n    </b>\n   </li>\n   <ul>\n    <li>\n     ExabeamAdvancedAnalytics\n    </li>\n    <ul>\n     <li>\n      NEW! NEW! Exabeam Advanced Analytics Integration\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     LogPoint\n    </b>\n   </li>\n   <ul>\n    <li>\n     LogPoint\n    </li>\n    <ul>\n     <li>\n      NEW! NEW! LogPoint integration\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     RSANetWitnessPlatform\n    </b>\n   </li>\n   <ul>\n    <li>\n     RSA NetWitness Platform - Incidents Connector\n    </li>\n    <ul>\n     <li>\n      NEW!  Added new connector \"Incidents Connector\"\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "14.35",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "03/02/21",
+    "Title": "Release Notes"
+}

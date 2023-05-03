@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1529826554697,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "MicroFocusITSMA",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1529826554697,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import *\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\tprint \"Action started\"\n\t\n\t# sample script:\n\t# configuration = siemplify.get_configuration('Provider')\n\n\t# for entity in siemplify.target_entities:\n\t#     entity.additional_properties['EnrichmentProperty'] = ...\n\t# siemplify.update_entities(siemplify.target_entities)\n\t## CASE CSV INSIGHT (entity)\n\t# siemplify.create_case_insight(\"VirusTotal\", \"Susp\", \"Entity is susp\", \"10.0.0.12\", InsightSeverity.INFO, InsightType.Entity, additional_data='[\"csv, row,1\", \"csv, row2\"]', additional_data_type=0, additional_data_title=\"Title\")\n\n\toutput_message = 'output message'\n\tresult_value = 'true'\n\tprint \"Action done\"\n\tsiemplify.end(output_message, result_value)\n\nif __name__ == \"__main__\":\n\tmain()",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

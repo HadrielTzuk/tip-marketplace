@@ -1,0 +1,34 @@
+{
+    "Id": -1,
+    "Creator": "admin",
+    "IntegrationIdentifier": "OrcaSecurity",
+    "Name": "Scan Assets",
+    "Description": "Scan assets in Orca Security. Note: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 0,
+    "ModificationTimeUnixTimeInMs": 0,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"version\":\"0.1.0\",\"scan_unique_id\":\"1cexxxxx-3aa2-401f-9c6d-9fxxxxxxxxxx\",\"asset_unique_ids\":[\"1cexxxxx-3aa2-401f-9c6d-9fxxxxxxxxxx:ScanManagement\"],\"status\":\"done\"},{\"version\":\"0.1.0\",\"scan_unique_id\":\"144xxxxx-5925-46ad-837a-54xxxxxxxxxx\",\"asset_unique_ids\":[\"613828763xxxxxxxxxx\",\"144xxxxx-5925-46ad-837a-54xxxxxxxxxx:ScanManagement\"],\"status\":\"done\"}]",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "Name": "Asset IDs",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify a comma-separated list of asset ids for which you want to return details.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

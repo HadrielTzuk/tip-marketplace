@@ -1,0 +1,1 @@
+<kibana_address>/app/kibana#/discover?_g=(time:(from:'<from_time>',mode:absolute,to:'<to_time>'))&_a=(columns:!(levelname,location,args.module,message),query:(language:lucene,query:'_index:smp_python%5C*AND%20levelname:%22ERROR%22%20AND%20location:%22SDK_Connectors%22'),sort:!('@timestamp',desc))

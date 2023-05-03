@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 19.45</h2><h5>Published on 18 January, 2023</h5><hr><h3>Actions</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     AzureActiveDirectory\n    </b>\n   </li>\n   <ul>\n    <li>\n     Revoke User Session\n    </li>\n    <ul>\n     <li>\n      Revoke User Session - Updated action logic to work with user accounts in UPN format.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     EmailV2\n    </b>\n   </li>\n   <ul>\n    <li>\n     Wait For Email From User\n    </li>\n    <ul>\n     <li>\n      Wait for Email From User - Action update to better track replies for the sent email.\n     </li>\n    </ul>\n    <li>\n     Save Email Attachments To Case\n    </li>\n    <ul>\n     <li>\n      Save Email Attachments To Case - Updated handling of unicode characters.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     HTTP\n    </b>\n   </li>\n   <ul>\n    <li>\n     Get Data\n    </li>\n    <ul>\n     <li>\n      Get Data - Updated the action with a new parameter and the JSON Result now includes the HTTP response code.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     RSANetWitnessPlatform\n    </b>\n   </li>\n   <ul>\n    <li>\n     RSA NetWitness Platform - Incidents Connector\n    </li>\n    <ul>\n     <li>\n      Incidents Connector - Added mapping for the default configuration of the connector.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "19.45",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "18/01/23",
+    "Title": "Release Notes"
+}

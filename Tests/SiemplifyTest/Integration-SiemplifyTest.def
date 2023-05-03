@@ -1,0 +1,78 @@
+{
+  "Identifier": "SiemplifyTest",
+  "ShouldInstalledInSystem": false,
+  "Version": 2.0,
+  "DisplayName": "SiemplifyTest",
+  "Description": "Siemplify Test integration package includes various actions to test different scenarios.",
+  "ImageBase64": "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",
+  "SmallImageBase64": "iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABz0lEQVRIib2Vz4uOURTHP887UyLJpIlsxkhSE2pMUWR2SllYTFkQNtQsLClqdtYzpYSFlfIHKIUiykpWFjaaiTTy40WYpgkzHz15nrrvM/fO+z4M3zqb0znf7z333HsO/xpZya8uJXUI2ATsBD4BF4FvqeAsyxY7c4GIbVPvqAvqDvWrv/FWPalmsbwoKkFr1Qn1R0F4Wz3iYjxR99QRaKin1fcVqgPqrYhAiRvqxnYCverTSPJzdV1QTQoz6nl1RUpgVB1QL6uzAclRdX8b8hBTLQ0PBPLaPgJXgZvAbuAV8ABYBTwChorwWWAaaAIzQD+wGWgUryhLCZT4AmwHXlcKXQNsAAaAvcA+YBfQ3XLq2DuNlHo8eBld6rg63ckdpXoQYk7tCwQO1uhBi0AjqgbngEHgPnAB+JCI6xzBAe6qQ+r3wHdCffMnFVSvqKluVV9UcvLRcG05rugUMAZsqfjXF8OuNkKB68Bq4FiCZBiYqysQ/oN8FD8uRP4K4T8IKzi7HOTAs6hX7VbPqJ87bWYFzWKedaUESssn5xV1vkPin+oltafOwqHYYA/bkN8rJnDtjRbaiPqyQjypHk7l1BXIbaU6pr4rl8pS8f8PwC/MXOXpFkI9IQAAAABJRU5ErkJggg==",
+  "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 32 32\" style=\"enable-background:new 0 0 32 32;\" xml:space=\"preserve\"><g><g><path d=\"M10.7,10c0.6-0.2,1-0.6,1.3-1.2l3-6.9c0,0,0-0.1-0.1-0.1l-10.4,6v0.1l4.4,2C9.5,10.2,10.2,10.2,10.7,10z M28.3,8.8l-12.1-7h-0.1L14,7.9c-0.3,0.7-0.3,1.6,0.2,2.2c0.4,0.6,1.1,0.8,1.8,0.9H17c0.9-0.1,1.8-0.2,2.6-0.3l5.9-0.5l-6.7,1.6c-0.1,0-0.3,0.1-0.4,0.1c-0.4,0.1-0.9,0.2-1.4,0.3c-0.4,0.1-0.8,0.2-1.3,0.3c0,0,0,0-0.1,0c-0.4,0.1-0.8,0.1-1.1,0.3c-0.4,0.2-0.7,0.5-0.9,0.9c-0.4,0.8-0.2,1.4,0.1,2.2l0.4,1.3c0,0,1.4,3.8,1.6,4.4l-2.3-3.9l-0.5-0.9c-0.5-0.8-1.1-1.5-2-1.6C10.5,15,9.7,15.3,9.2,16l-5.3,7.3v0.1L16,30.2H16l12.3-7.1l0.1-0.1V8.9C28.4,8.8,28.4,8.8,28.3,8.8z M9.3,12.3c-0.1-0.6-0.6-1.2-1.2-1.5l-4.4-2H3.6v12.7l5.3-7.3C9.3,13.6,9.5,12.9,9.3,12.3z\"/></g></g></svg>",
+  "IsCustom": false,
+  "IntegrationProperties": [
+    {
+      "IntegrationIdentifier": "SiemplifyTest",
+      "PropertyName": "Boolean",
+      "PropertyDisplayName": "Boolean",
+      "PropertyType": 0,
+      "Value": "True"
+    },
+    {
+      "IntegrationIdentifier": "SiemplifyTest",
+      "PropertyName": "Integer",
+      "PropertyDisplayName": "Integer",
+      "PropertyType": 1,
+      "Value": "1"
+    },
+    {
+      "IntegrationIdentifier": "SiemplifyTest",
+      "PropertyName": "String",
+      "PropertyDisplayName": "String",
+      "PropertyType": 2,
+      "Value": "test"
+    },
+    {
+      "IntegrationIdentifier": "SiemplifyTest",
+      "PropertyName": "Password",
+      "PropertyDisplayName": "Password",
+      "PropertyType": 3,
+      "Value": "123456"
+    },
+    {
+      "IntegrationIdentifier": "SiemplifyTest",
+      "PropertyName": "IP",
+      "PropertyDisplayName": "IP",
+      "PropertyType": 4,
+      "Value": "1.1.1.1"
+    },
+    {
+      "IntegrationIdentifier": "SiemplifyTest",
+      "PropertyName": "IP_OR_HOST",
+      "PropertyDisplayName": "IP_OR_HOST",
+      "PropertyType": 5,
+      "Value": "google.com"
+    },
+    {
+      "IntegrationIdentifier": "SiemplifyTest",
+      "PropertyName": "URL",
+      "PropertyDisplayName": "URL",
+      "PropertyType": 6,
+      "Value": "http://google.com"
+    },
+    {
+      "IntegrationIdentifier": "SiemplifyTest",
+      "PropertyName": "Domain",
+      "PropertyDisplayName": "Domain",
+      "PropertyType": 7,
+      "Value": "example.com"
+    },
+    {
+      "IntegrationIdentifier": "SiemplifyTest",
+      "PropertyName": "Email",
+      "PropertyDisplayName": "Email",
+      "PropertyType": 8,
+      "Value": "someone@example.com"
+    }
+  ],
+  "CreationTimeUnixTimeInMs": 1560863453797,
+  "ModificationTimeUnixTimeInMs": 1560863453797
+}

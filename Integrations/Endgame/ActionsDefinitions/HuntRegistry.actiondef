@@ -1,0 +1,96 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351413290, 
+    "Creator": "Admin", 
+    "DefaultResultValue": "", 
+    "Description": "Searches for a registry key or value name.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"registry_value_type\": \"subKey\", \"resource_id\": 0, \"parent_resource_id\": 0, \"registry_key_last_modified_time\": 1580935628, \"base_hive\": \"HKEY_USERS\", \"collection_id\": \"7067d6d9-c0c6-4598-bc6d-7a2300a84a41\", \"machine_id\": \"f188d281-5313-1e64-4796-71bfa6217f37\"}, {\"name\": \".DEFAULT\", \"resource_id\": 1, \"parent_resource_id\": 0, \"registry_key_last_modified_time\": 1549044893, \"path\": \".DEFAULT\", \"base_hive\": \"HKEY_USERS\", \"collection_id\": \"7067d6d9-c0c6-4598-bc6d-7a2300a84a41\", \"machine_id\": \"f188d281-5313-1e64-4796-71bfa6217f37\", \"registry_value_type\": \"subKey\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Endgame", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1560351413290, 
+    "Name": "Hunt Registry", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1560351413305, 
+            "CustomActionId": -1, 
+            "DefaultValue": "ALL", 
+            "Description": "One of the following: HKEY_CLASSES_ROOT, HKEY_CURRENT_CONFIG, HKEY_USERS, HKEY_LOCAL_MACHINE, ALL", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351413305, 
+            "Name": "Hive", 
+            "OptionalValues": null, 
+            "OptionalValuesJson": null, 
+            "Type": 0, 
+            "Value": "ALL"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1560351413307, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "Registry Key or Value Name", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351413307, 
+            "Name": "Keys", 
+            "OptionalValues": null, 
+            "OptionalValuesJson": null, 
+            "Type": 0, 
+            "Value": null
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1560351413309, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "Min byte size", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351413309, 
+            "Name": "Min Size", 
+            "OptionalValues": null, 
+            "OptionalValuesJson": null, 
+            "Type": 0, 
+            "Value": null
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1560351413310, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "Max byte size", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351413310, 
+            "Name": "Max Size", 
+            "OptionalValues": null, 
+            "OptionalValuesJson": null, 
+            "Type": 0, 
+            "Value": null
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1560351413313, 
+            "CustomActionId": -1, 
+            "DefaultValue": "windows", 
+            "Description": "Select an operating system (i.e., Windows, Linux, or Mac) to filter the Endpoints list. Note: You can only create a single investigation for endpoints that run on the same operating system.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351413313, 
+            "Name": "Endpoints Core OS", 
+            "OptionalValues": null, 
+            "OptionalValuesJson": null, 
+            "Type": 0, 
+            "Value": "windows"
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom EndgameManager import EndgameManager, IOC_REGISTRY_SEARCH\nfrom SiemplifyDataModel import EntityTypes\nfrom ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_INPROGRESS\nimport sys\n\nPROVIDER = 'Endgame'\nACTION_NAME = 'Endgame - Hunt Registry'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    api_root = conf['API Root']\n    username = conf['Username']\n    password = conf['Password']\n    use_ssl = conf.get('Verify SSL', 'False').lower() == 'true'\n    egm = EndgameManager(api_root, username=username, password=password, use_ssl=use_ssl)\n\n    siemplify.LOGGER.info(\"Action START\")\n    investigation_name = siemplify.parameters.get(\"Investigation Name\", \"Siemplify Registry Hunt Investigation API\")\n    endpoints = []\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.HOSTNAME:\n            endpoints.append(entity.identifier)\n\n    core_os = siemplify.parameters.get(\"Endpoints Core OS\", \"windows\")\n    hive = siemplify.parameters.get(\"Hive\", \"ALL\")\n    keys = siemplify.parameters.get(\"Keys\")\n    min_size = siemplify.parameters.get(\"Min Size\")\n    max_size = siemplify.parameters.get(\"Max Size\")\n\n    investigation_id = ''\n\n    try:\n        siemplify.LOGGER.info(\"Searching for keys: {0} in hive: {1}\".format('\\n'.join(keys), hive))\n        # By default, the investigation is assigned to the login user\n        investigation_id = egm.create_investigation(task_name=investigation_name, assign_user=username,\n                                                    endpoints=endpoints, ioc_search_type=IOC_REGISTRY_SEARCH,\n                                                    core_os=core_os,\n                                                    hive=hive, key=keys, min_size=min_size, max_size=max_size)\n\n        siemplify.LOGGER.info(\"Successfully Create investigation with ID {0}\".format(investigation_id))\n\n    except Exception as err:\n        error_message = 'Error while searching for keys: {0} in hive: {1}, Error: {2}'.format('\\n'.join(keys), hive,\n                                                                                              err.message)\n        siemplify.LOGGER.error(error_message)\n        siemplify.LOGGER.execption(err)\n\n    siemplify.LOGGER.info(\"Sync Part END !!!\")\n    siemplify.end(\"\", investigation_id, EXECUTION_STATE_INPROGRESS)\n\n\ndef fetch_scan_report_async():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    api_root = conf['API Root']\n    username = conf['Username']\n    password = conf['Password']\n    use_ssl = conf.get('Verify SSL', 'False').lower() == 'true'\n    egm = EndgameManager(api_root, username=username, password=password, use_ssl=use_ssl)\n    siemplify.LOGGER.info(\"ASync Part START !!!\")\n\n    # Extract investigation ID\n    investigation_id = siemplify.parameters[\"additional_data\"]\n    json_results = []\n    output_message = \"\"\n    errors_flag = False\n\n    try:\n        # check if analysis completed\n        is_completed = egm.get_investigation_status(investigation_id)\n        if is_completed:\n            # is_ready = True, fetch the report\n            siemplify.LOGGER.info(\"Retrieving investigation ID results: {0}\".format(investigation_id))\n            hunt_results = egm.retrieve_investigation_results(investigation_id)\n            for hunt_id, results in hunt_results.iteritems():\n                for hunt in results['Results']:\n                    json_results.append(hunt)\n\n        else:\n            siemplify.LOGGER.info(\"Continuing...Investigation NOT completed !\")\n            siemplify.end(output_message, investigation_id, EXECUTION_STATE_INPROGRESS)\n\n    except Exception as err:\n        error_message = \"Error while retrieving investigation ID: {0}, Error: {1}\".format(\n            investigation_id, err.message)\n        siemplify.LOGGER.error(error_message)\n        siemplify.LOGGER.exception(err)\n        errors_flag = True\n\n    if json_results:\n        output_message = \"Retrieved results from the following hunts in Endgame: {0}\".format(investigation_id)\n    else:\n        output_message = \"There are no results for your investigation\"\n\n    if errors_flag:\n        output_message += \"\\n Errors occurred, check log for more information\"\n\n    siemplify.LOGGER.info(\"Action END !!!\")\n    siemplify.result.add_result_json(json_results)\n    # logout\n    egm.logout()\n    siemplify.end(output_message, 'true', EXECUTION_STATE_COMPLETED)\n\n\nif __name__ == \"__main__\":\n    if len(sys.argv) < 3 or sys.argv[2] == 'True':\n        main()\n    else:\n        fetch_scan_report_async()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "TimeoutSeconds": 600, 
+    "Version": 2.0,
+    "IsAsync": true
+}

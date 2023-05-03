@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1542188059113,
+    "Creator": "Admin",
+    "Description": "Executes mitigation actions on the threats in SentinelOne.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"mitigated\": true, \"mitigation_action\": \"quarantine\", \"Threat_ID\": \"9165158021848xxxxx\"}, {\"mitigated\": true, \"mitigation_action\": \"quarantine\", \"Threat ID\": \"9286300562960xxxxx\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOneV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542188059113,
+    "Name": "Mitigate Threat",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "quarantine",
+            "Description": "Specify the mitigation actions for the provided threats.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Mitigation action",
+            "Type": 15,
+            "OptionalValues": [
+                "kill",
+                "quarantine",
+                "un-quarantine",
+                "remediate",
+                "rollback-remediation"
+            ],
+            "Value": "quarantine"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of threat IDs that should be mitigated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Threat IDs",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

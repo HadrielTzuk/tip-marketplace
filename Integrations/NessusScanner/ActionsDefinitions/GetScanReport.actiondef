@@ -1,0 +1,36 @@
+{
+    "CreationTimeUnixTimeInMs": 1522684328127,
+    "Creator": "Siemplify System",
+    "Description": "Get a full report on the scan results",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"info\": {\"control\": true, \"edit_allowed\": true, \"hasaudittrail\": true, \"user_permissions\": 000, \"alt_targets_used\": null, \"targets\": \"1.1.1.1\", \"uuid\": \"000000-00000-00000-00000-000000000\", \"hostcount\": 1, \"object_id\": 000, \"acls\": [{\"display_name\": \"admin\", \"name\": \"admin\", \"owner\": 1, \"type\": \"user\", \"id\": 2, \"permissions\": 000}], \"policy\": \"AdvancedScan\", \"no_target\": null, \"scanner_name\": \"LocalScanner\", \"scan_end\": 1521367948, \"status\": \"completed\", \"scanner_end\": 1521367945, \"timestamp\": 1521367948, \"scan_type\": \"local\", \"scan_start\": 1521367553, \"folder_id\": 100, \"name\": \"Nessus\", \"haskb\": true, \"pci-can-upload\": false, \"scanner_start\": 1521367553}, \"remediations\": {\"num_cves\": 5, \"remediations\": null, \"num_impacted_hosts\": 0, \"num_hosts\": 1, \"num_remediated_cves\": 0}, \"vulnerabilities\": [{\"count\": 1, \"severity\": 0, \"plugin_family\": \"Windows\", \"vuln_index\": 109, \"severity_index\": 0, \"plugin_name\": \"WindowsTerminalServicesEnabled\", \"plugin_id\": 10940}], \"notes\": null, \"compliance\": [], \"hosts\": [{\"info\": 80, \"scanprogresscurrent\": 1927, \"medium\": 10, \"scanprogresstotal\": 1927, \"totalchecksconsidered\": 1927, \"host_index\": 0, \"hostname\": \"1.1.1.1\", \"numchecksconsidered\": 1927, \"high\": 0, \"score\": 1120, \"low\": 4, \"severitycount\": {\"item\": [{\"count\": 80, \"severitylevel\": 0}]}, \"host_id\": 2, \"progress\": \"1927-1927/95562-95562\", \"critical\": 0, \"severity\": 94}], \"filters\": [{\"control\": {\"regex\": \"^[0-9]+$\", \"readable_regex\": \"NUMBER\", \"type\": \"entry\"}, \"operators\": [\"eq\", \"neq\", \"match\"], \"readable_name\": \"BugtraqID\", \"name\": \"bid\"}], \"comphosts\": [], \"history\": [{\"status\": \"completed\", \"uuid\": \"000000-0000-0000-00000-0000000\", \"history_id\": 260, \"creation_date\": 1519209387, \"scheduler\": 0, \"last_modification_date\": 1519209860, \"alt_targets_used\": false, \"type\": \"local\", \"owner_id\": 0}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "NessusScanner",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1522684328127,
+    "Name": "Get Scan Report",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1522684328127,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Scan display name.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1522684328127,
+            "Name": "Scan Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "# Imports\nfrom SiemplifyAction import SiemplifyAction\n# CR: Remove unused imports\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv, add_prefix_to_dict_keys\nfrom ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_INPROGRESS\nfrom NessusScannerManager import NessusScanner\nimport base64\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    # Configuration.\n    conf = siemplify.get_configuration('NessusScanner')\n    access_key = conf['Access Key']\n    secret_key = conf['Secret Key']\n    server_address = conf['Api Root']\n    nessus_client = NessusScanner(access_key, secret_key, server_address)\n\n    # Parameters\n    scan_name = siemplify.parameters['Scan Name']\n\n    scan_details = nessus_client.get_scan_details(scan_name)\n\n    # Verify scan has been completed\n    if scan_details['info']['status'] == 'completed':\n        report = nessus_client.download_scan(scan_name)\n        if report:\n            # report_base64 = base64.b64encode(report)\n            siemplify.result.add_attachment(\"Nessus Report\", \"ScanReport.html\", report)\n            output_message = \"Scan has been completed, Report is attached.\"\n            result_value = 'true'\n            siemplify.end(output_message, result_value, EXECUTION_STATE_COMPLETED)\n        else:\n            output_message = \"Failed to download '{0}' scan\".format(scan_name)\n            result_value = 'false'\n            siemplify.end(output_message, result_value, EXECUTION_STATE_COMPLETED)\n\n    else:\n        output_message = \"Scan has not been completed yet, scan status is: {0}\".format(scan_details['info']['status'])\n        result_value = 'false'\n        siemplify.end(output_message, result_value, EXECUTION_STATE_INPROGRESS)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_succeed",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

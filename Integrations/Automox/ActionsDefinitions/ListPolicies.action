@@ -1,0 +1,83 @@
+{
+    "CreationTimeUnixTimeInMs": 1668078112000,
+    "Creator": "admin",
+    "Description": "List available policies in Automox.",
+    "Id": -1,
+    "IntegrationIdentifier": "Automox",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1668078112000,
+    "Name": "List Policies",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\": \"1111111\", \"name\": \"Apply All Patches\", \"policy_type_name\": \"patch\", \"organization_id\": \"1111111\", \"configuration_auto_patch\": \"False\", \"configuration_patch_rule\": \"all\", \"configuration_auto_reboot\": \"False\", \"configuration_notify_user\": \"False\", \"configuration_include_optional\": \"True\", \"configuration_notify_reboot_user\": \"True\", \"configuration_missed_patch_window\": \"True\", \"configuration_custom_notification_max_delays\": \"3\", \"configuration_custom_notification_deferment_periods_1\": \"1\", \"configuration_custom_notification_deferment_periods_2\": \"2\", \"configuration_custom_notification_deferment_periods_3\": \"4\", \"schedule_days\": \"254\", \"schedule_weeks_of_month\": \"62\", \"schedule_months\": \"8190\", \"schedule_time\": \"17:00\", \"notes\": \"\", \"create_time\": \"2022-10-24T08:44:37+0000\", \"server_groups_1\": 111111, \"server_count\": \"1\", \"status\": \"inactive\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1668078112000,
+            "CustomActionId": -1,
+            "DefaultValue": "Select One",
+            "Description": "Specify the key that needs to be used to filter policy.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1668078112000,
+            "Name": "Filter Key",
+            "OptionalValues": [
+                "Select One",
+                "Name",
+                "ID",
+                "Policy Type Name",
+                "Status"
+            ],
+            "Type": 15,
+            "Value": "Select One"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1668078112000,
+            "CustomActionId": -1,
+            "DefaultValue": "Not Specified",
+            "Description": "Specify what filter logic should be applied. Filtering logic is working based on the value  provided in the “Filter Key” parameter.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1668078112000,
+            "Name": "Filter Logic",
+            "OptionalValues": [
+                "Not Specified",
+                "Equal",
+                "Contains"
+            ],
+            "Type": 15,
+            "Value": "Not Specified"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1668078112000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what value should be used in the filter. If “Equal“ is selected, action will try to find the exact match among results and if “Contains“ is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the value  provided in the “Filter Key” parameter.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1668078112000,
+            "Name": "Filter Value",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1668078112000,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many records to return. If nothing is provided, action will return 50 records.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1668078112000,
+            "Name": "Max Records To Return",
+            "Type": 0,
+            "Value": 50
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}
+

@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1518944187356,
+    "Creator": "admin",
+    "Description": "Test connectivity to SQL Server",
+    "Id": -1,
+    "IntegrationIdentifier": "MSSQL",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518944187356,
+    "Name": "Ping",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518944370490,
+            "CustomActionId": -1,
+            "DefaultValue": "siemplify_integrations_db",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518944370490,
+            "Name": "Database Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,64 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List connections related to the alert in Armis.",
+    "Id": -1,
+    "IntegrationIdentifier": "Armis",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Alert Connections",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"band\": null, \"channel\": null, \"dhcpAuthenticationDuration\": null, \"duration\": 12339, \"endTimestamp\": \"2021-04-01T20:19:31.718097+00:00\", \"id\": 1234, \"inboundTraffic\": 1234, \"outboundTraffic\": 1234, \"protocol\": \"Bluetooth\", \"radiusAuthenticationDuration\": null, \"risk\": \"Medium\", \"rssi\": null, \"sensor\": {\"name\": \"AAA\", \"type\": \"Switch\"}, \"site\": {\"location\": \"XXXXX\", \"name\": \"XXXX HQ\"}, \"snr\": null, \"sourceId\": 1234, \"startTimestamp\": \"2021-04-01T16:53:52.718097+00:00\", \"targetId\": 1234, \"title\": \"Connection between XXXXX XXXX and XXXX XXX iPhone\", \"totalAssociationDuration\": null, \"traffic\": 1234, \"wlanAssociationDuration\": null}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the id of the alert for which you want to pull connections data.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Alert ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Medium",
+            "Description": "Specify the lowest severity of the connections that should be used when fetching them.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Lowest Severity To Fetch",
+            "OptionalValues": [
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "Type": 15,
+            "Value": "Medium"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many connections to return. Default: 50.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Connections To Return",
+            "Type": 0,
+            "Value": 50
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "SimulationDataJson": "{\"Entities\":[]}",
+    "Version": 1.0
+}

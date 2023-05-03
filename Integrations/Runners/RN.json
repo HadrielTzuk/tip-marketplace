@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Runners",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Security enhancements throughout the integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Runners",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1658294355,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11772"
+    }
+]

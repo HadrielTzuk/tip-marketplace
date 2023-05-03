@@ -1,0 +1,190 @@
+{
+    "CreationTimeUnixTimeInMs": 1524560820281,
+    "Creator": "klim.lyapin@siemplify.co",
+    "Description": "Update Azure Sentinel Scheduled Alert Rule",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Kind\": \"Scheduled\", \"Name\": \"31d38dc9-16fc-4464-8586-xxxx\", \"ID\": \"/subscriptions/a052d33b-b7c4-4dc7-9e17-xxxx/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/sentinelwork01/providers/Microsoft.SecurityInsights/alertRules/31d38dc9-16fc-4464-8586-xxxx\", \"ETag\": \"\\\"390028e7-0000-0d00-0000-xxxx\\\"\", \"Type\": \"Microsoft.SecurityInsights/alertRules\", \"Properties\": {\"Tactics\": [\"Discovery\", \"InitialAccess\"], \"Severity\": \"High\", \"Suppression_Enabled\": false, \"Query_Period\": \"5 days 0 hours 0 minutes 0 seconds\", \"Enabled\": true, \"Query_Frequency\": \"0 days 1 hour 0 minutes 0 seconds\", \"Alert_Rule_Template_Name\": null, \"Display_Name\": \"some name\", \"Description\": \"test\", \"Last_Modified_UTC\": \"2020-01-23T21:00:17.0860777Z\", \"Suppression_Duration\": \"0 days 5 hours 0 minutes 0 seconds\", \"Trigger\": null, \"Query\": \"SecurityEvent\\r\\n| where Activity startswith \\\"4625\\\"\\r\\n| summarize count() by IpAddress, Computer\\r\\n| where count_ >3\\r\\n| extend HostCustomEntity = Computer\\r\\n| extend IPCustomEntity = IpAddress\"}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftAzureSentinel",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524560820281,
+    "Name": "Update Alert Rule",
+    "Parameters": [
+        {
+            "CustomActionId": -1,
+            "IsMandatory": true,
+            "DefaultValue": "",
+            "Description": "Alert Rule ID",
+            "Name": "Alert Rule ID",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "True",
+            "Description": "Enable or disable new alert rule",
+            "Name": "Enable Alert Rule",
+            "Value": true,
+            "Type": 1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Display name of the new alert rule",
+            "Name": "Name",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "Informational",
+            "Description": "Severity of the new alert rule",
+            "Name": "Severity",
+            "Value": "Informational",
+            "Type": 15,
+            "OptionalValues": [
+                "Informational",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Query of the new alert rule",
+            "Name": "Query",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "How frequently to run the query, use the following format: \nPT + number + (M, H), where M - minutes, H - hours. \nUse P + number + D to specify a number of days. \nCan be combined as P1DT1H1M - 1 day, 1 hour and 1 minute. \nMinimum is 5 minutes, maximum is 14 days.",
+            "Name": "Frequency",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Time of the last lookup data, use the following format: \nPT + number + (M, H), where M - minutes, H - hours. \nUse P + number + D to specify a number of days. \nCan be combined as P1DT1H1M - 1 day, 1 hour and 1 minute. \nMinimum is 5 minutes, maximum is 14 days.",
+            "Name": "Period of Lookup Data",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "GreaterThan",
+            "Description": "Trigger operator for this alert rule.\nPossible values are: GreaterThan, LessThan, Equal, NotEqual",
+            "Name": "Trigger Operator",
+            "Value": "GreaterThan",
+            "Type": 15,
+            "OptionalValues": [
+                "GreaterThan",
+                "LessThan",
+                "Equal",
+                "NotEqual"
+            ],
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Trigger threshold for this alert rule",
+            "Name": "Trigger Threshold",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "True",
+            "Description": "Whether you want to stop running query after alert is generated",
+            "Name": "Enable Suppression",
+            "Value": true,
+            "Type": 1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "How long you want to stop running query after alert is generated, use the following format: \nPT + number + (M, H), where M - minutes, H - hours. \nUse P + number + D to specify a number of days. \nCan be combined as P1DT1H1M - 1 day, 1 hour and 1 minute. \nMinimum is 5 minutes, maximum is 14 days.",
+            "Name": "Suppression Duration",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Description of the new alert rule",
+            "Name": "Description",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Tactics of the new alert rule. Comma-separated values.",
+            "Name": "Tactics",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

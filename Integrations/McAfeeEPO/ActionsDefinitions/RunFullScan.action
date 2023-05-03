@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1510667586366, 
+    "Creator": "Admin", 
+    "Description": "Run full scan on the provided endpoints in McAfee ePO . Supported entities: Hostname, IP.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"status\": \"success\"}, \"Entity\": \"Host\"}, {\"EntityResult\": {\"status\": \"failure\"}, \"Entity\": \"Host2\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "McAfeeEPO", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1510667586367, 
+    "Name": "Run Full Scan", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1513005957115, 
+            "CustomActionId": -1, 
+            "DefaultValue": "On-Demand Scan - Full Scan",
+            "Description": "Specify what task should be executed in order to get a full scan.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1513005957115, 
+            "Name": "Task Name", 
+            "Type": 0, 
+            "Value": "On-Demand Scan - Full Scan"
+        }
+    ], 
+    "ScriptResultName": "RunTask_Status", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 2.0
+}

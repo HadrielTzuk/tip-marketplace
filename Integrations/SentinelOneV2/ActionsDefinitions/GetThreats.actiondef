@@ -1,0 +1,110 @@
+{
+    "CreationTimeUnixTimeInMs": 1542188059113,
+    "Creator": "Admin",
+    "Description": "Retrieve information about threats in SentinelOne.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"accountId\":\"XXXXXXXXXXXXXXXXXXXXX\",\"accountName\":\"SentinelOne\",\"agentComputerName\":\"desktop-XXXXXXX\",\"agentDomain\":\"WORKGROUP\",\"agentId\":\"XXXXXXXXXXXXXXXXXXXXX\",\"agentInfected\":false,\"agentIp\":\"42.55.555.444\",\"agentIsActive\":false,\"agentIsDecommissioned\":false,\"agentMachineType\":\"desktop\",\"agentNetworkStatus\":\"connected\",\"agentOsType\":\"windows\",\"agentVersion\":\"X.X.X.XXXX\",\"annotation\":null,\"automaticallyResolved\":false,\"browserType\":null,\"certId\":\"\",\"classification\":\"generic.heuristic\",\"classificationSource\":\"Cloud\",\"classifierName\":\"MANUAL\",\"cloudVerdict\":\"provider_unknown\",\"collectionId\":\"XXXXXXXXXXXXXXXX\",\"commandId\":\"XXXXXXXXXXXXXXXX\",\"createdAt\":\"2020-03-02T21:30:13.014874Z\",\"createdDate\":\"2020-03-02T21:30:12.748000Z\",\"description\":\"malware detected - not mitigated yet\",\"engines\":[\"manual\"],\"external_ticket_id\":null,\"fileContentHash\":\"fc5aXXXXXXXXXXXXXXXXXXXXX6f399492\",\"fileCreatedDate\":null,\"fileDisplayName\":\"GameBar.exe\",\"fileExtensionType\":\"Executable\",\"fileIsDotNet\":null,\"fileIsExecutable\":true,\"fileIsSystem\":false,\"fileMaliciousContent\":null,\"fileObjectId\":\"XXXXXXXXXXXXXXXXX\",\"filePath\":\"\\\\Device\\\\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\\\GameBar.exe\",\"fileSha256\":null,\"fileVerificationType\":\"NotSigned\",\"fromCloud\":false,\"fromScan\":false,\"id\":\"XXXXXXXXXXXXXXXXX\",\"indicators\":[],\"initiatedBy\":\"dvCommand\",\"initiatedByDescription\":\"Deep Visibility Command\",\"initiatingUserId\":\"XXXXXXXXXXXXXXXXX\",\"isCertValid\":false,\"isInteractiveSession\":false,\"isPartialStory\":false,\"maliciousGroupId\":\"XXXXXXXXXXXXXXXXX\",\"maliciousProcessArguments\":\"-ServerName:App.AppXXXXXXXXXXXXXXXXXX.mca\",\"markedAsBenign\":true,\"mitigationMode\":\"protect\",\"mitigationReport\":{\"kill\":{\"status\":\"success\"},\"network_quarantine\":{\"status\":null},\"quarantine\":{\"status\":\"success\"},\"remediate\":{\"status\":null},\"rollback\":{\"status\":null},\"unquarantine\":{\"status\":\"sent\"}},\"mitigationStatus\":\"mitigated\",\"publisher\":\"\",\"rank\":2,\"resolved\":true,\"siteId\":\"XXXXXXXXXXXXXXXXX\",\"siteName\":\"Siemplify.co\",\"threatAgentVersion\":\"X.X.X.XXX\",\"threatName\":\"GameBar.exe\",\"updatedAt\":\"2020-07-07T17:19:48.260119Z\",\"username\":\"DESKTOP-XXXXXXX\\\\diserens\",\"whiteningOptions\":[]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOneV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542188059113,
+    "Name": "Get Threats",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the comma-separated list of threat statuses. Only threats that match the statuses will be returned. Possible values: mitigated, active, blocked, suspicious, suspicious_resolved",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Mitigation Status",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the end time for the threats. Example: 2020-03-02T21:30:13.014874Z",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Created until",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the start time for the threats. Example: 2020-03-02T21:30:13.014874Z",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Created from",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will only return resolved threats.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Resolved Threats",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a display name of the threat that you want to return. Partial name will also work.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Threat Display Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "10",
+            "Description": "Specify how many threats to return. Default: 10.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Limit",
+            "Type": 0,
+            "Value": "10"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "2.0",
+            "Description": "Specify what version of API to use in the action. If nothing is provided connector will use version 2.1. Note: JSON result structure is different between API versions. It is recommended to use the latest one.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "API Version",
+            "Type": 15,
+            "OptionalValues": [
+                "2.0",
+                "2.1"
+            ],
+            "Value": "2.0"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

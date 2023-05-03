@@ -1,0 +1,62 @@
+[
+    {
+        "ChangeDescription": "Add support for using windows authentication with Linux version of Siemplify platform (using Kerberos authentication). Please refer to documentation for more information.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "MSSQL",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1597127240,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3538"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "MSSQL",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "MSSQL integration - Added support for ODBC driver versions 13, 17, 18.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "MSSQL",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11997"
+    },
+    {
+        "ChangeDescription": "MSSQL Integration - Updated kerberos authentication connection functionality.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "MSSQL",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1660214457,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12627"
+    },
+    {
+        "ChangeDescription": "MSSQL integration - added ability to work with custom certificates.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 12.0,
+        "ItemName": "MSSQL",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1660725408,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12568"
+    }
+]

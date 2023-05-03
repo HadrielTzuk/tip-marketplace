@@ -1,0 +1,48 @@
+{
+    "CreationTimeUnixTimeInMs": 1530543579170,
+    "Creator": "admin",
+    "Description": "Update resolution on the incident.",
+    "Id": -1,
+    "IntegrationIdentifier": "SymantecATP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530543579170,
+    "Name": "Update Incident Resolution",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530543579170,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the UUID of the incident.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530543579170,
+            "Name": "Incident UUID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530543579170,
+            "CustomActionId": -1,
+            "DefaultValue": "INSUFFICIENT DATA",
+            "Description": "Specify what resolution status to set on the incident.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530543579170,
+            "Name": "Resolution Status",
+            "Type": 15,
+            "OptionalValues":[
+                "INSUFFICIENT DATA",
+                "SECURITY RISK",
+                "FALSE POSITIVE",
+                "MANAGED EXTERNALLY",
+                "NOT SET",
+                "BENIGN",
+                "TEST"
+            ],
+            "OptionalValuesJson":"[\"INSUFFICIENT DATA\",\"SECURITY RISK\",\"FALSE POSITIVE\",\"MANAGED EXTERNALLY\",\"NOT SET\",\"BENIGN\",\"TEST\"]"
+        }
+    ],
+    "ScriptResultName": "is_success ",
+    "Version": 1.0
+}

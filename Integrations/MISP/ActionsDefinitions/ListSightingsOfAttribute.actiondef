@@ -1,0 +1,98 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583,
+    "Creator": "admin",
+    "Description": "List available sightings for attributes in MISP",
+    "Id": -1,
+    "IntegrationIdentifier": "MISP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Organisation\":{\"name\":\"TESTORG\"},\"Sighting\":{\"uuid\":\"12345678-3448-4fe7-a414-41940a00xxxx\",\"event_id\":\"xx\",\"org_id\":\"xx\",\"source\":\"Test\",\"attribute_id\":\"1xx\",\"date_sighting\":\"1584354243\",\"type\":\"0\",\"id\":\"xx\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1530451212583,
+    "Name": "List Sightings of an Attribute",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of attribute identifiers for which you want to list sightings. Note: If both “Attribute Name“ and “Attribute UUID“ are specified, action will work with “Attribute UUID“ values.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Attribute Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID or UUID of the event, where to seach for attributes. This parameter is required, if “Attribute Search“ is set to “Provided Event“.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Event ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of categories. If specified, action will only list sightings for attributes that have matching category. If nothing is specified, action will ignore categories in attributes. Possible values: External Analysis, Payload Delivery, Artifacts Dropped, Payload Installation.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Category",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of attribute types. If specified, action will only list sightings for attributes that have matching attribute type. If nothing is specified, action will ignore types in attributes. Example values: md5, sha1, ip-src, ip-dst",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Type",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "Provided Event",
+            "Description": "Specify, where action should search for attributes. If “Provided Event“ is selected, action will only search for attributes or attribute UUIDs in event with ID/UUID provided in “Event ID“ parameter. If “All Events“, action will search for attributes among all events and list sightings for all attributes that match our criteria.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Attribute Search",
+            "Type": 15,
+            "OptionalValues": [
+                "All Events",
+                "Provided Event"
+            ],
+            "Value": "Provided Event"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of attribute UUIDs for which you want to list sightings. Note: If both “Attribute Name“ and “Attribute UUID“ are specified, action will work with “Attribute UUID“ values.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Attribute UUID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

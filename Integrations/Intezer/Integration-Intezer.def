@@ -1,0 +1,33 @@
+{
+    "Description": "Intezer enables your team to accurately classify unknown files at scale, allowing you to respond to threats in a timely manner, without spending resources on false positives or missing critical incidents.",
+    "DisplayName": "Intezer",
+    "Identifier": "Intezer",
+    "Categories": [
+        "Malware Analysis",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Intezer",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "Api Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Intezer",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M15.5,9.1l-9.1,3.4l8.2,3.3l8.5-3.6L15.5,9.1z M32.7,8.2l-7.6-3.1l-7.2,2.9l7.4,3.4L32.7,8.2z M36,16l8-3.4l-9.1-3.4\n\t\t\tl-7.6,3.3L36,16z M25.3,13.1l-8.5,3.8l8.5,3.3l8.3-3.4L25.3,13.1z M35.8,17.5L36,28.5l8.5-3.1V14.2L35.8,17.5z M25.8,32.2l8.3-3.1\n\t\t\tV18.2l-8.3,3.1V32.2z M25.6,44.8l8.7-3.4V31.1L25.8,34L25.6,44.8z M15.7,29.1l8.5,3.1V21.5l-8.5-3.3V29.1z M15.7,41.4l8.3,3.3\n\t\t\tl0.2-10.5l-8.5-3.3V41.4z M5.7,25.5l8.2,3.1V17.3l-8.3-3.1L5.7,25.5z M5.5,37.4l8.3,3.4V30.3l-8.2-3.1L5.5,37.4z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 5.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/intezer",
+    "MarketingDisplayName": "Intezer"
+}

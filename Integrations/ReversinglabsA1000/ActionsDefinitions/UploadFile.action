@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1518094778187,
+    "Creator": "admin",
+    "Description": "Upload a file for analysis on the A1000 appliance",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"threat_status\": \"unknown\", \"local_last_seen\": \"2019-01-28T11:40:23.195946Z\", \"classification_origin\": null, \"threat_name\": null, \"local_first_seen\": \"2019-01-28T11:09:06.752747Z\", \"classification_reason\": \"unknown\", \"threat_level\": 0, \"trust_factor\": 5, \"md5\": \"848d57fbd8e29afa08bd3f58dd30f000\", \"aliases\": [\"Notes.txt\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "ReversinglabsA1000",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518094778187,
+    "Name": "Upload File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518101899410,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Target file path.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518101899410,
+            "Name": "File Path",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

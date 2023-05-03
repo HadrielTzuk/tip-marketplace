@@ -1,0 +1,48 @@
+{
+    "CreationTimeUnixTimeInMs": 1548084317288, 
+    "Creator": "System", 
+    "Description": "Get information about a user", 
+    "DynamicScriptResultNamesJson": "[\"ResultJson\"]", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Okta", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1548084317293, 
+    "Name": "Get User",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"status\":\"ACTIVE\",\"profile\":{\"mobilePhone\":null,\"firstName\":\"Test\",\"lastName\":\"User\",\"secondEmail\":null,\"login\":\"test.user@asd.com\",\"email\":\"test.user@asd.com\"},\"passwordChanged\":\"2022-07-11T06:11:25.000Z\",\"created\":\"2022-07-11T06:07:55.000Z\",\"activated\":null,\"lastUpdated\":\"2022-07-11T06:11:25.000Z\",\"_links\":{\"schema\":{\"href\":\"https://trial-0000.okta.com/api/v1/meta/schemas/user/osc1xxxxxxxx\"},\"suspend\":{\"href\":\"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/lifecycle/suspend\",\"method\":\"POST\"},\"forgotPassword\":{\"href\":\"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/credentials/forgot_password\",\"method\":\"POST\"},\"self\":{\"href\":\"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx\"},\"expirePassword\":{\"href\":\"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/lifecycle/expire_password\",\"method\":\"POST\"},\"resetFactors\":{\"href\":\"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/lifecycle/reset_factors\",\"method\":\"POST\"},\"deactivate\":{\"href\":\"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/lifecycle/deactivate\",\"method\":\"POST\"},\"changePassword\":{\"href\":\"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/credentials/change_password\",\"method\":\"POST\"},\"changeRecoveryQuestion\":{\"href\":\"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/credentials/change_recovery_question\",\"method\":\"POST\"},\"type\":{\"href\":\"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx\"},\"resetPassword\":{\"href\":\"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/lifecycle/reset_password\",\"method\":\"POST\"}},\"lastLogin\":\"2022-07-11T06:15:14.000Z\",\"credentials\":{\"password\":{},\"provider\":{\"type\":\"OKTA\",\"name\":\"OKTA\"}},\"type\":{\"id\":\"oty1xxxxxxxxxxxxx\"},\"id\":\"oty1xxxxxxxxxxxxx\",\"statusChanged\":\"2022-07-11T06:11:25.000Z\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1548084317311, 
+            "CustomActionId": 703, 
+            "DefaultValue": "", 
+            "Description": "Ids or logins (email or short email name) of a user in Okta, e.g. test@gmail.com or simply 'test'", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084317311, 
+            "Name": "User Ids Or Logins", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1548084317312, 
+            "CustomActionId": 703, 
+            "DefaultValue": "false", 
+            "Description": "Whether to run on entities as well as the input", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084317312, 
+            "Name": "Also Run On Scope", 
+            "Type": 1, 
+            "Value": "false"
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyDataModel import EntityTypes\nfrom SiemplifyUtils import construct_csv, dict_to_flat\nfrom OktaManager import OktaManager\nimport json\n\nPROVIDER = \"Okta\"\nACTION_NAME = \"Okta - GetUser\"\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    user_ids_or_logins = siemplify.parameters['User Ids Or Logins']\n    is_scope = siemplify.parameters.get('Also Run On Scope', \"false\").lower() == \"true\"\n    okta = OktaManager(api_root=conf['Api Root'], api_token=conf['Api Token'],\n                       verify_ssl=conf['Verify SSL'].lower() == 'true')\n    ids = []\n    output_message = \"\"\n    if user_ids_or_logins:\n        for _id in user_ids_or_logins.split(','):\n            _id = _id.strip()\n            ids.append(_id)\n    message = \"\"\n    ret = {}\n    if ids:\n        for _id in ids:\n            user = {}\n            try:\n                user = okta.get_user(_id)\n                if user:\n                    message += \"The user \\\"{}\\\" was found.\\n\\n\".format(_id)\n                    ret[_id] = user\n                else:\n                    message += \"The user \\\"{}\\\" was not found.\\n\\n\".format(_id)\n            except Exception as err:\n                siemplify.LOGGER.exception(err)\n                siemplify.LOGGER.error(_id + \": \" + err.message)\n                pass\n    if is_scope:\n        entitiesDisabled = []\n        for entity in siemplify.target_entities:\n            if entity.entity_type == EntityTypes.USER or entity.entity_type == EntityTypes.HOSTNAME:\n                try:\n                    user = okta.get_user(entity.identifier)\n                    if user:\n                        entitiesDisabled.append(entity)\n                        message += \"The user \\\"{0}\\\" was found.\\n\\n\".format(entity.identifier)\n                        ret[entity.identifier] = user\n                    else:\n                        message += \"The user \\\"{0}\\\" couldn't be found.\\n\\n\".format(entity.identifier)\n                        continue\n                except Exception as err:\n                    siemplify.LOGGER.exception(err)\n                    siemplify.LOGGER.error(entity.identifier + \": \" + err.message)\n                    pass\n            else:\n                continue\n    if ret:\n        for name, user in ret.items():\n            flat_user = dict_to_flat(user)\n            csv_output = construct_csv([flat_user])\n            siemplify.result.add_data_table(\"Okta - User: \" + name, csv_output)\n        output_message = message\n    else:\n        output_message = \"No users were found. {}\".format(message)\n\n    siemplify.end(output_message, json.dumps(ret))\n\nif __name__ == '__main__':\n    main()", 
+    "ScriptResultName": "ScriptResult", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"USERUNIQNAME\"]}", 
+    "Version": 8.0
+}

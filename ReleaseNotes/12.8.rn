@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 12.8</h2><h5>Published on 30 June, 2020</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     FireEyeEX\n    </b>\n   </li>\n   <ul>\n    <li>\n     FireEye EX\n    </li>\n    <ul>\n     <li>\n      NEW! FireEye EX integration\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     McAfeeMvisionEPO\n    </b>\n   </li>\n   <ul>\n    <li>\n     McAfee Mvision ePO\n    </li>\n    <ul>\n     <li>\n      NEW! NEW! McAfee Mvision ePO integration. Available on the Siemplify version 5.3 and higher.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     SonicWall-Beta\n    </b>\n   </li>\n   <ul>\n    <li>\n     SonicWall\n    </li>\n    <ul>\n     <li>\n      NEW! NEW! SonicWall integration\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Actions</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     HTTP\n    </b>\n   </li>\n   <ul>\n    <li>\n     Get Data\n    </li>\n    <ul>\n     <li>\n      Added response data and redirects as JSON result.\n     </li>\n    </ul>\n    <li>\n     Get URL Data\n    </li>\n    <ul>\n     <li>\n      NEW! Added new action for sending GET requests to URL entities.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     ScreenshotMachine\n    </b>\n   </li>\n   <ul>\n    <li>\n     Take Screenshot\n    </li>\n    <ul>\n     <li>\n      Added screenshot base64 as JSON result.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "12.8",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "30/06/20",
+    "Title": "Release Notes"
+}

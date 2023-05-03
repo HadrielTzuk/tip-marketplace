@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1531990194363,
+    "Creator": "System",
+    "Description": "Revalidate device policy over Portnox NAC",
+    "Id": -1,
+    "IntegrationIdentifier": "Portnox",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1531990194363,
+    "Name": "Revalidate Device",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1531990194363,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The device to revalidate ID.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1531990194363,
+            "Name": "DeviceId",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom PortnoxManager import PortnoxManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(\"Portnox\")\n    portnox_manager = PortnoxManager(conf['Api Root'], conf['Username'],\n                                     conf['Password'], conf['Verify SSL'])\n    device_id = siemplify.parameters['DeviceId']\n\n    portnox_manager.revalidate_device(device_id)\n\n    # Use the default timeout in manager consts\n    portnox_manager.wait_for_device_revalidation(device_id)\n    output_message = 'Device: {0} revalidation completed'.format(\n        device_id)\n    result_value = 'true'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_valid",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

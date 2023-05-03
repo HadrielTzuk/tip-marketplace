@@ -1,0 +1,32 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805, 
+    "Creator": "Admin", 
+    "DefaultResultValue": "", 
+    "Description": "Initiate Endgame endpoint unisolation. This action supports only Windows and MacOS endpoints.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Endgame", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1560351300805, 
+    "Name": "Unisolate Host", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "If enabled, creates Insight after successful execution of this action.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351300835, 
+            "Name": "Create Insight", 
+            "OptionalValues": null, 
+            "OptionalValuesJson": null, 
+            "Type": 1, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "TimeoutSeconds": 600, 
+    "Version": 1.0
+}

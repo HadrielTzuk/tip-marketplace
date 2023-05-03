@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1519203907461, 
+    "Creator": "admin", 
+    "Description": "Download and save the PCAP file of a sample from WildFire", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Wildfire", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1519203907461, 
+    "Name": "GetPcap", 
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

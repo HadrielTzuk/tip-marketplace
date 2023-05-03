@@ -1,0 +1,37 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805, 
+    "Creator": "Admin", 
+    "DefaultResultValue": "", 
+    "Description": "Get information about an active user sessions on a specific Endgame endpoint.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [{\"username\": \"endgame\", \"shell\": \"/opt/endgame/bin/console\", \"uid\": 1000, \"started\": 1582554802.55514, \"hostname\": \"\", \"host_ip\": \"\", \"session_id\": 887, \"session_count\": 1, \"terminal\": \"tty1\", \"ended\": 0, \"gid\": 1000, \"collection_id\": \"1aebade8-9f7b-4237-8c43-2aed8729511e\", \"machine_id\": \"827255f4-53a2-1823-cac0-7c0f7730ca26\"}], \"Entity\": \"PC-01\"}, {\"EntityResult\": [{\"username\": \"lgreen\", \"domain\": \"3B\", \"started\": 1580205134.001, \"session_count\": 1, \"ended\": 0, \"password_last_set\": 0, \"logon_type\": \"interactive\", \"sid\": \"\", \"collection_id\": \"88b876b1-5063-40a8-b40e-440df5eb8952\", \"machine_id\": \"5dc677fd-6b47-7df9-f7f4-d45434c8d0f8\"}], \"Entity\": \"PC-02\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Endgame", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1560351300805, 
+    "Name": "User Sessions Survey", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835, 
+            "CustomActionId": -1, 
+            "DefaultValue": "50", 
+            "Description": "Specify how many items to return.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351300835, 
+            "Name": "Max Items to Return", 
+            "Type": 0, 
+            "Value": "50"
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "TimeoutSeconds": 600, 
+    "Version": 1.0,
+    "IsAsync": true
+}

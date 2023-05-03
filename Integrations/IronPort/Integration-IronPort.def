@@ -1,0 +1,75 @@
+{
+    "Description": "Cisco IronPort Email Security Appliance is an email security gateway product. It is designed to detect and block a wide variety of email-borne threats, such as malware, spam and phishing attempts. ",
+    "DisplayName": "Cisco IronPort",
+    "Identifier": "IronPort",
+    "Categories": [
+        "Email Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "IronPort",
+            "IsMandatory": true,
+            "PropertyDisplayName": "IronPort Server Address",
+            "PropertyName": "Server Address",
+            "PropertyType": "2",
+            "Value": "x.x.x.x"
+        },
+        {
+            "IntegrationIdentifier": "IronPort",
+            "IsMandatory": true,
+            "PropertyDisplayName": "IronPort AsyncOS API Port",
+            "PropertyName": "AsyncOS API Port",
+            "PropertyType": "2",
+            "Value": "6443"
+        },
+        {
+            "IntegrationIdentifier": "IronPort",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "IronPort",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Passphrase (password)",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "IronPort",
+            "IsMandatory": false,
+            "PropertyDisplayName": "CA Certificate File - parsed into Base64 String",
+            "PropertyName": "CA Certificate File - parsed into Base64 String",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "IronPort",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Use SSL",
+            "PropertyName": "Use SSL",
+            "PropertyType": "0",
+            "Value": "true"
+        },
+        {
+            "IntegrationIdentifier": "IronPort",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "false"
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "IsAvailableForCommunity": true,
+    "SvgImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M24.7,33.3c-0.3-0.2-0.6-0.4-0.9-0.5l-1.5-0.5C22.2,32.2,22,32,22,31.9c-0.1-0.1-0.1-0.3,0-0.4c0,0,0.1-0.1,0.1-0.1\n\t\t\tc0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1,0c0.2-0.1,0.3-0.1,0.5-0.2c0.3,0,0.6,0,0.9,0c0.4,0,0.7,0.1,1.1,0.2l0.1,0v-1.8l-0.1,0\n\t\t\tc-0.4-0.1-0.7-0.2-1.1-0.2c-0.5-0.1-1-0.1-1.4,0c-0.6,0.1-1.2,0.3-1.7,0.7c-0.3,0.3-0.6,0.6-0.7,1c-0.2,0.6-0.2,1.2,0,1.8\n\t\t\tc0.1,0.3,0.3,0.6,0.5,0.8c0.2,0.2,0.4,0.4,0.7,0.5c0.3,0.2,0.7,0.3,1,0.4c0.1,0,0.2,0.1,0.3,0.1l0.2,0.1c0,0,0,0,0,0\n\t\t\tc0.2,0.1,0.3,0.2,0.5,0.3c0.1,0.1,0.2,0.2,0.2,0.3c0,0.1,0,0.2,0,0.3c-0.1,0.2-0.2,0.3-0.3,0.4c-0.2,0.1-0.4,0.1-0.6,0.2\n\t\t\tc-0.3,0-0.6,0.1-0.9,0c-0.4,0-0.8-0.1-1.1-0.2c-0.2,0-0.4-0.1-0.6-0.1l-0.1,0l0,1.9l0.1,0c0.4,0.1,0.9,0.1,1.3,0.2\n\t\t\tc0.4,0,0.8,0,1.2,0c0.4,0,0.8-0.1,1.1-0.2c0.4-0.1,0.8-0.3,1.2-0.6c0.3-0.3,0.5-0.6,0.7-1c0.2-0.6,0.2-1.3,0-1.9\n\t\t\tC25.2,33.8,25,33.5,24.7,33.3z M9.6,29.2c-0.6,0-1.3,0.2-1.8,0.4c-0.6,0.3-1.1,0.7-1.5,1.2c-1.3,1.6-1.3,3.8-0.1,5.5\n\t\t\tc0.6,0.8,1.4,1.3,2.4,1.5c1,0.2,2,0.2,3-0.1l0.2,0v-2.2l0,0c-0.5,0.2-1.1,0.4-1.6,0.4c-0.6,0-1.2-0.1-1.6-0.5\n\t\t\tc-0.3-0.3-0.6-0.6-0.7-1c-0.1-0.4-0.2-0.9,0-1.3c0.1-0.5,0.4-0.9,0.7-1.2c0.3-0.3,0.7-0.4,1.1-0.5c0.7-0.1,1.5,0.1,2.1,0.4l0,0\n\t\t\tv-2.3l-0.1,0C11,29.2,10.3,29.1,9.6,29.2z M14.7,37.7h2.1v-8.4h-2.1V37.7z M2.1,19.2c-0.3,0-0.5,0.1-0.7,0.3\n\t\t\tC1.1,19.7,1,19.9,1,20.2v2.3c0,0.3,0.1,0.5,0.3,0.7c0.2,0.2,0.5,0.3,0.7,0.3c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7v-2.3\n\t\t\tc0-0.3-0.1-0.5-0.3-0.7C2.6,19.3,2.3,19.2,2.1,19.2z M7.9,23.5c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7v-5.2\n\t\t\tc0-0.3-0.1-0.5-0.3-0.7c-0.2-0.2-0.5-0.3-0.7-0.3c-0.3,0-0.5,0.1-0.7,0.3c-0.2,0.2-0.3,0.4-0.3,0.7v5.2c0,0.3,0.1,0.5,0.3,0.7\n\t\t\tC7.3,23.4,7.6,23.5,7.9,23.5z M13.6,12.3c-0.3,0-0.5,0.1-0.7,0.3c-0.2,0.2-0.3,0.4-0.3,0.7v11.3c0,0.3,0.1,0.5,0.3,0.7\n\t\t\tc0.2,0.2,0.5,0.3,0.7,0.3c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7V13.3c0-0.3-0.1-0.5-0.3-0.7\n\t\t\tC14.2,12.4,13.9,12.3,13.6,12.3z M20.5,22.5v-5.2c0-0.3-0.1-0.5-0.3-0.7c-0.2-0.2-0.5-0.3-0.7-0.3c-0.3,0-0.5,0.1-0.7,0.3\n\t\t\tc-0.2,0.2-0.3,0.4-0.3,0.7v5.2c0,0.3,0.1,0.5,0.3,0.7c0.2,0.2,0.5,0.3,0.7,0.3c0.3,0,0.5-0.1,0.7-0.3\n\t\t\tC20.4,23.1,20.5,22.8,20.5,22.5z M25.3,19.2c-0.3,0-0.5,0.1-0.7,0.3c-0.2,0.2-0.3,0.4-0.3,0.7v2.3c0,0.3,0.1,0.5,0.3,0.7\n\t\t\tc0.2,0.2,0.5,0.3,0.7,0.3c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7v-2.3c0-0.3-0.1-0.5-0.3-0.7\n\t\t\tC25.8,19.3,25.5,19.2,25.3,19.2z M31.1,23.5c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7v-5.2c0-0.3-0.1-0.5-0.3-0.7\n\t\t\tc-0.2-0.2-0.5-0.3-0.7-0.3c-0.3,0-0.5,0.1-0.7,0.3C30.1,16.8,30,17,30,17.3v5.2c0,0.3,0.1,0.5,0.3,0.7\n\t\t\tC30.5,23.4,30.8,23.5,31.1,23.5z M37.6,25.3c0.2-0.2,0.3-0.4,0.3-0.7V13.3c0-0.3-0.1-0.5-0.3-0.7c-0.2-0.2-0.5-0.3-0.7-0.3\n\t\t\tc-0.3,0-0.5,0.1-0.7,0.3c-0.2,0.2-0.3,0.4-0.3,0.7v11.3c0,0.3,0.1,0.5,0.3,0.7c0.2,0.2,0.5,0.3,0.7,0.3S37.4,25.5,37.6,25.3z\n\t\t\t M42.7,23.5c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7v-5.2c0-0.3-0.1-0.5-0.3-0.7c-0.2-0.2-0.5-0.3-0.7-0.3\n\t\t\ts-0.5,0.1-0.7,0.3c-0.2,0.2-0.3,0.4-0.3,0.7v5.2c0,0.3,0.1,0.5,0.3,0.7C42.1,23.4,42.4,23.5,42.7,23.5z M49.2,19.5\n\t\t\tc-0.2-0.2-0.5-0.3-0.7-0.3c-0.3,0-0.5,0.1-0.7,0.3c-0.2,0.2-0.3,0.4-0.3,0.7v2.3c0,0.3,0.1,0.5,0.3,0.7c0.2,0.2,0.5,0.3,0.7,0.3\n\t\t\ts0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7v-2.3C49.5,19.9,49.4,19.7,49.2,19.5z M31.8,29.2c-0.6,0-1.3,0.2-1.8,0.4\n\t\t\tc-0.6,0.3-1.1,0.7-1.5,1.2c-1.3,1.6-1.3,3.8-0.1,5.5c0.6,0.8,1.4,1.3,2.4,1.5c1,0.2,2,0.2,3-0.1l0.2,0v-2.2l0,0\n\t\t\tc-0.5,0.2-1.1,0.4-1.6,0.4c-0.6,0-1.2-0.1-1.6-0.5c-0.3-0.3-0.6-0.6-0.7-1c-0.1-0.4-0.2-0.9,0-1.3c0.1-0.5,0.4-0.9,0.7-1.2\n\t\t\tc0.3-0.3,0.7-0.4,1.1-0.5c0.7-0.1,1.5,0.1,2.1,0.4l0,0v-2.3l-0.1,0C33.2,29.2,32.5,29.1,31.8,29.2z M43,29.8\n\t\t\tc-1.4-0.8-3.1-0.9-4.5-0.1c-1.4,0.8-2.3,2.2-2.3,3.8c0,1.3,0.6,2.6,1.7,3.4c1,0.8,2.4,1.1,3.7,0.9c1.8-0.3,3.1-1.7,3.5-3.5\n\t\t\tC45.4,32.5,44.6,30.7,43,29.8z M42.9,33.8c-0.1,0.6-0.4,1.1-0.8,1.5c-0.5,0.4-1,0.5-1.6,0.5c-0.6-0.1-1.1-0.4-1.5-0.8\n\t\t\tc-0.4-0.5-0.5-1-0.5-1.6c0.1-0.6,0.4-1.1,0.8-1.5c0.5-0.4,1-0.5,1.6-0.5c0.6,0.1,1.1,0.4,1.5,0.8C42.8,32.6,43,33.2,42.9,33.8z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 11.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/ironport",
+    "MarketingDisplayName": "Cisco IronPort"
+}

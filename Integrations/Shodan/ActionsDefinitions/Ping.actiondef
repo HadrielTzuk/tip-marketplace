@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1545759432347,
+    "Creator": "Admin",
+    "Description": "Test connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "Shodan",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1545759432347,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from ShodanManager import ShodanManager\nfrom SiemplifyAction import SiemplifyAction\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('Shodan')\n    verify_ssl = conf.get('Verify SSL', 'False').lower() == 'true'\n    api_key = conf.get('API key', \"\")\n    shodan = ShodanManager(api_key, verify_ssl=verify_ssl)\n\n    shodan.test_connectivity()\n\n    output_message = \"Connection Established\"\n    result_value = 'true'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_connected",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,52 @@
+{
+	"Cases": [{
+			"Events": [{
+					"_fields": {
+						"BaseEventIds": "[]",
+						"ParentEventId": -1,
+						"StartTime": "1514454988061",
+						"EndTime": "1514454988061",
+						"DeviceProduct": "Phishing email detector"
+					},
+					"_rawDataFields": {
+						"sourcetype": "Phishing email detector",
+						"DeviceVendor": "Email server",
+						"StartTime": "1514999515872",
+						"EndTime": "1514999515872",
+						"EventId": "220",
+						"Name": "Your New Salary Notification",
+						"Mail_OriginalEmailBody": "Hello, You have an important email from the Human Resources Department with regards to your December 2015 Paycheck\r\n\r\nThis email is enclosed in the Marquette University secure network, hence access it below\r\n\r\nAccess the documents here <http://markossolomon.com/F1q7QX.php<link removed>\r\n\r\n***Ensure your login credentials are correct to avoid cancellations**\r\n\r\nFaithfully \r\nHuman Resources \r\nUniversity of California, Berkeley\r\n\r",
+						"Severity": "High",
+						"CategoryOutcome": "allowed",
+						"DeviceEventClassId": "Email check",
+						"SourceUserName": "f.attacker4@gmail.com",
+						"DestinationUserName": "roia@siemplify.co",
+						"DestinationURL": "http://markossolomon.com/F1q7QX.php",
+						"sentTime": "1498647816000",
+						"message_id": "220",
+						"subject": "Your New Salary Notification",
+						"body": "Hello, You have an important email from the Human Resources Department with regards to your December 2015 Paycheck\r\n\r\nThis email is enclosed in the Marquette University secure network, hence access it below\r\n\r\nAccess the documents here <http://markossolomon.com/F1q7QX.php<link removed>\r\n\r\n***Ensure your login credentials are correct to avoid cancellations**\r\n\r\nFaithfully \r\nHuman Resources \r\nUniversity of California, Berkeley\r\n\r"
+					},
+					"Environment": null,
+					"SourceSystemName": null
+				}
+			],
+			"Environment": "",
+			"SourceSystemName": "Splunk",
+			"TicketId": "fa8ac426-d12c-4117-8a56-a34099b1efa4",
+			"Description": "The email from <f.attacker4@gmail.com> to <vickie.b@siemplify.co> detected as phishing email.",
+			"DisplayId": "fa8ac426-d12c-4117-8a56-a34099b1effs",
+			"Reason": "Phishing email detector",
+			"Name": "Suspicious phishing email",
+			"DeviceVendor": "Email server",
+			"DeviceProduct": "Phishing email detector",
+			"StartTime": "1498647816000",
+			"EndTime": "1498647816000",
+			"IsTestCase": true,
+			"Priority": -1,
+			"RuleGenerator": "Simulation_Original_Phishing email detector",
+			"Extensions": []
+		}
+	],
+	"IsTestCase": true
+}

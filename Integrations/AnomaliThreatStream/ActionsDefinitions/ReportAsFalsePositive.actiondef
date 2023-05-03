@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1519220936730,
+    "Creator": "admin",
+    "Description": "Report entities in Anomali ThreatStream as false positive. Supported entities: Hash, URL, IP Address, Email Address (user entity that matches email regex).",
+    "Id": -1,
+    "IntegrationIdentifier": "AnomaliThreatStream",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519220936730,
+    "Name": "Report As False Positive",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519223278607,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the reason why you want to mark entities as false positives.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519223278607,
+            "Name": "Reason",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519223278607,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify additional information related to your decision regarding marking the entity as false positive.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519223278607,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\", \"ADDRESS\", \"DestinationURL\", \"USERUNIQNAME\"]}"
+}

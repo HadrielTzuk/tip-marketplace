@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1544617226687,
+    "Creator": "Admin",
+    "Description": "Test integration connectiovity.",
+    "Id": -1,
+    "IntegrationIdentifier": "MobileIron",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1544617226687,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "# Imports\nfrom MobileIronManager import MobileIronManager\nfrom SiemplifyAction import SiemplifyAction\n\n\n# Consts.\nPROVIDER_NAME = 'MobileIron'\nACTION_NAME = 'MobileIron_Ping'\n\n\ndef main():\n    # Configuration.\n    siemplify = SiemplifyAction()\n    siemplify.script_name = \"\"\n    configuretion_settings = siemplify.get_configuration(PROVIDER_NAME)\n    api_root = configuretion_settings['API Root']\n    username = configuretion_settings['Username']\n    password = configuretion_settings['Password']\n    admin_device_id = configuretion_settings.get('Admin Device ID', 1)\n    connected_cloud = configuretion_settings.get('Connected Cloud', 'false').lower() == 'true'\n    verify_ssl = configuretion_settings.get('Verify SSL', 'false').lower() == 'true'\n\n    mobile_iron_manager = MobileIronManager(api_root, username, password, admin_device_id, connected_cloud, verify_ssl)\n    result_value = mobile_iron_manager.ping()\n\n    if result_value:\n        output_message = 'Connection Established.'\n    else:\n        output_message = 'Failed to establish connection.'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

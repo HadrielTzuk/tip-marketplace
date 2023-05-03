@@ -1,0 +1,28 @@
+{
+    "CreationTimeUnixTimeInMs": 1543164953601,
+    "Creator": "admin",
+    "Description": "Run the action and browse to the received URL. Note: action is related to the older authentication method based on the refresh token. Refresh token is not needed for service account authentication.",
+    "Id": -1,
+    "IntegrationIdentifier": "GSuite",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543164953601,
+    "Name": "Get Authorization",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Use the redirect url you registered to request an authorization.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Redirect URL",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_connected",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

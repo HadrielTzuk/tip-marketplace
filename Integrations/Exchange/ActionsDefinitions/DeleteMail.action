@@ -1,0 +1,142 @@
+{
+    "CreationTimeUnixTimeInMs": 1512974566175,
+    "Creator": "admin",
+    "Description": "Delete one or multiple email from the mailbox that matches search criterias. Delete can be done for the first email that matched the search criteria, or it can be done for all matching emails. NOTICE - to delete emails in all mailboxes, please configure impersonation permissions. https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/impersonation-and-ews-in-exchange. Note: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed.",
+    "Id": -1,
+    "IntegrationIdentifier": "Exchange",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1512974566175,
+    "Name": "Delete Mail",
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"mime_content\": \"Received: from EX001.example.local (xxx.30.xxx.29) by\\r\\n EX001.example.local (xxx.30.xxx.29) with Microsoft SMTP Server\\r\\n (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id xx.1.18xx.3\\r\\n via Mailbox Transport; Mon, 19 Oct 2020 02:42:23 -0700\\r\\nReceived: from EX001.example.local (xxx.30.xxx.29) by\\r\\n EX001.example.local (xxx.30.xxx.29) with Microsoft SMTP Server\\r\\n (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id\\r\\n xx.1.18xx.3; Mon, 19 Oct 2020 02:42:23 -0700\\r\\nReceived: from EX001.example.local ([fe80::xxxx:e3c3:xxxx:fc6f]) by\\r\\n EX001.example.local ([fe80::xxxx:e3c3:xxxx:fc6f%4]) with mapi id\\r\\n xx.01.18xx.003; Mon, 19 Oct 2020 02:42:23 -0700\\r\\nFrom: test <test@example.local>\\r\\nTo: test <test@example.local>\\r\\nSubject: #h4\\r\\nThread-Topic: #h4\\r\\nThread-Index: AQHWpfwlwSZWtJSb+EOtDk2WJ3xXaA==\\r\\nDate: Mon, 19 Oct 2020 09:42:23 +0000\\r\\nMessage-ID: <ec0fb6a4fa1a4bxxxxxxxxxxxxxxx269@example.local>\\r\\nAccept-Language: en-US\\r\\nContent-Language: en-US\\r\\nX-MS-Exchange-Organization-AuthAs: Internal\\r\\nX-MS-Exchange-Organization-AuthMechanism: 04\\r\\nX-MS-Exchange-Organization-AuthSource: EX001.example.local\\r\\nX-MS-Has-Attach:\\r\\nX-MS-Exchange-Organization-Network-Message-Id:\\r\\n\\t20xxxxxxx-0fdf-40f6-d038-xxxxxx1347fb\\r\\nX-MS-Exchange-Organization-SCL: -1\\r\\nX-MS-TNEF-Correlator:\\r\\nX-MS-Exchange-Organization-RecordReviewCfmType: 0\\r\\nContent-Type: multipart/alternative;\\r\\n\\tboundary=\\\"_000_ec0fb6a4fa1a4bxxxxxxxxxxxxxxx269siemplifylablocal_\\\"\\r\\nMIME-Version: 1.0\\r\\n\\r\\n--_000_ec0fb6a4fa1a4bxxxxxxxxxxxxxxx269siemplifylablocal_\\r\\nContent-Type: text/plain; charset=\\\"iso-8859-1\\\"\\r\\nContent-Transfer-Encoding: quoted-printable\\r\\n\\r\\n#h4\\r\\n\\r\\n--_000_ec0fb6a4fa1a4bxxxxxxxxxxxxxxx269siemplifylablocal_\\r\\nContent-Type: text/html; charset=\\\"iso-8859-1\\\"\\r\\nContent-Transfer-Encoding: quoted-printable\\r\\n\\r\\n<html>\\r\\n<head>\\r\\n<meta http-equiv=3D\\\"Content-Type\\\" content=3D\\\"text/html; charset=3Diso-8859-=\\r\\n1\\\">\\r\\n<style type=3D\\\"text/css\\\" style=3D\\\"display:none;\\\"><!-- P {margin-top:0;margi=\\r\\nn-bottom:0;} --></style>\\r\\n</head>\\r\\n<body dir=3D\\\"ltr\\\">\\r\\n<div id=3D\\\"divtagdefaultwrapper\\\" style=3D\\\"font-size:12pt;color:#000000;font=\\r\\n-family:Calibri,Helvetica,sans-serif;\\\" dir=3D\\\"ltr\\\">\\r\\n<p><span>#h4</span><br>\\r\\n</p>\\r\\n</div>\\r\\n</body>\\r\\n</html>\\r\\n\\r\\n--_000_ec0fb6a4fa1a4bxxxxxxxxxxxxxxx269siemplifylablocal_--\\r\\n\", \"_id\": \"ItemId(id='AAMkxxxxxxxxxxY0LTcwMTMtNDcxMy1iZWY4LTdlMzk2OTVkNDFmMgBGAAAAAACd4B5FsuQ3SL3ctNVrxxxxxxxxxx/T8ucKTK1ZxxxxxxxxxxAAAEMAAAydf/T8ucKTK1ZM6HawJxxxxxxxxxxAAA=', changekey='CQAAABYAAAAydf/T8ucKTK1ZMxxxxxxxxxxxxxxx')\", \"parent_folder_id\": \"ParentFolderId(id='AQMkxxxxxxxxxxY0LTcwMTMtNDcxMy1iZWY4LTdlMzk2OTVkNDFmMgAuAAADneAeRbLkN0i93LTVaxxxxxxxxxx/0/LnCkytWTOh2sCWzQxxxxxxxxxx', changekey='AQAAAA==')\", \"item_class\": \"IPM.Note\", \"subject\": \"#h4\", \"sensitivity\": \"Normal\", \"text_body\": \"#h4\\r\\n\", \"body\": \"#h4\", \"attachments\": [], \"datetime_received\": \"2020-10-19 09:42:23+00:00\", \"size\": \"7310\", \"categories\": \"None\", \"importance\": \"Normal\", \"in_reply_to\": \"None\", \"is_submitted\": \"False\", \"is_draft\": \"False\", \"is_from_me\": \"True\", \"is_resend\": \"False\", \"is_unmodified\": \"True\", \"headers\": [\"MessageHeader(name='Received', value='from EX001.example.local (xxx.30.xxx.29) by EX001.example.local (xxx.30.xxx.29) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id xx.1.18xx.3 via Mailbox Transport; Mon, 19 Oct 2020 02:42:23 -0700')\", \"MessageHeader(name='Received', value='from EX001.example.local (xxx.30.xxx.29) by EX001.example.local (xxx.30.xxx.29) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id xx.1.18xx.3; Mon, 19 Oct 2020 02:42:23 -0700')\", \"MessageHeader(name='Received', value='from EX001.example.local ([fe80::xxxx:e3c3:xxxx:fc6f]) by EX001.example.local ([fe80::xxxx:e3c3:xxxx:fc6f%4]) with mapi id xx.01.18xx.003; Mon, 19 Oct 2020 02:42:23 -0700')\", \"MessageHeader(name='Content-Type', value='application/ms-tnef')\", \"MessageHeader(name='Content-Transfer-Encoding', value='binary')\", \"MessageHeader(name='Subject', value='#h4')\", \"MessageHeader(name='Thread-Topic', value='#h4')\", \"MessageHeader(name='Thread-Index', value='AQHWpfwlwSZWtJSb+EOtxxxxxxxxxx==')\", \"MessageHeader(name='Date', value='Mon, 19 Oct 2020 02:42:23 -0700')\", \"MessageHeader(name='Message-ID', value='<ec0fb6a4fa1a4bxxxxxxxxxxxxxxx269@example.local>')\", \"MessageHeader(name='Accept-Language', value='en-US')\", \"MessageHeader(name='Content-Language', value='en-US')\", \"MessageHeader(name='X-MS-Exchange-Organization-SCL', value='-1')\", \"MessageHeader(name='X-MS-TNEF-Correlator', value='<ec0fb6a4fa1a4bxxxxxxxxxxxxxxx269@example.local>')\", \"MessageHeader(name='MIME-Version', value='1.0')\", \"MessageHeader(name='X-MS-Exchange-Organization-MessageDirectionality', value='Originating')\", \"MessageHeader(name='X-MS-Exchange-Organization-AuthSource', value='EX001.example.local')\", \"MessageHeader(name='X-MS-Exchange-Organization-AuthAs', value='Internal')\", \"MessageHeader(name='X-MS-Exchange-Organization-AuthMechanism', value='04')\", \"MessageHeader(name='X-Originating-IP', value='[xx.0.150.xx]')\", \"MessageHeader(name='X-MS-Exchange-Organization-Network-Message-Id', value='208xxxxx-0fdf-40f6-xxxx-08d8741xxxxx')\", \"MessageHeader(name='Return-Path', value='test@example.local')\", \"MessageHeader(name='X-MS-Exchange-Organization-AVStamp-Enterprise', value='1.0')\", \"MessageHeader(name='X-MS-Exchange-Transport-EndToEndLatency', value='00:00:00.3261488')\", \"MessageHeader(name='X-MS-Exchange-Processed-By-BccFoldering', value='xx.01.18xx.001')\"], \"datetime_sent\": \"2020-10-19 09:42:23+00:00\", \"datetime_created\": \"2020-10-19 09:42:23+00:00\", \"reminder_due_by\": \"None\", \"reminder_is_set\": \"False\", \"reminder_minutes_before_start\": \"0\", \"display_cc\": \"None\", \"display_to\": \"test\", \"has_attachments\": \"False\", \"culture\": \"en-US\", \"effective_rights\": \"EffectiveRights(create_associated=False, create_contents=False, create_hierarchy=False, delete=True, modify=True, read=True, view_private_items=True)\", \"last_modified_name\": \"test\", \"last_modified_time\": \"2020-10-19 09:42:23+00:00\", \"is_associated\": \"False\", \"web_client_read_form_query_string\": \"?ItemID=AAMkxxxxxxxxxxY0LTcwMTMtNDcxMy1iZWY4LTdlMzk2OTVkNDFmMgBGAAAAAACd4B5FsuQ3SL3ctNVrxxxxxxxxxx%2FT8ucKTK1ZxxxxxxxxxxAAAEMAAAydf%2FT8ucKTK1ZM6HawJxxxxxxxxxxAAA%3D&exvsurl=1&viewmodel=ReadMessageItem\", \"web_client_edit_form_query_string\": \"None\", \"conversation_id\": \"ConversationId(id='AAQkxxxxxxxxxxY0LTcwMTMtNDcxMy1iZWY4LTdlMzk2OTVkNDFmMgAxxxxxxxxxx/hDrQ5Nlid8V2g=')\", \"unique_body\": \"<html><body><div>\\r\\n<div dir=\\\"ltr\\\">\\r\\n<div id=\\\"divtagdefaultwrapper\\\"><font face=\\\"Calibri,Helvetica,sans-serif\\\" size=\\\"3\\\" color=\\\"black\\\"><span style=\\\"font-size:12pt;\\\" id=\\\"divtagdefaultwrapper\\\">\\r\\n<div style=\\\"margin-top:0;margin-bottom:0;\\\">#h4<br>\\r\\n\\r\\n</div>\\r\\n</span></font></div>\\r\\n</div>\\r\\n</div>\\r\\n</body></html>\", \"sender\": \"Mailbox(name='test', email_address='test@example.local', routing_type='SMTP', mailbox_type='Mailbox')\", \"to_recipients\": [\"Mailbox(name='test', email_address='test@example.local', routing_type='SMTP', mailbox_type='Mailbox')\"], \"cc_recipients\": \"None\", \"bcc_recipients\": \"None\", \"is_read_receipt_requested\": \"False\", \"is_delivery_receipt_requested\": \"False\", \"conversation_topic\": \"#h4\", \"author\": \"test@example.local\", \"message_id\": \"<ec0fb6a4fa1a4bxxxxxxxxxxxxxxx269@example.local>\", \"is_read\": \"True\", \"is_response_requested\": \"False\", \"references\": \"None\", \"reply_to\": \"None\", \"received_by\": \"Mailbox(name='test', email_address='test@example.local', routing_type='SMTP', mailbox_type='Mailbox')\", \"received_representing\": \"Mailbox(name='test', email_address='test@example.local', routing_type='SMTP', mailbox_type='Mailbox')\", \"plaintext_body\": \"#h4\", \"html_body\": \"<html>\\r\\n<head>\\r\\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\">\\r\\n<style type=\\\"text/css\\\" style=\\\"display:none;\\\"><!-- P {margin-top:0;margin-bottom:0;} --></style>\\r\\n</head>\\r\\n<body dir=\\\"ltr\\\">\\r\\n<div id=\\\"divtagdefaultwrapper\\\" style=\\\"font-size:12pt;color:#000000;font-family:Calibri,Helvetica,sans-serif;\\\" dir=\\\"ltr\\\">\\r\\n<p><span>#h4</span><br>\\r\\n</p>\\r\\n</div>\\r\\n</body>\\r\\n</html>\\r\\n\", \"attachments_list\": {}}]",
+        "ResultName": "JsonResult"
+    }],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "CustomActionId": -1,
+            "DefaultValue": "Inbox",
+            "Description": "Mailbox folder to search email in. Parameter should also accept comma separated list of folders to check the user response in multiple folders",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1512975883225,
+            "Name": "Folder Name",
+            "Type": 0,
+            "Value": "Inbox"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition, specify emails with which email ids to find. Should accept comma separated list of message ids to search for. If message id is provided, subject, sender and recipient filters are ignored.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1512975883225,
+            "Name": "Message IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "Name": "Mailboxes",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify a comma-separated list of mailboxes that need to be searched. This parameter has priority over “Delete in all mailboxes“.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition, specify subject to search for emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1512975883225,
+            "Name": "Subject Filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition, specify who should be the sender of needed emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1512975883225,
+            "Name": "Sender Filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition, specify who should be the recipient of needed emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1512975883225,
+            "Name": "Recipient Filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "Filter condition, specify if action should delete all matched by criteria emails from the mailbox or delete only first match.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1512975883225,
+            "Name": "Delete All Matching Emails",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If checked, delete emails in all mailboxes accessible with current impersonalization settings",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1512975883225,
+            "Name": "Delete from all mailboxes",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "25",
+            "Description": "In case \"Delete from all mailboxes\" is checked, action works in batches, this parameter controls how many mailboxes action should process in single batch (single connection to mail server).",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "How many mailboxes to process in a single batch",
+            "Type": 0,
+            "Value": "25"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition, specify in what time frame in minutes should action look for emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Time Frame (minutes)",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

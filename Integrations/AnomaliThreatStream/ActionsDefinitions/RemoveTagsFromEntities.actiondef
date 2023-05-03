@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1519220936730,
+    "Creator": "admin",
+    "Description": "Remove tags from entities in Anomali ThreatStream. Supported entities: Hash, URL, IP Address, Email Address (user entity that matches email regex).",
+    "Id": -1,
+    "IntegrationIdentifier": "AnomaliThreatStream",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519220936730,
+    "Name": "Remove Tags From Entities",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519223278607,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of tags that need to be removed from entities in Anomali ThreatStream.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519223278607,
+            "Name": "Tags",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\", \"ADDRESS\", \"DestinationURL\", \"USERUNIQNAME\"]}"
+}

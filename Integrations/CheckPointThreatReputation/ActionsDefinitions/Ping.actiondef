@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1599142022150,
+    "Creator": "admin",
+    "Description": "Test connectivity to the CheckPoint Threat Reputation service with parameters provided at the integration configuration page on the Marketplace tab.",
+    "Id": -1,
+    "IntegrationIdentifier": "CheckPointThreatReputation",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1599142022150,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

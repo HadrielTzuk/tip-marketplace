@@ -1,0 +1,50 @@
+{
+    "Description": "Capture and search every important action at petabyte scale. Varonis creates a normalized record of every important action on your data—on-premises and in the cloud.",
+    "DisplayName": "Varonis Data Security Platform",
+    "Identifier": "VaronisDataSecurityPlatform",
+    "PythonVersion": 2,
+    "Categories": [
+        "IT & Infrastructure"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "VaronisDataSecurityPlatform",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": 2,
+            "Value": "https://{ip address}:{port}"
+        },
+        {
+            "IntegrationIdentifier": "VaronisDataSecurityPlatform",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "VaronisDataSecurityPlatform",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "VaronisDataSecurityPlatform",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": false
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M5.92 4H2l10.38 15.22 1.96-2.89L5.92 4ZM15.18 17.59l-1.96 2.88.27.4c.56.82 1.42.98 2.25.41.81-.55.98-1.43.43-2.24l-.99-1.45ZM13.43 4H9.51l6.61 9.71 1.96-2.88-4.65-6.82ZM23.68 19.04l-4.75-6.98-1.96 2.88L21 20.86c.56.82 1.42.98 2.25.41.81-.55.98-1.42.42-2.23Z\"/></svg>",
+    "Version": 1.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/varonis-data-security-platform",
+    "MarketingDisplayName": "Varonis Data Security Platform"
+}

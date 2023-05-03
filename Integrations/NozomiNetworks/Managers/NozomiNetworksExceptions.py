@@ -1,0 +1,3 @@
+class NozomiNetworksException(Exception):
+    pass
+

@@ -1,0 +1,51 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Action will get as a parameter a list of Domains, and will be able to create a new rule, filtering the domains from your Exchange Server. Actions to take can be modified in the parameters using rule parameters. Note - to use this action, please make sure you have Organization Management permissions, as stated here: https://docs.microsoft.com/en-us/exchange/permissions-exo/feature-permissions",
+    "Id": -1,
+    "IntegrationIdentifier": "ExchangeExtensionPack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Add Domains to Exchange-Siemplify Mail Flow Rules",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"success\":[\"test1.com\",\"test2.com\"],\"already_available\":[\"test3.com\"],\"invalid\":[\"invalid\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Domains",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the Domains you would like to add to the rule, in a comma separated list.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Rule to add Domains to",
+            "Type": 15,
+            "DefaultValue": "Siemplify - Domains List - Permanently Delete",
+            "Value": "Siemplify - Domains List - Permanently Delete",
+            "IsMandatory": true,
+            "Description": "Specify the rule to add the Domains to. If the rule doesn't exist - action will create it where it's missing.",
+            "OptionalValues": [
+                "Siemplify - Domains List - Permanently Delete"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

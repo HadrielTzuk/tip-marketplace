@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1530543430243, 
+    "Creator": "admin", 
+    "Description": "Fetch all events for an entity since time", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SymantecATP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530543430243, 
+    "Name": "Get Events  For Entity", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530543430243, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "Fetch the event x minutes back. Limit is 7 days, or 10080 minutes. This is Symantec ATP limitation.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530543430243, 
+            "Name": "Minutes Back To Fetch", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecATPManager import SymantecATPManager\nfrom SiemplifyDataModel import EntityTypes\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\nimport arrow\n\nATP_PROVIDER = 'SymantecATP'\nRESULT_TABLE_NAME = \"Command IDs\"\nACTION_NAME = \"SymantecATP_Get Events For Entity.\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(ATP_PROVIDER)\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    atp_manager = SymantecATPManager(conf.get('API Root'), conf.get('Client ID'), conf.get('Client Secret'), verify_ssl)\n\n    result_value = False\n    errors = []\n    success_entities = []\n\n    # Parameters.\n    minutes_back = int(siemplify.parameters.get('Minutes Back To Fetch'))\n\n    target_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.ADDRESS and\n                       EntityTypes.HOSTNAME]\n\n    for entity in target_entities:\n        try:\n            # Create arrow time object.\n            time_object = arrow.now().shift(minutes=-minutes_back)\n            result_events = atp_manager.get_event_for_entity_since(entity.identifier, time_object)\n\n            if result_events:\n                result_events_flat = dict_to_flat(result_events)\n                csv_result = flat_dict_to_csv(result_events_flat)\n                # Add Table.\n                siemplify.result.add_entity_table(entity.identifier, csv_result)\n                success_entities.append(entity)\n                result_value = True\n\n        except Exception as err:\n            error_message = 'Error fetching events \"{0}\", Error: {1}'.format(entity.identifier, unicode(err))\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    if result_value:\n        output_message = 'Found events for {0}.'.format(','.join([entity.identifier for entity in success_entities]))\n    else:\n        output_message = 'No events found for target entities.'\n\n    # Attach errors if exists.\n    if errors:\n        output_message = \"{0}, \\n \\n  ERRORS: \\n {1} \".format(output_message, ' \\n '.join(errors))\n\n    siemplify.update_entities(success_entities)\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "events_amount", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"HOSTNAME\", \"USERUNIQNAME\"]}", 
+    "Version": 1.0
+}

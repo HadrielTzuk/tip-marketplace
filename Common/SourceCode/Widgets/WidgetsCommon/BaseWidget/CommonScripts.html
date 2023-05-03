@@ -1,0 +1,150 @@
+<script>
+{% macro fetch_json_data(json_result_list) %}
+const actionListData = {{ json_result_list | default('[{stepInstanceName}.JsonResult]', true) }};
+if (!actionListData.length) {
+    return;
+}
+{%- endmacro -%}
+
+
+{% macro get_function_nFormatter() %}
+function nFormatter(num, digits) {
+    const rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+    const si = [
+        {value: 1, symbol: ""},
+        {value: 1E3, symbol: "k"},
+        {value: 1E6, symbol: "M"},
+        {value: 1E9, symbol: "G"},
+        {value: 1E12, symbol: "T"},
+        {value: 1E15, symbol: "P"},
+        {value: 1E18, symbol: "E"}
+    ];
+
+    for (let i = si.length - 1; i > 0; i--) {
+        if (num >= si[i].value) {
+            return (num / si[i].value)
+                .toFixed(digits)
+                .replace(rx, "$1") + si[i].symbol;
+        }
+    }
+}
+{%- endmacro -%}
+
+
+{% macro get_function_isJsonDataempty() %}
+function isJsonDataEmpty(jsonData) {
+    return typeof jsonData === "undefined" || jsonData.length <= 0;
+}
+{% endmacro -%}
+
+
+{% macro get_function_getCollapsableEscapedHTML() %}
+function getCollapsableEscapedHTML(text, maxCharsLimit = 250) {
+    if (!text) {
+        return text;
+    }
+
+    if (text.length < maxCharsLimit) {
+        return `<p class="long-text">${escapeHTML(text)}</p>`;
+    }
+
+    text = escapeHTML(text);
+    let firstPart = text.slice(0, maxCharsLimit);
+    let secondPart = text.slice(maxCharsLimit);
+
+    const lastSpaceIndex = firstPart.lastIndexOf(" ");
+    const spaceSearchPercentage = 0.6;
+    const newMaxWithSpace = maxCharsLimit * spaceSearchPercentage;
+    if (lastSpaceIndex >= newMaxWithSpace) {
+        firstPart = text.slice(0, lastSpaceIndex);
+        secondPart = text.slice(lastSpaceIndex);
+    }
+
+    return `<p class="long-text">` +
+    `${firstPart}<span>... </span>` +
+    `<br><a href="#" class="more link">Show more</a>` +
+    `<span class="hidden-content">` +
+    `${secondPart}` +
+    `<br><a href="#" class="less link">Show less</a>` +
+    `</span>` +
+    `</p>`;
+}
+{%- endmacro -%}
+
+
+{% macro get_function_escapeHTML() %}
+function escapeHTML(unsafe) {
+    return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+{%- endmacro -%}
+
+
+{% macro get_function_addLongTextClickLogic() %}
+function addLongTextClickLogic() {
+    $(".more").click(function (event) {
+        event.preventDefault();
+        $(this).hide()
+            .prev().hide()
+            .prev().hide();
+
+        $(this).next().toggleClass("hidden-content");
+    });
+
+    $(".less").click(function (event) {
+        event.preventDefault();
+        $(this).parent().toggleClass("hidden-content")
+            .prev().show()
+            .prev().show()
+            .prev().show();
+    });
+}
+{%- endmacro -%}
+
+
+{% macro get_function_removeSpecialSymbols() %}
+function removeSpecialSymbols(el) {
+    return el.replaceAll(/[\s ;:.,/%!&?-]/g, "").replaceAll("\\", "");
+}
+{%- endmacro -%}
+
+
+{% macro get_function_checkField() %}
+function checkField(field) {
+    if (field === undefined) {
+        return "N/A";
+    } else if (typeof field === "string") {
+        return field.length > 0 ? field : "N/A";
+    } else if (Array.isArray(field)) {
+        return field.length > 0 ? field.join(", ") : "N/A";
+    }
+}
+{%- endmacro -%}
+
+
+{% macro get_function_checkLink() %}
+function checkLink(link, id) {
+    return link ? id.html(link).attr("href", link) : id.html("N/A");
+}
+{%- endmacro -%}
+
+
+{% macro array_to_csv_fn() %}
+function arrayToCSV(array) {
+    return array.length > 0 ? array.flat().join(", ") : "N/A"
+}
+{%- endmacro -%}
+
+
+{%- macro getElementOrPlaceholder(key) %}
+{%- if key.startswith('[') and key.endswith(']') -%}
+{{ key }}
+{%- else -%}
+el.{{ key }}
+{%- endif %}
+{%- endmacro -%}
+</script>

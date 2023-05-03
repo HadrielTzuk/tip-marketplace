@@ -1,0 +1,45 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244,
+    "Creator": "admin",
+    "Description": "Update status of the detection.",
+    "Id": -1,
+    "IntegrationIdentifier": "Vectra",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Update Detection Status",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1572450486,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the detection ID on which you want to update the status.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1572450486,
+            "Name": "Detection ID",
+            "Type": 0,
+            "Value": ""
+        },
+                {
+            "CreationTimeUnixTimeInMs": 1572450486,
+            "CustomActionId": -1,
+            "DefaultValue": "Fixed",
+            "Description": "Specify what status to set on the detection.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1572450486,
+            "Name": "Status",
+            "Type": 15,
+            "OptionalValues": [
+                "Fixed",
+                "Inactive"
+            ],
+            "Value": "Fixed"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

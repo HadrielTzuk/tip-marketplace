@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1520757316102, 
+    "Creator": "admin", 
+    "Description": "Kill process file remediation action", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": 13590, \"Entity\": \"0DC213FE4551740E12CAC575A9880753A9DACD510533F31BD7F635E743A7605\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Cynet", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1520757316102, 
+    "Name": "Kill Hash In Hosts", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

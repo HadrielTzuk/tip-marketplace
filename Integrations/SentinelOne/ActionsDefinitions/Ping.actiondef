@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1522167968589,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOne",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1522167968589,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SentinelOneManager import SentinelOneManager\n\n\n# Consts.\nSENTINEL_ONE_PROVIDER = 'SentinelOne'\n\n\ndef main():\n    # Configuration.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(SENTINEL_ONE_PROVIDER)\n    sentinel_one_manager = SentinelOneManager(conf['Api Root'], conf['Username'], conf['Password'])\n\t\n    # Test connectivity.\n    connection_status = sentinel_one_manager.ping()\n    if connection_status:\n    \toutput_message = 'Connection Established.'\n    \tresult_value = True\n    else:\n    \toutput_message = 'Connection Failed.'\n    \tresult_value = False\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

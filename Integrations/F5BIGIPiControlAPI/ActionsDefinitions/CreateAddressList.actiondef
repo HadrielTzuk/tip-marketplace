@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Create an address list in F5 BIG-IP. Supported entities: IP address. Note: address list requires 1 IP address to be available during creation.",
+    "Id": -1,
+    "IntegrationIdentifier": "F5BIGIPiControlAPI",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Create Address List",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"kind\": \"tm:security:firewall:address-list:address-liststate\", \"name\": \"internal_ips\", \"partition\": \"Common\", \"fullPath\": \"/Common/internal_ips\", \"generation\": 713, \"selfLink\": \"https://localhost/mgmt/tm/security/firewall/address-list/~Common~internal_ips?ver=16.0.1.1\", \"addresses\": [{\"name\": \"192.168.0.0\"}, {\"name\": \"192.168.0.0\"}, {\"name\": \"192.168.0.0\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the address list that needs to be created.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

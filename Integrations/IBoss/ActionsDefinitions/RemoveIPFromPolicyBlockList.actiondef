@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244, 
+    "Creator": "admin", 
+    "Description": "Remove IP from iBoss Block List.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "IBoss", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "Name": "Remove IP from Policy Block List", 
+    "Parameters": [
+        {
+            "CustomActionId": -1, 
+            "DefaultValue": 1001, 
+            "Description": "Specify from which policy category do you want to remove IP.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Name": "Category ID", 
+            "Type": 0, 
+            "Value": 1001
+        }, 
+        {
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify start port related to the IP that needs to be deleted. This parameter is mandatory, if the desired URL has a defined start port. This is an IBoss limitation.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Name": "Start Port", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify end port related to the IP that needs to be deleted. This parameter is mandatory, if the desired IP has a defined end port. This is an IBoss limitation.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Name": "End Port", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

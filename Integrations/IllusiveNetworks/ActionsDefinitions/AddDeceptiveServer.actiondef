@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Add deceptive servers in Illusive Networks.",
+    "Id": -1,
+    "IntegrationIdentifier": "IllusiveNetworks",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1615981279206,
+    "Name": "Add Deceptive Server",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1615981279206,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what kind of deceptive items should be returned.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1615981279206,
+            "Name": "Server Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1615981279206,
+            "CustomActionId": -1,
+            "DefaultValue": "DB",
+            "Description": "Specify a comma-separated list of service types for new deceptive server.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1615981279206,
+            "Name": "Service Types",
+            "Type": 0,
+            "Value": "DB"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1615981279206,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of policies that need to be applied to the new deceptive server. If nothing is provided action will use by default all policies.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1615981279206,
+            "Name": "Policy Names",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

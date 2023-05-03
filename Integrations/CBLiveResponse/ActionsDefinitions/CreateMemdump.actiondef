@@ -1,0 +1,60 @@
+{
+    "CreationTimeUnixTimeInMs": 1519822593041,
+    "Creator": "admin",
+    "Description": "Create memdump on a host running VMware CB Cloud Agent based on the Siemplify Host or IP entity. Note: The File name for the memdump to create can be provided either as a Siemplify File entity (artifact) or as an action input parameter. If the File name is passed to action both as an entity and input parameter - action will be executed on the input parameter. File name is case insensitive. File name will be appended to Remote Directory Path to get the resulting file paths that CB Cloud API accepts. Additionally, note that VMware CB API does not provide an error message if an unvalid Remote Directory Path is provided for the created memory dump.  File Name also can be specified as a \"full path\" having both path and a file name, or having file name and file path as separate parameters",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"api_v3\",\"EntityResult\":[{\"compressing\":false,\"complete\":true,\"dumping\":false,\"obj\":{\"name\":\"memdump\",\"object\":\"C://TMP//file.txt\"},\"id\":\"xx\",\"name\":\"memdump\",\"filepath\":\"filepath_v3\",\"username\":null,\"creation_time\":1628503879,\"completion_time\":1628503956369,\"result_code\":0,\"result_type\":\"WinHresult\",\"result_desc\":\"\",\"status\":\"complete\",\"return_code\":0,\"percentdone\":0,\"files\":[],\"processes\":[], \"step\":\"Command Check\",\"reason\":\"Command with id xx ready with no result.\",\"is_success\":false}]},{\"Entity\":\"api_v6\",\"EntityResult\":[{\"status\":\"COMPLETE\",\"values\":[],\"mem_dump\":{\"compressing\":false,\"complete\":true,\"dumping\":false,\"return_code\":0,\"percentdone\":0},\"id\":\"xx\",\"name\":\"memdump\",\"filepath\":\"filepath_v6\",\"result_code\":0,\"result_type\":\"WinHresult\",\"result_desc\":\"\",\"sub_keys\":[],\"files\":[],\"input\":{\"name\":\"memdump\",\"object\":\"C://TMP//asd1793.txt\"},\"create_time\":\"2021-08-09T09:50:54Z\",\"finish_time\":\"+53575-03-13T11:56:26Z\",\"processes\":[], \"step\":\"Command Check\",\"reason\":\"Command with id xx ready with no result.\",\"is_success\":false}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CBLiveResponse",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519822593041,
+    "Name": "Create Memdump",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the file name for memdump creation. File name is case insensitive. File Name can be specified as a \"full path\" having both path and a file name, in that case Remote Directory Path parameter will not be used.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "File Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the directory file path to store the memdump. Example: C:\\TMP\\",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Remote Directory Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "20",
+            "Description": "How many attempts action should make to get active session for the entity. Check is made every 2 seconds.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Check for active session x times",
+            "Type": 0,
+            "Value": "20"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\", \"FILENAME\"]}",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

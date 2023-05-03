@@ -1,0 +1,48 @@
+{
+    "CreationTimeUnixTimeInMs": 1518514906976, 
+    "Creator": "admin", 
+    "Description": "Wait for change request status update in AlgoSec. Note: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed. Only traffic change requests are supported.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"status\":\"Success\",\"messages\":[],\"data\":{\"id\":10,\"fields\":[{\"name\":\"Owner\",\"values\":[\"admin<xxxxxxxx@siemplify.co>\"]},{\"name\":\"Creator\",\"values\":[\"admin<xxxxxxxx@siemplify.co>\"]},{\"name\":\"Due\",\"values\":[\"2021-08-31 00:00:00\"]},{\"name\":\"LastUpdated\",\"values\":[\"2021-08-13 12:31:23\"]},{\"name\":\"Requestor\",\"values\":[\"admin<xxxxxxxxx@siemplify.co>\"]}],\"originalTraffic\":[{\"source\":{\"items\":[{\"value\":\"all\"}]},\"destination\":{\"items\":[{\"value\":\"10.0.0.3\"}]},\"service\":{\"items\":[{\"value\":\"ALL\"}]},\"application\":{\"items\":[{\"value\":\"any\"}]},\"user\":{\"items\":[{\"value\":\"any\"}]},\"action\":\"Allow\"}],\"plannedTraffic\":[{\"source\":{\"items\":[{\"value\":\"0.0.0.0-255.255.255.255\"}]},\"destination\":{\"items\":[{\"value\":\"10.0.0.3\"}]},\"service\":{\"items\":[{\"value\":\"tcp/*\"},{\"value\":\"udp/*\"},{\"value\":\"ospf\"},{\"value\":\"icmp/*\"},{\"value\":\"gre\"},{\"value\":\"ipsec_50\"},{\"value\":\"ipsec_51\"}]},\"application\":{\"items\":[{\"value\":\"any\"}]},\"user\":{\"items\":[{\"value\":\"any\"}]},\"action\":\"Allow\"}]}}",
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "AlgoSec",
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1518514906976, 
+    "Name": "Wait for Change Request Status Update",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1520155635793, 
+            "CustomActionId": -1, 
+            "DefaultValue": "",
+            "Description": "Specify the id of the request for which action needs to check the status.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520155635793, 
+            "Name": "Request ID",
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1520155635793, 
+            "CustomActionId": -1, 
+            "DefaultValue": "resolved",
+            "Description": "Specify a comma-separated list of change request statuses for which action should wait. Possible values: resolved, reconcile, open, check, implementation plan, implement, validate.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520155635793, 
+            "Name": "Status",
+            "Type": 0, 
+            "Value": "resolved"
+        }
+    ], 
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Type": 0, 
+    "Version": 1.0,
+    "IsAsync": true
+}

@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1518516430366,
+    "Creator": "admin",
+    "Description": "Commit changes in Palo Alto NGFW. NOTICE! For using Only My Changes option, the user must be an admin.",
+    "Id": -1,
+    "IntegrationIdentifier": "PaloAltoNGFW",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518516430366,
+    "Name": "Commit Changes",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518700571020,
+            "CustomActionId": -1,
+            "DefaultValue": "true",
+            "Description": "Commit only the configured use changes.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518700571020,
+            "Name": "Only My Changes",
+            "Type": 1,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,8 @@
+{
+  "azure_ad_endpoint": "https://login.microsoftonline.com/",
+  "microsoft_graph_endpoint": "https://graph.microsoft.com/",
+  "client_id": "",
+  "client_secret": "",
+  "tenant": "",
+  "mail_box": ""
+}

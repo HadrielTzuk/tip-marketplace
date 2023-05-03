@@ -1,0 +1,91 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381792970, 
+    "Creator": "Admin", 
+    "Description": "List assets in Google Chronicle based on the related entities in the specified time frame. Supported entities: URL, IP Address, File hash. Only MD5, SHA-1 or SHA-256 hashes are supported.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"1.1.1.1\",\"EntityResult\":{\"assets\":[{\"asset\":{\"assetIpAddress\":\"1.1.1.1\"},\"firstSeenArtifactInfo\":{\"artifactIndicator\":{\"destinationIpAddress\":\"1.1.1.1\"},\"seenTime\":\"2020-10-03T00:22:00.944Z\"},\"lastSeenArtifactInfo\":{\"artifactIndicator\":{\"destinationIpAddress\":\"1.1.1.1\"},\"seenTime\":\"2020-10-04T08:27:17.971Z\"}},{\"asset\":{\"hostname\":\"test1\"},\"firstSeenArtifactInfo\":{\"artifactIndicator\":{\"destinationIpAddress\":\"1.1.1.1\"},\"seenTime\":\"2020-10-02T22:59:43.903Z\"},\"lastSeenArtifactInfo\":{\"artifactIndicator\":{\"destinationIpAddress\":\"1.1.1.1\"},\"seenTime\":\"2020-10-04T05:44:33.464Z\"}},{\"asset\":{\"hostname\":\"test3\"},\"firstSeenArtifactInfo\":{\"artifactIndicator\":{\"destinationIpAddress\":\"1.1.1.1\"},\"seenTime\":\"2020-07-27T18:22:42.861Z\"},\"lastSeenArtifactInfo\":{\"artifactIndicator\":{\"destinationIpAddress\":\"1.1.1.1\"},\"seenTime\":\"2020-10-04T04:38:35.344Z\"}},{\"asset\":{\"hostname\":\"exampledomain\"},\"firstSeenArtifactInfo\":{\"artifactIndicator\":{\"destinationIpAddress\":\"1.1.1.1\"},\"seenTime\":\"2019-12-04T13:46:34Z\"},\"lastSeenArtifactInfo\":{\"artifactIndicator\":{\"destinationIpAddress\":\"1.1.1.1\"},\"seenTime\":\"2020-10-04T08:27:17.971Z\"}}],\"uri\":[\"https://ironmountain.backstory.chronicle.security/domainResults?domain=www.google.com&selectedList=DomainViewDistinctAssets&whoIsTimestamp=2020-09-27T12%3A07%3A34.166830443Z\"]}}]",
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "GoogleChronicle", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1535381792970, 
+    "Name": "List Assets", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "1", 
+            "Description": "Specify how many hours backwards to fetch the assets. Default: 1 hour.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Max Hours Backwards", 
+            "Type": 0, 
+            "Value": "1"
+        },
+        {
+            "Name": "Time Frame",
+            "Type": 15,
+            "DefaultValue": "Max Hours Backwards",
+            "Value": "Max Hours Backwards",
+            "IsMandatory": false,
+            "Description": "Specify a time frame for the results. If \"Custom\" is selected, you also need to provide \"Start Time\". If the \"Max Hours Backwards\" parameter is provided then action will use the \"Max Hours Backwards\" parameter to provide a time filter. This is done for backwards compatibility.",
+            "OptionalValues": [
+                "Max Hours Backwards",
+                "Last Hour",
+                "Last 6 Hours",
+                "Last 24 Hours",
+                "Last Week",
+                "Last Month",
+                "Custom"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the start time for the results. This parameter is mandatory, if \"Custom\" is selected for the \"Time Frame\" parameter. Format: ISO 8601",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the end time for the results. Format: ISO 8601. If nothing is provided and \"Custom\" is selected for the \"Time Frame\" parameter then this parameter will use current time.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "End Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "50", 
+            "Description": "Specify how many assets to return in the response.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Max Assets To Return", 
+            "Type": 0, 
+            "Value": "50"
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\", \"FILEHASH\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

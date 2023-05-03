@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1524559211168,
+    "Creator": "admin",
+    "Description": "Update status for the Malop in Cybereason. Note: detection malops support only \"Remediated\", \"Not Relevant\" or \"Open\" statuses.",
+    "Id": -1,
+    "IntegrationIdentifier": "Cybereason",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524559211168,
+    "Name": "Update Malop Status",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID of the malop that needs to be updated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Malop ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the new status for the malop.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Status",
+            "Type": 15,
+            "OptionalValues": [
+                "To Review",
+                "Remediated",
+                "Unread",
+                "Not Relevant",
+                "Open"
+            ]
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

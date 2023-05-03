@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1535884893446, 
+    "Creator": "admin", 
+    "Description": "Create unquarantine endpoint task on the McAfee Mvision EDR server based on the Siemplify IP or Host Siemplify entities.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "McAfeeMvisionEDR", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1535884893446, 
+    "Name": "Unquarantine Endpoint", 
+    "Parameters": [], 
+    "Script": "", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

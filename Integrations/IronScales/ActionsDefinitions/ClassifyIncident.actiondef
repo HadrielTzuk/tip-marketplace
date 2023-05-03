@@ -1,0 +1,52 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Change incidents classification.",
+    "Id": -1,
+    "IntegrationIdentifier": "IronScales",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Classify Incident",
+    "Parameters": [
+        {
+            "Name": "Incidents IDs",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify IDs of incidents to classify.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "New Classification",
+            "OptionalValues": [
+                "Attack",
+                "False positive",
+                "Spam"
+            ],
+            "Type": 15,
+            "Value": "Attack",
+            "DefaultValue": "Attack",
+            "IsMandatory": true,
+            "Description": "Specify the new classification for these incidents. Note: For Phishing Attack classification enter “Attack”, for False positive: “False Positive”, for spam: “Spam”.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Classifying User Email",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify which user is performing the classification by providing his mail address. Note: This email address should be recognized by IronScales.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

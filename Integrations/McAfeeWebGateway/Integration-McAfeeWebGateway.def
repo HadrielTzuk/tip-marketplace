@@ -1,0 +1,41 @@
+{
+    "Description": "High-performance web security delivered on premises",
+    "DisplayName": "McAfee Web Gateway",
+    "Identifier": "McAfeeWebGateway",
+    "Categories": [
+        "Secure Web Gateway",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "McAfeeWebGateway",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Server Address",
+            "PropertyName": "Server Address",
+            "PropertyType": "2",
+            "Value": "{ip}:{port}"
+        },
+        {
+            "IntegrationIdentifier": "McAfeeWebGateway",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeWebGateway",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M21.5,3c0-0.2,0-0.4,0-0.7c-0.3,0.1-0.5,0.2-0.7,0.3c-2.6,1.2-5.1,2.4-7.7,3.6c-0.4,0.2-0.7,0.2-1.2,0\n\t\t\tC9.7,5.1,7.5,4.1,5.3,3C4.7,2.8,4.2,2.5,3.6,2.2c0,0.1,0,0.2,0,0.2c0,5.3,0,10.6,0,15.8c0,0.4,0.2,0.5,0.5,0.6\n\t\t\tc2.7,1.2,5.3,2.5,8,3.7c0.3,0.1,0.7,0.1,1,0c2.7-1.2,5.3-2.4,7.9-3.6c0.4-0.2,0.6-0.4,0.6-0.9C21.5,13,21.5,8,21.5,3z M17.3,16.6\n\t\t\tc-1.5,0.6-2.9,1.3-4.3,2c-0.2,0.1-0.6,0.1-0.8,0c-1.5-0.7-3-1.4-4.5-2.1c-0.2-0.1-0.4-0.4-0.4-0.5c0-2.6,0-5.3,0-8\n\t\t\tc1.4,0.7,2.8,1.2,4,1.9c0.9,0.5,1.6,0.5,2.5,0c1.1-0.6,2.2-1.1,3.4-1.6c0.2-0.1,0.4-0.2,0.7-0.3v1.9c0,2,0,3.9,0,5.9\n\t\t\tC17.8,16.2,17.7,16.5,17.3,16.6z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 7.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/mcafee-web-gateway",
+    "MarketingDisplayName": "McAfee Web Gateway"
+}

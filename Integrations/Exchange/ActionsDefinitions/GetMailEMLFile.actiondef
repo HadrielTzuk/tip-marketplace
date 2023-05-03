@@ -1,0 +1,52 @@
+{
+    "CreationTimeUnixTimeInMs": 1542636226403,
+    "Creator": "Admin",
+    "Description": "Fetch message EML file.",
+    "Id": -1,
+    "IntegrationIdentifier": "Exchange",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542636226403,
+    "Name": "Get Mail EML File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542636226403,
+            "CustomActionId": -1,
+            "DefaultValue": "Inbox",
+            "Description": "Folder to fetch from. Default is Inbox",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542636226403,
+            "Name": "Folder Name",
+            "Type": 0,
+            "Value": "Inbox"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542636226403,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542636226403,
+            "Name": "Message ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542636226403,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542636226403,
+            "Name": "Base64 Encode",
+            "Type": 1,
+            "Value": true
+        }
+    ],
+    "ScriptResultName": "eml_info",
+    "Version": 3.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

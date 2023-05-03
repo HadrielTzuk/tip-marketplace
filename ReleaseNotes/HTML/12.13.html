@@ -1,0 +1,338 @@
+<h2>Siemplify Marketplace Release Notes - 12.13</h2>
+<h5>Published on 23 June 2019</h5>
+
+<hr/>
+<h3>Actions</h3>
+<ul>
+	<li>
+		<strong>ElasticSearch</strong>
+		<ul>
+			<li>Simple ES Search</li>
+			<ul>
+				<li>Parameters descriptions and default values were updated for better user experience</li>
+			</ul>
+			<li>Advanced ES Search</li>
+			<ul>
+				<li>Parameters descriptions and default values were updated for better user experience</li>
+				<li>Time frame parameter changed to >=, <= instead of >,<</li>
+						</ul>
+					</ul>
+				</li>
+				<li>
+					<strong>ThreatQ</strong>
+					<ul>
+						<li>
+			Test Connectivity - minor bug fix
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					<strong>Portnox</strong>
+					<ul>
+						<li>
+				Integration configuration - "verify SSL" - minor bug fix
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Twilio</strong>
+					<ul>
+
+						<li>
+				Send SMS and Wait
+							<ul>
+								<li>
+						Added "unique identifier code" mechanism to match each SMS response to it's originating action instance (in cases of multiple actions that happen simultaneously, or multiple replies)
+									<ul>
+										<li>Outgoing messages are now followed by "To respond type your reply followed by {unique identifier code}".</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+				Ping
+							<ul>
+								<li>
+						Test connectivity - minor bug fix
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>SSH</strong>
+					<ul>
+						<li>
+				Run Command
+							<ul>
+								<li>
+						"Remote port" parameter- minor bug fix
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>CaServiceDesk</strong>
+					<ul>
+						<li>
+				Wait for Status Change
+							<ul>
+								<li>Added Json Result - the action querying the ticket and returning JsonResult when ticket status is changed</li>
+								<li>Improved logging and error handling</li>
+							</ul>
+						</li>
+						<li>
+				Search Tickets
+							<ul>
+								<li>Added option to search ticket by ID</li>
+								<ul>
+									<li>If "Ticket ID" is set - ignore other fields</li>
+								</ul>
+								<li>Fixed typo in parameter name: "Summery" -> "Summary" (regressive in playbooks)</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Palo Alto Panorama</strong>
+				<ul>
+					<li>Added support for version 9</li>
+					<ul>
+						<li>Configure your product version under integrartion configuration</li>
+					</ul>
+				</ul>
+			</li>
+			<li>
+				<strong>SCCM</strong>
+				<ul>
+					<li>Actions descriptions and parameters descriptions were updated for better user experience</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Cisco ISE</strong>
+				<ul>
+					<li>Self Signed Certificate and Proxy support bug fix</li>
+				</ul>
+			</li>
+			<li>
+				<strong>SEP</strong>
+				<ul>
+					<li>Scan Endpoint</li>
+					<ul>
+						<li>"Scan type" parameter modified from "string" to "drop-down list"</li>
+					</ul>
+				</ul>
+			</li>
+			<li>
+				<strong>Siemplify</strong>
+				<ul>
+					<li>Create Entity</li>
+					<ul>
+						<li>Improved error handling - raise an error when one of multiple entities creation was failed</li>
+					</ul>
+				</ul>
+			</li>
+			<li>
+				<strong>CrowdStrike Falcon</strong>
+				<ul>
+					<li>New parameters were added to the integration configuration to support new actions</li>
+					<ul>
+						<li>Contain Endpoint - New Action</li>
+						<ul>
+							<li>Quarantine an endpoint by Hostname or IP address</li>
+						</ul>
+					</ul>
+					<ul>
+						<li>Lift Contained Endpoint - New Action</li>
+						<ul>
+							<li>Unquarantine an endpoint by Hostname or IP address.</li>
+						</ul>
+					</ul>
+				</ul>
+			</li>
+			<li>
+				<strong>TenableSecurityCenter</strong>
+				<ul>
+					<li>Get Report - New Action</li>
+					<ul>
+						<li>Retrieve a report by ID or name</li>
+					</ul>
+				</ul>
+			</li>
+			<li>
+				<strong>CSV</strong>
+				<ul>
+					<li>CSV Search by Entity - New Action</li>
+					<ul>
+						<li>Search for records in CSV file(s) by case entities and enrich entities accordingly</li>
+					</ul>
+				</ul>
+				<ul>
+					<li>CSV Search by String - New Action</li>
+					<ul>
+						<li>Search for records in CSV file(s) by keyword and return results</li>
+					</ul>
+				</ul>
+			</li>
+			<li>
+				<strong>VirusTotal</strong>
+				<ul>
+					<li>Scan Hash</li>
+					<ul>
+						<li>Entities are marked as suspicious if the number of engines which detected hash as malicious is equal or above the given threshold (in the past - entities marked above threshold only)
+						</li>
+					</ul>
+				</ul>
+				<ul>
+					<li>Scan URL</li>
+					<ul>
+						<li>Entities are marked as suspicious if the number of engines which detected URL as malicious is equal or above the given threshold (in the past - entities marked above threshold only)</li>
+					</ul>
+				</ul>
+			</li>
+
+			<li>
+				<h3>Expression Builder</h3>
+			Json Result Example was updated for the following integrations
+				<ul>
+					<li>ActiveDirectory</li>
+					<li>Alexa</li>
+					<li>AlienVaultAppliance</li>
+					<li>AlienVaultTI</li>
+					<li>Area1</li>
+					<li>BulkWhoIs</li>
+					<li>CBDefense</li>
+					<li>CBProtection</li>
+					<li>CSV</li>
+					<li>CiscoAMP</li>
+					<li>CiscoUmbrella</li>
+					<li>ConnectWise</li>
+					<li>Cylance</li>
+					<li>Cymon</li>
+					<li>Cynet</li>
+					<li>CrowdStrikeFalcon</li>
+					<li>DShield</li>
+					<li>ElasticaCloudSOC</li>
+					<li>FalconSandbox</li>
+					<li>Fortigate</li>
+					<li>GSuite</li>
+					<li>HaveIBeenPwned</li>
+					<li>IPInfo</li>
+					<li>Intezer</li>
+					<li>IronPort</li>
+					<li>JoeSandbox</li>
+					<li>MISP</li>
+					<li>MXToolBox</li>
+					<li>MalShare</li>
+					<li>MalwareDomainList</li>
+					<li>McAfeeATD</li>
+					<li>McAfeeEPO</li>
+					<li>McAfeeESM</li>
+					<li>McAfeeNSM</li>
+					<li>MicrosoftGraphSecurity</li>
+					<li>MicrosoftTeams</li>
+					<li>NessusScanner</li>
+					<li>Netskope</li>
+					<li>PaloAltoNGFW</li>
+					<li>PaloAltoPanorama</li>
+					<li>PassiveTotal</li>
+					<li>PhishingInitiative</li>
+					<li>QualysVM</li>
+					<li>RSANetWitness</li>
+					<li>Redis</li>
+					<li>ReversinglabsA1000</li>
+					<li>ReversinglabsTitanium</li>
+					<li>SCCM</li>
+					<li>SEP</li>
+					<li>SEP12</li>
+					<li>SSH</li>
+					<li>SSLLabs</li>
+					<li>Salesforce</li>
+					<li>ServiceNow</li>
+					<li>Shodan</li>
+					<li>Slack</li>
+					<li>Splunk</li>
+					<li>Sumologic</li>
+					<li>Talos</li>
+					<li>TenableSecurityCenter</li>
+					<li>ThreatConnect</li>
+					<li>ThreatCrowd</li>
+					<li>Tor</li>
+					<li>UnshortenMe</li>
+					<li>VSphere</li>
+					<li>WMI</li>
+					<li>XForce</li>
+					<li>Zendesk</li>
+				</ul>
+			</li>
+		</li>
+	</ul>
+</ul>
+</ul>
+<hr/>
+<h3>Connectors</h3>
+<ul>
+	<li>
+		<strong>QRadar - New Correlations Events Connector</strong>
+		<ul>
+			<li>Added a mechanism to prevent data loss of alerts in case of low machine memory</li>
+		</ul>
+	</li>
+	<li>
+		<strong>Email - EML Connector</strong>
+		<ul>
+			<li>Extended support for ingesting forwarded emails into a case</li>
+		</ul>
+	</li>
+	<li>
+		<strong>Exchange - EML Connector</strong>
+		<ul>
+			<li>Extended support for ingesting forwarded emails into a case</li>
+			<li>Added Proxy Support</li>
+		</ul>
+	</li>
+	<li>
+		<strong>Exchange - Mail Connector</strong>
+		<ul>
+			<li>Extended support for ingesting forwarded emails into a case</li>
+		</ul>
+	</li>
+</ul>
+
+<hr/>
+<h3>Jobs</h3>
+<ul>
+	<li>
+		<strong>Siemplify</strong>
+		<ul>
+			<li>
+					Siemplify Measurement Monitor Improvements
+				<ul>
+					<li>
+								Added option to save a copy of CSV report to a local folder for each job cycle. This can be configured using a new parameter - "Metrics Output Folder" (non mandatory).
+					</li>
+					<li>
+									Added option to configure how many CSV reports to keep backwards - "Max CSV Files Count Retention" (non mandatory). When exceeding the limit - older CSV reports will be overridden.
+						<ul>
+							<li>
+										Any more files then configured will be deleted (oldest first)
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+					Siemplify Log Collector
+				<ul>
+					<li>
+						Fixed Log Duplication Bug
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+

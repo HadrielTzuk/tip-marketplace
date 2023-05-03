@@ -1,0 +1,75 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List Google Kubernetes Engine operations for a location based on the specified search criteria. Note that action is not working on Siemplify entities. Additionally, filtering logic is working based on the operation name field.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleGKE",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"operations\":[{\"name\":\"operation-XXXXXXXXXXX-XXXXXXXXX\",\"zone\":\"europe-XXXXXXX-X\",\"operationType\":\"UPDATE_CLUSTER\",\"status\":\"DONE\",\"selfLink\":\"https:\/\/container.googleapis.com\/v1\/projects\/XXXXXXXXXXXXX\/zones\/europe-XXXXXXX-X\/operations\/operation-XXXXXXXXXXX-XXXXXXXXX\",\"targetLink\":\"https:\/\/container.googleapis.com\/v1\/projects\/XXXXXXXXXXXXX\/zones\/europe-XXXXXXX-X\/clusters\/XXXXXX-XXXX\",\"startTime\":\"XXXX-XX-XXTXX:XX:XX.XXXXXXXXXZ\",\"endTime\":\"XXXX-XX-XXTXX:XX:XX.XXXXXXXXXZ\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Operations",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify Google Compute Engine location for which to fetch the operations for. Example: europe-central2-a",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Location",
+            "Type": 0,
+            "Value": ""
+        },
+
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Equal", 
+            "Description": "Specify what filter logic should be applied.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Filter Logic", 
+            "OptionalValues": [
+                "Equal", 
+                "Contains"
+            ], 
+            "Type": 15, 
+            "Value": "Equal"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what value should be used in the filter. If \"Equal\" is selected, action should will try to find the exact match among results and if \"Contains\" is selected, action will try to find results that contain the substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the operation name field.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Filter Value",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many records to return. Default: 50.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Records To Return",
+            "Type": 0,
+            "Value": 50
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

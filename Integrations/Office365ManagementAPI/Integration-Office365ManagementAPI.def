@@ -1,0 +1,84 @@
+{
+    "Description": "The Office 365 Management APIs provide a single extensibility platform for all Office 365 customers' and partners' management tasks, including service communications, security, compliance, reporting, and auditing.",
+    "DisplayName": "Office 365 Management API",
+    "Identifier": "Office365ManagementAPI",
+    "Categories": [
+        "Cloud Security",
+        "Cloud",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Office365ManagementAPI",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": 2,
+            "Value": "https://manage.office.com"
+        },
+        {
+            "IntegrationIdentifier": "Office365ManagementAPI",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Azure Active Directory ID",
+            "PropertyName": "Azure Active Directory ID",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Office365ManagementAPI",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Office365ManagementAPI",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Client Secret",
+            "PropertyName": "Client Secret",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Office365ManagementAPI",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Certificate Path",
+            "PropertyName": "Certificate Path",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Office365ManagementAPI",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Certificate Password",
+            "PropertyName": "Certificate Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Office365ManagementAPI",
+            "IsMandatory": true,
+            "PropertyDisplayName": "OAUTH2 Login Endpoint Url",
+            "PropertyName": "OAUTH2 Login Endpoint Url",
+            "PropertyType": "2",
+            "Value": "https://login.microsoftonline.com"
+        },
+        {
+            "IntegrationIdentifier": "Office365ManagementAPI",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": "True"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M15.3942 21.1642C15.438 20.9452 15.438 4.95976 15.3942 4.6094C12.6789 5.26634 9.96354 5.92327 7.24819 6.53641V17.7919C5.84673 18.3613 4.44526 18.8868 3.0438 19.4124C3.0438 19.4124 3.0438 19.4124 3 19.4124C3 19.3686 3 19.3248 3 19.281C3 14.77 3 10.2153 3 5.6605C3.0438 5.57291 3.13139 5.57291 3.21898 5.52911C7.2044 4.04005 11.1898 2.55099 15.1752 1.06194C15.3066 1.01814 15.438 0.974345 15.6132 1.01814C17.803 1.67508 19.9928 2.28822 22.1826 2.90136C22.2264 2.90136 22.2264 2.90136 22.2702 2.94516V22.1277C21.657 22.3029 21.0001 22.4781 20.3869 22.6533C18.8103 23.0912 17.1898 23.5292 15.6132 23.9672C15.438 24.0109 15.3066 24.0109 15.1752 23.9672C11.2336 22.5219 7.33579 21.0766 3.39416 19.6314C3.30657 19.5876 3.21898 19.5876 3.17518 19.5C7.2482 20.0693 11.3212 20.5949 15.3942 21.1642Z\" \/>\r\n<\/svg>",
+    "Version": 7.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/ms-o365",
+    "MarketingDisplayName": "Microsoft Office 365 Management API"
+}

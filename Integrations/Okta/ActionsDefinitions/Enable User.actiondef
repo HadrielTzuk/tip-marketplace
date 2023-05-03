@@ -1,0 +1,66 @@
+{
+    "CreationTimeUnixTimeInMs": 1548084167405, 
+    "Creator": "System", 
+    "Description": "Enables the specified user", 
+    "DynamicScriptResultNamesJson": "[\"ResultJson\"]", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Okta", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1548084167442, 
+    "Name": "Enable User", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1548084167506, 
+            "CustomActionId": 701, 
+            "DefaultValue": "", 
+            "Description": "Ids or logins of users in Okta", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084167506, 
+            "Name": "User IDs Or Logins", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1548084167507, 
+            "CustomActionId": 701, 
+            "DefaultValue": "false", 
+            "Description": "Whether to activate the user or just unsuspend", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084167507, 
+            "Name": "Is Activate", 
+            "Type": 1, 
+            "Value": "false"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1548084167508, 
+            "CustomActionId": 701, 
+            "DefaultValue": "false", 
+            "Description": "Whether to send an email after activating or not", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084167508, 
+            "Name": "Send Email If Activate", 
+            "Type": 1, 
+            "Value": "false"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1548084167508, 
+            "CustomActionId": 701, 
+            "DefaultValue": "false", 
+            "Description": "Whether to run on entities as well as the input", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084167508, 
+            "Name": "Also Run On Scope", 
+            "Type": 1, 
+            "Value": "false"
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyDataModel import EntityTypes\nfrom OktaManager import OktaManager\nimport json\n\nPROVIDER = \"Okta\"\nACTION_NAME = \"Okta - EnableUser\"\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    user_ids_or_logins = siemplify.parameters.get('User IDs Or Logins', \"\")\n    is_reactivate = siemplify.parameters.get('Is Activate', \"false\").lower() == \"true\"\n    is_send_email_reactivate = siemplify.parameters.get('Send Email If Activate', \"false\").lower() == \"true\"\n    is_scope = siemplify.parameters.get('Also Run On Scope', \"false\").lower() == \"true\"\n    ids = []\n    res = {}\n    ret = {}\n    output_message = \"\"\n    okta = OktaManager(api_root=conf['Api Root'], api_token=conf['Api Token'],\n                       verify_ssl=conf['Verify SSL'].lower() == 'true')\n    if user_ids_or_logins:\n        for _id in user_ids_or_logins.split(','):\n            _id = _id.strip()\n            ids.append(_id)\n    message = \"\"\n    action = \"UNSUSPEND\"\n    if is_reactivate:\n        action = \"ACTIVATE\"\n    if ids:\n        for _id in ids:\n            try:\n                res = okta.enable_user(_id, is_reactivate, is_send_email_reactivate)\n                if res == True:\n                    message += \"The user with id {0} was enabled ({1}).\\n\\n\".format(_id, action)\n                    ret[_id] = action\n                else:\n                    message += \"The user with id {0} couldn't be enabled ({1}).\\n\\n\".format(_id, action)\n                    continue\n            except Exception as err:\n                siemplify.LOGGER.exception(err)\n                siemplify.LOGGER.error(_id + \" \" + action + \": \" + err.message)\n                pass\n    if is_scope:\n        entitiesEnabled = []\n        for entity in siemplify.target_entities:\n            if entity.entity_type == EntityTypes.USER or entity.entity_type == EntityTypes.HOSTNAME:\n                try:\n                    res = okta.enable_user(entity.identifier, is_reactivate, is_send_email_reactivate)\n                    if res:\n                        entitiesEnabled.append(entity)\n                        message += \"The user \\\"{0}\\\" was enabled ({1}).\\n\\n\".format(entity.identifier, action)\n                        ret[entity.identifier] = action\n                    else:\n                        message += \"The user \\\"{0}\\\" couldn't be enabled ({1}).\\n\\n\".format(entity.identifier, action)\n                        continue\n                except Exception as err:\n                    siemplify.LOGGER.exception(err)\n                    siemplify.LOGGER.error(entity.identifier + \" \" + action + \": \" + err.message)\n                    pass\n            else:\n                continue\n    if ret:\n        output_message = message\n    else:\n        output_message = \"No users were enabled. {}\".format(message)\n    siemplify.end(output_message, json.dumps(ret))\n\nif __name__ == '__main__':\n    main()", 
+    "ScriptResultName": "ScriptResult", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"USERUNIQNAME\"]}", 
+    "Version": 8.0
+}

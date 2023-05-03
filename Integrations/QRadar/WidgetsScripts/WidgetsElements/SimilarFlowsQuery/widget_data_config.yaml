@@ -1,0 +1,13 @@
+### Json Structure Params ###
+json_result_has_entities: yes
+entity_key: Entity
+entity_result_list_path: EntityResult
+
+### HTML Structure Params ###
+main_text_singular: SIMILAR FLOW FOUND
+main_text_plural: SIMILAR FLOWS FOUND
+
+import_svg_from_integration: yes
+
+### Table Structure Params ###
+auto_map_columns: yes

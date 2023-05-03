@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1518944383854,
+    "Creator": "admin",
+    "Description": "Run a SQL query",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "MySQL",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518944383854,
+    "Name": "Run SQL Query",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518944463840,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The DB name to run the query on",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518944463840,
+            "Name": "Database Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518944463840,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The query to run. Default: SELECT * FROM <>",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518944463840,
+            "Name": "Query",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "results",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

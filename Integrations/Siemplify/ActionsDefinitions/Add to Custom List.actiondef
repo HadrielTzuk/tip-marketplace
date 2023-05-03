@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1538890869186,
+    "Creator": "Admin",
+    "Description": "Add an Entity Identifier to a categorized Custom List, in order to perform future comparisons in other actions.",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1538890869186,
+    "Name": "Add to Custom List",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1538890869186,
+            "CustomActionId": 23,
+            "DefaultValue": "",
+            "Description": "Custom list category to be used.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1538890869186,
+            "Name": "Category",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = \"Add To Custom List\"\n\n    category = siemplify.parameters[\"Category\"]\n    siemplify.add_alert_entities_to_custom_list(category)\n\n    output_message = \"The alert's entities were added to custom list category: {0}.\".format(category)\n    siemplify.LOGGER.info(output_message)\n\n    siemplify.end(output_message, \"true\")\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "ScriptResult",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

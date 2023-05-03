@@ -1,0 +1,68 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805, 
+    "Creator": "Admin", 
+    "DefaultResultValue": "", 
+    "Description": "Searches the network for logged in users.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"file_type\": \"symlink\", \"target_path\": \"rc.d/rc.local\", \"meta_data\": {\"group\": \"root\", \"uid\": 0, \"permission\": \"lrwxrwxrwx\", \"file_attributes\": 41471, \"gid\": 0, \"user\": \"root\", \"file_name_timestamps\": {\"accessed\": 1580915650, \"entry_modified\": 1573185364, \"modified\": 1573185364}}, \"file_path\": \"/etc/rc.local\"}, {\"file_type\": \"file\", \"meta_data\": {\"group\": \"root\", \"uid\": 0, \"permission\": \"-rw-r--r--\", \"file_attributes\": 33188, \"gid\": 0, \"user\": \"root\", \"file_size\": 473, \"hashes\": {\"sha256\": \"683ff1e79394b87a4fb7c1e3ef282f36b1154ebf62538c263d533303d3c24330\", \"md5\": \"8757872e21129709e20bd30f9aa51e21\", \"sha1\": \"2c72448b440f16c9fae18e287ca827c25d29a7cb\"}, \"file_name_timestamps\": {\"accessed\": 1580915650, \"entry_modified\": 1573185364, \"modified\": 1571417303}}, \"file_path\": \"/etc/rc.d/rc.local\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Endgame", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1560351300805, 
+    "Name": "Hunt User", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835, 
+            "CustomActionId": -1, 
+            "DefaultValue": "windows", 
+            "Description": "Select an operating system (i.e., Windows, Linux, or Mac) to filter the Endpoints list. Note: You can only create a single investigation for endpoints that run on the same operating system.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351300835, 
+            "Name": "Endpoints Core OS", 
+            "OptionalValues": null, 
+            "OptionalValuesJson": null, 
+            "Type": 0, 
+            "Value": "windows"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1560351300837, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "ADVANCED CONFIGURATION for this hunt. Enter username(s), separate multiple entries with a semicolon.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351300837, 
+            "Name": "Find Username", 
+            "OptionalValues": null, 
+            "OptionalValuesJson": null, 
+            "Type": 0, 
+            "Value": null
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1560351300840, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "ADVANCED CONFIGURATION for this hunt. Enter Domain Name", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351300840, 
+            "Name": "Domain Name", 
+            "OptionalValues": null, 
+            "OptionalValuesJson": null, 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "Script": "import sys\nfrom SiemplifyAction import SiemplifyAction\nfrom EndgameManager import EndgameManager, IOC_USER_SEARCH\nfrom SiemplifyDataModel import EntityTypes\nfrom ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_INPROGRESS\n\nPROVIDER = 'Endgame'\nACTION_NAME = 'Endgame - Hunt User'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    api_root = conf['API Root']\n    username = conf['Username']\n    password = conf['Password']\n    use_ssl = conf.get('Verify SSL', 'False').lower() == 'true'\n    egm = EndgameManager(api_root, username=username, password=password, use_ssl=use_ssl)\n\n    siemplify.LOGGER.info(\"Action START\")\n    investigation_name = siemplify.parameters.get(\"Investigation Name\", \"Siemplify User Hunt Investigation API\")\n    endpoints = []\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.HOSTNAME:\n            endpoints.append(entity.identifier)\n    core_os = siemplify.parameters.get(\"Endpoints Core OS\", \"windows\")\n    find_username = siemplify.parameters.get(\"Find Username\")\n    domain_name = siemplify.parameters.get(\"Domain Name\")\n\n    investigation_id = ''\n    try:\n        siemplify.LOGGER.info(\"Searching for users: {0}\".format(find_username))\n        # By default, the investigation is assigned to the login user\n        investigation_id = egm.create_investigation(task_name=investigation_name, assign_user=username,\n                                                    endpoints=endpoints, ioc_search_type=IOC_USER_SEARCH,\n                                                    core_os=core_os,\n                                                    find_username=find_username, domain_name=domain_name)\n        siemplify.LOGGER.info(\"Successfully Create investigation with ID {0}\".format(investigation_id))\n\n    except Exception as err:\n        error_message = 'Error while searching for user(s): {0}, Error: {1}'.format(find_username, err.message)\n        siemplify.LOGGER.error(error_message)\n        siemplify.LOGGER.execption(err)\n\n    siemplify.LOGGER.info(\"Sync Part END !!!\")\n    siemplify.end(\"\", investigation_id, EXECUTION_STATE_INPROGRESS)\n\n\ndef fetch_scan_report_async():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    api_root = conf['API Root']\n    username = conf['Username']\n    password = conf['Password']\n    use_ssl = conf.get('Verify SSL', 'False').lower() == 'true'\n    egm = EndgameManager(api_root, username=username, password=password, use_ssl=use_ssl)\n    siemplify.LOGGER.info(\"ASync Part START !!!\")\n\n    # Extract investigation ID\n    investigation_id = siemplify.parameters[\"additional_data\"]\n    json_results = []\n    output_message = \"\"\n    errors_flag = False\n\n    try:\n        # check if analysis completed\n        is_completed = egm.get_investigation_status(investigation_id)\n        if is_completed:\n            # is_ready = True, fetch the report\n            siemplify.LOGGER.info(\"Retrieving investigation ID results: {0}\".format(investigation_id))\n            hunt_results = egm.retrieve_investigation_results(investigation_id)\n            for hunt_id, results in hunt_results.iteritems():\n                for hunt in results['Results']:\n                    json_results.append(hunt)\n\n        else:\n            siemplify.LOGGER.info(\"Continuing...Investigation NOT completed !\")\n            siemplify.end(output_message, investigation_id, EXECUTION_STATE_INPROGRESS)\n\n    except Exception as err:\n        error_message = \"Error while retrieving investigation ID: {0}, Error: {1}\".format(\n            investigation_id, err.message)\n        siemplify.LOGGER.error(error_message)\n        siemplify.LOGGER.exception(err)\n        errors_flag = True\n\n    if json_results:\n        output_message = \"Retrieved results from the following hunts in Endgame: {0}\".format(investigation_id)\n    else:\n        output_message = \"There are no results for your investigation\"\n\n    if errors_flag:\n        output_message += \"\\n Errors occurred, check log for more information\"\n\n    siemplify.LOGGER.info(\"Action END !!!\")\n    siemplify.result.add_result_json(json_results)\n    # logout\n    egm.logout()\n    siemplify.end(output_message, 'true', EXECUTION_STATE_COMPLETED)\n\n\nif __name__ == \"__main__\":\n    if len(sys.argv) < 3 or sys.argv[2] == 'True':\n        main()\n    else:\n        fetch_scan_report_async()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "TimeoutSeconds": 600, 
+    "Version": 2.0,
+    "IsAsync": true
+}

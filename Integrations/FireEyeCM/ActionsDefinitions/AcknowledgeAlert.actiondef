@@ -1,0 +1,37 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Acknowledge alert in FireEye CM.",
+    "Id": -1,
+    "IntegrationIdentifier": "FireEyeCM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Acknowledge Alert",
+    "Parameters": [
+        {
+            "Name": "Alert UUID",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the alert uuid, which needs to be acknowledged.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Annotation",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the annotation that explains the reason for acknowledgment.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

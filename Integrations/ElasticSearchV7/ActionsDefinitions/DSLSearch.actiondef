@@ -1,0 +1,57 @@
+{
+    "CreationTimeUnixTimeInMs": 1522665785536,
+    "Creator": "Siemplify System",
+    "Description": "Execute a DSL query in the ElasticSearch. This action fetches data from ES for past 24 hours.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"_score\": 0.2876821, \"_type\": \"person\", \"_id\": \"2\", \"_source\": {\"lastname\": \"Smith\", \"name\": \"John\", \"job_description\": \"Systems administrator\"}, \"_index\": \"accounts\"}, {\"_score\": 0.28582606, \"_type\": \"person\", \"_id\": \"1\", \"_source\": {\"lastname\": \"Doe\", \"name\": \"John\", \"job_description\": \"Systems administrator and Linux specialist\"}, \"_index\": \"accounts\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "ElasticSearchV7",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1522665785536,
+    "Name": "DSL Search",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1560424826000,
+            "CustomActionId": -1,
+            "DefaultValue": "*",
+            "Description": "Search pattern for a elastic index.\r\nIn elastic, index is like a DatabaseName, and data is stored across various indexes.\r\nThis param defines in what index(es) to search. It can be an exact name ie: \"smp_playbooks-2019.06.13\"\r\nor you can use a (*) wildcard to search by a pattern. e: \"smp_playbooks-2019.06*\" or \"smp*\".\r\nTo learn more about elastic indexes visit https://www.elastic.co/blog/what-is-an-elasticsearch-index",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560424826000,
+            "Name": "Index",
+            "Type": 0,
+            "Value": "*"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560424826000,
+            "CustomActionId": -1,
+            "DefaultValue": "*",
+            "Description": "The DSL query to perform. The query must be a valid JSON, or *. For more information, please refer to https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560424826000,
+            "Name": "Query",
+            "Type": 0,
+            "Value": "*"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560424826000,
+            "CustomActionId": -1,
+            "DefaultValue": "100",
+            "Description": "Limits the document return count, ie: 10.\r\n0 = No limit",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560424826000,
+            "Name": "Limit",
+            "Type": 0,
+            "Value": "100"
+        }
+    ],
+    "ScriptResultName": "results",
+    "Version": 0.0
+}

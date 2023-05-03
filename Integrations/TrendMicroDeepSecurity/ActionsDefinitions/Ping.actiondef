@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1538566659388,
+    "Creator": "Admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "TrendMicroDeepSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1538566659388,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from TrendmicroDeepSecurityManager import TrendmicroManager\nfrom SiemplifyAction import SiemplifyAction\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('TrendMicro')\n    api_key = conf.get('Api Secret Key')\n    api_version = conf.get('Api Version')\n    server_address = conf.get('Server Address')\n    use_ssl = conf.get(\"Verify SSL\")\n    trendmicro_manager = TrendmicroManager(api_key, server_address, api_version, use_ssl)\n\n    is_connected = trendmicro_manager.test_connectivity()\n    if is_connected:\n        output_message = \"Connection Established\"\n        result_value = 'true'\n    else:\n        output_message = \"Connection Failed\"\n        result_value = 'false'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()",
+    "ScriptResultName": "is_connected",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

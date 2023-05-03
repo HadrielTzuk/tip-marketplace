@@ -1,0 +1,60 @@
+{
+    "CreationTimeUnixTimeInMs": 1528975707436,
+    "Creator": "admin",
+    "Description": "Scan file and fetch its reputation",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"path\\\\mocks.txt\": {\"status\": \"finished\", \"runs\": [{\"detection\": \"clean\", \"yara\": false, \"system\": \"w7_1\", \"error\": null}, {\"detection\": \"clean\", \"yara\": false, \"system\": \"w7x64\", \"error\": null}], \"sha1\": \"e96a0e74ed5cfbcaa65c764939b29945e988be9b\", \"tags\": [], \"webid\": \"773601\", \"comments\": \"testing\", \"filename\": \"mocks.txt\", \"scriptname\": \"default.jbs\", \"time\": \"2019-01-21T11:21:20+01:00\", \"duration\": 530, \"sha256\": \"6087f230c0d6ea362f23ca2abb4baf82a9058cb0143af3e82584005f56626000\", \"md5\": \"502cddb08849eb191386017dfca05000\", \"analysisid\": \"765760\"}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "JoeSandbox",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1528975707436,
+    "Name": "Detonate File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1528975707436,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The paths of the files to scan comma separated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528975707436,
+            "Name": "File Paths",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528975707436,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The comment to add to the entry",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528975707436,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528975707436,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The format of the report",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528975707436,
+            "Name": "Report Format",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from JoeSandboxManager import JoeSandboxManager, REPORT_WEB_LINK\nfrom SiemplifyAction import SiemplifyAction\nfrom ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_INPROGRESS\nimport sys\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = 'JoeSandbox - Detonate file'\n\n    conf = siemplify.get_configuration('JoeSandbox')\n    api_key = conf['Api Key']\n    use_ssl = conf['Use SSL'].lower() == 'true'\n    joe = JoeSandboxManager(api_key, use_ssl)\n\n    file_path = siemplify.parameters['File Path']\n    # value returned by get\n    comments = siemplify.parameters.get('Comment', \"Uploaded by Siemplify\")\n    siemplify.LOGGER.info(\"Start Detonate File Action.\")\n\n    # TODO: Check Linux\n\n    with open(file_path, 'rb') as sample:\n        webid = joe.analyze(sample, comments=comments)\n\n    output_massage = \"File submitted successfully.\"\n    siemplify.LOGGER.info(\"File {0} submitted successfully.\".format(file_path))\n\n    siemplify.end(output_massage, webid, EXECUTION_STATE_INPROGRESS)\n\n\ndef fetch_scan_report_async():\n\n    siemplify = SiemplifyAction()\n    siemplify.script_name = 'JoeSandbox - Detonate file'\n\n    conf = siemplify.get_configuration('JoeSandbox')\n    api_key = conf['Api Key']\n    use_ssl = conf['Use SSL'].lower() == 'true'\n    joe = JoeSandboxManager(api_key, use_ssl)\n\n    file_path = siemplify.parameters['File Path']\n    download_resource = siemplify.parameters.get('Report Format', 'html')\n    # Extract webid\n    webid = siemplify.parameters[\"additional_data\"]\n\n    try:\n        if webid:\n            analysis_info = joe.get_analysis_info(webid)\n            if joe.is_analysis_completed(webid):\n                siemplify.LOGGER.info(\"File {0} is ready.\".format(file_path))\n                # Download analysis\n                full_report = joe.download_report(webid, download_resource)\n                try:\n                    siemplify.result.add_attachment('{0} Report'.format(file_path), '{0}JoeSandboxReport.{1}'.format(file_path, download_resource), full_report.encode('base64'))\n                except Exception as e:\n                    # Attachment cannot be larger than 3 MB\n                    siemplify.LOGGER.error(\n                        \"Can not add attachment: {}.\\n{}.\".format(file_path, str(e)))\n\n                siemplify.result.add_link('JoeSandbox Report - Web Link', REPORT_WEB_LINK.format(analysis_info.get('analysisid')))\n\n                # Check for detection risk - result 'suspicious'\n                if joe.is_detection_suspicious(analysis_info):\n                    output_massage = \"{0} is detected as suspicious by Joe Sandbox.\".format(file_path)\n                    siemplify.create_case_insight(title=\"Case Insight\", content='Found as suspicious by JoeSandbox.',\n                                                  triggered_by='JoeSandbox', entity_identifier=file_path, type=0, severity=1)\n                else:\n                    output_massage = \"{0} Detected by Joe Sandbox.\".format(file_path)\n                siemplify.end(output_massage, 'true', EXECUTION_STATE_COMPLETED)\n            else:\n                siemplify.LOGGER.info(\"File {0} is still queued for analysis.\".format(file_path))\n                output_massage = \"Continuing...the requested item is still queued for analysis {0}\".format(file_path)\n            siemplify.end(output_massage, webid, EXECUTION_STATE_INPROGRESS)\n    except Exception as e:\n        siemplify.LOGGER.exception(e)\n        raise\n\n\nif __name__ == \"__main__\":\n    if len(sys.argv) < 3 or sys.argv[2] == 'True':\n        main()\n    else:\n        fetch_scan_report_async()\n",
+    "ScriptResultName": "ScriptResult",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

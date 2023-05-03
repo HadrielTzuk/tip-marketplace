@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1517849590810,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "CaServiceDesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517849590810,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyDataModel import EntityTypes\r\nfrom SiemplifyAction import SiemplifyAction\r\nfrom CaSoapManager import CaSoapManager\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration('CaServiceDesk')\r\n    api_root = conf['Api Root']\r\n    username = conf['Username']\r\n    password = conf['Password']\r\n    \r\n    ca_manager = CaSoapManager(api_root, username, password)\r\n\r\n    connection = ca_manager.test_connectivity()\r\n\r\n    output_message = \"Connection Established\" if connection else \"Connection Failed\"\r\n    result_value = connection\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n",
+    "ScriptResultName": "is_succeed",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

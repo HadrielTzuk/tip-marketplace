@@ -1,0 +1,30 @@
+{
+    "CreationTimeUnixTimeInMs": 1530543579170,
+    "Creator": "admin",
+    "Description": "Dismiss Threat in McAfee Mvision EDR.",
+    "DynamicResultsMetadata": [],
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeMvisionEDR",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530543579170,
+    "Name": "Dismiss Threat",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530543579170,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID of the threat that you want to dismiss.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530543579170,
+            "Name": "Threat ID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success ",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}",
+    "IsAsync": true
+}

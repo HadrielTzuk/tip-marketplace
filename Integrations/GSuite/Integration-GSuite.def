@@ -1,0 +1,69 @@
+{
+    "Description": "G Suite is a brand of cloud computing, productivity and collaboration tools, software and products developed by Google.",
+    "DisplayName": "GSuite",
+    "Identifier": "GSuite",
+    "PythonVersion": 2,
+    "Categories": ["Cloud", "Identity", "Google", "Operational", "IAM", "Access Management"],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "GSuite",
+            "IsMandatory": false,
+            "PropertyDescription": "Specify the Client ID value to use for Oauth-based authentication.",
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GSuite",
+            "IsMandatory": false,
+            "PropertyDescription": "Specify the Client Secret value to use for Oauth-based authentication.",
+            "PropertyDisplayName": "Client Secret",
+            "PropertyName": "Client Secret",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GSuite",
+            "IsMandatory": false,
+            "PropertyDescription": "If Oauth-based (not based on service account) authentication is used, specify the Refresh Token that is generated with related integration actions.",
+            "PropertyDisplayName": "Refresh Token",
+            "PropertyName": "Refresh Token",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GSuite",
+            "IsMandatory": true,
+            "PropertyDescription": "If enabled, the server-side certificate used for connection is validated.",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GSuite",
+            "IsMandatory": false,
+            "PropertyDescription": "For the service account based authentication, specify the Service Account JSON. Parameter accepts two ways to provide the service account: First (recommended), the full JSON content of the service account can be provided. The second way (legacy, will be deprecated) is to provide the path to the stored service account JSON file on the CSOAR server.",
+            "PropertyDisplayName": "Service Account JSON",
+            "PropertyName": "Service Account JSON",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GSuite",
+            "IsMandatory": false,
+            "PropertyDescription": "Specify the email that integration should use.",
+            "PropertyDisplayName": "Delegated Email",
+            "PropertyName": "Delegated Email",
+            "PropertyType": 2,
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\r\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\r\n\t viewBox=\"0 0 32 32\" style=\"enable-background:new 0 0 32 32;\" xml:space=\"preserve\">\r\n<title>ElasticSearch_IntegrationImage</title>\r\n<g>\r\n\t<g>\r\n\t\t<path d=\"M29.9,15.7c-0.1-0.5-0.1-0.8-0.2-1.2H16.3v4.7h8.2c-0.2,0.8-0.5,1.5-0.9,2.1c-0.4,0.6-0.8,1.2-1.3,1.6\r\n\t\t\tc-0.7,0.6-1.5,1.1-2.5,1.5c-0.9,0.4-2.1,0.5-3.4,0.5c-1.2,0-2.4-0.2-3.4-0.6s-2-1.1-2.9-1.8s-1.5-1.7-1.9-2.8\r\n\t\t\tc-0.5-1.1-0.7-2.3-0.7-3.7s0.2-2.6,0.7-3.7c0.5-1.1,1.1-2,1.9-2.9C11,8.7,11.9,8.1,13,7.6C14,7.2,15.2,7,16.4,7\r\n\t\t\tc1.5,0,2.8,0.2,3.9,0.7c1.1,0.5,2,1.2,2.9,2.1L27,6.1c-1.3-1.3-2.8-2.5-4.6-3.2s-3.7-1.2-6-1.2c-2,0-3.9,0.4-5.6,1.1\r\n\t\t\ts-3.3,1.7-4.6,3c-1.3,1.3-2.3,2.7-3.1,4.5S2,14,2,16s0.4,4,1.2,5.7c0.8,1.8,1.8,3.2,3.1,4.5c1.3,1.3,2.9,2.3,4.6,3\r\n\t\t\tc1.8,0.7,3.6,1.1,5.6,1.1c2.2,0,4.1-0.4,5.8-1.1c1.7-0.7,3.2-1.7,4.4-3c1.1-1.2,1.9-2.5,2.5-4.1s0.9-3.2,0.9-5\r\n\t\t\tC30,16.6,30,16.2,29.9,15.7z\"/>\r\n\t</g>\r\n</g>\r\n</svg>\r\n",
+    "Version": 10.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/gsuite",
+    "MarketingDisplayName": "Google Gsuite"
+}

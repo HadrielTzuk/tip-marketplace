@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1543164953601,
+    "Creator": "admin",
+    "Description": "Retrieve details of all teams",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"mailNickname\": \"Test\", \"classification\": null, \"deletedDateTime\": null, \"renewedDateTime\": \"2018-11-12T15:03:50Z\", \"onPremisesProvisioningErrors\": [], \"membershipRuleProcessingState\": null, \"preferredLanguage\": null, \"expirationDateTime\": null, \"id\": \"43b559d5-f63d-47dd-9e6c-b3470b6446ee\", \"theme\": null, \"preferredDataLocation\": null, \"mail\": \"john_doe@example.com\", \"membershipRule\": null, \"onPremisesLastSyncDateTime\": null, \"description\": \"Test\", \"securityEnabled\": false, \"proxyAddresses\": [\"SPO:SPO_eaf75319-582a-46cf-8812-9e787d757c4e@SPO_a4a936ec-735f-488a-bfc0-7665f87aab47\", \"SMTP:Test@tenant.onmicrosoft.com\"], \"visibility\": \"Public\", \"resourceProvisioningOptions\": [\"Team\"], \"displayName\": \"Test\", \"groupTypes\": [\"Unified\"], \"onPremisesSyncEnabled\": null, \"createdDateTime\": \"2018-11-12T15:03:50Z\", \"resourceBehaviorOptions\": [\"HideGroupInOutlook\", \"SubscribeMembersToCalendarEventsDisabled\", \"WelcomeEmailDisabled\"], \"onPremisesSecurityIdentifier\": null, \"mailEnabled\": true}, {\"mailNickname\": \"user\", \"classification\": null, \"deletedDateTime\": null, \"renewedDateTime\": \"2018-11-28T13:46:50Z\", \"onPremisesProvisioningErrors\": [], \"membershipRuleProcessingState\": null, \"preferredLanguage\": null, \"expirationDateTime\": null, \"id\": \"67149c85-7139-4062-bfae-059d18ee7e5d\", \"theme\": null, \"preferredDataLocation\": null, \"mail\": \"john_doe@example.com\", \"membershipRule\": null, \"onPremisesLastSyncDateTime\": null, \"description\": \"user\", \"securityEnabled\": false, \"proxyAddresses\": [\"SPO:SPO_781470a6-2db5-454d-a8e3-71752b3b829e@SPO_a4a936ec-735f-488a-bfc0-7665f87aab47\", \"SMTP:user@tenant.onmicrosoft.com\"], \"visibility\": \"Public\", \"resourceProvisioningOptions\": [\"Team\"], \"displayName\": \"user\", \"groupTypes\": [\"Unified\"], \"onPremisesSyncEnabled\": null, \"createdDateTime\": \"2018-11-28T13:46:50Z\", \"resourceBehaviorOptions\": [\"HideGroupInOutlook\", \"SubscribeMembersToCalendarEventsDisabled\", \"WelcomeEmailDisabled\"], \"onPremisesSecurityIdentifier\": null, \"mailEnabled\": true}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftTeams",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543164953601,
+    "Name": "List Teams",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many teams to return. Default: 50.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Max Teams To Return",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom MicrosoftManager import MicrosoftTeamsManager\r\nimport json\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n\r\n    conf = siemplify.get_configuration(\"MicrosoftTeams\")\r\n    client_id = conf[\"Client ID\"]\r\n    secret_id = conf[\"Secret ID\"]\r\n    tenant = conf[\"Tenant\"]\r\n    token = conf.get(\"Refresh Token\")\r\n\r\n    mtm = MicrosoftTeamsManager(client_id, secret_id, tenant)\r\n\r\n    # refresh token\r\n    mtm.refresh_token(token)\r\n\r\n    teams = mtm.list_teams() or []\r\n\r\n    for team in teams:\r\n        siemplify.result.add_json(\"Team {0}\".format(team.get(\"displayName\")), json.dumps(teams))\r\n    if teams:\r\n        output_message = \"Successfully get teams.\"\r\n    else:\r\n        output_message = \"No results were found.\"\r\n\r\n    siemplify.end(output_message, json.dumps(teams))\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n\r\n",
+    "ScriptResultName": "teams",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

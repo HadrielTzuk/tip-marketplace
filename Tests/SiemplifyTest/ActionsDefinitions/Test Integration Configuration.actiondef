@@ -1,0 +1,24 @@
+{
+    "Name": "Test Integration Configuration", 
+    "Description": "", 
+    "Script": "from SiemplifyAction import *\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\tsiemplify.script_name = \"SIemplifyTest - Test Integration Configuration\"\n\tconf = siemplify.get_configuration(\"SiemplifyTest\")\n\tboolean = str(conf.get(\"Boolean\", \"False\")).lower() == \"true\"\n\tinteger = int(conf.get(\"Integer\", 0)) if conf.get(\"Integer\", 0) else 0\n\tpassword = conf.get(\"Password\")\n\tstring = conf.get(\"String\")\n\tip = conf.get(\"IP\")\n\temail = conf.get(\"Email\")\n\n\tprint(\"Boolean: {}\".format(boolean))\n\tprint(\"Integer: {}\".format(integer))\n\tprint(\"Password: {}\".format(password))\n\tprint(\"String: {}\".format(string))\n\tprint(\"IP: {}\".format(ip))\n\tprint(\"Email: {}\".format(email))\n\t\n\t\n\toutput_message = 'output message'\n\tresult_value = 'true'\n\tsiemplify.end(output_message, result_value)\n\nif __name__ == \"__main__\":\n\tmain()", 
+    "IntegrationIdentifier": "SiemplifyTest", 
+    "ScriptResultName": "ScriptResult", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultName": "JsonResult", 
+            "ResultExample": ""
+        }
+    ], 
+    "Creator": "Admin", 
+    "IsEnabled": true, 
+    "IsCustom": false, 
+    "IsSystem": false, 
+    "Version": 4.0, 
+    "TimeoutSeconds": 600, 
+    "Parameters": [], 
+    "DefaultResultValue": "", 
+    "Id": -1, 
+    "CreationTimeUnixTimeInMs": 1561380984799, 
+    "ModificationTimeUnixTimeInMs": 1561380984803
+}

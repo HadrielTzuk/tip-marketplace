@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Add a comment to the EasyVista ticket. Note: action is not working on Siemplify entities, action input parameters should be provided.",
+    "Id": -1,
+    "IntegrationIdentifier": "EasyVista",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Add Comment to Ticket",
+        "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "EasyVista ticket identifier to get info for, eg S201001_000001.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Ticket Identifier",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comment to add to EasyVista ticket.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

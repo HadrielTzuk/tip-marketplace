@@ -1,0 +1,98 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - BMC Remedy ITSM.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "BMC Remedy ITSM",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1643175420,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10962"
+    },
+    {
+        "ChangeDescription": "Integration - Added a mechanism to logout after execution for all integration items.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "BMC Remedy ITSM",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1651659550,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11654"
+    },
+    {
+        "ChangeDescription": "New Action Added - Get Record Details.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Get Record Details",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1651659550,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10963"
+    },
+    {
+        "ChangeDescription": "New Action Added - Delete Record.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Delete Record",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1651659550,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10965"
+    },
+    {
+        "ChangeDescription": "New Action Added - Create Record.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Create Record",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1651659550,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10966"
+    },
+    {
+        "ChangeDescription": "New Action Added - Update Record.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Update Record",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1651659550,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10964"
+    },
+    {
+        "ChangeDescription": "New Action Added - Wait For Record Fields Update.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Wait For Record Fields Update",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1651659550,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10967"
+    },
+    {
+        "ChangeDescription": "New Job Added - Sync Closed Incidents By Tag.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Sync Closed Incidents By Tag",
+        "ItemType": "Job",
+        "New": true,
+        "PublishTime": 1652857336,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11653"
+    }
+]

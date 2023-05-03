@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 19.6</h2><h5>Published on 08 February, 2023</h5><hr><h3>What's Improved</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     SiemplifyThreatFuse\n    </b>\n   </li>\n   <ul>\n    <li>\n     Integration\n    </li>\n    <ul>\n     <li>\n      Integration's Actions - Updated manager to reflect recent API changes.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     MicrosoftAzureSentinel\n    </b>\n   </li>\n   <ul>\n    <li>\n     Connector\n    </li>\n    <ul>\n     <li>\n      Microsoft Azure Sentinel Incident Connector v2 - Improved events handling for Microsoft Sentinel Scheduled Alerts and added additional support for Product Name fallback.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     AnomaliThreatStream\n    </b>\n   </li>\n   <ul>\n    <li>\n     Integration\n    </li>\n    <ul>\n     <li>\n      Integration's Actions - Updated manager to reflect recent API changes.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "19.6",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "08/02/23",
+    "Title": "Release Notes"
+}

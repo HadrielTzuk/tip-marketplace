@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1535884906829, 
+    "Creator": "admin", 
+    "Description": "Enrich Siemplify IP entity based on the information from the CheckPoint Threat Reputation service.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\":{\"resource\": \"8.8.8.8\",\"reputation\": {\"classification\": \"Benign\",\"severity\": \"N/A\",\"confidence\": \"High\"},\"risk\": 0,\"context\": {\"location\": {\"countryCode\": \"US\",\"countryName\": \"United States\",\"region\": null,\"city\": null,\"postalCode\": null,\"latitude\": 37.751007,\"longitude\": -97.822,\"dma_code\": 0,\"area_code\": 0,\"metro_code\": 0},\"asn\": 15169,\"as_owner\": \"Google LLC\"}},\"Entity\":\"8.8.8.8\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "CheckPointThreatReputation", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1535884906829, 
+    "Name": "Get IP Reputation", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "0", 
+            "Description": "Mark entity as suspicious if the returned risk value for entity is above a given threshold.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Threshold", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify whether the Siemplify Insight should be created based on the action result.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535884906829, 
+            "Name": "Create Insight?", 
+            "Type": 1, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 1.0
+}

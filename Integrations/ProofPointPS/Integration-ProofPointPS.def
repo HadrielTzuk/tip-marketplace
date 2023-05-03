@@ -1,0 +1,49 @@
+{
+    "Description": "Proofpoint Email Protection stops malware and non-malware threats such as impostor email (also known as email fraud).",
+    "DisplayName": "Proofpoint Email Protection",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/proofpoint-ps",
+    "Identifier": "ProofPointPS",
+    "Categories": [
+        "Email Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ProofPointPS",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://{IP}:{Port}"
+        },
+        {
+            "IntegrationIdentifier": "ProofPointPS",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ProofPointPS",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ProofPointPS",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SvgImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<path d=\"M18.9,29.8c0,4.5,0,8.6,0,12.7c-2.2,0-4.2,0-6.3,0c0-11.3,0-22.6,0-34.1c2.1,0,4.1,0,6.2,0c0.1,0.9,0.1,1.7,0.2,2.7\n\t\tc0.4-0.2,0.6-0.3,0.7-0.4c5.9-5.7,14.2-3.8,16.9,3.9c1.3,3.7,1.2,7.5,0.1,11.3C34.6,32.8,25.9,36.9,18.9,29.8z M30.6,20.2\n\t\tc0-0.3,0-1.2-0.1-2c-0.5-3-2.3-4.8-5.1-5.2c-2.2-0.3-4.6,0.9-5.5,3c-1.3,3-1.3,6-0.1,9c1,2.3,3.6,3.5,6.2,3\n\t\tC29.2,27.1,30.6,24.9,30.6,20.2z\"/>\n</g>\n</svg>\n",
+    "Version": 3.0,
+    "MarketingDisplayName": "Proofpoint Email Protection"
+}

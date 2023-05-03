@@ -1,0 +1,102 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 17.05</h2><h5>Published on 16 February, 2022</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     Exchange
+    </b>
+   </li>
+   <ul>
+    <li>
+     Exchange
+    </li>
+    <ul>
+     <li>
+      Mail Connector v2 with Oauth Authentication, Mail Connector v2 - Added an ability to provide custom alert name templates.
+     </li>
+     <li>
+      Exchange EML Connector, Exchange Mail Connector v2, Exchange Mail Connector v2 with Oauth Authentication - Updated the logic behind "Mark Emails As Read" parameter - Connector test runs will no longer mark the emails as "Read".
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Tanium
+    </b>
+   </li>
+   <ul>
+    <li>
+     Tanium
+    </li>
+    <ul>
+     <li>
+      Updated the integration to work with Tanium Platform REST APIs, with API token based authentication. Note - Version 5 of the integration is not operational, please make sure to upgrade the integration to version 6 and make sure your workflows are checked and updated in the case of need - JSON results can be different.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     Exchange
+    </b>
+   </li>
+   <ul>
+    <li>
+     Download Attachments
+    </li>
+    <ul>
+     <li>
+      REGRESSIVE - Download Attachments action - added handling of slash (/) and backwardslash (\) characters in the email subject, so downloaded attachments that have "/" or "\" characters in the names, will have those characters replaced with the "_" character.
+     </li>
+    </ul>
+    <li>
+     Move Mail To Folder
+    </li>
+    <ul>
+     <li>
+      REGRESSIVE! REGRESSIVE - Move Mail to Folder action - By default action limits the amount of data returned in the action's json result. Make sure your playbooks are not relying on the json result the action returned before. If so, please update the new additional parameters according to your needs. Please refer to the integration documentation for more information.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     VirusTotalV3
+    </b>
+   </li>
+   <ul>
+    <li>
+     Enrich URL
+    </li>
+    <ul>
+     <li>
+      Enrich URL - Added fallback value for the parameter "Resubmit After (Days)"
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     MicrosoftDefenderATP
+    </b>
+   </li>
+   <ul>
+    <li>
+     Microsoft Defender ATP Connector V2
+    </li>
+    <ul>
+     <li>
+      Microsoft Defender ATP Connector v2 - Added mapping for the default configuration of the connector.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

@@ -1,0 +1,99 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583,
+    "Creator": "admin",
+    "Description": "List Freshservice agents based on the specified search criteria. Note that action is not working on Siemplify entities.",
+    "Id": -1,
+    "IntegrationIdentifier": "FreshworksFreshservice",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"agents\": [{\"active\": true, \"address\": null, \"background_information\": null, \"can_see_all_tickets_from_associated_departments\": true, \"created_at\": \"123456\", \"custom_fields\": {\"aaaa\": \"aaaa\"}, \"department_ids\": [12345, 12345], \"email\": \"aaaa@aaaaa.aaa\", \"external_id\": null, \"first_name\": \"aaaa\", \"has_logged_in\": false, \"id\": 123456, \"job_title\": \"Dev\", \"language\": \"en\", \"last_active_at\": null, \"last_login_at\": null, \"last_name\": \"a\", \"location_id\": 123456, \"mobile_phone_number\": null, \"occasional\": true, \"reporting_manager_id\": null, \"role_ids\": [123456, 123456], \"roles\": [{\"role_id\": 123456, \"assignment_scope\": \"member_groups\", \"groups\": []}, {\"role_id\": 123456, \"assignment_scope\": \"entire_helpdesk\", \"groups\": []}], \"scopes\": {\"ticket\": null, \"problem\": null, \"change\": null, \"release\": null, \"asset\": null, \"solution\": null, \"contract\": null}, \"scoreboard_level_id\": 1, \"signature\": \"<p><br></p>\\n\", \"time_format\": \"12h\", \"time_zone\": \"Eastern Time (US & Canada)\", \"updated_at\": \"123456\", \"work_phone_number\": null, \"group_ids\": [12345, 12345], \"member_of\": [12345, 12345], \"observer_of\": [], \"department_names\": [\"aaaa\", \"aaaa\"], \"location_name\": \"America\", \"member_group_names\": [\"aaaaaa\", \"aaaaa Team\"], \"agent_role_names\": [\"aaaa\", \"aaaaa\"]}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1530451212583,
+    "Name": "List Agents",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the email address to return agent records for.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Agent Email",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "All",
+            "Description": "Specify agent states to return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Agent State",
+            "OptionalValues": [
+                "All",
+                "Fulltime",
+                "Occasional"
+            ],
+            "Type": 15,
+            "Value": "All"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "If enabled, results will include not active agent records.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Include not Active Agents",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": 30,
+            "Description": "Specify how many agent records should be returned per page for Freshservice pagination.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Rows per Page",
+            "Type": 0,
+            "Value": 30
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": 1,
+            "Description": "Specify starting from which page agent records should be returned with Freshservice pagination",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Start at Page",
+            "Type": 0,
+            "Value": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": 30,
+            "Description": "Specify how many agent records action should return in total.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Max Rows to Return",
+            "Type": 0,
+            "Value": 30
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

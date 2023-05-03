@@ -1,0 +1,89 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Retrieve information about assets in Orca Security.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"group_val\":\"nongroup\",\"asset_type_string\":\"VM\",\"vm_asset_unique_id\":\"vm_570398916848_i-xxxxx\",\"group_type_string\":\"VM\",\"group_type\":\"asg\",\"cluster_type\":\"asg\",\"type\":\"vm\",\"group_unique_id\":\"asg_xxxxxxxx\",\"tags_value_list\":[\"1\",\"user-test\",\"lt-xxxx\"],\"cloud_account_id\":\"1b6a52d3-58ed-4879-af03-xxxxxx\",\"compute\":{\"distribution_name\":\"Amazon\",\"num_cpus\":8,\"regions\":[\"us-east-1\"],\"disks\":[{\"size\":\"19.99 GB\",\"used\":\"4.82 GB\"}],\"private_dnss\":[\"ip-10-0-xx-xx.ec2.internal\"],\"auto_updates\":\"off\",\"roles\":[{\"name\":\"ssh\",\"is_public\":false,\"type\":\"ssh\"}],\"availability_zones\":[\"us-east-1b\"],\"iam_role\":\"arn:aws:iam::570398916848:instance-profile/eks-02bf6ed4-c272-e60c-c6dc-xxxxxx\",\"regions_names\":[\"N. Virginia\"],\"distribution_major_version\":\"2\",\"uptime\":\"2022-03-30T13:50:19+00:00\",\"security_groups\":[\"eks-cluster-sg-Omikron-xxxx\"],\"last_update_time\":\"2022-01-19\",\"hostname\":\"ip-10-0-xx-xx.ec2.internal\",\"distribution_version\":\"2 (2022.01.05)\",\"data_frameworks\":[\"cis_os_amazon_linux_2\"],\"public_dnss\":[\"ec2-54-234-xxx-xx.compute-1.amazonaws.com\"],\"private_ips\":[\"10.0.xx.xx\"],\"subnets\":[\"subnet-0b8cc1132xxxx\"],\"vpcs\":[\"vpc-07ef7f777xxxxx\"],\"total_disks_bytes\":21462233088,\"public_ips\":[\"54.234.xx.xx\"]},\"internet_facing_new\":false,\"vm_id\":\"i-xxxxxxxx\",\"asset_name\":\"user-test\",\"tags_key_list\":[\"aws:ec2launchtemplate:version\",\"aws:autoscaling:groupName\",\"aws:ec2launchtemplate:id\"],\"account_name\":\"user-vendors\",\"context\":\"data\",\"asset_type\":\"vm\",\"model\":{\"data\":{\"AwsEc2Instance\":{\"SecurityGroups\":{\"models\":[{\"model\":{\"name\":\"eks-cluster-sg-Omikron-xxxxx\",\"asset_unique_id\":\"AwsEc2SecurityGroup_570398916848_e739eb76-681b-xxxxxxc6\",\"id\":\"e739eb76-3f6e-4d81-a67d-xxxxx\",\"type\":\"AwsEc2SecurityGroup\"}}],\"remaining\":0},\"PrivateIpAddress\":\"10.0.xx.xx\",\"PrivateDnsName\":\"ip-10-0-xx-xx.ec2.internal\",\"Architecture\":\"x86_64\",\"MetadataOptions\":\"{'State': 'applied'}\",\"InstanceId\":\"i-07cb1xxxxx\",\"Vpc\":{\"model\":{\"name\":\"user-eks\",\"asset_unique_id\":\"AwsVpc_570398916848_e739eb76-37cc-a9ce-xxxx-xxxxx\",\"id\":\"e739eb76-38b5-7efc-61ed-xxxxxx\",\"type\":\"AwsVpc\"}},\"AvailabilityZone\":\"us-east-1b\",\"Image\":{\"model\":{\"name\":\"amazon-eks-node-1.21-xxxx\",\"asset_unique_id\":\"vmimage_570398916848_ami-xxxxx\",\"id\":\"e739eb76-391e-6321-1af2-xxxxx\",\"type\":\"AwsEc2Image\"}},\"PublicDnsName\":\"ec2-54-234-xx-xx.compute-1.amazonaws.com\",\"Name\":\"i-07cb1901xxxxx\",\"PublicIpAddress\":\"54.234.xx.xx\",\"Route53DNSRecords\":{\"models\":[],\"remaining\":0},\"State\":\"running\",\"InstanceProfile\":{\"model\":{\"name\":\"eks-02bf6ed4-c272-e60c-c6dc-xxxxx\",\"asset_unique_id\":\"AwsIamInstanceProfile_570398916848_e739eb76-8a93-xxx-xxx-xxxxx\",\"id\":\"e739eb76-3be8-582d-xxxx-xxxx\",\"type\":\"AwsIamInstanceProfile\"}},\"Region\":\"us-east-1\",\"Route53DomainNames\":{\"models\":[],\"remaining\":0},\"Arn\":\"arn:aws:ec2:us-east-1:570398916848:instance/i-xxxxxx\"},\"Content\":{\"PiiTypes\":[],\"Name\":\"i-xxxxxxxxxx\",\"HasPii\":false},\"Vm\":{\"ImageName\":\"amazon-eks-node-1.21-xxxxxxxx\",\"ImageOwnerId\":\"60240xxxxx\",\"ImageIsPublic\":\"True\",\"ImageId\":\"ami-0d6c8b2xxxxxx\",\"ImageDescription\":\"EKS Kubernetes Worker AMI with AmazonLinux2 image, (k8s: 1.21.5, docker: 20.10.7-5.amzn2, containerd: 1.4.6-7.amzn2)\",\"InstanceType\":\"t3a.2xlarge\",\"Name\":\"i-07cb19xxxxx\"},\"Compute\":{\"SecurityGroups\":[\"eks-cluster-sg-Omikron-xxxx\"],\"DistributionInfoSite\":\"https://aws.amazon.com/\",\"VpcList\":{\"models\":[{\"model\":{\"name\":\"user-eks\",\"asset_unique_id\":\"AwsVpc_570398916848_e739eb76-37cc-a9ce-xxxxx-xxxxx\",\"id\":\"e739eb76-38b5-7efc-xxxx-xxx\",\"type\":\"AwsVpc\"}}],\"remaining\":0},\"PrivateDnss\":[\"ip-10-0-xx-xx.ec2.internal\"],\"Name\":\"i-07cb19014xxxxx\",\"DistributionName\":\"Amazon\",\"PublicIps\":[\"54.234.xx.xx\"],\"CpuCount\":8,\"CVECount\":\"{'In-2017', 'In-2020'}\",\"LastUpdateTime\":\"2022-01-18T22:00:00+00:00\",\"IamRole\":\"arn:aws:iam::570398916848:instance-profile/eks-02bf6ed4-c272-e60c-xxx-xxxxxxx\",\"DistributionMajorVersion\":\"2\",\"PublicDnss\":[\"ec2-54-234-xx-xxx.compute-1.amazonaws.com\"],\"Applications\":{\"models\":[{\"model\":{\"name\":\"SQLite\",\"id\":\"e739eb76-33bb-ecfe-xxx-xxxxx\",\"type\":\"Application\"}},{\"model\":{\"name\":\"Docker\",\"id\":\"e739eb76-3705-3808-xxx-xxxxxx\",\"type\":\"Application\"}},{\"model\":{\"name\":\"OpenSSH Server\",\"id\":\"e739eb76-37b1-7d5d-xx-xxxx\",\"type\":\"Application\"}},{\"model\":{\"name\":\"MariaDB\",\"id\":\"e739eb76-3ff0-3cd6-xxx-xxxxx\",\"type\":\"Application\"}}],\"remaining\":0},\"OsEndOfSupport\":\"2023-06-30\",\"AvailabilityZones\":[\"us-east-1b\"],\"CreateTime\":\"2022-03-30T13:50:06+00:00\",\"Hostname\":\"ip-10-0-xx-xx.ec2.internal\",\"Roles\":{\"models\":[{\"model\":{\"data\":{\"Role\":{\"Role\":\"ssh\",\"Findings\":[],\"IsPublic\":false,\"Name\":\"ssh\"}},\"name\":\"ssh\",\"id\":\"e739eb76-3540-a777-xx-xxxx\",\"type\":\"Role\"}}],\"remaining\":0},\"Regions\":[\"us-east-1\"],\"UpTimeHours\":967,\"RegionsNames\":[\"N. Virginia\"],\"SubnetList\":{\"models\":[{\"model\":{\"name\":\"sub3\",\"asset_unique_id\":\"AwsSubnet_570398916848_e739eb76-46d9-9084-xxx-xxxx\",\"id\":\"e739eb76-3e16-78c4-xx-xxxx\",\"type\":\"AwsSubnet\"}}],\"remaining\":0},\"TotalVulnerabilitiesFound\":40,\"AutoUpdatesStatus\":\"off\",\"IngressPorts\":[],\"DistroCategory\":\"redhat\",\"OsSupportInfoSite\":\"https://aws.amazon.com/\",\"MatchedCVEs\":39,\"DistributionVersion\":\"2 (2022.01.05)\",\"UpTime\":\"2022-03-30T13:50:19+00:00\",\"PrivateIps\":[\"10.0.xx.xx\"],\"State\":\"running\",\"Disks\":[\"{'size_bytes': 21462233088, 'size': '19.99 GB', 'used_bytes': 5174579200, 'used': '4.82 GB'}\"],\"TotalDisksBytes\":21462233088},\"Inventory\":{\"DetectedCrownJewelScore\":10,\"DetectedCrownJewelReason\":\"Access: Host compromise\",\"Category\":\"VM\",\"UiUniqueField\":\"i-07cb190xxxxx\",\"BlastRadius\":\"{}\",\"SubCategory\":\"VM\",\"ModelTags\":\"{'tag1', 'tag2'}\",\"IsInternetFacing\":false,\"Observations\":[\"brute-force_attempts\"],\"Tags\":\"{'aws':'ec2launchtemplate'}\",\"Name\":\"i-07cb19014xxxx\",\"AccessEndpoints\":\"[]\"}},\"name\":\"i-07cb190xxxx\",\"asset_unique_id\":\"asg_570xxxx_user-test\",\"id\":\"e739eb76-3365-fdcd-xxx-xxxx\",\"type\":\"AwsEc2Instance\"},\"state\":{\"last_seen\":\"2022-05-10T21:04:40+00:00\"},\"cluster_unique_id\":\"asg_570398xxx_user-test\",\"cluster_name\":\"user-test\",\"create_time\":\"2022-03-30T13:50:06+00:00\",\"tags_list\":[{\"value\":\"1\",\"key\":\"aws:ec2launchtemplate:version\"},{\"value\":\"user-test\",\"key\":\"aws:autoscaling:groupName\"},{\"value\":\"lt-09b558axxxxx\",\"key\":\"aws:ec2launchtemplate:id\"}],\"group_name\":\"user-test\",\"level\":1,\"tags_info_list\":[\"aws:ec2launchtemplate:version|1\",\"aws:autoscaling:groupName|user-test\",\"aws:ec2launchtemplate:id|lt-09b558a2xxxxx\"],\"cloud_provider\":\"aws\",\"internet_facing\":false,\"organization_name\":\"Partners\",\"asset_subcategory\":\"VM\",\"cloud_vendor_id\":\"5703989xxxx\",\"asset_category\":\"VM\",\"asset_state\":\"running\",\"organization_id\":\"e739eb76-3d1a-4022-xx-xxxx\",\"vm\":{\"image_name\":\"amazon-eks-node-1.21-v20220123\",\"image_description\":\"EKS Kubernetes Worker AMI with AmazonLinux2 image, (k8s: 1.21.5, docker: 20.10.7-5.amzn2, containerd: 1.4.6-7.amzn2)\",\"image_is_public\":true,\"image_id\":\"ami-0d6c8bxxxxx\",\"instance_type\":\"t3a.2xlarge\",\"image_owner_id\":\"602401xxxx\"},\"cloud_provider_id\":\"5703989xxxx\",\"asset_unique_id\":\"vm_570398916848_i-07cb19014xxxxx\",\"asset_labels\":[\"brute-force_attempts\"],\"asset_vendor_id\":\"i-07cb19014xxxxx\",\"container_id\":\"main\",\"vulnerabilities\":[{\"asset_auto_updates\":\"off\",\"vm_asset_unique_id\":\"vm_570398916848_i-07cxxxxx\",\"group_type_string\":\"VM\",\"asset_regions_names\":[\"N. Virginia\"],\"group_type\":\"asg\",\"cluster_type\":\"asg\",\"type\":\"cve\",\"score\":4,\"vm_id\":\"i-07cb19xxxxx\",\"asset_name\":\"user-test\",\"context\":\"data\",\"nvd\":{\"cvss2_severity\":\"MEDIUM\",\"cvss2_score\":4.3,\"cvss3_severity\":\"MEDIUM\",\"cvss3_vector\":\"CVSS:3.0/AV:L/AC:L/PR:xxxxxxx\",\"cvss3_score\":5.5,\"cvss2_vector\":\"AV:N/AC:M/Auxxxxx\"},\"asset_distribution_version\":\"2 (2022.01.05)\",\"asset_first_public_ips\":[\"54.234.xx.xx\"],\"asset_first_private_ips\":[\"10.0.xx.xx\"],\"vendor_source_link\":\"https://alas.aws.amazon.com/AL2/ALAS-2022-1780.html\",\"group_name\":\"user-test\",\"level\":1,\"fix_available_state\":\"Yes\",\"organization_name\":\"Partners\",\"published\":\"2017-02-06T17:59:00+00:00\",\"packages\":[{\"installed_version\":\"4.0.3-35.amzn2\",\"package_name\":\"libtiff\",\"patched_version\":\"0:4.0.3-35.amzn2.0.1\"}],\"cloud_vendor_id\":\"57039xxxx\",\"labels\":[\"denial_of_service\",\"fix_available\"],\"asset_image_id\":\"ami-0d6c8xxxx\",\"asset_num_public_dnss\":1,\"cve_id\":\"CVE-2016-xxxx\",\"asset_state\":\"running\",\"organization_id\":\"e739eb76-3d1a-4022-b5d0-xxxx\",\"asset_availability_zones\":[\"us-east-1b\"],\"asset_unique_id\":\"vm_570398916848_i-xxxxxx\",\"asset_num_private_dnss\":1,\"asset_vendor_id\":\"i-07cb19xxxxx\",\"cvss3_score\":3.3,\"group_val\":\"nongroup\",\"asset_type_string\":\"VM\",\"asset_regions\":[\"us-east-1\"],\"group_unique_id\":\"asg_57xxxxxx_user-test\",\"cloud_account_id\":\"1b6a52d3-58ed-4879-af03-xxxxx\",\"asset_num_private_ips\":1,\"account_name\":\"user-vendors\",\"asset_type\":\"vm\",\"fix_available\":true,\"cvss3_vector\":\"CVSS:3.0/AV:L/AC:L/PR:N/UI:xxxxx\",\"cluster_unique_id\":\"asg_570398xxxx_user-test\",\"summary\":\"Integer overflow in the writeBufferToSeparateStrips function in tiffcrop.c in LibTIFF before 4.0.7 allows remote attackers to cause a denial of service (out-of-bounds read) via a crafted tif file.\",\"severity\":\"informational\",\"cluster_name\":\"user-test\",\"asset_first_public_dnss\":[\"ec2-54-234-xx-xx.compute-1.amazonaws.com\"],\"tags_info_list\":[\"aws:ec2launchtemplate:version|1\",\"aws:autoscaling:groupName|user-test\",\"aws:ec2launchtemplate:id|lt-09b558a23xxxxx\"],\"asset_first_private_dnss\":[\"ip-10-0-xx-xx.ec2.internal\"],\"cloud_provider\":\"aws\",\"asset_vpcs\":[\"vpc-07ef7f7xxxxx\"],\"source_link\":\"https://nvd.nist.gov/vuln/detail/CVE-2016-xxxx\",\"asset_category\":\"VM\",\"asset_distribution_major_version\":\"2\",\"asset_tags_info_list\":[\"aws:ec2launchtemplate:version|1\",\"aws:autoscaling:groupName|user-test\",\"aws:ec2launchtemplate:id|lt-09b558xxxx\"],\"cloud_provider_id\":\"570398xxxx\",\"asset_num_public_ips\":1,\"asset_labels\":[\"brute-force_attempts\"],\"asset_distribution_name\":\"Amazon\",\"affected_packages\":[\"libtiff\"],\"asset_role_names\":[\"ssh\"]}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "OrcaSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Get Asset Details",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of asset ids for which you want to return details.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Asset IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will return vulnerabilities that are related to the asset.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "Return Vulnerabilities Information",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Hazardous",
+            "Description": "Lowest severity that needs to be used to fetch vulnerabilities.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Lowest Severity For Vulnerabilities",
+            "OptionalValues": [
+                "Compromised",
+                "Imminent Compromise",
+                "Hazardous",
+                "Informational"
+            ],
+            "Type": 15,
+            "Value": "Hazardous"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many vulnerabilities to return per asset. Default: 50. Maximum: 100.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Max Vulnerabilities To Fetch",
+            "Type": 0,
+            "Value": "50"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will create an insight for every enriched asset.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "Create Insight",
+            "Type": 1,
+            "Value": true
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

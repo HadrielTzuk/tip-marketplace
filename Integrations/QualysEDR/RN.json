@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New integration \"Qualys EDR\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "QualysEDR",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1623746102,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8623"
+    }
+]

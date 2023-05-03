@@ -1,0 +1,52 @@
+{
+    "CreationTimeUnixTimeInMs": 1523175419910,
+    "Creator": "admin",
+    "Description": "Submit files for analysis",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"sha256\": \"fa636febca412dd9d1f2e7f7ca66462757bce24adb7cb5fffd2e247ce6dcf7fe\", \"job_id\": \"5f21459cb80c2d0a182b7967\"}, \"Entity\": \"/temp/test.txt\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "FalconSandbox",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1523175419910,
+    "Name": "Submit File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1523175419910,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The full path of the file to analyze. For multiple, use comma separated values.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1523175419910,
+            "Name": "File Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+        "CustomActionId": -1,
+        "IsMandatory": true,
+        "DefaultValue": "Linux (Ubuntu 16.04, 64 bit)",
+        "Description": "The environment to use for the scan.",
+        "Name": "Environment",
+        "Value": "Linux (Ubuntu 16.04, 64 bit)",
+        "Type": 15,
+        "OptionalValues": [
+            "Linux (Ubuntu 16.04, 64 bit)",
+            "Android Static Analysis",
+            "Windows 7 64 bit",
+            "Windows 7 32 bit (HWP Support)",
+            "Windows 7 32 bit"
+        ],
+        "Id": -1,
+        "CreationTimeUnixTimeInMs": 1572955458924,
+        "ModificationTimeUnixTimeInMs": 1572955458924
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0
+}

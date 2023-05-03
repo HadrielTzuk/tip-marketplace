@@ -1,0 +1,81 @@
+{
+    "CreationTimeUnixTimeInMs": 1515073753262,
+    "Creator": "admin",
+    "Description": "List events from ThreatQ.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[  {    \"created_at\": \"2020-07-19 09:19:39\",    \"description\": \"<p>Test</p>\",    \"happened_at\": \"2020-07-19 09:19:00\",    \"hash\": \"78f58dacd9c215003911a09d5b3exxxx\",    \"id\": 1,    \"title\": \"Test\",    \"touched_at\": \"2020-08-10 09:48:50\",    \"type_id\": 4,    \"updated_at\": \"2020-08-07 23:56:55\"  },  {    \"created_at\": \"2020-07-19 09:19:39\",    \"description\": \"<p>Test2</p>\",    \"happened_at\": \"2020-07-19 09:19:00\",    \"hash\": \"78f58dacd9c215003911a09d5b3exxxx\",    \"id\": 2,    \"title\": \"Test2\",    \"touched_at\": \"2020-08-10 09:48:50\",    \"type_id\": 4,    \"updated_at\": \"2020-08-07 23:56:55\"  },  {    \"created_at\": \"2020-07-19 09:19:39\",    \"description\": \"<p>Test3</p>\",    \"happened_at\": \"2020-07-19 09:19:00\",    \"hash\": \"78f58dacd9c215003911a09d5b3exxxx\",    \"id\": 3,    \"title\": \"Test3\",    \"touched_at\": \"2020-08-10 09:48:50\",    \"type_id\": 4,    \"updated_at\": \"2020-08-07 23:56:55\"  }]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "ThreatQ",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515073753262,
+    "Name": "List Events",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "adversaries, attachments, attributes, comments, events, indicators, signatures, sources, spearphish, tags, type, watchlist",
+            "Description": "Specify what additional fields should be included in the response. Possible values: adversaries, attachments, attributes, comments, events, indicators, signatures, sources, spearphish, tags, type, watchlist.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Additional Fields",
+            "Type": 0,
+            "Value": "adversaries, attachments, attributes, comments, events, indicators, signatures, sources, spearphish, tags, type, watchlist"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "ID",
+            "Description": "Specify what field should be used for sorting events.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Sort Field",
+            "Type": 15,
+            "OptionalValues": [
+                "ID",
+                "Title",
+                "Created_At",
+                "Updated_At",
+                "Happened_At"
+            ],
+            "Value": "ID"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "Ascending",
+            "Description": "Specify the sorting direction.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Sort Direction",
+            "Type": 15,
+            "OptionalValues": [
+                "Ascending",
+                "Descending"
+            ],
+            "Value": "Ascending"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many events to return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Max Events To Return",
+            "Type": 0,
+            "Value": 50
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

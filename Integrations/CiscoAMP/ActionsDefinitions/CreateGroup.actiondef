@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1527754047957,
+    "Creator": "admin",
+    "Description": "Create a new group",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"source\": \"CreatedviaAPI\", \"guid\": \"c5e2099d-3aeb-4dc2-add4-42fb01d05c51\", \"name\": \"test\", \"policies\": [{\"product\": \"windows\", \"description\": \"ThispolicyputstheAMPforEndpointsConnectorinamodethatwillonlydetectmaliciousfilesbutnotquarantinethem.Maliciousnetworktrafficisalsodetectedbutnotblocked.\", \"links\": {\"policy\": \"https: //api.amp.cisco.com/v1/policies/a8ba7d10-de10-42a6-a6e4-8d679f5b1ec2\", \"policy_xml\": \"https: //api.amp.cisco.com/v1/policies/a8ba7d10-de10-42a6-a6e4-8d679f5b1ec2.xml\"}, \"default\": true, \"file_lists\": [{\"guid\": \"cef9b12e-4a25-4f1a-93f4-3836ebd97ed5\", \"type\": \"simple_custom_detections\", \"name\": \"FileBlacklist\"}, {\"guid\": \"38c1a9eb-0389-4f12-8084-96f5ee62d72e\", \"type\": \"application_blocking\", \"name\": \"ExecutionBlacklist\"}, {\"guid\": \"3133128e-5455-4e74-82c5-1ff3c816c414\", \"type\": \"application_whitelist\", \"name\": \"FileWhitelist\"}], \"ip_lists\": [], \"used_in_groups\": [{\"guid\": \"d3f8be3c-e53b-4b31-a8b7-a78a69b74ea1\", \"name\": \"Audit\", \"description\": \"AuditGroupforPartner-Siemplify\"}], \"inherited\": false, \"serial_number\": 28, \"guid\": \"a8ba7d10-de10-42a6-a6e4-8d679f5b1ec2\", \"exclusion_sets\": [{\"guid\": \"43fc08b5-c603-4c24-9b4d-501d342f443c\", \"name\": \"WorkstationExclusions\"}], \"name\": \"Audit\"}], \"description\": \"added by siemplify!\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CiscoAMP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527754047957,
+    "Name": "Create Group",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527754047957,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The name of the new group",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1527754047957,
+            "Name": "Group Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1527754047957,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The description of the new group",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1527754047957,
+            "Name": "Group Description",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CiscoAMPManager import CiscoAMPManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    configurations = siemplify.get_configuration('CiscoAMP')\n    server_addr = configurations['Api Root']\n    client_id = configurations['Client ID']\n    api_key = configurations['Api Key']\n    use_ssl = configurations['Use SSL'].lower() == 'true'\n\n    cisco_amp_manager = CiscoAMPManager(server_addr, client_id, api_key,\n                                        use_ssl)\n\n    group_name = siemplify.parameters[\"Group Name\"]\n    group_description = siemplify.parameters[\"Group Description\"]\n\n    cisco_amp_manager.create_group(group_name, group_description)\n\n    siemplify.end(\"Successfully created group {}\".format(group_name), 'true')\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "group_name",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

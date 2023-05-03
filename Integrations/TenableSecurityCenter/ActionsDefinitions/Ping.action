@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1519286979595,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "TenableSecurityCenter",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519286979595,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1519130056819, 
+    "Creator": "admin", 
+    "Description": "Retrieve information about the last communication time from the endpoints in McAfee ePO. Supported entities: Hostname, IP.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"1.1.1.1\", \"EntityResult\": {\"last_communication_time\": \"2021-02-27T05:47:05-08:00\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "McAfeeEPO", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1519130056819, 
+    "Name": "Get Last Communication Time", 
+    "Parameters": [], 
+    "ScriptResultName": "isSuccess", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

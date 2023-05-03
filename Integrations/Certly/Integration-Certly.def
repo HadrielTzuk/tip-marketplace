@@ -1,0 +1,33 @@
+{
+    "Description": " Determining whether or not a domain or link is malicious.",
+    "DisplayName": "Certly",
+    "Identifier": "Certly",
+    "Categories": [
+        "Threat Intelligence",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Certly",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://<server-address>"
+        },
+        {
+            "IntegrationIdentifier": "Certly",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Token",
+            "PropertyName": "Api Token",
+            "PropertyType": "3",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M21.1,14.1c-0.3,0.4-0.6,0.8-1,1.1c-0.4-0.4-0.7-0.7-1-1.1c-0.3,0.2-0.5,0.5-0.7,0.7C18.1,15,18,15.3,18,15.7\n\t\t\tc-0.1,1.9-1.6,3.4-3.5,3.4c-1.2,0-2.5,0-3.7,0c-0.4,0-0.8,0-1.2-0.1C8.1,18.6,7,17.2,7,15.7c0-2.1,0-4.2,0-6.4\n\t\t\tc0-1.8,1.5-3.4,3.3-3.4c1.4,0,2.9,0,4.3,0c1.8,0,3.3,1.6,3.4,3.4c0,0.2,0,0.4,0,0.6c1.3,0,2.6,0,3.9,0c0.2,0,0.2-0.1,0.2-0.2\n\t\t\tc0-0.6,0-1.1,0-1.7c0-0.5-0.1-1-0.2-1.5c-0.8-3-3.5-5.1-6.6-5c-1.8,0-3.6,0-5.5,0c-1.1,0-2.1,0.2-3,0.7C4.5,3.4,3.1,5.2,3,7.9\n\t\t\tc-0.1,2.6,0,5.2,0,7.8c0,0.8,0,1.6,0.1,2.5c0.5,3.1,3.3,5.5,6.5,5.5c2,0,4,0,5.9,0c0.7,0,1.3-0.1,2-0.3c2.3-0.8,3.8-2.5,4.5-4.9\n\t\t\tc0.3-1,0.1-2.1,0.2-3.1c0-0.1,0-0.1-0.1-0.2C21.8,14.8,21.5,14.4,21.1,14.1z M8.5,12.5c0,0.8,0.7,1.5,1.5,1.5\n\t\t\tc0.9,0,1.6-0.7,1.6-1.5c0-0.8-0.7-1.5-1.5-1.5C9.3,11,8.5,11.7,8.5,12.5z M21.9,10.9c-1.2,0-2.4,0-3.5,0c-0.1,0-0.2,0-0.3,0v0.8\n\t\t\th4.1c0-0.2,0-0.4,0-0.5C22.2,11,22.1,10.9,21.9,10.9z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 3.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/certly",
+    "MarketingDisplayName": "Certly"
+}

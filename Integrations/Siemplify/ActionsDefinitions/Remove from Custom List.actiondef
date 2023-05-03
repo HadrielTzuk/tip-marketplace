@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1538890893657,
+    "Creator": "Admin",
+    "Description": "Remove an Entity Identifier from a categorized Custom List, in order to perform future comparisons in other actions.",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1538890893657,
+    "Name": "Remove from Custom List",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1538890893657,
+            "CustomActionId": 25,
+            "DefaultValue": "",
+            "Description": "Custom list category to be used.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1538890893657,
+            "Name": "Category",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = \"Remove From Custom List\"\n\n    category = siemplify.parameters[\"Category\"]\n    siemplify.remove_alert_entities_from_custom_list(category)\n\n    output_message = \"The alert's entities were removed from custom list category: {0}.\".format(category)\n    siemplify.LOGGER.info(output_message)\n\n    siemplify.end(output_message, \"true\")\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "ScriptResult",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

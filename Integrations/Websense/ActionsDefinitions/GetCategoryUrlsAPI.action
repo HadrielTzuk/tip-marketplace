@@ -1,0 +1,30 @@
+{
+    "CreationTimeUnixTimeInMs": 1513760581213,
+    "Creator": "admin",
+    "Description": "Get a list off all category's URLs",
+    "Id": -1,
+    "IntegrationIdentifier": "Websense",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1513760581213,
+    "Name": "Get Category Urls API",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1513763540346,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The API manage category name",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513763540346,
+            "Name": "CategoryName",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import *\nfrom WebsenseManager import WebsenseAPIManager\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\toutput_message = 'Error accured'\n\tresult_value = 'False'\n\tconf = siemplify.get_configuration('Websense')\n\t\n\twebsense_manager = WebsenseAPIManager(conf['ApiRoot'], conf['GatewayUser'], conf['GatewayPassword'])\n\tcategory = siemplify.parameters['CategoryName']\n\turls = websense_manager.get_category_urls_list(category)\n\n\tcsv_results = urls\n\tcsv_results.insert(0, \"URLs\")\n\t\n\tsiemplify.result.add_data_table(\"Siemplify Websense Category URls\", csv_results)\n\n\toutput_message = 'Urls list added to result'\n\tresult_value = 'true'\n\t\n\tsiemplify.end(output_message, result_value)\n\t\n\nif __name__ == \"__main__\":\n\tmain()",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

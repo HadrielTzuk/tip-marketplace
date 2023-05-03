@@ -1,0 +1,14 @@
+{
+    "CreationTimeUnixTimeInMs": 1527004402683,
+    "Creator": "Siemplify System",
+    "Description": "Notifies of all the actions, that have individually failed at least 3 times, in the last 3 hours",
+    "Id": -1,
+    "Integration": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527004402683,
+    "Name": "Actions Monitor",
+    "Parameters": [],
+    "RunIntervalInSeconds": 900,
+    "Version": 1
+}

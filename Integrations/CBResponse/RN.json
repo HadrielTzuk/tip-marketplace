@@ -1,0 +1,119 @@
+[
+    {
+        "ChangeDescription": "Added non-mandatory Proxy Parameters. Will be used if set (not empty).",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 20.0,
+        "ItemName": "Carbon Black Response Connector",
+        "ItemType": "Connector",
+        "New": true,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-471"
+    },
+    {
+        "ChangeDescription": "Added Process Segment ID and Process Alert Link to alert data",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 19.0,
+        "ItemName": "CB Response Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-233"
+    },
+    {
+        "ChangeDescription": "Integration refactored.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 21.0,
+        "ItemName": "Carbon Black Response",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-377"
+    },
+    {
+        "ChangeDescription": "Fixed the issue with alert fields exclusion in the Connector.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 22.0,
+        "ItemName": "CB Response Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1589520146,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2752"
+    },
+    {
+        "ChangeDescription": "Updated connector to add missing fields to event data to avoid regression.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 23.0,
+        "ItemName": "CB Response Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1600771916,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4666"
+    },
+    {
+        "ChangeDescription": "Updated API Key to be encrypted.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 23.0,
+        "ItemName": "Carbon Black Response",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1600771916,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4666"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 24.0,
+        "ItemName": "Carbon Black Response",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Functionality enhancements in the Ping action",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 25.0,
+        "ItemName": "Ping",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1618907918,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2279"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 26.0,
+        "ItemName": "Carbon Black Response",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 27.0,
+        "ItemName": "Carbon Black Response",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

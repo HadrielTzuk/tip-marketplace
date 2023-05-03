@@ -1,0 +1,72 @@
+{
+    "CreationTimeUnixTimeInMs": 1514124023595,
+    "Creator": "admin",
+    "Description": "Wait for a thread reply to a message previously sent with a 'Send Message' or 'Send Advanced Message' actions. Note: action is async, please adjust the timeout for action in Siemplify IDE. Action is not running on Siemplify entities.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"client_msg_id\": \"00000000-0000-0000-0000-000000000000\", \"type\": \"message\", \"text\": \"Yes\", \"user\": \"U0000000\", \"ts\": \"1578390603.001200\", \"team\": \"T0000000\", \"blocks\": [{\"type\": \"rich_text\", \"block_id\": \"2Bb=\", \"elements\": [{\"type\": \"rich_text_section\", \"elements\": [{\"type\": \"text\", \"text\": \"Example\"}]}]}], \"thread_ts\": \"1578390492.001100\", \"parent_user_id\": \"U0000000\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "Slack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1664195744000,
+    "Name": "Wait For Reply",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1514124447923,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the channel name in which to track reply for the message. Note: if both Channel and Channel ID are specified, action will only work with ID.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1664195744000,
+            "Name": "Channel",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1514124447923,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the id of the channel, in which to track reply for the message. Note: if both Channel and Channel ID are specified, action will only work with ID.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1664195744000,
+            "Name": "Channel ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1514124447923,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the timestamp of the message to track. Timestamp can be found in the Send Message action json result as ts key.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1664195744000,
+            "Name": "Message Timestamp",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1664195744000,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action should wait for multiple responses  until action timeout. Otherwise, action finishes running after getting first reply to the message.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1664195744000,
+            "Name": "Wait for Multiple Replies",
+            "Type": 1,
+            "Value": false
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

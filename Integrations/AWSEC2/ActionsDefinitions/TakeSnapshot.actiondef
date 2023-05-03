@@ -1,0 +1,44 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Take snapshot of the instance",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSEC2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "{\"EC2_Snapshot\": [{\"Description\": \"\", \"Tags\": [], \"Encrypted\": false, \"VolumeId\": \"vol-036638f2a82cxxxxx\", \"State\": \"pending\", \"VolumeSize\": 8, \"StartTime\": \"2022-11-13 15:45:44.795000+00:00\", \"Progress\": \"\", \"OwnerId\": \"3349265xxxxx\", \"SnapshotId\": \"snap-01dc45b17c4xxxxx\"}]}",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Take Snapshot",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Instance ID. Specify the instance ID",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Instance ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the description of the snapshot",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Description",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

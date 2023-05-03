@@ -1,0 +1,184 @@
+{
+    "CreationTimeUnixTimeInMs": 1517760859856,
+    "Creator": "admin",
+    "Description": "Execute an entity query in Splunk. Note: this action prepares the “Where” clause based on the entities. Check documentation for additional information.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"_bkt\": \"_audit~10~FED9BC6A-E994-4572-86C7-xxxx\", \"_cd\": \"10:239434\", \"_indextime\": \"1613148388\", \"_kv\": \"1\", \"_raw\": \"Audit:[timestamp=02-12-2021 18:46:28.096, user=admin, action=search, info=granted , search_id='1613148xxx.393', search='search index=_* OR index=* | where (device_ip=\\\"10.0.x.x\\\") | head 3', autojoin='1', buckets=0, ttl=600, max_count=500000, maxtime=8640000, enable_lookups='1', extra_fields='*', apiStartTime='ZERO_TIME', apiEndTime='ZERO_TIME', savedsearch_name=\\\"\\\", app=\\\"search\\\", provenance=\\\"N/A\\\", mode=\\\"historical\\\"]\", \"_serial\": \"0\", \"_si\": [\"splunkagenttesting\", \"_audit\"], \"_sourcetype\": \"audittrail\", \"_subsecond\": \".096213\", \"_time\": \"2021-02-12T18:46:28.096+02:00\", \"action\": \"search\", \"apiEndTime\": \"'ZERO_TIME'\", \"apiStartTime\": \"'ZERO_TIME'\", \"app\": \"search\", \"autojoin\": \"'1'\", \"buckets\": \"0\", \"device_ip\": \"10.0.x.x\", \"enable_lookups\": \"'1'\", \"extra_fields\": \"'*'\", \"host\": \"splunkagenttesting\", \"index\": \"_audit\", \"info\": \"granted\", \"linecount\": \"1\", \"max_count\": \"500000\", \"maxtime\": \"8640000\", \"mode\": \"historical\", \"provenance\": \"N/A\", \"savedsearch_name\": \"\", \"search\": \"'search index=_* OR index=* | where (device_ip=\\\"10.0.x.x\\\") | head 3'\", \"search_id\": \"'1613148xxx.393'\", \"source\": \"audittrail\", \"sourcetype\": \"audittrail\", \"splunk_server\": \"splunkagenttesting\", \"timestamp\": \"02-12-2021 18:46:28.096\", \"ttl\": \"600\", \"user\": \"admin\"}, {\"_bkt\": \"_audit~10~FED9BC6A-E994-4572-86C7-xxxx\", \"_cd\": \"10:238430\", \"_indextime\": \"1613148356\", \"_kv\": \"1\", \"_raw\": \"Audit:[timestamp=02-12-2021 18:45:56.996, user=admin, action=search, info=granted , search_id='1613148xxx.391', search='search index=_* OR index=* | where (device_ip=\\\"10.0.x.x\\\") | fields app | head 3', autojoin='1', buckets=0, ttl=600, max_count=500000, maxtime=8640000, enable_lookups='1', extra_fields='*', apiStartTime='ZERO_TIME', apiEndTime='ZERO_TIME', savedsearch_name=\\\"\\\", app=\\\"search\\\", provenance=\\\"N/A\\\", mode=\\\"historical\\\"]\", \"_serial\": \"1\", \"_si\": [\"splunkagenttesting\", \"_audit\"], \"_sourcetype\": \"audittrail\", \"_subsecond\": \".996145\", \"_time\": \"2021-02-12T18:45:56.996+02:00\", \"action\": \"search\", \"apiEndTime\": \"'ZERO_TIME'\", \"apiStartTime\": \"'ZERO_TIME'\", \"app\": \"search\", \"autojoin\": \"'1'\", \"buckets\": \"0\", \"device_ip\": \"10.0.x.x\", \"enable_lookups\": \"'1'\", \"extra_fields\": \"'*'\", \"host\": \"splunkagenttesting\", \"index\": \"_audit\", \"info\": \"granted\", \"linecount\": \"1\", \"max_count\": \"500000\", \"maxtime\": \"8640000\", \"mode\": \"historical\", \"provenance\": \"N/A\", \"savedsearch_name\": \"\", \"search\": \"'search index=_* OR index=* | where (device_ip=\\\"10.0.x.x\\\") | fields app | head 3'\", \"search_id\": \"'1613148xxx.391'\", \"source\": \"audittrail\", \"sourcetype\": \"audittrail\", \"splunk_server\": \"splunkagenttesting\", \"timestamp\": \"02-12-2021 18:45:56.996\", \"ttl\": \"600\", \"user\": \"admin\"}, {\"_bkt\": \"_audit~10~FED9BC6A-E994-4572-86C7-xxxx\", \"_cd\": \"10:230413\", \"_indextime\": \"1613148106\", \"_kv\": \"1\", \"_raw\": \"Audit:[timestamp=02-12-2021 18:41:46.532, user=admin, action=search, info=completed, search_id='1613148xxx.382', total_run_time=1.45, event_count=25, result_count=25, available_count=25, scan_count=26861, drop_count=0, exec_time=1613148103, api_et=N/A, api_lt=N/A, search_et=N/A, search_lt=N/A, is_realtime=0, savedsearch_name=\\\"\\\", search_startup_time=\\\"197\\\", has_error_msg=false, fully_completed_search=true, acceleration_id=\\\"FED9BC6A-E994-4572-86C7-54FE3B50738A_search_admin_f92be55e186xxxx\\\", app=\\\"search\\\", provenance=\\\"N/A\\\", mode=\\\"historical\\\", searched_buckets=11, eliminated_buckets=0, considered_events=26861, total_slices=6622, decompressed_slices=2664, duration.command.search.index=171, invocations.command.search.index.bucketcache.hit=0, duration.command.search.index.bucketcache.hit=0, invocations.command.search.index.bucketcache.miss=0, duration.command.search.index.bucketcache.miss=0, invocations.command.search.index.bucketcache.error=0, duration.command.search.rawdata=744, invocations.command.search.rawdata.bucketcache.hit=0, duration.command.search.rawdata.bucketcache.hit=0, invocations.command.search.rawdata.bucketcache.miss=0, duration.command.search.rawdata.bucketcache.miss=0, invocations.command.search.rawdata.bucketcache.error=0, roles='admin+power+user', search='search index=_* OR index=* | where (device_ip=\\\"10.0.x.x\\\") | fields app | head 100']\", \"_serial\": \"2\", \"_si\": [\"splunkagenttesting\", \"_audit\"], \"_sourcetype\": \"audittrail\", \"_subsecond\": \".532669\", \"_time\": \"2021-02-12T18:41:46.532+02:00\", \"acceleration_id\": \"FED9BC6A-E994-4572-86C7-54FE3B50738A_search_admin_f92be55e1865xxxx\", \"action\": \"search\", \"api_et\": \"N/A\", \"api_lt\": \"N/A\", \"app\": \"search\", \"available_count\": \"25\", \"considered_events\": \"26861\", \"decompressed_slices\": \"2664\", \"device_ip\": \"10.0.x.x\", \"drop_count\": \"0\", \"duration_command_search_index\": \"171\", \"duration_command_search_index_bucketcache_hit\": \"0\", \"duration_command_search_index_bucketcache_miss\": \"0\", \"duration_command_search_rawdata\": \"744\", \"duration_command_search_rawdata_bucketcache_hit\": \"0\", \"duration_command_search_rawdata_bucketcache_miss\": \"0\", \"eliminated_buckets\": \"0\", \"event_count\": \"25\", \"exec_time\": \"1613148103\", \"fully_completed_search\": \"true\", \"has_error_msg\": \"false\", \"host\": \"splunkagenttesting\", \"index\": \"_audit\", \"info\": \"completed\", \"invocations_command_search_index_bucketcache_error\": \"0\", \"invocations_command_search_index_bucketcache_hit\": \"0\", \"invocations_command_search_index_bucketcache_miss\": \"0\", \"invocations_command_search_rawdata_bucketcache_error\": \"0\", \"invocations_command_search_rawdata_bucketcache_hit\": \"0\", \"invocations_command_search_rawdata_bucketcache_miss\": \"0\", \"is_realtime\": \"0\", \"linecount\": \"1\", \"mode\": \"historical\", \"provenance\": \"N/A\", \"result_count\": \"25\", \"roles\": \"'admin+power+user'\", \"savedsearch_name\": \"\", \"scan_count\": \"26861\", \"search\": \"'search index=_* OR index=* | where (device_ip=\\\"10.0.x.x\\\") | fields app | head 100'\", \"search_et\": \"N/A\", \"search_id\": \"'1613148xxx.382'\", \"search_lt\": \"N/A\", \"search_startup_time\": \"197\", \"searched_buckets\": \"11\", \"source\": \"audittrail\", \"sourcetype\": \"audittrail\", \"splunk_server\": \"splunkagenttesting\", \"timestamp\": \"02-12-2021 18:41:46.532\", \"total_run_time\": \"1.45\", \"total_slices\": \"6622\", \"user\": \"admin\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Splunk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517760859856,
+    "Name": "Execute Entity Query",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the query that needs to be executed without the “Where” clause.  Example: index=\"_internal\"",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517913157211,
+            "Name": "Query",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": 100,
+            "Description": "Specify how many results to return. Note: this parameter appends the \"head\" key word to the provided query. Default is 100.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517913157211,
+            "Name": "Results count limit",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": "-24h",
+            "Description": "Specify the start time for the query. Default: -24h",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517913157211,
+            "Name": "Results from",
+            "Type": 0,
+            "Value": "-24h"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": "now",
+            "Description": "Specify the end time for the query. Default: now.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517913157211,
+            "Name": "Results To",
+            "Type": 0,
+            "Value": "now"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of fields that need to be returned. Note: this parameter appends \"fields\" key word to the provided query.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517913157211,
+            "Name": "Result fields",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with IP entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517913157211,
+            "Name": "IP Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with Hostname entities, when preparing the. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517913157211,
+            "Name": "Hostname Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with File Hash entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517913157211,
+            "Name": "File Hash Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with User entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517913157211,
+            "Name": "User Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with URL entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517913157211,
+            "Name": "URL Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with Email Address entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517913157211,
+            "Name": "Email Address Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "If enabled, action will not start execution, unless all of the entity types are available for the specified \".. Entity Keys\". Example: if \"IP Entity Key\" and \"File Hash Entity Key\" are specified, but in the scope there are no file hashes then if this parameter is enabled, action will not execute the query.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542187388209,
+            "Name": "Stop If Not Enough Entities",
+            "Type": 1,
+            "Value": "True"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "OR",
+            "Description": "Specify what should be the logical operator used between different entity types.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Cross Entity Operator",
+            "Type": 15,
+            "OptionalValues": [
+                "OR",
+                "AND"
+            ],
+            "Value": "OR"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\", \"FILEHASH\", \"ADDRESS\", \"USER\"]}",
+    "IsAsync": true
+}

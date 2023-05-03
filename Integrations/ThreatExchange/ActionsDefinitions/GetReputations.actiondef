@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1528905266731, 
+    "Creator": "admin", 
+    "Description": "Get reputations for a given entity", 
+    "Id": -1, 
+    "IntegrationIdentifier": "ThreatExchange", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1528905266731, 
+    "Name": "Get Reputations", 
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\", \"FILEHASH\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

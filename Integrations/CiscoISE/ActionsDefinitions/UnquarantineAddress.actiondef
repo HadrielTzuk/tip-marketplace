@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1527696968282, 
+    "Creator": "admin", 
+    "Description": "Unquarantine endpoint by MAC address", 
+    "Id": -1, 
+    "IntegrationIdentifier": "CiscoISE", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1527696968282, 
+    "Name": "Unquarantine Address", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CiscoISEManager import CiscoISEManager\n\nCISCOISE_PROVIDER = \"CiscoISE\"\n\n\ndef main():\n    # Configuration.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(CISCOISE_PROVIDER)\n    cim = CiscoISEManager(conf['API Root'], conf['Username'], conf['Password'], conf['Verify SSL'])\n\n    # Variables.\n    unquarantined_ips = []\n    result_value = False\n\n    ip_addresses = [entity.identifier for entity in siemplify.target_entities]\n\n    for ip_address in ip_addresses:\n        try:\n            mac_address = cim.get_endpoint_mac_by_ip(ip_address)\n            cim.unquarantine_endpoint(mac_address)\n            unquarantined_ips.append(ip_address)\n        except Exception as err:\n            siemplify.LOGGER.error('Error unquarantine \"{0}\", ERROR: {1}'.format(ip_address, err.message))\n\n    if quarantined_macs:\n        output_message = \"{0} were unquarantined.\".format(\",\".join(unquarantined_ips))\n        result_value = True\n    else:\n        output_message = \"No addresses were unquarantined.\"\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 1.0
+}

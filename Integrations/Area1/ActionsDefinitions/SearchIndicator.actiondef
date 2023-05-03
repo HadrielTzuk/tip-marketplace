@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1550148219124,
+    "Creator": "Admin",
+    "Description": "Search indicator on Area 1 by hash, URL, domain, IP, email.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": \"85f321d7f27916de21992c5284ff632db3db3481\", \"Entity\": \"indicator\"}, {\"EntityResult\": \"red\", \"Entity\": \"tlp\"}, {\"EntityResult\": 80, \"Entity\": \"overall_confidence\"}, {\"EntityResult\": \"85f321d7f27916de21992c5284ff632db3db3481\", \"Entity\": \"name\"}, {\"EntityResult\": [{\"category\": [\"Universal\"], \"threat_type\": [\"Actor Tool\"], \"classification_disposition\": [\"Unclassified\"]}], \"Entity\": \"threat_categories\"}, {\"EntityResult\": \"drizzle\", \"Entity\": \"author\"}, {\"EntityResult\": \"85f321d7f27916de21992c5284ff632db3db3481\", \"Entity\": \"filehash\"}, {\"EntityResult\": 1550125103522, \"Entity\": \"first_detected\"}, {\"EntityResult\": \"85f321d7f27916de21992c5284ff632db3db3481\", \"Entity\": \"Hash_SHA1\"}, {\"EntityResult\": \"Area 1 Identified Malicious\", \"Entity\": \"threat_name\"}, {\"EntityResult\": \"85f321d7f27916de21992c5284ff632db3db3481\", \"Entity\": \"query_term\"}, {\"EntityResult\": \"MAICIOUS\", \"Entity\": \"disposition\"}, {\"EntityResult\": \"file\", \"Entity\": \"family\"}, {\"EntityResult\": [{\"category\": \"Indicator Category\", \"confidence_rating\": 80, \"intervals\": [{\"start\": 1550120952000, \"end\": \"current\"}], \"value\": \"Universal\"}], \"Entity\": \"tag_histories\"}, {\"EntityResult\": 1550125103522, \"Entity\": \"first_seen\"}, {\"EntityResult\": [{\"type\": \"Hash_MD5\", \"name\": \"e412341be78003526999f77e8728526e\"}, {\"type\": \"Hash_SHA256\", \"name\": \"61f006012d2bd7f43bc14ecbeb6a7e690f9d68b4b6b396dab5805be2da75c717\"}], \"Entity\": \"aliases\"}, {\"EntityResult\": \"Hash_SHA1\", \"Entity\": \"type\"}, {\"EntityResult\": 1550120950000, \"Entity\": \"last_seen\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Area1",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1550148219124,
+    "Name": "Search Indicator",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\nfrom Area1Manager import Area1Manager\n\nACTION_NAME = 'Area1_Search Indicators'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    configurations = siemplify.get_configuration('Area1')\n    server_addr = configurations['Api Root']\n    username = configurations['Username']\n    password = configurations['Password']\n    use_ssl = configurations['Use SSL'].lower() == 'true'\n\n    area1_manager = Area1Manager(server_addr, username, password, use_ssl)\n\n    result_value = False\n    json_result = {}\n    errors = []\n\n    for entity in siemplify.target_entities:\n        try:\n            indicator_data = area1_manager.search_indicator(entity.identifier)\n            if indicator_data:\n                result_value = True\n                json_result[entity.identifier] = indicator_data\n                siemplify.result.add_entity_table(entity.identifier, flat_dict_to_csv(dict_to_flat(indicator_data)))\n        except Exception as err:\n            error_message = 'Failed fetching indicator data for \"{0}\", Error: {1}'.format(entity.identifier,\n                                                                                          err.message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    if result_value:\n        output_message = 'Found indicators for target entities.'\n    else:\n        output_message = 'No indicators found for target entities.'\n\n    siemplify.result.add_json_result(json_result)\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

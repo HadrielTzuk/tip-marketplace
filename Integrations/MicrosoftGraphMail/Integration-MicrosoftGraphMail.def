@@ -1,0 +1,66 @@
+{
+    "Description": "Microsoft 365 and Office 365 deliver the power of cloud productivity to businesses of all sizes, helping save time, money, and free up valued resources. The Microsoft 365 and Office 365 plans combine the familiar Microsoft Office desktop suite with cloud-based versions of Microsoft's next-generation communications and collaboration services (including Office for the web, Microsoft Exchange Online, Microsoft Teams, and Microsoft SharePoint Online) to help users be productive from virtually anywhere through the Internet. This integration uses Microsoft Graph Mail API to communicate with Microsoft 365 and Office 365 services.",
+    "DisplayName": "Microsoft Graph Mail",
+    "Identifier": "MicrosoftGraphMail",
+    "PythonVersion": 2,
+    "Categories": [
+        "IT & Infrastructure"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "MicrosoftGraphMail",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Azure AD Endpoint",
+            "PropertyName": "Azure AD Endpoint",
+            "PropertyType": "2",
+            "Value": "https://login.microsoftonline.com"
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftGraphMail",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Microsoft Graph Endpoint",
+            "PropertyName": "Microsoft Graph Endpoint",
+            "PropertyType": "2",
+            "Value": "https://graph.microsoft.com"
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftGraphMail",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftGraphMail",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Secret ID",
+            "PropertyName": "Secret ID",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftGraphMail",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Tenant",
+            "PropertyName": "Tenant",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftGraphMail",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": true
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<svg width=\"25\" height=\"26\" viewBox=\"0 0 25 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M18.2986 2.8615L9.2219 6.19738C9.25319 6.28874 9.27208 6.38585 9.27658 6.4867L18.7998 12.2449C18.9197 12.1563 19.0594 12.0928 19.2111 12.0624L18.2986 2.8615Z\" fill=\"currentColor\"/>\n<path d=\"M8.56882 7.51833C8.79076 7.4442 8.9793 7.29713 9.10602 7.10558L18.4258 12.7691C18.395 12.8672 18.3784 12.9716 18.3784 13.0799C18.3784 13.1847 18.3939 13.2859 18.4228 13.3813L9.29188 18.7315C9.13794 18.578 8.93606 18.4726 8.71065 18.4396L8.56882 7.51833Z\" fill=\"currentColor\"/>\n<path d=\"M7.90694 7.51704C7.76038 7.46744 7.62851 7.38599 7.51955 7.28093L0.576 13.0799L7.88443 18.6779C7.94295 18.6278 8.00713 18.584 8.07587 18.5478L7.90694 7.51704Z\" fill=\"currentColor\"/>\n<path d=\"M7.21041 6.66648L0.5 12.3039L6.07809 2.64654L7.55648 5.75265C7.33921 5.94287 7.20201 6.22229 7.20201 6.53375C7.20201 6.57872 7.20487 6.62302 7.21041 6.66648Z\" fill=\"currentColor\"/>\n<path d=\"M8.1684 5.49836C8.192 5.49676 8.21581 5.49594 8.23982 5.49594C8.43729 5.49594 8.62188 5.5511 8.77902 5.64684L17.7595 2.354L6.66706 2.35269L8.1684 5.49836Z\" fill=\"currentColor\"/>\n<path d=\"M8.4222 20.4953L6.67108 23.6473H17.5339L9.16013 20.3126C8.99054 20.4333 8.78313 20.5043 8.55914 20.5043C8.51272 20.5043 8.46701 20.5012 8.4222 20.4953Z\" fill=\"currentColor\"/>\n<path d=\"M7.54228 19.258L0.662312 13.9714L0.657842 13.9714L6.07777 23.3609L7.83359 20.2085C7.64092 20.0201 7.52133 19.7572 7.52133 19.4665C7.52133 19.395 7.52854 19.3253 7.54228 19.258Z\" fill=\"currentColor\"/>\n<path d=\"M18.8806 13.969C18.9636 14.0191 19.0543 14.058 19.1504 14.0834L18.2986 23.2983L9.54932 19.7781C9.58026 19.6797 9.59694 19.575 9.59694 19.4664C9.59694 19.4175 9.59355 19.3693 9.58699 19.3221L18.8806 13.969Z\" fill=\"currentColor\"/>\n<path d=\"M19.8022 14.0436L19.0148 22.8217L24.491 13.3386H20.4215C20.339 13.6603 20.1061 13.9218 19.8022 14.0436Z\" fill=\"currentColor\"/>\n<path d=\"M19.8962 12.1596C20.1105 12.2715 20.2808 12.4562 20.3745 12.6808L24.5 12.6808L18.9766 3.11243C19.2521 5.69521 19.781 11.001 19.8962 12.1596Z\" fill=\"currentColor\"/>\n</svg>",
+    "Version": 4.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/microsoft-graph-mail",
+    "MarketingDisplayName": "Microsoft Graph Mail"
+}

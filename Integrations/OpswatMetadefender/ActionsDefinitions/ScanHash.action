@@ -1,0 +1,17 @@
+{
+    "CreationTimeUnixTimeInMs": 1513528403463, 
+    "Creator": "admin", 
+    "Description": "Scan hash file in Opswat Metadefender", 
+    "Id": -1, 
+    "IntegrationIdentifier": "OpswatMetadefender", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1513528403463, 
+    "Name": "Scan Hash", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import *\nfrom OpswatMetadefenderManager import OpswatMetadefenderManager\n\nFILEHASH = \"FILEHASH\"\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\tconf = siemplify.get_configuration(\"OpswatMetadefender\")\n\t\n\top_manager = OpswatMetadefenderManager(conf['ApiRoot'], api_key=None)\n\tscope_entities = [entity for entity in siemplify.target_entities if entity.entity_type == FILEHASH]\n\toutput_message = \"No enteties to scan\"\n\tresult_value = 'false'\n\t\n\tfor entity in scope_entities:\n\t\tif entity.entity_type == FILEHASH:\n\t\t\tprint entity.identifier\n\t\t\treport = op_manager.find_hash_reputation(entity.identifier)\n\t\t\tif report != None:\n\t\t\t\tif report['scan_results']['scan_all_result_a'] == 'Infected':\n\t\t\t\t\tentity.is_suspicious = True\n\t\t\t\t\tsiemplify.update_entities([entity])\n\t\t\t\t\tsiemplify.add_entity_insight(entity, \"Found sespicious in Opswat\")\n\t\t\t\t\tprint \"Risk\"\n\t\t\t\t\tresult_value = 'true'\n\t\t\t\tcsv_table = op_manager.report_to_csv(report)\n\t\t\t\tsiemplify.result.add_data_table(entity.identifier, csv_table)\n\t\t\t\tprint csv_table\n\t\t\t\toutput_message = \"Scan resultes added to table\"\n\t\t\telse:\n\t\t\t\toutput_message = \"No Scan Results\"\n\n\tsiemplify.end(output_message, result_value)\n\nif __name__ == \"__main__\":\n\tmain()\n\t", 
+    "ScriptResultName": "is_risky", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Type": 0, 
+    "Version": 2.0
+}

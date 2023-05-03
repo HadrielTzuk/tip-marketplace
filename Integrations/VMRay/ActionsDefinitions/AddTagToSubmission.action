@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1519907424944,
+    "Creator": "admin",
+    "Description": "Add Tag to Submission using Submission ID.",
+    "Id": -1,
+    "IntegrationIdentifier": "VMRay",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519907424944,
+    "Name": "Add Tag to Submission",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519910592077,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The ID of the Submission.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519910592077,
+            "Name": "Submission ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519910592077,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The tag Name that need to be added.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519910592077,
+            "Name": "Tag Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

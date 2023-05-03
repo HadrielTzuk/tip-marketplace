@@ -1,0 +1,83 @@
+{
+    "CreationTimeUnixTimeInMs": 1515645201592,
+    "Creator": "admin",
+    "Description": "List iptables rules on a remote machine",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"-,Chain,Rule\": [\"-P,INPUT,ACCEPT\", \"-P,FORWARD,ACCEPT\", \"-P,OUTPUT,ACCEPT\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SSH",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515645201592,
+    "Name": "List iptables Rules",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516072676258,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Remote server address(e.g: x.x.x.x)",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072676258,
+            "Name": "Remote Server",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072676258,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072676258,
+            "Name": "Remote Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072676258,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072676258,
+            "Name": "Remote Password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072676258,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The default port will be 22.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516072676258,
+            "Name": "Remote Port",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072676258,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The iptables chain that you wish to see (e.g: INPUT, OUTPUT, etc.)",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516072676258,
+            "Name": "Chain",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "results",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

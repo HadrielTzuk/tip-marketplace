@@ -1,0 +1,122 @@
+[
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "QualysVM",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Added new \"Detections\" connector.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Detections Connector",
+        "ItemType": "Connector",
+        "New": true,
+        "PublishTime": 1624360237,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8378"
+    },
+    {
+        "ChangeDescription": "Launch Scan Report - Updated the action's flow.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "Launch Scan Report",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1632295393,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9291"
+    },
+    {
+        "ChangeDescription": "Updated the integration's code to work with Python version 3",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "QualysVM",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1632295393,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9291"
+    },
+    {
+        "ChangeDescription": "Integration's Actions - Updated Output messages and error handling to better indicate the status of the actions",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "QualysVM",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1632295393,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9291"
+    },
+    {
+        "ChangeDescription": "List Scans - Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "List Scans",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1639563779,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10631"
+    },
+    {
+        "ChangeDescription": "Enrich Host - Added support for Hostname entity. Added new configuration parameters. Optional insight is available.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "Enrich Host",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1639563779,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10351"
+    },
+    {
+        "ChangeDescription": "New Action Added - List Endpoint Detections.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "List Endpoint Detections",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1639563779,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10352"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 12.0,
+        "ItemName": "QualysVM",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Detections Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 13.0,
+        "ItemName": "Detections Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1660725408,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11958"
+    }
+]

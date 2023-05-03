@@ -1,0 +1,48 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Perform mitigation actions on the user account via Trend Micro Cloud App Security. Note: only Exchange accounts are supported.",
+    "Id": -1,
+    "IntegrationIdentifier": "TrendMicroCloudAppSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Mitigate Accounts",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "Disable Account",
+            "Description": "Specify what mitigation action should be applied.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Mitigation Action",
+            "Type": 15,
+            "OptionalValues": [
+                "Disable Account",
+                "Enable MFA",
+                "Reset Password",
+                "Revoke Sign In Sessions"
+            ],
+            "Value": "Disable Account"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of email addresses that need to be mitigated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Email Addresses",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

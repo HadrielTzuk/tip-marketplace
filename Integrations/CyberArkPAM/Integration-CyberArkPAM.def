@@ -1,0 +1,104 @@
+{
+  "Categories": [
+    "Access Management",
+    "Identity"
+  ],
+  "Description": "CyberArk's Privileged Access Manager is a full life-cycle solution for managing the most privileged accounts and SSH Keys in the enterprise. It enables organizations to secure, provision, manage, control and monitor all activities associated with all types of privileged identities.",
+  "DocumentationLink": "https://integrations.siemplify.co/doc/cyberarkpam",
+  "DisplayName": "CyberArk PAM",
+  "Identifier": "CyberArkPAM",
+  "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAYAAAClr220AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAlLSURBVHgB7Z1tbFvVGccf94U5L12d0qykG8QJDDUFaU5SqiwKi7PRrtuHNenElzGRhAk0aVKTbJo6VYO8IG3SJi1xP4JGEti0TUgkkbapQEWdjZewQeqIUlChjd0CQSVtnNKmoQkN53/SY65v/Brf5NT285OOfF/OPbHqn5/nPNf33toWBMQwq8waYhgNsHiMFlg8RgssHqMFFo/RAovHaIHFY7TA4jFaYPEYLbB4jBZYPEYLLB6jBRaP0QKLx2iBxWO0wOIxWmDxGC2weIwWWDxGCyweo4UbQrzg7Dwx2YVW8YYnrtL3/jVJlU8cp84j48RkDzYdtzf6L83T46OXqP/kjFxf+PAM0ZUZchbY6bH7SqixsoiYzGZVxQtevUaHjl+WDcsKJZ4CAv75/u3kLnUQk5msmniHjl+iLhHljMIpzOIpGitvERGwVIrIZBYrLh7mcT8bnhLp9fOofaKJp2ABM48VEw/CdY1elK/xiCcegHQPirlfu5gDMumP5eKZC4dESEQ8BRcgmYFl4kUrHBIhGfEUXICkN5aIF6twSITliKfg+V96krJ4tz95kgK2fFout858QM75IP3n3DpaLg77OnrpkXL61tYNxKQHKYu39jcvEeXkkm2LmHOtW5/wcfZrn5H73DBtv3iCdu7cSXM5m+jpU0QvfJTwEFK4lppbab9oWGbSB2s+LZEmF/zCmq9uJNumzTEFhHDlU8eoQrSviGXFlhyiX99NtK+YqMNH9PGV2H8SxQWKDE6x6Ym1YeLiNC2IRkI+m5DQLCBk+/b5kTDhzNwusuUz9y5GvmdOLRWwVhQT7WJOV8tFhRaCM3Py1ZGbeHaLxMrkpwuTtPDpNNkKNssoiHmce3KYCmc/SXiI3VsX23Oi7hgIiEhpt9NToopl4fQB6XxngqIaJHKXFVIqrNzEaG6OFs5N0B2Tb9He+Tdouey7jWhvqZ12faearCYYDMoGnE4npSN9//XLV0Sg+sqvL9k/OPohBS/PhW1DX1dxATk354a2+Scvk/edxcCAcdAHkvkC1/99CvPIdZtDjIUfBGyUKit+WZT9888oVfIs/nr4/X6qq6ujkpKSsNbZ2RnaX1BQQA0NDUuOVX3RBzQ3N5PNZgtrOBbbldQAY5v7qdbf3x/qF2l/eXl5WB+F991z1Pzk/2Vr8Lwq5Fl6Sspz+L1QH2Pf8t++QP3XpZVjCenUfkQ2iFj3O69c7xw4ISTNC8ldX7mVUiXrSkElHWhvb6f6+nopSF9fn2yNjY0y+mFfW1sbDQ4Oyj4A8uD4gYGBsAjpcrmou7s7tO7z+eSxahwjvb29S95TbW1t2HpTU5N8HwqPxyO3FRcXk9vtDm3vfO5E2HGewyep+6cuioSSJjhzVUSxaSlW6199tPd6dDOCPg09r4bmcwOt1WHR0QqyTjwV1Y4ePRomT09Pj2yK1tZWGhoakpELHzbk7OjoCMlqxOFwhAmBZUQor9e7RDwIFA+8L+N4EBtfALwftV2mxncXUyNSINJi38t+at93V8SJvyP3Jup9+B65PPTmR1TveSU0Z3NvC5+vtf3FJ8cH3Q+45PhWk3XiqQiWyJwO0QlpDvIhiuEYyGcGURDRUjE2Nib7R4puxn4KvB/IGw2Vso19VLRDCjx60E0FPx+UInmeP0ntDXdFHEfJ5DszRbFQQmOc1u9/k1YCreKhUt29ezft2LGDxsfHaWJigpIF92t4Xj4bOpkct7/4EBMtJNAPaRWpGcuIktHGVJFUrUMSRCozkNgMophRKnw51BxSrePvq/QLgRDdQHvDdhnhELUgTM/z70UUD8eU/PLfYdsQyczRzkiJxenViJZ7LiDcrl276ODBg1RTUyPXy8rKqKKiQi4nSv+bE1Tp+R91HRlP+IYhfIBIgYkCKVTqiyYsBMMXR7WpqSm5LVJxgh+KzC3auIiaiJBIz8eOHQv18xx+P9SnTczTIJQ8zUGLpzyMRYMRREcFCgREykioVN0kCgtV1VrNqouH6IaJN8QzS4ZvfXV1tZQwloDe00H67hOj9NCz75B/apaSAR8ixItUJeKDtgpIYoxayYDUizSNCKvmd8YKGadIFKoCVYUA6IsgHqQb/9MPQxEOVazxGCO9D+8kR96ifHW/90asllNl1VJtaWmpTKt4jUdRUZFs5vQLyR569gQNn17+txCTfYgHARFNVOGg0hsiS6QUGQsIa0yhGAd/o6WlZUlfVVEbQT9zwQLwRYR8OAYNy96zX87VkGaNUWxYpFpIh5SLFimN9j5yD5U/+qI8t9fQ84qMeuZixFXsoO6fuEKnVnBaBf2srGzXdkSaLSdBV5zbErdsWE9/bP6BjHA4v5UM6F9YWEjBK/P0h9cv0AN/e5sCUSJcbWkBuUsTGx/SISIFAgEaGRmRolRVVclTIng1o/ZHEhLS5uTkhG3D2AcOHJCVsbkfZDI3jK3SKN4TTq9s27ZNriPy79mzR25HG/oAc0GbFO7vv6iSkqjmLvsa/WPkrKxgp4UwOH0yLM71BWfmpTRN9zrlvls22mnszDTNzl0j+/o1VHXHzTKqvX7qgtyPfou/TNgocD3aYRxstwprrk6JNHBOrvzNFleuNN6ZS49W5JMzP7kAqwqHQ6LFm8PhggG+LD59sDbVrllDtnzxK/+GjVI4BS6DR0tGQBQOiKbJzuGY9MAa8SCcY5OYlGySy9GAfEP+Wdp/dx49VhH5ok0UDl1HTqc0j2NufFIWz1lSRAHbhpjCGcHl8V2jn9LTQkLI9+Cdi5HRisKBSR9SnuOpm3wg03Jw5q+lHzmukMd7mlLhqfvL+M6zNMKyu8xww/aPXzxPY+eTf/JTKjf74Po8XKfHVyKnF5bfV4sUiugX68kBZpYjHl+JnN6syJMEIN3jQr5Eb+rmG7qzjxV9dgoEvO+fk3GjXyLi8R1lmcWqPC0KN3yjAIkmYDzxWmq+IW/aZuEyh1V7TFms9BtNPC4cMpdVfyLoUGCWfvXadFj0M4vHhUPmo+VRtACVrzr3x4+izT60iQdU+h167X3aX3kzFw5ZhFbxFPj1w3ET/5cb2cQNIR6TfXCYYbTA4jFaYPEYLbB4jBZYPEYLLB6jBRaP0QKLx2iBxWO0wOIxWmDxGC2weIwWWDxGCyweowUWj9ECi8dogcVjtMDiMVpg8RgtsHiMFr4AzP6RaH5sSNgAAAAASUVORK5CYII=",
+  "IntegrationProperties": [
+    {
+      "IntegrationIdentifier": "CyberArkPAM",
+      "PropertyName": "Api Root",
+      "PropertyDescription": "Specify the API root url.",
+      "PropertyDisplayName": "Api Root",
+      "PropertyType": 2,
+      "IsMandatory": true,
+      "Value": "https://x.x.x.x:port",
+      "Id": 228,
+      "CreationTimeUnixTimeInMs": 1674498363587,
+      "ModificationTimeUnixTimeInMs": 1674498363587
+    },
+    {
+      "IntegrationIdentifier": "CyberArkPAM",
+      "PropertyName": "Username",
+      "PropertyDescription": "Specify the username to use to connect with.",
+      "PropertyDisplayName": "Username",
+      "PropertyType": 2,
+      "IsMandatory": true,
+      "Value": "",
+      "Id": 229,
+      "CreationTimeUnixTimeInMs": 1674498363587,
+      "ModificationTimeUnixTimeInMs": 1674498363587
+    },
+    {
+      "IntegrationIdentifier": "CyberArkPAM",
+      "PropertyName": "Password",
+      "PropertyDescription": "Specify the password to use to connect with.",
+      "PropertyDisplayName": "Password",
+      "PropertyType": 3,
+      "IsMandatory": true,
+      "Value": "",
+      "Id": 230,
+      "CreationTimeUnixTimeInMs": 1674498363587,
+      "ModificationTimeUnixTimeInMs": 1674498363587
+    },
+    {
+      "IntegrationIdentifier": "CyberArkPAM",
+      "PropertyName": "Verify SSL",
+      "PropertyDescription": "If enabled, the certificate configured for the API root is validated.",
+      "PropertyDisplayName": "Verify SSL",
+      "PropertyType": 0,
+      "IsMandatory": false,
+      "Value": "false",
+      "Id": 231,
+      "CreationTimeUnixTimeInMs": 1674498363587,
+      "ModificationTimeUnixTimeInMs": 1674498363587
+    },
+    {
+      "IntegrationIdentifier": "CyberArkPAM",
+      "PropertyName": "CA Certificate",
+      "PropertyDescription": "Specify the CA certificate to use to validate the secure connection to the API root. Parameter accepts the CA certificate in a form of base64 encoded string.",
+      "PropertyDisplayName": "CA Certificate",
+      "PropertyType": 2,
+      "IsMandatory": false,
+      "Value": "",
+      "Id": 232,
+      "CreationTimeUnixTimeInMs": 1674498363587,
+      "ModificationTimeUnixTimeInMs": 1674498363587
+    },
+    {
+      "IntegrationIdentifier": "CyberArkPAM",
+      "PropertyName": "Client Certificate",
+      "PropertyDescription": "Optional if configured for CyberArk PAM, specify the CyberArk client certificate to use to establish connection to the API root. Certificate should be provided in the .p12 format, parameter expects certificate as base64 encoded string.",
+      "PropertyDisplayName": "Client Certificate",
+      "PropertyType": 2,
+      "IsMandatory": false,
+      "Value": "",
+      "Id": 233,
+      "CreationTimeUnixTimeInMs": 1674498363587,
+      "ModificationTimeUnixTimeInMs": 1674498363587
+    },
+    {
+      "IntegrationIdentifier": "CyberArkPAM",
+      "PropertyName": "Client Certificate Passphrase",
+      "PropertyDescription": "Optionally, if the client certificate is requiring a passphrase, specify it for this parameter.",
+      "PropertyDisplayName": "Client Certificate Passphrase",
+      "PropertyType": 3,
+      "IsMandatory": false,
+      "Value": "",
+      "Id": 234,
+      "CreationTimeUnixTimeInMs": 1674498363587,
+      "ModificationTimeUnixTimeInMs": 1674498363587
+    }
+  ],
+  "IsAvailableForCommunity": true,
+  "isCustom": false,
+  "MarketingDisplayName": "CyberArk PAM",
+  "MinimumSystemVersion": 5.3,
+  "SvgImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M5 8.25 12.65 4v4.25l-3.82 2.12-3.82-2.12Z\"/><path d=\"m12.65 16.75 3.71-2.08 3.94-2.17v4.25L12.65 21v-4.25Zm0-8.5V4l7.65 4.25-3.83 2.12-3.82-2.12ZM5 16.33l3.82-1.7 3.82 2.12V21l-7.65-4.67ZM5 8.25l3.82 2.12v4.25L5 16.32V8.24Z\"/></svg>",
+  "Version": 2.0,
+  "PythonVersion": 2
+}

@@ -1,0 +1,95 @@
+{
+    "CreationTimeUnixTimeInMs": 1530432145221,
+    "Creator": "admin",
+    "Description": "Create an incident related to a Siemplify alert",
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530432145221,
+    "Name": "Create Alert Incident",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"sys_tags\": \"\", \"user_input\": \"\", \"calendar_stc\": \"\", \"subcategory\": \"\", \"watch_list\": \"\", \"follow_up\": \"\", \"made_sla\": \"true\", \"sys_created_by\": \"admin\", \"sla_due\": \"\", \"number\": \"INC0010005\", \"group_list\": \"\", \"reassignment_count\": \"0\", \"assigned_to\": \"\", \"sys_mod_count\": \"0\", \"notify\": \"1\", \"resolved_by\": \"\", \"upon_reject\": \"cancel\", \"additional_assignee_list\": \"\", \"category\": \"inquiry\", \"closed_at\": \"\", \"parent_incident\": \"\", \"cmdb_ci\": \"\", \"contact_type\": \"\", \"impact\": \"1\", \"rfc\": \"\", \"expected_start\": \"\", \"knowledge\": \"false\", \"sys_updated_by\": \"admin\", \"caused_by\": \"\", \"comments\": \"\", \"closed_by\": \"\", \"priority\": \"1\", \"state\": \"1\", \"sys_id\": \"6131d0eb2f311010f170c886f699b61c\", \"opened_at\": \"2020-07-10 05:13:25\", \"child_incidents\": \"0\", \"work_notes\": \"\", \"delivery_task\": \"\", \"short_description\": \"4187b92c-7aaa-40ec-a032-833dd5a854e6\", \"comments_and_work_notes\": \"\", \"time_worked\": \"\", \"upon_approval\": \"proceed\", \"company\": \"\", \"business_stc\": \"\", \"correlation_display\": \"\", \"sys_class_name\": \"incident\", \"delivery_plan\": \"\", \"escalation\": \"0\", \"description\": \"\", \"parent\": \"\", \"close_notes\": \"\", \"business_duration\": \"\", \"problem_id\": \"\", \"sys_updated_on\": \"2020-07-10 05:13:25\", \"approval_history\": \"\", \"approval_set\": \"\", \"business_service\": \"\", \"reopened_by\": \"\", \"calendar_duration\": \"\", \"caller_id\": {\"link\": \"https://dev92294.service-now.com/api/now/v1/table/sys_user/6816f79cc0a8016401c5a33be04be441\", \"value\": \"6816f79cc0a8016401c5a33be04be441\"}, \"active\": \"true\", \"approval\": \"not requested\", \"service_offering\": \"\", \"sys_domain_path\": \"/\", \"hold_reason\": \"\", \"activity_due\": \"2020-07-10 07:13:25\", \"severity\": \"3\", \"incident_state\": \"1\", \"resolved_at\": \"\", \"location\": \"\", \"due_date\": \"\", \"work_start\": \"\", \"work_end\": \"\", \"work_notes_list\": \"\", \"sys_created_on\": \"2020-07-10 05:13:25\", \"correlation_id\": \"\", \"contract\": \"\", \"reopened_time\": \"\", \"opened_by\": {\"link\": \"https://dev92294.service-now.com/api/now/v1/table/sys_user/6816f79cc0a8016401c5a33be04be441\", \"value\": \"6816f79cc0a8016401c5a33be04be441\"}, \"close_code\": \"\", \"assignment_group\": \"\", \"sys_domain\": {\"link\": \"https://dev92294.service-now.com/api/now/v1/table/sys_user_group/global\", \"value\": \"global\"}, \"order\": \"\", \"urgency\": \"1\", \"reopen_count\": \"0\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530432145221,
+            "CustomActionId": -1,
+            "DefaultValue": "1",
+            "Description": "Specify impact of the incident. Possible values: 1 for High, 2 for Medium and 3 for Low.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530432145221,
+            "Name": "Impact",
+            "Type": 0,
+            "Value": "1"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530432145221,
+            "CustomActionId": -1,
+            "DefaultValue": "1",
+            "Description": "Specify urgency of the incident. Possible values: 1 for High, 2 for Medium and 3 for Low.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530432145221,
+            "Name": "Urgency",
+            "Type": 0,
+            "Value": "1"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530432145221,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specify category of the incident.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530432145221,
+            "Name": "Category",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530432145221,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specify full name of the group that was assigned to the incident.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530432145221,
+            "Name": "Assignment group ID",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530432145221,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specify full name of the user that was assigned to the incident.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530432145221,
+            "Name": "Assigned User ID",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530432145221,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specify description of the incident.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530432145221,
+            "Name": "Description",
+            "Type": 11,
+            "Value": null
+        }
+    ],
+    "Script": "# Imports\nfrom SiemplifyAction import SiemplifyAction\nfrom ServiceNowManager import ServiceNowManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    # Configuration.\n    conf = siemplify.get_configuration('ServiceNow')\n    username = conf['Username']\n    password = conf['Password']\n    api_root = conf['Api Root']\n    service_now_manager = ServiceNowManager(api_root, username, password, default_incident_table)\n\n    # Get context alert properties.\n    context_alert_id = siemplify.current_alert.external_id\n\n    # Parameters.\n    short_description = context_alert_id\n    impact = siemplify.parameters.get('Impact')\n    urgency = siemplify.parameters.get('Urgency')\n    category = siemplify.parameters.get('Category') or None\n    assignment_group = siemplify.parameters.get('Assignment group ID') or None\n    assigned_to = siemplify.parameters.get('Assigned User ID') or None\n    description = siemplify.parameters.get('Description') or None\n\n    # Execute Create Ticket.\n    incident_number = service_now_manager.create_ticket(short_description=short_description,\n                                                                 impact=impact, urgency=urgency, category=category,\n                                                                 assignment_group=assignment_group,\n                                                                 assigned_to=assigned_to,\n                                                                 description=description)\n\n    if incident_number:\n        output_message = \"ServiceNow incident - {0} was created.\".format(incident_number)\n        result_value = incident_number\n        # Attach ticket number to alert.\n        siemplify.update_alerts_additional_data({siemplify.current_alert.identifier: incident_number})\n    else:\n        output_message = \"Failed to create ServiceNow incident.\"\n        result_value = None\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,44 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381262567,
+    "Creator": "Admin",
+    "Description": "Downloads quarantined email.",
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"file_path\": \"/tmp/Quarantined_email_2376-4fde-977c-87888e7xxx.eml\"}]",
+		"ResultName": "JsonResult"
+	}],
+    "Id": -1,
+    "IntegrationIdentifier": "FireEyeEX",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535381262567,
+    "Name": "Download Quarantined Email",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381262567,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specify the queue id of the email that needs to be downloaded.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381262567,
+            "Name": "Queue ID",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381262567,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify where the action should save the files. If nothing is specified, action will not save the file on the disk. ",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381262567,
+            "Name": "Download Path",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

@@ -1,0 +1,156 @@
+{
+    "CreationTimeUnixTimeInMs": 1547737281296,
+    "Description": "The Okta Identity Cloud provides secure identity management with Single Sign-On, Multi-factor Authentication, Lifecycle Management (Provisioning), and more.",
+    "DisplayName": "Okta",
+    "Id": -1,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/okta",
+    "Identifier": "Okta",
+    "Categories": [
+        "Identity",
+        "IAM",
+        "Access Management",
+        "Operational"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Id": -1,
+            "IntegrationIdentifier": "Okta",
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": 2,
+            "Value": "https://{okta_domain}.com/"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Id": -1,
+            "IntegrationIdentifier": "Okta",
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "PropertyDisplayName": "Api Token",
+            "PropertyName": "Api Token",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Id": -1,
+            "IntegrationIdentifier": "Okta",
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": "False"
+        }
+    ],
+    "IntegrationSupportedActions": [
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Description": "Test Connectivity",
+            "Id": 0,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "Name": "Ping"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Description": "Get the list of users",
+            "Id": 0,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "Name": "List Users"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Description": "Get the groups that the user is a member of",
+            "Id": 0,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "Name": "List User Groups"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Description": "Add a group",
+            "Id": 0,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "Name": "Add Group"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Description": "Generate a one-time token that can be used to reset a user's password",
+            "Id": 0,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "Name": "Reset Password"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Description": "Set the password of a user without validating existing credentials",
+            "Id": 0,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "Name": "Set Password"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Description": "Disables the specified user",
+            "Id": 0,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "Name": "Disable User"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Description": "Enables the specified user",
+            "Id": 0,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "Name": "Enable User"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Description": "Get information about a user",
+            "Id": 0,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "Name": "Get User"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Description": "Get information about a group",
+            "Id": 0,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "Name": "Get Group"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Description": "List identity providers (IdPs) in your organization",
+            "Id": 0,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "Name": "List Providers"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Description": "Lists all roles assigned to a user",
+            "Id": 0,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "Name": "List Roles"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Description": "Assign a role to a user",
+            "Id": 0,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "Name": "Assign Role"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1547737281296,
+            "Description": "Unassign a role to a user",
+            "Id": 0,
+            "ModificationTimeUnixTimeInMs": 1547737281296,
+            "Name": "Unassign Role"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "ModificationTimeUnixTimeInMs": 1547737281296,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"><g><g><path d=\"M12.5,2C6.7,2,2,6.7,2,12.5C2,18.3,6.7,23,12.5,23C18.3,23,23,18.3,23,12.5C23,6.7,18.3,2,12.5,2z M12.5,17.8c-2.9,0-5.3-2.4-5.3-5.3c0-2.9,2.4-5.3,5.3-5.3s5.3,2.4,5.3,5.3C17.8,15.4,15.4,17.8,12.5,17.8z\"/></g></g></svg>",
+    "ShouldInstalledInSystem": false,
+    "Version": 6.0,
+    "MarketingDisplayName": ""
+}

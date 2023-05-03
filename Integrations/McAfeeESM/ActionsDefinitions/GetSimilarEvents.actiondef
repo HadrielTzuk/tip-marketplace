@@ -1,0 +1,58 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Get events related to the entities in McAfee ESM. Supported entities: Hostname, IP Address, User. Note: Action is running as async, please adjust script timeout value in Chronicle SOAR IDE for action as needed.",
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeESM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"Entity\":\"172.30.xxx.xx\",\"EntityResult\":[{\"Alert.IPSIDAlertID\":\"144115xxxxxxxxxxxxxxxxx\",\"Alert.AvgSeverity\":\"17\",\"Rule.msg\":\"User Logon - IMPORTANT: Please ensure you have the latest hotfix (See description)\",\"Alert.EventCount\":\"1\",\"Alert.SrcIP\":\"10.0.xxx.xxx\",\"Alert.DstIP\":\"172.30.xxx.xxx\",\"Alert.Protocol\":\"n/a\",\"Alert.LastTime\":\"01/11/2023 19:55:23\",\"Action.Name\":\"success\",\"Alert.SrcPort\":\"111\",\"Alert.DstPort\":\"222\"}]}]",
+		"ResultName": "JsonResult"
+	}],
+    "Name": "Get Similar Events",
+    "Parameters": [
+        {
+            "CustomActionId": -1,
+            "IsMandatory": true,
+            "DefaultValue": 1,
+            "Description": "Specify how many hours backwards to search.",
+            "Name": "Hours Back",
+            "Value": 1,
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "ModificationTimeUnixTimeInMs": 1570446244
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "144115188075855872/8",
+            "Description": "Specify the IP SID for the search.",
+            "Name": "IPS ID",
+            "Value": "144115188075855872/8",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "ModificationTimeUnixTimeInMs": 1570446244
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many results to return. Max: 200 per entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "Name": "Result Limit",
+            "Type": 0,
+            "Value": 50
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\", \"USERUNIQNAME\"]}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

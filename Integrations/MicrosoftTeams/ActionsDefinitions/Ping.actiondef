@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1543164953601,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftTeams",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543164953601,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom MicrosoftManager import MicrosoftTeamsManager\r\nimport json\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n\r\n    conf = siemplify.get_configuration(\"MicrosoftTeams\")\r\n    client_id = conf[\"Client ID\"]\r\n    secret_id = conf[\"Secret ID\"]\r\n    tenant = conf[\"Tenant\"]\r\n    token = conf.get(\"Refresh Token\")\r\n\r\n    mtm = MicrosoftTeamsManager(client_id, secret_id, tenant)\r\n\r\n    # refresh token\r\n    mtm.refresh_token(token)\r\n\r\n    teams = mtm.list_teams() or []\r\n\r\n    for team in teams:\r\n        siemplify.result.add_json(\"Team {0}\".format(team.get(\"displayName\")), json.dumps(teams))\r\n    if teams:\r\n        output_message = \"Successfully get teams.\"\r\n    else:\r\n        output_message = \"No results were found.\"\r\n\r\n    siemplify.end(output_message, json.dumps(teams))\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n\r\n",
+    "ScriptResultName": "is_connected",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1520179343760,
+    "Creator": "admin",
+    "Description": "Change the enforcement mode of a policy by its ID",
+    "Id": -1,
+    "IntegrationIdentifier": "F5BigIQ",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1520179343760,
+    "Name": "Change Policy Enforcement Mode",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1520179502961,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1520179502961,
+            "Name": "Policy ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1520179502961,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "e.g. blocking",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1520179502961,
+            "Name": "Enforcement Mode",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,36 @@
+{
+    "CreationTimeUnixTimeInMs": 1525002829777,
+    "Creator": "System",
+    "Description": "Run an arbitrary AQL query against the Qradar instance. The action returns an output in CSV format.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"events\": [{\"username\": \"None\", \"category\": 4003, \"starttime\": 1548682790158, \"destinationip\": \"1.1.1.1\", \"eventcount\": 13, \"qid\": 20257872, \"magnitude\": 3, \"destinationport\": 53, \"protocolid\": 17, \"sourceport\": 50597, \"identityip\": \"1.1.1.1\", \"sourceip\": \"1.1.1.1\", \"logsourceid\": 71}, {\"username\": \"None\", \"category\": 8053, \"starttime\": 1548682800217, \"destinationip\": \"1.1.1.1\", \"eventcount\": 1, \"qid\": 20280296, \"magnitude\": 3, \"destinationport\": 443, \"protocolid\": 6, \"sourceport\": 49230, \"identityip\": \"1.1.1.1\", \"sourceip\": \"1.1.1.1\", \"logsourceid\": 71}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "QRadar",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1525002829777,
+    "Name": "QRadar AQL Search",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1525002829777,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Query format to execute for example, “Select * from flows limit 10 last 10 minutes”.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1525002829777,
+            "Name": "Query Format",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyDataModel import EntityTypes\n# CR: Never import *, and remoev unused imports\nfrom SiemplifyAction import *\nfrom QRadarManager import *\nimport json\nimport sys\n\n# Consts.\nACTION_SCRIPT_NAME = 'QRadar Run AQL Query'\nRESULT_TABLE_HEADER = 'Query results'\n\n\ndef main():\n\n    # Configuratoins\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('QRadar')\n    qradar_wrapper = QRadarWrapper(conf['API Root'], conf['Api Token'])\n    siemplify.script_name = ACTION_SCRIPT_NAME\n\n    # parameters\n    query = siemplify.parameters['Query Format']\n    result_value = False\n\n    # Get search id for query.\n    # CR: Don't catch the exceptions. Just let them raise to the surface.\n    try:\n        search_id = qradar_wrapper.run_query(query)\n    except Exception as err:\n        siemplify.LOGGER.error('Error runnig query {0}, Error: {1}'.format(query, err.message))\n        siemplify.LOGGER._log.exception(err)\n        raise Exception('Error runnig query {0}, Error: {1}'.format(query, err.message))\n\n    # Get csv table.\n    # CR: Don't catch the exceptions. Just let them raise to the surface.\n    try:\n        csv_table = qradar_wrapper.retrieve_search_results_csv(search_id)\n    except Exception as err:\n        siemplify.LOGGER.error('Error fetching data for  query id {0}, Error: {1}'.format(search_id, err.message))\n        siemplify.LOGGER._log.exception(err)\n        raise Exception('Error fetching data for  query id {0}, Error: {1}'.format(search_id, err.message))\n\n    if csv_table:\n        output_message = 'Found data for query.'\n        result_value = True\n        siemplify.result.add_data_table(RESULT_TABLE_HEADER, csv_table)\n    else:\n        output_message = 'No data found for query.'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "results",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

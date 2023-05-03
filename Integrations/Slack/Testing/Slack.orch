@@ -1,0 +1,295 @@
+{
+  "Identifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "Slack",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "87ff5b4b-1f0e-4930-bf67-0382d885d7f2",
+      "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+      "ParentStepIdentifiers": [
+        "fec7e81a-1dc5-4f0e-81b8-aa418977380e"
+      ],
+      "ParentStepIdentifier": "fec7e81a-1dc5-4f0e-81b8-aa418977380e",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Slack_Get User Details By Id_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Slack_Get User Details By Id",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "87ff5b4b-1f0e-4930-bf67-0382d885d7f2",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "ScriptName",
+          "Value": "Slack_Get User Details By Id",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        },
+        {
+          "ParentStepIdentifier": "87ff5b4b-1f0e-4930-bf67-0382d885d7f2",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"User Id\":\"U0T35DCFP\"}",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        },
+        {
+          "ParentStepIdentifier": "87ff5b4b-1f0e-4930-bf67-0382d885d7f2",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145761058,
+      "ModificationTimeUnixTimeInMs": 1519145761058
+    },
+    {
+      "Identifier": "5b81cc2f-1285-435e-8692-2b83c0b94a87",
+      "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+      "ParentStepIdentifiers": [
+        "1b13d6c1-997e-4a57-88dc-aa2cf85721e5"
+      ],
+      "ParentStepIdentifier": "1b13d6c1-997e-4a57-88dc-aa2cf85721e5",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Slack_Send Message_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Slack_Send Message",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "5b81cc2f-1285-435e-8692-2b83c0b94a87",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "ScriptName",
+          "Value": "Slack_Send Message",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        },
+        {
+          "ParentStepIdentifier": "5b81cc2f-1285-435e-8692-2b83c0b94a87",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Channel\":\"random\",\"Message\":\"pb test message\"}",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        },
+        {
+          "ParentStepIdentifier": "5b81cc2f-1285-435e-8692-2b83c0b94a87",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145761058,
+      "ModificationTimeUnixTimeInMs": 1519145761058
+    },
+    {
+      "Identifier": "c3a149c1-53f8-43eb-996e-3d8b587516a3",
+      "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+      "ParentStepIdentifiers": [
+        "5b81cc2f-1285-435e-8692-2b83c0b94a87"
+      ],
+      "ParentStepIdentifier": "5b81cc2f-1285-435e-8692-2b83c0b94a87",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Slack_Upload File_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Slack_Upload File",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "c3a149c1-53f8-43eb-996e-3d8b587516a3",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "ScriptName",
+          "Value": "Slack_Upload File",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        },
+        {
+          "ParentStepIdentifier": "c3a149c1-53f8-43eb-996e-3d8b587516a3",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"File Name\":\"CustomActions\",\"File Path\":\"C:\\\\Users\\\\Admin\\\\Desktop\\\\ALLrequirements.txt\",\"Channel\":\"qa\"}",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        },
+        {
+          "ParentStepIdentifier": "c3a149c1-53f8-43eb-996e-3d8b587516a3",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145761058,
+      "ModificationTimeUnixTimeInMs": 1519145761058
+    },
+    {
+      "Identifier": "1b13d6c1-997e-4a57-88dc-aa2cf85721e5",
+      "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+      "ParentStepIdentifiers": [
+        "a254ee94-13db-4dc3-b289-abe355b3b2d0"
+      ],
+      "ParentStepIdentifier": "a254ee94-13db-4dc3-b289-abe355b3b2d0",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Slack_List Users_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Slack_List Users",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "1b13d6c1-997e-4a57-88dc-aa2cf85721e5",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "ScriptName",
+          "Value": "Slack_List Users",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        },
+        {
+          "ParentStepIdentifier": "1b13d6c1-997e-4a57-88dc-aa2cf85721e5",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        },
+        {
+          "ParentStepIdentifier": "1b13d6c1-997e-4a57-88dc-aa2cf85721e5",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145761058,
+      "ModificationTimeUnixTimeInMs": 1519145761058
+    },
+    {
+      "Identifier": "fec7e81a-1dc5-4f0e-81b8-aa418977380e",
+      "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Slack_Ask Question_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Slack_Ask Question",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "fec7e81a-1dc5-4f0e-81b8-aa418977380e",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "ScriptName",
+          "Value": "Slack_Ask Question",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        },
+        {
+          "ParentStepIdentifier": "fec7e81a-1dc5-4f0e-81b8-aa418977380e",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Channel\":\"qa\",\"Question\":\"Hey how r u???\"}",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        },
+        {
+          "ParentStepIdentifier": "fec7e81a-1dc5-4f0e-81b8-aa418977380e",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145761058,
+      "ModificationTimeUnixTimeInMs": 1519145761058
+    },
+    {
+      "Identifier": "a254ee94-13db-4dc3-b289-abe355b3b2d0",
+      "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+      "ParentStepIdentifiers": [
+        "87ff5b4b-1f0e-4930-bf67-0382d885d7f2"
+      ],
+      "ParentStepIdentifier": "87ff5b4b-1f0e-4930-bf67-0382d885d7f2",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Slack_List Channels_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Slack_List Channels",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "a254ee94-13db-4dc3-b289-abe355b3b2d0",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "ScriptName",
+          "Value": "Slack_List Channels",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        },
+        {
+          "ParentStepIdentifier": "a254ee94-13db-4dc3-b289-abe355b3b2d0",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        },
+        {
+          "ParentStepIdentifier": "a254ee94-13db-4dc3-b289-abe355b3b2d0",
+          "ParentWorkflowIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145761058,
+          "ModificationTimeUnixTimeInMs": 1519145761058
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145761058,
+      "ModificationTimeUnixTimeInMs": 1519145761058
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "56049fe6-beb3-4ff5-bdd4-84a9fa0b4bb3",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "ff3cf004-d009-4b39-9193-b450bad8c936",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Slack",
+      "AllEnvironments": "",
+      "Id": 53,
+      "CreationTimeUnixTimeInMs": 1519145761058,
+      "ModificationTimeUnixTimeInMs": 1519145761058
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 53,
+  "CreationTimeUnixTimeInMs": 1519145761058,
+  "ModificationTimeUnixTimeInMs": 1519145761058
+}

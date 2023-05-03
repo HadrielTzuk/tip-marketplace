@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1510668051559, 
+    "Creator": "Admin", 
+    "Description": "Retrieve information about agent version from the endpoints in McAfee ePO. Supported entities: Hostname, IP.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"ePO_agent_version\": \"5.6.6.232\"}, \"Entity\": \"My-Host\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeEPO",
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1510668051559, 
+    "Name": "Get McAfee Epo Agent Version", 
+    "Parameters": [], 
+    "ScriptResultName": "McAfee Agent Version", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 2.0
+}

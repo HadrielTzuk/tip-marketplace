@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1525002829777,
+    "Creator": "admin",
+    "Description": "Get MITRE details about rules in Qradar using the Use Case Manager application.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"rulename\":\"Excessive Database Connections\",\"id\":\"SYSTEM-xxxx\",\"has_ibm_default\":true,\"last_updated\":1591634177302,\"mapping\":{\"Discovery\":{\"confidence\":\"medium\",\"user_override\":false,\"enabled\":true,\"ibm_default\":true,\"id\":\"TAxxxx\",\"techniques\":{}},\"Initial Access\":{\"confidence\":\"low\",\"user_override\":false,\"enabled\":true,\"ibm_default\":true,\"id\":\"TAxxxx\",\"techniques\":{}}},\"min-mitre-version\":7},{\"rulename\":\"4897fd3d-d623-4727-83a5-xxxxxxxxxx\",\"id\":\"4897fd3d-d623-4727-83a5-xxxxxxxxxx\",\"has_ibm_default\":true,\"last_updated\":1607611408002,\"mapping\":{\"Initial Access\":{\"confidence\":\"medium\",\"user_override\":false,\"enabled\":true,\"ibm_default\":true,\"id\":\"TAxxxx\",\"techniques\":{\"Spearphishing Link\":{\"confidence\":\"medium\",\"enabled\":true,\"id\":\"T1xxxx\",\"parentTechniqueName\":\"Phishing\"},\"Spearphishing Attachment\":{\"confidence\":\"medium\",\"enabled\":true,\"id\":\"T1xxxx\",\"parentTechniqueName\":\"Phishing\"}}},\"Credential Access\":{\"confidence\":\"low\",\"user_override\":false,\"enabled\":true,\"ibm_default\":true,\"id\":\"TAxxxx\",\"techniques\":{}}},\"min-mitre-version\":7}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "QRadar",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1525002829777,
+    "Name": "Get Rule MITRE Coverage",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1525002829777,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of rule names for which action should return MITRE details.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1525002829777,
+            "Name": "Rule Names",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will create an insight containing information about MITRE coverage of the rules.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "Name": "Create Insight",
+            "Type": 1,
+            "Value": true
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

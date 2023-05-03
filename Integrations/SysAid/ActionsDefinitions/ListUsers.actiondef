@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1534436861977,
+    "Creator": "Admin",
+    "Description": "List SysAid users.",
+    "Id": -1,
+    "IntegrationIdentifier": "SysAid",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534436861977,
+    "Name": "List Users",
+    "Parameters": [],
+    "ScriptResultName": "users",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

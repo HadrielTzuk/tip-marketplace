@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1518615120141, 
+    "Creator": "admin", 
+    "Description": "Get assets that are related to an IP address", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [{\"id\": \"0\", \"description\": \"All defining ranges of the Group in whose context this Asset is being evaluated.\", \"name\": \"All Defined Ranges\"}, {\"id\": \"2\", \"description\": \"This asset uses the Scan Summary plugin to detect if a host has been scanned by Nessus. The Scan Summary plugin contains the list of tests conducted during the most recent scan.\", \"name\": \"Systems that have been Scanned\"}, {\"id\": \"13\", \"description\": \"Leverage Nessus plugin 10180 (Ping the remote host) and Nessus plugin 12503 (Host Fully Qualified Domain Name (FQDN) Resolution) to find hosts that don't have a resolvable FQDN in DNS.\", \"name\": \"Scanned Hosts Not in DNS\"}], \"Entity\": \"1.1.1.1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "TenableSecurityCenter", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1518615120141, 
+    "Name": "Get Related Assets", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519286884436, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The repository name.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1519286884436, 
+            "Name": "Repository Name", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

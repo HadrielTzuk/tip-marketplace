@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1542187768573,
+    "Creator": "Admin",
+    "Description": "Fetch system version.",
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOneV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542187768573,
+    "Name": "Get System Version",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

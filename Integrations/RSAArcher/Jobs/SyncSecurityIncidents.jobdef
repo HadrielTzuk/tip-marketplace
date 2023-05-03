@@ -1,0 +1,81 @@
+{
+    "CreationTimeUnixTimeInMs": 1530453125371,
+    "Creator": "admin",
+    "Description": "This job will synchronize security incidents in RSA Archer and Siemplify.",
+    "Id": -1,
+    "Integration": "RSAArcher",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530453125371,
+    "Name": "Sync Security Incidents",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "http://x.x.x.x/RSAarcher",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "API Root",
+            "Description": "API Root of the RSA Archer instance.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530435938022,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530435938022,
+            "Name": "Instance Name",
+            "Description": "Name of the RSA Archer instance.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Username",
+            "Description": "Username of the RSA Archer account.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Password",
+            "Description": "Password of the RSA Archer account.",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Sync Fields",
+            "Description": "Specify a comma-separated list of fields that need to be synced.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530435938022,
+            "DefaultValue": true,
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530435938022,
+            "Name": "Verify SSL",
+            "Description": "If enabled, verify the SSL certificate for the connection to the RSA Archer server is valid.",
+            "Type": 0
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Version": 1.0
+}

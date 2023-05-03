@@ -1,0 +1,51 @@
+{
+    "Description": "ExtraHop provides cloud-native cybersecurity solutions to help enterprises detect and respond to advanced threats—before they compromise your business.",
+    "DisplayName": "Extrahop",
+    "Identifier": "Extrahop",
+    "MarketingDisplayName": "Extrahop",
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Extrahop",
+            "PropertyName": "API Root",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://{instance}.extrahop.com"
+        },
+        {
+            "IntegrationIdentifier": "Extrahop",
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Extrahop",
+            "PropertyDisplayName": "Client Secret",
+            "PropertyName": "Client Secret",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Extrahop",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg id=\"Layer_1\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M10.23,7.79c-.05,0-.09,0-.13,0l-4,.6c-.65.13-.91,1.34-1,2.63s.3,2.29.9,2.37l3.84,0c.6-.09,1.21-1.08,1.29-2.8S10.79,7.79,10.23,7.79ZM4.58,4H4.49l-2.84.43C1.22,4.52,1,5.34,1,6.29s.22,1.59.65,1.63H4.28c.47-.08.86-.77.9-2S5,4,4.58,4Zm8,8.75-.39.05c-1,.13-1.38,2-1.46,4.05s.47,3.58,1.42,3.67h5.91c.9-.13,1.72-1.38,2-3.63l-5.17.05C13.59,16.81,12.82,15.13,12.6,12.75ZM22.47,6.2a.55.55,0,0,0-.25,0l-6.95,1c-1.12.22-1.55,2.29-1.64,4.53s.48,4,1.56,4.06h6.55C22.82,15.73,23.85,14,24,11,24.11,8.23,23.47,6.2,22.47,6.2Z\"/></svg>",
+    "Version": 2.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/extrahop"
+}

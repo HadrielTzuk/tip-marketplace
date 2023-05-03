@@ -1,0 +1,62 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Get details of mitigations per mailbox.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"incidentID\":1000000,\"mitigationID\":40000000,\"incidentState\":\"False Positive\",\"remediatedTime\":null,\"mailboxId\":1000000,\"mailboxEmail\":\"bruce.wayne@siemplifycyarx.onmicrosoft.com\",\"subject\":\"Die\",\"senderEmail\":\"bruce.wayne@abv.bg\",\"senderIP\":\"2603:10a6:xxxxxxxxx\",\"reportedBy\":\"bruce.wayne@siemplifycyarx.onmicrosoft.com\",\"resolution\":\"False Positive\",\"spfResult\":\"fail\"},{\"incidentID\":1000000,\"mitigationID\":4000000,\"incidentState\":\"False Positive\",\"remediatedTime\":null,\"mailboxId\":1000000,\"mailboxEmail\":\"james.bond@siemplifycyarx.onmicrosoft.com\",\"subject\":\"Die\",\"senderEmail\":\"bruce.wayne@abv.bg\",\"senderIP\":\"2603:10a6:xxxxxxxxx\",\"reportedBy\":\"bruce.wayne@siemplifycyarx.onmicrosoft.com\",\"resolution\":\"False Positive\",\"spfResult\":\"fail\"},{\"incidentID\":1000000,\"mitigationID\":40000000,\"incidentState\":\"False Positive\",\"remediatedTime\":null,\"mailboxId\":1000000,\"mailboxEmail\":\"bruce.wayne@siemplifycyarx.onmicrosoft.com\",\"subject\":\"Die\",\"senderEmail\":\"bruce.wayne@abv.bg\",\"senderIP\":\"2603:10a6:xxxxxxxxx\",\"reportedBy\":\"bruce.wayne@siemplifycyarx.onmicrosoft.com\",\"resolution\":\"False Positive\",\"spfResult\":\"fail\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "IronScales",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Get Mitigations Per Mailbox",
+    "Parameters": [
+        {
+            "Name": "Incidents IDs",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Provide a comma separated list of incident IDs to search for.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Period",
+            "OptionalValues": [
+                "Last 24 hours",
+                "Last 7 days",
+                "Last 90 days",
+                "Last 180 days",
+                "Last 360 days",
+                "Current year to date",
+                "All time"
+            ],
+            "Type": 15,
+            "Value": "All time",
+            "DefaultValue": "All time",
+            "IsMandatory": false,
+            "Description": "Specify the time period for which you would like to get mitigations per mailbox for.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Max Pages to Fetch",
+            "Type": 0,
+            "Value": 1,
+            "DefaultValue": 1,
+            "IsMandatory": true,
+            "Description": "Specify the maximum number of pages you would like to fetch.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

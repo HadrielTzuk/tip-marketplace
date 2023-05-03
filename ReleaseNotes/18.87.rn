@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 18.87</h2><h5>Published on 30 October, 2022</h5><hr><h3>Actions</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     MicrosoftAzureSentinel\n    </b>\n   </li>\n   <ul>\n    <li>\n     Update Incident Details\n    </li>\n    <ul>\n     <li>\n      Update Incident Details - Updated functionality for \"Number of Retries\" and \"Retry Every\" parameters.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "18.87",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "30/10/22",
+    "Title": "Release Notes"
+}

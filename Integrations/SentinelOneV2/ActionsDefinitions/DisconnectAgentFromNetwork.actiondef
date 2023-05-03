@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1542186868889, 
+    "Creator": "Admin", 
+    "Description": "Disconnect agent from network by it's host name or IP address.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SentinelOneV2", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1542186868889, 
+    "Name": "Disconnect Agent From Network", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 2.0
+}

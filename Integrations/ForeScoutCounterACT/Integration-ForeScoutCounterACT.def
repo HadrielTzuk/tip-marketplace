@@ -1,0 +1,60 @@
+{
+    "Description": "The Forescout device visibility platform provides insight into the diverse types of devices connected to your heterogeneous network—from campus and data center to cloud and operational technology networks. In other words, your extended enterprise. With one platform, you gain a consolidated view of traditional systems, mobile and IoT devices, virtual machines and cloud instances, and now, operational technology (OT) systems.",
+    "DisplayName": "ForeScout CounterACT",
+    "Identifier": "ForeScoutCounterACT",
+    "MarketingDisplayName": "ForeScout CounterACT",
+    "Categories": [
+        "Network Security",
+        "NAC",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ForeScoutCounterACT",
+            "PropertyName": "API Root",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://{ip address}"
+        },
+        {
+            "IntegrationIdentifier": "ForeScoutCounterACT",
+            "PropertyName": "Username",
+            "PropertyDisplayName": "Username",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ForeScoutCounterACT",
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ForeScoutCounterACT",
+            "IsMandatory": false,
+            "PropertyDisplayName": "CA Certificate File",
+            "PropertyName": "CA Certificate File",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ForeScoutCounterACT",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\"\r\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"><g><g><path d=\"M14.2,5.6l-9.8,4.6c-0.5,0.3-1,0.7-1.2,1.2c-0.5,1.3,0,2.7,1.2,3.3l9.8,4.6l1.2-2.8l-8.8-4.1l8.8-4.1L14.2,5.6z M19.7,3\r\n\t\t\tL17,4.2c1.3,2.5,2.1,5.4,2.1,8.3c0,2.9-0.7,5.7-2.1,8.3l2.7,1.2c1.5-2.9,2.3-6.2,2.3-9.5C22,9.2,21.2,5.9,19.7,3z\"\/><\/g><\/g><\/svg>",
+    "Version": 2.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/forescout-counteract"
+}

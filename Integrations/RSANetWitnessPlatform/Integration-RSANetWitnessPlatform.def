@@ -1,0 +1,99 @@
+{
+    "Description": "RSA NetWitness Platform accelerates threat detection and response by collecting and analyzing data across more capture points (logs, packets, netflow and endpoint) and computing platforms (physical, virtual and cloud) and enriching this data with threat intelligence and business context.",
+    "DisplayName": "RSA NetWitness Platform",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/rsa-netwitness-platform",
+    "Identifier": "RSANetWitnessPlatform",
+    "Categories": [
+        "SIEM",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "RSANetWitnessPlatform",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Broker API Root",
+            "PropertyName": "Broker API Root",
+            "PropertyType": "5",
+            "Value": "http://x.x.x.x:50103"
+        },
+        {
+            "IntegrationIdentifier": "RSANetWitnessPlatform",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Broker API Username",
+            "PropertyName": "Broker API Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "RSANetWitnessPlatform",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Broker API Password",
+            "PropertyName": "Broker API Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "RSANetWitnessPlatform",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Concentrator API Root",
+            "PropertyName": "Concentrator API Root",
+            "PropertyType": "5",
+            "Value": "http://x.x.x.x:50105"
+        },
+        {
+            "IntegrationIdentifier": "RSANetWitnessPlatform",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Concentrator API Username",
+            "PropertyName": "Concentrator API Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "RSANetWitnessPlatform",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Concentrator API Password",
+            "PropertyName": "Concentrator API Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "RSANetWitnessPlatform",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Web API Root",
+            "PropertyName": "Web API Root",
+            "PropertyType": "5",
+            "Value": "https://{ip}/rest/api/"
+        },
+        {
+            "IntegrationIdentifier": "RSANetWitnessPlatform",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Web Username",
+            "PropertyName": "Web Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "RSANetWitnessPlatform",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Web Password",
+            "PropertyName": "Web Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "RSANetWitnessPlatform",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "PythonVersion": 2,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M23.2,6.8H1.8C1.4,6.8,1.2,7,1.2,7.4v10.2c0,0.4,0.3,0.6,0.6,0.6h15.3l1.4-2.6l1.4,2.6h3.4c0.4,0,0.6-0.3,0.6-0.6V7.4\n\t\t\tC23.8,7,23.6,6.8,23.2,6.8z M8.1,15.6l-1.8-3.1L7,12.2c0.3-0.1,0.5-0.2,0.6-0.4c0.4-0.5,0.3-1-0.2-1.5c-0.1-0.1-0.2-0.1-0.3-0.1\n\t\t\tH4.7v5.3H4.1v-6h3c0.3,0,0.6,0.1,0.7,0.3c0.7,0.8,0.8,1.6,0.2,2.4c-0.2,0.2-0.5,0.4-0.8,0.6l-0.1,0l1.4,2.5L8.1,15.6z M13.6,15.2\n\t\t\tc-0.1,0.1-0.5,0.4-1.3,0.4c-0.5,0-1.2-0.2-2.1-0.6l0.3-0.5c1.9,1,2.7,0.3,2.7,0.3l0,0c0.3-0.2,0.6-0.6,0.6-0.9\n\t\t\tc-0.1-0.4-0.7-0.8-1-0.9l-1.8-0.7c-0.2-0.1-0.3-0.2-0.5-0.3c-0.6-0.7-0.5-1.3-0.3-1.6c0.1-0.3,0.4-0.6,0.6-0.7\n\t\t\tc1.4-0.8,3,0.2,3,0.2l-0.3,0.5c0,0-1.3-0.8-2.4-0.2c-0.1,0.1-0.3,0.3-0.4,0.5c-0.2,0.3-0.1,0.6,0.2,0.9c0.1,0.1,0.2,0.1,0.3,0.2\n\t\t\tl1.8,0.7c0.1,0.1,1.2,0.5,1.3,1.4C14.5,14.2,14.2,14.7,13.6,15.2z M20.9,15.3l-2.5-5.1l-2.3,5.1l-0.6-0.2l2.4-5.3\n\t\t\tc0.1-0.2,0.2-0.3,0.4-0.3c0.2,0,0.4,0.1,0.5,0.3l2.6,5.3L20.9,15.3z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 9.0,
+    "MarketingDisplayName": "RSA NetWitness Platform"
+}

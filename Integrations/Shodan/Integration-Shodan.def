@@ -1,0 +1,35 @@
+{
+    "Description": "Shodan is a search engine that lets the user find specific types of computers (webcams, routers, servers, etc.) connected to the internet using a variety of filters. ",
+    "DisplayName": "Shodan",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/shodan",
+    "Identifier": "Shodan",
+    "Categories": [
+        "Data Enrichment",
+        "Free to use",
+        "Security",
+        "IoT"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAMAAACScZ2GAAAC/VBMVEX///8AAAD//v7+/f38/////f/5///+///8/P3/+//7/v/3//////5TU1Pz///9/v8KCgonJydfX18rKyv6//rCwsJtbW0bGxv4/f//+f/7+/vg4OBoaGi5HCP7///7//32//37//v4+PhHR0cODg4GBgb//v3y8vLq6ura2trgnaJkZGRbW1sVFRX//vz8/vr19fXw8PDy2d/S0tLKysp6enrZXmEzMzP///vk5OSwsLAwMDCvFRzu7u7V1dXPz8/sx8y3t7fbsLLlra6VlZWuKjP/+/j///f97O/MzMzlv772qarhoKilpaXTkJXfjZXZgYjqgoDXdG/WaGjJX2baUVk8PDy5KC2pDyCoAxf//fr6+PX67On24+j3493oucG6urr5sLHaqKzdp6XpnqTYn6KgoKDynJyZmZnLlJiSkpLZjozJfoOCgoLqcnjhfXd2dnbcbHVzc3PDaXDbYGviZWnFSlfNQ1DaUU/ERE9CQkK8KDavHy2nGSGzHyCyBhumBAj68e3y397v29js1tTFxcXnyMS/v7/is7XssLThsLLvubDhtq/gqa6srKypqansqKnXo6TUg5GOjo7kjIfNhYbmh4F9fX3PbHRwcHDKbG/nXGThXWPfWVrRWVrOTVnSSVROTk64S0zFS0m7QEnCPEa8NTo5OTnGLDbNJTK7HivIGiYiIiL/9fz/9fb8+O706ef43eD10tDn0dDlwMf9xcL+ub3gpavnpKvvmqf1pqPUnZv7j5TpmpLpjJDziouIiIjadoDLd3/jZW7ba2vQXGfeZma1TlvNUU+0PkncNUbNQEWwM0HKMUDGNjjMNjfBCiOfDh69FBz81dvtzNTxvsv0xsHevcHpt8Hks7v6wLr+rbrtwLnovbLvsKT8qKPnopnEiIv3gofre4LRb4DSeHfka2nTYWW/XGPkZl7GVFu3NzuhIi/LMC6eHBegCRGVBRDp5OfVtrrRr6rarqXaraXujKD/mJ7ulpLgcHzLe22vV1GqRE/NQEuTBBU4eegBAAAIc0lEQVRo3u2ZZVQcVxTH/298hV1YaNFFggS3EIJD8QLBCRDXRht3d3drXJs01qZxd3epu7u793TeDmHP0nMCX1r2w/zODm9mdtj5zb1z7+x5CxUVFRUV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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Shodan",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API key",
+            "PropertyName": "API key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Shodan",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<path d=\"M22.6,28.1c-4.2,3.6-9.5,3.1-12.8,0.5c-3.5-2.8-4.8-7.5-3-11.6c1-2.3,2.7-4.1,5-5.1c2.3-1,4.7-1.2,7-0.5\n\t\tc2.6-5.5,9.1-6.9,13.4-3.8c4.3,3.1,5.3,9.6,0.8,13.9c4.1,0.3,7.3,2.1,9.4,5.7c1.5,2.6,1.8,5.5,1,8.4c-1.7,6-7.9,9.4-13.9,7.7\n\t\tC23.9,41.9,19.6,35.1,22.6,28.1z M39,33.4c0.2-3.8-3.3-6.8-6.8-6.8c-3.8,0-6.8,3.1-6.9,6.8c0,3.6,3.1,6.9,6.8,6.9\n\t\tC35.8,40.3,39.2,37,39,33.4z M10.5,20.8c0.1,3,2.6,5.7,5.8,5.7c3.1,0,5.6-2.6,5.6-5.6c0-3.1-2.6-5.7-5.7-5.7\n\t\tC13.1,15.2,10.7,17.9,10.5,20.8z M32.2,14.8c0-2.8-2.2-5-4.9-5c-2.8,0-5,2.2-5,4.9c0,2.8,2.2,5,4.9,5C30,19.7,32.2,17.5,32.2,14.8z\n\t\t\"/>\n</g>\n</svg>\n",
+    "Version": 7.0,
+    "MarketingDisplayName": "Shodan"
+}

@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1520945020012, 
+    "Creator": "admin", 
+    "Description": "Retrieve information about endpoint's agents from McAfee ePO. Supported entities: Hostname, IP.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"LastUpdate\": \"2019-01-22T13:04:49+02:00\", \"ManagedState\": \"1\", \"Tags\": \"Server, Workstation\", \"ExcludedTags\": \"\", \"AgentVersion\": \"1.1.1.1\", \"AgentGUID\": \"F673D1DF-786C-41E5-A84D-1676A39F7AE8\"}, \"Entity\": \"1.1.1.1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "McAfeeEPO", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1520945020012, 
+    "Name": "Get Agent Information", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

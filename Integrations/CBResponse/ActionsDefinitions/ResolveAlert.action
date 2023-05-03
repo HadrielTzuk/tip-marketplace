@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1520849262511,
+    "Creator": "admin",
+    "Description": "Resolve an alert. Note: Carbon Black Response REST-API returns a successful answer even if the alert that you tried to resolve doesn’t exist.",
+    "Id": -1,
+    "IntegrationIdentifier": "CBResponse",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1520849262511,
+    "Name": "Resolve Alert",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1520852658829,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The id of the alert to resolve",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1520852658829,
+            "Name": "Alert ID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

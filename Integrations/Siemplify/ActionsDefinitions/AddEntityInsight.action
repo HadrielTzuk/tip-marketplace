@@ -1,0 +1,30 @@
+{
+    "CreationTimeUnixTimeInMs": 1507460191935,
+    "Creator": "admin",
+    "Description": "Add an insight configurable message to each targeted entity",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1507460191935,
+    "Name": "Add Entity Insight",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1510914771177,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Message content to be added.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914771177,
+            "Name": "Message",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "import json\nimport logging as log\nfrom requests import HTTPError\nfrom SiemplifyAction import *\n\ndef GetIdentifiersAsString(target_entities):\n    entitiesIdentifiers = []\n    for entity in target_entities:\n        entitiesIdentifiers.append(entity.identifier)\n    return \", \".join(entitiesIdentifiers)\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\t\n\tmessage = siemplify.parameters[\"Message\"]\n\tfor entity in siemplify.target_entities:\n\t\tsiemplify.add_entity_insight(entity, message)\n\t\n\ttarget_identifiers = GetIdentifiersAsString(siemplify.target_entities)\n\n\toutput_message = \"Added insight with message [%s] to [%s]\" % (message,target_identifiers)\n\t\n\tsiemplify.end(output_message, 'true')\n\nif __name__ == '__main__':\n\tmain()\n",
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

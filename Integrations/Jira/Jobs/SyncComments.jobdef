@@ -1,0 +1,86 @@
+{
+    "CreationTimeUnixTimeInMs": 1534248991561,
+    "Creator": "Admin",
+    "Description": "Sync comments between Siemplify alert’s case and corresponding Jira ticket. Sync mechanism works in both ways, Siemplify → Jira and Jira → Siemplify",
+    "Id": -1,
+    "Integration": "Jira",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534248991561,
+    "Name": "Sync Comments",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "https://{jira_address}",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "API Root",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Username",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "API Token",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "project names separated by comma",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Project Names",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "1",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Days Backwards",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "SIEMPLIFY:",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Siemplify Comment Prefix",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "Jira Comment Sync Job:",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Jira Comment Prefix",
+            "Type": 2
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Script": "# -*- coding: utf-8 -*-\n# ==============================================================================\n# title           :SyncComments.py\n# description     :Job for sync comments in Jira and in Siemplify\n# author          :zivh@siemplify.co\n# date            :08-06-18\n# python_version  :2.7\n# ==============================================================================\n# =====================================\n#              IMPORTS                #'\n# =====================================\nfrom JiraManager import JiraManager\nfrom SiemplifyJob import SiemplifyJob\nfrom SiemplifyUtils import convert_unixtime_to_datetime\nfrom SiemplifyUtils import utc_now\n\nimport urllib3\nimport requests\nimport datetime\n\nurllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)\nrequests.packages.urllib3.disable_warnings()\n\n# =====================================\n#             CONSTANTS               #\n# =====================================\nDEFAULT_DAYS_BACKWARDS = 3\nOPEN_CASE_STATUS_ENUM = '1'\nSIEMPLIFY_COMMENT_PREFIX = \"Siemplify: \"\nJIRA_COMMENT_PREFIX = \"Jira: \"\n\n# =====================================\n#              CLASSES                #\n# =====================================\n\n\ndef validate_timestamp(last_run_timestamp, offset):\n    \"\"\"\n    Validate timestamp in range\n    :param last_run_timestamp: {datetime} last run timestamp\n    :param offset: {datetime} last run timestamp\n    :return: {datetime} if first run, return current time minus offset time, else return timestamp from file\n    \"\"\"\n    current_time = utc_now()\n    # Check if first run\n    if current_time - last_run_timestamp > datetime.timedelta(days=offset):\n        return current_time - datetime.timedelta(days=offset)\n    else:\n        return last_run_timestamp\n\n\ndef main():\n    siemplify = SiemplifyJob()\n\n    try:\n        siemplify.script_name = 'Jira - SyncComments'\n\n        siemplify.LOGGER.info('--------------- JOB STARTED ---------------')\n\n        # Configurations.\n        api_root = siemplify.parameters['Api Root']\n        username = siemplify.parameters['Username']\n        password = siemplify.parameters['Password']\n        days_backwards = int(siemplify.parameters.get('Days Backwards', DEFAULT_DAYS_BACKWARDS))\n        project_names = siemplify.parameters.get('Project Names', '')\n\n        jira_manager = JiraManager(api_root, username, password)\n\n        # Get last Successful execution time.\n        last_successful_execution_time = siemplify.fetch_timestamp(datetime_format=True)\n        last_successful_execution_time = validate_timestamp(last_successful_execution_time, days_backwards)\n        siemplify.LOGGER.info('Last successful execution run: {0}'.format(unicode(last_successful_execution_time).encode('utf-8')))\n\n        # Save current time as timestamp to make sure all alerts are taken.\n        new_timestamp = utc_now()\n\n        # Sync Incidents Comment to Jira\n        siemplify.LOGGER.info('--- Start synchronize Issues Comments from Siemplify to Jira ---')\n        cases_ids = siemplify.get_cases_by_filter(statuses=[OPEN_CASE_STATUS_ENUM])\n        if cases_ids:\n            siemplify.LOGGER.info(\"Found {0} open cases\".format(len(cases_ids)))\n\n        # Check case modification time\n        cases = []\n        for case_id in cases_ids:\n            case = siemplify._get_case_by_id(str(case_id))\n            if last_successful_execution_time <= convert_unixtime_to_datetime(case['modification_time']):\n                cases.append(case_id)\n        siemplify.LOGGER.info(\"Found {0} relevant open cases\".format(len(cases)))\n\n        for case_id in cases:\n            siemplify.LOGGER.info('Run on case with id: {0}'.format(unicode(case_id).encode('utf-8')))\n            case = siemplify._get_case_by_id(str(case_id))\n            case_comments = siemplify.get_case_comments(case['identifier'])\n            siemplify.LOGGER.info(\"Found {0} comments for case with id: {1} \".format(len(case_comments), unicode(case_id).encode('utf-8')))\n\n            for comment in case_comments:\n                # Covert to datetime\n                comment_time = convert_unixtime_to_datetime((comment['modification_time_unix_time_in_ms']))\n\n                # Check that the comment is newer than the JOB timestamp and comment didn't come from Jira\n                if comment_time > last_successful_execution_time and not comment['comment'].startswith(JIRA_COMMENT_PREFIX):\n                    siemplify.LOGGER.info(\"Found new comment at Case {0}\".format(unicode(case_id).encode('utf-8')))\n\n                    # Add to comment Siemplify prefix in order to identify the comment as a siemplify comment\n                    comment_text = \"{0}{1}\".format(SIEMPLIFY_COMMENT_PREFIX, comment['comment'])\n\n                    # Update all Alert's tickets in Jira\n                    for alert in case['cyber_alerts']:\n                        issue_key = alert['additional_data']\n                        if issue_key:\n\n                            # Add the comment to Jira ticket\n                            try:\n                                siemplify.LOGGER.info(\"Add comment to issue {0}\".format(unicode(issue_key).encode('utf-8')))\n                                jira_manager.add_comment(issue_key, comment_text)\n                            except Exception as err:\n                                siemplify.LOGGER.error(\n                                    \"Failed to add comment to issue {0}, error: {1}\".format(issue_key, err.message))\n                                siemplify.LOGGER.exception(err)\n\n        siemplify.LOGGER.info(\" --- Finish synchronize comments from Siemplify cases to Jira issues --- \")\n\n        # Sync Issues Comment to Siemplify\n        siemplify.LOGGER.info('--- Start synchronize Issues Comments from Jira to Siemplify ---')\n        jira_last_time_format = jira_manager.convert_datetime_to_jira_format(last_successful_execution_time)\n\n        if project_names:\n            # Fix format - instead of 'project_name, project_name' should be \"'project_name', 'project_name'\"\n            project_names = \", \".join(\"'{}'\".format(project) for project in project_names.split(\",\"))\n        # Get tickets that where modified since last success time.\n        last_modified_ticket_ids = jira_manager.list_issues(updated_from=jira_last_time_format, project_key=project_names)\n        siemplify.LOGGER.info('Found {0} modified issues since {1}'.format(unicode(len(last_modified_ticket_ids)).encode('utf-8'), unicode(jira_last_time_format).encode('utf-8')))\n\n        for issue_id in last_modified_ticket_ids:\n            # Get ticket by id\n            issue = jira_manager.get_issue_by_key(issue_id)\n\n            # Issue description is the related alert id in Siemplify\n            alert_id = issue.raw['fields']['description']\n            if alert_id:\n                # Fetch case id of the relevant alert\n                alert_cases_ids = siemplify.get_cases_by_ticket_id(alert_id)\n                if alert_cases_ids:\n                    siemplify.LOGGER.info('Case ids {0} found for issue with id: {1}'.format(len(alert_cases_ids), issue_id))\n\n                    # Get Last comments for ticket.\n                    ticket_comments = jira_manager.get_issue_comments_since_time(issue_id, last_successful_execution_time)\n                    if ticket_comments:\n                        siemplify.LOGGER.info(\n                            'Found {0} comment for issue with id: {1}'.format(unicode(len(ticket_comments)).encode('utf-8'),\n                                                                            unicode(issue_id).encode('utf-8')))\n\n                        # Get all comments that didn't come from Siemplify\n                        comments_to_add = [comment for comment in ticket_comments\n                                           if not comment.startswith(SIEMPLIFY_COMMENT_PREFIX)]\n\n                        # Add comments to cases.\n                        for alert_case_id in alert_cases_ids:\n                            if comments_to_add:\n                                siemplify.LOGGER.info('Add comments to case with id: {0}'.format(unicode(alert_case_id).encode('utf-8')))\n                                for comment in comments_to_add:\n                                    comment_with_prefix = \"{0}{1}\".format(JIRA_COMMENT_PREFIX, comment)\n                                    siemplify.add_comment(comment_with_prefix, alert_case_id)\n                            else:\n                                siemplify.LOGGER.info(\"No new comments in ticket -{0}\".format(str(issue_id)))\n\n                    else:\n                        siemplify.LOGGER.info(\"No new comments in ticket -{0}\".format(str(issue_id)))\n                else:\n                    siemplify.LOGGER.info(\"Issue {0} not created for Siemplify alert. Continue\".format(str(issue_id)))\n            else:\n                siemplify.LOGGER.info(\"Issue {0} not created for Siemplify alert. Continue\".format(str(issue_id)))\n\n        siemplify.LOGGER.info(\" --- Finish synchronize comments from Jira issues to cases --- \")\n        # Update last successful run time with new_timestamp.\n        siemplify.save_timestamp(new_timestamp=new_timestamp)\n        siemplify.LOGGER.info(\"Update Job last execution timestamp\")\n        siemplify.LOGGER.info('--------------- JOB FINISHED ---------------')\n\n    except Exception as err:\n        siemplify.LOGGER.exception('Got exception on main handler.Error: {0}'.format(err.message))\n        raise\n\n\nif __name__ == '__main__':\n    main()\n",
+    "Version": 1
+}

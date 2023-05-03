@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1525626752624,
+    "Creator": "System",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "ConnectWise",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1525626752624,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyDataModel import EntityTypes\n# Imports\nfrom SiemplifyAction import SiemplifyAction\nfrom ConnectWiseManager import ConnectWiseManager\n\n\ndef main():\n\n    # Variables Definitions.\n    output_message = ''\n    result_value = False\n\n    siemplify = SiemplifyAction()\n    # Configuration.\n    configuration_settings = siemplify.get_configuration('ConnectWise')\n    company_url = configuration_settings['Api Root']\n    company_name = configuration_settings['Company Name']\n    public_key = configuration_settings['Public Key']\n    private_key = configuration_settings['Private Key']\n    connectwise_manager = ConnectWiseManager(company_url, company_name, public_key, private_key)\n\n    # Execute Test Connectivity.\n    result = connectwise_manager.test_connectivity()\n\n    if result:\n        output_message = \"Connection Established.\"\n        result_value = True\n    else:\n        output_message = 'Connection Failed.'\n        result_value = False\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

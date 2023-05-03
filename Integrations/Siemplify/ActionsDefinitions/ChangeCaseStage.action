@@ -1,0 +1,30 @@
+{
+    "CreationTimeUnixTimeInMs": 1506521112194,
+    "Creator": "admin",
+    "Description": "Change case stage to handling",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506521112194,
+    "Name": "Change Case Stage",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1510914848491,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Stage to which the case should be moved to.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914848491,
+            "Name": "Stage",
+            "Type": 4,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import *\n\ndef main():\n    siemplify = SiemplifyAction()\n    stage = siemplify.parameters[\"stage\"]\n    \n    previousStage = siemplify.case.stage\n    \n    if (previousStage == stage):\n    \toutput_message = \"Case stage change was attempted unsuccessfully, because the case is allready assigned to stage %s.\" % (stage)\n    else:\n    \tsiemplify.change_case_stage(stage)\n    \toutput_message = \"Case stage was successfully changed to %s.\" % (stage)\n    \n    siemplify.end(output_message, True)\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

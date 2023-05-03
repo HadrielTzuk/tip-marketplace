@@ -1,0 +1,86 @@
+[
+    {
+        "ChangeDescription": "NEW! Vectra integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Vectra",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1591088955,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2810"
+    },
+    {
+        "ChangeDescription": "Added new action \"Get Triage Rule Details\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Get Triage Rule Details",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1603184264,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5146"
+    },
+    {
+        "ChangeDescription": "Improved the structure of Siemplify Event in Detection Connector. Note: If using remote agents, please update the agent to the latest version.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Detections Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1603184264,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4866"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Vectra",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Detections Connector - Updated the logic behind Product Field Name to work with all parameters.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Detections Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1637151679,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10338"
+    },
+    {
+        "ChangeDescription": "Detections Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Vectra - Detections Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11915"
+    },
+    {
+        "ChangeDescription": "Vectra - Detections Connector - Improved time handling.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Vectra - Detections Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1668597294,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12933"
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "ChangeDescription": "New integration \"Attivo\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Attivo",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1626244430,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8968"
+    },
+    {
+        "ChangeDescription": "New Action Added - Update Event.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Update Event",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1639563779,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10518"
+    },
+    {
+        "ChangeDescription": "New Action Added - Enrich Entities.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Enrich Entities",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1639563779,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10515"
+    },
+    {
+        "ChangeDescription": "New Action Added - List Service ThreatPaths.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "List Service ThreatPaths",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1639563779,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10589"
+    },
+    {
+        "ChangeDescription": "New Action Added - List Vulnerability Hosts.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "List Vulnerability Hosts",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1639563779,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10517"
+    },
+    {
+        "ChangeDescription": "New Action Added - List Critical ThreatPaths.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "List Critical ThreatPaths",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1639563779,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10516"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Attivo",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

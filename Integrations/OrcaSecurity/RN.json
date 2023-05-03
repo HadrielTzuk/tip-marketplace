@@ -1,0 +1,62 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Orca Security.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "OrcaSecurity",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1652857336,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11563"
+    },
+    {
+        "ChangeDescription": "Get Vulnerability Details - Added an ability to return data as CSV file.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Get Vulnerability Details",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1662634126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12428"
+    },
+    {
+        "ChangeDescription": "Get Vulnerability Details - Added an ability to return only certain fields.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Get Vulnerability Details",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1662634126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12428"
+    },
+    {
+        "ChangeDescription": "Integration - Added support for authentication via API Token.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "OrcaSecurity",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1667378096,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13026"
+    },
+    {
+        "ChangeDescription": "Orca Security - Alerts Connector - Added an ability to filter alerts by type.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Orca Security - Alerts Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1678320000,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "267123264"
+    }
+]

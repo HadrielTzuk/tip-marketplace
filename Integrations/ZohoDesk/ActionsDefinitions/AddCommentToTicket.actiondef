@@ -1,0 +1,89 @@
+    {
+    "CreationTimeUnixTimeInMs": 1543164953601,
+    "Creator": "admin",
+    "Description": "Add a comment to a ticket in Zoho Desk. Note: Action is running as async if \"Wait For Reply\" is enabled, please adjust script timeout value in Siemplify IDE for action as needed.",
+    "Id": -1,
+    "IntegrationIdentifier": "ZohoDesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543164953601,
+    "Name": "Add Comment To Ticket",
+    "DynamicResultsMetadata": [{
+		"ResultExample": "{\"content\":\"zsu[@user:115xxxxx]zsu Please fix this ASAP\",\"commentedTime\":\"2022-07-01T11:18:43.935Z\",\"modifiedTime\":\"2022-07-01T11:18:43.935Z\",\"contentType\":\"plainText\",\"impersonatedUser\":null,\"encodedContent\":\"zsu&#x5b;&#x40;user&#x3a;115xxxxx&#x5d;zsu Please fix this ASAP\",\"id\":\"9770xxxxxxxxxxxxx\",\"commenterId\":\"9770xxxxxxxxxxxxx\",\"commenter\":{\"id\":\"9770xxxxxxxxxxxxx\",\"name\":\"TIP Labops\",\"email\":\"tip.labops@siemplify.co\",\"photoURL\":\"https://desk.zoho.eu/api/v1/agents/9770xxxxxxxxxxxxx/photo?orgId=2008xxxxxxxx\",\"type\":\"AGENT\",\"firstName\":\"TIP\",\"lastName\":\"Labops\",\"roleName\":\"CEO\"},\"attachments\":[],\"isPublic\":false}",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify an id of the ticket to which you want to add a comment.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Ticket ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Public",
+            "Description": "Specify if the comment should be public or private.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Visibility",
+            "OptionalValues": [
+                "Public",
+                "Private"
+            ],
+            "Type": 15,
+            "Value": "Public"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Plain Text",
+            "Description": "Specify what should be the type of the comment.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Type",
+            "OptionalValues": [
+                "Plain Text",
+                "HTML"
+            ],
+            "Type": 15,
+            "Value": "Plain Text"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the content of the comment.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Text",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "Name": "Wait For Reply",
+            "Type": 1,
+            "Value": false,
+            "DefaultValue": false,
+            "IsMandatory": false,
+            "Description": "If enabled, action will wait for reply.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

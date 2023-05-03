@@ -1,0 +1,96 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805, 
+    "Creator": "Admin", 
+    "DefaultResultValue": "", 
+    "Description": "Search information about process activity on the host with CB sensor based on the provided search parameters. The action accepts Host Siemplify entities.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [{\"event_type\": \"netconn\", \"parent_guid\": \"7DESJ9GN-002efb20-000001f0-00000000-1d5fb6d5ed04164\", \"event_network_remote_port\": 62155, \"legacy\": true, \"process_username\": [\"NT AUTHORITY\\\\NETWORK SERVICE\"], \"enriched_event_type\": \"NETWORK\", \"event_description\": \"The application \\\"<share><link hash=\\\"c7db4ae8175c33a47baa3ddfa089fad17bc8e362f21e835d78ab22c9231fe370\\\">C:\\\\Windows\\\\system32\\\\svchost.exe -k NetworkService</link></share>\\\" established a <accent>UDP/62155</accent> connection to <share><accent>172.31.125.221</accent></share><accent>:62155</accent> (<share><accent>172.31.125.221</accent></share>) from <share><accent>172.31.126.60</accent></share><accent>:5355</accent>. The device was off the corporate network using the public address <accent>64.69.75.131</accent> (<accent>MANTICOREWIN864.qaam.local</accent>, located in Canada). The operation was successful.\", \"parent_pid\": 496, \"event_id\": \"3cb0b35ea28311eab62a8b502f99fd76\", \"ingress_time\": 1590849527929, \"enriched\": true, \"process_guid\": \"7DESJ9GN-002efb20-000003ec-00000000-1d5fb6d63ba535c\", \"process_pid\": [1004], \"event_network_remote_ipv4\": \"1.1.1.1\", \"process_hash\": [\"e3a2ad05e24105b35e986cf9cb38ec47\", \"c7db4ae8175c33a47baa3ddfa089fad17bc8e362f21e835d78ab22c9231fe370\"], \"device_timestamp\": \"2020-05-30T14:38:24.821Z\", \"process_name\": \"c:\\\\windows\\\\system32\\\\svchost.exe\", \"event_network_protocol\": \"UDP\", \"event_network_local_ipv4\": \"172.31.126.60\", \"device_policy_id\": 32064, \"device_id\": 3078944, \"org_id\": \"12345678\", \"device_name\": \"qaam\\\\manticorewin864\", \"backend_timestamp\": \"2020-05-30T14:39:25.648Z\"}], \"Entity\": \"manticorewin864\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "CBEnterpriseEDR", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1560351300805, 
+    "Name": "Process Search", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Query to execute in process search. For example, process_name:svchost.exe - to search based by process name, process_hash:9520a99e77d6196d0d09833146424113 - to search based by process hash.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351300835, 
+            "Name": "Query", 
+            "OptionalValues": null, 
+            "OptionalValuesJson": null, 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835, 
+            "CustomActionId": -1, 
+            "DefaultValue": "4", 
+            "Description": "Specify a time frame in hours for which to fetch alerts.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351300835, 
+            "Name": "Time Frame", 
+            "OptionalValues": null, 
+            "OptionalValuesJson": null, 
+            "Type": 0, 
+            "Value": "4"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835, 
+            "CustomActionId": -1, 
+            "DefaultValue": "20", 
+            "Description": "Specify how many records can be returned by the action.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1560351300835, 
+            "Name": "Record limit", 
+            "OptionalValues": null, 
+            "OptionalValuesJson": null, 
+            "Type": 0, 
+            "Value": "20"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify a parameter for sorting the data.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351300835, 
+            "Name": "Sort By", 
+            "OptionalValues": null, 
+            "OptionalValuesJson": null, 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835, 
+            "CustomActionId": -1, 
+            "DefaultValue": "ASC", 
+            "Description": "Sort order.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351300835, 
+            "Name": "Sort Order", 
+            "OptionalValues": [
+                "ASC", 
+                "DESC"
+            ], 
+            "Type": 15, 
+            "Value": "ASC"
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "TimeoutSeconds": 600, 
+    "Version": 1.0
+}

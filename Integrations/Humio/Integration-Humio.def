@@ -1,0 +1,43 @@
+{
+    "Description": "Humio is built to ingest and retain streaming data as quickly as it arrives, regardless of volume. Alerts, scripts, and dashboards are updated in real time, and live tail and retained data searches have virtually no latency .Humio is index-free, and it works with any structured or unstructured data format. Because you don't need to define fields upfront, you can ask any question with live or archived data, and experience blazing-fast response.",
+    "DisplayName": "Humio",
+    "Identifier": "Humio",
+    "MarketingDisplayName": "Humio",
+    "Categories": [
+        "Log Management",
+        "Operational"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Humio",
+            "PropertyName": "API Root",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://cloud.us.humio.com"
+        },
+        {
+            "IntegrationIdentifier": "Humio",
+            "PropertyDisplayName": "API Token",
+            "PropertyName": "API Token",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Humio",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg id=\"Layer_1\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M21.59,9.64a7.23,7.23,0,0,0,.18-1.32A7.8,7.8,0,0,0,21.59,7V2.26l-.52.1c-1.67.18-3.37.32-5,.41A8.52,8.52,0,0,0,9,2.77c-1.71-.09-3.37-.23-5-.41l-.53,0V7a4.79,4.79,0,0,0-.17,1.36A4.45,4.45,0,0,0,3.4,9.67a3.33,3.33,0,0,0-1.4,3A13.1,13.1,0,0,0,4,19.1a8.24,8.24,0,0,1,.92-2,9.33,9.33,0,0,0,3,3.09.41.41,0,0,0-.22.07.46.46,0,0,0-.17.17.46.46,0,0,0-.17-.17.44.44,0,0,0-.22-.07H7.05a.5.5,0,0,0-.34.16.51.51,0,0,0-.14.36v1.72a.55.55,0,0,0,.14.37.46.46,0,0,0,.34.16h.18a.46.46,0,0,0,.22-.06.55.55,0,0,0,.17-.17.44.44,0,0,0,.16.17A.46.46,0,0,0,8,23h.13a.46.46,0,0,0,.22-.06.55.55,0,0,0,.17-.17.44.44,0,0,0,.16.17.46.46,0,0,0,.22.06H9a.49.49,0,0,0,.34-.15.54.54,0,0,0,.14-.36V21a8.5,8.5,0,0,0,6.08,0v1.46a.57.57,0,0,0,.14.38A.5.5,0,0,0,16,23h.14a.43.43,0,0,0,.22-.06.46.46,0,0,0,.17-.17.52.52,0,0,0,.16.17.46.46,0,0,0,.23.06h.13a.43.43,0,0,0,.22-.06.46.46,0,0,0,.17-.17.52.52,0,0,0,.16.17.46.46,0,0,0,.23.06H18a.46.46,0,0,0,.34-.16.55.55,0,0,0,.14-.37V20.7a.57.57,0,0,0-.14-.38.52.52,0,0,0-.34-.18h-.13a.4.4,0,0,0-.22.06.46.46,0,0,0-.17.17.46.46,0,0,0-.17-.17.43.43,0,0,0-.22-.06,9.43,9.43,0,0,0,3-3.1A8.24,8.24,0,0,1,21,19c.21.7,2.09-3.19,2-6.47a3.49,3.49,0,0,0-.34-1.66A3,3,0,0,0,21.59,9.64Zm-9.09,5-1.8-1.92a5.35,5.35,0,0,0,1.8-2.21,5.06,5.06,0,0,0,1.79,2.21ZM8.08,12.59a3.79,3.79,0,0,1-2.19-.71A4.29,4.29,0,0,1,4.44,10a4.6,4.6,0,0,1-.22-2.44A4.23,4.23,0,0,1,5.3,5.38a3.92,3.92,0,0,1,2-1.16,3.69,3.69,0,0,1,2.27.24A4,4,0,0,1,11.35,6a4.41,4.41,0,0,1-.49,5.32,3.86,3.86,0,0,1-2.78,1.24Zm8.83,0a3.73,3.73,0,0,1-2.18-.71A4.15,4.15,0,0,1,13.28,10a4.51,4.51,0,0,1-.23-2.44,4.31,4.31,0,0,1,1.08-2.16,3.92,3.92,0,0,1,2-1.16,3.72,3.72,0,0,1,2.28.24A4,4,0,0,1,20.18,6a4.37,4.37,0,0,1,.67,2.34,4.41,4.41,0,0,1-1.16,3,3.84,3.84,0,0,1-2.77,1.24Zm0-6a1.66,1.66,0,0,1,.93.3,1.87,1.87,0,0,1,.61.8,1.91,1.91,0,0,1,.09,1,1.75,1.75,0,0,1-.45.91,1.63,1.63,0,0,1-.85.49,1.51,1.51,0,0,1-1-.1,1.6,1.6,0,0,1-.75-.66,1.87,1.87,0,0,1-.28-1,1.79,1.79,0,0,1,.13-.68,1.66,1.66,0,0,1,.36-.58,1.59,1.59,0,0,1,.54-.39,1.56,1.56,0,0,1,.64-.13Zm-8.83,0a1.6,1.6,0,0,1,.92.3,1.81,1.81,0,0,1,.62.8,2,2,0,0,1,.09,1,1.75,1.75,0,0,1-.45.91,1.67,1.67,0,0,1-.85.49,1.5,1.5,0,0,1-1-.1,1.6,1.6,0,0,1-.75-.66,1.87,1.87,0,0,1-.28-1,1.79,1.79,0,0,1,.13-.68,1.66,1.66,0,0,1,.36-.58,1.5,1.5,0,0,1,.54-.39,1.51,1.51,0,0,1,.63-.13Z\" fill-rule=\"evenodd\"/></svg>",
+    "Version": 1.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/humio"
+}

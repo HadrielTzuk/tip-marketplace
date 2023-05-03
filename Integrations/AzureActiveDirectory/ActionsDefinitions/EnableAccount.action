@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244, 
+    "Creator": "admin", 
+    "Description": "Enable account in Azure Active Directory. Action expects Siemplify user entity in username@domain format.",
+    "Id": -1, 
+    "IntegrationIdentifier": "AzureActiveDirectory", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1570446244, 
+    "Name": "Enable Account", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

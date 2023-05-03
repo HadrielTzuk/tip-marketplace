@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Ivanti Endpoint Manager.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "IvantiEndpointManager",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1629880631,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9504"
+    },
+    {
+        "ChangeDescription": "IvantiEndpointManager - Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "IvantiEndpointManager",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1663749893,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11417"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "IvantiEndpointManager",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

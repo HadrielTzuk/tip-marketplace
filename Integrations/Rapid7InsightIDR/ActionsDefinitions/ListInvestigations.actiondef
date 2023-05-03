@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List Rapid7 InsightIDR investigations based on the specified action input parameters.  Note: Action is not working with Siemplify entities, only with action input parameters.",
+    "Id": -1,
+    "IntegrationIdentifier": "Rapid7InsightIDR",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Investigations",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\":\"xxxxxxxx-4522-4a6e-9838-81496a0cxxxx\",\"title\":\"Process reported as malicious ran on asset xx-srv2016-xxxx.rapidx.local\",\"status\":\"OPEN\",\"source\":\"ALERT\",\"assignee\":{\"name\":\"Tip Labops\",\"email\":\"example@siemplify.co\"},\"alerts\":[{\"type\":\"Malicious Hash On Asset\",\"type_description\":\"A malicious hash was found on an asset.\",\"first_event_time\":\"2020-12-02T13:16:14.197Z\"}],\"created_time\":\"2020-12-02T13:18:16.758Z\"},{\"id\":\"xxxxxxxx-32bb-4124-a86e-8de5c291xxxx\",\"title\":\"Process reported as malicious ran on asset xx-srv2016-xxxx.rapidx.local\",\"status\":\"OPEN\",\"source\":\"ALERT\",\"alerts\":[{\"type\":\"Malicious Hash On Asset\",\"type_description\":\"A malicious hash was found on an asset.\",\"first_event_time\":\"2020-12-01T15:03:56.356Z\"}],\"created_time\":\"2020-12-01T15:05:24.825Z\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Time Frame",
+            "Type": 0,
+            "DefaultValue": 4,
+            "Value": 4,
+            "IsMandatory": false,
+            "Description": "Specify a time frame in hours for which to fetch findings.",
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Record limit",
+            "Type": 0,
+            "DefaultValue": 20,
+            "Value": 20,
+            "IsMandatory": false,
+            "Description": "Specify how many records can be returned by the action.",
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Include Closed Investigations?",
+            "Type": 1,
+            "DefaultValue": false,
+            "Value": false,
+            "IsMandatory": false,
+            "Description": "Specify whether to include closed investigations in results or not.",
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

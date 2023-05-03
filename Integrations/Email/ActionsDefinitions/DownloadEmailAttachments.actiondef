@@ -1,0 +1,77 @@
+{
+    "CreationTimeUnixTimeInMs": 1538581573970,
+    "Creator": "Admin",
+    "Description": "Download Email Attachments",
+    "Id": -1,
+    "IntegrationIdentifier": "Email",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1538581573970,
+    "Name": "DownloadEmailAttachments",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1538581573970,
+            "CustomActionId": 10029,
+            "DefaultValue": null,
+            "Description": "Save message attachment to the given download path",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1538581573970,
+            "Name": "Download Path",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1538581573970,
+            "CustomActionId": 10029,
+            "DefaultValue": null,
+            "Description": "Download attachments from specific email using its ID. e.g. <CAC89uXMC+aipbvELaVmmVWiwKzEPfRrGBi4Q6zXqJ+Sx+_b+2Q@mail.gmail.com>",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1538581573970,
+            "Name": "Message ID",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1538581573970,
+            "CustomActionId": 10029,
+            "DefaultValue": null,
+            "Description": "Download attachments from emails with given email subject",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1538581573970,
+            "Name": "Subject Filter",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1538581573970,
+            "CustomActionId": 10029,
+            "DefaultValue": null,
+            "Description": "UUID to filter by.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1538581573970,
+            "Name": "Email UID",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1538581573970,
+            "CustomActionId": 10029,
+            "DefaultValue": null,
+            "Description": "If checked, fetch from mailbox only the unread emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1538581573970,
+            "Name": "Only Unread",
+            "Type": 1,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom EmailManager import EmailManager\nimport os\nimport json\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = \"Email - Download Attachments\"\n\n    # Configuration\n    conf = siemplify.get_configuration(\"Email\")\n    from_address = conf[\"Sender's address\"]\n    imap_host = conf['IMAP Server Address']\n    imap_port = str(conf['IMAP Port'])\n    username = conf['Username']\n    password = conf['Password']\n    use_ssl = True if conf['IMAP USE SSL'] == 'True' else False\n\n    email_manager = EmailManager(from_address)\n\n    # IMAP Login\n    email_manager.login_imap(host=imap_host, port=imap_port, username=username, password=password, use_ssl=use_ssl)\n\n    # Parameters\n    local_path = siemplify.parameters.get(\"Download Path\")\n    subject_filter = siemplify.parameters.get(\"Subject Filter\")\n    only_unread = siemplify.parameters.get(\"Only Unread\").lower() == 'true'\n    attachments_local_paths = []\n\n    # Create the local path dir if it doesn't exist\n    if not os.path.exists(local_path):\n        os.makedirs(local_path)\n\n    filtered_mail_id = email_manager.receive_mail_ids(subject_filter=subject_filter, only_unread=only_unread)\n    if filtered_mail_id:\n        for email_uid in filtered_mail_id:\n            # Get attachment name and content from email\n            attachments = email_manager.extract_attachments(email_uid)\n            for attachment_name in attachments:\n                try:\n                    attachment_dict = {attachment_name: attachments[attachment_name]}\n                    # Save to given path\n                    attachment_local_path = email_manager.save_attachment_to_local_path(local_path, attachment_dict)\n                    if attachment_local_path:\n                        attachments_local_paths.append(attachment_local_path)\n                except Exception as e:\n                    siemplify.LOGGER.error(\n                        \"Unable to get attachment for {}: {}\".format(unicode(email_uid).encode(\"utf-8\"), str(e)))\n                    siemplify.LOGGER.exception(e)\n\n    output_message = \"Downloaded {0} attachments. \\n\\nFiles:\\n{1}\".format(len(attachments_local_paths), \"\\n\".join(attachments_local_paths))\n    siemplify.end(output_message, \",\".join(attachments_local_paths))\n\n\nif __name__ == \"__main__\":\n    main()\n\n\n\n",
+    "ScriptResultName": "attachments_local_paths",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

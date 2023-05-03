@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Automox.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Automox",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1670388158,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13188"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Automox",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

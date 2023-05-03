@@ -1,0 +1,68 @@
+{
+    "Description": "McAfee ePolicy Orchestrator (McAfee ePO) software centralizes and streamlines management of endpoint, network, and data security, and compliance solutions.\r\n",
+    "DisplayName": "McAfeeEPO",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/mcafee-epo",
+    "Identifier": "McAfeeEPO",
+    "Categories": [
+        "Endpoint Security",
+        "Policy Manager",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "McAfeeEPO",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Server address",
+            "PropertyName": "ServerAddress",
+            "PropertyType": 6,
+            "Value": "https://<ServerAddress>:8443/remote/"
+        },
+        {
+            "IntegrationIdentifier": "McAfeeEPO",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeEPO",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeEPO",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Group Name",
+            "PropertyName": "GroupName",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeEPO",
+            "IsMandatory": false,
+            "PropertyDisplayName": "CA Certificate File - parsed into Base64 String",
+            "PropertyName": "CA Certificate File - parsed into Base64 String",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeEPO",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": false
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M21.5,3c0-0.2,0-0.4,0-0.7c-0.3,0.1-0.5,0.2-0.7,0.3c-2.6,1.2-5.1,2.4-7.7,3.6c-0.4,0.2-0.7,0.2-1.2,0\n\t\t\tC9.7,5.1,7.5,4.1,5.3,3C4.7,2.8,4.2,2.5,3.6,2.2c0,0.1,0,0.2,0,0.2c0,5.3,0,10.6,0,15.8c0,0.4,0.2,0.5,0.5,0.6\n\t\t\tc2.7,1.2,5.3,2.5,8,3.7c0.3,0.1,0.7,0.1,1,0c2.7-1.2,5.3-2.4,7.9-3.6c0.4-0.2,0.6-0.4,0.6-0.9C21.5,13,21.5,8,21.5,3z M17.3,16.6\n\t\t\tc-1.5,0.6-2.9,1.3-4.3,2c-0.2,0.1-0.6,0.1-0.8,0c-1.5-0.7-3-1.4-4.5-2.1c-0.2-0.1-0.4-0.4-0.4-0.5c0-2.6,0-5.3,0-8\n\t\t\tc1.4,0.7,2.8,1.2,4,1.9c0.9,0.5,1.6,0.5,2.5,0c1.1-0.6,2.2-1.1,3.4-1.6c0.2-0.1,0.4-0.2,0.7-0.3v1.9c0,2,0,3.9,0,5.9\n\t\t\tC17.8,16.2,17.7,16.5,17.3,16.6z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 27.0,
+    "MarketingDisplayName": "McAfee ePO"
+}

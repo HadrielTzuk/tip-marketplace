@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1525771471944,
+    "Creator": "admin",
+    "Description": "Fetch and attach the entire ticket history to an alert",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"time_stamp\": \"1546944096\", \"analyst.combo_name\": \"Analyst\", \"type.sym\": \"Log Comment\", \"description\": \"Tests Comments.\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CaServiceDesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1525771471944,
+    "Name": "Sync Ticket History",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1525771471944,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Ticket type. e.g. type.sym",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525771471944,
+            "Name": "Comment Type Field",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525771471944,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Analyst Name. e.g. analyst.combo_name",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525771471944,
+            "Name": "Analyst Name Field",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525771471944,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Time field e.g. time_stamap.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525771471944,
+            "Name": "TimeStamp Field",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CaSoapManager import CaSoapManager\nimport datetime\n\n# Consts.\nCA_PROVIDER = 'CaServiceDesk'\nCA_PREFIX = 'CA: History Sync Job CA <-> Siemplify'\n\n\ndef main():\n\t# Configuration.\n\tsiemplify = SiemplifyAction()\n\tconf = siemplify.get_configuration(CA_PROVIDER)\n\tapi_root = conf['Api Root']\n\tusername = conf['Username']\n\tpassword = conf['Password']\n\tca_manager = CaSoapManager(api_root, username, password)\n\n\t# Parameters.\n\tcomment_type_field = siemplify.parameters.get('Comment Type Field', 'type.sym')\n\tanalyst_name_field = siemplify.parameters.get('Analyst Name Field', 'analyst.combo_name')\n\ttimestamp_field = siemplify.parameters.get('TimeStamp Field', 'time_stamap')\n\n\t# Fetch scope data.\n\tca_ticket_id = siemplify.current_alert.external_id\n\n\t# Get comments for ticket.\n\tcomments = ca_manager.get_incident_comments_since_time(ref_num=ca_ticket_id, start_time_unixtime_milliseconds=0)\n\n\t# Inject history to case.\n\tfor comment in comments:\n\t\tcomment_content = comment.get('description')\n\t\tcomment_type = comment.get(comment_type_field)\n\t\tanalyst_name = comment.get(analyst_name_field)\n\t\tcomment_timestamp = comment.get(timestamp_field)\n\n\t\t# Convert Unix time to UTC datetime.\n\t\tticket_time_datetime = datetime.datetime.utcfromtimestamp(float(comment_timestamp)) if comment_timestamp else None\n\n\t\t# Build comment string.\n\t\tcomment_str = u\"{0} \\nTicket ID:{1}  \\nComment: {2} \\nAnalyst: {3} \\nTicket Type: {4} \\nTime: {5}\".format(\n\t\t\tCA_PREFIX, ca_ticket_id, comment_content, analyst_name, comment_type, ticket_time_datetime)\n\n\t\t# Add comment to case.\n\t\tsiemplify.add_comment(comment_str)\n\n\toutput_message = 'History synced.\"{0}\" comments added'.format(len(comments) if comments else 0)\n\n\tsiemplify.end(output_message, True)\n\n\nif __name__ == \"__main__\":\n\tmain()\n",
+    "ScriptResultName": "ScriptResult",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,41 @@
+{
+    "Id": -1,
+    "Creator": "admin",
+    "IntegrationIdentifier": "Intsights",
+    "Name": "Add Note",
+    "Description": "Add a note to the alert in IntSights.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 1521991572300,
+    "ModificationTimeUnixTimeInMs": 1521991572300,
+    "Parameters": [
+        {
+            "Name": "Alert ID",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the ID of the alert to which you want to add a note.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1521991572300,
+            "ModificationTimeUnixTimeInMs": 1521991572300
+        },
+        {
+            "Name": "Note",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the note for the alert.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1521991572300,
+            "ModificationTimeUnixTimeInMs": 1521991572300
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

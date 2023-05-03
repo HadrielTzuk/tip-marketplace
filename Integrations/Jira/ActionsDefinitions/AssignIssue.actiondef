@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1516267022138,
+    "Creator": "admin",
+    "Description": "Assign an issue to a specific user. (Jira username could be: name, mail, etc...). For new Jira Api, action will try to find a match for the assignee to assign an issue based on User email or displayName field.",
+    "Id": -1,
+    "IntegrationIdentifier": "Jira",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1516267022138,
+    "Name": "Assign Issue",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517930443646,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The issue key of the issue",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517930443646,
+            "Name": "Issue Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517930443646,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The new assignee of the issue. Assignee can be jira username.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517930443646,
+            "Name": "Assignee",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517930462609,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The Jira username of the initiator of the action. Note: If a username is not provided, action will not create a comment in the issue",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517930462609,
+            "Name": "Jira Username",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

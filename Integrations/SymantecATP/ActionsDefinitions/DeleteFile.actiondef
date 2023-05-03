@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1530617131055, 
+    "Creator": "admin", 
+    "Description": "Delete file from an endpoint", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SymantecATP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530617131055, 
+    "Name": "Delete File", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530617131055, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "File hash to delete.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530617131055, 
+            "Name": "File Hash", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecATPManager import SymantecATPManager\nfrom SiemplifyDataModel import EntityTypes\n\nATP_PROVIDER = 'SymantecATP'\nRESULT_TABLE_NAME = \"Command IDs\"\nACTION_NAME = \"SymantecATP_Delete File\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(ATP_PROVIDER)\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    atp_manager = SymantecATPManager(conf.get('API Root'), conf.get('Client ID'), conf.get('Client Secret'), verify_ssl)\n\n    errors = []\n    command_ids_csv = ['Entity Identifier, Command ID']\n    success_entities = []\n    command_ids = []\n\n    # Parameters.\n    file_hash = siemplify.parameters.get('File Hash')\n\n    target_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.ADDRESS or\n                       entity.entity_type == EntityTypes.HOSTNAME]\n\n    for entity in target_entities:\n        try:\n            if entity.entity_type == EntityTypes.ADDRESS:\n                entity_uuid = atp_manager.get_endpoint_uuid_by_ip(entity.identifier)\n            else:\n                entity_uuid = atp_manager.get_endpoint_uuid_by_hostname(entity.identifier)\n\n            command_id = atp_manager.delete_endppoint_file(entity_uuid, file_hash)\n\n            if command_id:\n                command_ids_csv.append(\"{0}, {1}\".format(entity.identifier, command_id))\n                success_entities.append(entity)\n                command_ids.append(command_id)\n\n        except Exception as err:\n            error_message = 'Error deleting file from \"{0}\", Error: {1}'.format(entity.identifier, err.message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    # Check if CSV contain values and not only header.\n    if len(command_ids_csv) > 1:\n        output_message = \"{0} deleted successfully from {1}.\".format(file_hash, ','.join([entity.identifier\n                                                                                          for entity in\n                                                                                          success_entities]))\n\n        siemplify.result.add_data_table(RESULT_TABLE_NAME, command_ids_csv)\n\n    else:\n        output_message = \"{0} was not deleted from any endpoint\".format(file_hash)\n\n    # Attach errors if exists.\n    if errors:\n        output_message = \"{0}, \\n \\n  ERRORS: \\n {1} \".format(output_message, ' \\n '.join(errors))\n\n        \n    open(r'd:/output.txt', 'a+').write(output_message)\n    siemplify.end(output_message, ','.join(command_ids))\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "command_ids", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

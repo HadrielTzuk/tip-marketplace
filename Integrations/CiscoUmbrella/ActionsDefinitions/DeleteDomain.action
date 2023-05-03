@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1515351981491, 
+    "Creator": "admin", 
+    "Description": "Delete domain from the OpenDNS block list", 
+    "Id": -1, 
+    "IntegrationIdentifier": "CiscoUmbrella", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1515351981491, 
+    "Name": "Delete Domain", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

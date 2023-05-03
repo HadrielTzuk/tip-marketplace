@@ -1,0 +1,83 @@
+{
+    "Description": "BMC Helix Remedyforce is comprehensive IT service management that easily scales and adapts to the needs of mid-size companies. Built on Salesforce cloud, it allows you to seamlessly combine IT operations management (ITOM) and cognitive capabilities to ensure the business is efficient, compliant, and secure.",
+    "DisplayName": "BMC Helix Remedyforce",
+    "Identifier": "BMCHelixRemedyForce",
+    "Categories": [
+        "IT & Infrastructure",
+        "ITSM"
+    ],
+    "ImageBase64": "/9j/4AAQSkZJRgABAgEASABIAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAAwAHYDAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+pX4wf8FAfjL8Nf2nvi18NfDX7P7fFD4P/A7SfBN98R9V8JzX0vxF0y08X+GtJ8RP4mtbT7XLYXOj6WNUe0m05dFO1bCS+1HxDpdrcA2/8i8Z/SH414Y8U+L+GMr8O5cVcG8CYPI8RxLi8nnXnxJhaWc5ZhMylmlGh7WWHq4LCrFujPDLBaLDzxGIzHC0qi9n/fXh59Evw3408EOAONM68W48DeInifmHEuF4NwHEFPDU+DsbX4fznMMnhkuIxP1eniqGY46WAVenjHmWrxUMLhMox1ek/a/dfwF/aX+DH7SvhkeJvhJ4ysdeWCOE6zoE/wDxL/FXhqeUD/Rdf8P3JW+sSJN8MV6iT6TfPFK2mahfQr5p/e/D/wAT+CfE7K/7U4QzqhmCpxg8bl9T/Zs2yypNL91mOXVWsRh3zXhGslUwleUZPDYivBc5/LPit4K+JHgtnf8AYniDw3isplVnUWXZrT/2vIs6pU3/AB8pzeinhcUuTlqVMO5U8dhYzhHG4TDVJezPa9S1LTtG0+91bV7+y0rStNtZr3UdS1K6gsdPsLO2jaW4u728upIre1tbeJWkmnnkjiijVnd1UE19+flZW0PXtC8T6Xa654a1rSfEOi3wlNlrGh6jZ6tpd4IJ5bWc2uoWE1xaXAhuYZreXypn8ueKWJ8SRsoANagAoAKACgDD0zxP4b1q+1TS9G8Q6Hq2p6HP9m1vTtM1awv77R7kSzQG31S0tbiW40+cTW9xD5V3HDJ5sE0e3fE4XerhsTRp0qtbD16VKuuahUq0qlOnWjZPmpTlFRqK0ou8G1aSfVGFLFYWvUrUqOJoVquHly16VKtTqVKEryXLWhCTlTleMlaai7xkt0zcrA3GSyxwxyTTSJFDEjyyyyusccUcalnkkdiFREUFndiFVQSSAKaTbSSbbaSSV229Eklq23shNpJttJJNtt2SS1bbeiSW7OQh+I3w9uYNPurfx34NnttWvpNM0q4h8UaJLBqepQm2E2n6fMl80d5fRG8tBJaWzSTobq2DRgzxbuuWXZhGVSMsBjIypU1Vqxlha6lSpPmtUqJwvCm+SdpytF8srP3XbjjmeXSjTnHMMFKFao6VGUcXQcatVct6dOSqWnUXPC8ItyXPHT3lfsq4ztCgAoA/Ln47fB/9pH4H/tF+MP2wP2Y9E0P4p2fxC8N+HtI+M3wZ1eZrHXtWt/COnadpVlqngi9Uxo94mk6TalLVJJdQjvxdfZ9J8QJqIsrP+VePeDPEvgXxJznxk8LsFgOK6PEeWZbguNeCsbUdDH4ulk+Gw+EoYvIq65U68cJhKLjSUpV411V5MJmEcSqNH+5fCzxE8GvE/wAHeHvo8eN2aZpwJX4QznN8x8N/EfLqSxWVYCtxBjMZj8VgOJ8K1OUcNLH4+unXcIYWeGlQ9rjsplg3icR+b/xy+NX7MPxo1Hwx8Qf2VPBfxt+FP7d2ta7cafD4U+GGjS+Hb0eIUlxrkXjyO2MOhaxb3uNQaXUfDyRa9qHlTy+NrKC1Wa0X+Z+PON/C3jbE5XxF4S5Jxzwl4/Y/H1cNTyjhXBTy3Ef2jGdsfHiGNLky/G0q3LiOfEZeo5hiOWcs8oQpKdFf2X4X+Gvjf4bYLPOEfHniTwy49+ivluVUMZVz7jjMoZxhnk8qd8rqcJzre0zTLq2G/wBkjTwWbynlWE56VPhnEVa7pYh/ph+163xVb/gkr+0ofjimmx/Fs/sdfFf/AIT1NJNibMa//wAK/wBc+0Z/ssnSfthj8o6mNHY6ONTN2NJJ04Wxr/RfgJ8Wvg/hp8dLCx4w/szCviBYP2DoLMLfvP8Adb4T23LyfWvqd8GsV7ZYT/ZvZH+RfiguA4+IfF68MJY6Xh+s8xn+qkswWJWJeU869lb69bH/AFdT9osC8xSzF4JYd5gljPbn4Rf8E7P+Cw0P7Gv7Bv7PHhHxd+xx+0X4r+B/gPUvF/hfx9+0toOlx23w807xB4p+K3jDxHFpvhmW709tE8R3Gn2HiGwtLmDUfF3hi6k1sXOlQ27PHBNdfYOHM276t6LS/dt6qySu79kfArRPbS/W2rd7bWsk92+lutz9Vf2jP+C3fwy+DHxn+F/wb+G37P8A8Wf2lr/42fBTwb8aPhPqXwils7y88Z6d8QbDXtQ8KaVZeFrmwfxCklxbaILnVLhLa4vdJs7iaaTR557Ce0aFFu/lv5fPb8bDv5aev6P/ADPmrTP+DjTw/wCIvB3iq58J/sIftJ+JPid8Mn1/UfjJ4E06W3n0L4V+DfDskNtqHivxV4ys/Dl7qWlRW1811Y6jZa74I0OLSZtPvDf6lGiRtLXJpe+l7bK99enNrt0bBv57dVfW2ujeivrqfXfjb/gtx+zD4V/ZE+B/7Uej+GPiD4z179onWdZ8HfC34C6FZ2UnxI1Xx34W1SLQ/F2g3zpNcafa2Ph/WbrS7NtWtF1G41VfEPhuTSNHvZNWFvbzyP00T3Wz26/166D3t5/h6+nU7j9ib/gqp4c/ap+NPi39mT4ofs//ABX/AGUP2j/C/h0+MYfhd8V7eUzeIPC0aWT3F9pd9c6P4cv4tQtodQtr9tN1DQbVLvSZDqOlX+ox22oJYuULK9013Xz1/AFqvnY/Pr9nj9pPXf2ef2y/+CkcnhH4GfEv49eKfEnxk8U6hb+Gfh5ZtImk6D4T+JPxLk17XPEGpR2eqTadawvrml29jHDpN7JqF1cNAphZFL/03n/C+G4j4I8MvrmfZVw9hcNlFKlLF5lNRdbEYzBZcsPh8PTc6Uakn7CtKpKVamqUI8zum7fyzw/xViOGuPPFH6lw/mvEWMxWbTqwwmWU21Rw+Dx2ZPE4jE1VCs6MI+3oxp8tGpKpOTVk9/0w0j/gqd8BdU/Zgg/aPOi+L0vLnxp/wq61+E1pbW+oeNtQ+JzWVtqUXhfSnjeKxvrSbTLy21VNbHkx/YJPKNl/bWzRn/Mq3hPxDS4qfDPtsHyxwX9qyzecpU8BTytTnTeLq6SqU5KrTnS9g7v2ivz+x/fL9QoeLvDtbhOPFHsMaqk8f/ZEMmhCFTH1c2dOFVYSi0406kJUqkKyxHur2Tt7P6xbDvD8Nf8ABQmDx94i8Tfs/fGf4C/Er9mz4m+Mfhj4x134f6d47eG/0zxfZW3hrWbyW2g1CPT9JmsdTa0sb6SC3lsZrSSawvNOl1C31UWlhea4zw6ll+Ew/EWScQZXxPlWCzPCYfMauXqVOrgpyxNGEZSpSqVVOlzzgnJTjNKpCpGnKjz1IYYPxKjmWLxXDee8O5pwrm+NyrG4jLqOYNVaONpxwtebhCsqVBwrclOo4wdOUG6c6bqRrclOf4//ALLHij4I+Hv2ff2NrX4tfC3xD8RNc1n9sn4g2fw31PRPHV14PtvBXiAXHwHjfWNVsrexvU8S2rXdzotwNOmNugTTbiLzQLxtv7Txbhc+xPEvG0snzbD5ZQocE5fUzSlXwEMZLHYZRz5+woznOH1WfJGvH2keZ3qRdvcR+KcH4zIcLw3wPDOMoxOaYivxxmdPK6tDMJ4GGAxClw8pVq0IU6ixUHKVGapS5U1SkuZe0P1113/gqp4H+GviH9o3wL8c/hlq/wALfiF8CdMi1LQPDDeJbfX0+Lkd5qEGm6WPCWpjQ9IS2XVJNV8OalbPPbXTL4f1W81iaKKPQdUgi/G8P4S4/M8NwzmGRZpRzXLeIKrpYjFrCyw7yaUKc6lb65S+sVpT9kqOJpScZQTxFKnRi28RRlL9nxHi/gMqxXFGX8QZTXyjMuHqSrYfCfW44lZ1GpVjSo/Uqyw9FR9s6+FrR5oTaw1apWlFLDVox+6f2cPix4m+OXwe8I/FfxP8OLr4Vy+NrL+29F8J6hr0fiDU18NXe2TQ9X1C5h0nSI7STXLMrqdtYeRLLBp1zZSXMqXM01pbfBcS5RhchznGZRhcyhm0cDU9hWxlPDvDUniYXVejTg61dyVCd6UqnMlKpGaUeWKlL9B4XznFcQZJgc4xeVzyeWPp/WKGCq4hYiqsLPXD1qklRocjxFO1WFPkco0pU3JqUnCHudeCfQH5FfHfxD8Xf2pv2n/iv+yxoHxel+AHwJ+B/gzwxr3xj8VaE8Vp4t8ZJ4s0TS/EJ06HXLia0TRNDi0/UxYXpe8g05be31O51qDXba6tdLi/jzj3MuMfFbxU4u8J8u4xn4e8BcCZJlWYcaZtl8oUc4zuOc4DC5i8LTx9SVKOAwMMNilQruVaGGUKWKqY2lj6VWlhYf6C+FmUeH3gX4HcBeO2beHtPxZ8U/FDiPPcp8OcizWNTEcP8OT4fzPG5OsbUyulTxEszzOeMwX1rDKNCrjJVq2Bo5bVyuvQr46p8TfFLwB+y58SbTTP2cv2AvgR4g+Kfxb8H6pbXkv7R/h/xBqmg6P4O1BZ4jea9rvxHmmii8VBprYfY45hYeGbeWRrnwVdS3Wy0uPw/ivh7wq4mo4bw1+j1wBmHFfGGS4ulWn4mZdmGJy/B5JiVUj7bMMw4mnKMc3bnTfsadT6vlkJylVySrKqo0an9NcC8WeOXBeIxnjH9LLxUyngTw+4iwNfD0/BrNspwObZjxHg5Uqiw+U5XwZThOpkNqddrEVKf1rO6tOCo8S0KdDnxFL9K/2o/h58V9M/4JWftBfDPxjrGpfFn4vxfsk/E/w1qepaJaanrereL/E83gbWre2ttNgFs2ta/qEry2+mwXUlp/a2u3EQvbi2W9vJIh/oPwFlXEOR8H8N5RxXnCz/AIiy/LMNhs3zjmqT+vYumvfqOrWUa+IcIuNJ4qvGFfFum8TWhGrVnFf5OeKGecJ8TeIXF+f8C8PvhXhHNs7xeMyDIHGjS/s3AVZLkpfV8PKeFwaqTU8QsBhqlTC4CNZYLDVJ0KFOT/mi8I/tSfHLS/8Agkrov/BMW0/YF/ar1L44+PtL8R+E/C/iHU/hTry+A9V8NeKPjDqvjmXxRYJcafD4gOt6Q15d6PBZvpCaXpeqafB4gu/EMcEL2C/Yta86drWWne3V7KLS1v6WPgddmtL39Vvt+nVan1Z+y9+yT8aP2ef+CsH/AATm8L+KvBXi+/0z4U/sG6d4T8eeOrLQNY1PwJofji58E/HG+1rww3jW2spPDxbR9Z15NDsFN+jXMA09oY8Xdurpv3N9G3ZXV+l7rfXRrpuHXtrt2938j039jP4U/EvRf2if+Dg7U9Z+G3jnSdK+IVz8VV8A6hqfg7X7DT/HKXms/tHPAPB93d6dFbeJluk1DT3iGiyXonW9s2TeLmAuae566q6vuvu+Y0t/V6+rf5df8j8yfhP+zL+1B8Iv2Wv+CbX7Zek/s9fFLx8P2Sf2k/ivrPxT+Cw8Ha/bePrTwvffEjwp4o0jxVpfg+900a39lvItD1azn12HSri30i8j8OapeD+zYLq5tqVnzRuk7aWas1rdX0Tf569dzW261belrO8m73+yvJp/gf0jfsVft/8Axj/bc/aE8Vf8I9+xh46+D37MfhHwp50Hxt+OGkXfhH4g634uljtoYfCehaDHb3+jXwa4udQuLw6R4j1WLStHs0n1aeyvdZ07T5s3Gy31fRf1sPvtv56/h8tbPyMH/gnh4F8ZeG/20f8AgpN4g8SeDvE2gaP4m+LtzdeF9b1vw9qmlab4hsZPiP8AFW7a50HUr+zgtdWtHt7ixuWm0+a4heGe0mLFJYWb9l8RMfgsTwN4ZYbDYzDYivhMqnHF0KOIpVauHn9RyuMY4inCcpUp3jUilUjF3jNbpo/EvDjAY7Dce+KOJxOCxWHoYvNqcsJiK+Gq0aWJh9ezWUpYarUhGFaFpU5N0nJWlBtu6b/KDwb+yx8bdU/Zq1TxtH8I/idqK/CD9s2Xx/4g+H2naZ4m8JeOPE3w8vPDnhiHVdX8DhLK21mW7sZNJgtYNU0CKe+0uO9n1e0yNMnKfrmM4syOjxXTwP8AbGV0v7Z4Do5bhsxqzw2My/C5lDFZhKlRx95ToqE1Wc5Uq7UKrhCjP+LFP8dwfCOfV+EamYRyfNav9icfVszxWW06WKwWY4rK6mDy9Vq+ASpxxDqU5UFCFXDxdSkpzrQu6UrfWnw58EfD745/HDw5r/wc/Zs/ajl8OfDbwd4r8Q678XP2k/HvxJS58Ia7BoWqS2Xhvwnomo654k07xDe6nqAs9OfSFvxLcy3FxeT2A0+xkuZPks0x2Y5Dw9jMNnXFHCqxWaYzCYbD5Nwxl+VOGNoOvSVTFY3EUsNhqmHp0qfPUVb2doqMaaqe0qKMfsMqwGWZ/wAQYTE5JwrxdLC5XgsZicRnPFOYZqp4HELD1nDC4PD1cTiqeJqVans6fsFUvNylUlT9lTcn8nfDf4MfGC0+EP7BFld/Cj4k2t54e/bR8f69r9pceBvFEFzoehT6j+z2YNa1iCXS1l0zSZhpuotFqN6sNnILC9KTEWs/l/YZpneTTzvxAqU82y2pDFcD4DD0Jxx+ElGvXVLiJSoUZKryzrR9rSvShzVFzwvFOcT43KsjzuGS+HkKmT5pCeG47zLEYiEsvxcJ4fDTqcOclevF0VKnSkqVW1WajB+znZ+5K3vX7WXwh+PX7fPxl+Onx08DfC3U/CPg79mXwbpWl/C+z8X/AA7v9O1/453Ph/xJLq9/FBZ61plveeII7zS/+Eo1fSNOltdRtFto/C/hp9PgvfFOp3sXgcIZzw94eZJkGQ5hm1LG43inG1q+azwOZUqmH4fjicKqFNupQqyjh5QqfVKNeqpU5c31vEqpKGDpQl9DxnkvEXiNnfEPEGXZTWwWC4UwNGjlFPG5XUpYniCeGxTrVFCFelGeJjOl9brUKUoVIcqwmFdKNTF1px/e79lX4zaj8d/gh4N8ea/4J1/4c+LHsk0fxl4L8Q6Bq3hy40TxRpUMEOpx6dZaxZ2VxLoV4Wi1DRLmON4zp13BbySC8t7qKP8AnzizJKeQZ7jcvoY7D5lhFP22DxuGxFLExr4Ws5SpOpOjOcViIWdOvFu/tYSkrwlCT/orhDPKvEOQYHMcTgMTleNcFQx2AxWGrYWeHxdGMY1VTp14QlLDzuquHmk17KcYt88ZpfRNfNn0x+Zvxh/4Jo+D/jX+0N4z+Mnin4tePNP8E/EaDwg3j34ReHFGj2Pim/8ABejaZoWkLqPiaDUy8mhG00uKabSn0CTUIb65u7rTtesGeFYP5e4z+jBkvHHiNnfGubcX8Q4fI+JaeTPiHg7Lf9iw2bYjI8FhcBg1iszp4nmngPY4SE54SWAliIYipWrYbMMO5QVP+1/Dv6avEfhp4QcOeHGRcAcKYviXg6rxDHhPxBzj/hRxeQ4XiXMsbmmYSwWS1cEowzRYjHVKdPHxzWGEqYalh6GMyrFKE5VPvj4dfDL4f/CTwtYeCvhp4R0PwX4X01cW2kaFYxWcLSlVWS7vJQDc6jqFxtDXepahNdaheSZlurmaQlz/AEHw3wvw9wflWHyPhjJ8BkmVYVWpYPL6EKNNyslKtWkr1cTialr1sViJ1cRWledWrOTbP5Q4w424t8QM9xfEvGnEGacS55jZXr5hmuKniKqhduGHw8G1RweEo3ccPgsJSoYTDwtToUacEoqn8X/iHb/CP4V/EX4o3elXOu2vw98GeI/GM+i2VxBaXeqxeHtKudUfT7a6uQbe3nuxbeRHPODFEzh3BUEV7yPlm7Ju1/I4Xwx8ZvErePtC+HHxP+FerfDfWvF+l67qXgrWrbxPoHjXwf4juPDUdrda34dGraWbDV9J8TW2l3f9t2thq3h210/VNJsdWn03V7q50q8tI3bS/wB6/J/Mf9f1956lo3xA8B+ItZ17w74f8beEdd8QeFSq+KNC0bxJo2p6z4bZ2dEXXtMsr2e90cu0ciqNQgtyzRuBkqwCsBlQfF74T3U2t29r8T/h5c3HhrR7fxD4jgg8a+GppvD+gXaRyWuua3FHqbPpWj3Mc0L2+p36wWUySxtHOyupLs+z3tt17eof19xt2fjjwVqPhVfHWn+L/C9/4Jeyl1JPGNn4g0m68Kvp0LOk1+viGC7fSGsonjkWW6F2YI2R1eQFWALO9rO/bqA/RfGng7xJ4cTxh4d8WeGte8JSW9xdR+KdF13S9U8OSWtoXF1cprdjdT6Y9vbGKQXEy3RjhMbiRlKNhAeY+Dfjl4V8c/FLxd4J8N6/4P1/w5ofgL4W+J9G8T+H/EunazDrmu+PfEfxw0jVPD8E1hc3FjNNo1j8I4tQSG1nlvGW91JriGOGxV6Yrq9r9vxv/kVP2h/jVZfBvwM2p2ms+C7Lxbq/iz4X+CNAh8Z6vFZaRpt98VfiPoPw607xRrllHf6dqN9oPh19Y1DxHe2Fpe6XNrdp4d1HS7bWdJkeTU7ESu/k39yuwf4/fbzautDqY/iV4X8GeD/C2rfFf4qfCqwutbjhgg8Vx6rp3gbwf4pvpiXgl8LWniTxbr0ix3cDQyQ2CeJtemUsQl9coUkJbsmM7LXvGPhHwrYS6r4o8U+HPDelwadcaxNqWva5pmj2EOk2c1hbXeqS3moXVvbx6da3Gq6XBcXryC2gm1KwillV7y3WRWYGNqnxT+GOhz+GLbWviN4D0e58apbS+DbfVPF/h/T5/Fsd4Ims5PDEV3qEMmvJdLPA1s+lLdrOJojEWEiZP+G+fYPLr2L+qePvAuh+ItG8H61408JaR4t8R7v+Ee8L6p4j0fT/ABFr2zdv/sbRLu8h1PVNuxt32G2n27WzjBwAdbQAUAFAHzV+2VZ3WofsmftJWNiLo3l58EviVbWv2GFLi8E83hPVI4mtYJILmOa4V2DQxyW1xG7hVeGVCUY9dv67Ce39L8T54+IvgP4q+GvGfxBsLr4hePPiZ8R/F/wB+KWlfsh/EDxPD4K8PWfgL4pzeEL5vFfgZrH4f+GPA3hgeLtcXS/DfjTwf4u13S73WpfDmj/EDRLK80fTfD2qHxRd046WXvLmW7t0ab1t0avvZ9dE77d1o+ret9enTp+hxfwH0T4V+IdY+GMfhP45/CzVPEnwh+HvjG0tfg74G+Ftn8Ofij4csNY8GS+H9a8J/FrRrrxl4h8beGlsNSuNP1bV/DnjDRtH1O/8baHpeoXks99YSCUfMrpp2dmr+TVmuj7adGO1u3o1rtfvp5+vmbHgD4PeAIvhd/wS73fDHwpHNpc3hKDUYj4Q0tPsUN9+xx8XPE+ojUrf7AEjM/jzw94W1+4kvI/M/wCEs0rR9TLjV7e2mCTdnvsur01S/LT5gkrLRdOnl0/rY4b4r+GdQ0rxJ8SGgu9H8CfBvwd+33ofivx3d6z4Al8X/DvQPDWofsN/DLVrHxT4o8I22paDYTeCrT476/YeJtd1y4uP7F8NeOLmD4geIGt4PD2rarY1H58zhprZ723fkrabrTqJ6el1e+qSsvu9Vt10ubL6L8PU8P6R8R0+KHgH45/AbxN+1dpHjj9ovV/h14c0qD4P6Vp2g/AfU/DvhzV9V0rQNd8X6TqXhvRPitpfwW8W+Ptdj1K70bS7yyXxP4sOn6H4a8UXUaV72XxNNK+/y7OyaXrbqP0+enf+unmbGpaT4D+M3j79pzXv2a5vBXiHWPD/AMHf2TvH3w88U+A103/hDvEfxo+FfxJ/aZ8ZeHNMj8Y6HCND16DUjZaD4H8bXWk6lqL2vhfXdS8NalJETPp6C0tzLurPezVvl3X3i727LS3Xv59PuM69t9I+PfwvT9pbUfC8+oWnxs/aa/ZAXwDpvinw466to3wP+H37RHgHQ/Ctvd6TqVs81nba/qOs/E34ju80Mch0b4kG1vP9Gg8tSV4vlW8U7td2tettFp8tNQa773X4SWl92vLbVq29/XLjXPg58KPj98Yr39oXUfh94J0/X9G+Hui/ArXPiMuh6D4Ok+Fdn4QtbTxD8OPBOsa/HaeH/wC34PiRb+L9d8U+C9IuTrl7o2s+DNQvLC70yLSPsRa8Yta737p935NWs9tGPq9Nuv8AX6HmXwV+GWna/wDE79nC58TeDtUi8GeG/DH7dHjj4OeHPFOl39h/wingjV/jr8BIPhFZ3/h3ULe1OkWlv4D1mXUPBPg7xBYQ33g/R10Czk0vTNd8KJHpg5Nc2u9lK1nf5q/Xdp6hpdad7P7j0Hwn4o+Avw3+IXxz0D9oK9+HfhX4leL/AInT/wBgf8LIg0TTX+JHwtGj6DbfCnSPhbHr0SDxd4d8L6KYvC174W8Ix3v9k/EKz8WXF5pMeq68+o6wO+ln0vo1dO+t+2ut30sHql29V5/fbU+dfEHhXR9X8U/tJ/C/42/tAfC34VeNfix8XfFMmiab4y+HGl/8LX8Q+Cb2Sxh+C3iD4LeMda8a6RqHii58EeGh4fsfDN94N8O6tF4E+Imiatb3FnJrltqEt+9uRpNq2qurX+0na9k3vfVq2ysJ9btaX3T+9a/l+Z+xdZlBQAUAFABQAUAFABQAUAeZfFTwx8RPF/h06B8PfiDpXw3m1P7Vp+v+ILrwddeLNeh0O/tZLS5l8FzxeL/C9j4a8W2glNzoviDWbDxfpNhepDNeeFtUija3kat1VxP7vz+R13hTwvofgjwt4a8F+GLFNM8N+ENA0bwv4e02N5JI9O0PQNOttK0mxSSZ5JpEtLC0t7dXlkeR1jDO7MSxG2229W3dvzYzfpAFABQAUAFAAP/Z",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "BMCHelixRemedyForce",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "6",
+            "Value": "https://{{your instance}}.my.salesforce.com"
+        },
+        {
+            "IntegrationIdentifier": "BMCHelixRemedyForce",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Login API Root",
+            "PropertyName": "Login API Root",
+            "PropertyType": "6",
+            "Value": "https://login.salesforce.com"
+        },
+        {
+            "IntegrationIdentifier": "BMCHelixRemedyForce",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "BMCHelixRemedyForce",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "BMCHelixRemedyForce",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "BMCHelixRemedyForce",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Client Secret",
+            "PropertyName": "Client Secret",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "BMCHelixRemedyForce",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Refresh Token",
+            "PropertyName": "Refresh Token",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "BMCHelixRemedyForce",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": true
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SVGImage": "<svg width=\"13\" height=\"21\" viewBox=\"0 0 13 21\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M1.69985 21C0.849926 21 0 20.3308 0 19.0712V16.0993C0 14.9185 0.753343 13.5801 1.73848 12.97L5.81426 10.5098L1.73848 8.04967C0.753343 7.43955 0 6.10122 0 4.94002V1.92877C0 0.649485 0.849926 0 1.69985 0C2.06686 0 2.43388 0.118088 2.78157 0.334583L11.9955 5.92409C12.633 6.31771 13 6.90815 13 7.55764C13 8.20712 12.633 8.81724 11.9955 9.19119L9.79346 10.5295L11.9955 11.8679C12.633 12.2615 13 12.8519 13 13.5014C13 14.1509 12.633 14.761 11.9955 15.135L2.78157 20.7048C2.41456 20.8819 2.04755 21 1.69985 21ZM7.80386 11.6907L2.78157 14.7217C2.39525 14.9578 2.02823 15.627 2.02823 16.0797V18.7366L10.74 13.462L7.80386 11.6907ZM2.02823 2.22399V4.90066C2.02823 5.35333 2.39525 6.02249 2.78157 6.25867L7.80386 9.2896L10.74 7.51828L2.02823 2.22399Z\" fill=\"currentColor\"/></svg>",
+    "Version": 7.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/bmc-helix-remedyforce",
+    "MarketingDisplayName": "BMC Helix Remedyforce"
+}

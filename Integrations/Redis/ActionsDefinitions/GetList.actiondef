@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1529480890704,
+    "Creator": "admin",
+    "Description": "Return the value of an element from a Redis list",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[\"value1\", \"value2\", \"value3\"]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Redis",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1529480890704,
+    "Name": "Get List",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529480890704,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Target list name.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529480890704,
+            "Name": "List Name",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom RedisManager import RedisManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('Redis')\n    server = conf['Server Address']\n    port = int(conf['Port'])\n\n    redis_manager = RedisManager(server, port, 0)\n    list_name = siemplify.parameters['List Name']\n\n    list_values = redis_manager.get_list(list_name)\n    if list_values:\n        result_value = \"true\"\n        output_message = \"List {list} values are:{list_values}.\".format(list=list_name, list_values=list_values)\n    else:\n        result_value = \"false\"\n        output_message = \"Can not find values for {list}.\".format(list=list_name)\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

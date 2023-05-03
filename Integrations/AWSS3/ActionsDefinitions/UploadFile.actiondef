@@ -1,0 +1,44 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Upload file to bucket in AWS S3.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSS3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+    	"ResultExample": "[{\"bucket_upload_path\":\"s3://testsiemplify/test/123.txt\",\"file_path\":\"/usr/bin/share/download.txt\"}]",
+		"ResultName": "JsonResult"
+	}],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Upload File To Bucket",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "/{folder_1}/{folder_2}/{filename}",
+            "Description": "Specify the absolute path to the file that needs to be uploaded. Example: /folder_1/folder_2/filename" ,
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "File Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "s3://{bucket_name}/{file_name}",
+            "Description": "Specify the path in the bucket to where the path should be uploaded. Example: s3://siemplify/syslog/log.txt" ,
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Bucket Upload Path",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

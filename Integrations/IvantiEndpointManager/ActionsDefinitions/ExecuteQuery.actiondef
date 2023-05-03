@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Execute query in Ivanti Endpoint Manager.",
+    "Id": -1,
+    "IntegrationIdentifier": "IvantiEndpointManager",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Execute Query",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"results\":[{\"Device_x0020_Name\":\"IEDM-C\",\"Type\":\"Virtual Server\",\"OS_x0020_Name\":\"Microsoft Windows Server 2019, 64-bit\"},{\"Device_x0020_Name\":\"IVANTI-H01\",\"Type\":\"Virtual Workstation\",\"OS_x0020_Name\":\"Microsoft Windows 10, 64-bit\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Query",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the query that you want to execute.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many results to return. Default: 50.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

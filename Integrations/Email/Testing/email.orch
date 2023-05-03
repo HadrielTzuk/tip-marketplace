@@ -1,0 +1,119 @@
+{
+  "Identifier": "1d978228-c7d7-459c-b86d-738dc039e8ff",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "email",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "2596c7a5-0333-426f-ad8d-2d71a9c59e07",
+      "ParentWorkflowIdentifier": "1d978228-c7d7-459c-b86d-738dc039e8ff",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Email_Send Email_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Email_Send Email",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "2596c7a5-0333-426f-ad8d-2d71a9c59e07",
+          "ParentWorkflowIdentifier": "1d978228-c7d7-459c-b86d-738dc039e8ff",
+          "Name": "ScriptName",
+          "Value": "Email_Send Email",
+          "CreationTimeUnixTimeInMs": 1519210588893,
+          "ModificationTimeUnixTimeInMs": 1519210588893
+        },
+        {
+          "ParentStepIdentifier": "2596c7a5-0333-426f-ad8d-2d71a9c59e07",
+          "ParentWorkflowIdentifier": "1d978228-c7d7-459c-b86d-738dc039e8ff",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Recipients\":\"siemplifytest@gmail.com, zivh@siemplify.co\",\"Subject\":\" גבאי\",\"Content\":\"{\\r\\n  \\\"Content\\\": \\\"heyoushhhhhhh\\\",\\r\\n  \\\"ContentTemplateName\\\": \\\"bla\\\",\\r\\n  \\\"HtmlTemplateName\\\": \\\"None\\\"\\r\\n}\"}",
+          "CreationTimeUnixTimeInMs": 1519210588893,
+          "ModificationTimeUnixTimeInMs": 1519210588893
+        },
+        {
+          "ParentStepIdentifier": "2596c7a5-0333-426f-ad8d-2d71a9c59e07",
+          "ParentWorkflowIdentifier": "1d978228-c7d7-459c-b86d-738dc039e8ff",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519210588893,
+          "ModificationTimeUnixTimeInMs": 1519210588893
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519210588893,
+      "ModificationTimeUnixTimeInMs": 1519210588893
+    },
+    {
+      "Identifier": "403d2602-7d9c-4291-8950-6d8ff91c921e",
+      "ParentWorkflowIdentifier": "1d978228-c7d7-459c-b86d-738dc039e8ff",
+      "ParentStepIdentifiers": [
+        "2596c7a5-0333-426f-ad8d-2d71a9c59e07"
+      ],
+      "ParentStepIdentifier": "2596c7a5-0333-426f-ad8d-2d71a9c59e07",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Email_Send Email And Wait_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Email_Send Email And Wait",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "403d2602-7d9c-4291-8950-6d8ff91c921e",
+          "ParentWorkflowIdentifier": "1d978228-c7d7-459c-b86d-738dc039e8ff",
+          "Name": "ScriptName",
+          "Value": "Email_Send Email And Wait",
+          "CreationTimeUnixTimeInMs": 1519210588893,
+          "ModificationTimeUnixTimeInMs": 1519210588893
+        },
+        {
+          "ParentStepIdentifier": "403d2602-7d9c-4291-8950-6d8ff91c921e",
+          "ParentWorkflowIdentifier": "1d978228-c7d7-459c-b86d-738dc039e8ff",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Recipients\":\"zivh@siemplify.co\",\"Subject\":\"hey\",\"Content\":\"{\\r\\n  \\\"Content\\\": \\\"עברית דוגמא\\\",\\r\\n  \\\"ContentTemplateName\\\": \\\"עיב\\\",\\r\\n  \\\"HtmlTemplateName\\\": \\\"template\\\"\\r\\n}\"}",
+          "CreationTimeUnixTimeInMs": 1519210588893,
+          "ModificationTimeUnixTimeInMs": 1519210588893
+        },
+        {
+          "ParentStepIdentifier": "403d2602-7d9c-4291-8950-6d8ff91c921e",
+          "ParentWorkflowIdentifier": "1d978228-c7d7-459c-b86d-738dc039e8ff",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519210588893,
+          "ModificationTimeUnixTimeInMs": 1519210588893
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519210588893,
+      "ModificationTimeUnixTimeInMs": 1519210588893
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "2a7892f9-7ca2-4a10-9c95-1d9b32bab9ae",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "1d978228-c7d7-459c-b86d-738dc039e8ff",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "email",
+      "AllEnvironments": "",
+      "Id": 78,
+      "CreationTimeUnixTimeInMs": 1519210588893,
+      "ModificationTimeUnixTimeInMs": 1519210588893
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 78,
+  "CreationTimeUnixTimeInMs": 1519210588893,
+  "ModificationTimeUnixTimeInMs": 1519210588893
+}

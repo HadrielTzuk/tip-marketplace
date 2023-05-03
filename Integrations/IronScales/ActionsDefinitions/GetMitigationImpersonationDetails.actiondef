@@ -1,0 +1,42 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Get latest company impersonation incidents. Results are limited to the latest 1000 incidents, a message will appear displaying if the amount of incidents in the period is over this limit. Please note that the IDs returned here are of impersonation attempts, not incidents or reports, so searching these IDs in other endpoints will not return the expected incidents.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"incidentID\":100000000,\"mailboxId\":1000000,\"remediatedTime\":\"2020-12-08T19:18:17.592631+00:00\",\"mailboxEmail\":\"james.bond@siemplifycyarx.onmicrosoft.com\",\"senderEmail\":\"jamesbondtest6@gmail.com\",\"subject\":\"testing\",\"reportedBy\":\"IronSights\",\"incidentType\":\"Display Name Impersonation\",\"resolution\":\"\",\"remediations\":1},{\"incidentID\":100000000,\"mailboxId\":1000000,\"remediatedTime\":\"2020-12-08T19:18:18.024769+00:00\",\"mailboxEmail\":\"james.bond@siemplifycyarx.onmicrosoft.com\",\"senderEmail\":\"jamesbondtest6@gmail.com\",\"subject\":\"testing\",\"reportedBy\":\"IronSights\",\"incidentType\":\"Display Name Impersonation\",\"resolution\":\"\",\"remediations\":1},{\"incidentID\":100000000,\"mailboxId\":1000000,\"remediatedTime\":\"2020-12-08T19:25:43.216123+00:00\",\"mailboxEmail\":\"james.bond@siemplifycyarx.onmicrosoft.com\",\"senderEmail\":\"jamesbondtest6@gmail.com\",\"subject\":\"n\",\"reportedBy\":\"IronSights\",\"incidentType\":\"Display Name Impersonation\",\"resolution\":\"\",\"remediations\":1}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "IronScales",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Get Mitigation Impersonation Details",
+    "Parameters": [
+        {
+            "Name": "Period",
+            "OptionalValues": [
+                "Last 24 hours",
+                "Last 7 days",
+                "Last 90 days",
+                "Last 180 days",
+                "Last 360 days",
+                "Current year to date",
+                "All time"
+            ],
+            "Type": 15,
+            "Value": "Last 24 hours",
+            "DefaultValue": "Last 24 hours",
+            "IsMandatory": true,
+            "Description": "Specify the time period for which you would like to get mitigation impersonation details for.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

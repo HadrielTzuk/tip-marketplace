@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1530605834864,
+    "Creator": "admin",
+    "Description": "Get status of a command",
+    "Id": -1,
+    "IntegrationIdentifier": "SymantecATP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530605834864,
+    "Name": "Get Commands Status",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530605834864,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Command ID to fetch the status for.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530605834864,
+            "Name": "Commands IDs",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecATPManager import SymantecATPManager\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\n\nATP_PROVIDER = 'SymantecATP'\nACTION_NAME = \"SymantecATP_Get Command Status.\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(ATP_PROVIDER)\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    atp_manager = SymantecATPManager(conf.get('API Root'), conf.get('Client ID'), conf.get('Client Secret'), verify_ssl)\n\n    errors = []\n    result_value = False\n\n    # Parameters.\n    command_ids = siemplify.parameters.get('Commands IDs')\n    command_ids_list = command_ids.split(',')\n\n    for command_id in command_ids_list:\n        try:\n            result = atp_manager.get_command_status_report_by_id(command_id)\n\n            if result:\n                result_falt = dict_to_flat(result)\n                result_csv = flat_dict_to_csv(result_falt)\n                siemplify.result.add_data_table(command_id, result_csv)\n                result_value = True\n\n        except Exception as err:\n            error_message = \"Error fetching command status with id: {0}, ERROR: {1}\".format(command_id, unicode(err))\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    if result_value:\n        output_message = \"Got status for command IDs.\"\n    else:\n        output_message = \"No statuses were fetched.\"\n\n    if errors:\n        output_message = \"{0} \\n \\n ERRORs: \\n {1}\".format(output_message, \" \\n \".join(errors))\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n\n\n",
+    "ScriptResultName": "status_messages",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

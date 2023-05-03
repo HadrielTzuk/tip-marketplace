@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1575015001, 
+    "Creator": "admin",
+    "Description": "Delete entity indicators in Microsoft Defender ATP. Supported entities: Filehash, URL, IP Address. Note: only MD5, SHA1 and SHA256 hashes are supported.",
+    "Id": -1, 
+    "IntegrationIdentifier": "MicrosoftDefenderATP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1575015001, 
+    "Name": "Delete Entity Indicators",
+    "Parameters": [],
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\", \"ADDRESS\", \"DestinationURL\"]}",
+    "Type": 0, 
+    "Version": 1.0
+}

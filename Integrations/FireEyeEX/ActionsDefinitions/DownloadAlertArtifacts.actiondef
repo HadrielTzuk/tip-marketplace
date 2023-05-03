@@ -1,0 +1,44 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381262567,
+    "Creator": "Admin",
+    "Description": "Download alert artifacts.",
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"file_path\": \"/tmp/Alert_Artifacts_19d1e07a-2376-4fde-977c-87888e7xxx.zip\"}]",
+		"ResultName": "JsonResult"
+	}],
+    "Id": -1,
+    "IntegrationIdentifier": "FireEyeEX",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535381262567,
+    "Name": "Download Alert Artifacts",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381262567,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specify the alert uuid from where we need to download artifacts.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381262567,
+            "Name": "Alert UUID",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381262567,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify where the action should save the files. If nothing is specified, action will not save the file on the disk. ",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381262567,
+            "Name": "Download Path",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

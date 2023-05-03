@@ -1,0 +1,95 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Execute custom search in Darktrace.",
+    "Id": -1,
+    "IntegrationIdentifier": "Darktrace",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Execute Custom Search",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"hits\":[{\"_index\":\"logstash-vmprobe-2022.03.30\",\"_type\":\"doc\",\"_id\":\"AX_aKYBlovxxxxxxxxxx\",\"_score\":null,\"_source\":{\"@fields\":{\"certificate_not_valid_before\":1635062830,\"source_port\":\"10xxx\",\"certificate_issuer\":\"CN=GlobalSign GCC R3 DV TLS CA 2020,O=GlobalSign nv-sa,C=BE\",\"certificate_sig_alg\":\"sha256WithRSAEncryption\",\"certificate_not_valid_after\":1669362596,\"fid\":\"FwLteK2Hi3xxxxxxxxxx\",\"certificate_key_length\":2048,\"certificate_key_type\":\"rsa\",\"san_dns\":[\"*.checkpoint.com\",\"checkpoint.com\"],\"epochdate\":1648632620.401279,\"certificate_key_alg\":\"rsaEncryption\",\"certificate_subject\":\"CN=*.checkpoint.com\",\"source_ip\":\"172.30.xxx.xxx\",\"certificate_exponent\":\"65xxx\",\"dest_port\":\"44xx\",\"dest_ip\":\"194.29.xx.xx\",\"uid\":\"CCTCpp3JLgxxxxxxxxxx\",\"certificate_version\":3,\"certificate_serial\":\"7796FB90CCBDAxxxxxxxxxxx\",\"basic_constraints_ca\":false},\"@type\":\"x509\",\"@timestamp\":\"2022-03-30T09:30:20\",\"@message\":\"1648632620.4013\\\\tCCTCpp3JLgxxxxxxxxxx\\\\t172.30.xxx.xxx\\\\t10001\\\\t194.29.xx.xx\\\\t443\\\\t-\\\\t-\\\\t1635062830\\\\tCN=GlobalSign GCC R3 DV TLS CA 2020,O=GlobalSign nv-sa,C=BE\\\\tsha256WithRSAEncryption\\\\t1669362596\\\\tFwLteK2Hi3xxxxxxxxxx\\\\t2048\\\\trsa\\\\t[*.checkpoint.com,checkpoint.com]\\\\trsaEncryption\\\\tCN=*.checkpoint.com\\\\t65537\\\\t3\\\\t7796FB90CCBDAxxxxxxxxxxx\\\\tfalse\",\"@darktrace_probe\":\"1\"},\"sort\":[1648632620000]},{\"_index\":\"logstash-vmprobe-2022.03.30\",\"_type\":\"doc\",\"_id\":\"AX_aJO_jovxxxxxxxxxx\",\"_score\":null,\"_source\":{\"@fields\":{\"certificate_not_valid_before\":1635062830,\"source_port\":\"10xxx\",\"certificate_issuer\":\"CN=GlobalSign GCC R3 DV TLS CA 2020,O=GlobalSign nv-sa,C=BE\",\"certificate_sig_alg\":\"sha256WithRSAEncryption\",\"certificate_not_valid_after\":1669362596,\"fid\":\"FfUP05126pxxxxxxxxxx\",\"certificate_key_length\":2048,\"certificate_key_type\":\"rsa\",\"san_dns\":[\"*.checkpoint.com\",\"checkpoint.com\"],\"epochdate\":1648632319.884309,\"certificate_key_alg\":\"rsaEncryption\",\"certificate_subject\":\"CN=*.checkpoint.com\",\"source_ip\":\"172.30.xxx.xxx\",\"certificate_exponent\":\"65xxx\",\"dest_port\":\"44xx\",\"dest_ip\":\"194.29.xx.xx\",\"uid\":\"CduWm1xoxxxxxxxxxxx\",\"certificate_version\":3,\"certificate_serial\":\"7796FB90CCBDAxxxxxxxxxxx\",\"basic_constraints_ca\":false},\"@type\":\"x509\",\"@timestamp\":\"2022-03-30T09:25:19\",\"@message\":\"1648632319.8843\\\\tCduWm1xoxxxxxxxxxxx\\\\t172.30.xxx.xxx\\\\t10000\\\\t194.29.xx.xx\\\\t443\\\\t-\\\\t-\\\\t1635062830\\\\tCN=GlobalSign GCC R3 DV TLS CA 2020,O=GlobalSign nv-sa,C=BE\\\\tsha256WithRSAEncryption\\\\t1669362596\\\\tFfUP05126pxxxxxxxxxx\\\\t2048\\\\trsa\\\\t[*.checkpoint.com,checkpoint.com]\\\\trsaEncryption\\\\tCN=*.checkpoint.com\\\\t65537\\\\t3\\\\t7796FB90CCBDAxxxxxxxxxxx\\\\tfalse\",\"@darktrace_probe\":\"1\"},\"sort\":[1648632319000]}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Query",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the query that needs to be executed.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Time Frame",
+            "Type": 15,
+            "DefaultValue": "Last Hour",
+            "Value": "Last Hour",
+            "IsMandatory": false,
+            "Description": "Specify a time frame for the results. If \"Custom\" is selected, you also need to provide \"Start Time\". If \"Alert Time Till Now\" is selected, action will use start time of the alert as start time for the search and end time will be current time. If \"30 Minutes Around Alert Time\" is selected, action will search the alerts 30 minutes before the alert happened till the 30 minutes after the alert has happened. Same idea applies to \"1 Hour Around Alert Time\" and \"5 Minutes Around Alert Time\"",
+            "OptionalValues": [
+                "Last Hour",
+                "Last 6 Hours",
+                "Last 24 Hours",
+                "Last Week",
+                "Last Month",
+                "Alert Time Till Now",
+                "5 Minutes Around Alert Time",
+                "30 Minutes Around Alert Time",
+                "1 Hour Around Alert Time",
+                "Custom"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Start Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the start time for the results. This parameter is mandatory, if \"Custom\" is selected for the \"Time Frame\" parameter. Format: ISO 8601",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "End Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the end time for the results. Format: ISO 8601. If nothing is provided and \"Custom\" is selected for the \"Time Frame\" parameter then this parameter will use current time.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many results to return. Default: 50.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

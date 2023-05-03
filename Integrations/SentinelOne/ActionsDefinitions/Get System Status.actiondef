@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1521982259956,
+    "Creator": "admin",
+    "Description": "Get SentinelOne system health status",
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOne",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1521982259956,
+    "Name": "Get System Status",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom SentinelOneManager import SentinelOneManager\r\n\r\n\r\n# Consts.\r\nSENTINEL_ONE_PROVIDER = 'SentinelOne'\r\n\r\n\r\ndef main():\r\n    # Configuration.\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration(SENTINEL_ONE_PROVIDER)\r\n    sentinel_one_manager = SentinelOneManager(conf['Api Root'], conf['Username'], conf['Password'])\r\n\r\n    # Get system status.\r\n    system_version = sentinel_one_manager.get_system_version()\r\n\r\n    # Form output message.\r\n    output_message = 'System version is: {0}'.format(system_version)\r\n\r\n    siemplify.end(output_message, True)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

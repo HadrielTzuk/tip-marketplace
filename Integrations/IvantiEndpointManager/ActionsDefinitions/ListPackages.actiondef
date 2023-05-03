@@ -1,0 +1,63 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List available packages in Ivanti Endpoint Manager.",
+    "Id": -1,
+    "IntegrationIdentifier": "IvantiEndpointManager",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Packages",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"DistributionPackages\":[{\"PackageType\":\"BATCH\",\"PackageName\":\"Clear Preferred Servers\",\"PackageDescription\":\"Batch file that clears the cached preferred servers from the client\",\"PackagePrimaryFile\":\"http://IEDM-C/landesk/files/delpsvrs.bat\"},{\"PackageType\":\"MAC\",\"PackageName\":\"Enroll macOS device in Ivanti MDM\",\"PackageDescription\":\"This package will initiate enrollment of a macOS device in Ivanti MDM\",\"PackagePrimaryFile\":\"http://IEDM-C/landesk/files/mac_agent_atlas_enroll.sh\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Filter Logic",
+            "Type": 15,
+            "DefaultValue": "Equal",
+            "Value": "Equal",
+            "IsMandatory": false,
+            "Description": "Specify what filter logic should be applied.",
+            "OptionalValues": [
+                "Equal",
+                "Contains"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Filter Value",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what value should be used in the filter. If \"Equal\" is selected, action will try to find the exact match among items and if \"Contains\" is selected, action will try to find items that contain that substring. If nothing is provided in this parameter, the filter will not be applied.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Packages To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many packages to return. Default: 50.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Action pauses the playbook execution and periodically connects to EasyVista until timeout and checks if the specified ticket got an update. Action also can monitor specific field for the update, once that field is updated - action completes and fetches back the updated ticket information. ",
+    "Id": -1,
+    "IntegrationIdentifier": "EasyVista",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Wait for the Ticket Update",
+        "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "EasyVista ticket identifier, eg S201001_000001.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Ticket Identifier",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "Status",
+            "Description": "EasyVista ticket field to monitor for the update.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Field To Monitor",
+            "Value": "Status",
+            "Type": 15,
+            "OptionalValues": [
+                "Status",
+                "Comment",
+                "Actions"
+            ]
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

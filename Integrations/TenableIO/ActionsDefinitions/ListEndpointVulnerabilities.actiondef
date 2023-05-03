@@ -1,0 +1,54 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List endpoint vulnerabilities in Tenable.io. Supported entities: IP Address, Hostname.",
+    "Id": -1,
+    "IntegrationIdentifier": "TenableIO",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Endpoint Vulnerabilities",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"Hostname\",\"EntityResult\":[{\"count\":1,\"plugin_family\":\"Windows\",\"plugin_id\":103569,\"plugin_name\":\"Windows Defender Antimalware/Antivirus Signature Definition Check\",\"vulnerability_state\":\"Active\",\"accepted_count\":0,\"recasted_count\":0,\"counts_by_severity\":[{\"count\":1,\"value\":3}],\"severity\":3},{\"count\":1,\"plugin_family\":\"Windows : Microsoft Bulletins\",\"plugin_id\":131025,\"plugin_name\":\"Security Updates for Exchange (November 2019)\",\"vulnerability_state\":\"Active\",\"vpr_score\":6.7,\"accepted_count\":0,\"recasted_count\":0,\"counts_by_severity\":[{\"count\":1,\"value\":3}],\"cvss_base_score\":7.5,\"cvss3_base_score\":9.8,\"severity\":3}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1554655351176,
+            "CustomActionId": -1,
+            "DefaultValue": "Info",
+            "Description": "Specify the lowest severity that will be used to fetch vulnerabilities.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1554655351176,
+            "Name": "Lowest Severity To Fetch",
+            "Type": 15,
+            "OptionalValues": [
+                "Info",
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+            ],
+            "Value": "Info"
+        },
+        {
+            "Name": "Max Vulnerabilities To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many vulnerabilities to return per entity. Default: 50. Maximum: 200.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"HOSTNAME\"]}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

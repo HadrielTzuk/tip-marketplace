@@ -1,0 +1,3 @@
+class FireEyeETPException(Exception):
+    pass
+

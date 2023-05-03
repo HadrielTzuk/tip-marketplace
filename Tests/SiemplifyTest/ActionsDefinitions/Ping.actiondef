@@ -1,0 +1,24 @@
+{
+    "Name": "Ping", 
+    "Description": "This action does not testing anything.",
+    "Script": "from SiemplifyAction import SiemplifyAction\n\nsiemplify = SiemplifyAction()\n\n\noutput_message = 'Connection Established.'\nresult_value = 'true'\nsiemplify.end(output_message, result_value)", 
+    "IntegrationIdentifier": "SiemplifyTest", 
+    "ScriptResultName": "success", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultName": "JsonResult", 
+            "ResultExample": ""
+        }
+    ], 
+    "Creator": "System", 
+    "IsEnabled": true, 
+    "IsCustom": false, 
+    "IsSystem": false, 
+    "Version": 1.0, 
+    "TimeoutSeconds": 600, 
+    "Parameters": [], 
+    "DefaultResultValue": null, 
+    "Id": -1, 
+    "CreationTimeUnixTimeInMs": 1561374816615, 
+    "ModificationTimeUnixTimeInMs": 1561374816623
+}

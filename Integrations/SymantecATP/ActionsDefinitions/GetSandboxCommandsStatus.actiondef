@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1542553769779,
+    "Creator": "Admin",
+    "Description": "Get commands status by id.",
+    "Id": -1,
+    "IntegrationIdentifier": "SymantecATP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542553769779,
+    "Name": "Get Sandbox Commands Status",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542553769779,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Sandbox Command ID to fetch the status for.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542553769779,
+            "Name": "Commands IDs",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecATPManager import SymantecATPManager\nfrom SiemplifyDataModel import EntityTypes\nfrom SymantecATPManager import ATPEntityTypes\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\n\n\nATP_PROVIDER = 'SymantecATP'\nACTION_NAME = \"SymantecATP_Get Command Status\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(ATP_PROVIDER)\n    verify_ssl = conf.get('Verify SSL').lower() == 'true'\n    atp_manager = SymantecATPManager(conf.get('API Root'), conf.get('Client ID'), conf.get('Client Secret'), verify_ssl)\n\n    errors = []\n    result_value = False\n\n    # Parameters.\n    commands_ids = siemplify.parameters.get('Commands IDs')\n\n    for command_id in commands_ids.split(','):\n        try:\n            command_status = atp_manager.get_command_status(command_id)\n            siemplify.result.add_data_table(command_id, flat_dict_to_csv(dict_to_flat(command_status)))\n            result_value = True\n        except Exception as err:\n            error_message = 'Error fetching command result for command id \"{0}\", ERROR: {0}'.format(\n                command_id,\n                err.message\n            )\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    if is_closed:\n        output_message = \"Found status for target IDs.\".format(incident_uuid)\n    else:\n        output_message = \"Not found statuses for target IDs.\"\n\n    if errors:\n        output_message = \"{0} \\n \\n Errors: \\n {1}\".format(output_message, \"\\n\".join(errors))\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 3.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

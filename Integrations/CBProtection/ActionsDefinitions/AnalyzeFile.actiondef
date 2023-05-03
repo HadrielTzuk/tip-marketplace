@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1527591126061, 
+    "Creator": "admin", 
+    "Description": "Analyze a file", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"computerId\": 1, \"connectorId\": 2, \"analysisStatus\": 0, \"dateCreated\": \"2019-01-17T09:17:41.663Z\", \"priority\": 0, \"createdByUserId\": 0, \"is_malicious\": \"True\", \"pathName\": \"c:\\\\\\\\temp\\\\\\\\test.conf\", \"fileCatalogId\": 12345, \"createdBy\": \"admin\", \"analysisResult\": 0, \"dateModified\": \"2019-01-17T09:30:28.053Z\", \"fileName\": \"test.exe\", \"id\": 1, \"analysisTarget\": \"\"}, \"Entity\": \"FSFSD213CGJK3423423FCFS33dFSV123\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "CBProtection", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1527591126061, 
+    "Name": "Analyze File", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527591126061, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The name of the analyzing connector. e.g. Palo Alto Networks", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1527591126061, 
+            "Name": "Connector Name", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1527591126061, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The priority of the analysis (-2 to 2)", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1527591126061, 
+            "Name": "Priority", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1527591126061, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Wait timeout. e.g. 120", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1527591126061, 
+            "Name": "Timeout", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom CarbonBlackProtectionManager import CBProtectionManager, CBProtectionManagerException\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    configurations = siemplify.get_configuration('CBProtection')\n    server_addr = configurations['Api Root']\n    api_key = configurations['Api Key']\n\n    cb_protection = CBProtectionManager(server_addr, api_key)\n\n    connector_name = siemplify.parameters.get('Connector Name')\n    priority = siemplify.parameters.get('Priority', 0)\n    connector_id = cb_protection.get_connector_by_name(connector_name).id\n\n    enriched_entities = []\n    errors = \"\"\n\n    for entity in siemplify.target_entities:\n        try:\n            if entity.entity_type == EntityTypes.FILEHASH:\n                if len(entity.identifier) == 32:\n                    analysis = cb_protection.analyze_file(entity.identifier,\n                                                          connector_id,\n                                                          priority, wait=True)\n                    if cb_protection.is_file_malicious(analysis.get('id')) or \\\n                            cb_protection.is_file_suspicious(analysis.get('id')):\n                        entity.is_suspicious = True\n\n                    enriched_entities.append(entity)\n\n        except Exception as e:\n            errors += \"Unable to analyze file {0}: \\n{1}\\n\".format(\n                entity.identifier, e.message)\n            continue\n\n    if enriched_entities:\n        entities_names = [entity.identifier for entity in enriched_entities]\n        output_message = 'Carbon Black Protection - Analyzes the followng files:\\n' + '\\n'.join(\n            entities_names)\n        output_message += errors\n\n        siemplify.update_entities(enriched_entities)\n\n    else:\n        output_message = 'Carbon Black Protection - No files were analysed.\\n'\n        output_message += errors\n\n    siemplify.end(output_message, 'true')\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 1.0
+}

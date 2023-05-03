@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1542011656447,
+    "Creator": "Admin",
+    "Description": "Test integration connectivity.",
+    "Id": -1,
+    "IntegrationIdentifier": "JuniperVSRX",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542011656447,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom JuniperVSRXManager import JuniperVSRXManager\n\nPROVIDER_NAME = 'JuniperVSRX'\nACTION_NAME = 'JuniperVSRX Ping'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    config = siemplify.get_configuration(PROVIDER_NAME)\n    address = config['Address']\n    port = config['Port']\n    username = config['Username']\n    password = config['Password']\n\n    juniper_manager = JuniperVSRXManager(address, port, username, password)\n    result_value = False\n\n    if juniper_manager.ping():\n        output_message = 'Connection Established.'\n        result_value = True\n    else:\n        output_message = 'Connection Failed.'\n\n    juniper_manager.close_session()\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

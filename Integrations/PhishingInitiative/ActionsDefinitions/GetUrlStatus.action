@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1520777285446, 
+    "Creator": "admin", 
+    "Description": "Get Status of an URL", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"url\": \"https: //www.dieutribenhkhop.com\", \"tag\": -1, \"tag_label\": \"notsubmitted\"}, \"Entity\": \"https: //www.dieutribenhkhop.com\"}, {\"EntityResult\": {\"url\": \"http: //markossolomon.com/f1q7qx.php\", \"tag\": -1, \"tag_label\": \"notsubmitted\"}, \"Entity\": \"HTTP: //MARKOSSOLOMON.COM/F1Q7QX.PHP\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "PhishingInitiative", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1520777285446, 
+    "Name": "Get Url Status", 
+    "Parameters": [], 
+    "ScriptResultName": "is_phishing", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

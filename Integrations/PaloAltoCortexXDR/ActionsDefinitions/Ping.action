@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1518514677210,
+    "Creator": "admin",
+    "Description": "Test connectivity to Palo Alto Cortex XDR",
+    "Id": -1,
+    "IntegrationIdentifier": "PaloAltoCortexXDR",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518514677210,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_connected",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

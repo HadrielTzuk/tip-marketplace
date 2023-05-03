@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 19.81</h2><h5>Published on 15 March, 2023</h5><hr><h3>What's Improved</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     XForce\n    </b>\n   </li>\n   <ul>\n    <li>\n     Integration\n    </li>\n    <ul>\n     <li>\n      Integration's Actions - Added support for unicode characters.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "19.81",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "15/03/23",
+    "Title": "Release Notes"
+}

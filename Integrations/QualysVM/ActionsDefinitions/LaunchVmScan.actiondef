@@ -1,0 +1,83 @@
+{
+    "CreationTimeUnixTimeInMs": 1533212260722, 
+    "Creator": "Admin", 
+    "Description": "Launch vulnerability scan on a host in your network and fetch results. NOTICE! This action will automatically new hosts to Qualys as assets. Please note that your license limit number of hosts depends on your subscription. Supported entities: IP Address.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"username\": \"username\", \"city\": \"New York\", \"zip\": \"10024\", \"name\": \"user name\", \"add1\": \"Broadway\", \"country\": \"United States of America\", \"company\": \"X\", \"state\": \"New York\", \"scan_report_template_title\": \"Scan Results\", \"result_date\": \"01/28/2019 12:16:42\", \"role\": \"Manager\", \"add2\": \"Suite\"}, {\"status\": \"Finished\", \"scanner_appliance\": \"1.1.1.1 (Scanner 10.10.10-1, Vulnerability Signatures 10.10.10-2)\", \"network\": \"Global Default Network\", \"reference\": \"scan/1533110666.07264\", \"ips\": \"1.1.1.1\", \"launch_date\": \"08/01/2018 08:04:26\", \"option_profile\": \"Initial Options\", \"total_hosts\": \"1\", \"scan_title\": \"My first scan\", \"duration\": \"00:06:20\", \"excluded_ips\": \"\", \"asset_groups\": null, \"type\": \"API\", \"active_hosts\": \"1\"}, {\"protocol\": \"tcp\", \"qid\": 86000, \"results\": \"Server Version\\tServer Banner\\ncloudflare-nginx\\tcloudflare-nginx\", \"solution\": \"N/A\", \"ip_status\": \"host scanned, found vuln\", \"port\": \"80\", \"category\": \"Web server\", \"severity\": \"1\", \"title\": \"Web Server Version\", \"instance\": null, \"dns\": \"1dot1dot1dot1.cloudflare-dns.com\", \"ip\": \"1.1.1.1\", \"type\": \"Ig\", \"vendor_reference\": null, \"cve_id\": null, \"ssl\": \"no\", \"netbios\": null, \"associated_malware\": null, \"pci_vuln\": \"no\", \"impact\": \"N/A\", \"fqdn\": \"\", \"bugtraq_id\": null, \"threat\": \"N/A\", \"os\": \"Linux 3.13\", \"exploitability\": null}, {\"target_distribution_across_scanner_appliances\": \"External : 1.1.1.1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "QualysVM", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1533212260722, 
+    "Name": "Launch VM Scan And Fetch Results", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1533212260721, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The scan title. This can be a maximum of 2000 characters (ascii)", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1533212260721, 
+            "Name": "Title", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1533212260721, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify a value of 0 - 9 to set a processing priority level for the scan. When not specified, a value of 0 (no priority) is used. Valid values are: 0 for No Priority (the default), 1 for Emergency, 2 for Ultimate,3 for Critical, 4 for Major, 5 for High, 6 for Standard 7 for Medium, 8 for Minor and 9 for Low", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1533212260721, 
+            "Name": "Processing Priority", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1533212260722, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The title of the compliance option profile to be used. One of these parameters must be specified in a request: option_title or option_id. For example: Qualys Top 20 Options.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1533212260722, 
+            "Name": "Scan Profile", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1533212260722, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The friendly names of the scanner appliances to be used or \"External\" for external scanners. Multiple entries are comma separated.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1533212260722, 
+            "Name": "Scanner Appliance", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1533212260722, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The ID of a network used to filter the IPs/ranges specified in the \"ip\" parameter. Set to a custom network ID (note this does not filter IPs/ranges specified in \"asset_groups\" or \"asset_group_ids\"). Or set to \"0\" (the default) for the Global Default Network - this is used to scan hosts outside of your custom networks.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1533212260722, 
+            "Name": "Network", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "scan_ref",
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 1.0,
+    "IsAsync": true
+}

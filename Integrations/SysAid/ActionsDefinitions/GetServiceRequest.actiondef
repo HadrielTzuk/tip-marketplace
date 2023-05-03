@@ -1,0 +1,28 @@
+{
+    "CreationTimeUnixTimeInMs": 1534436861977,
+    "Creator": "Admin",
+    "Description": "Get a service request.",
+    "Id": -1,
+    "IntegrationIdentifier": "SysAid",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534436861977,
+    "Name": "Get Service Request",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The ID of the service request to get info about.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Service Request ID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "service_request",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

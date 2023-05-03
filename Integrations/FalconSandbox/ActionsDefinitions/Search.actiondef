@@ -1,0 +1,179 @@
+{
+    "CreationTimeUnixTimeInMs": 1523173736145,
+    "Creator": "admin",
+    "Description": "Search Falcon databases for existing scan reports and information about files, and file Urls",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"environment_id\": 120, \"job_id\": \"5c441f357ca3e158b964fee3\", \"analysis_start_time\": \"2019-01-20 08:23:00\", \"vx_family\": \"Trojan.Generic\", \"av_detect\": \"70\", \"threat_score\": 98, \"environment_description\": \"Windows 7 64 bit\", \"verdict\": \"malicious\", \"submit_name\": \"original.bin\", \"sha256\": \"8bade22161bf71a49955a66ec69809affbd2dde09dc84b94ede57e0d027e82e4\", \"type\": null, \"type_short\": \"service\", \"size\": 43520}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "FalconSandbox",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1523173736145,
+    "Name": "Search",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1523173736145,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filename e.g. invoice.exe",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523173736145,
+            "Name": "File Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523173736145,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "e.g. docx",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523173736145,
+            "Name": "File Type",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523173736145,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "e.g. PE32 executable",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523173736145,
+            "Name": "File Type Description",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523173736145,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "e.g. 1 (1=whitelisted, 2=no verdict, 3=no specific threat, 4=suspicious, 5=malicious)",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523173736145,
+            "Name": "Verdict",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523173736145,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "e.g. 50-70 (min 0, max 100)",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523173736145,
+            "Name": "AV Multiscan Range",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523173736145,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "e.g. Agent.AD, nemucod",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523173736145,
+            "Name": "AV Family Substring",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523173736145,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "e.g. ransomware",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523173736145,
+            "Name": "Hashtag",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523173736145,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "e.g. 8080",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523173736145,
+            "Name": "Port",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523173736145,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "x.x.x.x",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523173736145,
+            "Name": "Host",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523173736145,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "e.g. checkip.dyndns.org",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523173736145,
+            "Name": "Domain",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523173736145,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "e.g. google",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523173736145,
+            "Name": "HTTP Request Substring",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523173736145,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "e.g. <sha256>",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523173736145,
+            "Name": "Similar Samples",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523173736145,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "e.g. <sha256>",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523173736145,
+            "Name": "Sample Context",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat, add_prefix_to_dict_keys\nfrom FalconSandboxManager import FalconSandboxManager\nimport json\n\nSCRIPT_NAME = \"Falcon Sandbox - Search\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    configurations = siemplify.get_configuration('FalconSandbox')\n    key = configurations['Api Key']\n\n    file_name = siemplify.parameters.get('File Name')\n    file_type = siemplify.parameters.get('File Type')\n    file_type_desc = siemplify.parameters.get('File Type Description')\n    verdict = siemplify.parameters.get('Verdict')\n    av_detect = siemplify.parameters.get('AV Multiscan Range')\n    vx_family = siemplify.parameters.get('AV Family Substring')\n    tag = siemplify.parameters.get('Hashtag')\n    port = siemplify.parameters.get('Port')\n    host = siemplify.parameters.get('Host')\n    domain = siemplify.parameters.get('Domain')\n    url = siemplify.parameters.get('HTTP Request Substring')\n    similat_to = siemplify.parameters.get('Similar Samples')\n    context = siemplify.parameters.get('Sample Context')\n\n    falcon_manager = FalconSandboxManager(key)\n    siemplify.LOGGER.info(\"Connected to Hybrid Analysis\")\n\n    results = falcon_manager.search(file_name, file_type, file_type_desc, verdict,\n                                    av_detect, vx_family, tag, port, host, domain,\n                                    url, similat_to, context)\n\n    if results:\n        flat_results = []\n\n        # Flatten results\n        for result in results:\n            flat_results.append(dict_to_flat(result))\n\n        csv_output = falcon_manager.construct_csv(flat_results)\n\n        siemplify.result.add_data_table(\"Falcon Search Results\", csv_output)\n\n        output_message = \"Found {} results\".format(len(results))\n        siemplify.end(output_message, json.dumps(results))\n\n    output_message = \"No results found\"\n    siemplify.end(output_message, json.dumps(results))\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "results",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

@@ -1,0 +1,86 @@
+[
+    {
+        "ChangeDescription": "New integration \"BMC Helix Remedyforce\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "BMCHelixRemedyForce",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1622632359,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8592"
+    },
+    {
+        "ChangeDescription": "Added support for OAuth authentication. Please visit documentation portal for more details.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "BMCHelixRemedyForce",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1628667443,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9408"
+    },
+    {
+        "ChangeDescription": "Integration - Added an ability to change API root that is used during authentication.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "BMCHelixRemedyForce",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1635937463,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10276"
+    },
+    {
+        "ChangeDescription": "Security enhancements throughout the integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "BMCHelixRemedyForce",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1636521986,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "BMCHelixRemedyForce",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "BMC Helix Remedyforce - Added ability to connect to Salesforce sandbox environments by providing https://test.salesforce.com in the \"Login API Root\" integration configuration parameter.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "BMCHelixRemedyForce",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1667989751,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13227"
+    },
+    {
+        "ChangeDescription": "Incidents Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Incidents Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1670388158,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12046"
+    }
+]

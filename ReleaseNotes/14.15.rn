@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 14.15</h2><h5>Published on 06 January, 2021</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     AWSWAF\n    </b>\n   </li>\n   <ul>\n    <li>\n     AWSWAF\n    </li>\n    <ul>\n     <li>\n      Added new actions: List IP Sets, Remove IP From IP Set, List Regex Pattern Sets, Remove Pattern From Regex Pattern Set, Remove Entity From Regex Pattern Set, List Rule Groups, Remove Rule From Rule Group, List Web ACLs, Remove Rule From Web ACL\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     GSuite\n    </b>\n   </li>\n   <ul>\n    <li>\n     GSuite\n    </li>\n    <ul>\n     <li>\n      GSuite - Update - Updated the integration's code to work with Python version 3.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "14.15",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "06/01/21",
+    "Title": "Release Notes"
+}

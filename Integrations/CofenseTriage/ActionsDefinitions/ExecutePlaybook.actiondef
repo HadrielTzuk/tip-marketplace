@@ -1,0 +1,41 @@
+{
+    "IntegrationIdentifier": "CofenseTriage",
+    "Id": -1,
+    "Creator": "admin",
+    "Name": "Execute Playbook",
+    "Description": "Initiate a playbook execution in Cofense Triage.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Parameters": [
+        {
+            "Name": "Report ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the ID of the report on which you want to execute the playbook.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Playbook Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the playbook that needs to be executed.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

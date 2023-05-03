@@ -1,0 +1,43 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Download alert artifacts.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"file_path\": \"/opt/siemplify/siemplify_server/bin/Scripting/PythonSDK/IntegrationsVirtualEnvironment/FireEyeNX_V1.0/12ec4cfb-43d4-421c-910f-1b0795cxxxxx.zip\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "FireEyeNX",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Download Alert Artifacts",
+    "Parameters": [
+        {
+            "Name": "Alert UUID",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the alert uuid from where we need to download artifacts.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Download Path",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify where the action should save the files.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

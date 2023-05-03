@@ -1,0 +1,50 @@
+{
+    "Description": "The ObserveIT platform correlates activity and data movement, empowering security teams to identify user risk, detect to insider-led data breaches, and accelerate security incident response.  Leveraging a powerful contextual intelligence engine and a library of over 400 threat templates drawn from customers and leading cybersecurity frameworks, ObserveIT delivers rapid time to value and proven capability to streamline insider threat programs.",
+    "DisplayName": "ObserveIT",
+    "Identifier": "ObserveIT",
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ObserveIT",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": 2,
+            "Value": "https://<address>:<port>"
+        },
+        {
+            "IntegrationIdentifier": "ObserveIT",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ObserveIT",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client Secret",
+            "PropertyName": "Client Secret",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ObserveIT",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": "True"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M4,19h4.3V6H4V19z M9.4,6v3.4h3.7V19h4.2V9.4H21V6H9.4z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 2,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/observeit",
+    "MarketingDisplayName": "ObserveIT"
+}

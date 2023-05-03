@@ -1,0 +1,94 @@
+{
+    "CreationTimeUnixTimeInMs": 1534436861977,
+    "Creator": "Admin",
+    "Description": "List events.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"dstip\": \"0.0.0.0\", \"browser_session_id\": 1066949788113471080, \"srcip\": \"0.0.0.0\", \"app_session_id\": 4502249472406092569, \"os_version\": \"WindowsServer2016\", \"dst_region\": \"Virginia\", \"numbytes\": 37480, \"req_cnt\": 18, \"server_bytes\": 8994, \"page_id\": 0, \"page_duration\": 867, \"page_endtime\": 1548577530, \"dst_latitude\": 39.0481, \"timestamp\": 1548576663, \"src_region\": \"Oregon\", \"src_location\": \"Boardman\", \"ur_normalized\": \"person@company.com\", \"appcategory\": \"\", \"src_latitude\": 45.8491, \"count\": 1, \"bypass_traffic\": \"no\", \"type\": \"page\", \"userip\": \"0.0.0.0\", \"src_longitude\": -119.7143, \"page\": \"WebBackground\", \"browser\": \"\", \"domain\": \"WebBackground\", \"dst_location\": \"Ashburn\", \"_insertion_epoch_timestamp\": 1548577621, \"site\": \"WebBackground\", \"access_method\": \"Client\", \"browser_version\": \"\", \"category\": \"\", \"client_bytes\": 28486, \"user_generated\": \"no\", \"hostname\": \"IP-C0A84AC\", \"dst_country\": \"US\", \"resp_cnt\": 18, \"src_zipcode\": \"97818\", \"traffic_type\": \"Web\", \"http_transaction_count\": 18, \"organization_unit\": \"casb.us/Users\", \"page_starttime\": 1548576663, \"dst_longitude\": -77.4728, \"user\": \"person@email.com\", \"userkey\": \"person@email.com\", \"device\": \"WindowsDevice\", \"src_country\": \"US\", \"dst_zipcode\": \"20149\", \"url\": \"WebBackground\", \"sv\": \"\", \"ccl\": \"unknown\", \"useragent\": \"RestSharp/105.2.3.0\", \"_id\": \"00000000\", \"os\": \"WindowsServer2016\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Netskope",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534436861977,
+    "Name": "List Events",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "This acts as a filter for all the cloud app events in the events database.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Query",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The type of the alert to filter by. Valid values: page | application | audit | infrastructure.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Type",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Time period to search events at (milliseconds backwards). Valid Values: 3600 | 86400 | 604800 | 2592000.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Time Period",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Restrict events to those that have timestamps greater than this (unixtime). Needed only if time period is not passed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Restrict events to those that have timestamps less than this (unixtime). Needed only if time period is not passed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "End Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665793363,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Number of results to return. Default: 100.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665793363,
+            "Name": "Limit",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "events",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,64 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Search Any.Run scans history. Note: Action is not working with Siemplify entities, only action input parameters are used.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"verdict\": \"No threats detected\", \"name\": \"https://www.cigarpaqe.com/mage.php\", \"related\": \"https://app.any.run/tasks/169765ad-d578-4fec-9cf2-bf8be7b80e38\", \"pcap\": \"https://content.any.run/tasks/169765ad-d578-4fec-9cf2-bf8be7b80e38/download/pcap\", \"file\": \"https://content.any.run/tasks/169765ad-d578-4fec-9cf2-bf8be7b80e38/download/files/5a9564ed-e180-4d9f-bd68-b555a375b104\", \"json\": \"https://api.any.run/report/169765ad-d578-4fec-9cf2-bf8be7b80e38/summary/json\", \"misp\": \"https://api.any.run/report/169765ad-d578-4fec-9cf2-bf8be7b80e38/summary/misp\", \"tags\": [], \"date\": \"2020-10-22T13:53:01.327Z\", \"hashes\": {\"ssdeep\": \"3:N8DSLmq9JTTSnVn:2OLmchTSVn\", \"head_hash\": \"15540f091c7c87b7d63aa0d6dfaff167\", \"sha256\": \"beeed5f446c31b166785ca79d1ce3b4674dc778a9b2a7f3637e9fbf367e00d86\", \"sha1\": \"d7d962d86d075490755113af960184f0b0698269\", \"md5\": \"15540f091c7c87b7d63aa0d6dfaff167\"}}, {\"verdict\": \"No threats detected\", \"name\": \"https://www.cigarpaqe.com/mage.php\", \"related\": \"https://app.any.run/tasks/74995e0c-b1a5-482c-addd-b964a187e476\", \"pcap\": \"https://content.any.run/tasks/74995e0c-b1a5-482c-addd-b964a187e476/download/pcap\", \"file\": \"https://content.any.run/tasks/74995e0c-b1a5-482c-addd-b964a187e476/download/files/4401b4ea-729e-4f95-b7ca-e0ad756b491d\", \"json\": \"https://api.any.run/report/74995e0c-b1a5-482c-addd-b964a187e476/summary/json\", \"misp\": \"https://api.any.run/report/74995e0c-b1a5-482c-addd-b964a187e476/summary/misp\", \"tags\": [], \"date\": \"2020-10-22T13:51:28.024Z\", \"hashes\": {\"ssdeep\": \"3:N8DSLmq9JTTSnVn:2OLmchTSVn\", \"head_hash\": \"15540f091c7c87b7d63aa0d6dfaff167\", \"sha256\": \"beeed5f446c31b166785ca79d1ce3b4674dc778a9b2a7f3637e9fbf367e00d86\", \"sha1\": \"d7d962d86d075490755113af960184f0b0698269\", \"md5\": \"15540f091c7c87b7d63aa0d6dfaff167\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "AnyRun",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Search Report History",
+    "Parameters": [
+        {
+            "Name": "Submission Name",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specific submission name to search for.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Search in last x scans",
+            "Type": 0,
+            "Value": 25,
+            "DefaultValue": 25,
+            "IsMandatory": true,
+            "Description": "Search for report in last x analyses executed in Any.Run.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Skip first x scans",
+            "Type": 0,
+            "Value": 0,
+            "DefaultValue": 0,
+            "IsMandatory": false,
+            "Description": "Skip first x scans returned by Any.Run API.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Get team history?",
+            "Type": 1,
+            "Value": false,
+            "DefaultValue": false,
+            "IsMandatory": false,
+            "Description": "Specify whether to get team history or not.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+
+}

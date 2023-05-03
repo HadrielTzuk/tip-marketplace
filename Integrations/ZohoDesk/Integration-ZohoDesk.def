@@ -1,0 +1,63 @@
+{
+    "DisplayName": "Zoho Desk",
+    "Identifier": "ZohoDesk",
+    "Description": "Zoho Desk is context-aware customer service software that helps you put your customers at the heart of the company.",
+    "MarketingDisplayName": "Zoho Desk",
+    "Categories": [
+        "ITSM"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAYAAAClr220AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAA3cSURBVHgB7ZwHdFRVGsf/M8kkmfTeKAFS6BLQgAQQpAqKSwdBQDhiEBFXBQ1xV1cFzwkCwooou+uuiMKhlxUUEOmhtxBCCEJCIJ10UieZ2e/eKZlJkcDJ5M3suT8FZl65b957//fVOyPTEBAIWhg5BAIJEMITSIIQnkAShPAEkiCEJ5AEITyBJAjhCSRBCE8gCUJ4AkkQwhNIghCeQBKE8ASSIIQnkAQhPIEkCOEJJEEITyAJQngCSRDCE0iCEJ5AEoTwBJJgCytDVa1Csaq83nJ7uS2c7JSQyWQQWD5WJ7zP4n7A+qT9kLHvxuk0xl46yu3xTJtwfDZwDtwdnCGwbGTW9PXGypoq+H05BlXqamjk2o/N9aeR8VfsnyGBvbBt7CdQKuwhsFysKsa7lJGMCk01F5ge/pKZP3KxcrUcv6VfxtE7lyGwbKzK1Z5IT+BKM/KyRmig1i28VZAOgWVjVRbvTGaiVnUa9r/MyM1qYa/YCbVx9YXAsrEai1dSWYaUokz+mktNo31V1+0qbe3RwaMVBJaN1QjPmUoli3tPw7r4/6JGXYOq6mrE56egSlNl8LtqivU8FS5o7+4PgWVjVVltXf5zaR/mH1nFBcch8zeibQR2jV8KgWVj1Z2L1m4+MH5q2OtwnxAILB+rFt6FrGSYmmsNgj0DIbB8rFp4ZzOumyQXcvqvg5sQnjXQoskFy0xPpMXjUs7vUKlVlBPoVWNclTO2YTI4Kxzwcrfh8HX2MBlLrVEjIe+2yV7u9s5o5eINgeXTYsLLeVCAmXs/w+GMeJbR8JaXcQ2uUShxqCSRLo582WTx/dJCZJTl6bbRStffwQ1t3fwgsHxaRHgscY4+uo5Ed0Xb3kJtf7WhHoRuA4Pta+VU34qdy0hCDdvCaPcI/86Qy8RML2ugRYRXUFGCY/eu8HhM21sFUyN/YZIc6LXI0Mi4K2ZzAfq27lpvzIsssZDpdEx9WjZcD1+R0VoLLSK8O4VZyC0v0vfyOUwvgUoPeNi7oDGrx5b2CeiCEM/WJsuZBb2Ye1M7Hr1XQyvA8D8QnlqtRmVlZaPrbWxsYGdnh6bAjl9BY8npZNg+zTkHkI9dUWGyTC6XN/tx9OivCzuGvX3LzehpEeElF9ylDkONztBpzdrooEhsHPMhFHIbPCqlqgrcKsqAfioUc9veJOBgz8ZbZXGnTuGtBQsaXd+3b1+sWbMGTaGwsBCTJ0+Bg4MDNm3aCCcnJzQXt1NuY+KESTDWGBOcv78/Bg4ciAkTJqBdu3bNJsL0jHSMGzseXbt2wbfffssfwJagRYR3PjMZzC4ZXCPxYmjkY4mOkVWSh/SS+wbXzIZs7xYAD6VLo/sEBgZiypQphvfsxmVmZuLo0aPcygS2etT+rna2gtpMjR9mfUaOHAmlUomysjIkJiZi8+bNOHjwIGJiYjBo0CA0Bxqjv1uSFhHehewbJvGdvVyBTl5BeFyS8u6gTF2hHVA3bphnG9jbKBrdp0P79li0aJHhfTX1ehfq3oeGhuKdt982rGNCjI+Px7Vr11BeXo7uT3RHeHg47BT1XXG1SoW4uDgk3bgBVxcXDB02DO5ubob1KjrOiRPHkZp6B7a2toiIiEAYHY+5tsZgxowJLioqCr6+2pk2paWl2LJ1K74iqxwbG4snevSAp4e2xFRVVYXjdIyM9AwoHR3xzIABhv0YzJ0mXEvAhfMX+OBdOnfGk089BVuyboZw24j09HRcuHSRJ2rPjRjBP3dzY3bhVddQMz/3tiFvYG7RVeGEDu4BeFzOZycbTXuX8fJMd+/gJu/PhBW7bBlOHD/OXVjssljuNhnsJi1bvhw7t+8gq2PHl69duxad6WYtXboUQUG1D0xeXh6i5s5FPv3Lbj6zTBs2bMCWLVu4xcrKysK7776LpCQSpZsrv8N/X70aw4cPx2KyWs6NuOiGjChz56/MnIkjhw/zB+LA/v3cgidev44PP/wrcnNyEUQuuPTBA6ygz7+Awgq9hf+cnc+OHejYqSN3pZs2bkSXbl2xauUX+iMajpOfn8/3zcjIwJIlS8wiOobZhccmZZbqrJNefMGugfBUuppsx8RQVFmKGo3asExpawdHhUO97VirTA9PMEjMEf6d0BTY/lu3bsO+vfvgQhYqevFiBLWtFdOOnTuxnSzLqFGjSFRRUDoosZ1u2rpvvsHfPv4Y/6Y4SI8N3ZRZs2ahN1mxkpISsqALkXI7FalpdxAWEoqvvl6L5Js3ER0TjSGDB0NVpeIi2E+i8Q/wx5vz38SjwMKDoKB2SEhIQHJyMreCy2m8woJC/ONf/0RIcDAqyiu4YL5Ztw59nu5D5+hKx/sFXl5e+PLLNVzsTFTsAePXQzsy/zsnNxfvkRe4Tw8Suy7PDn4W5sLswovPuU1uVqM7Na36evmF1QuOWVdjZ+IRrLiwFeXqSkT6dcOUToPxfKdIk+2KabsbeWm1C2gYW5kNwv2bVko5e+4cVq5cSa5WhQVvLUD/fv0M61g35OCBA1yczFoEBmjbbzNmzMC+fftwldxvdk4O7HXZL3Op/fv3h4uzM7+x/v4BSE1J5QIrJiGePX0Gfn5+mDBuvOF8o157DWfPnKHY8hjmk/AeNUUoeVDCx/Lx9UFKaioSyfoFUPz6896fDQlJDYmKWb4jR45gxvQZPJRgbnb27Nlo27YteveOwAvPv6C/fJwcOq+PPvoI18mCLvjzW/jTiy/CnJi92noyPcGQUOifr17+YfW2O5uRiA1Jv+L9PlPxQe/pcFM64/L9W/W2u1ecg9yqQqMlGnTxCIKjnQMeBnvSo99/n4uOiWnypEkm65mL0ycLcqPsjpVN9BZCra5pdHyZvFZGLPZj7rduiYK5LjafsIJix0cV3Y0byThz+jQX3tN9njZ8JmZtayikqa6p4aGNH8V3L730EsWSYfx4X3yxCh9/8gnPhu/du4vVq1Zj6tRpyC8o0J85srOzcZOsKNv+IomUjWlOzGrx2JOXSImARiYzlIoVGrJOfqH1tr1M/du4nEQknbjLA+ACqvttGPlBve2S8++igi6u4a7RsN19Hh7fsRLIwoUL+QUNDg3B4CGDkXrnjmG9s7MTvL28uUu8dPESdu/ejXmvv86TgEO//YYsyoBZnBdAVo2N1SAafY6ogQcF/uE9wxF38hQOk+XpFxnJ62Xbtm1DZUUl+pGl/COY1U27m4byinISMEtgTuKHDT/ypGjM2DFU/ugKFYm7TZs2FEtmY9z4cWhHbphRVFTEP7erqysfJykpCQPoeKMoS2YPw6efLsEvv/zMRcg+JxMys8wryBPs/eknKhFtwtcUWrBkrPkrh1rMKrzCygdUb0s31ggCnDzRuoFGfmfPIEzrOMRgHW2p1DKgbY962yXcT4G2ZKyDLlrPBoRcFxaEs7iIcevm7xSov6L9TLqidlhYR6xf/x1Gjx5NNb84bKM4UGtd5EijmM3b2xvR0dEPrZ+xG80sJLvx89+YT/HYNcQsjiFrE8RjMlbC6dylC+bMmfOH4zDxzI2aa7LMjqzntGnTMG/ePCgUCl5Ufo8s+KJF72HOq3Mo+36CW6yr8VfR68leWEqxHrNqMTGLeUbOHhw7SpiOHT/GXW5HOmfmYtk18PHxQWhICOZSsnQ14Sp2UazrS+5cf52aG7MK725RNrKokc+TCt39CnFrBRd7x3rbPh8Wyf88jJP3ErSZrM6CyulVzya0ygIDAvhNawxfXz8uFpY9riLXdOjQIZw7f54LaeKkiRhBmai7uzvflt3wSeSmWYZob9TtGDp0GJVtOvBYjxFMwf52snC79+yh2C8FCtq2J5VlWA2usS6BF1nd6dNNJ0Qwq9SGhNKDSijeFEsaE0FlkV27dmIPHYM9ILYkyKio1zCYLDd7SLw8PfH9+u+51WUPHjvHhZRps2I0+wyOVH6ZPn06fP18DOcfG7uMZ74lxSV4QA+LczMWyPWYder7j1cP4NVfl+tqeNrDvNF9LJYPmYfHgcVG7b+ejBxVsWE8b3t3nJq2Fq1dfSCwHsxq8eJzb/GMVg+zVBF+TSt7NMS9IpZYFNdONCD8lZ4IdPGCwLowW1bLDOk53iqTGebdMQ0Guz/+DOEz9xKNkgoZF3KfQDEVyhoxm8XLLy9GSkmm7p3O6pHyPj+/Ge/IJ8JZocSjkFNWgBWXttVO4dPov9zT9I6FwHIwm/BSC7OQRyUR6Eopeoe7J/UEdtMfubrpY7ER1PpvcRtmy8tgQwu7+XSAwPowm/BYva1aVs3da92vIHKDJa/zHialuTrfwqiT/+j0F+DsiVCv1hBYH2YT3mnqRPCJQ8ziabTxnUbWwKxjGE06bmCZMTL9Gpk2vns5bCg8HVwhsD7MJrwr1IlgyIztl0ZW+7sndc2bXmky1DeD+hBRph3NleLDWV1H4S/PzBS/AGqlmEV4KmppXWFfPdR9H8KGmvgzOg3D7O6j4Mh/MLEhsRgrr6F1MkObIcjDH06Kh/dmBZaLWYR3434a9VNV3Bp52LkgdkAUpnYbKsoeAgNmER6b+KmRqRHs2grfPReNp1o9ftFY8P+JWYSXVpyNGR2HYdmg1+Hu6AKBoC5m6dWWVVfyyZl2Nlb3o/KCFsKqfx9PYL2IaF8gCUJ4AkkQwhNIghCeQBKE8ASSIIQnkAQhPIEkCOEJJEEITyAJQngCSRDCE0iCEJ5AEoTwBJIghCeQBCE8gSQI4QkkQQhPIAlCeAJJEMITSIIQnkAS/gdXCw78m+2dsQAAAABJRU5ErkJggg==",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ZohoDesk",
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyDescription": "API root of the Zoho Desk instance.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://desk.zoho.{region}"
+        },
+        {
+            "IntegrationIdentifier": "ZohoDesk",
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyDescription": "Client ID of the Zoho Desk account.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ZohoDesk",
+            "PropertyDisplayName": "Client Secret",
+            "PropertyName": "Client Secret",
+            "PropertyDescription": "Client Secret of the Zoho Desk account.",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ZohoDesk",
+            "PropertyDisplayName": "Refresh Token",
+            "PropertyName": "Refresh Token",
+            "PropertyDescription": "Refresh Token of the Zoho Desk account. You need to run the action \"Get Refresh Token\" to generate it.",
+            "PropertyType": 3,
+            "IsMandatory": false,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ZohoDesk",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Zoho Desk server is valid.",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M14.78 1.78c.06-.44.45-.78.91-.78h3.3c1.85 0 3.27 1.62 2.97 3.41l-1.18 7.08c-.04.24-.18.45-.38.59l-7.07 4.86c-.35.24-.83.21-1.15-.08l-3.66-3.32a.88.88 0 0 1-.05-1.26c.34-.36.92-.38 1.29-.05l3.12 2.83 6.14-4.22 1.11-6.71c.12-.7-.44-1.33-1.16-1.33h-2.5l-.28 2.04h.52c.25 0 .5.1.67.28.17.18.26.42.25.67l-.26 3.83a.9.9 0 0 1-.91.83H8.69c-1.1 0-2.04.79-2.2 1.85l-1.37 8.89 1.66-1.12c.15-.1.34-.16.52-.16h8.87c.88 0 1.61-.65 1.69-1.5l.3-3.05c.05-.49.5-.85 1-.81.5.05.87.48.83.98l-.3 3.05c-.17 1.77-1.7 3.12-3.52 3.12H7.6l-3.17 2.14c-.3.2-.7.21-1.01.02a.877.877 0 0 1-.42-.89l1.69-10.94c.3-1.94 2-3.37 4.01-3.37h6.91l.14-2.04h-.59a.91.91 0 0 1-.91-1.02l.52-3.83Z\" style=\"fill-rule:evenodd\"/></svg>",
+    "Version": 2.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/zoho-desk"
+}

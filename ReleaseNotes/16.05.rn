@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 16.05</h2><h5>Published on 01 October, 2021</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     CiscoISE\n    </b>\n   </li>\n   <ul>\n    <li>\n     Cisco ISE\n    </li>\n    <ul>\n     <li>\n      \"Enrich Endpoint\", \"Update Endpoint\", \"Quarantine Address\", \"Unquarantine Address\" - Updated the actions to match API requirement's changes.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     SiemplifyThreatFuse\n    </b>\n   </li>\n   <ul>\n    <li>\n     SiemplifyThreatFuse\n    </li>\n    <ul>\n     <li>\n      Updated the integration's actions to better support cases of invalid entities.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "16.05",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "01/10/21",
+    "Title": "Release Notes"
+}

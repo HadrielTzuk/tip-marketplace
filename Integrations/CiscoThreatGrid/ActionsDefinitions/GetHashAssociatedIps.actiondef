@@ -1,0 +1,21 @@
+{
+    "CreationTimeUnixTimeInMs": 1528905266731, 
+    "Creator": "admin", 
+    "Description": "Get IPs associated to a given hash", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [\"95.128.128.129\", \"192.168.1.255\", \"192.168.1.1\"], \"Entity\": \"dfdca325e9a23bb0131d1f887480481f961f3df919a0609d6472381e76a53894\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "CiscoThreatGrid", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1528905266731, 
+    "Name": "Get Hash Associated IPs", 
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 1.0
+}

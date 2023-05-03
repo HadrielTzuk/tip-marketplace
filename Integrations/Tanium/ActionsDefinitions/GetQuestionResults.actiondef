@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1533271942188,
+    "Creator": "admin",
+    "Description": "Fetch results for the Tanium question. Action is a Siemplify async action. Note that the action is not working with Siemplify entities.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"age\":0,\"id\":\"52xxx\",\"report_count\":3,\"saved_question_id\":0,\"question_id\":\"52xxx\",\"archived_question_id\":0,\"seconds_since_issued\":0,\"issue_seconds\":0,\"expire_seconds\":0,\"tested\":4,\"passed\":4,\"mr_tested\":4,\"mr_passed\":4,\"estimated_total\":4,\"select_count\":1,\"error_count\":0,\"no_results_count\":0,\"columns\":[{\"hash\":\"4542xxxxxxx\",\"name\":\"Operating System\",\"type\":1}],\"cache_id\":\"1190589722\",\"expiration\":0,\"filtered_row_count\":4,\"filtered_row_count_machines\":4,\"row_count\":4,\"row_count_machines\":4,\"item_count\":4,\"rows\":[{\"id\":\"11309xxxx\",\"cid\":0,\"data\":[{\"text\":\"Windows Server 2019 Standard Evaluation\"}]},{\"id\":\"2161xxxxx\",\"cid\":0,\"data\":[{\"text\":\"CentOS Linux release 7.9.2009 (Core)\"}]},{\"id\":\"2775xxxxx\",\"cid\":0,\"data\":[{\"text\":\"Windows Server 2016 Standard Evaluation\"}]},{\"id\":\"3346xxxx\",\"cid\":0,\"data\":[{\"text\":\"CentOS Linux release 7.7.1908 (Core)\"}]}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Tanium",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1533271942188,
+    "Name": "Get Question Results",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify Tanium question id to get results for.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517913157211,
+            "Name": "Question ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will create a case wall table as part of action results.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517913157211,
+            "Name": "Create Case Wall Table",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517913157211,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify the max number of rows action should return for the question.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517913157211,
+            "Name": "Max Rows to Return",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

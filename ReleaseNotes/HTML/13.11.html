@@ -1,0 +1,272 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 13.11</h2><h5>Published on 19 August, 2020</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     MSSQL
+    </b>
+   </li>
+   <ul>
+    <li>
+     MSSQL
+    </li>
+    <ul>
+     <li>
+      Add support for using windows authentication with Linux version of Siemplify platform (using Kerberos authentication). Please refer to documentation for more information.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     MicrosoftAzureSentinel
+    </b>
+   </li>
+   <ul>
+    <li>
+     Microsoft Azure Sentinel
+    </li>
+    <ul>
+     <li>
+      Refactored integration to support Python 3.7
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     OpswatMetadefender
+    </b>
+   </li>
+   <ul>
+    <li>
+     Opswat Metadefender
+    </li>
+    <ul>
+     <li>
+      Updated API Key to be encrypted.
+     </li>
+     <li>
+      Added "Verify SSL" parameter to the integration configuration.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Slack
+    </b>
+   </li>
+   <ul>
+    <li>
+     Slack
+    </li>
+    <ul>
+     <li>
+      Add support for pagination.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     ActiveDirectory
+    </b>
+   </li>
+   <ul>
+    <li>
+     Remove User From Group
+    </li>
+    <ul>
+     <li>
+      NEW! New action for removing a user from a group.
+     </li>
+    </ul>
+    <li>
+     Update attributes of an AD User
+    </li>
+    <ul>
+     <li>
+      NEW! New action for updating attributes of existing Active Directory users.
+     </li>
+    </ul>
+    <li>
+     Update attributes of an AD Host
+    </li>
+    <ul>
+     <li>
+      NEW! New action for updating attributes of existing Active Directory hosts.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     CheckPointFirewall
+    </b>
+   </li>
+   <ul>
+    <li>
+     Add a Sam Rule
+    </li>
+    <ul>
+     <li>
+      NEW! New "Add a Sam Rule" action added. Notice, the action performs a publish command after adding the rule.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     MicrosoftDefenderATP
+    </b>
+   </li>
+   <ul>
+    <li>
+     Enrich Entities
+    </li>
+    <ul>
+     <li>
+      Fix a bug that prevented the action to properly enrich entities.
+     </li>
+     <li>
+      Add missing JSON results example.
+     </li>
+    </ul>
+    <li>
+     Get File Related Alerts
+    </li>
+    <ul>
+     <li>
+      Update action to return found alerts info as JSON results.
+     </li>
+    </ul>
+    <li>
+     Get File Related Machines
+    </li>
+    <ul>
+     <li>
+      Update action to return found machines info as JSON results.
+     </li>
+    </ul>
+    <li>
+     Get Machine Logon Users
+    </li>
+    <ul>
+     <li>
+      Update action to return found users info as JSON results.
+     </li>
+    </ul>
+    <li>
+     Get Machine Related Alerts
+    </li>
+    <ul>
+     <li>
+      Update action to return found alerts info as JSON results.
+     </li>
+    </ul>
+    <li>
+     Update Alert
+    </li>
+    <ul>
+     <li>
+      Update JSON result example to match the actual JSON that is returned by the action.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Siemplify
+    </b>
+   </li>
+   <ul>
+    <li>
+     Raise Incident
+    </li>
+    <ul>
+     <li>
+      Add a new "Soc Role" parameter.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Slack
+    </b>
+   </li>
+   <ul>
+    <li>
+     Wait For Reply
+    </li>
+    <ul>
+     <li>
+      Add new "Channel ID" parameter to support placeholders as input for the parameter.
+     </li>
+    </ul>
+    <li>
+     List Channels
+    </li>
+    <ul>
+     <li>
+      Fix a bug that prevented the action to display non-ASCII channel names.
+     </li>
+     <li>
+      Remove default value for "Max Channels to Return" parameter to allow the action to bring all channels if limit is not provided.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     MicrosoftAzureSentinel
+    </b>
+   </li>
+   <ul>
+    <li>
+     Microsoft Azure Sentinel Incident Connector
+    </li>
+    <ul>
+     <li>
+      Fix a bug that causes the connector to miss incidents in high volume environments.
+     </li>
+     <li>
+      Fix a bug that prevents the connector from setting the correct environment when "Environment Field Name" field is set.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     PaloAltoCortexXDR
+    </b>
+   </li>
+   <ul>
+    <li>
+     Palo Alto Cortex XDR Connector
+    </li>
+    <ul>
+     <li>
+      Add "parent_start_time" and "parent_end_time" fields to all events.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Sumologic
+    </b>
+   </li>
+   <ul>
+    <li>
+     Sumologic Connector
+    </li>
+    <ul>
+     <li>
+      NEW! Modified connector to parse out the "_raw" field for each alert to allow the data to be mapped within Event Mapping settings.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

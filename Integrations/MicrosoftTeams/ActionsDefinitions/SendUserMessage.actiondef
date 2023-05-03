@@ -1,0 +1,86 @@
+{
+    "CreationTimeUnixTimeInMs": 1543229155761,
+    "Creator": "Admin",
+    "Description": "Send a chat message to the user in Microsoft Teams. Supported entities: Username, Email Address (username that matches email regex). Note: Action is running as async if “Wait For Reply” is enabled, please adjust script timeout value in Siemplify IDE for action as needed.",
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftTeams",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543229155761,
+    "Name": "Send User Message",
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"Entity\":\"Test Entity\",\"EntityResult\":{\"id\":\"1634205451439\",\"replyToId\":null,\"etag\":\"1634205451439\",\"messageType\":\"message\",\"createdDateTime\":\"2021-10-14T09:57:31.439Z\",\"lastModifiedDateTime\":\"2021-10-14T09:57:31.439Z\",\"lastEditedDateTime\":null,\"deletedDateTime\":null,\"subject\":null,\"summary\":null,\"chatId\":\"chat ID\",\"importance\":\"normal\",\"locale\":\"en-us\",\"webUrl\":null,\"channelIdentity\":null,\"policyViolation\":null,\"from\":{\"application\":null,\"device\":null,\"user\":{\"id\":\"user_id\",\"displayName\":\"\",\"userIdentityType\":\"\"}},\"body\":{\"contentType\":\"text\",\"content\":\"Message\"},\"attachments\":[],\"mentions\":[],\"reactions\":[]}}]",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of user identifiers to whom you want to send a message.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "User Identifiers",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the content of the message.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Text",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will wait until replies from all entities are available.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Wait For Reply",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CustomActionId": -1,
+            "DefaultValue": "Text",
+            "Description": "Specify the content type for the message.",
+            "Id": -1,
+            "IsMandatory": false,
+            "Name": "Content Type",
+            "OptionalValues": [
+                "Text",
+                "HTML"
+            ],
+            "Type": 15,
+            "Value": "Text"
+        },
+        {
+            "CustomActionId": -1,
+            "DefaultValue": "From Entities & User Identifiers",
+            "Description": "Specify what selection should be used for users. If \"From Entities & User Identifiers\" is selected, then action will search in both relevant entities and values provided in the \"User Identifiers\" parameters. If \"From Entities\" is provided, action will only work with relevant entities and ignore values provided in the \"User Identifiers\". If \"From User Identifiers\" is selected, then action will only work with values from \"User Identifiers\" and \"User Identifiers\" parameter becomes mandatory.",
+            "Id": -1,
+            "IsMandatory": false,
+            "Name": "User Selection",
+            "OptionalValues": [
+                "From Entities & User Identifiers",
+                "From Entities",
+                "From User Identifiers"
+            ],
+            "Type": 15,
+            "Value": "From Entities & User Identifiers"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}",
+    "IsAsync": true
+}

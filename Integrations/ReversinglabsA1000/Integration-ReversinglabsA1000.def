@@ -1,0 +1,41 @@
+{
+    "Description": "The A1000 Malware Analysis Platform supports advanced hunting and investigations through high-speed automated static analysis.",
+    "DisplayName": "Reversinglabs A1000",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/reversinglabs-a1000",
+    "Identifier": "ReversinglabsA1000",
+    "Categories": [
+        "Malware Analysis",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ReversinglabsA1000",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://a1000.reversinglabs.com"
+        },
+        {
+            "IntegrationIdentifier": "ReversinglabsA1000",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ReversinglabsA1000",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M7.3,11.5c-2,1.5-3.1,3.9-3.1,7.1c0,1.8,0.5,3.5,1.5,4.9c1,1.4,2.4,2.6,4.3,3.4c-5,7.5-8.1,12-9.2,13.6h7.4l7.5-12h3.5v12\n\t\t\th6.6V9.2h-9.1C12.5,9.2,9.3,10,7.3,11.5z M19.2,14.7v8.4h-2.1c-2.1,0-3.6-0.3-4.6-1c-1-0.7-1.5-1.8-1.5-3.3c0-1.5,0.5-2.5,1.5-3.2\n\t\t\tc1-0.6,2.6-1,4.8-1H19.2z M36.3,35V9.2h-6.6v31.2H49V35H36.3z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 5.0,
+    "MarketingDisplayName": "ReversingLabs A1000"
+}

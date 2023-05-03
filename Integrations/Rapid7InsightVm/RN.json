@@ -1,0 +1,86 @@
+[
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Rapid7InsightVm",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": " Updated JSON result sample for \"Enrich Asset\" action",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "EnrichAsset",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1626244430,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8985"
+    },
+    {
+        "ChangeDescription": " Improved entity table view in the \"Enrich Asset\" action",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "EnrichAsset",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1626244430,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8985"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Rapid7InsightVm",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    },
+    {
+        "ChangeDescription": "New Connector Added - Vulnerabilities Connector.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Rapid7 InsightVm - Vulnerabilities Connector",
+        "ItemType": "Connector",
+        "New": true,
+        "PublishTime": 1639563779,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10322"
+    },
+    {
+        "ChangeDescription": "Vulnerabilities Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Rapid7 InsightVm - Vulnerabilities Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11933"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Rapid7InsightVm",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

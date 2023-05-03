@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1515318565839, 
+    "Creator": "admin", 
+    "Description": "Query Alexa for URL rank information", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"TrafficData\": [{\"text\": \"          \", \"DataUrl\": [{\"text\": \"domain.com\", \"type\": \"canonical\"}], \"Rank\": [{\"text\": \"5\"}]}], \"text\": \"        \", \"Request\": [{\"text\": \"          \", \"Arguments\": [{\"text\": \"            \", \"Argument\": [{\"text\": \"              \", \"Name\": [{\"text\": \"url\"}], \"Value\": [{\"text\": \"domain.com\"}]}, {\"text\": \"              \", \"Name\": [{\"text\": \"responsegroup\"}], \"Value\": [{\"text\": \"Rank\"}]}]}]}]}, \"Entity\": \"domain.com\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Alexa", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1515318565839, 
+    "Name": "Get URL Rank", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1515497447844, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Rank. e.g. 5", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1515497447844, 
+            "Name": "Threshold", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_risky", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

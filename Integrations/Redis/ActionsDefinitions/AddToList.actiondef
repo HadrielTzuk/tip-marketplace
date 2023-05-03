@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1529480910384,
+    "Creator": "admin",
+    "Description": "Add a value to the head of a Redis list. If the list does not exist, create a new list",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[\"value1\", \"value2\", \"value3\"]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Redis",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1529480910384,
+    "Name": "Add To List",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529480910384,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Target list name.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529480910384,
+            "Name": "List Name",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529480910384,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Can be any of the following types: str, int, dict, list, etc.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529480910384,
+            "Name": "Value",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom RedisManager import RedisManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('Redis')\n    server = conf['Server Address']\n    port = int(conf['Port'])\n\n    redis_manager = RedisManager(server, port, 0)\n    list_name = siemplify.parameters['List Name']\n    value = siemplify.parameters['Value']\n\n    is_set = redis_manager.add_to_list(list_name, value)\n\n    output_message = \"Successfully add {value} to {list}.\".format(value=value, list=list_name)\n    siemplify.end(output_message, True)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_added",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

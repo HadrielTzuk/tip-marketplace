@@ -1,0 +1,207 @@
+{
+  "Identifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "Nessus",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "017b73c8-b0aa-4cfe-bf82-106f05527dc5",
+      "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+      "ParentStepIdentifiers": [
+        "75917351-7d5a-4ce5-a9e7-9917f8e8b8d8"
+      ],
+      "ParentStepIdentifier": "75917351-7d5a-4ce5-a9e7-9917f8e8b8d8",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "NessusScanner_GetScanTemplates_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "NessusScanner_GetScanTemplates",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "017b73c8-b0aa-4cfe-bf82-106f05527dc5",
+          "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+          "Name": "ScriptName",
+          "Value": "NessusScanner_GetScanTemplates",
+          "CreationTimeUnixTimeInMs": 1519210391641,
+          "ModificationTimeUnixTimeInMs": 1519210391641
+        },
+        {
+          "ParentStepIdentifier": "017b73c8-b0aa-4cfe-bf82-106f05527dc5",
+          "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519210391641,
+          "ModificationTimeUnixTimeInMs": 1519210391641
+        },
+        {
+          "ParentStepIdentifier": "017b73c8-b0aa-4cfe-bf82-106f05527dc5",
+          "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519210391641,
+          "ModificationTimeUnixTimeInMs": 1519210391641
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519210391641,
+      "ModificationTimeUnixTimeInMs": 1519210391641
+    },
+    {
+      "Identifier": "5a1b9aac-335d-416d-9d8f-725fbf4facdb",
+      "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+      "ParentStepIdentifiers": [
+        "017b73c8-b0aa-4cfe-bf82-106f05527dc5"
+      ],
+      "ParentStepIdentifier": "017b73c8-b0aa-4cfe-bf82-106f05527dc5",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "NessusScanner_Launch Scan_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "NessusScanner_Launch Scan",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "5a1b9aac-335d-416d-9d8f-725fbf4facdb",
+          "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+          "Name": "ScriptName",
+          "Value": "NessusScanner_Launch Scan",
+          "CreationTimeUnixTimeInMs": 1519210391641,
+          "ModificationTimeUnixTimeInMs": 1519210391641
+        },
+        {
+          "ParentStepIdentifier": "5a1b9aac-335d-416d-9d8f-725fbf4facdb",
+          "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Scan Name\":\"test_2017-12-04 11:32:59.361000\"}",
+          "CreationTimeUnixTimeInMs": 1519210391641,
+          "ModificationTimeUnixTimeInMs": 1519210391641
+        },
+        {
+          "ParentStepIdentifier": "5a1b9aac-335d-416d-9d8f-725fbf4facdb",
+          "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519210391641,
+          "ModificationTimeUnixTimeInMs": 1519210391641
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519210391641,
+      "ModificationTimeUnixTimeInMs": 1519210391641
+    },
+    {
+      "Identifier": "75917351-7d5a-4ce5-a9e7-9917f8e8b8d8",
+      "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "NessusScanner_CreateScan_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "NessusScanner_CreateScan",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "75917351-7d5a-4ce5-a9e7-9917f8e8b8d8",
+          "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+          "Name": "ScriptName",
+          "Value": "NessusScanner_CreateScan",
+          "CreationTimeUnixTimeInMs": 1519210391641,
+          "ModificationTimeUnixTimeInMs": 1519210391641
+        },
+        {
+          "ParentStepIdentifier": "75917351-7d5a-4ce5-a9e7-9917f8e8b8d8",
+          "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Scan Name\":\"Nessus - Nil\",\"Template Title\":\"Advanced Scan\"}",
+          "CreationTimeUnixTimeInMs": 1519210391641,
+          "ModificationTimeUnixTimeInMs": 1519210391641
+        },
+        {
+          "ParentStepIdentifier": "75917351-7d5a-4ce5-a9e7-9917f8e8b8d8",
+          "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519210391641,
+          "ModificationTimeUnixTimeInMs": 1519210391641
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519210391641,
+      "ModificationTimeUnixTimeInMs": 1519210391641
+    },
+    {
+      "Identifier": "db6f1cd0-56c8-4561-ab10-bd3e3760c95f",
+      "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+      "ParentStepIdentifiers": [
+        "5a1b9aac-335d-416d-9d8f-725fbf4facdb"
+      ],
+      "ParentStepIdentifier": "5a1b9aac-335d-416d-9d8f-725fbf4facdb",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "NessusScanner_GetScanReport_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "NessusScanner_GetScanReport",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "db6f1cd0-56c8-4561-ab10-bd3e3760c95f",
+          "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+          "Name": "ScriptName",
+          "Value": "NessusScanner_GetScanReport",
+          "CreationTimeUnixTimeInMs": 1519210391641,
+          "ModificationTimeUnixTimeInMs": 1519210391641
+        },
+        {
+          "ParentStepIdentifier": "db6f1cd0-56c8-4561-ab10-bd3e3760c95f",
+          "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Scan Name\":\"test_2017-12-04 11:32:59.361000\"}",
+          "CreationTimeUnixTimeInMs": 1519210391641,
+          "ModificationTimeUnixTimeInMs": 1519210391641
+        },
+        {
+          "ParentStepIdentifier": "db6f1cd0-56c8-4561-ab10-bd3e3760c95f",
+          "ParentWorkflowIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519210391641,
+          "ModificationTimeUnixTimeInMs": 1519210391641
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519210391641,
+      "ModificationTimeUnixTimeInMs": 1519210391641
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "a072cd5f-cd8d-426b-98d4-9da812992424",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "87e7fa49-938b-417e-8b97-f78a3c83e650",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Nessus",
+      "AllEnvironments": "",
+      "Id": 75,
+      "CreationTimeUnixTimeInMs": 1519210391641,
+      "ModificationTimeUnixTimeInMs": 1519210391641
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 75,
+  "CreationTimeUnixTimeInMs": 1519210391641,
+  "ModificationTimeUnixTimeInMs": 1519210391641
+}

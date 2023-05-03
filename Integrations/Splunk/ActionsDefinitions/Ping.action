@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1510138468693,
+    "Creator": "admin",
+    "Description": "Test connectivity to the Splunk with parameters provided at the integration configuration page on the Marketplace tab.",
+    "Id": -1,
+    "IntegrationIdentifier": "Splunk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1510138468693,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,21 @@
+{
+    "CreationTimeUnixTimeInMs": 1533210105447,
+    "Creator": "Admin",
+    "Description": "List of scans launched within the past 30 days.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"STATUS\": {\"STATE\": \"Finished\"}, \"TARGET\": \"1.1.1.1\", \"TITLE\": \"Test Scan\", \"USER_LOGIN\": \"*****\", \"LAUNCH_DATETIME\": \"2019-01-06T12:29:52Z\", \"PROCESSED\": \"1\", \"REF\": \"scan/1546777792.44756\", \"PROCESSING_PRIORITY\": \"0 - No Priority\", \"DURATION\": \"00:08:24\", \"TYPE\": \"On-Demand\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "QualysVM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1533210105447,
+    "Name": "List Scans",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,193 @@
+{
+    "Id": -1,
+    "Creator": "admin",
+    "IntegrationIdentifier": "McAfeeESM",
+    "Name": "Send Query To ESM",
+    "Description": "Send a query to ESM. Note: Action is running as async, please adjust script timeout value in Chronicle SOAR IDE for action as needed.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 0,
+    "ModificationTimeUnixTimeInMs": 0,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"Alert_IPSIDAlertID\":\"144115xxxxxxxxxxxxxxxxx\",\"Alert_AvgSeverity\":\"17\",\"Rule_msg\":\"User Logon - IMPORTANT: Please ensure you have the latest hotfix (See description)\",\"Alert_EventCount\":\"1\",\"Alert_SrcIP\":\"10.0.xxx.xxx\",\"Alert_DstIP\":\"172.30.xxx.xxx\",\"Alert_Protocol\":\"n/a\",\"Alert_LastTime\":\"01/11/2023 19:55:23\",\"Action_Name\":\"success\"},{\"Connection_IPSIDConnectionID\":\"144115xxxxxxxxxxxxxxxxx\",\"Connection_SrcIP\":\"10.0.xxx.xxx\",\"Connection_SrcPort\":\"1111\",\"Connection_DstIP\":\"172.30.xxx.xxx\",\"Connection_DstPort\":\"2222\",\"Connection_Reviewed\":\"\",\"Connection_Protocol\":\"n/a\",\"Connection_LastTime\":\"01/11/2023 19:55:23\",\"Connection_Duration\":\"\"},{\"Asset_AssetID\":\"144115xxxxxxxxxxxxxxxxx\",\"Asset_HostName\":\"hostname\",\"Asset_IPAddress\":\"10.0.xxx.xxx\",\"Asset_MAC\":\"\",\"OS_OSName\":\"\",\"Asset_AssetRiskScore\":\"5\"}]",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "Name": "Time Range",
+            "Type": 15,
+            "DefaultValue": "LAST_HOUR",
+            "Value": "LAST_HOUR",
+            "IsMandatory": true,
+            "Description": "Specify a time frame for the results. If \"Custom\" is selected, you also need to provide \"Start Time\".",
+            "OptionalValues": [
+                "LAST_HOUR",
+                "LAST_MINUTE",
+                "LAST_10_MINUTES",
+                "LAST_30_MINUTES",
+                "CURRENT_DAY",
+                "PREVIOUS_DAY",
+                "LAST_24_HOURS",
+                "LAST_2_DAYS",
+                "LAST_3_DAYS",
+                "CURRENT_WEEK",
+                "PREVIOUS_WEEK",
+                "CURRENT_MONTH",
+                "PREVIOUS_MONTH",
+                "CURRENT_QUARTER",
+                "PREVIOUS_QUARTER",
+                "CURRENT_YEAR",
+                "PREVIOUS_YEAR",
+                "CUSTOM"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Start Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the start time for the results. This parameter is mandatory, if \"Custom\" is selected for the \"Time Frame\" parameter. Format: ISO 8601",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "End Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the end time for the results. Format: ISO 8601. If nothing is provided and \"Custom\" is selected for the \"Time Frame\" parameter then this parameter will use current time.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Filter Field Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the field name that will be used for filtering.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Filter Operator",
+            "Type": 15,
+            "DefaultValue": "EQUALS",
+            "Value": "EQUALS",
+            "IsMandatory": true,
+            "Description": "Specify the operator that should be used in the filter.",
+            "OptionalValues": [
+                "EQUALS",
+                "IN",
+                "NOT_IN",
+                "GREATER_OR_EQUALS_THAN",
+                "LESS_OR_EQUALS_THAN",
+                "DOES_NOT_EQUAL",
+                "CONTAINS",
+                "DOES_NOT_CONTAIN"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Filter Values",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify a comma-separated list of values that will be used in the filter.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Fields To Fetch",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify a comma-separated list of fields that should be returned. If nothing is provided, action will use the predefined fields.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Sort Field",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what parameter should be used for sorting. Note: this parameter expects the field in the format {table}.{key name}. If the parameter is provided in another format, action will skip it. Example: Alert.LastTime.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Sort Order",
+            "Type": 15,
+            "DefaultValue": "ASC",
+            "Value": "ASC",
+            "IsMandatory": false,
+            "Description": "Specify the order of sorting.",
+            "OptionalValues": [
+                "ASC",
+                "DESC"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Query Type",
+            "Type": 15,
+            "DefaultValue": "EVENT",
+            "Value": "EVENT",
+            "IsMandatory": false,
+            "Description": "Specify what needs to be queried.",
+            "OptionalValues": [
+                "EVENT",
+                "FLOW",
+                "ASSET"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 20,
+            "IsMandatory": false,
+            "Description": "Specify how many results to return. Default: 50. Maximum: 200.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

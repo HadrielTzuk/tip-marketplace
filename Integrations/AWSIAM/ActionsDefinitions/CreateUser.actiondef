@@ -1,0 +1,32 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Create a new IAM user for your AWS account. You can add multiple users at once with comma separated values. Please note that no policies will be applied at this stage.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSIAM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"Arn\": \"arn:aws:iam::123456789:user/asdsjsssi\", \"CreateDate\": \"2020-12-09 15:54:58+00:00\", \"Path\": \"/\", \"UserId\": \"123456789456\", \"UserName\": \"AAAAA\"}]",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Create a User",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Name of the user to create. Comma separated values. Note: Username can not include spaces and must contain only alphanumeric characters and/or the following: +=.@_-. Names must be unique within an account.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "User Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

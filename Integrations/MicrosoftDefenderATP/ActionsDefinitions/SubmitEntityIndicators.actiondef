@@ -1,0 +1,101 @@
+{
+    "CreationTimeUnixTimeInMs": 1575015001, 
+    "Creator": "admin",
+    "Description": "Submit entities as indicators in Microsoft Defender ATP. Supported entities: Filehash, URL, IP Address. Note: only MD5, SHA1 and SHA256 hashes are supported.",
+    "Id": -1, 
+    "IntegrationIdentifier": "MicrosoftDefenderATP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1575015001, 
+    "Name": "Submit Entity Indicators",
+    "Parameters": [
+        {
+            "CustomActionId": -1,
+            "IsMandatory": true,
+            "DefaultValue": "Block",
+            "Description": "Specify the action that needs to be applied to the entities. Note: \"Block And Remediate\" is supported only for filehash entities.",
+            "Name": "Action",
+            "Value": "Block",
+            "Type": 15,
+            "OptionalValues": [
+                "Block",
+                "Audit",
+                "Block And Remediate",
+                "Allow"
+            ],
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1572955458924,
+            "ModificationTimeUnixTimeInMs": 1572955458924
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": true,
+            "DefaultValue": "High",
+            "Description": "Specify the severity for the found entities.",
+            "Name": "Severity",
+            "Value": "High",
+            "Type": 15,
+            "OptionalValues": [
+                "High",
+                "Medium",
+                "Low",
+                "Informational"
+            ],
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1572955458924,
+            "ModificationTimeUnixTimeInMs": 1572955458924
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1578672183844, 
+            "CustomActionId": -1, 
+            "DefaultValue": "",
+            "Description": "Specify an application that is related to the entities.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1578672183844, 
+            "Name": "Application",
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1578672183844, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify what should be the title for the alert, if they are identified in the environment.",
+            "Id": -1, 
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1578672183844, 
+            "Name": "Indicator Alert Title",
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1578672183844, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Siemplify Remediation",
+            "Description": "Specify the description for the entities.",
+            "Id": -1, 
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1578672183844, 
+            "Name": "Description",
+            "Type": 0, 
+            "Value": "Siemplify Remediation"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what should be the recommended actions for the handling of the entities.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1578672183844,
+            "Name": "Recommended Action",
+            "Type": 0,
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\", \"ADDRESS\", \"DestinationURL\"]}",
+    "Type": 0, 
+    "Version": 1.0
+}

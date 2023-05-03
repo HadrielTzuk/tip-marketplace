@@ -1,0 +1,61 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805, 
+    "Creator": "Admin", 
+    "DefaultResultValue": "", 
+    "Description": "Download a file from a specific Endgame endpoint.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Endgame", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1560351300805, 
+    "Name": "Download File", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Enter the path to the file", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1560351300835, 
+            "Name": "Full File Path", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1560351300837, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Enter the path to the folder, where you want to store this file.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1560351300837, 
+            "Name": "Full Download Folder Path", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1560351300840, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Enter the expected SHA-256 hash", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351300840, 
+            "Name": "Expected SHA-256 Hash", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "TimeoutSeconds": 600, 
+    "Version": 1.0,
+    "IsAsync": true
+}

@@ -1,0 +1,37 @@
+{
+    "Description": "VirusTotal is a service that analyzes files and URLs for viruses, worms, trojans and other kinds of malicious content. VirusTotal aggregates many antivirus products and online scan engines to check for viruses that the user's own antivirus may have missed, or to verify against any false positives. Use VirusTotal to investigate suspicious files, domains, URLs, IP addresses, and hashes.",
+    "DisplayName": "VirusTotal",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/virustotal",
+    "Identifier": "VirusTotal",
+    "Categories": [
+        "Threat Intelligence",
+        "Malware Analysis",
+        "Free to use",
+        "Security",
+        "Google"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "VirusTotal",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api key",
+            "PropertyName": "Api Key",
+            "PropertyType": 3,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "VirusTotal",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": null
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M12.2,13.2C8.8,11.6,5.4,10,1.9,8.3v0.3c0,4.8,0,9.6,0,14.3c0,0.1,0,0.2,0,0.3h3.9c0,0,0-0.1,0.1-0.1\n\t\t\tc2.1-3.2,4.2-6.5,6.3-9.7C12.1,13.3,12.2,13.3,12.2,13.2z M22.9,18c0.2-0.1,0.2-0.2,0.2-0.4c0-5.2,0-10.4,0-15.6\n\t\t\tc0-0.1,0-0.1,0-0.2h-2.7c0.5,0.9,0.9,1.7,1.4,2.6c-0.2,0.1-0.3,0.1-0.4,0.2c-0.4,0.1-0.7,0.1-0.9-0.3c-0.1-0.1-0.2-0.3-0.3-0.4\n\t\t\tc-0.9-1.4-2.2-2-3.8-1.8c-1,0.1-1.9,0.3-2.9,0.6C11,3.3,8.6,4.1,6.1,4.8C5.5,5,4.8,5.2,4.1,5.4c3.9,1.8,7.8,3.6,11.8,5.4\n\t\t\tc-2.6,4-5.1,8-7.7,12c0.1,0,0.2,0,0.3-0.1c4.1-1.2,8.1-2.5,12.2-3.8C21.4,18.7,22.2,18.5,22.9,18z M4.9,3.6C6.4,3.1,8,2.6,9.6,2\n\t\t\tc0.1,0,0.2,0,0.2-0.2H1.9v2.7c0.1,0,0.2-0.1,0.3-0.1C3.1,4.1,4,3.8,4.9,3.6z M17,23.1h6.1v-1.8C21,21.9,19,22.5,17,23.1\n\t\t\tC17,23.1,17,23.1,17,23.1z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 35.0,
+    "MarketingDisplayName": "VirusTotal"
+}

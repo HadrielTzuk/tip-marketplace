@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1519047983038, 
+    "Creator": "admin", 
+    "Description": "Initiate a scan of IP addresses", 
+    "Id": -1, 
+    "IntegrationIdentifier": "TenableSecurityCenter", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1519047983038, 
+    "Name": "Scan Ips", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519286893026, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The name of the scan to create.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1519286893026, 
+            "Name": "Scan Name", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1519286893026, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The name of the policy.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1519286893026, 
+            "Name": "Policy Name", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "scan_result_id", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

@@ -1,0 +1,143 @@
+{
+    "CreationTimeUnixTimeInMs": 1516267495312,
+    "Creator": "admin",
+    "Description": "Search for issues",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[\"PR-123\", \"PR-124\"]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Jira",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1516267495312,
+    "Name": "List Issues",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516268243792,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The names of the projects to search in, comma separated",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516268243792,
+            "Name": "Project Names",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516268243792,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The summary to filter by",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516268243792,
+            "Name": "Summary",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516268243792,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The description to filter by",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516268243792,
+            "Name": "Description",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516268243792,
+            "CustomActionId": -1,
+            "DefaultValue": "Bug",
+            "Description": "The issue types to filter by",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516268243792,
+            "Name": "Issue Types",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516268243792,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The priority to filter by",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516268243792,
+            "Name": "Priorities",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516268243792,
+            "CustomActionId": -1,
+            "DefaultValue": "YYYY/MM/DD",
+            "Description": "The earliest creation date to filter by. Format: YYYY/MM/DD. If not provided, filter will not be used.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516268243792,
+            "Name": "Created From",
+            "Type": 0,
+            "Value": "YYYY/MM/DD"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516268243792,
+            "CustomActionId": -1,
+            "DefaultValue": "YYYY/MM/DD",
+            "Description": "The earliest update date to filter by. Format: YYYY/MM/DD. If not provided, filter will not be used.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516268243792,
+            "Name": "Updated From",
+            "Type": 0,
+            "Value": "YYYY/MM/DD"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516268243792,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The name of the assignees to filter by, comma separated",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516268243792,
+            "Name": "Assignees",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516268243792,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The name of the reporters to filter by, comma separated",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516268243792,
+            "Name": "Reporter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516268243792,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The statuses to filter by, comma separated",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516268243792,
+            "Name": "Statuses",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "issues",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

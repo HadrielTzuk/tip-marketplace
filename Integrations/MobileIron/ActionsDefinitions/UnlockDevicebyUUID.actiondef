@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1544614359968, 
+    "Creator": "Admin", 
+    "Description": "Unlock device by it's UUID.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "MobileIron", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1544614359968, 
+    "Name": "Unlock Device by UUID", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1544614359976, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The UUID of the target device.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1544614359976, 
+            "Name": "Device UUID", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "Script": "# Imports\nfrom MobileIronManager import MobileIronManager\nfrom SiemplifyAction import SiemplifyAction\n\n# Consts.\nPROVIDER_NAME = 'MobileIron'\nACTION_NAME = 'MobileIron_Unlock Device by UUID'\nTABLE_HEADER = 'Devices'\n\n\ndef main():\n    # Configuration.\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    configuretion_settings = siemplify.get_configuration(PROVIDER_NAME)\n    api_root = configuretion_settings['API Root']\n    username = configuretion_settings['Username']\n    password = configuretion_settings['Password']\n    admin_device_id = configuretion_settings.get('Admin Device ID', 1)\n    connected_cloud = configuretion_settings.get('Connected Cloud', 'false').lower() == 'true'\n    verify_ssl = configuretion_settings.get('Verify SSL', 'false').lower() == 'true'\n\n    mobile_iron_manager = MobileIronManager(api_root, username, password, admin_device_id, connected_cloud, verify_ssl)\n\n    # Parameters.\n    device_uuid = siemplify.parameters.get('Device UUID')\n\n    mobile_iron_manager.unlock_device_by_uuid(device_uuid)\n\n    output_message = \"System information fetched for UUID {0}\".format(device_uuid)\n\n    siemplify.end(output_message, True)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 2.0
+}

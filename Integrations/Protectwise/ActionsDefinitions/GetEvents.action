@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1519719041149, 
+    "Creator": "admin", 
+    "Description": "Get all events of an entity within a given timeframe", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Protectwise", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1519719041149, 
+    "Name": "Get Events", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519720411368, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Fetch events in time frame of hours, e.g: 1", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1519720411368, 
+            "Name": "Timeframe (hours)", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1519657572316,
+    "Creator": "admin",
+    "Description": "Set custom feed configuration in NetWitness to enrich entities with specific metadata keys and values. \\nThese will be later correlated in the NetWitness correlation rules",
+    "Id": -1,
+    "IntegrationIdentifier": "RSANetWitness",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519657572316,
+    "Name": "Update The 'TI' Database Of NetWitness",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1520256456403,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "A key value string,which is presented in the current format: key1:val1,key2:val2",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1520256456403,
+            "Name": "Key Value String",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

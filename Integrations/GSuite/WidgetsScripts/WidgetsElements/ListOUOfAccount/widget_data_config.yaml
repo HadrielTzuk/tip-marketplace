@@ -1,0 +1,32 @@
+### Json Structure Params ###
+json_result_has_entities: no
+entity_result_list_path: '[{stepInstanceName}.JsonResult]'
+json_result_list: '[{stepInstanceName}.JsonResult]'
+
+### HTML Structure Params ###
+main_text_singular: ORGANIZATION FOUND
+main_text_plural: ORGANIZATIONS FOUND
+
+import_svg_from_integration: yes
+
+### Table Structure Params ###
+table_data:
+  - header: Name
+    value:
+      keys_to_display:
+        - name
+
+  - header: Description
+    value:
+      keys_to_display:
+        - description
+
+  - header: Block Inheritance
+    value:
+      keys_to_display:
+        - blockInheritance
+
+  - header: Organization Path
+    value:
+      keys_to_display:
+        - orgUnitPath

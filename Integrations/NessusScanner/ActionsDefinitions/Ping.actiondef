@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1517347557411,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "NessusScanner",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517347557411,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "# Imports\r\nfrom SiemplifyAction import SiemplifyAction\r\nfrom NessusScannerManager import NessusScanner\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n\r\n    # Configuration.\r\n    conf = siemplify.get_configuration('NessusScanner')\r\n    access_key = conf['Access Key']\r\n    secret_key = conf['Secret Key']\r\n    server_address = conf['Api Root']\r\n    nessus_client = NessusScanner(access_key, secret_key, server_address)\r\n\r\n    # Execute Test Connectivity.\r\n    server_status = nessus_client.test_connectivity()\r\n\r\n    if server_status:\r\n        output_message = \"Connection Established.\"\r\n        result_value = 'true'\r\n    else:\r\n        output_message = 'Connection Failed.'\r\n        result_value = 'false'\r\n\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n",
+    "ScriptResultName": "is_succeed",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

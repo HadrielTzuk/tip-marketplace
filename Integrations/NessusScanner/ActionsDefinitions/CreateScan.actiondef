@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1517347852297, 
+    "Creator": "admin", 
+    "Description": "Create a new scan in Nessus with a template", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"dashboard_file\": null, \"scanner_id\": 1, \"last_modification_date\": 1548175315, \"creation_date\": 1548175315, \"user_permissions\": 000, \"owner\": \"admin\", \"timezone\": null, \"id\": 000, \"description\": \"\", \"uuid\": \"template-000-000-000-000-0000000\", \"sms\": null, \"shared\": 0, \"type\": \"public\", \"owner_id\": 2, \"rrules\": null, \"scan_time_window\": null, \"container_id\": 0, \"tag_id\": 000, \"notification_filters\": null, \"default_permisssions\": 0, \"emails\": null, \"name\": \"test\", \"custom_targets\": \"1.1.1.1\", \"enabled\": true, \"use_dashboard\": false, \"starttime\": null, \"policy_id\": 000}", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "NessusScanner", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1517347852297, 
+    "Name": "Create Scan", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517348621251, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Scan display name.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1517348621251, 
+            "Name": "Scan Name", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1517348621251, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Scan template title value.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1517348621251, 
+            "Name": "Scan Template Title", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1517348621251, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Description content.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1517348621251, 
+            "Name": "Description", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "Script": "# Imports\r\nfrom SiemplifyDataModel import EntityTypes\r\nfrom SiemplifyAction import SiemplifyAction\r\nfrom NessusScannerManager import NessusScanner\r\n\r\n# Consts\r\nADDRESS = EntityTypes.ADDRESS\r\nHOSTNAME = EntityTypes.HOSTNAME\r\n\r\n\r\ndef main():\r\n    # Configuration.\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration('NessusScanner')\r\n    access_key = conf['Access Key']\r\n    secret_key = conf['Secret Key']\r\n    server_address = conf['Api Root']\r\n    nessus_client = NessusScanner(access_key, secret_key, server_address)\r\n\r\n    # Parameters\r\n    scan_name = siemplify.parameters['Scan Name']\r\n    description = siemplify.parameters.get('Description', 'Created by Rest API')\r\n    template_title = siemplify.parameters['Scan Template Title']\r\n\r\n    # Form Scan Targets.\r\n    scan_targets = [entity.identifier for entity in siemplify.target_entities if entity.entity_type == ADDRESS or\r\n                    entity.entity_type == HOSTNAME]\r\n\r\n    # Adjust to Nessus target format\r\n    scan_targets = \",\".join(scan_targets)\r\n    # Get template id by template title:\r\n    template_id = nessus_client.get_scan_template_uuid_by_title(template_title)\r\n    # Create new scan\r\n    new_scan = nessus_client.create_scan(scan_name, scan_targets, description, template_id)\r\n\r\n    if new_scan:\r\n        output_message = 'Successfully create {0} scan.'.format(scan_name)\r\n        result_value = 'true'\r\n    else:\r\n        output_message = 'Failed to create {0} scan.'.format(scan_name)\r\n        result_value = 'false'\r\n\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n", 
+    "ScriptResultName": "is_succeed", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 0.0
+}

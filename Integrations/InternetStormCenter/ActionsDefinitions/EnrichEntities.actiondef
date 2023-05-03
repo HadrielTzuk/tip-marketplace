@@ -1,0 +1,33 @@
+{
+    "CreationTimeUnixTimeInMs": 1524559211168, 
+    "Creator": "admin", 
+    "Description": "Enrich entities using information from the Internet Storm Center. Supported entities: IP Address. Note: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed. There is rate limiting for API, so make sure to put a big timeout in IDE.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"89.248.xxx.xxx\",\"EntityResult\":{\"number\":\"89.248.xxx.xxx\",\"count\":379060,\"attacks\":11863,\"maxdate\":\"2021-12-06\",\"mindate\":\"2021-09-20\",\"updated\":\"2021-12-06 09:19:16\",\"comment\":null,\"maxrisk\":null,\"asabusecontact\":\"abuse@ipvolume.net\",\"as\":202425,\"asname\":\"INT-NETWORK\",\"ascountry\":\"SC\",\"assize\":14592,\"network\":\"89.248.165.0/24\",\"threatfeeds\":{\"ciarmy\":{\"lastseen\":\"2021-12-02\",\"firstseen\":\"2021-04-19\"},\"recyber\":{\"lastseen\":\"2021-12-06\",\"firstseen\":\"2021-03-29\"}}}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1, 
+    "IntegrationIdentifier": "InternetStormCenter",
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1524559211168, 
+    "Name": "Enrich Entities", 
+    "Parameters": [
+        {
+            "Name": "Create Insight",
+            "Type": 1,
+            "Value": true,
+            "DefaultValue": true,
+            "IsMandatory": false,
+            "Description": "If enabled, action will create an insight containing all of the retrieved information about the entity.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}",
+    "Version": 1.0,
+    "IsAsync": true
+}

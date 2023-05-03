@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 12.62</h2><h5>Published on 09 June, 2020</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     Exchange\n    </b>\n   </li>\n   <ul>\n    <li>\n     Exchange\n    </li>\n    <ul>\n     <li>\n      Added missing dependency.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Actions</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     AlienVaultTI\n    </b>\n   </li>\n   <ul>\n    <li>\n     Enriches Entities\n    </li>\n    <ul>\n     <li>\n      Added logs and improved error handling.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     CiscoAMP\n    </b>\n   </li>\n   <ul>\n    <li>\n     Get Computer Info\n    </li>\n    <ul>\n     <li>\n      Updated the JSON results example to match the actual JSON that the action is returning.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     Talos\n    </b>\n   </li>\n   <ul>\n    <li>\n     Get Reputation\n    </li>\n    <ul>\n     <li>\n      Added support for Unicode data.\n     </li>\n     <li>\n      Added logs and better error handling.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "12.62",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "09/06/20",
+    "Title": "Release Notes"
+}

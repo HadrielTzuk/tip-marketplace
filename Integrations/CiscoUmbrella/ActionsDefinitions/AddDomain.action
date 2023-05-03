@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1515351595697, 
+    "Creator": "admin", 
+    "Description": "Add domain to the OpenDNS block list", 
+    "Id": -1, 
+    "IntegrationIdentifier": "CiscoUmbrella", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1515351595697, 
+    "Name": "Add Domain", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

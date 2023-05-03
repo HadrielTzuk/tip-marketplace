@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1523437181024, 
+    "Creator": "admin", 
+    "Description": "Query the Whois database to find information about a particular domain name or an IP address", 
+    "Id": -1, 
+    "IntegrationIdentifier": "IPVoid", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1523437181024, 
+    "Name": "WhoIs", 
+    "Parameters": [], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom IPVoidManager import IPVoidManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(\"IPVoid\")\n    use_ssl = conf.get('Use SSL', 'False')\n\n    if use_ssl.lower() == 'true':\n        use_ssl = True\n    else:\n        use_ssl = False\n\n    ipvoid_manager = IPVoidManager(use_ssl=use_ssl)\n\n    enriched_entities = []\n\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.ADDRESS or entity.entity_type == EntityTypes.HOSTNAME:\n            html_report = ipvoid_manager.get_whois_html_report(entity.identifier)\n            siemplify.result.add_entity_html_report(entity.identifier, \"WhoIs Report\", html_report)\n\n            enriched_entities.append(entity)\n\n    if enriched_entities:\n        entities_names = [entity.identifier for entity in enriched_entities]\n\n        output_message = 'IPVoid: Attached report for the following entities:\\n' + '\\n'.join(\n            entities_names)\n\n        siemplify.update_entities(enriched_entities)\n\n    else:\n        output_message = 'IPVoid: No reports were found.'\n\n    siemplify.end(output_message, 'true')\n\n\nif __name__ == '__main__':\n    main()", 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

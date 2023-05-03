@@ -1,0 +1,84 @@
+{
+    "CreationTimeUnixTimeInMs": 1522665785536,
+    "Creator": "admin",
+    "Description": "Run a query and get search resutls from Sumologic",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"_messageid\": \"-9223372036854773772\", \"_messagetime\": \"1359407049529\", \"_blockid\": \"-9223372036854775674\", \"_sourcecategory\": \"service\", \"_format\": \"plain:atp:o:0:l:29:p:yyyy-MM-dd HH:mm:ss,SSS ZZZZ\", \"_sourcename\": \"/Users/some-user/Development/sumo/ops/assemblies/latest/service-20.1-SNAPSHOT/logs/service.log\", \"_source\": \"service\", \"_receipttime\": \"1359407051885\", \"_collectorid\": \"1579\", \"_sourceid\": \"1640\", \"_raw\": \"2013-01-28 13:04:09,529 -0800 INFO  [module=SERVICE] [logger=com.netflix.config.sources.DynamoDbConfigurationSource] [thread=pollingConfigurationSource] Successfully polled Dynamo for a new configuration based on table:raychaser-chiapetProperties\", \"_size\": \"246\", \"_collector\": \"local\", \"_messagecount\": \"2035\", \"_sourcehost\": \"Chiapet.local\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Sumologic",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1522665785536,
+    "Name": "Search",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Sumologic query to run. e.g: _collector=*",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Query",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If checked, delete the jobs after a search is completed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Delete Search Job",
+            "Type": 1,
+            "Value": "False"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Start date of the search, ISO-8601 or unixtime (milliseconds). e.g. 1970-01-01T00:00:00. Default: Last 30 days.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Since",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "End date of the search, ISO-8601 or unixtime (milliseconds). e.g. 1970-01-01T00:00:00. Default: now (current utc unixtime).",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "To",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Number of results to return. e.g. 10. Default: 25.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Limit",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from ElasticsearchManager import ElasticsearchManager\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('ElasticSearch')\n    elasticsearch_wrapper = ElasticsearchManager(conf[\"Server Address\"], int(conf[\"Port\"]))\n\n    index = siemplify.parameters.get(\"Index\")\n    query = siemplify.parameters.get('Query')\n    limit = siemplify.parameters.get('Limit')\n\n    results, status, total_hits = elasticsearch_wrapper.simple_es_search(index, query, limit)\n    if status:\n        output_message = \"Query ran successfully {0} hits found\".format(total_hits)\n        result_value = 'true'\n    else:\n        output_message = \"ERROR: Query failed to run\"\n        result_value = 'false'\n\n    for count, result in enumerate(results):\n        flat_result = dict_to_flat(result)\n        csv_output = flat_dict_to_csv(flat_result)\n        siemplify.result.add_data_table(\"Results {}\".format(count), csv_output)\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()",
+    "ScriptResultName": "results",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

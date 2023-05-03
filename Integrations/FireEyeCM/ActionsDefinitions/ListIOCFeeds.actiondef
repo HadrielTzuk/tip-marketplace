@@ -1,0 +1,33 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List available IOC feeds in FireEye CM.",
+    "Id": -1,
+    "IntegrationIdentifier": "FireEyeCM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List IOC Feeds",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"customFeedInfo\":[{\"feedName\":\"XXXXXXXX\",\"status\":\"Feed processed\",\"feedType\":\"hash\",\"uploadDate\":\"2000\/01\/01 07:50:46\",\"feedAction\":\"alert\",\"feedSource\":\"Source: SIEM\",\"contentMeta\":[{\"contentType\":\"ip\",\"feedCount\":0},{\"contentType\":\"domain\",\"feedCount\":0},{\"contentType\":\"url\",\"feedCount\":0},{\"contentType\":\"hash\",\"feedCount\":1}]}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Max IOC Feeds To Return",
+            "Type": 0,
+            "Value": "50",
+            "DefaultValue": "50",
+            "IsMandatory": false,
+            "Description": "Specify how many IOC feeds to return. Default is 50.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

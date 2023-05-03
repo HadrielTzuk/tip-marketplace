@@ -1,0 +1,36 @@
+{
+    "Id": -1,
+    "Creator": "admin",
+    "Name": "Remove IP From IP Address Range",
+    "Description": "Remove IP address from IP address range in Microsoft Cloud App Security. Supported entities: IP address. Note: action can only remove exact matches. For example, action won't be able to remove 192.168.1.30, if in the range 192.168.1.1/24 was provided.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "IntegrationIdentifier": "Office365CloudAppSecurity",
+    "CreationTimeUnixTimeInMs": 1513525130286,
+    "ModificationTimeUnixTimeInMs": 1513525130286,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"_id\":\"62d6b71b6cfbb5xxxxxxxxxx\",\"name\":\"test name\",\"subnets\":[{\"mask\":128,\"address\":\"0000:0000:0000:0000:0000:ffff:xxxx:xxxx\",\"originalString\":\"192.168.x.xxx\"},{\"mask\":120,\"address\":\"0000:0000:0000:0000:0000:ffff:xxxx:xxxx\",\"originalString\":\"192.168.x.xxx/24\"}],\"location\":null,\"organization\":\"asd\",\"tags\":[{\"_id\":\"62d684ac6025f1xxxxxxxxxx\",\"_tid\":\"888xxxxx\",\"name\":\"existing tag\",\"target\":1,\"type\":0,\"id\":\"62d684ac92adb2xxxxxxxxxx\",\"status\":0}],\"category\":5,\"lastModified\":1661765775360.8718,\"_tid\":\"888xxxxx\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Name",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the name for the IP address range that needs to be updated.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1518700589889,
+            "ModificationTimeUnixTimeInMs": 1518700589889
+        }
+    ],
+    "Script": "",
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}",
+    "Type": 0,
+    "Version": 1.0
+}

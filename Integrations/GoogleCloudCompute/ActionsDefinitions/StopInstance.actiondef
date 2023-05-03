@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381792970,
+    "Creator": "Admin",
+    "Description": "Stops a running instance, shutting it down cleanly, and allows you to restart the instance at a later time. Stopped instances do not incur VM usage charges while they are stopped. However, resources that the VM is using, such as persistent disks and static IP addresses, will continue to be charged until they are deleted.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleCloudCompute",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"id\": \"123456789\", \"name\": \"operation-123456-123456-123456-123456\", \"zone\": \"us-central1-a\", \"operationType\": \"stop\", \"targetLink\": \"https://www.googleapis.com/compute/v1/projects/some-zone/zones/us-central1-a/instances/123456789\", \"targetId\": \"123456789\", \"status\": \"RUNNING\", \"user\": \"google-cloud-compute-spec@some-zone.iam.gserviceaccount.com\", \"progress\": 0, \"insertTime\": \"2021-06-07T06:59:49.897-07:00\", \"startTime\": \"2021-06-07T06:59:49.936-07:00\", \"selfLink\": \"https://www.googleapis.com/compute/v1/projects/some-zone/zones/us-central1-a/operations/operation-123456-123456-123456-123456\", \"kind\": \"compute#operation\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535381792970,
+    "Name": "Stop Instance",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify instance zone name to search for instances in.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Instance Zone",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify instance id to stop. Instance id can be found in \"List Instances\" action.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Instance ID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

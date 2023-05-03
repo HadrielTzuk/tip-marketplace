@@ -1,0 +1,14 @@
+{
+    "CreationTimeUnixTimeInMs": 1527004402683,
+    "Creator": "Siemplify System",
+    "Description": "Notifies about all the jobs that had failed in the last 3 hours",
+    "Id": -1,
+    "Integration": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527004402683,
+    "Name": "Jobs Monitor",
+    "Parameters": [],
+    "RunIntervalInSeconds": 900,
+    "Version": 1
+}

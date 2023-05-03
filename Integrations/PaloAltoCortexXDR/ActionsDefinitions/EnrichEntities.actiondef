@@ -1,0 +1,23 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805, 
+    "Creator": "Admin", 
+    "DefaultResultValue": "", 
+    "Description": "Enrich Siemplify Host and IP entities based on the information from the Palo Alto Cortex XDR.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"domain\": \"st2.local\", \"endpoint_name\": \"ST2-PC-1-14\", \"endpoint_type\": \"AGENT_TYPE_SERVER\", \"ip\": null, \"endpoint_version\": \"6.1.0.9915\", \"install_date\": 1568103207592, \"installation_package\": \"papi-test\", \"is_isolated\": null, \"group_name\": null, \"alias\": \"\", \"active_directory\": null, \"endpoint_status\": \"DISCONNECTED\", \"endpoint_id\": \"4ce98b4d8d2b45a9a1d82dc71f0d1304\", \"content_version\": \"\", \"os_type\": \"AGENT_OS_WINDOWS\", \"last_seen\": 1568103207592, \"first_seen\": 1568103207591, \"users\": [\"TEST USER\"]}, \"Entity\": \"PC01\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "PaloAltoCortexXDR", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1560351300805, 
+    "Name": "Enrich Entities", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "TimeoutSeconds": 600, 
+    "Version": 1.0
+}

@@ -1,0 +1,21 @@
+{
+    "CreationTimeUnixTimeInMs": 1533210105447,
+    "Creator": "Admin",
+    "Description": "List of reports in the user's account when Report Share feature is enabled. The report list output includes all report types, including scorecard reports. ",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"STATUS\": {\"STATE\": \"Finished\"}, \"EXPIRATION_DATETIME\": \"2019-02-04T13:11:15Z\", \"TITLE\": \"Scan scan/1533110666.07264 Report\", \"USER_LOGIN\": \"sempf3mh\", \"OUTPUT_FORMAT\": \"PDF\", \"LAUNCH_DATETIME\": \"2019-01-28T13:11:14Z\", \"TYPE\": \"Scan\", \"ID\": \"775111\", \"SIZE\": \"22.17 KB\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "QualysVM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1533210105447,
+    "Name": "List Reports",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

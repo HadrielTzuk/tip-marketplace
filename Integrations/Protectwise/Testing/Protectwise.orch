@@ -1,0 +1,119 @@
+{
+  "Identifier": "183f3a37-ad1d-4883-beea-390dc232ecaa",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": true,
+  "Name": "Protectwise",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "0cbced76-40c3-4abd-88ec-c691d9fc1968",
+      "ParentWorkflowIdentifier": "183f3a37-ad1d-4883-beea-390dc232ecaa",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Protectwise_GetPcap_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Protectwise_GetPcap",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "0cbced76-40c3-4abd-88ec-c691d9fc1968",
+          "ParentWorkflowIdentifier": "183f3a37-ad1d-4883-beea-390dc232ecaa",
+          "Name": "ScriptName",
+          "Value": "Protectwise_GetPcap",
+          "CreationTimeUnixTimeInMs": 1519720541715,
+          "ModificationTimeUnixTimeInMs": 1519720541715
+        },
+        {
+          "ParentStepIdentifier": "0cbced76-40c3-4abd-88ec-c691d9fc1968",
+          "ParentWorkflowIdentifier": "183f3a37-ad1d-4883-beea-390dc232ecaa",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519720541715,
+          "ModificationTimeUnixTimeInMs": 1519720541715
+        },
+        {
+          "ParentStepIdentifier": "0cbced76-40c3-4abd-88ec-c691d9fc1968",
+          "ParentWorkflowIdentifier": "183f3a37-ad1d-4883-beea-390dc232ecaa",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519720534487,
+          "ModificationTimeUnixTimeInMs": 1519720534487
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519720534481,
+      "ModificationTimeUnixTimeInMs": 1519720534481
+    },
+    {
+      "Identifier": "f8e74a41-d362-41ed-bcc3-e7983053927d",
+      "ParentWorkflowIdentifier": "183f3a37-ad1d-4883-beea-390dc232ecaa",
+      "ParentStepIdentifiers": [
+        "0cbced76-40c3-4abd-88ec-c691d9fc1968"
+      ],
+      "ParentStepIdentifier": "0cbced76-40c3-4abd-88ec-c691d9fc1968",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Protectwise_GetEvents_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Protectwise_GetEvents",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "f8e74a41-d362-41ed-bcc3-e7983053927d",
+          "ParentWorkflowIdentifier": "183f3a37-ad1d-4883-beea-390dc232ecaa",
+          "Name": "ScriptName",
+          "Value": "Protectwise_GetEvents",
+          "CreationTimeUnixTimeInMs": 1519720541716,
+          "ModificationTimeUnixTimeInMs": 1519720541716
+        },
+        {
+          "ParentStepIdentifier": "f8e74a41-d362-41ed-bcc3-e7983053927d",
+          "ParentWorkflowIdentifier": "183f3a37-ad1d-4883-beea-390dc232ecaa",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Timeframe\":\"1100\"}",
+          "CreationTimeUnixTimeInMs": 1519720541716,
+          "ModificationTimeUnixTimeInMs": 1519720541716
+        },
+        {
+          "ParentStepIdentifier": "f8e74a41-d362-41ed-bcc3-e7983053927d",
+          "ParentWorkflowIdentifier": "183f3a37-ad1d-4883-beea-390dc232ecaa",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519720536058,
+          "ModificationTimeUnixTimeInMs": 1519720536058
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519720536058,
+      "ModificationTimeUnixTimeInMs": 1519720536058
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "2082509b-53f3-4810-aec4-a1edd130a69b",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "183f3a37-ad1d-4883-beea-390dc232ecaa",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Protectwise",
+      "AllEnvironments": "",
+      "Id": 25,
+      "CreationTimeUnixTimeInMs": 1519720541699,
+      "ModificationTimeUnixTimeInMs": 1519720541699
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 25,
+  "CreationTimeUnixTimeInMs": 1519720506278,
+  "ModificationTimeUnixTimeInMs": 1519720506278
+}

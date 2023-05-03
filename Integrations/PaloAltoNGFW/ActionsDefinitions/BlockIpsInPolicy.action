@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 1518514906976, 
+    "Creator": "admin", 
+    "Description": "Block IP addresses in a policy (each IP is added individually to the policy)", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"success\":[\"1.1.1.1\",\"2.2.2.2\"],\"failure\":[\"1.1.1.1\",\"2.2.2.2\"],\"already_exist\":[\"1.1.1.1\",\"2.2.2.2\"]}",
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "PaloAltoNGFW", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1518514906976, 
+    "Name": "Block ips in policy", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1520155635793, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The device name in which the group is located. The default device name of NGFW is localhost.localdomain. In case configured differently, please refer to https://<NGFWIP>/php/rest/browse.php/config::devices for the list of all the device names and select the relevant device.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520155635793, 
+            "Name": "Device Name", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1520155635793, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The vsys in which the group is located. The default vsys name of NGFW is vsys1. In case configured differently, please refer to https://<NGFW IP>/php/rest/browse.php/config::devices::entry[@name='<DEVICE NAME>']::vsys for the list of all the vsys names of the device and select the relevant vsys.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520155635793, 
+            "Name": "Vsys Name", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1520155635793, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Policy name value.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520155635793, 
+            "Name": "Policy Name", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1520155635793, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Has to be source or destination.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520155635793, 
+            "Name": "Target", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

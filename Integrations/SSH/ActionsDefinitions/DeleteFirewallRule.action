@@ -1,0 +1,77 @@
+{
+    "CreationTimeUnixTimeInMs": 1515564726901,
+    "Creator": "admin",
+    "Description": "Delete iptables Firewall rule (Example: INPUT -s 10.0.0.10 -j DROP)",
+    "Id": -1,
+    "IntegrationIdentifier": "SSH",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515564726901,
+    "Name": "Delete Firewall Rule",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516072628569,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Remote server address(e.g: x.x.x.x).",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072628569,
+            "Name": "Remote Server",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072628569,
+            "CustomActionId": -1,
+            "DefaultValue": "root",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072628569,
+            "Name": "Remote Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072628569,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072628569,
+            "Name": "Remote Password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072628569,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516072628569,
+            "Name": "Remote Port",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072628569,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Rule value(e.g: INPUT -s 10.0.0.10 -j DROP)",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072628569,
+            "Name": "IPtables Rule",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_succecss",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,40 @@
+{
+    "CreationTimeUnixTimeInMs": 1527419044459, 
+    "Creator": "admin", 
+    "Description": "Update attributes of an existing Active Directory users.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "ActiveDirectory", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1527419044459, 
+    "Name": "Update attributes of an AD User", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527419044459, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Description", 
+            "Description": "The name of the attribute to update. Default: Description.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1527419044459, 
+            "Name": "Attribute Name", 
+            "Type": 0, 
+            "Value": "Description"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1527419044459, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "The attribute value to update.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1527419044459, 
+            "Name": "Attribute Value", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Version": 1.0
+}

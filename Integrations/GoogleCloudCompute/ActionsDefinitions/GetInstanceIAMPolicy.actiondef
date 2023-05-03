@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381792970,
+    "Creator": "Admin",
+    "Description": "Gets the access control policy for the resource. Note that policy may be empty if no policy is assigned to the resource.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleCloudCompute",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"version\": 1,\"etag\": \"XXXXXXXX\",\"bindings\": [{\"role\": \"roles\/compute.XXXXXXX\",\"members\": [\"user:XXXXXX@XXXXXX.XX\"]}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535381792970,
+    "Name": "Get Instance IAM Policy",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify instance zone name to search for instances in.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Instance Zone",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify instance id to get policy for. Intsance id can be found in \"List Instances\" action.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Instance ID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

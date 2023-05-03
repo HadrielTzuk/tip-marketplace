@@ -1,0 +1,36 @@
+{
+    "Description": "Office 365 Cloud App Security is a subset of Microsoft Cloud App Security that provides CloudApp controls scoped to Office 365 environment. CloudApp controls for Office 365 enhances incident response efforts by providing a combination of in-depth visibility into user activity and automated governance actions based on defined policy.",
+    "DisplayName": "Office 365 CloudApp Security",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/office-365-cloudapp-security",
+    "Identifier": "Office365CloudAppSecurity",
+    "Categories": [
+        "Cloud Security",
+        "Cloud",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Office365CloudAppSecurity",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Cloud App Security portal URL",
+            "PropertyName": "portal URL",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Office365CloudAppSecurity",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Cloud App Security API token",
+            "PropertyName": "API token",
+            "PropertyType": "3",
+            "Value": ""
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path fill-rule=\"evenodd\" d=\"M13.05 2.75V12h9.2V2.75h-9.2zm0 19.5h9.2V13h-9.2v9.25zM2.75 12h9.2V2.75h-9.2V12zm0 10.25h9.2V13h-9.2v9.25z\" clip-rule=\"evenodd\"\/>\r\n<\/svg>\r\n",
+    "Version": 15.0,
+    "MarketingDisplayName": "Microsoft Office 365 CloudApp Security"
+}

@@ -1,0 +1,204 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583, 
+    "Creator": "admin", 
+    "Description": "Update a Freshservice ticket based on provided action input parameters. Note that if new tags for the ticket are provided, due to the Freshservice API limitations action replaces existing tags in the ticket, not appending new ones to existing. Additionally, if file attachments to add are provided, the total size of the attachments must not exceed 15MB",
+    "Id": -1, 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"ticket\":{\"cc_emails\":[],\"fwd_emails\":[],\"reply_cc_emails\":[],\"spam\":\"XXXX\",\"email_config_id\":\"XXXXX\",\"fr_escalated\":\"XXXX\",\"group_id\":\"XXXXXX\",\"priority\":\"X\",\"priority_name\":\"XXXXX\",\"requester_id\":\"XXXXXXX\",\"requested_for_id\":\"XXXXXXX\",\"responder_id\":\"XXXXXXX\",\"source\":\"X\",\"source_name\":\"XXXXX\",\"status\":\"X\",\"status_name\":\"XXXXX\",\"subject\":\"XXXXXXXXXXXXXX\",\"description\":\"XXXXXXXXXXXXXX\",\"description_text\":\"XXXXXXXXXXXXXX\",\"category\":\"XXXXXXX\",\"sub_category\":\"XXXXXXX\",\"item_category\":\"XXXXXXX\",\"custom_fields\":{\"test\":\"XXXXXXX\",\"my_field\":\"XXXXXXX\"},\"id\":\"XX\",\"type\":\"Incident\",\"to_emails\":\"XXXXXXX\",\"department_id\":\"XXXXXXX\",\"is_escalated\":\"XXXXXXX\",\"tags\":[\"XXXXXXX\"],\"due_by\":\"XXXXXXX\",\"fr_due_by\":\"XXXXXXX\",\"created_at\":\"XXXXXXX\",\"updated_at\":\"XXXXXXX\",\"attachments\":[]}}]", 
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "FreshworksFreshservice", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530451212583, 
+    "Name": "Update Ticket",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify ticket id to update.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Ticket ID", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Not Changed", 
+            "Description": "Specify new status for the ticket.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Status", 
+            "OptionalValues": [
+                "Not Changed",
+                "Open", 
+                "Pending", 
+                "Resolved", 
+                "Closed"
+            ], 
+            "Type": 15, 
+            "Value": "Not Changed"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify subject field to update.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Subject", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify description field to update.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Description", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify requester email to update.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Requester Email", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the agent email to update.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Agent Assign To", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the group name to update.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Group Assign To", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Not Changed",
+            "Description": "Specify priority to update.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Priority", 
+            "OptionalValues": [
+                "Not Changed",
+                "Low", 
+                "Medium", 
+                "High", 
+                "Urgent"
+            ], 
+            "Type": 15, 
+            "Value": "Not Changed"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Not Changed",
+            "Description": "Specify urgency to update.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Urgency", 
+            "OptionalValues": [
+                "Not Changed",
+                "Low", 
+                "Medium", 
+                "High"
+            ], 
+            "Type": 15, 
+            "Value": "Not Changed"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Not Changed",
+            "Description": "Specify impact to update.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Impact", 
+            "OptionalValues": [
+                "Not Changed",
+                "Low", 
+                "Medium", 
+                "High"
+            ], 
+            "Type": 15, 
+            "Value": "Not Changed"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify tags to replace in the ticket. Parameter accepts multiple values as a comma separated string. Note that due to the Freshservice API limitations action replaces existing tags in the ticket, not appending new ones to existing.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Tags", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify a JSON object that contains custom fields to add to the ticket. Action appends new custom fields to any existing for a ticket. Example format: {\"key1\":\"value1\",\"key2\":\"value2\"}",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Custom Fields", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the full path for the file to be uploaded with the ticket. Parameter accepts multiple values as a comma separated string. The total size of the attachments must not exceed 15MB",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "File Attachments to Add",
+            "Type": 0,
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

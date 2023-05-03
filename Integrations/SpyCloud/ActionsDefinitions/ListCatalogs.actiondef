@@ -1,0 +1,105 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List available catalogs in SpyCloud.",
+    "Id": -1,
+    "IntegrationIdentifier": "SpyCloud",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Catalogs",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"site_description\":\"Unimarc is a Chilean family supermarket chain.\",\"breach_date\":\"2021-04-01T00:00:00Z\",\"confidence\":3,\"title\":\"Unimarc\",\"description\":\"In April 2021, the Chilean supermarket chain Unimarc was allegedly breached. The stolen data contains email addresses and additional personal information. This breach is being privately shared on the internet.\",\"acquisition_date\":\"2021-04-26T00:00:00Z\",\"site\":\"unimarc.cl\",\"id\":37479,\"type\":\"PRIVATE\",\"num_records\":15917,\"uuid\":\"32ef82b3-e466-455a-badb-xxxxxxxxx\",\"spycloud_publish_date\":\"2021-06-03T00:00:00Z\",\"assets\":{\"last_name\":3985,\"gender\":104,\"phone\":3842,\"first_name\":3985,\"full_name\":3984,\"dob\":3824,\"account_signup_time\":135,\"email\":15917}},{\"site_description\":\"This is the official website of Diponegoro University, a public university in Semarang, Central Java, Indonesia. \",\"confidence\":3,\"title\":\"Universitas Diponegoro\",\"description\":\"At an unconfirmed date, the Indonesian university Universitas Diponegoro was allegedly breached. The stolen data contains full names, dates of birth, addresses, phone numbers, religions, email addresses and additional personal information. This breach is being privately shared on the internet.\",\"acquisition_date\":\"2021-01-05T00:00:00Z\",\"site\":\"undip.ac.id\",\"id\":37218,\"type\":\"PRIVATE\",\"num_records\":73483,\"uuid\":\"9a9e21de-7551-43bb-b932-xxxxxxxxxxx\",\"spycloud_publish_date\":\"2021-02-25T00:00:00Z\",\"assets\":{\"email\":64142,\"address_2\":70752,\"password\":xxxxxxx,\"full_name\":73448,\"phone\":33872,\"address_1\":66226,\"dob\":73382,\"religion\":205,\"marital_status\":64346,\"gender\":73466}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Filter Logic",
+            "Type": 15,
+            "DefaultValue": "Equal",
+            "Value": "Equal",
+            "IsMandatory": false,
+            "Description": "Specify what filter logic should be applied.",
+            "OptionalValues": [
+                "Equal",
+                "Contains"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Filter Value",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what value should be used in the filter. If \"Equal\" is selected, action will try to find the exact match among results and if \"Contains\" is selected, action will try to find results that contain that substring. \"Equal\" works with \"title\" parameter, while \"Contains\" works with all values in response. If nothing is provided in this parameter, the filter will not be applied.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Time Frame",
+            "Type": 15,
+            "DefaultValue": "Last Week",
+            "Value": "Last Week",
+            "IsMandatory": true,
+            "Description": "Specify a time frame for the search. If \"Custom\" is selected, you also need to provide \"Start Time\".",
+            "OptionalValues": [
+                "Last Week",
+                "Last Month",
+                "Last Year",
+                "Custom"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Start Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the start time for the search. This parameter is mandatory, if \"Custom\" is selected for the \"Time Frame\" parameter. Format: ISO 8601",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "End Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the end time for the search. Format: ISO 8601. If nothing is provided and \"Custom\" is selected for the \"Time Frame\" parameter then this parameter will use current time.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Catalogs To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many catalogs to return. Default: 50.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

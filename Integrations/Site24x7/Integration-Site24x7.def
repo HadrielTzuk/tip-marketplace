@@ -1,0 +1,58 @@
+{
+    "Description": "Site24x7 offers unified cloud monitoring for DevOps and IT operations within small to large organizations. The solution monitors the experience of real users accessing websites and applications from desktop and mobile devices. In-depth monitoring capabilities enable DevOps teams to monitor and troubleshoot applications, servers and network infrastructure, including private and public clouds. End-user experience monitoring is done from more than 100 locations across the world and various wireless carriers.",
+    "DisplayName": "Site24x7",
+    "Identifier": "Site24x7",
+    "MarketingDisplayName": "Site24x7",
+    "Categories": [
+        "IT & Infrastructure"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Site24x7",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https://www.site24x7.{region}"
+        },
+        {
+            "IntegrationIdentifier": "Site24x7",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Site24x7",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client Secret",
+            "PropertyName": "Client Secret",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Site24x7",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Refresh Token",
+            "PropertyName": "Refresh Token",
+            "PropertyType": "3",
+            "Value": "refresh_token"
+        },
+        {
+            "IntegrationIdentifier": "Site24x7",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0)\"><path d=\"M21.1037 7.92483C21.6355 9.08308 21.7036 10.3995 21.294 11.6059C22.3629 11.7398 23.3403 12.2739 24.0273 13.0996C24.7143 13.9254 25.0592 14.9806 24.9917 16.0504C24.9242 17.1203 24.4495 18.1243 23.6641 18.8581C22.8788 19.5918 21.8419 20.0002 20.7645 20H16.2442C18.4891 18.704 20 16.2785 20 13.5C20 9.67495 17.1366 6.51869 13.4363 6.05788C13.825 5.75632 14.2593 5.51075 14.7273 5.33208C15.9222 4.87594 17.2469 4.89018 18.4316 5.3719C19.6163 5.85362 20.5718 6.76658 21.1037 7.92483Z\" fill=\"currentColor\"/><path d=\"M8.75583 20C6.51086 18.704 5 16.2785 5 13.5C5 12.2399 5.31075 11.0524 5.85979 10.01C5.33072 9.92477 4.79022 9.92368 4.25864 10.0078C3.54698 10.1205 2.86778 10.3833 2.26661 10.7787C1.66545 11.174 1.15623 11.6928 0.773134 12.3001C0.390041 12.9074 0.141937 13.5892 0.045474 14.2997C-0.0509891 15.0103 0.00642066 15.7332 0.21385 16.4198C0.42128 17.1065 0.773929 17.7411 1.24813 18.2809C1.72233 18.8208 2.30711 19.2535 2.96323 19.55C3.61934 19.8465 4.3316 20 5.05221 20H8.75583Z\" fill=\"currentColor\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.5 8.5C9.73858 8.5 7.5 10.7386 7.5 13.5C7.5 16.2614 9.73858 18.5 12.5 18.5C15.2614 18.5 17.5 16.2614 17.5 13.5C17.5 10.7386 15.2614 8.5 12.5 8.5ZM6.5 13.5C6.5 10.1863 9.18629 7.5 12.5 7.5C15.8137 7.5 18.5 10.1863 18.5 13.5C18.5 16.8137 15.8137 19.5 12.5 19.5C9.18629 19.5 6.5 16.8137 6.5 13.5ZM12.5 10.5C10.8431 10.5 9.5 11.8431 9.5 13.5C9.5 15.1569 10.8431 16.5 12.5 16.5C14.1569 16.5 15.5 15.1569 15.5 13.5C15.5 11.8431 14.1569 10.5 12.5 10.5ZM8.5 13.5C8.5 11.2909 10.2909 9.5 12.5 9.5C14.7091 9.5 16.5 11.2909 16.5 13.5C16.5 15.7091 14.7091 17.5 12.5 17.5C10.2909 17.5 8.5 15.7091 8.5 13.5ZM12.5 12.5C11.9477 12.5 11.5 12.9477 11.5 13.5C11.5 14.0523 11.9477 14.5 12.5 14.5C13.0523 14.5 13.5 14.0523 13.5 13.5C13.5 12.9477 13.0523 12.5 12.5 12.5ZM10.5 13.5C10.5 12.3954 11.3954 11.5 12.5 11.5C13.6046 11.5 14.5 12.3954 14.5 13.5C14.5 14.6046 13.6046 15.5 12.5 15.5C11.3954 15.5 10.5 14.6046 10.5 13.5Z\" fill=\"currentColor\"/></g><defs><clipPath id=\"clip0\"><rect width=\"25\" height=\"25\" fill=\"currentColor\"/></clipPath></defs></svg>",
+    "Version": 1.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/site24x7"
+}

@@ -1,0 +1,52 @@
+<style>
+{% macro get_logo_style() %}
+.logo {
+    padding-bottom: 8px;
+    padding-top: 8px;
+
+    float: right;
+}
+
+.logo svg {
+    height: 32px;
+
+    vertical-align: top;
+}
+  
+{%- endmacro -%}
+</style>
+  
+
+{% macro get_logo_div(logo_svg, import_svg_from_integration, imported_logo_content) %}
+<div class="logo">
+{% if import_svg_from_integration | default(false, true) %}
+{{ imported_logo_content }}
+{% else %}
+  <svg{% for k, v in logo_svg.items() %}
+  {% if k != 'paths' %} {{ k }}="{{ v }}"{% endif %}
+  {% endfor %}>
+  {% for item in logo_svg.paths %}
+    <path
+    {% for k, v in item.items() %}
+      {% if not loop.last %}
+      {{ k }}="{{ v }}"
+      {% else %}
+      {{ k }}="{{ v }}"/>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  </svg>
+{% endif %}
+</div>
+{%- endmacro -%}
+
+
+<script>
+{% macro get_logo_change_color_script() %}
+if ($("body").css("background-color") === "rgb(255, 255, 255)") {
+    $(".logo svg path").attr("fill", "black");
+} else {
+    $(".logo svg path").attr("fill", "white");
+}
+{%- endmacro -%}
+</script>

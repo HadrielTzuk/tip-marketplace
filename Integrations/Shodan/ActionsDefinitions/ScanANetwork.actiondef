@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1545759500998, 
+    "Creator": "Admin", 
+    "Description": "Scan a network using Shodan", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Shodan", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1545759500998, 
+    "Name": "Scan A Network", 
+    "Parameters": [], 
+    "Script": "from ShodanManager import ShodanManager\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import flat_dict_to_csv\nfrom SiemplifyDataModel import EntityTypes\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('Shodan')\n    verify_ssl = conf.get('Verify SSL', 'False').lower() == 'true'\n    api_key = conf.get('API key', \"\")\n    shodan = ShodanManager(api_key, verify_ssl=verify_ssl)\n\n    ips_list = []\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.ADDRESS:\n            ips_list.append(entity.identifier)\n    # Convert ips list to strings\n    ips = \",\".join(ips_list)\n\n    scan_info = shodan.scan(ips)\n    if scan_info:\n        scan_id = scan_info.get('id')\n        output_message = \"Successfully scan a network using Shodan. Scan ID is {0}\".format(scan_id)\n        result_value = 'true'\n    else:\n        output_message = \"Failed to scan a network using Shodan\"\n        result_value = 'false'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "success_scan", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 2.0
+}

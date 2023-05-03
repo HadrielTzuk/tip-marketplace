@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Trend Micro Vision One.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "TrendMicroVisionOne",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1680566400,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "266787896"
+    },
+    {
+        "ChangeDescription": "This integration is going to be deprecated in 2 Months. Please use \"Trend Vision One\" integration.",
+        "Deprecated": true,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "TrendMicroVisionOne",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "278041220"
+    }
+]

@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Sumo Logic Cloud SIEM.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Sumo Logic Cloud SIEM",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1648624922,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11435"
+    },
+    {
+        "ChangeDescription": "Added support for authentication via access id and access key.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Sumo Logic Cloud SIEM",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1649234548,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11514"
+    },
+    {
+        "ChangeDescription": "Update Insight - Added JSON Result.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Update Insight",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1649234548,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11516"
+    },
+    {
+        "ChangeDescription": "Sumo Logic Cloud SIEM - Insights Connector - Updated the logic behind severity handling.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Sumo Logic Cloud SIEM - Insights Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1680566400,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "267608344"
+    }
+]

@@ -1,0 +1,54 @@
+{
+    "CreationTimeUnixTimeInMs": 1519907424944, 
+    "Creator": "admin", 
+    "Description": "Submit files for analysis in VMRay. Note: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed.",
+    "Id": -1, 
+    "IntegrationIdentifier": "VMRay", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1519907424944, 
+    "Name": "Upload File And Get Report", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519910592077, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify a comma-separated list of absolute file paths for submission.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1519910592077, 
+            "Name": "Sample File Path", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1519910592077, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the tags that you want to add to the submission.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1519910592077, 
+            "Name": "Tag Names", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1519910592077, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the comment that you want to add to the submission.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1519910592077, 
+            "Name": "Comment", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Type": 0, 
+    "Version": 0.0,
+    "IsAsync": true
+}

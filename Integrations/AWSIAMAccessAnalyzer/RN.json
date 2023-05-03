@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "New! AWS IAM Access Analyzer integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "AWSIAMAccessAnalyzer",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1609233872,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4454"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "AWSIAMAccessAnalyzer",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Findings Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "AWS IAM - Findings Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1661927346,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12040"
+    }
+]

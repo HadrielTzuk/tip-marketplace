@@ -1,0 +1,383 @@
+{
+  "Identifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "AD",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "99cd0aab-8248-4d62-8e0e-0841fc9d7ffd",
+      "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+      "ParentStepIdentifiers": [
+        "ef1d4dd8-c49a-4cbe-a3a2-2c9aaf0d1478"
+      ],
+      "ParentStepIdentifier": "ef1d4dd8-c49a-4cbe-a3a2-2c9aaf0d1478",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ActiveDirectory_Enrich entities_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ActiveDirectory_Enrich entities",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "99cd0aab-8248-4d62-8e0e-0841fc9d7ffd",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptName",
+          "Value": "ActiveDirectory_Enrich entities",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        },
+        {
+          "ParentStepIdentifier": "99cd0aab-8248-4d62-8e0e-0841fc9d7ffd",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        },
+        {
+          "ParentStepIdentifier": "99cd0aab-8248-4d62-8e0e-0841fc9d7ffd",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519140492992,
+      "ModificationTimeUnixTimeInMs": 1519140492992
+    },
+    {
+      "Identifier": "ef1d4dd8-c49a-4cbe-a3a2-2c9aaf0d1478",
+      "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+      "ParentStepIdentifiers": [
+        "55e9095f-064f-4c83-81c7-747391344f11"
+      ],
+      "ParentStepIdentifier": "55e9095f-064f-4c83-81c7-747391344f11",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ActiveDirectory_Enable account_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ActiveDirectory_Enable account",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "ef1d4dd8-c49a-4cbe-a3a2-2c9aaf0d1478",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptName",
+          "Value": "ActiveDirectory_Enable account",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        },
+        {
+          "ParentStepIdentifier": "ef1d4dd8-c49a-4cbe-a3a2-2c9aaf0d1478",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        },
+        {
+          "ParentStepIdentifier": "ef1d4dd8-c49a-4cbe-a3a2-2c9aaf0d1478",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519140492992,
+      "ModificationTimeUnixTimeInMs": 1519140492992
+    },
+    {
+      "Identifier": "55e9095f-064f-4c83-81c7-747391344f11",
+      "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ActiveDirectory_Disable account_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ActiveDirectory_Disable account",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "55e9095f-064f-4c83-81c7-747391344f11",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptName",
+          "Value": "ActiveDirectory_Disable account",
+          "CreationTimeUnixTimeInMs": 1519140492991,
+          "ModificationTimeUnixTimeInMs": 1519140492991
+        },
+        {
+          "ParentStepIdentifier": "55e9095f-064f-4c83-81c7-747391344f11",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519140492991,
+          "ModificationTimeUnixTimeInMs": 1519140492991
+        },
+        {
+          "ParentStepIdentifier": "55e9095f-064f-4c83-81c7-747391344f11",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519140492991,
+          "ModificationTimeUnixTimeInMs": 1519140492991
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519140492990,
+      "ModificationTimeUnixTimeInMs": 1519140492990
+    },
+    {
+      "Identifier": "73973151-9ba4-4d88-87eb-81db95afb6eb",
+      "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+      "ParentStepIdentifiers": [
+        "66f6b152-2d8b-496f-85a1-fed040d8fa36"
+      ],
+      "ParentStepIdentifier": "66f6b152-2d8b-496f-85a1-fed040d8fa36",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ActiveDirectory_Disable account_2",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ActiveDirectory_Disable account",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "73973151-9ba4-4d88-87eb-81db95afb6eb",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptName",
+          "Value": "ActiveDirectory_Disable account",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        },
+        {
+          "ParentStepIdentifier": "73973151-9ba4-4d88-87eb-81db95afb6eb",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        },
+        {
+          "ParentStepIdentifier": "73973151-9ba4-4d88-87eb-81db95afb6eb",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519140492992,
+      "ModificationTimeUnixTimeInMs": 1519140492992
+    },
+    {
+      "Identifier": "52d20d21-85bb-41ca-be84-88c0276c926a",
+      "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+      "ParentStepIdentifiers": [
+        "1d6b3356-5a69-4a08-831e-99229fdf38cf"
+      ],
+      "ParentStepIdentifier": "1d6b3356-5a69-4a08-831e-99229fdf38cf",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ActiveDirectory_List User Groups_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ActiveDirectory_List User Groups",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "52d20d21-85bb-41ca-be84-88c0276c926a",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptName",
+          "Value": "ActiveDirectory_List User Groups",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        },
+        {
+          "ParentStepIdentifier": "52d20d21-85bb-41ca-be84-88c0276c926a",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        },
+        {
+          "ParentStepIdentifier": "52d20d21-85bb-41ca-be84-88c0276c926a",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519140492992,
+      "ModificationTimeUnixTimeInMs": 1519140492992
+    },
+    {
+      "Identifier": "1d6b3356-5a69-4a08-831e-99229fdf38cf",
+      "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+      "ParentStepIdentifiers": [
+        "73973151-9ba4-4d88-87eb-81db95afb6eb"
+      ],
+      "ParentStepIdentifier": "73973151-9ba4-4d88-87eb-81db95afb6eb",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ActiveDirectory_Release Locked Account_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ActiveDirectory_Release Locked Account",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "1d6b3356-5a69-4a08-831e-99229fdf38cf",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptName",
+          "Value": "ActiveDirectory_Release Locked Account",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        },
+        {
+          "ParentStepIdentifier": "1d6b3356-5a69-4a08-831e-99229fdf38cf",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        },
+        {
+          "ParentStepIdentifier": "1d6b3356-5a69-4a08-831e-99229fdf38cf",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519140492992,
+      "ModificationTimeUnixTimeInMs": 1519140492992
+    },
+    {
+      "Identifier": "556bd7a9-3639-419a-8968-b30452dc0832",
+      "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+      "ParentStepIdentifiers": [
+        "52d20d21-85bb-41ca-be84-88c0276c926a"
+      ],
+      "ParentStepIdentifier": "52d20d21-85bb-41ca-be84-88c0276c926a",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ActiveDirectory_Is User In Group_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ActiveDirectory_Is User In Group",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "556bd7a9-3639-419a-8968-b30452dc0832",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptName",
+          "Value": "ActiveDirectory_Is User In Group",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        },
+        {
+          "ParentStepIdentifier": "556bd7a9-3639-419a-8968-b30452dc0832",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"GroupName\":\"Siemplify_Admins\"}",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        },
+        {
+          "ParentStepIdentifier": "556bd7a9-3639-419a-8968-b30452dc0832",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519140492992,
+      "ModificationTimeUnixTimeInMs": 1519140492992
+    },
+    {
+      "Identifier": "66f6b152-2d8b-496f-85a1-fed040d8fa36",
+      "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+      "ParentStepIdentifiers": [
+        "99cd0aab-8248-4d62-8e0e-0841fc9d7ffd"
+      ],
+      "ParentStepIdentifier": "99cd0aab-8248-4d62-8e0e-0841fc9d7ffd",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ActiveDirectory_Force password update_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ActiveDirectory_Force password update",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "66f6b152-2d8b-496f-85a1-fed040d8fa36",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptName",
+          "Value": "ActiveDirectory_Force password update",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        },
+        {
+          "ParentStepIdentifier": "66f6b152-2d8b-496f-85a1-fed040d8fa36",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        },
+        {
+          "ParentStepIdentifier": "66f6b152-2d8b-496f-85a1-fed040d8fa36",
+          "ParentWorkflowIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519140492992,
+          "ModificationTimeUnixTimeInMs": 1519140492992
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519140492992,
+      "ModificationTimeUnixTimeInMs": 1519140492992
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "7f21d35c-5744-484a-aeb1-dec9b2be400a",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "050c3a5d-bd07-487d-841b-5cd72f18e2ba",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "AD",
+      "AllEnvironments": "",
+      "Id": 40,
+      "CreationTimeUnixTimeInMs": 1519140492994,
+      "ModificationTimeUnixTimeInMs": 1519140492994
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 40,
+  "CreationTimeUnixTimeInMs": 1519140492979,
+  "ModificationTimeUnixTimeInMs": 1519140492979
+}

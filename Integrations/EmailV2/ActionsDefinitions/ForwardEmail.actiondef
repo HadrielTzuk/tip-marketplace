@@ -1,0 +1,123 @@
+{
+    "CreationTimeUnixTimeInMs": 1518362436003,
+    "Creator": "admin",
+    "Description": "Forward email including previous messages. Message_id of the email to forward needs to be provided as an action input parameter.",
+    "Id": -1,
+    "IntegrationIdentifier": "EmailV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518362436003,
+    "Name": "Forward Email",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "Inbox",
+            "Description": "Mailbox folder to search email in. Parameter should also accept comma separated list of folders. Note that you can set mail-specific folders, for example \"[Gmail]/All Mail\"  to search in all of the folders of Gmail mailbox. Additionally, folder name should match exactly the IMAP folder. If folder contains spaces, folder must be wrapped in double quotes.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Folder Name",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "message_id value of the email to forward.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Message ID of email to forward",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Arbitrary comma separated list of email addresses for the email recipients.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Recipients",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Arbitrary comma separated list of email addresses to be put in the CC field of email.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "CC",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "BCC email address. Multiple addresses can be separated by commas.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "BCC",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The email subject part.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Subject",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The email body part, if Email HTML Template is set, action should support definition of body of the email with provided HTML template.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Content",
+            "Type": 10,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "If selected, action returns the message id for the sent email in JSON technical result.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Return message id for the forwarded email",
+            "Type": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comma separated list of attachments file paths stored on the server for addition to the email.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Attachments Paths",
+            "Type": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"date\": \"2019-11-18 08:02:57.984000+00:00\", \"message_id\": \"<157406417676.181148.9624253160139989862@C3431448806>\", \"recipients\": \"aaa@aaa.com, bbb@bbb.com\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

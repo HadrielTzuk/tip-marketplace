@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1524559211168, 
+    "Creator": "admin", 
+    "Description": "Remove hash from a blacklist in Cybereason. Supported entities: File Hash. Note: only MD5 hashes are supported.",
+    "Id": -1, 
+    "IntegrationIdentifier": "Cybereason", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1524559211168, 
+    "Name": "Allow File", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 1.0
+}

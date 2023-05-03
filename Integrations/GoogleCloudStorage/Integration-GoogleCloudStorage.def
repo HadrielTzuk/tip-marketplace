@@ -1,0 +1,33 @@
+{
+    "Description": "Google Cloud Storage is a flexible cloud storage product with several options for the way you can manage and store your data. It offers globally unified, scalable, and highly durable object storage. This means customers of all sizes and industries can use it to store and protect any amount of data for a range of use cases.",
+    "DisplayName": "Google Cloud Storage",
+    "Identifier": "GoogleCloudStorage",
+    "PythonVersion": 2,
+    "Categories": ["Cloud", "Cloud Storage", "Google", "Operational"],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "GoogleCloudStorage",
+            "IsMandatory": true,
+            "PropertyDescription": "Specify the full content of the service account JSON file to use in the integration.",
+            "PropertyDisplayName": "Service Account",
+            "PropertyName": "Service Account",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "PropertyName": "Verify SSL",
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Google Cloud Storage service is valid.",
+            "PropertyDisplayName": "Verify SSL",
+            "Value": true,
+            "IntegrationIdentifier": "GoogleCloudStorage",
+            "IsMandatory": false,
+            "PropertyType": 0
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/google-cloud-storage",
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M23.7857 11.3506L18.6818 2.57143C18.3961 2.19481 18.0065 2 17.526 2H7.46104C6.98052 2 6.6039 2.19481 6.3052 2.57143L1.21429 11.3506C0.928571 11.8312 0.928571 12.3117 1.21429 12.7922L6.31818 21.5584C6.6039 21.9481 6.99351 22.1299 7.47403 22.1299H17.539C18.0195 22.1299 18.3961 21.9351 18.6948 21.5584L23.7857 12.7792C24.0714 12.2987 24.0714 11.8312 23.7857 11.3506ZM16.6688 14.5844C16.6688 14.7273 16.5909 14.8052 16.4481 14.8052H8.82468C8.68182 14.8052 8.6039 14.7273 8.6039 14.5844V13C8.6039 12.8571 8.68182 12.7792 8.82468 12.7792H16.4481C16.5909 12.7792 16.6688 12.8571 16.6688 13V14.5844ZM16.6688 11.4156C16.6688 11.5584 16.5909 11.6364 16.4481 11.6364H8.82468C8.68182 11.6364 8.6039 11.5584 8.6039 11.4156V9.83117C8.6039 9.68831 8.68182 9.61039 8.82468 9.61039H16.4481C16.5909 9.61039 16.6688 9.68831 16.6688 9.83117V11.4156Z\" \/>\r\n<\/svg>",
+    "Version": 5.0
+}

@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 17.1</h2><h5>Published on 23 February, 2022</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     AzureActiveDirectory\n    </b>\n   </li>\n   <ul>\n    <li>\n     AzureActiveDirectory\n    </li>\n    <ul>\n     <li>\n      Remove User from a Group, List Members in the Group - Added an ability to provide group by ID for better precision.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Actions</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     MicrosoftDefenderATP\n    </b>\n   </li>\n   <ul>\n    <li>\n     Submit Entity Indicators\n    </li>\n    <ul>\n     <li>\n      NEW! New Action Added - Submit Entity Indicators.\n     </li>\n    </ul>\n    <li>\n     List Indicators\n    </li>\n    <ul>\n     <li>\n      NEW! New Action Added - List Indicators.\n     </li>\n    </ul>\n    <li>\n     Delete Entity Indicators\n    </li>\n    <ul>\n     <li>\n      NEW! New Action Added - Delete Entity Indicators.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     HarmonyMobile\n    </b>\n   </li>\n   <ul>\n    <li>\n     Alerts Connector\n    </li>\n    <ul>\n     <li>\n      Alerts Connector - Updated the logic to support latest API changes.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "17.1",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "23/02/22",
+    "Title": "Release Notes"
+}

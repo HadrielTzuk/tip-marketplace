@@ -1,0 +1,52 @@
+{
+    "Description": "Darktrace empowers defenders to reduce risk and minimize cyber disruption. Its Self-Learning AI technology develops a deep and evolving understanding on your bespoke organization, allowing it to prevent, detect, and respond to unpredictable cyber-attacks across the entire digital environment – from cloud and email to endpoints and OT networks.",
+    "DisplayName": "Darktrace",
+    "Identifier": "Darktrace",
+    "MarketingDisplayName": "Darktrace",
+    "Categories": [
+        "Cloud Security",
+        "Network Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Darktrace",
+            "PropertyName": "API Root",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://{{api root}}"
+        },
+        {
+            "IntegrationIdentifier": "Darktrace",
+            "PropertyName": "API Token",
+            "PropertyDisplayName": "API Token",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Darktrace",
+            "PropertyDisplayName": "API Private Token",
+            "PropertyName": "API Private Token",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Darktrace",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": "true"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M13.29,7.78H7v-2.78h6.34c2.12,.02,3.7,.62,4.75,1.8,.85,.97,1.45,2.4,1.7,4.26-.53-.89-1.78-2.72-5.48-3.19-.34-.04-.68-.07-1.03-.09Z\"/><path d=\"M18.85,11.69c-.15-.26-.32-.5-.51-.74l-.05-.05c-.56-.6-1.26-1.06-2.03-1.34,.06,.15,.11,.31,.15,.47,.15,.74,.24,1.5,.26,2.26,.03,.68,.02,1.36-.02,2.04-.04,.53-.12,1.06-.24,1.58-.11,.51-.33,.98-.64,1.4-.27,.37-.64,.64-1.06,.75-.47,.09-.94,.13-1.42,.12h-3.38V8.99h-2.92v10.22c0,.96,.64,1.75,1.42,1.75h5.01l.97-.02c1.42,0,2.79-.63,3.79-1.75,1.01-1.12,1.57-2.63,1.57-4.2,0-1.16-.31-2.3-.91-3.3Z\"/></svg>",
+    "Version": 5.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/darktrace"
+}

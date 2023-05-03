@@ -1,0 +1,43 @@
+{
+    "Description": "Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure and resizable computing capacity in the AWS cloud. Using Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications faster. When using this service, it is highly recommended to monitor it for intrusion attempts or other unauthorized actions performed against your cloud infrastructure.",
+    "DisplayName": "AWS Elastic Compute Cloud (EC2)",
+    "Identifier": "AWSEC2",
+    "PythonVersion": 2,
+    "Categories": [
+        "Cloud",
+        "IT & Infrastructure"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAYAAAClr220AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAjQSURBVHgB7Z1vTJVVHMd/qPwp46Lm/DMwzE1LrIZtKbSZYktpbvkHtFovFMXxpsafZu9KzDdtTsW51iwU3FwmaEhmAs6QWYKvFJWryxfIuNZmLQViKVJ0vudyHg/PveAl773nufD7bNf7POd5nvOc6/nc3++c8zCI6hMQw4SZMcQwBmDxGCOweIwRWDzGCCweYwQWjzECi8cYgcVjjMDiMUZg8RgjsHiMEVg8xggsHmMEFo8xAovHGIHFY4zA4jFGcKx4Pd1ddPHIXjpfkE49Jz6lvo7fiBk5RDnxR98hXMuJcinfs0/HUNqs8bJ87IsrKPq1zRSVMJ2YyMZx4v11+xZV5GVY+7p4ChYw8jGeahHVfj1ziPpu/xLwNf9cOUn3Pl/FKTiCGUeGgHAt35fLlJoYd58mXhgvI1jvc28GXAcExIsjYORhTLw/W9108Zu93p24GPmG6NV7rpSGCwsYeYRNPBXhpndeocmpS6mvJ46CDQsYOYRFvJ7uTjlhgHyTno+nB783U09XL4UKFtD5hEw8SHbj1EGaMzWW7j0xTe6HGxbQuYRMvIq8JRTd202zXkqgnvv/kkmUgHG5hyhqymxizBPSiBcd66wHI31/d1HUEMc9Hg8dq6wkT7uHOjs7KGnGDMrZtImSkpIGnFdXWyeOd5LL5aJly5dRU2MTna6rpfh4F2WvW2udj/KmxkZRTxKlpaf71KPOwbWdHZ3yngvT0mlZ5nKfc49WHh203aod/uoFc1NSKHvtWp/rVJ0p4njKvBT5uS40NVJiYpLfNgSTkC0gH1g9h8YL8d4SEa9bRLzvLnfI8tfFGG9K/Di6LcZ4Z65706++SKyfaz/2uMS+9wWNSX7Z77GS3btpz67dfo8VFBVSfmHhwzbNeEa+o2OyhGj6dSg7XFlBZfv304HS/T7lemduKfpQdH6lz/1wzr7Sr4QM8+Q+vhCL0l+lwcD55xrPy218IfJyc6V4gdaJLwXEe1R7gwn/kACR7Hxdnrmic/T/8BJxDB1qB2V2WdGh765dN6ATVXmZVgbRlXSIWHpExLnbt22jQHElJFjb24u3WdKhXrxUnXm5m/1+Dk97u9/2HquopFDB4glO19Za2zt27aQfak7JCKLLV1dT63MdOhGRYseuXUKcNKscnfaGSH0ox3GF2+22tvVOPVlbQ4crjsgIo4A8ShIV0dQL5+pkZWdb91Uy4xrU29xyVQ4X1PEym2CqXH0Ovb0tWnuDjbEFZCeRX1hEWSJKuVtaBoyFFooo5Kkc+lu/Y6e3szBOWpGZaZV/UlwsO9/lipeRxuc60cnocDHytATHO17ecrLGkeqYAhFVkSXauzHXK5YetRZqERTjP6R+ADHziwp92rOvtNSnvdfE/0eoYPEEUhzxQtTCgPuau0WmH/s4abBrgSvBZZVBFtXpLleC3+tUhHS3uKUw10R08XjaLekGAylanYN7FGgSod0KXVRMkhS41p5uA2lvsGHx+sGY6oCfNPR/UFFqKCDAlqKigOTWr9HHlIhcgw3+h5oU+BMv3PAYj7xRREknZ3MVFXJslOVnCSJYIF0q6ZAW1T2HEsaeYrOHaN+jIqdpOOIJ9CiCsY5Kn7dE6gsFEE6JgWjzpVjmeFTUGSrFKhKTkFK9MndpUQ1rhDq4l7/ZbTgZ9RHPHhmw2Gsda394LJgdpd/TvuShH8M4U5XrXw7sr1ieKSczWAtU12CCo3Br4z2P9gXCOp6J1Gpn1Itn7wTM/tQ6mi4BykMRJXCPA/33xJhP51j/k4WjftbT0BZMTDBLxUIwrsdTE/V5EFVVvVjbU+Rs2khOgMWTi7cP1+CwWIyOxJhPlxIdHSzxsLyh1w0xcE/IMnDdz3c5A2kWi8142b802NefsKh6rYg4L2XIcWE44ckFedfU7IN6LABjsRYdqRZjA318pD9J8JfWUIaFar0+lH28daucZEAQNeEASP9oByYfagEZL+yfrKmhHLGOp+6DNT3VZvvnUfUF2l69PNjws1oNpC6AjrZHu1CNiwa75+OiUjGAyMOpW5/4hOpz86xWQ09zOqEcjA92z8fFPoQYDqH8qRQFp1rGCCweYwROtf3cvHmTDh48SPn5+TRhwgTas2cPLV68mFJTU2mbWFpBOc65dOkSrVq1Sh7H/pIlS2j9+vVWPcePH6fm5mZrH9fdvXtXnq/2Z86cKa+1l40mOOL1c/bsWSouLrZkgGANDQ1WOfYhJsoKxawR+xCuoKBAliuqq6vlseTkZPmCdBkZGYQ5HPbnz58vj6sykJOTQ6MNjnj9QLgNGzZQSUkJbRXLGoh0kA7iYBtRTMnW1tZG5eXl8v3OnTuD1qkiG+pAvaoMEbW+vl5uQ2LsjzZYPPJGNwhSVVUlhYBwSLOQBdJANpThvN3imSkERfSCfIiGuA5yKnANpFToYiFNKxApkZpxz9EGp1ryRjvIgZQ3ceJEOaaDSBAIQiKdQjycg3Kch2ilohbSqw7GfYiaEBTbqENFPpVqIR2kVXWMNjjikTfilZWVWZJg/AVJsK+ilb69cuVKa1yGMn1ykSBW+xEJ8QIQCxJCOICJBOQt7H+0hXuB1tZWGk3wkwvGCJxqGSOETLynpiSSk4iKjaeouHhinEHIxnjr9tVTW0MVxTx5nx7ETSW6nEcmgHDjFrxDYxe8LbcZZxDSyUXy4tXyPa67U0ZA/JrZcMHCOZuwzGpjxrtkBLzx47cU5/mZYua+QtH4/XjXP6Jgw8JFBmFdTpm9dI34d43cHnP1AgUTFi6yMDarnfbCQlr0wWcDJiFRU2dLeYYDJItetJli36+icYtyWboIwRF/buCPpmqaNH2GXGML5M8NAI5wkY0jnlxMTlsZ8Lks3MjAcQvISL32FAw4pY4sHPknpRSYBXf89DWlZmRyhBthOFo8ZuTCz2oZI7B4jBFYPMYILB5jBBaPMQKLxxiBxWOMwOIxRmDxGCOweIwRWDzGCCweYwQWjzECi8cYgcVjjMDiMUZg8RgjsHiMEf4D5UBfR1LWCGoAAAAASUVORK5CYII=",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "AWSEC2",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Access Key ID",
+            "PropertyName": "AWS Access Key ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AWSEC2",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Secret Key",
+            "PropertyName": "AWS Secret Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AWSEC2",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Default Region",
+            "PropertyName": "AWS Default Region",
+            "PropertyType": "2",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path d=\"M12.517 1l-1.89.953v21.11l1.89.937 9.533-4.75V5.767L12.517 1zM7.494 21.497l1.465.733V2.788l-1.465.732v17.977zM5.009 20.255l1.175.579V4.166l-1.175.595v15.493zM3 19.25l.953.477V5.29L3 5.767V19.25z\"\/>\r\n<\/svg>",
+    "Version": 3.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/aws-elastic-compute-cloud-ec2",
+    "MarketingDisplayName": "Amazon Elastic Compute Cloud (EC2)"
+}

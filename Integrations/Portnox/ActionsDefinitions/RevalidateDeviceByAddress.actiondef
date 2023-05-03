@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1531990242826, 
+    "Creator": "admin", 
+    "Description": "Revalidate a device by IP address or by MAC address", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Portnox", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1531990242826, 
+    "Name": "Revalidate Device By Address", 
+    "Parameters": [], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom PortnoxManager import PortnoxManager\n\n\nSCRIPT_NAME = \"Portnox - RevalidateDeviceByIpOrMac\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    conf = siemplify.get_configuration(\"Portnox\")\n    portnox_manager = PortnoxManager(conf['Api Root'], conf['Username'],\n                                     conf['Password'], conf['Verify SSL'])\n\n    entities = []\n    device_ids = []\n\n    for entity in siemplify.target_entities:\n        try:\n            device = None\n\n            if entity.entity_type == EntityTypes.ADDRESS:\n                device = portnox_manager.search_device('ip', entity.identifier)\n\n            elif entity.entity_type == EntityTypes.MACADDRESS:\n                device = portnox_manager.search_device('macAddress', entity.identifier)\n\n            if device:\n                device_id = device[\"id\"]\n                portnox_manager.revalidate_device(device_id)\n                device_ids.append((entity, device_id))\n\n        except Exception as e:\n            # An error occurred - skip entity and continue\n            siemplify.LOGGER.error(\n                \"Unable to revalidate device for entity: {}.\\n{}.\".format(\n                    entity.identifier, str(e)\n                ))\n\n    for entity, device_id in device_ids:\n        try:\n            portnox_manager.wait_for_device_revalidation(device_id)\n            entities.append(entity)\n\n        except Exception as e:\n            # An error occurred - skip entity and continue\n            siemplify.LOGGER.error(\n                \"Unable to verify revalidation device for entity: {}.\\n{}.\".format(\n                    entity.identifier, str(e)\n                ))\n            siemplify.LOGGER.exception(e)\n\n    if entities:\n        entities_names = [entity.identifier for entity in entities]\n\n        output_message = 'Devices were revalidated for the following entities:\\n' + '\\n'.join(\n            entities_names)\n\n    else:\n        output_message = 'No devices were revalidated.'\n\n    siemplify.end(output_message, 'true')\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"MacAddress\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

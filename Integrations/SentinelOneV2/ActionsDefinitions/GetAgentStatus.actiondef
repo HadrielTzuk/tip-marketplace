@@ -1,0 +1,21 @@
+{
+    "CreationTimeUnixTimeInMs": 1542187114838, 
+    "Creator": "Admin", 
+    "Description": "Retrieve information about the status of the agents on the endpoints based on the IP or Hostname entity.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"192.168.xx.xx\", \"EntityResult\": {\"status\": \"Not Active\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1, 
+    "IntegrationIdentifier": "SentinelOneV2", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1542187114838, 
+    "Name": "Get Agent Status", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 2.0
+}

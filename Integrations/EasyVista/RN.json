@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "New EasyVista integration added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "EasyVista",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1603184264,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4621"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "EasyVista",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Updated the integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "EasyVista",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1637151679,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10472"
+    }
+]

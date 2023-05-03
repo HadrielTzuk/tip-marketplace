@@ -1,0 +1,36 @@
+{
+    "CreationTimeUnixTimeInMs": 1536139506400, 
+    "Creator": "admin", 
+    "Description": "Query XForce for URL information", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"associated\": [{\"url\": \"domain-example.com\", \"cats\": {}, \"score\": null, \"categoryDescriptions\": {}}], \"result\": {\"url\": \"domain-example.com/f1q7qx.php\", \"cats\": {\"Botnet Command and Control Server\": true}, \"score\": 10, \"categoryDescriptions\": {\"Botnet Command and Control Server\": \"This category contains Web sites or domains that host a botnet command and control server.\"}}, \"tags\": []}, \"Entity\": \"HTTP://DOMAIN_EXAMPLE.COM/F1Q7QX.PHP\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "XForce", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1536139506400, 
+    "Name": "Get Url Info", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1536139506400, 
+            "CustomActionId": 29, 
+            "DefaultValue": "1", 
+            "Description": "Threshold must be an integer(e.g: 3).", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1536139506400, 
+            "Name": "Threshold", 
+            "Type": 0, 
+            "Value": "1", 
+            "Values": []
+        }
+    ], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import add_prefix_to_dict_keys, construct_csv, is_dict_in_list\nfrom XForceManager import XForceManager\nimport base64\nimport json\n\nURL = EntityTypes.URL\nSCRIPT_NAME = \"IBM XForce - Get Url Info\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n\n    conf = siemplify.get_configuration('XForce')\n    address = conf['Address']\n    api_key = conf['Api Key']\n    api_password = conf['Api Password']\n    use_ssl = conf['Use SSL'].lower() == 'true'\n\n    xf_manager = XForceManager(api_key, api_password, address, use_ssl)\n    threshold = siemplify.parameters.get('Threshold', 1)\n\n    risk_score = 0\n    enriched_entities = []\n    csv_results = []\n    entity_with_score = []\n    categories_list = []\n    output_message = ''\n\n    for entity in siemplify.target_entities:\n        if entity.entity_type == URL:\n            try:\n                report = xf_manager.get_url_info(entity.identifier)\n                if report:\n                    risk_score = report.get('result').get('score')\n                    categories_list = report.get('result').get('categoryDescriptions').keys()\n                    categories = '| '.join(str(category) for category in categories_list)\n\n                    # Attach report\n                    siemplify.result.add_entity_attachment(entity.identifier, \"IBM_XForce_Report.json\", base64.b64encode(json.dumps(report)))\n\n                    # Build csv table (URL - Score - Categories(comma separated))\n                    csv_results.append({\"URL\": entity.identifier, \"Score\": str(risk_score), \"Categories\": categories})\n\n                    # Enrich - Score and Categories (comma separated)\n                    report = is_dict_in_list(csv_results)\n                    flat_report = add_prefix_to_dict_keys(report, \"IBM XForce\")\n                    entity.additional_properties.update(flat_report)\n                    entity.is_enriched = True\n\n                    # Add Insight and mark as suspicious if risk score exceed threshold\n                    if int(threshold) < risk_score:\n                        entity.is_suspicious = True\n                        insight_msg = 'IBM XForce - entity was marked as suspicious'\n                        siemplify.add_entity_insight(entity, insight_msg, triggered_by='XForce')\n\n                    entity_with_score.append({entity.identifier: risk_score})\n                    enriched_entities.append(entity)\n\n            except Exception as e:\n                # An error occurred - skip entity and continue\n                siemplify.LOGGER.error(\"An error occurred on entity: {}.\\n{}.\".format(entity.identifier, str(e)))\n                siemplify.LOGGER.exception(e)\n\n    if csv_results:\n        # Add csv table\n        siemplify.result.add_data_table(\"Report\", construct_csv(csv_results))\n\n    if entity_with_score:\n        for url_with_score in entity_with_score:\n            output_message = '{0} {1} returned risk score: {2} \\n'.format(output_message, url_with_score.keys()[0], url_with_score.values()[0])\n        siemplify.update_entities(enriched_entities)\n\n    else:\n        output_message = 'No entities were enriched.'\n\n    siemplify.end(output_message, risk_score)\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "is_risk", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Version": 0.0
+}

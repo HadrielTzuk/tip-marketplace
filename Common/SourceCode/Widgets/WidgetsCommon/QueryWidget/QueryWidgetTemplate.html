@@ -1,0 +1,126 @@
+{% import 'CommonStyles.html' as common_styles %}
+{% import 'CommonScripts.html' as common_scripts %}
+{% import 'TopTitleAndLogo.html' as entity_name_and_logo %}
+{% import 'Logo.html' as base_logo %}
+{% import 'LeftSideScroller.html' as side_scroller %}
+{% import 'MainCounter.html' as main_counter %}
+{% import 'MainTable.html' as main_table -%}
+
+
+{% extends 'BaseTemplate.html' -%}
+
+
+{% block base_template_title %}Query Widget{% endblock -%}
+
+
+{% block base_template_head_style %}
+      {{ base_logo.get_logo_style() | indent(6) }}
+
+      {{ main_counter.get_main_counter_style() | indent(6) }}
+      
+      {{ main_table.get_main_table_style(auto_map_columns) | indent(6) }}
+      {{ base_template_head_style | indent(6) }}
+  {% set nsp = namespace(add_collapse_logic=false) %}
+  {% for item in table_data %}
+    {% if item.value.collapse_long_text | default(false, true) %}
+      {% set nsp.add_collapse_logic = true %}
+    {% endif %}
+  {% endfor %}
+  {% if nsp.add_collapse_logic or auto_map_columns | default(false, true) %}
+      {{ common_styles.get_p_longtext_style() | indent(6) }}
+  {%- endif -%}
+
+  {% if json_result_has_entities | default(false, true) %}
+  
+      {{ common_styles.get_card_container_style() | indent(6) }}
+      {{ common_styles.get_right_side_style() | indent(6) }}
+      {{ side_scroller.get_left_scroller_styles() | indent(6) }}
+
+      {{ entity_name_and_logo.get_top_entity_title_style() | indent(6) }}
+  {% else %}
+  
+      {{ common_styles.get_widget_container_style() | indent(6) }}
+  {% endif %}
+{% endblock base_template_head_style -%}
+
+
+{% block base_template_body %}
+{% if json_result_has_entities | default(false, true) %}
+<div class="card-container">
+  {{ side_scroller.get_left_side_scroller_html() }}
+  <div class="right-side" id="right-menu">
+    {{ entity_name_and_logo.get_top_entity_title_and_logo_html(logo_svg, import_svg_from_integration, imported_logo_content) | indent }}
+    {{ main_counter.get_main_counter_html(main_text) | indent }}
+    {{ main_table.get_main_table_html(table_data, auto_map_columns) | indent }}
+  </div>
+</div>
+{% else %}
+<div class="widget-container">
+  {{ base_logo.get_logo_div(logo_svg, import_svg_from_integration, imported_logo_content) }}
+  {{ main_counter.get_main_counter_html(main_text) }}
+  {{ main_table.get_main_table_html(table_data, auto_map_columns) }}
+</div>
+{% endif %}
+{% endblock base_template_body -%}
+
+
+{% block base_template_body_script %}
+<script>
+    $(document).ready(() => {
+        {% set auto_map_columns = auto_map_columns | default(false) %}
+        {% set nsp = namespace(add_collapse_logic=auto_map_columns, check_field=false) %}
+        {% for item in table_data %}
+          {% if item.value.collapse_long_text | default(false, true) %}
+            {% set nsp.add_collapse_logic = true %}
+          {% endif %}
+          {% if item.value.check_field | default(false, true) %}
+            {% set nsp.check_field = true %}
+          {% endif %}
+        {% endfor %}
+        {{ base_logo.get_logo_change_color_script() | indent(8) }}
+        
+        {{ common_scripts.fetch_json_data(json_result_list) | indent(8) }}
+
+        {% set display_value = entity_key | default('Entity', true) %}
+        {% set clean_display_value = common_scripts.getElementOrPlaceholder(display_value) -%}
+
+        {% if json_result_has_entities | default(false, true) %}
+        {% call  side_scroller.add_left_side_scroller_logic(json_result_has_entities, json_result_list, clean_display_value) %}
+        {{ main_counter.get_main_counter_script(count, json_result_has_entities, count_fn, main_text_singular, main_text_plural, entity_result_list_path) | indent(8) }}
+        {{ entity_name_and_logo.set_title(clean_display_value) }}
+
+        {{ main_table.get_main_table_script(table_data, get_data_to_iterrate, json_result_has_entities, entity_result_list_path, key_not_found_display_value, auto_map_columns) | indent(8) }}
+        {% if nsp.add_collapse_logic %}
+
+        addLongTextClickLogic();
+        {%- endif -%}
+        {% endcall -%}
+        {% else %}
+        {{ main_counter.get_main_counter_script(count, json_result_has_entities, count_fn, main_text_singular, main_text_plural, entity_result_list_path) | indent(8) }}
+        {{ main_table.get_main_table_script(table_data, get_data_to_iterrate, json_result_has_entities, entity_result_list_path, key_not_found_display_value, auto_map_columns) | indent(8) }}
+        {% if nsp.add_collapse_logic %}
+
+        addLongTextClickLogic();
+        {% endif -%}
+        {% endif -%}
+        {% if nsp.add_collapse_logic %}
+
+        {{ common_scripts.get_function_getCollapsableEscapedHTML() | indent(8) }}
+
+        {{ common_scripts.get_function_addLongTextClickLogic() | indent(8) }}
+
+        {{ common_scripts.get_function_escapeHTML() | indent(8) }}
+        {% endif -%}
+
+        {% if nsp.check_field %}
+
+        {{ common_scripts.get_function_checkField() | indent(8) }}
+
+        {% endif %}
+        {% if base_template_body_script is defined %}
+        
+        {{ base_template_body_script | indent }}
+        {% endif %}
+    });
+</script>
+{% endblock %}

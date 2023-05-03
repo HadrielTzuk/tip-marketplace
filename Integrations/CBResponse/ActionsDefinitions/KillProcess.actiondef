@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1523183684942, 
+    "Creator": "admin", 
+    "Description": "Kill a process on a particular host", 
+    "Id": -1, 
+    "IntegrationIdentifier": "CBResponse", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1523183684942, 
+    "Name": "Kill Process", 
+    "Parameters": [], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom CarbonBlackResponseManager import CBResponseManager, CBResponseManagerException\nimport itertools\n\nSCRIPT_NAME = \"CBResponse - KillProcess\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n\n    configurations = siemplify.get_configuration('CBResponse')\n    server_addr = configurations['Api Root']\n    api_key = configurations['Api Key']\n\n    siemplify.LOGGER.info(\"Connecting to CB Response.\")\n    cb_response = CBResponseManager(server_addr, api_key)\n\n    processes = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.PROCESS]\n    hostnames = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.HOSTNAME]\n\n    combinations = list(itertools.product(hostnames, processes))\n    siemplify.LOGGER.info(\"Generated {} combinations.\".format(len(combinations)))\n\n    killed_processes = []\n\n    for combination in combinations:\n        hostname, process = combination\n        try:\n            siemplify.LOGGER.info(\"Processing process {}, hostname {}.\".format(process.identifier, hostname.identifier))\n\n            sensor = cb_response.get_sensor_by_hostname(hostname.identifier)\n\n            if sensor:\n                sensor_id = sensor['id']\n                siemplify.LOGGER.info(\"Killing process.\")\n                cb_response.kill_process(sensor_id, process.identifier)\n\n                killed_processes.append(combination)\n\n        except Exception as e:\n            siemplify.LOGGER.error(\"Unable to kill process {} on {}.\".format(hostname.identifier, process.identifier))\n            siemplify.LOGGER.error(e)\n\n    if killed_processes:\n        entities_names = [\"{}: {}\".format(hostname.identifier, process.identifier) for hostname, process in killed_processes]\n\n        output_message = 'Carbon Black Response -the following processes have been killed:\\n' + '\\n'.join(\n            entities_names)\n\n    else:\n        output_message = 'No processes were killed.'\n\n    siemplify.end(output_message, 'true')\n\n\nif __name__ == '__main__':\n    main()", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"PROCESS\", \"HOSTNAME\"]}", 
+    "Version": 1.0
+}

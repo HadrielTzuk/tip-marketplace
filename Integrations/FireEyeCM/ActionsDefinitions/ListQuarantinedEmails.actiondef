@@ -1,0 +1,73 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List quarantined emails. Requires FireEye EX connected to FireEye CM.",
+    "Id": -1,
+    "IntegrationIdentifier": "FireEyeCM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Quarantined Emails",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"appliance_id\":\"XXXXXXXXXX\",\"completed_at\":\"XXXX-XX-XXTXX:XX:XX\",\"email_uuid\":\"XXXXXXX-XXXX-XXXX-XXXX-XXXXXXX\",\"quarantine_path\":\"/data/email-analysis\",\"subject\":\"XXXXXX\",\"message_id\":\"XXXXXXXXXXXXXX\",\"from\":\"XXXX.XXXX@XXXX-XXX.XXXXX\",\"queue_id\":\"XXXXXXXXX\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "If specified, only emails that were created after start time will be returned. If Start Time and End Time are not specified, action returns quarantined emails from the last 24 hours. Format: YYYY-MM-DD'T'HH:MM:SS.SSS-HHMM",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "End Time",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "If specified, only emails that were created before end time will be returned.  If Start Time and End Time are not specified, action returns quarantined emails from the last 24 hours. Format: YYYY-MM-DD'T'HH:MM:SS.SSS-HHMM",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Sender Filter",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "If specified, returns all of the quarantined emails only from this sender.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Subject Filter",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "If specified, returns all of the quarantined emails only with this subject.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Max Emails To Return",
+            "Type": 0,
+            "Value": "50",
+            "DefaultValue": "50",
+            "IsMandatory": false,
+            "Description": "Specify how many emails to return. Limit is 10000. This is FireEye CM limitation.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "NEW! AWS EC2 integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "AWSEC2",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1614677797,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5392"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "AWSEC2",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    },
+    {
+        "ChangeDescription": "New Action Added - Take Snapshot.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Take Snapshot",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1673428607,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "SET-42"
+    }
+]

@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1510667586366,
+    "Creator": "admin",
+    "Description": "List available tasks in McAfee ePO.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"productId\":\"XXXX_XX_1500\",\"typeName\":\"Endpoint Security Threat Prevention: Policy Based On-DemandScan\",\"objectName\":\"On-Demand Scan - Full Scan\",\"typeId\":5448,\"objectId\":234234,\"productName\":\"Endpoint Security Threat Prevention \"},{\"productId\":\"XXXX_XX_1500\",\"typeName\":\"Endpoint Security Threat Prevention: Policy Based On-DemandScan\",\"objectName\":\"On-Demand Scan - Quick Scan\",\"typeId\":5448,\"objectId\":33343,\"productName\":\"Endpoint Security Threat Prevention \"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "McAfeeEPO",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1510667586367,
+    "Name": "List Tasks",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1513005957115,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what value should be used in the search.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1513005957115,
+            "Name": "Filter Value",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1513005957115,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many tasks to return. Default: 50.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1513005957115,
+            "Name": "Max Tasks To Return",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\":[]}",
+    "Type": 0,
+    "Version": 1.0
+}

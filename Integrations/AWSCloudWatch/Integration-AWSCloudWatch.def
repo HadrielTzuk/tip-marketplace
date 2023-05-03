@@ -1,0 +1,44 @@
+{
+    "Description": "Amazon CloudWatch is a monitoring and observability service built for DevOps engineers, developers, site reliability engineers (SREs), and IT managers. CloudWatch provides you with data and actionable insights to monitor your applications, respond to system-wide performance changes, optimize resource utilization, and get a unified view of operational health. CloudWatch collects monitoring and operational data in the form of logs, metrics, and events, providing you with a unified view of AWS resources, applications, and services that run on AWS and on-premises servers. You can use CloudWatch to detect anomalous behavior in your environments, set alarms, visualize logs and metrics side by side, take automated actions, troubleshoot issues, and discover insights to keep your applications running smoothly.",
+    "DisplayName": "AWS CloudWatch",
+    "Identifier": "AWSCloudWatch",
+    "PythonVersion": 2,
+    "Categories": [
+        "Cloud Security",
+        "Cloud",
+        "Security"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAYAAAClr220AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAqBSURBVHgB7ZxbbBTXGcc/O9hQYa8vMQ1gO8aBlNQmjU3Txm4SAQ8GelEBBVPlCV+IWlWqbJNSKQ8IW3loRVRsqw9RVMCgokSyicCV0hoSCUiVQgoqOBQ3DRQDNgkRENtrk0Agl/mf3W85M3t3dvfsmu8njWZ25sw5xz6//c5ldjftKwsShASTToJgABFPMIKIJxhBxBOMIOIJRhDxBCOIeIIRRDzBCCKeYAQRTzCCiCcYQcQTjCDiCUYQ8QQjiHiCEUQ8wQginmAEEU8wgognGGEaJQE3Ph2nV3tfpksT79KjCx+nmsX1lJc1m4SpS5rJL/tAuN4391jbX9RxySIXzczxvBcemlNBjz+80tp+TMLUw5h4EK3hdyvUntHFYxD55lsSPlVeS3PvX0DC1MBYVzthCadLF4yRiSt04myf2iDeU+VrLRErpStOcZJijBcpH14/R91v/0EdczeMLllIPVJKPB2Ogoh8NYvrJAqmGCm/nIKuGFHwxAd/JyF1SFjEw3ju9PvH1Sz2gYVplJXxbRLuXRIi3vlL/6MXttb7JhNfFOTT7VsfkHDvkhDxbnzqjmgGaxq3200HDxyk4aEh9bqouIiqqqupqKjIlm7gzIBKC6qqq2h4eJgO9h2w0her1y6Xy5YfXi9fsTxomXu7e3z5ocy1tbV+6VBGKJx15LLdY2NUVl6u6hUsT9QP27Gjx6y/7Yz6O8rKy/zyjCUpO7mINXt7eujF1jafADovbfujTYafrlxpu7Zp4/O+12is13q6rUY/oPJzntcbc+eOHdS5rd2vTJx7ZfuflTDM09U/olAMDl3yHXe0t6s8dAKVz3niXP2GxrD1jSXyrJY873zI44s61j+boxbQrzlxNrAnr422RuTzHVpap+h6mSqP539LkyGQdJzns7XrAv4dONe1fYdfeue5WCLikV2e5pYW+sfRf6pNlw9daTCarHv0yIAuC6+d5989etR3/LolHoPohvLeONDnKxNdnt69vtbd7dsQZfW6NTQ2qj3Sv97dY7sHkbBeux5ISpbRWV9E7XghXa3FM7VrqdD6h7vH3arLAWjYmhUrbIIE4qVt29T4ae26Wlt3+Mr27WqchO2XG57zu6++cQM9UVWtZFhulQPQ6BjjYQzpRB+jbdrYY4uUTRtb1PExS2yWFWNTvgfDhK4dnuiFSLu5dYtf/ptbW9U4FPc8u+4X6lywKB8LRDziRqpWxzzA/u/AgC1CBQOiqL1jLAThPPvygPehkbGhcfUyh4dCTyIgzl7tzYBx2N0oeVfYsrIyv7oAlId0+jnAkmJioaeNFyKel2AD/XjyYlubbUYbDmdX2ezoGi8PD/mOs7Wu2Emg8lwh0scDGeORfaCPBsBY542+PqurXU7xAtLttAbvKBPybN6yRZXpjEQ6kI67Ur2LZbJdOb7j8QS+gSaDRDyyTy4wZuM1N5fWkLEE8uzUZoz6skWwyBOoi3Wi3zsWQrxER7dA3PPiQQJ99qhHHH2MF24BN6oyHeM4vbvUx2k4xrVAs1Es2fAEiBe59fEkxouB8sQ9oaJqorjnu1rnu59nf1gP02XD7DZe479jXsFRpl7Gm97lDCzlOMXHhARPJrDGiNk05EKk1pdjOF/+m0CNdwZtGhHPaih9qQJdYGnxgyrC6FKi4dGYsQARR88byxePlS/yKxPraBDRKbxadgnwiIzHp858uYvGPc2OcaEpZHJBnnGdsyHxGgu6WANDg2LRlpdcvinIz7mWBnGesPJHmSwWLyhjyeYZqx68IMwL3P1n/qPWC1EvFrbBWofU5dPX++L5CCxaEvKdC3wc6oWtDb7XZU/i0ylf0tkTo7Z0gb5zESk1lXXq22nfBHRfiGxoHD0K8jk9HXCOl6I974ming8cYN2Nr+E8P7ifLJw3PvAQ7kMCIJK/L5YkrXgzMrI8+8wsyrgvk6apLUPtce7m5xPq+M4Xn3v+kLQ0tb9tvb55e4IWFv6Qfl71GxKSk6Sb1ULIS6c/o+ys+2j69OmUnZ1GhQ9nKqHGP/tEiQaxwlEyy/zMTQhOUi6n3Lp1y9quel8NU3pBPglTC5lcaOzatYtGRz3d/+HDh9UG9u/fTxcuXLClOXXqFHV2dtLu3bv98sF1XMPG9y1btsx3HCkoY82aNWofqi7RMJl6xAMRz0tvby/V19crWUB/fz+1tXk+U8fn0fgt1owRjV1ZWUkYHkMENCaDRsU1yIIN15CexYkGFhxbi3emij0LjXrpaRmUGegNASZTj3gwZcXDmJAnHpGA6FFXV0cdHR3q9apVq3yNDrCHjEuXLlWNnJubS3l5edTV1UXt7XefKiANruE8tubmZpsUkBn3YYNAKLe0tFRdY2E4Dcu2evVqJRpHKsiDcioqKlTeSIvICOHxRkBdUS6Lj/yxcT1wDpOxYHImgriJ987JPjp9/m1658x+Ghp9j55+cikVzk3cGpL7xnV669976K2Te+hf7/9N1eV4kK9AokHRYFusB/U5OTmqYefNm6euIRK2traqNGhIiIcGh2yQBo195MgRX14jIyO2vJuamnx5AeR16NAhdS9L7gTn9+3bp9ICiIx6QRSUjzJQRxxznuvXr1f1Q92wIY+LFy+q64ODg0pEFhfl47XJ6Be3ycXv/7SJXNku6502nx773mJrq1QbPmyZnnGHvrw9zVpOid1Hq6elZ1LWt/JplquY5uQvUEstYHT8Cp29fJyGrg2oCPiD7/j/CBA3AEceRBw0KjYWBfJATjQw9mNjY+o8xEQjQjCAdGhgjoqIRBBa1cUbcZCGrwfDeQ1RCjIhiuIaxMUx6s7nnUBQLrOkpMT2BkAe0Y4PY0lcZ7WQrP+9k2oruH+WEq+wsJiyZliz1BlEzzX8mi5/OEyDF87R+cH/eyqUnhlx/kg7J38+FeQ8SNlWniwbBBv8uF992Xv0xpWw+UA0NBy6WkjD3RLE48iCro2PkQbdIHdrkJHBdeSDSIg80GUjAgE0NiTla5AV3SjywjmOSDgPYXWWLFmiZOPuFRuOWXJ02ywrv2EQNXk8ij3eKMlC3BaQf9bwaNBr6HIfWVimJERUZPAVSMizr7eHrl2/6juPBWcmd+Zsyst6gHKzrP3Muz9ZAdk+GjlHV8eGQsq2tfGI3zk0nh4N8BqNGCoihUvHEnG+ehnO+5yRB+c5Da7pdQsE36/Xw1me8zjQPYkkbuLhSQWeWITjIasrLp03n777iP0j4oiWKhpakXC2tYDs7ELBHe+iMqLbxM1Pwk4m8AM/v/pJJwnmiesjM4j36l9fjkhAPKVQAnojYSjQhV5zD6kIF8nMFcLVVNar39kTkoOEPauNVECA7neu1R1XWGPCggLPb6xEKxsQ4ZKXhP4iaLQCAki44Pu5ET2fZUS45MfIT9FGK6A+uQiFCJc6GP3x7UgFDCeeCJd6GBWPCSdgMPFEuNQlKcRjggnoFE+ES32SSjzGKSCLJ8JNHZJSPIYFLFmULcJNMZJaPGHqIh8EFYwg4glGEPEEI4h4ghFEPMEIIp5gBBFPMIKIJxhBxBOMIOIJRhDxBCOIeIIRRDzBCCKeYAQRTzCCiCcYQcQTjCDiCUb4GjQb4FpBwet/AAAAAElFTkSuQmCC",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "AWSCloudWatch",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Access Key ID",
+            "PropertyName": "AWS Access Key ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AWSCloudWatch",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Secret Key",
+            "PropertyName": "AWS Secret Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AWSCloudWatch",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Default Region",
+            "PropertyName": "AWS Default Region",
+            "PropertyType": "2",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/aws-cloudwatch",
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path d=\"M7.208 5.311l-.067-.015-1.441.57v9.752l1.44.464.068-.012V5.311zM8.17 16.4l1.78.581.068-.016.076-4.458 6.656-.973V4.757L9.95 2l-1.78.932V16.4z\"\/>\r\n  <path d=\"M12.5 17.76l-1.283-.402v-3.85l5.605-.751h1.787v3.086L12.5 17.76z\"\/>\r\n  <path d=\"M12.5 18.899L4 15.768v1.813L12.5 22l8.5-4.42v-1.812l-8.5 3.13z\"\/>\r\n<\/svg>\r\n",
+    "Version": 3.0,
+    "MarketingDisplayName": "AWS CloudWatch"
+}

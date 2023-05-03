@@ -1,0 +1,23 @@
+{
+    "CreationTimeUnixTimeInMs": 1506260452906, 
+    "Creator": "admin", 
+    "Description": "DeepSight scan email", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"date\": \"2015-04-27T01:10Z\", \"title\": \"Laziok Trojan Activity and Infrastructure\\u2014January to April 2015\", \"uri\": \"/v1/mati/reports/300156\", \"id\": 300156}, \"Entity\": \"john_doe@example.com\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "DeepSight", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1506528105482, 
+    "Name": "Scan Email", 
+    "Parameters": [], 
+    "Script": "from DeepSight import DeepSight\nfrom SiemplifyAction import *\nfrom SiemplifyUtils import *\n\nUSER = \"USERUNIQNAME\"\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\tconf = siemplify.get_configuration('DeepSight')\n\tds = DeepSight(api_key = conf['ApiKey'])\n\tadditional_data = {}\n\tentities_to_update = []\n\toutput_message =\"\"\n\t\n\tfor entity in siemplify.target_entities:   \n\t\tif entity.entity_type == USER:\n\t\t\temail_address = get_email_address(entity)\n\t\t\tresult = ds.scan_email_address(entity.identifier)\n\t\t\tif result:\n\t\t\t\tadditional_data[entity.identifier] = result\n\t\t\t\tif not \"message\" in result:\n\t\t\t\t\tadditional_data[entity.identifier] = {}\n\t\t\t\t\tentities_to_update.append(entity)\n\t\t\t\t\tfor key,val in result.iteritems():\n\t\t\t\t\t\tadditional_data[entity.identifier]['DS_' + key] = str(val)\n\t\t\t\t\t\tentity.additional_properties['DS_' + key] = str(val)\n\n\n\tif len(entities_to_update) > 0:\n\t\tfor entity in entities_to_update:\n\t\t\tsiemplify.result.add_entity_enrichment(entity.identifier, additional_data[entity.identifier])\n\t\t\tif len(output_message) == 0:\n\t\t\t\toutput_message = entity.identifier\n\t\t\telse:\n\t\t\t\toutput_message += ', ' + entity.identifier\n\t\toutput_message += ' enriched.'\n\telse:\n\t\toutput_message = 'No entites were enriched' \n\tsiemplify.update_entities(entities_to_update)\n\tresult_value = 'true' if len(entities_to_update) else 'false'\n\tsiemplify.end(output_message, result_value) \n\nif __name__ == '__main__':\n\tmain()", 
+    "ScriptResultName": null, 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

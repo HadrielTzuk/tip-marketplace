@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1524655655201, 
+    "Creator": "System", 
+    "Description": "Remove a hash for the specified global list (GlobalSafe or GlobalQuarantine)", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Cylance", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1524655655201, 
+    "Name": "Delete From Global List", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1524655655201, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The list to delete the hash from. e.g. GlobalSafe", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1524655655201, 
+            "Name": "List Type", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyDataModel import EntityTypes\nfrom CylanceManager import CylanceManager\n\nSCRIPT_NAME = \"Cylance - DeleteFromGlobalList\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    conf = siemplify.get_configuration('Cylance')\n\n    server_address = conf['Server Address']\n    application_secret = conf['Application Secret']\n    application_id = conf['Application ID']\n    tenant_identifier = conf['Tenant Identifier']\n\n    cm = CylanceManager(server_address, application_id, application_secret,\n                        tenant_identifier)\n\n    list_type = siemplify.parameters.get('List Type')\n\n    affected_entities = []\n\n    for entity in siemplify.target_entities:\n        try:\n            if entity.entity_type == EntityTypes.FILEHASH:\n                cm.delete_from_global_list(entity.identifier, list_type=list_type)\n                affected_entities.append(entity)\n\n        except Exception as e:\n            # An error occurred - skip entity and continue\n            siemplify.LOGGER.error(\n                \"An error occurred on entity: {}.\\n{}.\".format(\n                    entity.identifier, str(e)\n                ))\n            siemplify.LOGGER._log.exception(e)\n\n    if affected_entities:\n        entities_names = [entity.identifier for entity in affected_entities]\n\n        output_message = 'Following hashes were deleted from \"{}\":\\n{}'.format(\n            list_type, '\\n'.join(entities_names))\n\n    else:\n        output_message = 'No hash was deleted from the global list \"{}\"\\n'.format(\n            list_type)\n\n    siemplify.end(output_message, 'true')\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 0.0
+}

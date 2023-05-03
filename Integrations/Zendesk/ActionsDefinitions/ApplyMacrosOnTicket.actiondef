@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1531985013703,
+    "Creator": "Admin",
+    "Description": "Apply macro to a ticket",
+    "Id": -1,
+    "IntegrationIdentifier": "Zendesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1531985013703,
+    "Name": "Apply Macros On Ticket",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1531985013702,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Ticket number.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1531985013702,
+            "Name": "Ticket ID",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1531985013702,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1531985013702,
+            "Name": "Macro Title",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "# Imports\nfrom SiemplifyAction import SiemplifyAction\nfrom ZendeskManager import ZendeskManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(\"Zendesk\")\n    user_email = conf['User Email Address']\n    api_token = conf['Api Token']\n    zendesk = ZendeskManager(user_email, api_token)\n\n    ticket_id = siemplify.parameters['Ticket ID']\n    macro_name = siemplify.parameters['Macro Title']\n    ticket_data = zendesk.apply_macro_on_ticket(ticket_id, macro_name)\n\n    if ticket_data:\n        output_message = \"Successfully apply macro {0} on ticket #{1}\".format(macro_name, str(ticket_id))\n        result_value = 'true'\n    else:\n        output_message = 'There was a problem applying macro {0} om ticket #{1}.'.format(macro_name, str(ticket_id))\n        result_value = 'false'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_applied",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

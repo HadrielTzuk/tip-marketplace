@@ -1,0 +1,21 @@
+{
+    "CreationTimeUnixTimeInMs": 1532861679148, 
+    "Creator": "Admin", 
+    "Description": "Look up the categorization of a URL/Domain/IP", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"url\": \"someurl1.com/f1q7qx.php\", \"urlClassificationsWithSecurityAlert\": [\"MALWARE_SITE\"], \"urlClassifications\": []}, \"Entity\": \"HTTP://SOMEURL1.COM/F1Q7QX.PHP\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Zscaler", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1532861679148, 
+    "Name": "Lookup Entity", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\"]}", 
+    "Version": 1.0
+}

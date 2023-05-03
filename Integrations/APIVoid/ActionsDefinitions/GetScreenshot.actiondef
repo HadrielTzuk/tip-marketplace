@@ -1,0 +1,21 @@
+{
+    "CreationTimeUnixTimeInMs": 1523437472617, 
+    "Creator": "admin", 
+    "Description": "Capture a high-quality screenshot of any website or URL", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"file_md5_hash\": \"6ea33856a409c9bf9d1fcad8ce047065\"}, \"Entity\": \"www.google.co.il\"}, {\"EntityResult\": {\"file_md5_hash\": \"221f08045ab2b242a92da15de8812857\"}, \"Entity\": \"https://google.com\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "APIVoid", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1523437472617, 
+    "Name": "Get Screenshot", 
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Version": 1.0
+}

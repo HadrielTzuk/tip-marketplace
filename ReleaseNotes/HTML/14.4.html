@@ -1,0 +1,286 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 14.4</h2><h5>Published on 10 February, 2021</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     CheckPointFirewall
+    </b>
+   </li>
+   <ul>
+    <li>
+     CheckPointFirewall
+    </li>
+    <ul>
+     <li>
+      Improved functionality of API Calls from the manager, to match most of the usecases regarding the json payload field in the calls.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     FireEyeHelix
+    </b>
+   </li>
+   <ul>
+    <li>
+     FireEyeHelix
+    </li>
+    <ul>
+     <li>
+      Added "User-Agent" header, when sending all of the requests.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     QRadar
+    </b>
+   </li>
+   <ul>
+    <li>
+     Qradar
+    </li>
+    <ul>
+     <li>
+      Functionality improvements throughout the integration.
+     </li>
+     <li>
+      NEW! New Actions Added: "Lookup for a Value in Reference Set", "Lookup for a Value in Reference Map", "Lookup for a Value in Reference Map of Sets", "Lookup for a Value in Reference Tables", "Lookup for a Key in Reference map","Lookup for a Key in Reference Map Of Sets" "List Reference Tables", "List Reference Maps Of Sets", "List Reference Maps", "List Reference Sets", "Update Offense", "Add Offense Note".
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     SentinelOneV2
+    </b>
+   </li>
+   <ul>
+    <li>
+     SentinelOneV2
+    </li>
+    <ul>
+     <li>
+      Updated action parameter description for actions "Create Hash Blacklist Record", "Create Path Exclusion Record", "Create Hash Exclusion Record", "Enrich Endpoints", "Get Agent Status", "Get Blacklist", "Get Deep Visibility Query Result", "Get Events For Endpoint Hours Back", "Get Hash Reputation", "Get Group Details", "Get Threats", "Initiate Deep Visibility Query", "Mark as Threat", "Mitigate Threat", "Move Agents", "Resolve Threat"
+     </li>
+     <li>
+      Updated description for actions "Create Hash Blacklist Record", "Create Path Exclusion Record", "Create Hash Exclusion Record", "Enrich Endpoints", "Get Application List For Endpoint", "Get Application List For Endpoint", "Get Blacklist", "Get Deep Visibility Query Result", "Get Events For Endpoint Hours Back", "Get Hash Reputation", "Get Group Details", "Get Threats", "Initiate Deep Visibility Query", "Initiate Full Scan", "Mark as Threat", "Mitigate Threat", "Move Agents", "Reconnect Agent To The Network", "Resolve Threat", "Get Process List For Endpoint"
+     </li>
+     <li>
+      Updated output messages and error handling for actions "Create Hash Blacklist Record", "Create Path Exclusion Record", "Create Hash Exclusion Record", "Get Agent Status", "Get Blacklist", "Get Deep Visibility Query Result", "Get Events For Endpoint Hours Back", "Get Group Details", "Get Threats", "Initiate Deep Visibility Query", "Initiate Full Scan", "Mark as Threat", "Mitigate Threat", "Move Agents", "Resolve Threat"
+     </li>
+     <li>
+      Updated JSON result for actions "Create Hash Blacklist Record", "Create Path Exclusion Record", "Create Hash Exclusion Record", "Get Hash Reputation", "Get Threats", "Mitigate Threat"
+     </li>
+     <li>
+      Bug fixes for actions "Create Hash Blacklist Record", "Create Path Exclusion Record", "Create Hash Exclusion Record", "Get Blacklist", "Get Threats", "Disconnect Agent From Network"
+     </li>
+     <li>
+      Added new parameters for actions "Create Path Exclusion Record", "Create Hash Exclusion Record", "Get Application List For Endpoint", "Get Blacklist", "Get Hash Reputation", "Resolve Threat"
+     </li>
+     <li>
+      Added optional insights for actions "Enrich Endpoints", "Get Hash Reputation"
+     </li>
+     <li>
+      Added JSON result for actions "Get Agent Status", "Get Application List For Endpoint"
+     </li>
+     <li>
+      Migrated integration to python3.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     CheckPointFirewall
+    </b>
+   </li>
+   <ul>
+    <li>
+     Remove SAM Rule
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action "Remove SAM Rule"
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Exchange
+    </b>
+   </li>
+   <ul>
+    <li>
+     Wait for mail from user
+    </li>
+    <ul>
+     <li>
+      Updated timezone handling in "Wait for mail from user" action
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     RSAArcher
+    </b>
+   </li>
+   <ul>
+    <li>
+     Add Incident Journal Entry
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action "Add Incident Journal Entry".
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     SentinelOneV2
+    </b>
+   </li>
+   <ul>
+    <li>
+     Get Blacklist
+    </li>
+    <ul>
+     <li>
+      Added support for multiple hashes for action "Get Blacklist"
+     </li>
+     <li>
+      Added Case Wall Table for action "Get Blacklist"
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Siemplify
+    </b>
+   </li>
+   <ul>
+    <li>
+     Pause Alert SLA
+    </li>
+    <ul>
+     <li>
+      NEW! New action to automatically pause an alert SLA.
+     </li>
+    </ul>
+    <li>
+     Resume Alert SLA
+    </li>
+    <ul>
+     <li>
+      NEW! New action to automatically resume an alert SLA.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Zendesk
+    </b>
+   </li>
+   <ul>
+    <li>
+     Add Comment to a Ticket
+    </li>
+    <ul>
+     <li>
+      Fixed a bug in the "Add Comment to a Ticket" action, causing an unexpected behavior in the internal note parameter.
+     </li>
+    </ul>
+    <li>
+     Create Ticket
+    </li>
+    <ul>
+     <li>
+      Create Ticket - Added an option to make the "description" field be an internal comment when creating a new ticket.
+     </li>
+    </ul>
+    <li>
+     Update Ticket
+    </li>
+    <ul>
+     <li>
+      Update Ticket - Added an option to add an "Additional Comment" to the ticket, and specify whether it's "Public" or "Internal"
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Jobs</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     QRadar
+    </b>
+   </li>
+   <ul>
+    <li>
+     SyncCloseOffenses
+    </li>
+    <ul>
+     <li>
+      Fixed API token field.
+     </li>
+    </ul>
+    <li>
+     Monitor Events
+    </li>
+    <ul>
+     <li>
+      Monitor Events job marked as deprecated and planned to be deprecated in Q2 2021.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     RSAArcher
+    </b>
+   </li>
+   <ul>
+    <li>
+     RSA Archer - Security Incidents Connector
+    </li>
+    <ul>
+     <li>
+      NEW! Added new "Security Incidents" connector.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     SentinelOneV2
+    </b>
+   </li>
+   <ul>
+    <li>
+     Threats Connector
+    </li>
+    <ul>
+     <li>
+      Updated connector description and added default value for "Threats Connector"
+     </li>
+    </ul>
+    <li>
+     Query Connector
+    </li>
+    <ul>
+     <li>
+      Deprecated connector "Query Connector". Reason: API endpoints that were used by this connector were deprecated.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

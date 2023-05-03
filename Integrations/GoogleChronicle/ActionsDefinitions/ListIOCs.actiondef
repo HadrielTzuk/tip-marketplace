@@ -1,0 +1,44 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381792970,
+    "Creator": "Admin",
+    "Description": "List all of the IoCs discovered within your enterprise within the specified time range.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleChronicle",
+    "IsCustom": false,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"artifact\": {\"domainName\": \"st.dynamicyield.com\"}, \"sources\": [{\"source\": \"ESET Threat Intelligence\", \"confidenceScore\": {\"normalizedConfidenceScore\": \"Low\", \"intRawConfidenceScore\": 0}, \"rawSeverity\": \"n/a\", \"category\": \"BlockedObject\"}], \"iocIngestTime\": \"2019-07-31T07:41:32.365Z\", \"firstSeenTime\": \"2018-10-03T00:11:17Z\", \"lastSeenTime\": \"2020-07-06T12:59:41Z\", \"uri\": [\"https://demodev.backstory.chronicle.security/domainResults?domain=st.dynamicyield.com&selectedList=DomainViewDistinctAssets&whoIsTimestamp=2020-10-07T12%3A39%3A56.925673179Z\"]}]",
+		"ResultName": "JsonResult"
+	}],
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535381792970,
+    "Name": "List IOCs",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Fetches IOC Domain from the specified time. Value should be in RFC 3339 format (e.g. 2018-11-05T12:00:00Z). If not supplied, the default is the UTC time corresponding to 3 days earlier than current time.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+             "CreationTimeUnixTimeInMs": 1535381792970,
+             "CustomActionId": -1,
+             "DefaultValue": "50",
+             "Description": "Specify the maximum number of IoCs to return. You can specify between 1 and 10,000. The default is 50.",
+             "Id": -1,
+             "IsMandatory": false,
+             "ModificationTimeUnixTimeInMs": 1535381792970,
+             "Name": "Max IoCs to Fetch",
+             "Type": 0,
+             "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1516174591002,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "CSV",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1516174591002,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

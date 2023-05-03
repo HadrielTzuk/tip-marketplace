@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 19.1</h2><h5>Published on 30 November, 2022</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     FortiAnalyzer\n    </b>\n   </li>\n   <ul>\n    <li>\n     FortiAnalyzer\n    </li>\n    <ul>\n     <li>\n      NEW! New Integration Added - FortiAnalyzer.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     VirusTotalV3\n    </b>\n   </li>\n   <ul>\n    <li>\n     VirusTotalV3\n    </li>\n    <ul>\n     <li>\n      Enrich IP, Enrich Hash, Enrich URL, Get Domain Details - Updated OOTB widgets.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Actions</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     GoogleChronicle\n    </b>\n   </li>\n   <ul>\n    <li>\n     Lookup Similar Alerts\n    </li>\n    <ul>\n     <li>\n      Lookup Similar Alerts - Updated the logic behind the action.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     VirusTotalV3\n    </b>\n   </li>\n   <ul>\n    <li>\n     Enrich URL\n    </li>\n    <ul>\n     <li>\n      Enrich URLs - Update the logic behind comment fetching.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "19.1",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "30/11/22",
+    "Title": "Release Notes"
+}

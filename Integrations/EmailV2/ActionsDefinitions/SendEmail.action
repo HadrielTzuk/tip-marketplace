@@ -1,0 +1,100 @@
+{
+    "CreationTimeUnixTimeInMs": 1518362436003,
+    "Creator": "admin",
+    "Description": "Send email message. Requires: SMTP configuration",
+    "Id": -1,
+    "IntegrationIdentifier": "EmailV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518362436003,
+    "Name": "Send Email",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Arbitrary comma separated list of email addresses for the email recipients",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Recipients",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Arbitrary comma separated list of email addresses to be put in the CC field of email",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "CC",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "BCC email address. Multiple addresses can be separated by commas",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "BCC",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The email subject part",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Subject",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The email body part, if Email HTML Template is set, action should support definition of body of the email with provided HTML template.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Content",
+            "Type": 10,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "If selected, action returns the message id for the sent email in JSON technical result. This message id when can be used for the 'Wait for Email from user' action to process user response",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Return message id for the sent email",
+            "Type": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comma separated list of attachments file paths stored on the server for addition to the email.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Attachments Paths",
+            "Type": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"date\": \"2019-11-18 08:02:57.984000+00:00\", \"message_id\": \"<157406417676.181148.9624253160139989862@C3431448806>\", \"recipients\": \"aaa@aaa.com, bbb@bbb.com\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

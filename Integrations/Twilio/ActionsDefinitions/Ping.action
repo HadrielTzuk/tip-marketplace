@@ -1,0 +1,17 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "Twilio",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import *\nfrom twilio.rest import Client\nfrom twilio.base.exceptions import TwilioRestException\n\ndef main():\n\t#Enable User Account\n\tsiemplify = SiemplifyAction()\n\tconf = siemplify.get_configuration('Twilio')\n\taccount_sid = conf['AccountSid']\n\tauth_token = conf['AuthenticationToken']\n\tfrom_number = conf['SmsPhoneNumber']\n\tclient = Client(account_sid, auth_token)\n\toutput_message = \"Connection Failed.\"\n\tres = False\n\ttry:\n\t\tres = client.api.account.messages.create(to=\"+1\", from_=from_number, body=\"test\")\n\texcept TwilioRestException, e: \n\t\tif \"is not a valid phone number\" in e.msg:\n\t\t\tres = True\n\t\t\toutput_message = \"Connection Established.\"\n\t\t\t\n\tsiemplify.end(output_message, True) \n\t\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

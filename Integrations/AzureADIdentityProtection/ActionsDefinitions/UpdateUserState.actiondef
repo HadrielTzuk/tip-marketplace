@@ -1,0 +1,32 @@
+{
+    "CreationTimeUnixTimeInMs": 1524559211168, 
+    "Creator": "admin", 
+    "Description": "Update state of the user in Azure AD Identity Protection. Supported entities: Username, Email Address (user entity that matches email regex pattern).",
+    "Id": -1, 
+    "IntegrationIdentifier": "AzureADIdentityProtection",
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1524559211168, 
+    "Name": "Update User State",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1572955458924,
+            "CustomActionId": -1,
+            "DefaultValue": "Compromised",
+            "Description": "Specify the state for the users.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1572955458924,
+            "Name": "State",
+            "OptionalValues": [
+                "Compromised",
+                "Dismissed"
+            ],
+            "Type": 15,
+            "Value": "Compromised"
+        }
+    ],
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}",
+    "Version": 1.0
+}

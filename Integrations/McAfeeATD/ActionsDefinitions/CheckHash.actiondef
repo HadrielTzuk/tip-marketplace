@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1534435284366, 
+    "Creator": "Admin", 
+    "Description": "Check if hash is blacklisted.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": true, \"Entity\": \"ebdd035084968f675ee1510519dd8319\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "McAfeeATD", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1534435284366, 
+    "Name": "Check Hash", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import construct_csv\nfrom McAfeeATDManager import McAfeeATDManager\nfrom SiemplifyDataModel import EntityTypes\n\nPROVIDER = \"McAfeeATD\"\nACTION_NAME = \"McAfeeATD_Is Hash Blacklisted\"\nTABLE_NAME = 'Check Results'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(PROVIDER)\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    atd_manager = McAfeeATDManager(server_address=conf.get('Server Address'),\n                                   username=conf.get('Username'),\n                                   password=conf.get('Password'),\n                                   verify_ssl=verify_ssl)\n\n    result_value = False\n    results = []\n    errors = []\n\n    target_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.FILEHASH]\n\n    for entity in target_entities:\n        try:\n            is_blacklisted = atd_manager.is_hash_blacklist(entity.identifier)\n            if is_blacklisted:\n                result_value = True\n            results.append({\"File Hash\": entity.identifier,\n                           \"Is Blacklisted\": str(is_blacklisted)})\n        except Exception as err:\n            error_message = 'Error checking hash \"{0}\", Error: {1}'.format(\n                entity.identifier,\n                err.message\n            )\n            errors.append(error_message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n\n    if results:\n        siemplify.result.add_data_table(TABLE_NAME, construct_csv(results))\n\n    if results:\n        output_message = 'Found results for target entities.'\n    else:\n        output_message = 'No results were found for target entities.'\n\n    if errors:\n        output_message = \"{0} \\n \\n Errors: \\n {1}\".format(output_message, ' \\n '.join(errors))\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "is_blacklisted", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 1.0
+}

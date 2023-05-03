@@ -1,0 +1,42 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Get latest company mitigation details. Results are limited to the latest 1000 incidents, a message will appear displaying if the amount of incidents in the period is over this limit.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"incidentID\": 100000, \"incidentState\": 2, \"remediatedTime\": \"2020-12-07T15:22:38.798292+00:00\", \"affectedMailboxCount\": 6, \"mailboxId\": 1000000, \"mailboxEmail\": \"bruce.wayne@siemplifycyarx.onmicrosoft.com\", \"senderEmail\": \"crazywiz7@abv.bg\", \"subject\": \"Re: FW: Carey Hart\", \"threatType\": \"False Positive\", \"detectionType\": \"User Report\", \"reportedBy\": \"AI-Powered Incident Response\"}, {\"incidentID\": 1000000, \"incidentState\": 7, \"remediatedTime\": \"2020-12-07T15:20:18.546309+00:00\", \"affectedMailboxCount\": 2, \"mailboxId\": 1000000, \"mailboxEmail\": \"bruce.wayne@siemplifycyarx.onmicrosoft.com\", \"senderEmail\": \"crazywiz7@abv.bg\", \"subject\": \"Re: FW: Carey Hart\", \"threatType\": \"Spam\", \"detectionType\": \"User Report\", \"reportedBy\": \"AI-Powered Incident Response\"}, {\"incidentID\": 1000000, \"incidentState\": 2, \"remediatedTime\": \"2020-12-08T13:40:50.730184+00:00\", \"affectedMailboxCount\": 4, \"mailboxId\": 1000000, \"mailboxEmail\": \"bruce.wayne@siemplifycyarx.onmicrosoft.com\", \"senderEmail\": \"james.bond@siemplifycyarx.onmicrosoft.com\", \"subject\": \"Die you. Fraudulent language Fraud If you don’t pay 5000 EUR I will kill your whole family. You will suffer.\", \"threatType\": \"False Positive\", \"detectionType\": \"User Report\", \"reportedBy\": \"AI-Powered Incident Response\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "IronScales",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Get Incident Mitigation Details",
+    "Parameters": [
+        {
+            "Name": "Period",
+            "OptionalValues": [
+                "Last 24 hours",
+                "Last 7 days",
+                "Last 90 days",
+                "Last 180 days",
+                "Last 360 days",
+                "Current year to date",
+                "All time"
+            ],
+            "Type": 15,
+            "Value": "Last 24 hours",
+            "DefaultValue": "Last 24 hours",
+            "IsMandatory": true,
+            "Description": "Specify the time period for which you would like to get incident mitigation details for.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

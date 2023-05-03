@@ -1,0 +1,31 @@
+{
+	"CreationTimeUnixTimeInMs": 1570446244,
+	"Creator": "admin",
+	"Description": "List devices that are available in McAfee Mvision ePO V2.",
+    	"DynamicResultsMetadata": [{
+		"ResultExample": "[{\"id\": \"1022656\", \"type\": \"devices\", \"links\": {\"self\": \"https://api.mvision.mcafee.com/epo/v2/devices/1022656\"}, \"attributes\": {\"name\": \"CLDBGQAEO0777\", \"parentId\": 1001022, \"agentGuid\": \"D8E8F120-6C25-4BEF-9F15-01080BFFCBFA\", \"lastUpdate\": \"2020-11-10T14:16:42.027+00:00\", \"agentState\": 0, \"nodePath\": null, \"agentPlatform\": \"Windows Server 2016:10:0:0\", \"agentVersion\": \"5.6.6.317\", \"nodeCreatedDate\": \"2020-11-10T11:13:11.567+00:00\", \"managed\": \"1\", \"tenantId\": 11526, \"tags\": \"Escalated, Server\", \"excludedTags\": \"\", \"managedState\": 1, \"computerName\": \"CLDBGQAEO0777\", \"domainName\": \"WORKGROUP\", \"ipAddress\": \"10.254.47.44\", \"osType\": \"Windows Server 2016\", \"osVersion\": \"10.0\", \"cpuType\": \"Intel(R) Xeon(R) CPU E5-2690 v4 @ 2.60GHz\", \"cpuSpeed\": 2594, \"numOfCpu\": 6, \"totalPhysicalMemory\": 25874055168, \"macAddress\": \"005056AF3F4E\", \"userName\": \"Cloudadmin\", \"osPlatform\": \"Server\", \"ipHostName\": \"CLDBGQAEO0777\", \"isPortable\": \"non-portable\"}, \"relationships\": {\"assignedTags\": {\"links\": {\"self\": \"https://api.mvision.mcafee.com/epo/v2/devices/1022656/relationships/assignedTags\", \"related\": \"https://api.mvision.mcafee.com/epo/v2/devices/1022656/assignedTags\"}}, \"installedProducts\": {\"links\": {\"self\": \"https://api.mvision.mcafee.com/epo/v2/devices/1022656/relationships/installedProducts\", \"related\": \"https://api.mvision.mcafee.com/epo/v2/devices/1022656/installedProducts\"}}}}]",
+		"ResultName": "JsonResult"
+	}],
+	"Id": -1,
+	"IntegrationIdentifier": "McAfeeMvisionEPOV2",
+	"IsCustom": false,
+	"IsEnabled": true,
+	"ModificationTimeUnixTimeInMs": 1570446244,
+	"Name": "List Devices",
+	"Parameters": [{
+		"CreationTimeUnixTimeInMs": 1530543579170,
+		"CustomActionId": -1,
+		"DefaultValue": "100",
+		"Description": "Specify how many devices to return.",
+		"Id": -1,
+		"IsMandatory": false,
+		"ModificationTimeUnixTimeInMs": 1530543579170,
+		"Name": "Max Devices to Return",
+		"Type": 0,
+		"Value": "100"
+	}],
+	"ScriptResultName": "is_success",
+	"Type": 0,
+	"Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

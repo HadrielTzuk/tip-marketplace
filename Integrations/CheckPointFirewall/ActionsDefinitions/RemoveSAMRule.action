@@ -1,0 +1,155 @@
+{
+    "CreationTimeUnixTimeInMs": 1519810626710,
+    "Creator": "admin",
+    "Description": "Remove a SAM (suspicious activity monitoring) rule from Checkpoint Firewall. Note: you need to match the current rule in order to remove it. Please refer to the Checkpoint fw_sam command criteria section documentation for available ip, netmask, port and protocol combinations - https://sc1.checkpoint.com/documents/R81/WebAdminGuides/EN/CP_R81_CLI_ReferenceGuide/Topics-CLIG/MDSG/fw-sam.htm",
+    "Id": -1,
+    "IntegrationIdentifier": "CheckPointFirewall",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519810626710,
+    "Name": "Remove SAM Rule",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"tasks\": [{\"uid\": \"68f580e0-914f-4eef-8e46-436dfbxxxxfd\", \"name\": \"xxxx - Siemplify-generated-script-remove-sam-rule\", \"type\": \"CdmTaskNotification\", \"domain\": {\"uid\": \"41e821a0-3720-11e3-aa6e-0800200c9xxx\", \"name\": \"User1\", \"domain-type\": \"domain\"}, \"task-id\": \"e2531d26-dfcc-46d3-a9b0-560b4e1aaxxx\", \"task-name\": \"xxx1.1 - Siemplify-generated-script-remove-sam-rule\", \"status\": \"succeeded\", \"progress-percentage\": \"100\", \"start-time\": {\"posix\": \"1612258xx53865\", \"iso-8601\": \"2021-02-02T11:27+0200\"}, \"last-update-time\": {\"posix\": \"16122580558xx\", \"iso-8601\": \"2021-02-02T11:27+0200\"}, \"suppressed\": \"false\", \"task-details\": [{\"uid\": \"de29c086-db7f-47d8-8e96-38e4bc9b5cxx\", \"name\": \"null\", \"domain\": {\"uid\": \"41e821a0-3720-11e3-aa6e-0800200c9xxx\", \"name\": \"User1\", \"domain-type\": \"domain\"}, \"color\": \"black\", \"statusCode\": \"succeeded\", \"statusDescription\": \"asd\", \"taskNotification\": \"68f580e0-914f-4eef-8e46-436dfb3403fd\", \"gatewayId\": \"8f36axxx-e0d5-6347-ae51-6fb22d573f04\", \"gatewayName\": \"asd\", \"transactionId\": \"683682800\", \"responseMessage\": \"asd\", \"responseError\": \"asd\", \"meta-info\": {\"validation-state\": \"ok\", \"last-modify-time\": {\"posix\": \"1612258055858\", \"iso-8601\": \"2021-02-02T11:27+0200\"}, \"last-modifier\": \"admin\", \"creation-time\": {\"posix\": \"1612258053923\", \"iso-8601\": \"2021-02-02T11:27+0200\"}, \"creator\": \"admin\"}, \"tags\": [], \"icon\": \"GeneralglobalsNa\", \"comments\": \"ads\", \"display-name\": \"asd\", \"customFields\": \"null\"}], \"comments\": \"Completed\", \"color\": \"black\", \"icon\": \"GeneralglobalsNa\", \"tags\": [], \"meta-info\": {\"lock\": \"unlocked\", \"validation-state\": \"ok\", \"last-modify-time\": {\"posix\": \"1612258055834\", \"iso-8601\": \"2021-02-02T11:27+0200\"}, \"last-modifier\": \"admin\", \"creation-time\": {\"posix\": \"1612258053905\", \"iso-8601\": \"2021-02-02T11:27+0200\"}, \"creator\": \"admin\"}, \"read-only\": \"false\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of Security Gateway from where to remove SAM Rule",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Security Gateway",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the source IP to be added to the rule.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Source IP",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the source netmask to be added to the rule.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Source Netmask",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the destination IP to be added to the rule.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Destination IP",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the destination netmask to be added to the rule.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Destination Netmask",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the port number to be added to the rule for example, 5005",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Port",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the protocol name to be added to the rule for example, TCP",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Protocol",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": true,
+            "DefaultValue": "Drop",
+            "Description": "Specify the action that should be executed for the matching connections.",
+            "Name": "Action for the Matching Connections",
+            "Value": "Drop",
+            "Type": 15,
+            "OptionalValues": [
+                "Notify",
+                "Reject",
+                "Drop"
+            ],
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1572955458924,
+            "ModificationTimeUnixTimeInMs": 1572955458924
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": true,
+            "DefaultValue": "Log",
+            "Description": "Specify how to track matching connections.",
+            "Name": "How to Track Matching Connections",
+            "Value": "Log",
+            "Type": 15,
+            "OptionalValues": [
+                "No Log",
+                "Log",
+                "Alert"
+            ],
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1572955458924,
+            "ModificationTimeUnixTimeInMs": 1572955458924
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835,
+            "CustomActionId": -1,
+            "DefaultValue": "false",
+            "Description": "Specify if the existing matching connections should be closed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560351300835,
+            "Name": "Close Connections",
+            "OptionalValues": null,
+            "OptionalValuesJson": null,
+            "Type": 1,
+            "Value": "false"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

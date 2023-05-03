@@ -1,0 +1,51 @@
+{
+    "CreationTimeUnixTimeInMs": 1668078112000,
+    "Creator": "admin",
+    "Description": "Execute a policy in Automox. Supported entities: Hostname, IP Address.",
+    "Id": -1,
+    "IntegrationIdentifier": "Automox",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1668078112000,
+    "Name": "Execute Policy",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"xxxx-11\", \"EntityResult\": {\"status\": \"done\"}}, {\"status\": \"failure\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1668078112000,
+            "CustomActionId": -1,
+            "DefaultValue": "All Devices",
+            "Description": "Specify the remediation scope for the action. If “Only Entities” is selected, then action will execute policies only on the valid entities in the scope. If “All Devices” is selected, then action will execute the policy on all devices in the organization.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1668078112000,
+            "Name": "Remediation Scope",
+            "OptionalValues": [
+                "Only Entities",
+                "All Devices"
+            ],
+            "Type": 15,
+            "Value": "All Devices"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1668078112000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the policy that needs to be executed.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1668078112000,
+            "Name": "Policy Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}
+

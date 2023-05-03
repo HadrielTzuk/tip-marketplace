@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Google Translate.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Google Translate",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1641975658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10635"
+    },
+    {
+        "ChangeDescription": "Added integration parameters description.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Google Translate",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1678320000,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "265188265"
+    }
+]

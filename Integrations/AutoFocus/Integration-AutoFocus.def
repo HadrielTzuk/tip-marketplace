@@ -1,0 +1,33 @@
+{
+    "Description": "AutoFocus contextual threat intelligence service accelerates analysis, correlation and prevention workflows. Unique, targeted attacks are automatically prioritized with full context, allowing security teams to respond to critical attacks faster, without additional IT security resources.",
+    "DisplayName": "Palo Alto AutoFocus",
+    "Identifier": "AutoFocus",
+    "Categories": [
+        "Threat Intelligence",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "AutoFocus",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "Api Key",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AutoFocus",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Results Limit",
+            "PropertyName": "Results Limit",
+            "PropertyType": "1",
+            "Value": "10"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M24.2,9.6l-3-5.2h-3.7l-2-3.5h-6l-2,3.5H3.8l-3,5.2l1.6,2.8l-1.6,2.8l3,5.2h3.5l2.1,3.7h6l2.1-3.7h3.6l3-5.2l-1.6-2.8\n\t\t\tL24.2,9.6z M14.1,15.3h-3.2l-1.6-2.8l1.6-2.8h3.2l1.6,2.8L14.1,15.3z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 7.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/palo-alto-autofocus",
+    "MarketingDisplayName": "Palo Alto AutoFocus"
+}

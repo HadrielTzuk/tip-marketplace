@@ -1,0 +1,51 @@
+{
+    "Description": "TruSTAR is an intelligence management platform that transforms and automates data for security operations teams and tools.",
+    "DisplayName": "TruSTAR",
+    "Identifier": "TruSTAR",
+    "PythonVersion": 2,
+    "Categories": [
+        "Threat Intelligence",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "TruSTAR",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https://api.trustar.co"
+        },
+        {
+            "IntegrationIdentifier": "TruSTAR",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "TruSTAR",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Secret",
+            "PropertyName": "API Secret",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "TruSTAR",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": true
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M14.8267 17.5065L12.5739 13.2987L8.99148 23L11.7244 12.9481L7.5142 14.7013L11.3182 12.0519L6 9.55844L11.6506 11.1558L10.2841 6.67532L12.4631 10.7662L16.0085 2L13.3494 11.1169L17.5597 9.48052L13.6818 11.974L19 14.4675L13.3864 12.8701L14.8267 17.5065Z\" fill=\"currentColor\"\/>\r\n<\/svg>\r\n",
+    "Version": 3.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/trustar",
+    "MarketingDisplayName": "TruSTAR"
+}

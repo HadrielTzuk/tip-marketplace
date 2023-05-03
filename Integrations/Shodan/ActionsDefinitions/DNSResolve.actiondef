@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1545759137065, 
+    "Creator": "Admin", 
+    "Description": "Look up the IP address for the provided list of hostnames.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"google.com\": \"1.1.1.1\", \"bing.com\": \"1.1.1.1\"}", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Shodan", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1545759137065, 
+    "Name": "DNS Resolve", 
+    "Parameters": [], 
+    "Script": "from ShodanManager import ShodanManager\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import flat_dict_to_csv\nfrom SiemplifyDataModel import EntityTypes\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('Shodan')\n    verify_ssl = conf.get('Verify SSL', 'False').lower() == 'true'\n    api_key = conf.get('API key', \"\")\n    shodan = ShodanManager(api_key, verify_ssl=verify_ssl)\n\n    hostnames_list = []\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.HOSTNAME:\n            hostnames_list.append(entity.identifier)\n    # Convert hostnames list to string\n    hostnames = \",\".join(hostnames_list)\n\n    hostnames_info = shodan.dns_resolve(hostnames)\n    if hostnames_info:\n        siemplify.result.add_data_table(\"Shodan DNS Reslove Report\", flat_dict_to_csv(hostnames_info))\n        output_message = \"Successfully look up the IP address for the following hostnames: {0} \\n\".format('\\n'.join(hostnames_list))\n        result_value = 'true'\n    else:\n        output_message = \"Failed to look up the IP address for the following hostnames: {0} \\n\".format('\\n'.join(hostnames_list))\n        result_value = 'false'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Version": 2.0
+}

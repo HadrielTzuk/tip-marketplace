@@ -1,0 +1,42 @@
+{
+    "Description": "The most widely-deployed ICS, SCADA & IIoT security platform that continuously reduces OT network risk via ICS threat monitoring & asset discovery.",
+    "DisplayName": "CyberX",
+    "Identifier": "CyberX",
+    "Categories": [
+        "OT",
+        "IoT",
+        "Security"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAMAAACScZ2GAAACZ1BMVEX////uvQAAkM/uuQDvvQDqsQDvuwDssgD+///vvADsswDttgDqsADqtAAAkdDttADpsQD///4AktHqtgDpswAAfMXx01bqswD8++7z12nquADruQDprwDoqADw0EzvyzfswA7ruwD8+udnvN77990AgswAfsfptwDpsAD7+OEAh8737LTz3XvvyjLswRLsvwjvvwDvtwAAe8f48MUAeML15Jbx12bvzDzrrgBTs9kAjtH589D36qvx2Gzx0VHv0EftxSLtwhbsvQL9/fb9/PH69NQAjNAAic758coAecUAfcMAdsLy1l7uy0ruy0Ptwxr9//z9/vnO6fH8+ur7+eT69dcCh8cAgsQAesL47rz37bj36rD36a304pH1447v01zvzj/uyC2h0+b79tpuutr588358ccAd8UAf8T48ML478AAdMD47LH26Kf15qL15Zr14Ynz34Xz3oDz2nHw02DuxyjtuADssAD+//yr2OiKyeGFyeF8w+AglcwJisYBhcUAccQAa7/15Z304Yzy23ftxjTtxR3rvhbqugjssQD4/fzx+fn7/Pjr9/jm9ffg8/bJ5/Cs3OqV0ORktdhLqNM2pdItnM4plcoXkcoAfskPjcgAeMcAdMXy2m7wz0PswyLrwh7ptwjvuADmrADqqgDmpQDi8fTZ7vPS7PLH5e++4+264O203uv7+uqk2OiQy+J2vtppt9lftdhSqtIsodA3ns4AhswAiskAhscAZbnsxCrrtwDstQDf7vPC5fCc0eVer9dKrdVFqdMAk9JAn9Ayns4VlcsAcbzr8/bc8fSx3OpYsdcLkMr+Lo1BAAAIjklEQVRo3u2YZ1/TUBTGT0zTNEkXtLRIERCpbCgb2UNAQEAcbEUQFXELuPfee++9995764fy3JK0tVhQwJ++yP8N7U3SPDnjuSeAjIyMjIyMjIyMjIyMzH+ACv4hzfeGOXj9Etzwan6/dCv8Q3bPXO0jsWaF28ElK54cGgv/lJulaYNEvBObwYWxbz6tWQ7/mrfTvSV9D6t2gcTFO1VrVi35jdKckLFgdMDJkwGjo5IiR+WDB9IzZs2a1TAO/pgdVVZH+IYfFnP5YvnK4uMrLkNvjFz39JmGYXieZ1mGMRtngAcah2g0Zv00+HP2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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "CyberX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "6",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CyberX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Access Token",
+            "PropertyName": "Access Token",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CyberX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\"><g><path d=\"M48,35.2c-3.6,0-7.2,0-10.9,0c-0.6,0-0.9-0.2-1.2-0.7c-0.9-1.5-1.7-3-2.7-4.4c-1.5-2.2-3.2-2.7-5.7-1.8c-2.3,0.9-4.2,2.2-6.2,3.7C16.2,36,11,39.9,5.8,43.9c-0.5,0.4-1,0.6-1.6,0.5c-0.7-0.1-1.5,0-2.2,0c0-0.1,0-0.2,0-0.2C8.2,39.1,14.4,34,20.7,28.9c4.4-3.6,8.8-7.2,13.2-10.7c0.7-0.6,0.7-0.6,1.3,0.2c4.2,5.5,8.5,11,12.7,16.5c0,0,0.1,0.1,0.1,0.1C48,35,48,35.1,48,35.2z\"/><path d=\"M12.8,5.6c0.4,0,0.7,0,0.9,0c3.6,0,7.1,0,10.7,0c0.5,0,0.8,0.1,1,0.7C26,7.6,26.8,8.9,28,9.8c1.6,1.2,3.3,1.5,5.1,0.7c1.6-0.7,3.2-1.5,4.7-2.3c1.3-0.7,2.6-1.4,3.8-2.1c1-0.5,1.5-0.6,2.8-0.4c-0.2,0.2-0.3,0.4-0.5,0.5c-3.8,3.1-7.6,6.2-11.4,9.3c-2.7,2.2-5.4,4.4-8.1,6.6c-0.6,0.5-0.6,0.5-1.1-0.2C20,16.7,16.6,11.4,13.2,6.2C13.1,6.1,13,5.9,12.8,5.6z\"/></g></svg>",
+    "Version": 3.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/cyberx",
+    "MarketingDisplayName": "CyberX"
+}

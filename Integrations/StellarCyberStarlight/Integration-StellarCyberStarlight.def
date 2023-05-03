@@ -1,0 +1,51 @@
+{
+    "Description": "Stellar Cyber is the only open, automated detection and response platform that correlates detections from existing solutions as well as its own security applications to deliver comprehensive protection across the cybersecurity kill chain and present them through one intuitive dashboard. Customers can leverage 20 native applications and a growing list of open ecosystem partners to detect and respond automatically to attacks within seconds wherever they occur \u00e2\u20ac\u201c on servers, in the network, at endpoints, or in cloud-based applications. Stellar Cyber deploys easily on premises, in public clouds or with service providers.",
+    "DisplayName": "Stellar Cyber Starlight",
+    "Identifier": "StellarCyberStarlight",
+    "Categories": [
+        "SIEM",
+        "Security"
+    ],
+    "PythonVersion": 2,
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "StellarCyberStarlight",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": 2,
+            "Value": "https://{ip address}/connect/api/"
+        },
+        {
+            "IntegrationIdentifier": "StellarCyberStarlight",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "StellarCyberStarlight",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "StellarCyberStarlight",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path d=\"M9.368 15.54l-3.684-5.7 5.526-1.9-8.842 1.52-.368.76 7.368 5.32zM6.053 7.56L10.473 3h.37l3.683 4.18-3.684-1.9-4.79 2.28zM14.158 5.28L20.79 6.8l.368.76-4.421 3.04 1.474-3.04-4.053-2.28zM20.053 9.46L23 17.06l-.368.76-7.369-5.32 5.158 1.9-.368-4.94zM11.21 10.98l.737 7.22 7.369-1.9-9.21 5.7L9 21.24l2.21-10.26z\"\/>\r\n<\/svg>",
+    "Version": 8.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/stellar-cyber-starlight",
+    "MarketingDisplayName": "Stellar Cyber Starlight"
+}

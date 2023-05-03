@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1534756953009,
+    "Creator": "Admin",
+    "Description": "Wait for the status of a request ot update to a desired status.",
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceDeskPlus",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534756953009,
+    "Name": "Wait For Status Update",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534756953009,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The ID of the request.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534756953009,
+            "Name": "Request ID",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534756953009,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Desired request statuses, comma separated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534756953009,
+            "Name": "Statuses",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "ScriptResultName": "new_status",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

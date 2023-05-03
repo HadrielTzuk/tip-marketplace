@@ -1,0 +1,109 @@
+[
+    {
+        "ChangeDescription": "Added missing tooltips to SiemplifyUtilities integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "SiemplifyUtilities",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "TIPG-313"
+    },
+    {
+        "ChangeDescription": "Fixed & normalized tooltips within SiemplifyUtilities integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "SiemplifyUtilities",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1572778689,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-355"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "SiemplifyUtilities",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Regressive! Improved functionality and fixed a bug. Updated Json result. Note - right now the action supports EML and MSG files, but if file contains attachments right now the action supports only EML file attachments, MSG attachment support will be added soon.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Parse EML to JSON",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1606820480,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "TIPG-5648"
+    },
+    {
+        "ChangeDescription": "Added an ability to automatically add quotes and double quotes to values in action \"Query Joiner\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "QueryJoiner",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1609233872,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5906"
+    },
+    {
+        "ChangeDescription": "Parse EML to JSON - Updated the action's functionality. Note - Due to some improvements, we might have slight changes in the JSON result of this action. Please refer to: https://integrations.siemplify.co/doc/siemplify-utilities#parse-eml-to-json for additional information.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "Parse EML to JSON",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1633428137,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10097"
+    },
+    {
+        "ChangeDescription": "New Action Added - Export Entities as OpenIOC File.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "Export Entities as OpenIOC File",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1633519274,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9383"
+    },
+    {
+        "ChangeDescription": "Parse EML to JSON - REGRESSIVE - Action will no longer raise case to an incident after execution.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 12.0,
+        "ItemName": "Parse EML to JSON",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1643175420,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "TIPG-10630"
+    },
+    {
+        "ChangeDescription": "Updated integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 13.0,
+        "ItemName": "SiemplifyUtilities",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1670388158,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13385"
+    }
+]

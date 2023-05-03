@@ -1,0 +1,49 @@
+{
+    "Description": "VMware vSphere is a VMware cloud computing platform for virtualization.",
+    "DisplayName": "VSphere",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/vsphere",
+    "Identifier": "VSphere",
+    "Categories": [
+        "IT & Infrastructure",
+        "Free to use"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "VSphere",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Server Address",
+            "PropertyName": "Server Address",
+            "PropertyType": "5",
+            "Value": "x.x.x.x"
+        },
+        {
+            "IntegrationIdentifier": "VSphere",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "VSphere",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "VSphere",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Port",
+            "PropertyName": "Port",
+            "PropertyType": "1",
+            "Value": "443"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version='1.0' encoding='utf-8'?><!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 25 25' style='enable-background:new 0 0 25 25;' xml:space='preserve'><g><g><path d='M23.2,10.8c0-0.7-0.3-1.3-0.7-1.8c-0.9-0.9-2.3-1.2-3.5-0.6c-0.4,0.2-0.9,0.5-1.3,0.8c0,0,0,0,0,0c0,0,0,0-0.1-0.1c-0.6-0.7-1.5-1-2.4-1c-0.9,0-1.6,0.4-2.3,0.9c-0.2,0.1-0.3,0.2-0.4,0c-0.5-0.6-1.2-0.9-2-0.9c-1.2,0-2.1,0.6-2.7,1.8c-0.5,1.2-1,2.4-1.5,3.6c0,0.1-0.1,0.2-0.2,0.3C6.1,13.7,6,13.6,6,13.5C5.3,12,4.7,10.4,4,8.9C3.8,8.4,3.3,8.1,2.8,8.2C2,8.4,1.6,9.1,2,9.9c0.9,1.9,1.7,3.8,2.6,5.7c0.1,0.2,0.2,0.4,0.4,0.6c0.6,0.9,1.8,0.9,2.5,0c0.2-0.2,0.3-0.5,0.4-0.8c0.5-1.1,1-2.1,1.5-3.2c0.3-0.6,0.5-1.2,0.8-1.7c0.1-0.2,0.2-0.3,0.4-0.2c0.2,0,0.3,0.2,0.3,0.4c0,0.1,0,0.2,0,0.3c0,1.5,0,2.9,0,4.4c0,0.2,0,0.4,0,0.6c0.1,0.4,0.3,0.7,0.8,0.9c0.8,0.2,1.5-0.3,1.5-1.2c0-1.3,0-2.7,0-4c0-0.3,0.1-0.6,0.3-0.9c0.3-0.5,0.9-0.6,1.5-0.5c0.5,0.2,0.9,0.6,0.9,1.2c0,1.3,0,2.6,0,3.8c0,0.2,0,0.4,0.1,0.6c0.1,0.4,0.3,0.7,0.7,0.8c0.8,0.2,1.5-0.3,1.5-1.1c0-1.3,0-2.6,0-4c0-0.4,0.1-0.8,0.4-1.1c0.4-0.4,1-0.5,1.5-0.3c0.5,0.2,0.8,0.6,0.8,1.2c0,1.3,0,2.7,0,4c0,0.6,0.3,1.1,0.8,1.3c0.8,0.3,1.6-0.3,1.6-1.2C23.2,14,23.2,12.4,23.2,10.8z'/></g></g></svg>",
+    "Version": 4.0,
+    "MarketingDisplayName": "VMware vSphere"
+}

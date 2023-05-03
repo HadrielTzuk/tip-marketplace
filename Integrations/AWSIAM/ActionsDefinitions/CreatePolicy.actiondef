@@ -1,0 +1,56 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Create an IAM customer managed policy for your AWS account. This action creates a policy version with a version identifier of v1and sets v1 as the policy's default version.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSIAM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"PolicyName\":\"MyPolicy322\",\"PolicyId\":\"ANPAYPE7MW7ABGBKTXWER\",\"Arn\":\"arn:aws:iam::582302349248:policy/MyPolicy322\",\"Path\":\"/\",\"DefaultVersionId\":\"v1\",\"AttachmentCount\":0,\"PermissionsBoundaryUsageCount\":0,\"IsAttachable\":\"True\",\"Description\":\"None\",\"CreateDate\":\"2020-12-16 16:35:35+00:00\",\"UpdateDate\":\"2020-12-16 16:35:35+00:00\"}]",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Create a Policy",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Name of the policy to create. Policy name can not include spaces and must contain only alphanumeric characters and/or the following: +=.@_-. Policy names must be unique within an account.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Policy Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The JSON policy document that you want to use as the content for the new policy.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Policy Document",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Description of the policy.Typically used to store information about the permissions defined in the policy. For example, \"Grants access to production DynamoDB tables.\" The policy description is immutable. After a value is assigned, it cannot be changed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Description",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

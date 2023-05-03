@@ -1,0 +1,156 @@
+{
+    "CreationTimeUnixTimeInMs": 1511698992392,
+    "Creator": "admin",
+    "Description": "Action will get as a parameter a list of message IDs, and will be able to mark it as junk. Marking an item as junk using this action will add the item sender's mail address to the \"Blocked Senders List\", and will also move it to the \"Junk\" folder. NOTICE - to mark emails in all mailboxes, please configure impersonation permissions: https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/impersonation-and-ews-in-exchange. NOTE: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed. NOTE: Action is supported only from Exchange Server version 2013 and newer, if a lower version is used, action will fail with the appropriate message.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"mime_content\":\"content example\",\"_id\":\"ItemId(id='xxxxxxxxxxJjNjJkLTc3MzAtNGM5My04ZjM0LTZiYzVjMDI4ZTZlNQBGAAAAAADLc0XF/C8kRJTduC5WOJE/BwDby9ZjVdTJTJRS8jxrcA+oAAAAAAEMAADby9ZjVdTJTJRS8jxrcA+oAxxxxxxxxxx=', changekey='xxxxxxxxxxDby9ZjVdTJTJRS8jxrcA+oAAEy4kvx')\",\"parent_folder_id\":\"ParentFolderId(id='xxxxxxxxxxJjNjJkLTc3ADMwLTRjOTMtOGYzNC02YmM1YzAyOGU2ZTUALgAAA8tzRcX8LyRElN24LlY4kT8BANvL1mNV1MlMlFLyPGtwD6gAxxxxxxxxxx==', changekey='xxxAAA==')\",\"item_class\":\"IPM.Note\",\"subject\":\"test\",\"sensitivity\":\"Normal\",\"text_body\":\"test\\r\\n\",\"body\":\"test\",\"attachments\":[],\"datetime_received\":\"2021-01-19 14:31:39+00:00\",\"size\":\"47965\",\"categories\":\"None\",\"importance\":\"Normal\",\"in_reply_to\":\"None\",\"is_submitted\":\"False\",\"is_draft\":\"False\",\"is_from_me\":\"False\",\"is_resend\":\"False\",\"is_unmodified\":\"True\",\"headers\":[\"MessageHeader(name='Received', value='from xxxxx05MB7074.eurprd05.prod.outlook.com (xxxx:10a6:20b:1a6::xx) by xxxxx05MB5957.eurprd05.prod.outlook.com with HTTPS; Tue, 19 Jan 2021 14:31:38 +0000')\",\"MessageHeader(name='Received', value='from xxxxx81CA0021.DEUP281.PROD.OUTLOOK.COM (xxxx:10a6:b10:14::x) by xxxxx05MB7074.eurprd05.prod.outlook.com (xxxx:10a6:20b:1a6::xx) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id xx.20.3763.x; Tue, 19 Jan 2021 14:31:37 +0000')\"],\"datetime_sent\":\"2021-01-19 14:31:24+00:00\",\"datetime_created\":\"2021-01-19 14:31:39+00:00\",\"reminder_due_by\":\"None\",\"reminder_is_set\":\"False\",\"reminder_minutes_before_start\":\"0\",\"display_cc\":\"None\",\"display_to\":\"ג'יימס בונד\",\"has_attachments\":\"False\",\"culture\":\"en-US\",\"effective_rights\":\"EffectiveRights(create_associated=False, create_contents=False, create_hierarchy=False, delete=True, modify=True, read=True, view_private_items=True)\",\"last_modified_name\":\"Test User\",\"last_modified_time\":\"2021-01-19 14:33:08+00:00\",\"is_associated\":\"False\",\"web_client_read_form_query_string\":\"https://outlook.office365.com/owa/?ItemID=xxxxxxxxxxJjNjJkLTc3MzAtNGM5My04ZjM0LTZiYzVjMDI4ZTZlNQBGAAAAAADLc0XF%2FC8kRJTduC5WOJE%2FBwDby9ZjVdTJTJRS8jxrcA%2BoAAAAAAEMAADby9ZjVdTJTJRS8jxrcA%2BoAAEzKVFJAAA%3D&exvsurl=1&viewmodel=ReadMessageItem\",\"web_client_edit_form_query_string\":\"None\",\"conversation_id\":\"ConversationId(id='xxxxxxxxxxJjNjJkLTc3MzAtNGM5My04ZjM0LTZiYzVjMDI4ZTZlNQAQAHyj1LciNtFHpS4ZbBghSeM=')\",\"unique_body\":\"<html><body><div>\\r\\n<div>\\r\\n<div dir=\\\"ltr\\\">test</div>\\r\\n</div>\\r\\n</div>\\r\\n</body></html>\",\"sender\":\"Mailbox(name='Test User', email_address='test.user@siemplify.co', routing_type='SMTP', mailbox_type='OneOff')\",\"to_recipients\":[\"Mailbox(name=\\\"ג'יימס בונד\\\", email_address='test@test.onmicrosoft.com', routing_type='SMTP', mailbox_type='Mailbox')\"],\"cc_recipients\":\"None\",\"bcc_recipients\":\"None\",\"is_read_receipt_requested\":\"False\",\"is_delivery_receipt_requested\":\"False\",\"conversation_topic\":\"test\",\"author\":\"test.user@siemplify.co\",\"message_id\":\"<xxxxxxxxxxGt5T8SAeM7mnbuOPXXCe6r0mhiqNh6VNA2aVJRyKQ@mail.gmail.com>\",\"is_read\":\"True\",\"is_response_requested\":\"False\",\"references\":\"None\",\"reply_to\":\"None\",\"received_by\":\"Mailbox(name=\\\"ג'יימס בונד\\\", email_address='test@test.onmicrosoft.com', routing_type='SMTP', mailbox_type='Mailbox')\",\"received_representing\":\"Mailbox(name=\\\"ג'יימס בונד\\\", email_address='test@test.onmicrosoft.com', routing_type='SMTP', mailbox_type='Mailbox')\",\"account\":\"test@test.onmicrosoft.com\",\"plaintext_body\":\"test\",\"html_body\":\"<html><head>\\r\\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\"></head><body><div dir=\\\"ltr\\\">test</div></body></html>\",\"attachments_list\":{}},{\"mime_content\":\"content example\",\"_id\":\"ItemId(id='xxxxxxxxxxJjNjJkLTc3MzAtNGM5My04ZjM0LTZiYzVjMDI4ZTZlNQBGAAAAAADLc0XF/C8kRJTduC5WOJE/BwDby9ZjVdTJTJRS8jxrcA+oAAAAAAEMAADby9ZjVdTJTJRS8jxrcA+oAAEzKVFHAAA=', changekey='xxxxxxxxxxDby9ZjVdTJTJRS8jxrcA+oAAEy4kvE')\",\"parent_folder_id\":\"ParentFolderId(id='xxxxxxxxxxJjNjJkLTc3ADMwLTRjOTMtOGYzNC02YmM1YzAyOGU2ZTUALgAAA8tzRcX8LyRElN24LlY4kT8BANvL1mNV1MlMlFLyPGtwD6gAxxxxxxxxxx==', changekey='xxxAAA==')\",\"item_class\":\"IPM.Note\",\"subject\":\"test\",\"sensitivity\":\"Normal\",\"text_body\":\"test \\r\\n\",\"body\":\"test\",\"attachments\":[],\"datetime_received\":\"2021-01-19 14:31:30+00:00\",\"size\":\"47390\",\"categories\":\"None\",\"importance\":\"Normal\",\"in_reply_to\":\"None\",\"is_submitted\":\"False\",\"is_draft\":\"False\",\"is_from_me\":\"False\",\"is_resend\":\"False\",\"is_unmodified\":\"True\",\"headers\":[\"MessageHeader(name='Received', value='from xxxxx0502MB3111.eurprd05.prod.outlook.com (xxxx:10a6:4:96::xx) by xxxxx05MB5957.eurprd05.prod.outlook.com with HTTPS; Tue, 19 Jan 2021 14:31:29 +0000')\",\"MessageHeader(name='Received', value='from xxxxx0402CA0005.eurprd04.prod.outlook.com (xxxx:10a6:4:91::xx) by xxxxx0502MB3111.eurprd05.prod.outlook.com (xxxx:10a6:4:96::xx) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id xx.20.3763.xx; Tue, 19 Jan 2021 14:31:27 +0000')\"],\"datetime_sent\":\"2021-01-19 14:31:15+00:00\",\"datetime_created\":\"2021-01-19 14:31:29+00:00\",\"reminder_due_by\":\"None\",\"reminder_is_set\":\"False\",\"reminder_minutes_before_start\":\"0\",\"display_cc\":\"None\",\"display_to\":\"ג'יימס בונד\",\"has_attachments\":\"False\",\"culture\":\"en-US\",\"effective_rights\":\"EffectiveRights(create_associated=False, create_contents=False, create_hierarchy=False, delete=True, modify=True, read=True, view_private_items=True)\",\"last_modified_name\":\"Test User\",\"last_modified_time\":\"2021-01-19 14:31:30+00:00\",\"is_associated\":\"False\",\"web_client_read_form_query_string\":\"https://outlook.office365.com/owa/?ItemID=xxxxxxxxxxJjNjJkLTc3MzAtNGM5My04ZjM0LTZiYzVjMDI4ZTZlNQBGAAAAAADLc0XF%2FC8kRJTduC5WOJE%2FBwDby9ZjVdTJTJRS8jxrcA%2BoAAAAAAEMAADby9ZjVdTJTJRS8jxrcA%2BoAAEzKVFHAAA%3D&exvsurl=1&viewmodel=ReadMessageItem\",\"web_client_edit_form_query_string\":\"None\",\"conversation_id\":\"ConversationId(id='xxxxxxxxxxJjNjJkLTc3MzAtNGM5My04ZjM0LTZiYzVjMDI4ZTZlNQAQAC1GApVgHVlBtJWYxzGtVqU=')\",\"unique_body\":\"<html><body><div>\\r\\n<div>\\r\\n<div dir=\\\"ltr\\\">test</div>\\r\\n</div>\\r\\n</div>\\r\\n</body></html>\",\"sender\":\"Mailbox(name='Test User', email_address='test.user@siemplify.co', routing_type='SMTP', mailbox_type='OneOff')\",\"to_recipients\":[\"Mailbox(name=\\\"ג'יימס בונד\\\", email_address='test@test.onmicrosoft.com', routing_type='SMTP', mailbox_type='Mailbox')\"],\"cc_recipients\":\"None\",\"bcc_recipients\":\"None\",\"is_read_receipt_requested\":\"False\",\"is_delivery_receipt_requested\":\"False\",\"conversation_topic\":\"test\",\"author\":\"test.user@siemplify.co\",\"message_id\":\"<xxxxxxxxxxEce+P27nsq-V3Jc69iCW9tTrfy6zQpuqug0kBwh=g@mail.gmail.com>\",\"is_read\":\"True\",\"is_response_requested\":\"False\",\"references\":\"None\",\"reply_to\":\"None\",\"received_by\":\"Mailbox(name=\\\"ג'יימס בונד\\\", email_address='test@test.onmicrosoft.com', routing_type='SMTP', mailbox_type='Mailbox')\",\"received_representing\":\"Mailbox(name=\\\"ג'יימס בונד\\\", email_address='test@test.onmicrosoft.com', routing_type='SMTP', mailbox_type='Mailbox')\",\"account\":\"test@test.onmicrosoft.com\",\"plaintext_body\":\"test\",\"html_body\":\"<html><head>\\r\\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\"></head><body><div dir=\\\"ltr\\\">test</div></body></html>\",\"attachments_list\":{}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Exchange",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511698992392,
+    "Name": "Block Sender by Message ID",
+    "Parameters": [
+        {
+            "Name": "Move item to Junk folder?",
+            "Type": 1,
+            "DefaultValue": true,
+            "Value": true,
+            "IsMandatory": true,
+            "Description": "Should the action move the specified messages to the junk folder",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Message IDs",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Filter condition, specify emails with which message ids to find. Should accept comma separated list of message ids to mark as junk. If message id is provided, subject, sender and recipient filters are ignored.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Mailboxes list to perform on",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Filter condition, If you have a specific list of mailboxes you would like to conduct the operation on, for better timing, please provide them here. Should accept a comma separated list of mail addresses, to mark the messages as junk in. If a mailboxes list is provided, \"Perform Action in all Mailboxes\" parameter will be ignored.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Folder Name",
+            "Type": 0,
+            "DefaultValue": "Inbox",
+            "Value": "Inbox",
+            "IsMandatory": false,
+            "Description": "Mailbox folder to search email in. Parameter should also accept comma separated list of folders to move the item from",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "Subject Filter",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Filter condition, specify subject to search for emails",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "Sender Filter",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Filter condition, specify who should be the sender of needed emails",
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "Id": -1,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "Recipient Filter",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Filter condition, specify who should be the recipient of needed emails",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "Mark All Matching Emails",
+            "Type": 1,
+            "DefaultValue": false,
+            "Value": false,
+            "IsMandatory": false,
+            "Description": "Filter condition, specify if action should Mark all matched by criteria emails from the mailbox or Mark only first match.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "Perform action in all mailboxes",
+            "Type": 1,
+            "DefaultValue": false,
+            "Value": false,
+            "IsMandatory": false,
+            "Description": "If checked, move to junk and block sender emails in all mailboxes accessible with current impersonalization settings",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "How many mailboxes to process in a single batch",
+            "Type": 0,
+            "DefaultValue": 25,
+            "Value": 25,
+            "IsMandatory": false,
+            "Description": "In case \"Perform action in all mailboxes\" is checked, action works in batches, this parameter controls how many mailboxes action should process in single batch (single connection to mail server).",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "Time Frame (minutes)",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Filter condition, specify in what time frame in minutes should action look for emails.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

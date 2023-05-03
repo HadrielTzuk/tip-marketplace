@@ -1,0 +1,41 @@
+### Json Structure Params ###
+json_result_has_entities: yes
+entity_result_list_path: EntityResult
+
+### HTML Structure Params ###
+main_text_singular: USER
+main_text_plural: USERS
+
+import_svg_from_integration: yes
+
+### Table Structure Params ###
+table_data:
+  - header: ID
+    value:
+      keys_to_display:
+        - id
+
+  - header: Admin
+    value:
+      keys_to_display:
+        - is_domain_admin
+
+  - header: Network User
+    value:
+      keys_to_display:
+        - is_only_network_user
+
+  - header: First Seen
+    value:
+      keys_to_display:
+        - first_seen
+
+  - header: Last Seen
+    value:
+      keys_to_display:
+        - last_seen
+
+  - header: Logon Types
+    value:
+      keys_to_display:
+        - logon_types

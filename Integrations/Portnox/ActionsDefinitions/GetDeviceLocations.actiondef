@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1531990574695, 
+    "Creator": "admin", 
+    "Description": "Get the locations of a device", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Portnox", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1531990574695, 
+    "Name": "Get Device Locations", 
+    "Parameters": [], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import construct_csv, dict_to_flat\nfrom PortnoxManager import PortnoxManager\n\n\nSCRIPT_NAME = \"Portnox - GetServices\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    conf = siemplify.get_configuration(\"Portnox\")\n    portnox_manager = PortnoxManager(conf['Api Root'], conf['Username'],\n                                     conf['Password'], conf['Verify SSL'])\n\n    enriched_entities = []\n\n    for entity in siemplify.target_entities:\n        try:\n            device = None\n\n            if entity.entity_type == EntityTypes.ADDRESS:\n                device = portnox_manager.search_device('ip', entity.identifier)\n\n            elif entity.entity_type == EntityTypes.MACADDRESS:\n                device = portnox_manager.search_device('macAddress', entity.identifier)\n\n            if device:\n                device_id = device[\"id\"]\n                locations = portnox_manager.get_device_locations(device_id)\n\n                if locations:\n                    for location in locations:\n                        # Remove not relevant nested data\n                        if 'portIds' in location:\n                            del location['portIds']\n\n                    csv_output = construct_csv(locations)\n\n                    siemplify.result.add_entity_table(\n                        '{} - Locations'.format(\n                            entity.identifier),\n                        csv_output)\n\n                    enriched_entities.append(entity)\n\n        except Exception as e:\n            # An error occurred - skip entity and continue\n            siemplify.LOGGER.error(\n                \"An error occurred on entity: {}.\\n{}.\".format(\n                    entity.identifier, str(e)\n                ))\n\n    if enriched_entities:\n        entities_names = [entity.identifier for entity in enriched_entities]\n\n        output_message = 'Locations were found for the following entities:\\n' + '\\n'.join(\n            entities_names)\n\n        siemplify.update_entities(enriched_entities)\n\n    else:\n        output_message = 'No locations were found.'\n\n    siemplify.end(output_message, 'true')\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"MacAddress\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

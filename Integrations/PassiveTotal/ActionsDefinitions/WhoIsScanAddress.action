@@ -1,0 +1,23 @@
+{
+    "CreationTimeUnixTimeInMs": 1512724852318, 
+    "Creator": "admin", 
+    "Description": "RiskIQ address WHOIS query", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"contactEmail\": \"john_doe@example.com\", \"domain\": \"1.1.1.1\", \"name\": \"N/A\", \"billing\": {}, \"admin\": {\"organization\": \"Abuse\", \"email\": \"john_doe@example.com\", \"telephone\": \"1-650-253-0000\"}, \"text\": \"IANA WHOIS server for more information on IANA.\", \"registered\": \"2014-03-14T00:00:00.000-0700\", \"lastLoadedAt\": \"2018-06-22T10:35:52.694-0700\", \"whoisServer\": \"whois.arin.net\", \"telephone\": \"N/A\", \"registryUpdatedAt\": \"1991-11-02T00:00:00.000-0800\", \"nameServers\": [], \"tech\": {\"organization\": \"test LLC\", \"email\": \"john_doe@example.com\", \"telephone\": \"1-650-253-0000\"}, \"organization\": \"test LLC\", \"registrar\": \"Administered by ARIN\", \"zone\": {}, \"registrant\": {\"city\": \"Mountain View\", \"country\": \"US\", \"state\": \"CA\", \"street\": \"1600 Amphitheatre Parkway\", \"postalCode\": \"94043\", \"organization\": \"test LLC\"}}, \"Entity\": \"1.1.1.1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "PassiveTotal", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1512724852318, 
+    "Name": "WhoIs Scan Address", 
+    "Parameters": [], 
+    "Script": "# Imports\nfrom SiemplifyAction import *\nfrom PassiveTotalManager import PassiveTotal\n\n# Consts\nADDRESS = 'ADDRESS'\n\n# Action Contenta\nsiemplify = SiemplifyAction()\n\nconfiguration = siemplify.get_configuration('PassiveTotal')\npassive_total = PassiveTotal(user=configuration['Username'], key=configuration['Api_Key'])\nscope_entities = [entity for entity in siemplify.target_entities if entity.entity_type == ADDRESS\n                      and not entity.is_internal]\nentities_to_update = []\noutput_message = ''\nresult_value = False\n\nfor entity in scope_entities:\n        whois_dict = passive_total.get_whois_dict(entity.identifier)\n        whois_csv = passive_total.get_whois_csv(entity.identifier)\n        if len(whois_dict) and whois_dict:\n            entity.additional_properties.update(whois_dict)\n            entities_to_update.append(entity)\n            # Enrich location fields.\n            if 'WH_country' in whois_dict.keys():\n                entity.additional_properties['Country'] = whois_dict['WH_country']\n            if 'WH_city' in whois_dict.keys():\n                entity.additional_properties['City'] = whois_dict['WH_city']\n        # Display result output\n        if len(whois_csv) > 1 and whois_csv:\n            siemplify.result.add_entity_table(entity.identifier, whois_csv)\n\n# Update Entities\nsiemplify.update_entities(entities_to_update)\n# Arrange Action Output.\nif len(scope_entities) == 0:\n    output_message = 'No entities for scan.'\nelse:\n    if len(entities_to_update) == 0:\n        output_message = 'No entities were enriched.'\n    else:\n        for entity in entities_to_update:\n            if len(output_message) == 0:\n                output_message = entity.identifier\n            else:\n                output_message += ', {0}'.format(entity.identifier)\n        output_message += ' enriched by WhoIs RISKIQ.'\nsiemplify.end(output_message, result_value)\n", 
+    "ScriptResultName": "<Entity:Result>", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

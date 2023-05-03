@@ -1,0 +1,43 @@
+{
+    "Description": "Endpoint security software that defends every endpoint against every type of attack, at every stage in the threat lifecycle.",
+    "DisplayName": "SentinelOneV2",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/sentinelonev2",
+    "Identifier": "SentinelOneV2",
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAMAAACScZ2GAAAAwFBMVEX///9VLXjb0+OwnsH6+PueiLOBY5tiPYN9Xpj8+/3q5e9yUI9pRoijjbb39Pn+/v7e1uW6qsiLcKPz8PWum76ag6+PdKaDZp21pMWHa6BaM3x5WpX08vfYz+CyoMKplbuWfqxvTI3o4uychbHu6vLUyd3Cs850VJFlQIVdNn7s5/DRxtrEt9GgirR2VpJsSovw7fPl3urNwti9rsu0ocOUe6qSeKlgOoC4p8emkbni3Ojh2eesmL2YgK3HutOCZZwfcE6jAAAD6klEQVRo3u3V2W7aQBiG4e8zjjeM1wSwjSHsa9iXkKW9/7vq2CypWhKVtqoidZ4D+A9G8uvRyANJkiRJkiRJkiRJkiTpP2TebG5MfEZqN/shqYrKFJ9NFAFwB9SzP7uMv0rFH1L4AMDUOXAAJEzx14SFfog/NGUd3ahq0LjVxigzwZk7Gpn4A3XSRe6567m/uXlc+eQ+YtQQ4wNp4cBp78jdfQfvcL22hw8VODCzhXeGoRnJtobr3ZN+QBY0Vm7JjchbIacWyWmT1B1clpLP+FCVusibD/upCVfR+ISrNUXe3TmvdCNG5BrUFcAXyRBqntKCYI4soKUsAIzJ5ShEbVSDM+oAT4qFg7knxkOeCgy3OHhhDWYHUFa9U+hiMsle8TmF+at5t8hpvIHwUK4DzobCdAKkHCgJyeRZ5AlT3LGMOivpgGQ0B2AFFIwxsM52717HSdGAV7Hug/ammSdbmvH6mhgL+LNiGxcV39s9jRqOnBlpRDHZQ5exmPtkjAVpN1+xYYQX7kjNJpsunGyskOyKapEWT3CyGJrWNKgDCBkAI76q2YXATuhHhSvzfPKroiLTZjwWkRGJlmiaAxORGpKL/PCWUSATFaKSSwTcPQPzPmP0RF7LNnE2XYIvyFi0UAyQ2yQQrszDA8k4WDsIYy6R0Zk65BhCxOCJ9M55cQihyZJJtpAZstUVeRMDb4xHxM/I2T3VxoHb7HyU93g5D0+lhKTtzMn9ul5f+zobITmHsGegkMo5b4bMliURXc8Wr4b8ciHPLDrITSdeslBy3i69Nu9o7sfcOzzL8joQHn7Iax7zGl2e5XmWreKs33WKteO49OzSzcGteX2eqx6/BoklnuSJt7TUsCaaRpfyZsiUuW+Raba4o4bqI3UXsY8TZei2znmTloET96O86sW8rR5AeGRTtekj86UH7y0vJa2f8u5wPJyhWOxTN1GKcTKI4J3zfAy7yHk75/q8NlkFlAFfsRajilQn3ae3vAW5tuY/5AVokBMXY3KAVZYHWztfUOp3eQWU6CKz2+Jd9jHPoHHMayCnGuRQFPUdYEtyR+qt7LHW4VEzNyE5FUlfRdIQmQoN4CsZD8mik5Wq2e04W7VUq1ccdIA0DpEbloCN/bJcFmYa3hf8lLfCUWNK2nsXQlWkDNoh4NmHr8CtHcF5beplNOwbrOwKMg92OzuuRdIumUDPTkwIjf5s2jzcC9ZeRa6xBNCLNC2q4gOLQ17VUqw6ub/jQMWZU3sbQ/y62o+LO56F37PU2xuRB2BNbstGB59LzauQjwCqZLuFz8cKWALQZh2fk98DMFYgSZIkSZIkSZIkSZIkSf/CN3o+V3X2c2KwAAAAAElFTkSuQmCC",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "SentinelOneV2",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://{server}.SentinelOne.net/"
+        },
+        {
+            "IntegrationIdentifier": "SentinelOneV2",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Token",
+            "PropertyName": "API Token",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "SentinelOneV2",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\"><g><path d=\"M33.2,12.9c-1.3-0.7-2.7-1.4-4.3-1.7c0,11.2,0,22.3,0,33.6c0.2-0.1,0.4-0.2,0.6-0.3c1.4-0.9,2.8-1.8,4.2-2.6c0.4-0.3,0.6-0.6,0.6-1.1c0-8.6,0-17.2,0-25.8C34.3,13.9,34,13.4,33.2,12.9z\"/><path d=\"M21.1,11.4c-1.7,0.4-3.2,1.1-4.6,2.1c-0.2,0.1-0.3,0.5-0.3,0.7c0,9,0,18,0,27c0,0.4,0.1,0.6,0.5,0.8c1.3,0.8,2.6,1.6,3.9,2.4c0.3,0.2,0.6,0.4,1,0.6c0-11.3,0-22.4,0-33.6C21.4,11.4,21.2,11.4,21.1,11.4z\"/><path d=\"M14.2,7.2c-1.1,1.7-2.3,3.4-3.4,5.1c-1.2,2.2-1.8,4.5-1.7,7c0.1,4.9,0,9.7,0,14.6c0,0.4,0,0.8,0,1.1c0.5,3.3,3,4.8,5.7,6.1c0-11.5,0-23,0-34.4c-0.1,0-0.1-0.1-0.2-0.1C14.6,6.8,14.4,6.9,14.2,7.2z\"/><path d=\"M22.9,37.2c1.7,0,3.3,0,4.9,0c0-10.8,0-21.5,0-32.2c-1.7,0-3.3,0-4.9,0C22.9,15.7,22.9,26.4,22.9,37.2z\"/><path d=\"M40.8,17.5c0-3.9-1.5-7.1-4.3-9.8c-0.3-0.3-0.7-0.5-1.1-0.9c0,11.4,0,22.7,0,34.2c1.1-0.7,2.1-1.2,3.1-1.8c1.5-1,2.3-2.4,2.3-4.2C40.9,29.1,40.9,23.3,40.8,17.5z\"/></g></svg>",
+    "Version": 29.0
+}
+

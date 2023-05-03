@@ -1,0 +1,33 @@
+{
+    "CreationTimeUnixTimeInMs": 1543765113732,
+    "Creator": "Admin",
+    "Description": "Serialize a file to a base64 string.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"file_name\": \"example.txt\", \"base64_file_content\": \"SGVsbG8gV29ybGQ=\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "RemoteAgentUtilities",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543765113732,
+    "Name": "Serialize A File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1543765113743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Full path of the file",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543765113743,
+            "Name": "File Path",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0
+}

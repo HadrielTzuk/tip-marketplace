@@ -1,0 +1,83 @@
+{
+    "CreationTimeUnixTimeInMs": 1515630555632,
+    "Creator": "admin",
+    "Description": "Run command on a remote machine",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"ifconfig\": \"ens32: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>mtu1500\\ninet1.1.1.1netmask1.1.1.1broadcast1.1.1.1\\ninet6fe80: : 2156: 9c37: 7a0d: 87eprefixlen64scopeid0x20<link>\\nether00: 50: 56: b5: 70: e3txqueuelen1000(Ethernet)\\nRXpackets7448423bytes1077754116(1.0GiB)\\nRXerrors0dropped0overruns0frame0\\nTXpackets370155bytes44300304(42.2MiB)\\nTXerrors0dropped0overruns0carrier0collisions0\\n\\nlo: flags=73<UP,LOOPBACK,RUNNING>mtu65536\\ninet1.1.1.1netmask1.1.1.1\\ninet6: : 1prefixlen128scopeid0x10<host>\\nlooptxqueuelen1000(LocalLoopback)\\nRXpackets86bytes4780(4.6KiB)\\nRXerrors0dropped0overruns0frame0\\nTXpackets86bytes4780(4.6KiB)\\nTXerrors0dropped0overruns0carrier0collisions0\\n\\n\", \"output\": \"ens32: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>mtu1500\\ninet1.1.1.1netmask1.1.1.1broadcast1.1.1.1\\ninet6fe80: : 2156: 9c37: 7a0d: 87eprefixlen64scopeid0x20<link>\\nether00: 50: 56: b5: 70: e3txqueuelen1000(Ethernet)\\nRXpackets7448423bytes1077754116(1.0GiB)\\nRXerrors0dropped0overruns0frame0\\nTXpackets370155bytes44300304(42.2MiB)\\nTXerrors0dropped0overruns0carrier0collisions0\\n\\nlo: flags=73<UP,LOOPBACK,RUNNING>mtu65536\\ninet1.1.1.1netmask1.1.1.1\\ninet6: : 1prefixlen128scopeid0x10<host>\\nlooptxqueuelen1000(LocalLoopback)\\nRXpackets86bytes4780(4.6KiB)\\nRXerrors0dropped0overruns0frame0\\nTXpackets86bytes4780(4.6KiB)\\nTXerrors0dropped0overruns0carrier0collisions0\\n\\n\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SSH",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515630555632,
+    "Name": "Run Command",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516072646103,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Remote server address(e.g: x.x.x.x).",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072646103,
+            "Name": "Remote Server",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072646103,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072646103,
+            "Name": "Remote Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072646103,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072646103,
+            "Name": "Remote Password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072646103,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516072646103,
+            "Name": "Remote Port",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072646103,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Command content(e.g: ifconfig).",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072646103,
+            "Name": "Command",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "results",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

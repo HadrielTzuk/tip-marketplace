@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1514738151972, 
+    "Creator": "admin", 
+    "Description": "Get list of all users groups in Active Directory", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [\"Domain Users\"], \"Entity\": \"username@example.local\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "ActiveDirectory", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1514738151972, 
+    "Name": "List User Groups", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Type": 0, 
+    "Version": 2.0
+}

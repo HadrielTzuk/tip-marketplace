@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - \"Harmony Mobile\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "HarmonyMobile",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1628667444,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9299"
+    },
+    {
+        "ChangeDescription": "Alerts Connector - Updated the logic to support latest API changes.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Alerts Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1645613624,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11224"
+    }
+]

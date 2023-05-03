@@ -1,0 +1,74 @@
+### Json Structure Params ###
+json_result_has_entities: yes
+entity_result_list_path: EntityResult
+
+### HTML Structure Params ###
+main_text_singular: RELATED ALERT
+main_text_plural: RELATED ALERTS
+
+import_svg_from_integration: yes
+
+### Table Structure Params ###
+table_data:
+  - header: Title
+    th_style:
+      width: 10%
+    value:
+      keys_to_display:
+        - title
+
+  - header: Status
+    th_style:
+      width: 10%
+    value:
+      keys_to_display:
+        - status
+
+  - header: Category
+    th_style:
+      width: 10%
+    value:
+      keys_to_display:
+        - category
+
+  - header: Description
+    th_style:
+      width: 20%
+    value:
+      keys_to_display:
+        - description
+
+  - header: Severity
+    th_style:
+      width: 10%
+    value:
+      keys_to_display:
+        - severity
+
+  - header: First Event Time
+    th_style:
+      width: 10%
+    value:
+      keys_to_display:
+        - first_event_time
+
+  - header: Last Event Time
+    th_style:
+      width: 10%
+    value:
+      keys_to_display:
+        - last_event_time
+
+  - header: Alert ID
+    th_style:
+      width: 10%
+    value:
+      keys_to_display:
+        - id
+
+  - header: Incident ID
+    th_style:
+      width: 10%
+    value:
+      keys_to_display:
+        - incident_id

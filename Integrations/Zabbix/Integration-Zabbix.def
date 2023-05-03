@@ -1,0 +1,49 @@
+{
+    "Description": "Zabbix is an enterprise open source monitoring software for networks and applications.\r\nIt is designed to monitor and track the status of various network services, servers, and other network hardware.",
+    "DisplayName": "Zabbix",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/zabbix",
+    "Identifier": "Zabbix",
+    "Categories": [
+        "IT & Infrastructure",
+        "Free to use"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Zabbix",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": 5,
+            "Value": "http://{IP}/zabbix"
+        },
+        {
+            "IntegrationIdentifier": "Zabbix",
+            "IsMandatory": true,
+            "PropertyDisplayName": "User name",
+            "PropertyName": "Username",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Zabbix",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Zabbix",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M4.4,3.7v42h42v-42H4.4z M35.7,40.1H15.2v-2.9L30.6,15H16.1v-3.3h19.2V15L20.1,36.7h15.7V40.1z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 9.0,
+    "MarketingDisplayName": "Zabbix"
+}

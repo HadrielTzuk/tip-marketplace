@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1542011918491, 
+    "Creator": "Admin", 
+    "Description": "Add IP address to an address set.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "JuniperVSRX", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1542011918491, 
+    "Name": "Add IP To Address Set", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542011918491, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": null, 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1542011918491, 
+            "Name": "Address Set Name", 
+            "Type": 0, 
+            "Value": null
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1542011918491, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": null, 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1542011918491, 
+            "Name": "Zone Name", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom JuniperVSRXManager import JuniperVSRXManager\n\nPROVIDER_NAME = 'JuniperVSRX'\nACTION_NAME = 'JuniperVSRX Add IP To Address Set'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    config = siemplify.get_configuration(PROVIDER_NAME)\n    address = config['Address']\n    port = config['Port']\n    username = config['Username']\n    password = config['Password']\n\n    juniper_manager = JuniperVSRXManager(address, port, username, password)\n    result_value = False\n    errors = []\n    success_entities = []\n\n    # Parameters.\n    address_set_name = siemplify.parameters.get('Group Name')\n    zone_name = siemplify.parameters.get('Zone Name')\n\n    address_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.ADDRESS]\n\n    for entity in address_entities:\n        try:\n            juniper_manager.add_ip_to_address_set(entity.identifier, address_set_name, zone_name)\n            success_entities.append(entity)\n        except Exception as err:\n            error_message = 'Error adding address \"{0}\" to address-set \"{1}\", ERROR: {2}'.format(\n                entity.identifier,\n                address_set_name,\n                err.message\n            )\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    juniper_manager.commit_config_changes()\n    juniper_manager.close_session()\n\n    if success_entities:\n        output_message = '{0} were added to address-set \"{1}\"'.format(\n            \", \".join([entity.identifier for entity in success_entities]),\n            address_set_name\n        )\n        result_value = True\n    else:\n        output_message = 'No entities were added to address-set \"{0}\"'.format(address_set_name)\n\n    if errors:\n        output_message = '{0}, \\n \\n Errors: {1}'.format(\n            output_message,\n            \"\\n \".join(errors)\n        )\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 2.0
+}

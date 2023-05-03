@@ -1,0 +1,432 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 13.8</h2><h5>Published on 17 November, 2020</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     AlienVaultAnywhere
+    </b>
+   </li>
+   <ul>
+    <li>
+     AlienVault USM Anywhere
+    </li>
+    <ul>
+     <li>
+      Updated the default value of "Use Suppressed Filter" to be "True" , in order to maintain the previous connector logic, working with the "Show Suppressed" filter.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     CiscoOrbital
+    </b>
+   </li>
+   <ul>
+    <li>
+     CiscoOrbital
+    </li>
+    <ul>
+     <li>
+      NEW! NEW! Cisco Orbital integration
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Cuckoo
+    </b>
+   </li>
+   <ul>
+    <li>
+     Cuckoo
+    </li>
+    <ul>
+     <li>
+      Added the option to add CA Certificate file to the integration configuration page. Please note - the certificate file should be parsed into base64 string and put into the configuration parameter for now. It will be changed to accept a file soon.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     EmailV2
+    </b>
+   </li>
+   <ul>
+    <li>
+     EmailV2
+    </li>
+    <ul>
+     <li>
+      Email V2 - Update - Updated the integration's code to work with Python version 3.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     IBoss
+    </b>
+   </li>
+   <ul>
+    <li>
+     iBoss
+    </li>
+    <ul>
+     <li>
+      Fixed a bug, where "Cloud API Root" and "Account API Root" were not used in the integration.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Office365ManagementAPI
+    </b>
+   </li>
+   <ul>
+    <li>
+     Office365ManagementAPI
+    </li>
+    <ul>
+     <li>
+      NEW! New O365 Management API integration added.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ServiceDeskPlusV3
+    </b>
+   </li>
+   <ul>
+    <li>
+     ServiceDeskPlusV3
+    </li>
+    <ul>
+     <li>
+      NEW! New Integration - Added new integration, ServiceDesk Plus V.3.0, to support newest API version from ServiceDesk Plus.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ServiceNow
+    </b>
+   </li>
+   <ul>
+    <li>
+     ServiceNow
+    </li>
+    <ul>
+     <li>
+      Added "Verify SSL" parameter to the integration
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     SolarWindsOrion
+    </b>
+   </li>
+   <ul>
+    <li>
+     SolarWindsOrion
+    </li>
+    <ul>
+     <li>
+      NEW! NEW! SolarWinds Orion integration
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ThreatQ
+    </b>
+   </li>
+   <ul>
+    <li>
+     ThreatQ
+    </li>
+    <ul>
+     <li>
+      Added new action parameter to enrichment actions that allows analysts to decide, if whitelisted entities should be marked as suspicious.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     EmailV2
+    </b>
+   </li>
+   <ul>
+    <li>
+     WaitForEmailFromUser
+    </li>
+    <ul>
+     <li>
+      Updated Wait for Email from User action description.
+     </li>
+     <li>
+      Email V2 - Wait For Email From User - Updated Action description regarding timeout behavior.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Exchange
+    </b>
+   </li>
+   <ul>
+    <li>
+     GetMailEMLData
+    </li>
+    <ul>
+     <li>
+      Exchange - Bug Fix - Get Mail EML File Action - Updated the presented default value of "Folder Name" to "Inbox"
+     </li>
+    </ul>
+    <li>
+     ExtractEmlData
+    </li>
+    <ul>
+     <li>
+      Exchange - Bug Fix - Extract EML Data - Added support for iso-8859-8-i encoded files.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     McAfeeTIEDXL
+    </b>
+   </li>
+   <ul>
+    <li>
+     Get File Reputation
+    </li>
+    <ul>
+     <li>
+      Added the ability to enrich with all reputations using a new parameter 'Enrich with all services'
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     MitreAttck
+    </b>
+   </li>
+   <ul>
+    <li>
+     Get Technique Details
+    </li>
+    <ul>
+     <li>
+      Added support for multiple techniques and insight creation in action "Get Technique Details"
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     SentinelOneV2
+    </b>
+   </li>
+   <ul>
+    <li>
+     Create Hash Blacklist Record
+    </li>
+    <ul>
+     <li>
+      Added the option to "add hash to blacklist" to the global blacklist via the new parameter "Tenant".
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ServiceNow
+    </b>
+   </li>
+   <ul>
+    <li>
+     CreateIncident
+    </li>
+    <ul>
+     <li>
+      Added an ability to work with custom fields in "Create Incident" action.
+     </li>
+    </ul>
+    <li>
+     UpdateIncident
+    </li>
+    <ul>
+     <li>
+      Added an ability to work with custom fields in "Update Incident" action.
+     </li>
+    </ul>
+    <li>
+     CreateRecord
+    </li>
+    <ul>
+     <li>
+      Added description in "Create Record" action.
+     </li>
+    </ul>
+    <li>
+     UpdateRecord
+    </li>
+    <ul>
+     <li>
+      Added description in action "Update Record"
+     </li>
+    </ul>
+    <li>
+     AddAttachment
+    </li>
+    <ul>
+     <li>
+      Added support for multiple file paths in "Add Attachment" action.
+     </li>
+    </ul>
+    <li>
+     GetCMDBRecordDetails
+    </li>
+    <ul>
+     <li>
+      Added ability to process multiple records in action "Get CMDB Records".
+     </li>
+    </ul>
+    <li>
+     ListCMDBRecords
+    </li>
+    <ul>
+     <li>
+      Fixed a bug, where in action "List CMDB Records" JSON result is created incorrectly.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Slack
+    </b>
+   </li>
+   <ul>
+    <li>
+     Rename Channel
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action "Rename Channel"
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     CrowdStrikeFalcon
+    </b>
+   </li>
+   <ul>
+    <li>
+     Crowdstrike Falcon Streaming Events Connector
+    </li>
+    <ul>
+     <li>
+      Fixed a bug, where Client Secret is shown in plaintext.
+     </li>
+     <li>
+      Fixed a bug, where connector will hang and not ingest new events.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ElasticSearch
+    </b>
+   </li>
+   <ul>
+    <li>
+     ElasticSearchConnector
+    </li>
+    <ul>
+     <li>
+      Improved connector's time handling mechanism to support ElasticSearch timestamp format.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ElasticSearchV7
+    </b>
+   </li>
+   <ul>
+    <li>
+     ElasticSearchV7Connector
+    </li>
+    <ul>
+     <li>
+      Improved connector's time handling mechanism to support ElasticSearch timestamp format.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     EmailV2
+    </b>
+   </li>
+   <ul>
+    <li>
+     Generic IMAP Email Connector
+    </li>
+    <ul>
+     <li>
+      Added ability to specify regexes to exclude emails from ingestion in Generic IMAP Email Connector.
+     </li>
+     <li>
+      Email V2 - Connector - Updated naming formats for file name and file hash used for email attachments files in Generic IMAP Email Connector
+Note - this is a regressive change. If you have used the previous naming convention this change will affect your workflow.
+The change fixes the file name and file hash names to be usable in playbooks, for example: file_1_name, file_2_name - to - file_name_1 , file_name_2
+Kindly update the relevant processes accordingly.
+     </li>
+     <li>
+      Added ability to specify additional headers to extract from processed emails in Generic IMAP Email Connector.
+     </li>
+     <li>
+      To Simplify events, created for attached mail files by Generic IMAP Email Connector, additional field is added: original_message_id, that has the message_id of “parent“ email, received to the monitoring mailbox.
+     </li>
+     <li>
+      Added support for .ics mail invite files analysis in Generic IMAP Email Connector.
+     </li>
+     <li>
+      Fixed url extraction for Siemplify event in the Generic IMAP Email Connector.
+     </li>
+     <li>
+      Updated information extraction from mail file attachments in Generic Imap Email Connector.
+     </li>
+     <li>
+      Fixed event name type in Generic IMAP Email Connector.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Office365CloudAppSecurity
+    </b>
+   </li>
+   <ul>
+    <li>
+     Office 365 CloudApp Security Connector
+    </li>
+    <ul>
+     <li>
+      Fixed the bug when no activities were found, an alert with empty events was created.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

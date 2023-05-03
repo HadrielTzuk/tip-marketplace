@@ -1,0 +1,60 @@
+{
+    "CreationTimeUnixTimeInMs": 1519822593041,
+    "Creator": "admin",
+    "Description": "Delete a file from a host running VMware CB Cloud Agent based on the Siemplify Host or IP entity. Note: The File name can be provided either as a Siemplify File entity (artifact) or as an action input parameter. If the File name is passed to action both as an entity and input parameter - action will be executed on the input parameter. File name is case insensitive. File name will be appended to Remote Directory Path to get the resulting file paths that CB Cloud API accepts. File Name also can be specified as a \"full path\" having both path and a file name, or having file name and file path as separate parameters",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"api_v6\",\"EntityResult\":[{\"status\":\"COMPLETE\",\"values\":[],\"id\":3,\"name\":\"delete file\",\"filename\":\"filename_v6\",\"result_code\":0,\"result_type\":\"WinHresult\",\"result_desc\":\"\",\"sub_keys\":[],\"files\":[],\"input\":{\"name\":\"delete file\",\"object\":\"file path\"},\"create_time\":\"2021-08-10T06:53:30Z\",\"finish_time\":\"2021-08-10T06:53:30Z\",\"processes\":[],\"step\":\"Session Check\",\"reason\":\"Max retry for Session Check reached.\",\"is_success\":false}]},{\"Entity\":\"api_v3\",\"EntityResult\":[{\"obj\":{\"name\":\"delete file\",\"object\":\"file path\"},\"id\":4,\"name\":\"delete file\",\"filename\":\"filename_v3\",\"username\":\"None\",\"creation_time\":1628578584,\"completion_time\":1628578585,\"result_code\":0,\"result_type\":\"WinHresult\",\"result_desc\":\"\",\"status\":\"complete\",\"files\":[],\"processes\":[],\"step\":\"Session Check\",\"reason\":\"Max retry for Session Check reached.\",\"is_success\":false}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CBLiveResponse",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519822593041,
+    "Name": "Delete File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the remote directory path to file to delete. Example: C:\\TMP\\",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Remote Directory Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the file name to delete. File name is case insensitive. File Name can be specified as a \"full path\" having both path and a file name, in that case Remote Directory Path parameter will not be used.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "File Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "20",
+            "Description": "How many attempts action should make to get active session for the entity. Check is made every 2 seconds.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Check for active session x times",
+            "Type": 0,
+            "Value": "20"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\", \"FILENAME\"]}",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

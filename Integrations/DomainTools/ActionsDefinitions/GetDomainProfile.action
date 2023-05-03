@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1515352855080, 
+    "Creator": "admin", 
+    "Description": "Enrich external domain entity with DomainTools threat Intelligence data and return CSV output", 
+    "Id": -1, 
+    "IntegrationIdentifier": "DomainTools", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1515352855080, 
+    "Name": "Get Domain Profile", 
+    "Parameters": [], 
+    "ScriptResultName": "is_succeed", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

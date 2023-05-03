@@ -1,0 +1,44 @@
+{
+    "Description": "Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. This means customers of all sizes and industries can use it to store and protect any amount of data for a range of use cases, such as websites, mobile applications, backup and restore, archive, enterprise applications, IoT devices, and big data analytics. Amazon S3 provides easy-to-use management features so you can organize your data and configure finely-tuned access controls to meet your specific business, organizational, and compliance requirements. Amazon S3 is designed for 99.999999999% (11 9's) of durability, and stores data for millions of applications for companies all around the world.",
+    "DisplayName": "AWS S3",
+    "Identifier": "AWSS3",
+    "PythonVersion": 2,
+    "Categories": [
+        "Cloud Storage",
+        "Cloud",
+        "Operational"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "AWSS3",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Access Key ID",
+            "PropertyName": "AWS Access Key ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AWSS3",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Secret Key",
+            "PropertyName": "AWS Secret Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AWSS3",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Default Region",
+            "PropertyName": "AWS Default Region",
+            "PropertyType": "2",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"><g><g><path d=\"M10.3,12c0,0.1,0.1,0.2,0.1,0.3c0.1,0.1,0.1,0.1,0.3,0.1v0h0.6c0.1,0,0.2,0,0.3-0.1c0.1-0.1,0.1-0.1,0.1-0.3l1.1-4.5l1.1,4.5c0,0.1,0.1,0.2,0.1,0.3c0.1,0.1,0.2,0.1,0.3,0.1h0.6c0.1,0,0.2,0,0.3-0.1c0.1,0,0.1-0.1,0.1-0.3L17,6.6c0-0.1,0-0.1,0.1-0.2c0,0,0-0.1,0-0.1c0-0.1-0.1-0.2-0.2-0.2h-0.7c-0.1,0-0.2,0-0.3,0.1c-0.1,0-0.1,0.1-0.1,0.3l-1.2,4.7l-1.1-4.7c0-0.1-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.3-0.1h-0.6c-0.1,0-0.2,0-0.3,0.1c-0.1,0-0.1,0.1-0.1,0.3L11,11.1L9.8,6.5c0-0.1-0.1-0.2-0.1-0.3C9.6,6.2,9.6,6.2,9.4,6.2H8.7c-0.1,0-0.2,0.1-0.2,0.2c0,0.1,0,0.1,0.1,0.3L10.3,12z M17.8,12.2c0.2,0.1,0.5,0.2,0.8,0.3c0.3,0.1,0.7,0.1,1.1,0.1c0.4,0,0.7-0.1,1-0.1c0.3-0.1,0.6-0.2,0.8-0.4c0.2-0.2,0.4-0.4,0.5-0.6c0.1-0.2,0.2-0.5,0.2-0.8c0-0.4-0.1-0.7-0.3-1c-0.2-0.3-0.6-0.5-1.1-0.7l-1-0.3c-0.4-0.1-0.6-0.3-0.8-0.4c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.3,0.1-0.5,0.3-0.6s0.5-0.2,0.9-0.2c0.5,0,0.9,0.1,1.3,0.3c0.1,0.1,0.2,0.1,0.3,0.1c0.1,0,0.2-0.1,0.2-0.2V6.8c0-0.1,0-0.2-0.1-0.2c0-0.1-0.1-0.1-0.2-0.2c-0.1,0-0.2-0.1-0.3-0.1c-0.1,0-0.3-0.1-0.4-0.1c-0.2,0-0.3-0.1-0.5-0.1c-0.2,0-0.3,0-0.5,0c-0.3,0-0.6,0-0.9,0.1c-0.3,0.1-0.5,0.2-0.7,0.4c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.8c0,0.4,0.1,0.7,0.3,1c0.2,0.3,0.6,0.5,1.1,0.7l1,0.3c0.3,0.1,0.6,0.2,0.7,0.4c0.1,0.1,0.2,0.3,0.2,0.5c0,0.3-0.1,0.5-0.4,0.7c-0.2,0.2-0.6,0.2-1,0.2c-0.3,0-0.5,0-0.8-0.1c-0.3-0.1-0.5-0.1-0.8-0.2c-0.1,0-0.1-0.1-0.2-0.1c0,0-0.1,0-0.1,0c-0.1,0-0.2,0.1-0.2,0.2v0.4c0,0.1,0,0.1,0,0.2C17.6,12,17.7,12.1,17.8,12.2z M6,8.8c-0.3,0-0.5-0.1-0.7-0.1c-0.7,0-1.3,0.2-1.7,0.5s-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.5,1.3c0.3,0.3,0.8,0.5,1.4,0.5c0.8,0,1.5-0.3,2.1-1C6.9,11.7,7,11.9,7,12c0.1,0.1,0.2,0.2,0.3,0.3c0.1,0.1,0.1,0.1,0.2,0.1c0.1,0,0.1,0,0.2-0.1l0.4-0.3c0.1-0.1,0.1-0.1,0.1-0.2c0-0.1,0-0.1-0.1-0.2c-0.1-0.2-0.2-0.4-0.2-0.5c-0.1-0.2-0.1-0.4-0.1-0.6h0V8.3c0-0.8-0.2-1.3-0.6-1.7C7,6.2,6.3,6,5.5,6c-0.4,0-0.7,0-1.1,0.1C4.1,6.2,3.8,6.3,3.5,6.5c-0.1,0-0.2,0.1-0.2,0.1c0,0.1-0.1,0.1-0.1,0.2v0.3c0,0.1,0,0.2,0.1,0.2c0,0,0.1,0,0.1,0c0.1,0,0.1,0,0.2-0.1C4,7.2,4.3,7.1,4.5,7C4.8,7,5.1,7,5.3,7c0.5,0,0.9,0.1,1.1,0.3c0.2,0.2,0.3,0.6,0.3,1.1v0.5C6.5,8.8,6.2,8.8,6,8.8z M6.8,10c0,0.2,0,0.4-0.1,0.6c0,0.2-0.1,0.3-0.2,0.4c-0.2,0.2-0.4,0.4-0.7,0.4c-0.3,0.1-0.5,0.1-0.7,0.1c-0.3,0-0.6-0.1-0.8-0.3c-0.2-0.2-0.3-0.4-0.3-0.7c0-0.3,0.1-0.6,0.3-0.8c0.2-0.2,0.6-0.3,1-0.3c0.2,0,0.4,0,0.7,0c0.2,0,0.4,0.1,0.6,0.1V10z M20.7,15.4c-2.6,1.1-5.4,1.6-7.9,1.6c-3.8,0-7.4-1-10.4-2.8c-0.3-0.2-0.4,0.1-0.2,0.3c2.7,2.5,6.4,4,10.4,4c2.9,0,6.2-0.9,8.5-2.6C21.4,15.7,21,15.3,20.7,15.4z M22.9,14.1c-0.3-0.3-2.4-0.6-3.7,0.3c-0.2,0.1-0.2,0.3,0.1,0.3c0.8-0.1,2.4-0.3,2.7,0.1c0.3,0.4-0.3,1.9-0.6,2.6c-0.1,0.2,0.1,0.3,0.3,0.1C22.8,16.6,23.2,14.4,22.9,14.1z\"/></g></g></svg>",
+    "Version": 2.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/aws-s3",
+    "MarketingDisplayName": "Amazon S3"
+}

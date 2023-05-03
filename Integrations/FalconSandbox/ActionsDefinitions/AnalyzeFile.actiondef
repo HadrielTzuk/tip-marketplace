@@ -1,0 +1,60 @@
+{
+    "CreationTimeUnixTimeInMs": 1523175419910,
+    "Creator": "admin",
+    "Description": "Submit a file for analysis and fetch report",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"target_url\": null, \"threat_score\": null, \"environment_id\": 100, \"total_processes\": 0, \"threat_level\": null, \"size\": 31261, \"job_id\": \"5c4435ef7ca3e109e640b709\", \"vx_family\": null, \"interesting\": false, \"error_origin\": null, \"state\": \"IN_QUEUE\", \"mitre_attcks\": [], \"certificates\": [], \"hosts\": [], \"sha256\": \"26d3c8656a83b06b293b15251617fe2c2c493f842a95b3d9b2ee45b3209d5fac\", \"type\": \"PNG image data, 1200 x 413, 8-bit/color RGBA, non-interlaced\", \"compromised_hosts\": [], \"extracted_files\": [], \"analysis_start_time\": \"2019-01-20T02:50:01-06:00\", \"tags\": [], \"imphash\": null, \"total_network_connections\": 0, \"av_detect\": null, \"total_signatures\": 0, \"submit_name\": \"Proofpoint_R_Logo (1).png\", \"ssdeep\": null, \"classification_tags\": [], \"md5\": \"48703c5d4ea8dc2099c37ea871b640ef\", \"processes\": [], \"sha1\": \"5b30e297b54ef27ffcda06aa212b5aa6c5424e1c\", \"url_analysis\": false, \"sha512\": \"01f48fa1671cdc9e4d6866b9b237430f1b9b7093cbbed57fb010dc3db84a754a7a0457c5fd968d4e693ca74bdc1c7f15efb55f2af2ea236354944cffc8d4efd8\", \"file_metadata\": null, \"environment_description\": \"Windows 7 32 bit\", \"verdict\": null, \"domains\": [], \"error_type\": null, \"type_short\": [\"img\"]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "FalconSandbox",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1523175419910,
+    "Name": "Analyze File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1523175419910,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The full path of the file to analyze",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1523175419910,
+            "Name": "File Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523175419910,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Environment ID. e.g. 100 (100=Windows 7 32 bit)",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1523175419910,
+            "Name": "Environment",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523175419910,
+            "CustomActionId": -1,
+            "DefaultValue": "true",
+            "Description": "If enabled, action will fetch report related to the attachment. Note: this feature requires a premium key.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523175419910,
+            "Name": "Include Report",
+            "Type": 1,
+            "Value": "true"
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_INPROGRESS\nfrom FalconSandboxManager import FalconSandboxManager\nimport sys\nimport base64\nimport json\n\nSCRIPT_NAME = \"Falcon Sandbox - AnalyzeFile\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    configurations = siemplify.get_configuration('FalconSandbox')\n    key = configurations['Api Key']\n\n    file_path = siemplify.parameters['File Path']\n    env_id = siemplify.parameters['Environment']\n\n    falcon_manager = FalconSandboxManager(key)\n    siemplify.LOGGER.info(\"Connected to Falcon Sandbox\")\n\n    job_id, sha256 = falcon_manager.submit_file(file_path, env_id)\n\n    if falcon_manager.is_job_completed(job_id):\n        siemplify.LOGGER.info(\"Job {} is completed.\".format(job_id))\n\n        reports = falcon_manager.get_scan_info(sha256, env_id)\n        max_threat_score = 0\n\n        for index, report in enumerate(reports, 1):\n            threat_score = report['threat_score']\n            max_threat_score = max(threat_score, max_threat_score)\n\n            siemplify.LOGGER.info(\"Threat Score: {}\".format(threat_score))\n\n            siemplify.LOGGER.info(\"Attaching JSON report\")\n            siemplify.result.add_json(\n                \"Falcon Sandbox Report {} - Job {} - Environment {}\".format(\n                    index, job_id, env_id),\n                json.dumps(report))\n\n        mist_report_name, misp_report = falcon_manager.get_report(job_id,\n                                                                  type='misp')\n\n        # Not working in server - throws 500\n        # misp_json_report = falcon_manager.get_report(job_id, type='misp_json')\n\n        siemplify.result.add_attachment(\n            \"Falcon Sandbox Misp Report {}\".format(index),\n            mist_report_name,\n            base64.b64encode(misp_report)\n        )\n\n        # siemplify.result.add_attachment(\n        #     \"Falcon Sandbox Misp JSON Report\",\n        #     \"misp_json_report.json\",\n        #     base64.b64encode(misp_json_report)\n        # )\n\n        siemplify.end(\n            \"Analysis completed - {}.\\nMax Threat Score: {}\".format(\n                job_id, max_threat_score),\n            json.dumps(threat_score), EXECUTION_STATE_COMPLETED)\n\n    else:\n        siemplify.end(\"Job {} in progress.\".format(job_id),\n                      json.dumps((job_id, sha256)),\n                      EXECUTION_STATE_INPROGRESS)\n\n\ndef async_analysis():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    siemplify.LOGGER.info(\"Start async\")\n\n    env_id = siemplify.parameters['Environment']\n\n    try:\n        configurations = siemplify.get_configuration('FalconSandbox')\n        key = configurations['Api Key']\n\n        job_id, sha256 = json.loads(siemplify.parameters[\"additional_data\"])\n\n        falcon_manager = FalconSandboxManager(key)\n        siemplify.LOGGER.info(\"Connected to Falcon Sandbox\")\n\n        if falcon_manager.is_job_completed(job_id):\n            siemplify.LOGGER.info(\"Job {} is completed.\".format(job_id))\n\n            reports = falcon_manager.get_scan_info(sha256, env_id)\n            max_threat_score = 0\n\n            for report in reports:\n                threat_score = report['threat_score']\n                max_threat_score = max(threat_score, max_threat_score)\n\n                siemplify.LOGGER.info(\"Threat Score: {}\".format(threat_score))\n\n                siemplify.LOGGER.info(\"Attaching JSON report\")\n                siemplify.result.add_json(\n                    \"Falcon Sandbox Report - Job {} - Environment {}\".format(\n                        job_id, env_id),\n                    json.dumps(report))\n\n            mist_report_name, misp_report = falcon_manager.get_report(job_id,\n                                                                      type='misp')\n\n            # misp_json_report = falcon_manager.get_report(job_id,\n            #                                              type='misp_json')\n\n            siemplify.result.add_attachment(\n                \"Falcon Sandbox Misp Report\",\n                mist_report_name,\n                base64.b64encode(misp_report)\n            )\n            # siemplify.result.add_attachment(\n            #     \"Falcon Sandbox Misp JSON Report\",\n            #     \"misp_json_report.json\",\n            #     base64.b64encode(misp_json_report)\n            # )\n\n            siemplify.end(\n                \"Analysis completed - {}.\\nMax Threat Score: {}\".format(\n                    job_id, max_threat_score),\n                json.dumps(threat_score), EXECUTION_STATE_COMPLETED)\n\n\n        else:\n            siemplify.LOGGER.info(\"Job {} in progress.\".format(job_id))\n            siemplify.end(\"Job {} in progress.\".format(job_id),\n                          json.dumps((job_id, sha256)),\n                          EXECUTION_STATE_INPROGRESS)\n\n    except Exception as e:\n        # Log the exception to file and raise it to client\n        siemplify.LOGGER._log.exception(e)\n        raise\n\n\nif __name__ == '__main__':\n    if len(sys.argv) < 3 or sys.argv[2] == 'True':\n        main()\n    else:\n        async_analysis()\n",
+    "ScriptResultName": "max_threat_score",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}",
+    "IsAsync": true
+}

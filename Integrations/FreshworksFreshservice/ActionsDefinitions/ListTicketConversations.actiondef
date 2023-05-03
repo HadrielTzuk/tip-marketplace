@@ -1,0 +1,70 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583, 
+    "Creator": "admin", 
+    "Description": "List Freshservice ticket conversations based on the specified search criteria. Note that action is not working on Siemplify entities.",
+    "Id": -1, 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"conversations\":[{\"id\":\"XXXXXXXX\",\"user_id\":\"XXXXXXXX\",\"to_emails\":[\"XXXX-XXXX@XXXXXXXXXXXX.XXXXXXXX.XXX\"],\"body\":\"XXXXXXXX\",\"body_text\":\"XXXXXXXX\",\"ticket_id\":\"X\",\"created_at\":\"XXXXXXXX\",\"updated_at\":\"XXXXXXXX\",\"incoming\":\"XXXX\",\"private\":\"XXXX\",\"support_email\":\"XXXX@XXXXXXXXXXXX.XXXXXXXX.XXX\",\"source\":\"X\",\"from_email\":\"XXXX@XXXXXXXXXXXX.XXXXXXXX.XXX\",\"cc_emails\":[],\"bcc_emails\":[],\"attachments\":[],\"user_email\":\"XXX.XXXXXXXX@XXXXX.XX\",\"source_name\":\"XXXX\"}]}]", 
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "FreshworksFreshservice", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530451212583, 
+    "Name": "List Ticket Conversations",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify ticket ID to return conversations for.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Ticket ID", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": 30, 
+            "Description": "Specify how many ticket conversations should be returned per page for Freshservice pagination.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Rows per Page", 
+            "Type": 0, 
+            "Value": 30
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": 1, 
+            "Description": "Specify starting from which page ticket conversations should be returned with Freshservice pagination.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Start at Page", 
+            "Type": 0, 
+            "Value": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": 30, 
+            "Description": "Specify how many ticket conversations action should return in total.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Max Rows to Return", 
+            "Type": 0, 
+            "Value": 30
+        }
+    ], 
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

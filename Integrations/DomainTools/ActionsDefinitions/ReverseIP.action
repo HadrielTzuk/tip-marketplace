@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1515580629513, 
+    "Creator": "admin", 
+    "Description": "Find domain names that share a particular IP address", 
+    "Id": -1, 
+    "IntegrationIdentifier": "DomainTools", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1515580629513, 
+    "Name": "Reverse IP", 
+    "Parameters": [], 
+    "ScriptResultName": null, 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

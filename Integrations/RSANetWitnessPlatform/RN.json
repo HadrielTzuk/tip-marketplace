@@ -1,0 +1,110 @@
+[
+    {
+        "ChangeDescription": "NEW! RSA NetWitness Platform integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "RSA NetWitness Platform",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1600771916,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4821"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "RSA NetWitness Platform",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": " Added new connector \"Incidents Connector\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "RSA NetWitness Platform - Incidents Connector",
+        "ItemType": "Connector",
+        "New": true,
+        "PublishTime": 1612343014,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7005"
+    },
+    {
+        "ChangeDescription": "Improved \"Incidents Connector\". Added support for configuring broker and concentrator, from which additional information is ingested into Siemplify.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "RSA NetWitness Platform - Incidents Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1625040975,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9052"
+    },
+    {
+        "ChangeDescription": "Incidents Connector - Added advanced options for credential configuration and logic for tracking updates to incidents.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "RSA NetWitness Platform - Incidents Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1632295393,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9806"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "RSA NetWitness Platform",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Incidents Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "RSA NetWitness Platform - Incidents Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1665057489,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11395"
+    },
+    {
+        "ChangeDescription": "Incidents Connector - Added mapping for the default configuration of the connector.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "RSA NetWitness Platform - Incidents Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1674045714,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10408"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "RSA NetWitness Platform",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

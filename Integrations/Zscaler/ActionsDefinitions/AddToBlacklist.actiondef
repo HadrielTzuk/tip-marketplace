@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1532523417395, 
+    "Creator": "Admin", 
+    "Description": "Adds a URL/Domain/IP to black list.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Zscaler", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1532523417395, 
+    "Name": "Add To Blacklist", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

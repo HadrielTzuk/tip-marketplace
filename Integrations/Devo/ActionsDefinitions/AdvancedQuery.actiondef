@@ -1,0 +1,92 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Execute an advanced query based on the provided parameters. Note that action is not working on Siemplify entities. If its planned to query table other than siem.logtrust.alert.info, please create an additional token for that table following the documentation at https://docs.devo.com/confluence/ndt/latest/domain-administration/security-credentials/authentication-tokens and specify it on the integration configuration page.",
+    "Id": -1,
+    "IntegrationIdentifier": "Devo",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"msg\": \"\", \"timestamp\": 1632291351284, \"cid\": \"9eXXXXXXXc0\", \"status\": 0, \"object\": [{\"eventdate\": 1619452643049, \"alertHost\": \"backoffice\", \"domain\": \"siemplify\", \"priority\": 7.0, \"context\": \"my.XXXXX.XXXXX.500\", \"category\": \"my.context\", \"status\": 0, \"alertId\": \"123456\", \"srcIp\": null, \"srcPort\": null, \"srcHost\": \"\", \"dstIp\": null, \"dstPort\": null, \"dstHost\": \"\", \"protocol\": \"\", \"username\": \"XXXXX@XXXXX.XXXX\", \"application\": \"\", \"engine\": \"XXXX-pro-XXXX-XXXX-aws\", \"extraData\": \"{\\\"count\\\":\\\"13\\\",\\\"eventdate\\\":\\\"2021-04-26+15%3A56%3A30.0\\\"}\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Advanced Query",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a query to execute against Devo instance. Example format: 'from siem.logtrust.alert.info'.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Query",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Last Hour",
+            "Description": "Specify a time frame for the results. If 'Custom' is selected, you also need to provide 'Start Time'.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Time Frame",
+            "OptionalValues": [
+                "Last Hour",
+                "Last 6 Hours",
+                "Last 12 Hours",
+                "Last 24 Hours",
+                "Last Week",
+                "Last Month",
+                "Custom"
+            ],
+            "Type": 15,
+            "Value": "Last Hour"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a time frame for the results. If 'Custom' is selected, you also need to provide 'Start Time'.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the start time for the query. This parameter is mandatory, if 'Custom' is selected for the 'Time Frame' parameter. Format: ISO 8601. Example: 2021-08-05T05:18:42Z",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "End Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify max number of rows the action should return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Max rows to return",
+            "Type": 0,
+            "Value": 50
+        }
+
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

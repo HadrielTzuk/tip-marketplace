@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244,
+    "Creator": "admin",
+    "Description": "List SonicWall URI Groups. Requires SonicOS 6.5.3 or higher.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"uri_list_object\": [{\"name\": \"Block List\"}], \"name\": \"asd\", \"uri_list_group\": [{\"name\": \"URI TEst\"}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SonicWall-Beta",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "List URI Groups",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "100",
+            "Description": "Specify how many URI Groups to return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Max URI Groups To Return",
+            "Type": 0,
+            "Value": "100"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

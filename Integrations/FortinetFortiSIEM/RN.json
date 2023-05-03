@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "New integration added - Fortinet FortiSIEM.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Fortinet FortiSIEM",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1638336195,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10876"
+    },
+    {
+        "ChangeDescription": "New Action Added - Enrich Entities.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Enrich Entities",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1641975658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10890"
+    },
+    {
+        "ChangeDescription": "New Action Added - Execute Custom Query.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Execute Custom Query",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1641975658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10892"
+    },
+    {
+        "ChangeDescription": "New Action Added - Execute Simple Query.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Execute Simple Query",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1641975658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10891"
+    }
+]

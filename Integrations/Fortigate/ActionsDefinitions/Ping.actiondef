@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1515336655985,
+    "Creator": "admin",
+    "Description": "Test connectivity to the Fortigate with parameters provided at the integration configuration page on the Marketplace tab.",
+    "Id": -1,
+    "IntegrationIdentifier": "Fortigate",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515336655985,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

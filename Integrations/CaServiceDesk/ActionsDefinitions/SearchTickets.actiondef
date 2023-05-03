@@ -1,0 +1,83 @@
+{
+    "CreationTimeUnixTimeInMs": 1537966270250,
+    "Creator": "System",
+    "Description": "Search tickets in CA Desk Manager by field",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"severity.sym\": \"None\", \"resolution_code.sym\": \"None\", \"group.combo_name\": \"None\", \"resolve_date\": \"None\", \"caused_by_chg.chg_ref_num\": \"None\", \"log_agent.combo_name\": \"TEST\", \"requested_by.combo_name\": \"None\", \"resolution_method.sym\": \"None\", \"problem.ref_num\": \"None\", \"change.chg_ref_num\": \"None\", \"affected_service.name\": \"None\", \"priority.sym\": \"3\", \"customer.combo_name\": \"TEST\", \"call_back_date\": \"None\", \"assignee.combo_name\": \"TestUser\", \"status\": \"OP\", \"urgency.sym\": \"Test\", \"impact.sym\": \"Test Group\", \"description\": \"test\", \"symptom_code.sym\": \"None\", \"external_system_ticket\": \"None\", \"last_mod_dt\": \"1547368725\", \"active\": \"1\", \"open_date\": \"1517743983\", \"category.sym\": \"None\", \"status.sym\": \"Open\", \"persistent_id\": \"cr:123456\", \"summary\": \"test\", \"close_date\": \"None\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CaServiceDesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1537966270250,
+    "Name": "Search Tickets",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1537966270250,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Incident ID to filter by",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1537966270250,
+            "Name": "Incident ID",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1537966270250,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Summary content to filter by",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1537966270250,
+            "Name": "Summary",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1537966270250,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Description content to filter by ",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1537966270250,
+            "Name": "Description",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1537966270250,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter by status. e.g. Open",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1537966270250,
+            "Name": "Status",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1537966270250,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Get results from 'x' days backwards. e.g. 5'",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1537966270250,
+            "Name": "Days Backwards",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CaSoapManager import CaSoapManager\nfrom SiemplifyUtils import convert_datetime_to_unix_time, construct_csv\nimport arrow\n\nPROVIDER = 'CaServiceDesk'\nOPEN_STATUS = 'Open'\nSCRIPT_NAME = 'CA_Search Tickets'\nTICKETS_TABLE_HEADER = 'Tickets'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    api_root = conf['Api Root']\n    username = conf['Username']\n    password = conf['Password']\n\n    ca_manager = CaSoapManager(api_root, username, password)\n\n    result_value = ''\n    errors = []\n    incidets_data = []\n\n    # Parameters.\n    summery_search_text = siemplify.parameters.get('Summery', '')\n    description_serch_text = siemplify.parameters.get('Description', '')\n    status = siemplify.parameters.get('Status', OPEN_STATUS)\n    days_backwards = int(siemplify.parameters.get('Days Backwards', 1))\n    ticket_fields = siemplify.parameters.get('Ticket Fields')\n\n    # Calculate unixtime to fetch from.\n    time_to_fetch_unixtime = convert_datetime_to_unix_time(arrow.now().shift(days=-days_backwards).datetime)\n\n    incident_ids = ca_manager.get_incident_ids_by_filter(summary_filter=summery_search_text,\n                                                         description_filter=description_serch_text,\n                                                         status_filter=ca_manager.get_status_id_by_status(status),\n                                                         last_modification_unixtime_milliseconds=time_to_fetch_unixtime)\n\n    if incident_ids:\n        for incident_id in incident_ids:\n            try:\n                incidets_data.append(ca_manager.get_incident_by_id(incident_id, ticket_fields))\n            except Exception as err:\n                error_message = 'Filed fetching incident data for incident with ID: {0}, ERROR: {1}'.format(\n                    incident_id,\n                    str(err)\n                )\n                siemplify.LOGGER.error(error_message)\n                siemplify.LOGGER.exception(err)\n                errors.append(error_message)\n\n        if incidets_data:\n            siemplify.result.add_data_table(TICKETS_TABLE_HEADER, construct_csv(incidets_data))\n\n        output_message = \"Found incidents with ids: {0}\".format(\", \".join(incident_ids))\n        result_value = incident_ids[-1]\n    else:\n        output_message = \"No incidents were found.\"\n\n    if errors:\n        output_message = \"{0} \\n \\n Errors: \\n {1}\".format(output_message, \" \\n \".join(errors))\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

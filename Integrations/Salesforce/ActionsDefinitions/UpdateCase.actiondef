@@ -1,0 +1,100 @@
+{
+    "CreationTimeUnixTimeInMs": 1522678602321,
+    "Creator": "admin",
+    "Description": "Update a case",
+    "Id": -1,
+    "IntegrationIdentifier": "Salesforce",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1522678602321,
+    "Name": "Update Case",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1522678521190,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The number of the case.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1522678521190,
+            "Name": "Case Number",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522678521190,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The case's subject",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522678521190,
+            "Name": "Subject",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522678521190,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The case's status. Valid values: New, On Hold, Closed, Escalated",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522678521190,
+            "Name": "Status",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522678521190,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The description of the subject.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522678521190,
+            "Name": "Description",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522678521190,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The origin of the case. Valid values: Email, Phone, Web",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522678521190,
+            "Name": "Origin",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522678521190,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The case's priority. Valid values: Low, Medium, High",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522678521190,
+            "Name": "Priority",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522678521190,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The case type. Valid values: Question, Problem, Feature Request",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522678521190,
+            "Name": "Type",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

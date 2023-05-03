@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1518514677210,
+    "Creator": "admin",
+    "Description": "Test connectivity to Panorama",
+    "Id": -1,
+    "IntegrationIdentifier": "PaloAltoPanorama",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518514677210,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

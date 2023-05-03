@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Return information about the URL from Cofense Triage.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"https://www.paypal.com/us\", \"EntityResult\": {\"id\": \"1\", \"type\": \"urls\", \"attributes\": {\"url\": \"https://www.paypal.com/us\", \"risk_score\": null, \"created_at\": \"2019-04-12T02:58:20.008Z\", \"updated_at\": \"2019-04-12T02:58:20.008Z\"}}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CofenseTriage",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "EnrichURL",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": 50, 
+            "Description": "Specify, what should be the risk score threshold for Siemplify to label that URL as suspicious. Maximum is 100.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Risk Score Threshold", 
+            "Type": 0, 
+            "Value": 50
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}"
+}

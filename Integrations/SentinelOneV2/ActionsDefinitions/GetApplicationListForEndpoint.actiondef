@@ -1,0 +1,34 @@
+{
+    "CreationTimeUnixTimeInMs": 1542187188688, 
+    "Creator": "Admin", 
+    "Description": "Retrieve information about available applications on the endpoint by IP or Hostname.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"192.168.xx.xx\", \"EntityResult\": [{\"installedDate\": \"2021-01-06T08:55:56.762000Z\", \"name\": \"Mozilla Firefox 84.0.1 (x64 en-US)\", \"publisher\": \"xxxx\", \"size\": 211562, \"version\": \"84.0.1\"}, {\"installedDate\": \"2020-07-05T09:10:51.735000Z\", \"name\": \"7-Zip 19.00 (x64)\", \"publisher\": \"xxxx\", \"size\": 5082, \"version\": \"19.00\"}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1, 
+    "IntegrationIdentifier": "SentinelOneV2", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1542187188688, 
+    "Name": "Get Application List For Endpoint", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify how many applications to return. If nothing is specified action will return all of the applications.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Max Applications To Return",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 2.0
+}

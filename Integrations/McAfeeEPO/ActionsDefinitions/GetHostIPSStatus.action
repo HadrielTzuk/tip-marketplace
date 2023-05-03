@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1519645352545, 
+    "Creator": "admin",
+    "Description": "Retrieve IPS information from the endpoints in McAfee ePO. Supported entities: Hostname, IP.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"DESKTOP-xxxxxx\", \"EntityResult\": {\"IPS_status\": \"False\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1, 
+    "IntegrationIdentifier": "McAfeeEPO", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1519645352545, 
+    "Name": "Get Host IPS Status", 
+    "Parameters": [], 
+    "ScriptResultName": "is_status_received", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

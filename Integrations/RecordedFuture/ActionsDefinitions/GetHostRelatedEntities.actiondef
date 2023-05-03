@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": "1570446244",
+    "Creator": "admin",
+    "Description": "Query the RecordedFuture to get related entities for the Host.",
+    "Id": -1,
+    "IntegrationIdentifier": "RecordedFuture",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Get Host Related Entities",
+    "Parameters": [],
+    "ScriptResultName": "is_successful",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}"
+}

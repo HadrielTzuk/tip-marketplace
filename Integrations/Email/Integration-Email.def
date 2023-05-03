@@ -1,0 +1,106 @@
+{
+    "Description": "Email integration over smtp and imap protocols",
+    "DisplayName": "Email",
+    "Identifier": "Email",
+    "Categories": [
+        "IT & Infrastructure",
+        "Email",
+        "Free to use"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAALYAAABjCAMAAAAB3QqqAAAAsVBMVEX///9Lst48NzdUtuBOtN9Ns94goNZWUlIrpdlQtN8mo9exr6+koqIjodcwp9lEsN3Lyso4qts7q9tBrt01qdqKh4f7/v9Isd7f8vlduuIdn9by+v2f1u4/rdzW7fjG5/XA5PSn2e9+yOhYuOHm9Pq64vOa1O10xOZJRET2+/6V0uzl5OTu+PxtweXO6vZjvOOXlJSv3fGOzuuHzOnY19cMmNN9enry8vJwbGxjX1++vLzHABj9AAADtElEQVR42u3YW1faQBSG4S9hT5pMSWhITDiIoBxUPOAJrf3/P6x7B2rVIgYLK1zs94KVtbx52M6QTKBpmqZpmqZpmqZpmqZpmqZpqzs/9WubN0yHI1RYF7gKnU0jn7qosmDEbs8xm6mtqE9QXXFvxAAvNxup26w+9VFdw6jX2tBNYTtjtVdDddUoaoq70yjpNo63UDuVsh1294E726RS6oa9As55O1TMdoLYHgO3fkxl1N4dMMqtqZztUM87BAYl3CYJD4FW0yenejbPUNz9T92mUah7fuDsA1s8hTul9bP2ilmzej/YMu8pu6OU1q6QY+CoGQXOvrCXe+068j90B7En6pTV+8Nmtz3JcBR85KYoHgNjmfX/sg9c9wCou677/T/Z4nY67QxZO6TV6qQFHHdiVq9i/3CX/cCnudzW2MVd+/wDN/nJiNVhzzibsHc/bYls0EU288xq9cRLyNkCW9oiW9ymC8zCd2pj6RKYdli9jn3w4rl5OnD5Ew+PrntW2B7q31y+roPjq2/bZMtYg1bxnGTeqGtdZNOwYZyS7LNnV/p55kqCY3/R4w7YYpm3we5Og1498g0zYDBvBs56tlR43vX8ehE97GbawyNwU9ujlxv6CbjuxDZMafa3i6czGTceZGmAq18ANyLdAZt8yoBhHzi2TVqovXvgvH0tOzI3Zdk3i2XxqzC6xdqWr7EbduAnl8DVPGLkWNwy6ymrh/N4BNx7Zde2eGRTXvxh/+LPXbGDaHGwDNKFOyae9YTVNVuL8q78ib7Ils8f+L4LNqVRC7jz+Cr2+8W880IdWHLI1jI549PX2LLCn/Bz+2yxXgOHvIDl2g6AQThn9aXxxUrhDMja9tOb+0r22a4WSRCHLL1d/jhT0x8Dx3eszi05kgmvZPIhfYV940qPz9tmUxqxemITVi/dE3D9RA4FS/csw2Xb0ubshbuO+lbZooz6wOGr1w6UdO5lfUesXkadGYB2uDfHBOpZWSEeq18yuXc4iN68hiDvFMgCuyeHMpOEt7IDe/T2RU6cJuS8zngnQLexH0dg0yiOW/4/L3jy3HlfZwqM4mgPXjiYXCxH6fpj+9+VI98wparZpiF7rxXz3iuR/GcWr1SqZZtGOFkeyEtlEivzjlOqlJ17U6BVWl38MspOiJpDVFdNnksv5fVY6UwvHAN9m6O6/FNWm/Lq5R10AIx9VJfcP8iWVL996rpFpc0sORtGadpCpXVPomFt44ZNakHTNE3TNE3TNE3TNE3TtL3pN3KbSqJCXYAOAAAAAElFTkSuQmCC",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Email",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Sender's Address",
+            "PropertyName": "Sender's address",
+            "PropertyType": "2",
+            "Value": "user@mail.com"
+        },
+        {
+            "IntegrationIdentifier": "Email",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Sender's Display Name",
+            "PropertyName": "Sender's Display Name",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Email",
+            "IsMandatory": true,
+            "PropertyDisplayName": "SMTP Server Address",
+            "PropertyName": "SMTP Server Address",
+            "PropertyType": "5",
+            "Value": "smtp.gmail.com"
+        },
+        {
+            "IntegrationIdentifier": "Email",
+            "IsMandatory": true,
+            "PropertyDisplayName": "SMTP Port",
+            "PropertyName": "SMTP Port",
+            "PropertyType": "2",
+            "Value": "465"
+        },
+        {
+            "IntegrationIdentifier": "Email",
+            "IsMandatory": true,
+            "PropertyDisplayName": "IMAP Server Address",
+            "PropertyName": "IMAP Server Address",
+            "PropertyType": "5",
+            "Value": "imap.gmail.com"
+        },
+        {
+            "IntegrationIdentifier": "Email",
+            "IsMandatory": true,
+            "PropertyDisplayName": "IMAP Port",
+            "PropertyName": "IMAP Port",
+            "PropertyType": "2",
+            "Value": "993"
+        },
+        {
+            "IntegrationIdentifier": "Email",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": "user@mail.com"
+        },
+        {
+            "IntegrationIdentifier": "Email",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Email",
+            "IsMandatory": true,
+            "PropertyDisplayName": "SMTP - Use SSL",
+            "PropertyName": "SMTP USE SSL",
+            "PropertyType": "0",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Email",
+            "IsMandatory": true,
+            "PropertyDisplayName": "IMAP - Use SSL",
+            "PropertyName": "IMAP USE SSL",
+            "PropertyType": "0",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Email",
+            "IsMandatory": true,
+            "PropertyDisplayName": "SMTP - Use Authentication",
+            "PropertyName": "SMTP Use Authentication",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\r\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\r\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\r\n<g>\r\n\t<g>\r\n\t\t<path d=\"M12.3,14.7c0.1,0.1,0.2,0.1,0.4,0l10.2-9.6C23,5,22.9,4.6,22.5,4.6H2.3C2.1,4.6,2,5,2.1,5.1L12.3,14.7z M7.7,12L1.2,5.8\r\n\t\t\tC1,5.7,0.8,5.8,0.8,6.1v12.8c0,0.2,0.4,0.4,0.5,0.2l6.5-6.7C7.8,12.3,7.8,12.1,7.7,12z M23.6,6L17.1,12c-0.1,0.1-0.1,0.2,0,0.4\r\n\t\t\tl6.7,6.8c0.1,0.2,0.5,0,0.5-0.2V6.1C24.1,6,23.9,5.8,23.6,6z M16.5,13.1c-0.1-0.1-0.2-0.1-0.4,0l-3.4,3.4c-0.1,0.1-0.2,0.1-0.4,0\r\n\t\t\tl-3.5-3.4c-0.2-0.1-0.4-0.1-0.5,0L2,19.9c-0.1,0.2,0,0.5,0.2,0.5h20.5c0.2,0,0.4-0.2,0.2-0.5L16.5,13.1z\"/>\r\n\t</g>\r\n</g>\r\n</svg>\r\n",
+    "Version": 27.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/email",
+    "MarketingDisplayName": "Email"
+}

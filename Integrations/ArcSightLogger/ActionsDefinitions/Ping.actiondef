@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244,
+    "Creator": "admin",
+    "Description": "Test connectivity to ArcSight Logger with parameters provided at the integration configuration page on Marketplace tab.",
+    "Id": -1,
+    "IntegrationIdentifier": "ArcSightLogger",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

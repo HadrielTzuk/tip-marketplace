@@ -1,0 +1,23 @@
+{
+    "CreationTimeUnixTimeInMs": 1509263483089, 
+    "Creator": "admin", 
+    "Description": "Enrich a Url using Digital Shadows information.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[ { \"EntityResult\": { \"content\": [ { \"type\": \"WEBROOT_DOMAIN\", \"entity\": { \"threatHistory\": 0, \"age\": 156, \"popularity\": \"TOP_100_000\", \"lastUpdated\": \"2020-04-16T08:36:11.909Z\", \"reputation\": 81, \"threatCategories\": [ { \"confidence\": 90, \"group\": \"Productivity\", \"name\": \"Computer and Internet Info\" } ], \"webrootCrawlHistory\": [], \"domainOrUrl\": \"www.example.com\", \"domainHostedHashes\": [] } } ] }, \"Entity\": \"www.example.com\" } ]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "DigitalShadows", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1509263483089, 
+    "Name": "EnrichURL", 
+    "Parameters": [], 
+    "Script": "", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1517733930730, 
+    "Creator": "admin", 
+    "Description": "Disable Download Insight on endpoints", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SEP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1517733930730, 
+    "Name": "DisableDownloadInsight", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519119182120, 
+            "CustomActionId": -1, 
+            "DefaultValue": "5", 
+            "Description": "", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1519119182120, 
+            "Name": "Time Period", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

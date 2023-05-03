@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1520946503587, 
+    "Creator": "admin", 
+    "Description": "Add a tag to an endpoint in McAfee ePO. Note: you can only apply tags that exist in the system. Supported entities: Hostname, IP.",
+    "Id": -1, 
+    "IntegrationIdentifier": "McAfeeEPO", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1520946503587, 
+    "Name": "Add Tag", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1520946788971, 
+            "CustomActionId": -1, 
+            "DefaultValue": "",
+            "Description": "Specify the name of the tag that needs to be added to the endpoints.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520946788971, 
+            "Name": "Tag Name",
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

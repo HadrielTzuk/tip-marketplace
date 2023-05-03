@@ -1,0 +1,62 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583, 
+    "Creator": "admin", 
+    "Description": "Add a note to a Freshservice ticket. Note that action is not working on Siemplify entities.",
+    "Id": -1, 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"conversation\":{\"id\":\"XXXXXXXXX\",\"user_id\":\"XXXXXXXXX\",\"from_email\":\"XXXXXX@XXXXXXXXXXXXXXXXXX.XXXXXXXXXXXX.XXXXXX\",\"cc_emails\":[],\"bcc_emails\":[],\"body\":\"XXXXXXXXXXXX\",\"body_text\":\"XXXXXX\",\"ticket_id\":\"XXXXXX\",\"to_emails\":[\"XXXX.XXXXXX@XXXXXXXX.XX\"],\"attachments\":[],\"created_at\":\"XXXXXXXXXXXX\",\"updated_at\":\"XXXXXXXXXXXX\"}}]", 
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "FreshworksFreshservice", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530451212583, 
+    "Name": "Add a Ticket Note",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify ticket ID to return conversations for.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Ticket ID", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Private", 
+            "Description": "Specify the type of note action should add to the ticket.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Note Type", 
+            "OptionalValues": [
+                "Private", 
+                "Public" 
+            ], 
+            "Type": 15, 
+            "Value": "Private"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify note text to add to ticket.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Note Text", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

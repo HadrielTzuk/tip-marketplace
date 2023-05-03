@@ -1,0 +1,102 @@
+{
+    "CreationTimeUnixTimeInMs": 1515073753262,
+    "Creator": "admin",
+    "Description": "Create an indicator in ThreatQ.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"tip1@siemplify.com\": {\"total\": 1, \"data\": [{\"last_detected_at\": null, \"hash\": \"26ed6f79c7a9d2f666113cc63907071d\", \"description\": \"abc\", \"status_id\": 1, \"created_at\": \"2020-07-30 09:43:57\", \"type_id\": 33, \"expires_needs_calc\": \"Y\", \"updated_at\": \"2020-07-30 09:43:57\", \"value\": \"tip1@siemplify.com\", \"existing\": \"N\", \"touched_at\": \"2020-07-30 09:43:57\", \"class\": \"host\", \"expires_calculated_at\": null, \"expires_at\": null, \"type\": {\"wildcard_matching\": \"Y\", \"name\": \"Username\", \"created_at\": \"2020-06-29 17:13:29\", \"updated_at\": \"2020-06-29 17:13:29\", \"class\": \"host\", \"score\": null, \"id\": 33}, \"id\": 53, \"expired_at\": null}]}, \"tip2@siemplify.com\": {\"total\": 1, \"data\": [{\"last_detected_at\": null, \"hash\": \"b68edaa93c823b2c9a7442b31834aecc\", \"description\": \"abc\", \"status_id\": 1, \"created_at\": \"2020-07-30 09:43:57\", \"type_id\": 33, \"expires_needs_calc\": \"Y\", \"updated_at\": \"2020-07-30 09:43:57\", \"value\": \"tip2@siemplify.com\", \"existing\": \"N\", \"touched_at\": \"2020-07-30 09:43:57\", \"class\": \"host\", \"expires_calculated_at\": null, \"expires_at\": null, \"type\": {\"wildcard_matching\": \"Y\", \"name\": \"Username\", \"created_at\": \"2020-06-29 17:13:29\", \"updated_at\": \"2020-06-29 17:13:29\", \"class\": \"host\", \"score\": null, \"id\": 33}, \"id\": 54, \"expired_at\": null}]}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "ThreatQ",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515073753262,
+    "Name": "Create Indicator",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "ASN",
+            "Description": "Specify the type of the new indicator.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Indicator Type",
+            "Type": 15,
+            "OptionalValues": [
+                "ASN",
+                "Binary String",
+                "CIDR Block",
+                "CVE",
+                "Email Address",
+                "Email Attachment",
+                "Email Subject",
+                "File Mapping",
+                "File Path",
+                "File Hash",
+                "File name",
+                "FQDN",
+                "Fuzzy Hash",
+                "GOST Hash",
+                "Hash ION",
+                "IPv4 Address",
+                "IPv6 Address",
+                "MAC Address",
+                "MD5",
+                "Mutex",
+                "Password",
+                "Registry Key",
+                "Service Name",
+                "SHA-1",
+                "SHA-256",
+                "SHA-384",
+                "SHA-512",
+                "String",
+                "x509 Serial",
+                "x509 Subject",
+                "URL",
+                "URL Path",
+                "User-agent",
+                "Username",
+                "X-Mailer"
+            ],
+            "Value": "ASN"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "Active",
+            "Description": "Specify the status of the new indicator.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Status",
+            "Type": 15,
+            "OptionalValues": [
+                "Active",
+                "Expired",
+                "Indirect",
+                "Review",
+                "Whitelisted"
+            ],
+            "Value": "Active"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify description of the new indicator.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Description",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0
+}

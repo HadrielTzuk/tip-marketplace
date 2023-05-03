@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1530453435544,
+    "Creator": "admin",
+    "Description": "Download files from the hosts in Crowdstrike Falcon. Supported entities: File Name, IP Address and Hostname. Note: action requires both File Name and IP Address/Hostname entity to be in the scope of the Siemplify alert. The downloaded file will be in password-protected zip. Password is \"infected\".",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"absolute_paths\":[\"/opt/file_1\",\"opt_file_2\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "CrowdStrikeFalcon",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530453435544,
+    "Name": "Download File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the path to the folder, where you want to store the threat file.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Download Folder Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will overwrite the file with the same name.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Overwrite",
+            "Type": 1,
+            "Value": false
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"FILENAME\", \"ADDRESS\"]}",
+    "Version": 1.0,
+    "IsAsync": true
+}

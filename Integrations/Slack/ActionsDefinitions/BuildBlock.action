@@ -1,0 +1,83 @@
+{
+    "CreationTimeUnixTimeInMs": 1663850066000,
+    "Creator": "admin",
+    "Description": "Build a slack message block based on provided input criteria. Action creates a block with a webhook that can be later passed to the 'Send Interactive Message' to send a message with. Note that action is not working on Siemplify entities.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"result\": \"[{\\\"type\\\": \\\"section\\\", \\\"block_id\\\": \\\"f99958f1-c1f1-4fdb-bb8b-a382d952d5bd\\\", \\\"text\\\": {\\\"type\\\": \\\"mrkdwn\\\", \\\"text\\\": \\\"yes?\\\", \\\"verbatim\\\": false}},{\\\"type\\\": \\\"actions\\\", \\\"block_id\\\": \\\"2850e684-472a-472f-9a32-96294cbe9046\\\", \\\"elements\\\": [{\\\"type\\\": \\\"button\\\", \\\"text\\\": {\\\"type\\\": \\\"plain_text\\\", \\\"text\\\": \\\"y\\\"}, \\\"action_id\\\": \\\"y\\\", \\\"url\\\": \\\"https://webhook.site/token/47289ba5-277e-4ab9-9238-xx00000000xx?Answer=y\\\"}, {\\\"type\\\": \\\"button\\\", \\\"text\\\": {\\\"type\\\": \\\"plain_text\\\", \\\"text\\\": \\\"n\\\"}, \\\"action_id\\\": \\\"n\\\", \\\"url\\\": \\\"https://webhook.site/token/47289ba5-277e-4ab9-9238-xx00000000xx?Answer=n\\\"}, {\\\"type\\\": \\\"button\\\", \\\"text\\\": {\\\"type\\\": \\\"plain_text\\\", \\\"text\\\": \\\"View Case in Siemplify\\\"}, \\\"action_id\\\": \\\"View Case in Siemplify\\\", \\\"url\\\": \\\"https://something/main/cases/dynamic-view/1\\\"}]}]\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Slack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1663850066000,
+    "Name": "Build Block",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1663850066000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the question text to add to the block.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1663850066000,
+            "Name": "Question",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663850066000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the answer buttons to add to the block.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1663850066000,
+            "Name": "Answers Buttons",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663850066000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the Siemplify server base url to add to the block.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1663850066000,
+            "Name": "Siemplify Base URL",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663850066000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the Siemplify case id to add to the block.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1663850066000,
+            "Name": "Case ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663850066000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the Webhook token UUID to monitor for the user’s response.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1663850066000,
+            "Name": "Webhook Token UUID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

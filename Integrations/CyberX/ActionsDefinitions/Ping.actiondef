@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1542558085294,
+    "Creator": "Admin",
+    "Description": "Test CyberX connectivity.",
+    "Id": -1,
+    "IntegrationIdentifier": "CyberX",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542558085294,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CyberXManager import CyberXManager\n\nACTION_NAME = 'CyberX_Ping'\nPROVIDER = 'CyberX'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n\n    config = siemplify.get_configuration(PROVIDER)\n    api_root = config['API Root']\n    access_token = config['Access Token']\n    use_ssl = config.get('Use SSL', 'false').lower() == 'true'\n\n    cyberx_manager = CyberXManager(api_root=api_root, access_token=access_token, use_ssl=use_ssl)\n\n    cyberx_manager.get_all_devices()\n\n    siemplify.end('Connection established.', True)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

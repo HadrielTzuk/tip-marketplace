@@ -1,0 +1,42 @@
+{
+    "Name": "Get Group",
+    "Description": "Get information about a group",
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import construct_csv, dict_to_flat\nfrom OktaManager import OktaManager\nimport json\n\nPROVIDER = \"Okta\"\nACTION_NAME = \"Okta - GetGroup\"\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    group_ids_or_names = siemplify.parameters['Group Ids Or Names']\n    is_id = siemplify.parameters.get('Is Id', \"false\").lower() == \"true\"\n    okta = OktaManager(api_root=conf['Api Root'], api_token=conf['Api Token'],\n                       verify_ssl=conf['Verify SSL'].lower() == 'true')\n    ids = []\n    output_message = \"\"\n    if group_ids_or_names:\n        for _id in group_ids_or_names.split(','):\n            _id = _id.strip()\n            ids.append(_id)\n    message = \"\"\n    ret = {}\n    if ids:\n        for _id in ids:\n            group = {}\n            try:\n                if is_id:\n                    group = okta.get_group(_id)\n                else:\n                    groups = okta.list_groups(q=_id)\n                    if isinstance(groups, list):\n                        for g in groups:\n                            if g['profile']['name'] == _id:\n                                group = g\n                                break\n                    else:\n                        group = groups\n                if group:\n                    message += \"The group corresponding to \\\"{}\\\" was found.\\n\\n\".format(_id)\n                    ret[_id] = group\n                else:\n                    message += \"No group corresponding to \\\"{}\\\" was found.\\n\\n\".format(_id)\n            except Exception as err:\n                siemplify.LOGGER.exception(err)\n                siemplify.LOGGER.error(_id + \": \" + err.message)\n                pass\n    if ret:\n        for name, group in ret.items():\n            flat_group = dict_to_flat(group)\n            csv_output = construct_csv([flat_group])\n            siemplify.result.add_data_table(\"Okta - Group: \" + group['profile']['name'], csv_output)\n        output_message = message\n    else:\n        output_message = \"No groups were found. {}\".format(message)\n\n    siemplify.end(output_message, json.dumps(ret))\n\nif __name__ == '__main__':\n    main()",
+    "IntegrationIdentifier": "Okta",
+    "ScriptResultName": "ScriptResult",
+    "DynamicScriptResultNamesJson": "[\"ResultJson\"]",
+    "Creator": "System",
+    "IsEnabled": true,
+    "IsCustom": false,
+    "Version": 6.0,
+    "Parameters": [
+        {
+            "CustomActionId": 702,
+            "IsMandatory": true,
+            "DefaultValue": "",
+            "Description": "Ids or names of groups in Okta",
+            "Name": "Group Ids Or Names",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1548084194561,
+            "ModificationTimeUnixTimeInMs": 1548084194561
+        },
+        {
+            "CustomActionId": 702,
+            "IsMandatory": false,
+            "DefaultValue": "false",
+            "Description": "Whether the value is an id or a name",
+            "Name": "Is Id",
+            "Value": "false",
+            "Type": 1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1548084194562,
+            "ModificationTimeUnixTimeInMs": 1548084194562
+        }
+    ],
+    "Id": -1,
+    "CreationTimeUnixTimeInMs": 1548084194479,
+    "ModificationTimeUnixTimeInMs": 1548084194495,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

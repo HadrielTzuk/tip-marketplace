@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381792970,
+    "Creator": "Admin",
+    "Description": "Start a previously stopped Google Cloud Compute Instance. Note that it can take a few minutes for the instance to enter the running status.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleCloudCompute",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"id\": \"123456667\", \"name\": \"operation-1234-1234-1234-1234\", \"zone\": \"us-central1-a\", \"operationType\": \"start\", \"targetLink\": \"https://www.googleapis.com/compute/v1/projects/project111/zones/us-central1-a/instances/123456667\", \"targetId\": \"123456667\", \"status\": \"RUNNING\", \"user\": \"google-cloud-compute-spec@project111.iam.gserviceaccount.com\", \"progress\": 0, \"insertTime\": \"2021-06-07T05:44:01.508-07:00\", \"startTime\": \"2021-06-07T05:44:01.548-07:00\", \"selfLink\": \"https://www.googleapis.com/compute/v1/projects/project111/zones/us-central1-a/operations/operation-1234-1234-1234-1234\", \"kind\": \"compute#operation\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535381792970,
+    "Name": "Start Instance",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify instance zone name to search for instances in.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Instance Zone",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify instance id to start. Instance id can be found in \"List Instances\" action.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Instance ID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

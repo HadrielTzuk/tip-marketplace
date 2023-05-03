@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1545759317560,
+    "Creator": "Admin",
+    "Description": "Returns information about the API plan belonging to the given API key.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"https\": false, \"unlocked\": false, \"unlocked_left\": 0, \"telnet\": false, \"scan_credits\": 0, \"plan\": \"oss\", \"query_credits\": 0}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Shodan",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1545759317560,
+    "Name": "Get Api Info",
+    "Parameters": [],
+    "Script": "from ShodanManager import ShodanManager\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import flat_dict_to_csv\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('Shodan')\n    verify_ssl = conf.get('Verify SSL', 'False').lower() == 'true'\n    api_key = conf.get('API key', \"\")\n    shodan = ShodanManager(api_key, verify_ssl=verify_ssl)\n\n    api_info = shodan.get_api_info()\n    if api_info:\n        siemplify.result.add_data_table(\"Shodan API Info\", flat_dict_to_csv(api_info))\n        output_message = \"Successfully get information about the API plan\"\n        result_value = 'true'\n    else:\n        output_message = \"Failed to get information about the API plan\"\n        result_value = 'false'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

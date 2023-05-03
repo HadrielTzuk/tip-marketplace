@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Create an iRule in F5 BIG-IP.",
+    "Id": -1,
+    "IntegrationIdentifier": "F5BIGIPiControlAPI",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Create iRule",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"kind\":\"tm:ltm:rule:rulestate\",\"name\":\"test\",\"partition\":\"Common\",\"fullPath\":\"/Common/test\",\"generation\":\"9xx\",\"selfLink\":\"https://localhost/mgmt/tm/ltm/rule/~Common~test?ver=16.0.x.x\",\"apiAnonymous\":\"when CLIENT_ACCEPTED { if { [IP::addr [IP::client_addr] equals 10.10.xx.xx] } { pool my_pool } }\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the iRule that needs to be created.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Rule",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the rule that needs to be executed.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

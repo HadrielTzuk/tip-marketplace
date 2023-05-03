@@ -1,0 +1,55 @@
+{
+    "CreationTimeUnixTimeInMs": 1531135161455,
+    "Creator": "admin",
+    "Description": "Closes related Qradar offenses for closed Siemplify alerts.",
+    "Id": -1,
+    "Integration": "QRadar",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1531135161455,
+    "Name": "SyncCloseOffenses",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1531135161455,
+            "DefaultValue": "https://x.x.x.x",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1531135161455,
+            "Name": "API Root",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1531135161455,
+            "DefaultValue": null,
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1531135161455,
+            "Name": "API Token",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1531135161455,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1531135161455,
+            "Name": "API Version",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1531135161455,
+            "DefaultValue": 1,
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1531135161455,
+            "Name": "Days Backwards",
+            "Type": 1
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Version": 1
+}

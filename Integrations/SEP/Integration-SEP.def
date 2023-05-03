@@ -1,0 +1,57 @@
+{
+    "Description": "Symantec Endpoint Protection, developed by Symantec, is a security software suite, which consists of anti-malware, intrusion prevention and firewall features for servers and desktops.",
+    "DisplayName": "Symantec Endpoint Protection 14",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/symantec-endpoint-protection",
+    "Identifier": "SEP",
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "SEP",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "SEP",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "SEP",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Domain",
+            "PropertyName": "Domain",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "SEP",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": 6,
+            "Value": "https://{IP}:{PORT}/sepm"
+        },
+        {
+            "IntegrationIdentifier": "SEP",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M17.7,4.6v0.7h0.7V4.6H17.7z M21.2,4.5h-0.8v0.7h0.8V4.5z M22.6,3.8V3.1h-0.7v0.7H22.6z M20.5,5.9V5.2h-0.7v0.7H20.5z\n\t\t\t M19.1,6.6h-0.7V5.9h-1.1v0.5h-0.1c-1.6-1.2-3.5-1.9-5.6-1.9c-5.2,0-9.4,4.2-9.4,9.4c0,5.2,4.2,9.4,9.4,9.4c5.2,0,9.4-4.2,9.4-9.4\n\t\t\tc0-2.3-0.8-4.4-2.2-6h0.4V7.4h0.6V5.9h-0.7V6.6z M16.1,18.5c-1.2,1.2-2.8,1.9-4.6,1.9c-1.7,0-3.3-0.7-4.6-1.9\n\t\t\tc-1.2-1.2-1.9-2.8-1.9-4.6c0-1.7,0.7-3.3,1.9-4.6c1.2-1.2,2.8-1.9,4.6-1.9c1.3,0,2.6,0.4,3.7,1.1v0.1h-0.5v0.7h-0.5\n\t\t\tc-0.6,0.8-2,3.5-2.4,4.5c-1.5-2.2-2.7-3-3.7-3.3C7.6,10.5,7,11.1,7.9,12c1.9,2.1,2.6,3.9,3.2,5.3c0.3,0.7,1.7,0.9,2,0.1\n\t\t\tc0.6-1.6,1.5-3.4,2.5-4.9v-0.8h0.5V11h0.6v-0.8h0.2c0.8,1.1,1.2,2.4,1.2,3.7C18,15.7,17.3,17.3,16.1,18.5z M21.1,2.3v0.7h0.7V2.3\n\t\t\tH21.1z M22.6,1.6h-0.7v0.7h0.7V1.6z M19.1,5.2h-0.7v0.7h0.7V5.2z M19.8,3.8h-0.7v1.4h0.7V4.5h0.7V3.8h0.7V3.1h-1.3V3.8z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 13.0,
+    "MarketingDisplayName": "Symantec Endpoint Protection"
+}

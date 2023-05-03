@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1527759848819, 
+    "Creator": "admin", 
+    "Description": "Enrich endpoint by data from Cisco ISE", 
+    "Id": -1, 
+    "IntegrationIdentifier": "CiscoISE", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1527759848819, 
+    "Name": "Enrich Endpoint", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CiscoISEManager import CiscoISEManager\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\nfrom SiemplifyDataModel import EntityTypes\n\n\nCISCOISE_PROVIDER = \"CiscoISE\"\n\n\ndef main():\n    # Configuration.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(CISCOISE_PROVIDER)\n    cim = CiscoISEManager(conf['API Root'], conf['Username'], conf['Password'], conf['Verify SSL'])\n\n    # Variables.\n    result_value = False\n\n    ip_addresses_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.ADDRESS]\n\n    for ip_address_entity in ip_addresses_entities:\n        try:\n            mac_address = cim.get_endpoint_mac_by_ip(ip_address_entity.identifier)\n            endpoint_data = cim.get_endpoint_by_name(mac_address)\n            if endpoint_data.get('ERSEndPoint'):\n                endpoint_data_flat = dict_to_flat(endpoint_data.get('ERSEndPoint'))\n                # Get enrichment.\n                try:\n                    enrichment = cim.get_endpoint_enrichment(mac_address)\n                    endpoint_data_flat.update(enrichment)\n                except Exception as err:\n                    siemplify.LOGGER.error('Error fetching enrichment for \"{0}\", Error: {1}'.format(ip_address_entity.identifier,\n                                                                                                    err.message))\n                    siemplify.LOGGER.exception(err)\n\n                endpoint_csv = flat_dict_to_csv(endpoint_data_flat)\n                siemplify.result.add_entity_table(ip_address_entity.identifier, endpoint_csv)\n                ip_address_entity.additional_properties.update(endpoint_data_flat)\n                result_value = True\n        except Exception as err:\n            siemplify.LOGGER.error('Error fetching data for \"{0}\", ERROR: {1}'.format(ip_address_entity.identifier, err.message))\n            siemplify.LOGGER.exception(err)\n\n    if result_value:\n        output_message = \"Found data for endpoint.\"\n    else:\n        output_message = \"No data found for endpoint.\"\n\n    siemplify.update_entities(siemplify.target_entities)\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 1.0
+}

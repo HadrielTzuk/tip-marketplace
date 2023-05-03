@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1532960471080,
+    "Creator": "Admin",
+    "Description": "Fetch last PCAP files from AlienVault",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"scan_name\": \"pcap_file_1545041396_10_1.1.1.1.pcap\", \"creation_time\": \"2018-12-17 10:09:56                                        \", \"user\": null, \"download_link\": \"https://www.alienvault.com/ossim/pcap/download.php?scan_name=0000000_10_1.1.1.1.pcap&sensor_ip=1.1.1.1\", \"sensor_ip\": \"1.1.1.1\", \"duration\": \"10\"}, {\"scan_name\": \"pcap_file_1545041397_10_1.1.1.1.pcap\", \"creation_time\": \"2018-12-17 10:09:56                                        \", \"user\": null, \"download_link\": \"https://www.alienvault.com/ossim/pcap/download.php?scan_name=0000000_10_1.1.1.1.pcap&sensor_ip=1.1.1.1\", \"sensor_ip\": \"1.1.1.1\", \"duration\": \"10\"}, {\"scan_name\": \"pcap_file_1545041398_10_1.1.1.1.pcap\", \"creation_time\": \"2018-12-17 10:09:56                                        \", \"user\": null, \"download_link\": \"https://www.alienvault.com/ossim/pcap/download.php?scan_name=0000000_10_1.1.1.1.pcap&sensor_ip=1.1.1.1\", \"sensor_ip\": \"1.1.1.1\", \"duration\": \"10\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "AlienVaultAppliance",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1532960471080,
+    "Name": "Fetch Last PCAP Files",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1532960471080,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "e.g. 10",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1532960471080,
+            "Name": "Number Of Files To Fetch",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import construct_csv\nfrom AlienVaultManager import AlienVaultManager, AlienVaultManagerError\nimport base64\n\nPROVIDER = 'AlienVault'\nTABLE_NAME = 'PCAP Records'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    configurations = siemplify.get_configuration(PROVIDER)\n    server_address = configurations['Api Root']\n    username = configurations['Username']\n    password = configurations['Password']\n\n    result_value = False\n    \n    # Parameters\n    number_of_files_to_fetch = int(siemplify.parameters.get('Number Of Files To Fetch', 1))\n\n    alienvault_manager = AlienVaultManager(server_address, username, password)\n\n    # Get pcap files records.\n    pcap_records = alienvault_manager.get_last_pcap_files()\n    \n\n    for pcap_record in pcap_records[:number_of_files_to_fetch]:\n      \t\n        # Fetch file content.\n        file_content = alienvault_manager.download_pcap_file(pcap_record.get('scan_name'),\n                                                             pcap_record.get('sensor_ip'))\n        siemplify.result.add_attachment(pcap_record.get('scan_name'),\n                                        pcap_record.get('scan_name'),\n                                        base64.b64encode(file_content))\n\n    if pcap_records:\n        siemplify.result.add_data_table(TABLE_NAME, construct_csv(pcap_records[:number_of_files_to_fetch]))\n        result_value = True\n        output_message = 'Found {0} PCAP files.'.format(len(pcap_records[:number_of_files_to_fetch]))\n    else:\n        output_message = 'No PCAP files were found.'\n\n    siemplify.end(output_message, result_value)\n\nif __name__ == \"__main__\":\n  main()\n\n\n\n\n\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1506521112194,
+    "Creator": "Admin",
+    "Description": "Automatically resume the alert SLA",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506521112194,
+    "Name": "Resume Alert SLA",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

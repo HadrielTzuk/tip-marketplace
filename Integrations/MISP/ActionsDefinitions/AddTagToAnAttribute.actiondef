@@ -1,0 +1,122 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583,
+    "Creator": "admin",
+    "Description": "Add tags to attributes in MISP.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"name\": \"Global tag unique___test(7) successfully attached to Attribute(9).\", \"message\": \"Global tag unique___test(7) successfully attached to Attribute(9).\", \"url\": \"/tags/attachTagToObject\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "MISP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530451212583,
+    "Name": "Add Tag to an Attribute",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of attribute identifiers to which you want to add tags. Note: If both “Attribute Name“ and “Attribute UUID“ are specified, action will work with “Attribute UUID“ values.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Attribute Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID or UUID of the event, where to search for attributes. This parameter is required, if “Attribute Search“ is set to “Provided Event“ or Object UUID is provided.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Event ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of tags that you want to add to attributes.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Tag Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of categories. If specified, action will only add tags to attributes that have matching category. If nothing is specified, action will ignore categories in attributes. Possible values: External Analysis, Payload Delivery, Artifacts Dropped, Payload Installation.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Category",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of attribute types. If specified, action will only add tags to attributes that have matching attribute type. If nothing is specified, action will ignore types in attributes. Example values: md5, sha1, ip-src, ip-dst",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Type",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the uuid of the object that contains the desired attribute.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Object UUID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of attribute UUIDs to which you want to add new tags. Note: If both “Attribute Name“ and “Attribute UUID“ are specified, action will work with “Attribute UUID“ values.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Attribute UUID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "Provided Event",
+            "Description": "Specify, where action should search for attributes. If “Provided Event“ is selected, action will only search for attributes or attribute UUIDs in event with ID/UUID provided in “Event ID“ parameter. If “All Events“, action will search for attributes among all events and add sighting for all attributes that match our criteria.",
+            "Name": "Attribute Search",
+            "Value": "Provided Event",
+            "Type": 15,
+            "OptionalValues": [
+                "All Events",
+                "Provided Event"
+            ],
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1572955458924,
+            "ModificationTimeUnixTimeInMs": 1572955458924
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

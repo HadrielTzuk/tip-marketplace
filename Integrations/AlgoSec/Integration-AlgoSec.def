@@ -1,0 +1,51 @@
+{
+    "Description": "Manage your network security effectively, swiftly, and confidently. No matter where your network lives. Gain complete visibility, automate changes, and always be compliant.",
+    "DisplayName": "AlgoSec",
+    "Identifier": "AlgoSec",
+    "MarketingDisplayName": "AlgoSec",
+    "Categories": [
+        "Network Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "AlgoSec",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https:/{{ip address}}"
+        },
+        {
+            "IntegrationIdentifier": "AlgoSec",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AlgoSec",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AlgoSec",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg id=\"Layer_1\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M12.51,2A10.51,10.51,0,0,0,2,12.5a10.37,10.37,0,0,0,.7,3.75C2.05,9.12,9.71,4.59,13,4.54V17.07H10.16V15H6.9c-.09,0,.29-1.38.45-1.38h2.83V8.28c-3,1.12-9.72,9-2.27,13.66a10.67,10.67,0,0,0,5,1,10.5,10.5,0,0,0-.44-21Z\" fill-rule=\"evenodd\"/></svg>",
+    "Version": 1.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/algosec"
+}

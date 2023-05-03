@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1527069415680, 
+    "Creator": "admin", 
+    "Description": "Set a file's enterprise reputation", 
+    "Id": -1, 
+    "IntegrationIdentifier": "McAfeeTIEDXL", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1527069415680, 
+    "Name": "Set File Reputation", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527069415680, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The trust level to set to the file's reputation", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1527069415680, 
+            "Name": "Trust Level", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1527069415680, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "The name of the file", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1527069415680, 
+            "Name": "File Name", 
+            "Type": 0, 
+            "Value": null
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1527069415680, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "The comment to add to the file's reputation", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1527069415680, 
+            "Name": "Comment", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat, add_prefix_to_dict_keys\nfrom McAfeeTIEDXLManager import McAfeeTIEDXLManager\n\nSCRIPT_NAME = \"Mcafee TIE & DXL - SetFileReputation\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('McAfeeTIEDXL')\n    siemplify.script_name = SCRIPT_NAME\n    server_addr = conf[\"Server Address\"]\n    broker_ca_bundle_path = conf[\"Broker CA Bundle Path\"]\n    cert_file_path = conf[\"Client Cert File Path\"]\n    private_key_path = conf[\"Client Key File Path\"]\n\n    trust_level = siemplify.parameters['Trust Level']\n    filename = siemplify.parameters.get('File Name')\n    comment = siemplify.parameters.get('Comment')\n\n    mcafee_dxl_manager = McAfeeTIEDXLManager(server_addr,\n                                      broker_ca_bundle_path,\n                                      cert_file_path,\n                                      private_key_path)\n\n    enriched_entities = []\n\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.FILEHASH:\n            try:\n                mcafee_dxl_manager.set_file_reputation(entity.identifier, trust_level, filename, comment)\n                enriched_entities.append(entity)\n\n            except Exception as e:\n                # An error occurred - skip entity and continue\n                siemplify.LOGGER.error(\n                    \"An error occurred on entity: {}.\\n{}.\".format(\n                        entity.identifier, str(e)\n                    ))\n                siemplify.LOGGER._log.exception(e)\n\n    if enriched_entities:\n        entities_names = [entity.identifier for entity in enriched_entities]\n\n        output_message = 'McAfee TIE: Reputation was set for the following entities:\\n' + '\\n'.join(\n            entities_names)\n\n        siemplify.update_entities(enriched_entities)\n\n    else:\n        output_message = 'McAfee TIE: No reputations were set.'\n\n    siemplify.end(output_message, True)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 1.0
+}

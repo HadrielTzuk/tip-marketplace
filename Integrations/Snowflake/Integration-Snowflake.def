@@ -1,0 +1,64 @@
+{
+    "Description": "Snowflake enables data storage, processing, and analytic solutions that are faster, easier to use, and far more flexible than traditional offerings. Snowflake combines a completely new SQL query engine with an innovative architecture natively designed for the cloud. To the user, Snowflake provides all of the functionality of an enterprise analytic database, along with many additional special features and unique capabilities.",
+    "DisplayName": "Snowflake",
+    "Identifier": "Snowflake",
+    "MarketingDisplayName": "Snowflake",
+    "Categories": [
+        "Cloud",
+        "IT & Infrastructure"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Snowflake",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyDescription": "API root of the Snowflake instance.",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https://{your_instance}.snowflakecomputing.com"
+        },
+        {
+            "IntegrationIdentifier": "Snowflake",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Account",
+            "PropertyDescription": "The name of the account configured with Snowflake.",
+            "PropertyName": "Account",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Snowflake",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyDescription": "Username used to access Snowflake.",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Snowflake",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Private Key",
+            "PropertyDescription": "Private key that is used for authentication.",
+            "PropertyName": "Private Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Snowflake",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Snowflake server is valid.",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg id=\"a\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M10.06,15.56h0c-.34-.06-.68,0-.98,.17l-4.86,2.8c-.69,.41-.92,1.27-.52,1.95,.09,.16,.21,.3,.36,.42,.15,.11,.32,.2,.5,.25,.18,.05,.37,.06,.56,.04,.19-.02,.37-.08,.53-.18l2.76-1.59v3.17c-.01,.25,.05,.49,.17,.71,.12,.22,.3,.4,.52,.52s.47,.19,.73,.19c.26,0,.51-.07,.73-.19,.22-.13,.4-.31,.52-.52,.12-.22,.18-.46,.17-.71v-5.62c0-.33-.11-.66-.33-.91-.22-.26-.53-.43-.87-.49Zm-1.54-2.32c.12-.22,.19-.47,.19-.71s-.07-.5-.19-.71c-.12-.22-.31-.4-.52-.54l-4.86-2.8c-.16-.09-.34-.15-.53-.18s-.38-.01-.56,.04c-.18,.05-.35,.13-.5,.25s-.27,.26-.36,.42c-.39,.68-.16,1.54,.52,1.95l2.75,1.59-2.75,1.59c-.69,.41-.92,1.27-.52,1.95,.09,.16,.21,.3,.36,.42,.15,.11,.32,.2,.5,.25,.18,.05,.37,.06,.56,.04,.19-.02,.37-.08,.53-.18l4.86-2.8c.22-.13,.4-.32,.52-.54ZM4.23,6.5l4.86,2.8c.55,.32,1.26,.23,1.71-.22,.15-.14,.26-.3,.34-.48,.08-.18,.12-.37,.12-.57V2.43c.01-.25-.05-.49-.17-.71-.12-.22-.3-.4-.52-.52-.22-.13-.47-.19-.73-.19-.26,0-.51,.07-.73,.19-.22,.13-.4,.31-.52,.52-.12,.22-.18,.46-.17,.71v3.19l-2.76-1.59c-.16-.09-.34-.15-.53-.18-.19-.02-.38-.01-.56,.04-.18,.05-.35,.13-.5,.25-.15,.11-.27,.26-.36,.42-.39,.68-.17,1.54,.52,1.95Zm10.09,2.69c.15,.11,.32,.2,.5,.25,.18,.05,.37,.06,.56,.04,.19-.02,.37-.09,.53-.18l4.86-2.8c.69-.41,.92-1.27,.52-1.95-.09-.16-.21-.3-.36-.42-.15-.11-.32-.2-.5-.25-.18-.05-.37-.06-.56-.04-.19,.02-.37,.08-.53,.18l-2.72,1.57V2.42c.01-.25-.05-.49-.17-.71s-.3-.4-.52-.52c-.22-.13-.47-.19-.73-.19s-.51,.07-.73,.19c-.22,.13-.4,.31-.52,.52-.12,.22-.18,.46-.17,.71V7.92c-.03,.29,.03,.59,.19,.85,.09,.16,.21,.3,.36,.42Zm8.97,4.91l-2.75-1.59,2.75-1.59c.69-.41,.92-1.27,.52-1.95-.09-.16-.21-.3-.36-.42-.15-.11-.32-.2-.5-.25-.18-.05-.37-.06-.56-.04-.19,.02-.37,.08-.53,.18l-4.86,2.8c-.22,.13-.41,.32-.53,.54-.13,.22-.19,.47-.18,.72,0,.25,.06,.5,.18,.72,.13,.22,.31,.4,.53,.53l4.86,2.8c.16,.09,.34,.15,.53,.18,.19,.02,.38,.01,.56-.04,.18-.05,.35-.13,.5-.25,.15-.11,.27-.26,.36-.42,.4-.68,.17-1.54-.52-1.95Zm-7-1.58h0Zm4.49,6h0l-4.86-2.8c-.16-.09-.34-.15-.53-.18-.19-.02-.38-.01-.56,.04-.18,.05-.35,.13-.5,.25-.15,.11-.27,.26-.36,.42-.15,.26-.21,.56-.18,.85v5.48c-.01,.25,.05,.49,.17,.71,.12,.22,.3,.4,.52,.52,.22,.13,.47,.19,.73,.19s.51-.07,.73-.19c.22-.13,.4-.31,.52-.52,.12-.22,.18-.46,.17-.71v-3.15l2.72,1.57c.16,.09,.34,.15,.53,.18,.19,.02,.38,.01,.56-.04,.18-.05,.35-.13,.5-.25,.15-.11,.27-.26,.36-.42,.39-.68,.16-1.54-.52-1.95Zm-5.61-5.78v-.49c0-.12-.05-.24-.14-.33l-1.93-1.92c-.09-.08-.21-.13-.33-.14h-.49c-.13,0-.24,.06-.33,.14l-1.93,1.92c-.08,.09-.13,.21-.14,.33v.49c0,.12,.06,.24,.14,.33l1.93,1.92c.09,.08,.21,.13,.33,.14h.49c.13,0,.24-.06,.33-.14l1.93-1.92c.08-.09,.13-.21,.14-.33Zm-1.72-.23c0,.09-.04,.18-.1,.25l-.57,.57c-.07,.06-.15,.1-.24,.1h-.02c-.09,0-.18-.04-.25-.1l-.57-.57c-.06-.07-.1-.16-.1-.25v-.02c0-.09,.04-.18,.1-.24l.57-.57c.07-.06,.15-.09,.25-.1h.02c.09,0,.18,.04,.25,.1l.57,.57c.06,.07,.1,.15,.1,.24v.02Z\"/></svg>",
+    "Version": 1.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/snowflake"
+}

@@ -1,0 +1,50 @@
+{
+    "Description": "McAfee Advanced Threat Defense protects against advanced malware, including zero-day and advanced persistent threats.",
+    "DisplayName": "McAfee ATD",
+    "Identifier": "McAfeeATD",
+    "Categories": [
+        "Malware Analysis",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "McAfeeATD",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "4",
+            "Value": "https://x.x.x.x/php"
+        },
+        {
+            "IntegrationIdentifier": "McAfeeATD",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeATD",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeATD",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SvgImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M21.5,3c0-0.2,0-0.4,0-0.7c-0.3,0.1-0.5,0.2-0.7,0.3c-2.6,1.2-5.1,2.4-7.7,3.6c-0.4,0.2-0.7,0.2-1.2,0\n\t\t\tC9.7,5.1,7.5,4.1,5.3,3C4.7,2.8,4.2,2.5,3.6,2.2c0,0.1,0,0.2,0,0.2c0,5.3,0,10.6,0,15.8c0,0.4,0.2,0.5,0.5,0.6\n\t\t\tc2.7,1.2,5.3,2.5,8,3.7c0.3,0.1,0.7,0.1,1,0c2.7-1.2,5.3-2.4,7.9-3.6c0.4-0.2,0.6-0.4,0.6-0.9C21.5,13,21.5,8,21.5,3z M17.3,16.6\n\t\t\tc-1.5,0.6-2.9,1.3-4.3,2c-0.2,0.1-0.6,0.1-0.8,0c-1.5-0.7-3-1.4-4.5-2.1c-0.2-0.1-0.4-0.4-0.4-0.5c0-2.6,0-5.3,0-8\n\t\t\tc1.4,0.7,2.8,1.2,4,1.9c0.9,0.5,1.6,0.5,2.5,0c1.1-0.6,2.2-1.1,3.4-1.6c0.2-0.1,0.4-0.2,0.7-0.3v1.9c0,2,0,3.9,0,5.9\n\t\t\tC17.8,16.2,17.7,16.5,17.3,16.6z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 10.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/mcafee-atd",
+    "MarketingDisplayName": "McAfee Advanced Threat Defense (ATD)"
+}

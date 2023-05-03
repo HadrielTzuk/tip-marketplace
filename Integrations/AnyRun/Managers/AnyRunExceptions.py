@@ -1,0 +1,2 @@
+class AnyRunError(Exception):
+    pass

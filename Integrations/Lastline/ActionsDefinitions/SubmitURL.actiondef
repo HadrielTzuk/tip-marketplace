@@ -1,0 +1,45 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Submit analysis task for the provided URL. Note: Action is not working with Siemplify entities, URL to analyze should be provided as action input parameter.",
+    "Id": -1,
+    "IntegrationIdentifier": "Lastline",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "{\"success\": 1, \"data\": {\"submission\": \"2021-03-22 09:00:16\", \"expires\": \"2021-03-24 09:00:16\", \"task_uuid\": \"123456\", \"reports\": [{\"relevance\": 1.0, \"report_uuid\": \"123456\", \"report_versions\": [\"ll-web\"], \"description\": \"Dynamic analysis in instrumented Chrome browser\"}, {\"relevance\": 1.0, \"report_uuid\": \"123456-v\", \"report_versions\": [\"ll-pcap\"], \"description\": \"Pcap analysis\"}], \"submission_timestamp\": \"2021-03-22 09:01:42\", \"child_tasks\": [{\"task_uuid\": \"123456\", \"score\": 0, \"tag\": \"network traffic analysis\", \"parent_report_uuid\": \"123456\"}], \"score\": 0, \"analysis_subject\": {\"url\": \"https://www.sport1.com\"}, \"last_submission_timestamp\": \"2021-03-22 09:01:42\"}}",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Submit URL",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify URL to analyze. ",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "URL For Analysis",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "Specify whether the action should wait for the report creation. Report also can be obtained later with Get Analysis Results action once scan is completed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Wait for the report?",
+            "Type": 1,
+            "Value": "True"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\":[]}",
+    "Version": 1.0,
+    "IsAsync": true
+}

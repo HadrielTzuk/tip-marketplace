@@ -1,0 +1,30 @@
+{
+    "CreationTimeUnixTimeInMs": 1506519715480,
+    "Creator": "admin",
+    "Description": "Add given tag to the case the current alert is grouped to",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506519715480,
+    "Name": "Case Tag",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1510914827832,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Tag to be added to the case.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914827832,
+            "Name": "Tag",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import *\n\ndef main():\n    siemplify = SiemplifyAction()\n    tag = siemplify.parameters[\"Tag\"]\n    siemplify.add_tag(tag)\n\n    output_message = \"The tag [%s] was added to the case\" % tag    \n    siemplify.end(output_message, \"true\")\n\nif __name__ == '__main__':\n\tmain()\n",
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

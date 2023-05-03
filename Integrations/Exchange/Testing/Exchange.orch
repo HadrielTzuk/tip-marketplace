@@ -1,0 +1,163 @@
+{
+  "Identifier": "1ea4e4f1-cf30-4d7e-94b9-ad063890451b",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "Exchange",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "4e549527-fde1-4ee0-aa46-10a339e5e8f8",
+      "ParentWorkflowIdentifier": "1ea4e4f1-cf30-4d7e-94b9-ad063890451b",
+      "ParentStepIdentifiers": [
+        "cc9dd0f2-eb9a-402f-b337-d2c4626b2256"
+      ],
+      "ParentStepIdentifier": "cc9dd0f2-eb9a-402f-b337-d2c4626b2256",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Exchange_Send Email And Wait_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Exchange_Send Email And Wait",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "4e549527-fde1-4ee0-aa46-10a339e5e8f8",
+          "ParentWorkflowIdentifier": "1ea4e4f1-cf30-4d7e-94b9-ad063890451b",
+          "Name": "ScriptName",
+          "Value": "Exchange_Send Email And Wait",
+          "CreationTimeUnixTimeInMs": 1519141211292,
+          "ModificationTimeUnixTimeInMs": 1519141211292
+        },
+        {
+          "ParentStepIdentifier": "4e549527-fde1-4ee0-aa46-10a339e5e8f8",
+          "ParentWorkflowIdentifier": "1ea4e4f1-cf30-4d7e-94b9-ad063890451b",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Send to\":\"org@or.com\",\"Subject\":\"bla\",\"Mail content\":\"{\\r\\n  \\\"Content\\\": \\\"content send email and wait\\\",\\r\\n  \\\"ContentTemplateName\\\": null,\\r\\n  \\\"HtmlTemplateName\\\": null\\r\\n}\"}",
+          "CreationTimeUnixTimeInMs": 1519141211292,
+          "ModificationTimeUnixTimeInMs": 1519141211292
+        },
+        {
+          "ParentStepIdentifier": "4e549527-fde1-4ee0-aa46-10a339e5e8f8",
+          "ParentWorkflowIdentifier": "1ea4e4f1-cf30-4d7e-94b9-ad063890451b",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519141211292,
+          "ModificationTimeUnixTimeInMs": 1519141211292
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519141211292,
+      "ModificationTimeUnixTimeInMs": 1519141211292
+    },
+    {
+      "Identifier": "837f41b7-0330-49d1-a8c0-737ad5f31778",
+      "ParentWorkflowIdentifier": "1ea4e4f1-cf30-4d7e-94b9-ad063890451b",
+      "ParentStepIdentifiers": [
+        "4e549527-fde1-4ee0-aa46-10a339e5e8f8"
+      ],
+      "ParentStepIdentifier": "4e549527-fde1-4ee0-aa46-10a339e5e8f8",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Exchange_Delete mail_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Exchange_Delete mail",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "837f41b7-0330-49d1-a8c0-737ad5f31778",
+          "ParentWorkflowIdentifier": "1ea4e4f1-cf30-4d7e-94b9-ad063890451b",
+          "Name": "ScriptName",
+          "Value": "Exchange_Delete mail",
+          "CreationTimeUnixTimeInMs": 1519141211292,
+          "ModificationTimeUnixTimeInMs": 1519141211292
+        },
+        {
+          "ParentStepIdentifier": "837f41b7-0330-49d1-a8c0-737ad5f31778",
+          "ParentWorkflowIdentifier": "1ea4e4f1-cf30-4d7e-94b9-ad063890451b",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Subject filter\":\"Bla\",\"delete all options\":\"False\"}",
+          "CreationTimeUnixTimeInMs": 1519141211292,
+          "ModificationTimeUnixTimeInMs": 1519141211292
+        },
+        {
+          "ParentStepIdentifier": "837f41b7-0330-49d1-a8c0-737ad5f31778",
+          "ParentWorkflowIdentifier": "1ea4e4f1-cf30-4d7e-94b9-ad063890451b",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519141211292,
+          "ModificationTimeUnixTimeInMs": 1519141211292
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519141211292,
+      "ModificationTimeUnixTimeInMs": 1519141211292
+    },
+    {
+      "Identifier": "cc9dd0f2-eb9a-402f-b337-d2c4626b2256",
+      "ParentWorkflowIdentifier": "1ea4e4f1-cf30-4d7e-94b9-ad063890451b",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Exchange_Send Mail_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Exchange_Send Mail",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "cc9dd0f2-eb9a-402f-b337-d2c4626b2256",
+          "ParentWorkflowIdentifier": "1ea4e4f1-cf30-4d7e-94b9-ad063890451b",
+          "Name": "ScriptName",
+          "Value": "Exchange_Send Mail",
+          "CreationTimeUnixTimeInMs": 1519141211292,
+          "ModificationTimeUnixTimeInMs": 1519141211292
+        },
+        {
+          "ParentStepIdentifier": "cc9dd0f2-eb9a-402f-b337-d2c4626b2256",
+          "ParentWorkflowIdentifier": "1ea4e4f1-cf30-4d7e-94b9-ad063890451b",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Subject\":\"Bla\",\"Send to\":\"user2@or.com\",\"Mail content\":\"{\\r\\n  \\\"Content\\\": \\\"content send email\\\",\\r\\n  \\\"ContentTemplateName\\\": null,\\r\\n  \\\"HtmlTemplateName\\\": null\\r\\n}\"}",
+          "CreationTimeUnixTimeInMs": 1519141211292,
+          "ModificationTimeUnixTimeInMs": 1519141211292
+        },
+        {
+          "ParentStepIdentifier": "cc9dd0f2-eb9a-402f-b337-d2c4626b2256",
+          "ParentWorkflowIdentifier": "1ea4e4f1-cf30-4d7e-94b9-ad063890451b",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519141211292,
+          "ModificationTimeUnixTimeInMs": 1519141211292
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519141211292,
+      "ModificationTimeUnixTimeInMs": 1519141211292
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "c154b26a-838c-43e1-aaf4-69db4afb9049",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "1ea4e4f1-cf30-4d7e-94b9-ad063890451b",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Exchange",
+      "AllEnvironments": "",
+      "Id": 44,
+      "CreationTimeUnixTimeInMs": 1519141211292,
+      "ModificationTimeUnixTimeInMs": 1519141211292
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 44,
+  "CreationTimeUnixTimeInMs": 1519141211292,
+  "ModificationTimeUnixTimeInMs": 1519141211292
+}

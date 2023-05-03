@@ -1,0 +1,51 @@
+{
+    "CreationTimeUnixTimeInMs": "1570446244",
+    "Creator": "admin",
+    "Description": "Get related IPs to the provided entities from VirusTotal. Note: this action requires a VT Enterprise token. Supported entities: URL, Filehash, Hostname. Note: only MD5, SHA-1 and SHA-256 are supported.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"ips\": [\"72.21.xx.xx\", \"23.54.xx.xx\", \"169.254.xx.xx\", \"169.254.xx.xx\", \"192.168.xx.xx\"],\"EntityResults\":[{\"Entity\":\"https://docs.example.com/\",\"EntityResult\":[\"104.114.xx.xxx\",\"23.66.xxx.xxx\"]},{\"Entity\":\"www.example.com\",\"EntityResult\":[\"93.184.xxx.xx\",\"0.0.xx.xx\"]}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "VirusTotalV3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Get Related IPs",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "Combined",
+            "Description": "Specify how the JSON result should look like. If \"Combined\" is selected then action will return all of the unique results that were found among the provided entities. If \"Per Entity\" is selected, then action will return all of the unique items per entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Results",
+            "Type": 15,
+            "Value": "Combined",
+            "OptionalValues": [
+                "Combined",
+                "Per Entity"
+            ]
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": 40,
+            "Description": "Specify how many URLs to return. Depending on the parameter \"Results\", this parameter will behave differently. For \"Combined\" the limit will define how many results to return from ALL entities. For \"Per Entity\" this parameter dictates how many results to return per entity. Default: 40.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Max IPs To Return",
+            "Type": 0,
+            "Value": 40
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\", \"DestinationURL\", \"HOSTNAME\"]}",
+    "Type": 0,
+    "Version": 1.0
+}

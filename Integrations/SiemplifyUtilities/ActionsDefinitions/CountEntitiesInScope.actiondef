@@ -1,0 +1,32 @@
+{
+    "CreationTimeUnixTimeInMs": 1555256058213,
+    "Creator": "System",
+    "DefaultResultValue": null,
+    "Description": "Count the number of entities from a specific scope.",
+    "Id": -1,
+    "IntegrationIdentifier": "SiemplifyUtilities",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1555256058226,
+    "Name": "Count Entities In Scope",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1555256058233,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The type of the target entities.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1555256058233,
+            "Name": "Entity Type",
+            "OptionalValuesJson": null,
+            "Type": 13,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\n\nACTION_NAME = 'Siemplify_Count Entities'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n\n    # Parameters.\n    entity_type = siemplify.parameters.get('Entity Type')\n\n    scope_entities = [entity for entity in siemplify.target_entities if entity.entity_type == entity_type]\n\n    list_count = len(scope_entities)\n\n    output_message = \"There are {0} entities from {1} type.\".format(list_count, entity_type)\n\n    siemplify.end(output_message, list_count)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "list_count",
+    "TimeoutSeconds": 600,
+    "Version": 4.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

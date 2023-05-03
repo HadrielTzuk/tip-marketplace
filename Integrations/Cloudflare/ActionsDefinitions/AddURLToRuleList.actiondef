@@ -1,0 +1,127 @@
+{
+    "CreationTimeUnixTimeInMs": 1664133744476,
+    "Creator": "admin",
+    "Description": "Add URLs to the rule list in Cloudflare. Supported Entities: URL. Note: URL entities are treated as \"Source URLs\".",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"HTTP://MARKOSSOLOMON.COM/F1Q7QX.PHP\",\"EntityResult\":{\"result\":{\"operation_id\":\"xxxxxxxf147394848a4ae24aa233ff86c\"},\"success\":true,\"errors\":[],\"messages\":[]}},{\"Entity\":\"https://jsonlint.com/\",\"EntityResult\":{\"result\":{\"operation_id\":\"xxxxxxxe7cdbf6e925b4896bccb192fb\"},\"success\":true,\"errors\":[],\"messages\":[]}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "Cloudflare",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1664133744476,
+    "Name": "Add URL To Rule List",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1664133744476,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the rule list to which you want to add rule list items.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1664133744476,
+            "Name": "Rule Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1664133744476,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the target URL for the rule list item.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1664133744476,
+            "Name": "Target URL",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1664133744476,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a description for the newly added rule list item.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1664133744476,
+            "Name": "Description",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1664133744476,
+            "CustomActionId": -1,
+            "DefaultValue": "301",
+            "Description": "Specify the status for the rule list item.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1664133744476,
+            "Name": "Status Code",
+            "Type": 15,
+            "Value": "301",
+            "OptionalValues": [
+                "301",
+                "302",
+                "307",
+                "308"
+            ]
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1664133744476,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, the rule list item will preserve the query string.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1664133744476,
+            "Name": "Preserve Query String",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1664133744476,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, the rule list item will include subdomains.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1664133744476,
+            "Name": "Include Subdomains",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1664133744476,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, the rule list item will match the subpath.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1664133744476,
+            "Name": "Subpath Matching",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1664133744476,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, the rule list item will preserve the path suffix.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1664133744476,
+            "Name": "Preserve Path Suffix",
+            "Type": 1,
+            "Value": false
+        }
+    ],
+    "Script": "",
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}",
+    "Type": 0,
+    "Version": 1.0
+}
+

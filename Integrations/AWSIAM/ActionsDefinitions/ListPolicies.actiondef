@@ -1,0 +1,61 @@
+ {
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List all the managed policies that are available in your AWS account, including your own customer-defined managed policies and all AWS managed policies. You can filter the list of policies that are returned using the optional Only Attached, Scope, and Policy Usage parameters. For example, to list only the customer managed policies in your AWS account, set Scope to Local. To list only AWS managed policies, set Scope to AWS.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSIAM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"PolicyName\":\"Amazon-Detective\",\"PolicyId\":\"ANPAYPE7MW7ANSYSW3QPR\",\"Arn\":\"arn:aws:iam::582302349248:policy\/Amazon-Detective\",\"Path\":\"\/\",\"DefaultVersionId\":\"v1\",\"AttachmentCount\":1,\"PermissionsBoundaryUsageCount\":\"0\",\"IsAttachable\":\"True\",\"Description\":\"None\",\"CreateDate\":\"2020-04-27 09:53:04+00:00\",\"UpdateDate\":\"2020-04-27 09:53:04+00:00\"}]",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Policies",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "When checked, filtering the results to only the policies that are attached to an IAM user, group or role. When unchecked, all policies will be returned.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Only Attached",
+            "Type": 1,
+            "Value": "False"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "All",
+            "Description": "The scope to use for filtering the results. To list only AWS managed policies, set Scope to AWS. To list only the customer managed policies in your AWS account, set Scope to Local. As default, all policies will be returned.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Scope",
+            "OptionalValues": [
+                "All",
+                "AWS",
+                "Local"
+            ],
+            "Type": 15,
+            "Value": "All"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "100",
+            "Description": "Specify how many policies to return. Default is 100. Maximum is 1000.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Policies to Return",
+            "Type": 0,
+            "Value": "100"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

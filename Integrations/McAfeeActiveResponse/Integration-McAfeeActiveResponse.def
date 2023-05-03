@@ -1,0 +1,49 @@
+{
+    "Description": "McAfee Active Response is endpoint detection and response software that helps you find and remediate advanced threats.",
+    "DisplayName": "McAfee Active Response",
+    "Identifier": "McAfeeActiveResponse",
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "McAfeeActiveResponse",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Broker URLs List",
+            "PropertyName": "Broker URLs List",
+            "PropertyType": "2",
+            "Value": "ssl://{ip_adderss_1}:{port},ssl://{ip_address_2}:{port}"
+        },
+        {
+            "IntegrationIdentifier": "McAfeeActiveResponse",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Broker CA Bundle File Path",
+            "PropertyName": "Broker CA Bundle File Path",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeActiveResponse",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Certificate File Path",
+            "PropertyName": "Certificate File Path",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeActiveResponse",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Private Key File Path",
+            "PropertyName": "Private Key File Path",
+            "PropertyType": "2",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SvgImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"><g><g><path d=\"M21.5,3c0-0.2,0-0.4,0-0.7c-0.3,0.1-0.5,0.2-0.7,0.3c-2.6,1.2-5.1,2.4-7.7,3.6c-0.4,0.2-0.7,0.2-1.2,0C9.7,5.1,7.5,4.1,5.3,3C4.7,2.8,4.2,2.5,3.6,2.2c0,0.1,0,0.2,0,0.2c0,5.3,0,10.6,0,15.8c0,0.4,0.2,0.5,0.5,0.6c2.7,1.2,5.3,2.5,8,3.7c0.3,0.1,0.7,0.1,1,0c2.7-1.2,5.3-2.4,7.9-3.6c0.4-0.2,0.6-0.4,0.6-0.9C21.5,13,21.5,8,21.5,3z M17.3,16.6c-1.5,0.6-2.9,1.3-4.3,2c-0.2,0.1-0.6,0.1-0.8,0c-1.5-0.7-3-1.4-4.5-2.1c-0.2-0.1-0.4-0.4-0.4-0.5c0-2.6,0-5.3,0-8c1.4,0.7,2.8,1.2,4,1.9c0.9,0.5,1.6,0.5,2.5,0c1.1-0.6,2.2-1.1,3.4-1.6c0.2-0.1,0.4-0.2,0.7-0.3v1.9c0,2,0,3.9,0,5.9C17.8,16.2,17.7,16.5,17.3,16.6z\"/></g></g></svg>",
+    "Version": 6.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/mcafee-active-response",
+    "MarketingDisplayName": "McAfee Active Response"
+}

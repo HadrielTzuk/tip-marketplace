@@ -1,0 +1,54 @@
+{
+    "Name": "List Providers",
+    "Description": "List identity providers (IdPs) in your organization",
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import construct_csv, dict_to_flat\nfrom OktaManager import OktaManager\nimport json\n\n\nPROVIDER = \"Okta\"\nACTION_NAME = \"Okta - ListProviders\"\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    q = siemplify.parameters.get('Query', \"\")\n    _type = siemplify.parameters.get('Type', \"\")\n    limit = siemplify.parameters.get('Limit', \"\")\n    if limit:\n        try:\n            limit = int(limit)\n        except:\n            raise Exception(\"Limit must be a number\")\n    okta = OktaManager(api_root=conf['Api Root'], api_token=conf['Api Token'],\n                       verify_ssl=conf['Verify SSL'].lower() == 'true')\n    providers = {}\n    try:\n        providers = okta.list_providers(q=q, _type=_type, limit=limit)\n    except Exception as err:\n        siemplify.LOGGER.exception(err)\n        siemplify.LOGGER.error(err.message)\n        pass\n    if providers:\n        p = []\n        for i, provider in enumerate(providers, 1):\n            flat_provider = dict_to_flat(provider)\n            csv_output = construct_csv([flat_provider])\n            p.append(provider['name'])\n            siemplify.result.add_data_table(\"Okta - Provider \" + str(i) + \": \" + provider['name'], csv_output)\n        output_message = \"Found {0} providers: {1}\".format(len(providers), \", \".join(p))\n    else:\n        output_message = \"No providers were found\"\n    siemplify.end(output_message, json.dumps(providers))\n\nif __name__ == '__main__':\n    main()",
+    "IntegrationIdentifier": "Okta",
+    "ScriptResultName": "ScriptResult",
+    "DynamicScriptResultNamesJson": "[\"ResultJson\"]",
+    "Creator": "System",
+    "IsEnabled": true,
+    "IsCustom": false,
+    "Version": 9.0,
+    "Parameters": [
+        {
+            "CustomActionId": 704,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Search the name property for a match",
+            "Name": "Query",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1548084338391,
+            "ModificationTimeUnixTimeInMs": 1548084338391
+        },
+        {
+            "CustomActionId": 704,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Filter by type",
+            "Name": "Type",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1548084338391,
+            "ModificationTimeUnixTimeInMs": 1548084338391
+        },
+        {
+            "CustomActionId": 704,
+            "IsMandatory": false,
+            "DefaultValue": "20",
+            "Description": "Max amount of results to return",
+            "Name": "Limit",
+            "Value": "20",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1548084338392,
+            "ModificationTimeUnixTimeInMs": 1548084338392
+        }
+    ],
+    "Id": -1,
+    "CreationTimeUnixTimeInMs": 1548084338366,
+    "ModificationTimeUnixTimeInMs": 1548084338371,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

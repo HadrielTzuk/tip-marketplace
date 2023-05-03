@@ -1,0 +1,38 @@
+[
+  {
+    "Product": "VMware Carbon Black Cloud",
+    "EventName": "filemod",
+    "ComparisonType": 0,
+    "VisualFamily": "Carbon Black File Modifications",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "VMware Carbon Black Cloud",
+    "EventName": "netconn",
+    "ComparisonType": 0,
+    "VisualFamily": "Carbon Black Network Connections Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "VMware Carbon Black Cloud",
+    "EventName": "childproc",
+    "ComparisonType": 0,
+    "VisualFamily": "Carbon Black Process Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  },
+  {
+    "Product": "VMware Carbon Black Cloud",
+    "EventName": "crossproc",
+    "ComparisonType": 0,
+    "VisualFamily": "Carbon Black Process Event",
+    "ForMigration": false,
+    "CreationTimeUnixTimeInMs": 1623983028569,
+    "ModificationTimeUnixTimeInMs": 1623983028569
+  }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New CyberArk PAM integration added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "CyberArkPAM",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1677024000,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "265645187"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "CyberArkPAM",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

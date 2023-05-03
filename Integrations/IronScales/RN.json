@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New IronScales integration added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "IronScales",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1609233872,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-6480"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "IronScales",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    }
+]

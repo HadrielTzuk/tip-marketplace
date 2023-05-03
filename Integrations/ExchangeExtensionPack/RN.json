@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Exchange Extension Pack.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "ExchangeExtensionPack",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1635937463,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7708"
+    },
+    {
+        "ChangeDescription": "Extension Pack integration - Added a disclaimer about current lack of support for Office365.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "ExchangeExtensionPack",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1680566400,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "276210335"
+    }
+]

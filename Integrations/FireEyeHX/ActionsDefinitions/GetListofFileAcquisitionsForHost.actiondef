@@ -1,0 +1,58 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381915816, 
+    "Creator": "Admin", 
+    "Description": "Get list of file acquisitions requested for host from FireEye HX server. Action works on Host or IP Siemplify entities.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [{\"comment\": \"\", \"zip_passphrase\": \"unzip-me\", \"indicator\": {\"url\": null, \"_id\": \"FqNP4ybCdrlfVqG3lrCvRP\"}, \"request_actor\": {\"username\": \"admin\", \"_id\": 1000}, \"request_time\": \"2020-06-01T08:43:14.000Z\", \"finish_time\": \"2020-06-01T08:46:39.156Z\", \"_revision\": \"20200601084639156575147403\", \"error_message\": \"The acquisition completed with issues.\", \"req_use_api\": false, \"alert\": {\"url\": null, \"_id\": \"FqNP4ybCdrlfVqG3lrCvRP\"}, \"url\": \"/hx/api/v3/acqs/files/9\", \"state\": \"COMPLETE\", \"host\": {\"url\": \"/hx/api/v3/hosts/FqNP4ybCdrlfVqG3lrCvRP\", \"_id\": \"FqNP4ybCdrlfVqG3lrCvRP\"}, \"req_filename\": \"reg.exe\", \"req_path\": \"C:\\\\Windows\\\\System32\", \"_id\": 9, \"external_id\": null, \"condition\": {\"url\": null, \"_id\": \"FqNP4ybCdrlfVqG3lrCvRP\"}, \"md5\": \"601bddf7691c5af626a5719f1d7e35f1\"}], \"Entity\": \"PC-01\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "FireEyeHX", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1535381915816, 
+    "Name": "Get List of File Acquisitions For Host", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "Searches all file acquisitions for hosts connected to the FireEye HX server. The search_term can be any condition value.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381915816, 
+            "Name": "Search Term", 
+            "Type": 0, 
+            "Value": null
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "How many records action should return, for example, 100.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381915816, 
+            "Name": "Limit", 
+            "Type": 0, 
+            "Value": null
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "Lists only results with the specified field value, results can be filtered by external correlation identifier (external_id).", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381915816, 
+            "Name": "Filter Field", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

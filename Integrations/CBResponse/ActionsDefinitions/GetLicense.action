@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1520849262511,
+    "Creator": "admin",
+    "Description": "Get the current license from CB Response",
+    "Id": -1,
+    "IntegrationIdentifier": "CBResponse",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1520849262511,
+    "Name": "Get License",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

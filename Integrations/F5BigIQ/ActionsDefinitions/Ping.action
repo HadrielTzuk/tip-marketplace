@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1520162690870,
+    "Creator": "admin",
+    "Description": "Big IQ connectivity test",
+    "Id": -1,
+    "IntegrationIdentifier": "F5BigIQ",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1520162690870,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New integration \"Illusive Networks\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "IllusiveNetworks",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1616583583,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7398"
+    }
+]

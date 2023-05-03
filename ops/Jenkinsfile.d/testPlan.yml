@@ -1,0 +1,2 @@
+smokeOnly:
+  - tests/api-smoke.yml

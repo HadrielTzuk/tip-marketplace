@@ -1,0 +1,56 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Get all available hunts.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleGRR",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"Hunt_Description\": \"Interrogate run by cron to keep host info fresh.\", \"Creator\": \"SampleCreator\", \"Is_Robot\": \"False\", \"State\": \"STOPPED\", \"Creation Time\": \"2020-11-25 09:09:24 UTC\", \"Start Time (initial)\": \"2020-11-25 09:09:24 UTC\", \"Start Time (last)\": \"2020-11-25 09:09:24 UTC\", \"Duration\": \"1w\", \"Client Limit\": \"0\", \"Expiration Time\": \"2020-12-02 09:09:24 UTC\", \"Hunt_ID\": \"123456\"}]",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Hunts",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Return hunts created by a specified user.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Creator",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify Found hunts starting offset.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Offset",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "5",
+            "Description": "Specify how many hunts to return in the response.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "Value": "5"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\":[]}",
+    "Version": 1.0
+}

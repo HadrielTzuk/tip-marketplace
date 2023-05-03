@@ -1,0 +1,11 @@
+{
+	"Name": "Jobs Monitor",
+	"Category": "Siemplify",
+	"Creator": "Siemplify System",
+	"RunIntervalInSeconds": 10800,
+	"Description": "Notifies about all the jobs that had failed in the last 3 hours",
+	"IsEnabled": true,
+	"IsCustom": false,
+	"Version": 1.0,
+	"Params": []
+}

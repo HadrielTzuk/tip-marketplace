@@ -1,0 +1,21 @@
+{
+    "CreationTimeUnixTimeInMs": 1524469410116,
+    "Creator": "admin",
+    "Description": "List all exising cases",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Field2\": \"Value2\", \"attributes\": {\"url\": \"/services/data/v20.0/sobjects/Case/123456789\", \"type\": \"Case\"}, \"Field1\": \"Value1\", \"Field3\": \"Value3\"}, {\"Field2\": \"Value2\", \"attributes\": {\"url\": \"/services/data/v20.0/sobjects/Case/123456789\", \"type\": \"Case\"}, \"Field1\": \"Value1\", \"Field3\": \"Value3\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Salesforce",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524469410116,
+    "Name": "List Cases",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

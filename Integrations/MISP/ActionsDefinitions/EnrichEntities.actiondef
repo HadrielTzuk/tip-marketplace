@@ -1,0 +1,80 @@
+{
+    "CreationTimeUnixTimeInMs": 1530448856101, 
+    "Creator": "admin", 
+    "Description": "Enrich entities based on the attributes in MISP.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\":[{\"Event\":{\"orgc_id\":\"xx\",\"ShadowAttribute\":[],\"id\":\"xx\",\"threat_level_id\":\"xx\",\"event_creator_email\":\"john_doe@example.com\",\"uuid\":\"5c5bff1b-a414-4a83-8755-035f0a0xxxx\",\"Object\":[],\"Orgc\":{\"uuid\":\"5c5ac66e-3884-4031-afd7-46f5bb9xxxx\",\"name\":\"ORGNAME\",\"id\":\"xx\"},\"Org\":{\"uuid\":\"5c5ac66e-3884-4031-afd7-46f5bb9xxxx\",\"name\":\"ORGNAME\",\"id\":\"xx\"},\"RelatedEvent\":[],\"sharing_group_id\":\"0\",\"timestamp\":\"1549533154\",\"date\":\"2019-02-07\",\"disable_correlation\":\"False\",\"info\":\"Test event\",\"locked\":\"False\",\"publish_timestamp\":\"1549533214\",\"Attribute\":[{\"category\":\"Network activity\",\"comment\":\"\",\"uuid\":\"5c5bffe2-9298-4098-ae31-035d0a00xxxx\",\"deleted\":\"False\",\"timestamp\":\"1549533154\",\"to_ids\":\"False\",\"distribution\":\"3\",\"object_id\":\"xx\",\"event_id\":\"xx\",\"ShadowAttribute\":[],\"sharing_group_id\":\"0\",\"value\":\"1.1.xx.xx\",\"disable_correlation\":\"False\",\"object_relation\":\"None\",\"type\":\"ip-src\",\"id\":\"xx\",\"Galaxy\":[]}],\"attribute_count\":\"1\",\"org_id\":\"xx\",\"analysis\":\"2\",\"extends_uuid\":\"\",\"published\":\"True\",\"distribution\":\"3\",\"proposal_email_lock\":\"False\",\"Galaxy\":[]}}],\"Entity\":\"1.1.xx.xx\"}]",
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "MISP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530448856101, 
+    "Name": "Enrich Entities", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835, 
+            "CustomActionId": -1, 
+            "DefaultValue": "300", 
+            "Description": "Specify how many attributes to return for entities.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1560351300835, 
+            "Name": "Number of attributes to return", 
+            "Type": 0, 
+            "Value": "10"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835, 
+            "CustomActionId": -1, 
+            "DefaultValue": "LAST", 
+            "Description": "Specify the filtering condition for the action. If “Last“ is selected, action will use the oldest attribute for enrichment, if “First“ is selected, action will use the newest attribute for enrichment.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1560351300835, 
+            "Name": "Filtering condition", 
+            "OptionalValues": [
+                "LAST", 
+                "FIRST"
+            ], 
+            "Type": 15, 
+            "Value": "LAST"
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": true,
+            "Value": true,
+            "Description": "If enabled, action will generate an insight for every entity that was fully processed.",
+            "Name": "Create Insights",
+            "Type": 1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1570585605761,
+            "ModificationTimeUnixTimeInMs": 1570585605761
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835,
+            "CustomActionId": -1,
+            "DefaultValue": "Low",
+            "Description": "Specify what should be the threshold for the threat level of the event, where the entity was found. If related event exceeds or matches threshold, entity will be marked as suspicious.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560351300835,
+            "Name": "Threat Level Threshold",
+            "OptionalValues": [
+                "High",
+                "Medium",
+                "Low",
+                "Undefined"
+            ],
+            "Type": 15,
+            "Value": "Low"
+        }
+    ], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\", \"FILEHASH\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

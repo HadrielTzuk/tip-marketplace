@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1524559211168,
+    "Creator": "admin",
+    "Description": "Add a note to the case in LogRhythm.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "\"{\\\"number\\\":29,\\\"dateCreated\\\":\\\"2021-xx-11T12:21:11.xx4730xx\\\",\\\"dateUpdated\\\":\\\"2021-xx-11T12:21:11.xx4730xx\\\",\\\"createdBy\\\":{\\\"number\\\":-100,\\\"name\\\":\\\"LogRhythm Axx\\\",\\\"disabled\\\":false},\\\"lastUpdatedBy\\\":{\\\"number\\\":-100,\\\"name\\\":\\\"LogRhythm Axx\\\",\\\"disabled\\\":false},\\\"type\\\":\\\"note\\\",\\\"status\\\":\\\"completed\\\",\\\"statusMessage\\\":null,\\\"text\\\":\\\"axxxx\\\",\\\"pinned\\\":false,\\\"datePinned\\\":null}\"",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "LogRhythm",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524559211168,
+    "Name": "Add Note To Case",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID of the case to which you want to add a note.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Case ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a note that should be added to the case.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Note",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

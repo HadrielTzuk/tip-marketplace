@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1524559211168,
+    "Creator": "admin",
+    "Description": "Download files related to the case in LogRhythm.",
+     "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"absolute_file_paths\": [\"test_file1.txt\", \"test_file2.txt\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "LogRhythm",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524559211168,
+    "Name": "Download Case Files",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the id of the case from which you want to download files.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Case ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the path to the folder, where you want to store the case files.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Download Folder Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will overwrite the file with the same name.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "Name": "Overwrite",
+            "Type": 1,
+            "Value": false
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

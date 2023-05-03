@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1532523417395,
+    "Creator": "Admin",
+    "Description": "Check connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "Intsights",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1532523417395,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

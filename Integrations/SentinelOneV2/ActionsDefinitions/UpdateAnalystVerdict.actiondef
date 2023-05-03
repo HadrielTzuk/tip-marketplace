@@ -1,0 +1,45 @@
+{
+    "CreationTimeUnixTimeInMs": 1542188059113,
+    "Creator": "Admin",
+    "Description": "Update analyst verdict of the threat in SentinelOne.",
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOneV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542188059113,
+    "Name": "Update Analyst Verdict",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of threat ids for which you want to update the analyst verdict.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Threat ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "Undefined",
+            "Description": "Specify the analyst verdict.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Analyst Verdict",
+            "Type": 15,
+            "OptionalValues": [
+                "False Positive",
+                "True Positive",
+                "Suspicious",
+                "Undefined"
+            ],
+            "Value": "Undefined"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0
+}

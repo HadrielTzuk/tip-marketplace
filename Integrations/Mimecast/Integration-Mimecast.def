@@ -1,0 +1,67 @@
+{
+    "Description": "Mimecast cloud cybersecurity services for email, data, and web provides your organization with archiving and continuity needed to prevent compromise.",
+    "DisplayName": "Mimecast",
+    "Identifier": "Mimecast",
+    "MarketingDisplayName": "Mimecast",
+    "Categories": [
+        "Email Security",
+        "Security"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAYAAAClr220AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAR4SURBVHgB7d09TBNhHMfxB+OiiyiOGnFQR1h1EdRRg5OOwGScbONmNMjipsDoZBl1sURHX3CRsWXUhRIZNWHCEfu75s6nx125o1z/rX4/ySV9O56nT3/3vLUJQ7tNDuixIw4wQPBgguDBBMGDCYIHEwQPJggeTBA8mCB4MEHwYILgwQTBgwmCBxMEDyYIHkwQPJggeDBB8GCC4MEEwYMJggcTBA8mCB5MEDyYIHgwQfBgguDBBMGDCYIHEwQPJgYqeE+fvnNDQ/eio9H45TCYjjr883SBVipfo/szM1fc6OiIs0Tw/gONxk83P/8+uj8xcYng5TE+frZ5tV6O7g8PH3MYTAMVvNu3x4MDg6/w4B10AZA0FGxv7zSP34mvOcxyOpXZ7Xminnp4+Hiu1x2knLQ6auhtNEb2lBP+rSzldqvw4J0//8gdhBptevpycyV7K3qsWq272dnl6P7u7suuy1EDP3hwra0c0YdQKr1xKyvrwe0s9RNdADMzFffly/fUMicmLrrPnx+6pPeUVM7c3K22KUbWcvz28cXLm5u7GbwPtUWlshZMaVTHIvXtUKuG1YRYjVEqXXdFUajCibcfIoVueXnN5a3f5OTzQ93m0d+ana0EAfTDcNjlhOIBL0rf7+P5q7EiLS19im7rA+0UOp9fv9XVb4XtLc7Pv4tuV6u1wsrRhVT0MCs97fE0pJVKN4LbajhdtaFq9b4bGzsb3F5a+uAWF1tBaM07dnI1RqdyFhbuRAuUeDl6rXoWzYF8tdqT5vBzJrpfLr9OrF+9vtV23sbGM7cf1UXbG0m0YR5eAH7Q4uWofnlW+H5bi8XuQE+Dpw8nbcJ74sTf5/xGkdaEN3vwOpWjRg6fm5oajwLki/cm8Q8mrX7xuWCWvbJOPUzW80dHT+VqH7+trbCBnIHme374NjcPd5hTYLXIiAc+beHgh0bnTk6+cFevXmg+fjromdN60H5C8DJYWam7ooRTgTxzNg3PmluG59TrP4IjpGD6U4p+xK9TjGkel3ehoGFV2zFpWx6tlfBy4jZQv6DHy0C9R6cJeDeTc3/1rB5qamqs7bnV1fThVuFTuLTYUI+noVlDtuhx7ckVuRXVDYKXgQJRxGQ83tMpdPrlSCgtdD71fur5dChkJ0+Wo56OHm/AxEOmXsTfTonTTn/SSlo/RUoLrBYA8Z5yfX0r2AsMpS1iFNj4lo9odZ0UtviKtzVn3d1Tn14ieAkUJF+5/Kbj67Vf1wre6bbH074KUxjDc86dG4kCtrj4MTj2o0Bn2VgP34fK87d74uWE9eklFhcJWl+DXXN5hUNeHkXNwRSmcFWr96PvY/sJwUuxsHA3+O620xCb5O3b+0Fos84JFbxXr6Zzl5NG5eqbm1rtcaHldGuIfw0PC/R4MEHwYILgwQTBgwmCBxMEDyYIHkwQPJggeDBB8GCC4MEEwYMJggcTBA8mCB5MEDyYIHgwQfBgguDBBMGDCYIHEwQPJggeTBA8mCB4MEHwYILgwQTBgwmCBxMEDyb+AMBMzzu0Da2aAAAAAElFTkSuQmCC",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Mimecast",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https:/{{api root}}"
+        },
+        {
+            "IntegrationIdentifier": "Mimecast",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Application ID",
+            "PropertyName": "Application ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Mimecast",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Application Key",
+            "PropertyName": "Application Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Mimecast",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Access Key",
+            "PropertyName": "Access Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Mimecast",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Secret Key",
+            "PropertyName": "Secret Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Mimecast",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"><g><g><path d=\"M17.5,4H3v16h3.9V7.6h3.7v12.3h3.8V7.6h3.1c0.4,0.1,0.8,0.5,0.7,1V20H22V8.9C22,5.7,20.5,4,17.5,4z\"/></g></g></svg>",
+    "Version": 4.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/mimecast"
+}

@@ -1,0 +1,63 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List available data groups in F5 BIG-IP. Note: action only supports internal data groups.",
+    "Id": -1,
+    "IntegrationIdentifier": "F5BIGIPiControlAPI",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Data Groups",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"kind\":\"tm:ltm:data-group:internal:internalstate\",\"name\":\"images\",\"partition\":\"Common\",\"fullPath\":\"/Common/images\",\"generation\":1,\"selfLink\":\"https://localhost/mgmt/tm/ltm/data-group/internal/~Common~images?ver=16.0.1.1\",\"type\":\"string\",\"records\":[{\"name\":\".bmp\",\"data\":\"\"},{\"name\":\".gif\",\"data\":\"\"},{\"name\":\".jpg\",\"data\":\"\"}]},{\"kind\":\"tm:ltm:data-group:internal:internalstate\",\"name\":\"private_net\",\"partition\":\"Common\",\"fullPath\":\"/Common/private_net\",\"generation\":1,\"selfLink\":\"https://localhost/mgmt/tm/ltm/data-group/internal/~Common~private_net?ver=16.0.1.1\",\"type\":\"ip\",\"records\":[{\"name\":\"10.0.0.0/8\",\"data\":\"\"},{\"name\":\"172.16.0.0/12\",\"data\":\"\"},{\"name\":\"192.168.0.0/16\",\"data\":\"\"}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1554655351176,
+            "CustomActionId": -1,
+            "DefaultValue": "Equal",
+            "Description": "Specify what filter logic should be applied.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1554655351176,
+            "Name": "Filter Logic",
+            "Type": 15,
+            "OptionalValues": [
+                "Equal",
+                "Contains"
+            ],
+            "Value": "Equal"
+        },
+        {
+            "Name": "Filter Value",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what value should be used in the filter. If \"Equal\" is selected, action will try to find the exact match among record types and if \"Contains\" is selected, action will try to find items that contain that substring. If nothing is provided in this parameter, the filter will not be applied.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Data Groups To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many data groups to return. Default: 50.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

@@ -1,0 +1,46 @@
+{
+    "DisplayName": "BitSight",
+    "Identifier": "BitSight",
+    "Description": "BitSight offers the world's leading security ratings solution with a mission to change the way the world manages cybersecurity analytics and risk.",
+    "MarketingDisplayName": "BitSight",
+    "Categories": [
+        "Cloud",
+        "Vulnerability & Risk Management"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "BitSight",
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyDescription": "API root of the BitSight instance.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://api.bitsighttech.com"
+        },
+        {
+            "IntegrationIdentifier": "BitSight",
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyDescription": "API Key of the BitSight instance.",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "BitSight",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the BitSight is valid.",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M11.51 17.86V7.14h1.77v10.72h-1.77ZM19.85 17.86h-1.78V8.64h-3.15v-1.5h8.07v1.5h-3.15v9.22ZM2 7.14h3.02c1.31 0 2.3.2 2.97.6.67.4 1 1.09 1 2.07 0 .41-.07.78-.21 1.11-.13.33-.33.6-.59.81-.26.21-.58.35-.96.43v.07c.39.07.74.2 1.05.39.31.19.55.45.73.8.18.35.27.8.27 1.35 0 .65-.15 1.21-.44 1.67-.29.46-.71.81-1.26 1.05-.54.24-1.19.36-1.93.36H2V7.14Zm1.67 4.42h1.6c.76 0 1.28-.13 1.57-.39.29-.26.44-.64.44-1.14s-.17-.87-.52-1.1c-.34-.22-.89-.34-1.64-.34H3.67v2.96Zm0 1.42v3.4h1.76c.78 0 1.33-.16 1.64-.48.32-.32.47-.75.47-1.29 0-.33-.07-.62-.22-.86-.14-.24-.37-.43-.69-.56-.32-.14-.75-.21-1.29-.21H3.66Z\"/></svg>",
+    "Version": 2.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/bitsight"
+}

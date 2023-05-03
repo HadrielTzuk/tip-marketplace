@@ -1,0 +1,28 @@
+{
+    "CreationTimeUnixTimeInMs": 1544542895231,
+    "Creator": "Admin",
+    "Description": "The action invalidates all the refresh tokens issued to applications for a user, by resetting the signInSessionsValidFromDateTime user property to the current date-time.",
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftGraphSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1544542895231,
+    "Name": "Kill User Session",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1544542895237,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The user's username used during sign in or the user Unique ID provided by Azure AD",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1544542895237,
+            "Name": "userPrincipalName | ID",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

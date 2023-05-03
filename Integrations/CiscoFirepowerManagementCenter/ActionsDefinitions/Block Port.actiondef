@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1528800635511,
+    "Creator": "admin",
+    "Description": "Block port by assigning it to a port group attached to a policy",
+    "Id": -1,
+    "IntegrationIdentifier": "CiscoFirepowerManagementCenter",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1528800635511,
+    "Name": "Block Port",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1528800635511,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Name of the port object group.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528800635511,
+            "Name": "Port Group Name",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528800635511,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Port to block, e.g. 9856.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528800635511,
+            "Name": "Port",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528800635511,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Target port protocol, e.g. TCP.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528800635511,
+            "Name": "Port Protocol",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CiscoFirepowerManager import CiscoFirepowerManager\nfrom SiemplifyDataModel import EntityTypes\n\nINTEGRATION_PROVIDER = 'CiscoFirepower'\n\n\ndef main():\n\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(INTEGRATION_PROVIDER)\n    cisco_firepower_manager = CiscoFirepowerManager(conf['API Root'],\n                                                    conf['Username'],\n                                                    conf['Password'],\n                                                    conf['Verify SSL'])\n    # Parameters.\n    port_group_name = siemplify.parameters.get('Port Group Name')\n    port = siemplify.parameters.get('Port')\n    port_protocol = siemplify.parameters.get('Port Protocol')\n\n    # Set script name.\n    siemplify.script_name = 'CiscoFirepower_Block_Port'\n\n    # Get url group object to pass to the block function.\n    port_group_object = cisco_firepower_manager.get_port_group_object_by_name(port_group_name)\n\n    result_value = cisco_firepower_manager.block_port(port_group_object,port_protocol, port)\n\n    if result_value:\n        output_message = 'Port {0} was blocked.'.format(port)\n    else:\n        output_message = 'No ports were blocked.'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_succeed",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

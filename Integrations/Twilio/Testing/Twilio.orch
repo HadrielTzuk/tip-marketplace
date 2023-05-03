@@ -1,0 +1,119 @@
+{
+  "Identifier": "338d1742-8886-4808-83d7-dcf8a9f6c1cc",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "Twilio",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "c0c98ad8-849c-4578-abf7-7dcccc5deaaa",
+      "ParentWorkflowIdentifier": "338d1742-8886-4808-83d7-dcf8a9f6c1cc",
+      "ParentStepIdentifiers": [
+        "07d6b1f8-a940-4226-9fd3-84946eab90cf"
+      ],
+      "ParentStepIdentifier": "07d6b1f8-a940-4226-9fd3-84946eab90cf",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Twilio_Send SMS And Wait_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Twilio_Send SMS And Wait",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "c0c98ad8-849c-4578-abf7-7dcccc5deaaa",
+          "ParentWorkflowIdentifier": "338d1742-8886-4808-83d7-dcf8a9f6c1cc",
+          "Name": "ScriptName",
+          "Value": "Twilio_Send SMS And Wait",
+          "CreationTimeUnixTimeInMs": 1520756233187,
+          "ModificationTimeUnixTimeInMs": 1520756233187
+        },
+        {
+          "ParentStepIdentifier": "c0c98ad8-849c-4578-abf7-7dcccc5deaaa",
+          "ParentWorkflowIdentifier": "338d1742-8886-4808-83d7-dcf8a9f6c1cc",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Phone Number\":\"+972508434748\",\"Message\":\"Answer: yes or no\"}",
+          "CreationTimeUnixTimeInMs": 1520756233187,
+          "ModificationTimeUnixTimeInMs": 1520756233187
+        },
+        {
+          "ParentStepIdentifier": "c0c98ad8-849c-4578-abf7-7dcccc5deaaa",
+          "ParentWorkflowIdentifier": "338d1742-8886-4808-83d7-dcf8a9f6c1cc",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520756233187,
+          "ModificationTimeUnixTimeInMs": 1520756233187
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520756233187,
+      "ModificationTimeUnixTimeInMs": 1520756233187
+    },
+    {
+      "Identifier": "07d6b1f8-a940-4226-9fd3-84946eab90cf",
+      "ParentWorkflowIdentifier": "338d1742-8886-4808-83d7-dcf8a9f6c1cc",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Twilio_Send SMS_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Twilio_Send SMS",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "07d6b1f8-a940-4226-9fd3-84946eab90cf",
+          "ParentWorkflowIdentifier": "338d1742-8886-4808-83d7-dcf8a9f6c1cc",
+          "Name": "ScriptName",
+          "Value": "Twilio_Send SMS",
+          "CreationTimeUnixTimeInMs": 1520756233187,
+          "ModificationTimeUnixTimeInMs": 1520756233187
+        },
+        {
+          "ParentStepIdentifier": "07d6b1f8-a940-4226-9fd3-84946eab90cf",
+          "ParentWorkflowIdentifier": "338d1742-8886-4808-83d7-dcf8a9f6c1cc",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Phone Number\":\"+972508434748\",\"Message\":\"This message\"}",
+          "CreationTimeUnixTimeInMs": 1520756233187,
+          "ModificationTimeUnixTimeInMs": 1520756233187
+        },
+        {
+          "ParentStepIdentifier": "07d6b1f8-a940-4226-9fd3-84946eab90cf",
+          "ParentWorkflowIdentifier": "338d1742-8886-4808-83d7-dcf8a9f6c1cc",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520756233187,
+          "ModificationTimeUnixTimeInMs": 1520756233187
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520756233187,
+      "ModificationTimeUnixTimeInMs": 1520756233187
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "ea60b9b6-d459-4236-ada6-7eebb12568a9",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "338d1742-8886-4808-83d7-dcf8a9f6c1cc",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Twilio",
+      "AllEnvironments": "",
+      "Id": 40031,
+      "CreationTimeUnixTimeInMs": 1520756233187,
+      "ModificationTimeUnixTimeInMs": 1520756233187
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 40031,
+  "CreationTimeUnixTimeInMs": 1520756233187,
+  "ModificationTimeUnixTimeInMs": 1520756233187
+}

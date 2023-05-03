@@ -1,0 +1,81 @@
+{
+    "CreationTimeUnixTimeInMs": "1570446244", 
+    "Creator": "admin", 
+    "Description": "Update alert in Recorded Future.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\": \"jU2F_w\", \"status\": \"tuning\", \"assignee\": \"3NgaozZRYw\", \"note\": {\"text\": \"testing\", \"author\": \"3CvPUmFtSX\", \"date\": \"2021-08-09T11:21:16Z\"}, \"reviewDate\": \"2021-08-09T11:20:31Z\"}]",
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "RecordedFuture", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1570446244, 
+    "Name": "Update Alert", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID of the alert that needs to be updated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Alert ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify to whom to assign the alert. You can provide id, username, user hash, or email.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Assign To",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a note that should be updated on the alert.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Note",
+            "Type": 0,
+            "Value": ""
+        },       
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Select One",
+            "Description": "Specify the new status for the alert.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Status",
+            "OptionalValues": [
+                "Select One",
+                "New",
+                "Assigned",
+                "Unassigned",
+                "Pending",
+                "Dismissed",
+                "Resolved",
+                "Flag for Tuning"
+            ],
+            "Type": 15,
+            "Value": "Select One"
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": []}", 
+    "Type": 0, 
+    "Version": 1.0
+}

@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1522254183220, 
+    "Creator": "admin", 
+    "Description": "Get agent's current status (active/inactive)", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SentinelOne", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1522254183220, 
+    "Name": "Get Agent Status", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SentinelOneManager import SentinelOneManager\nfrom SiemplifyDataModel import EntityTypes\nfrom SiemplifyUtils import add_prefix_to_dict_keys, dict_to_flat, flat_dict_to_csv\n\n# Consts.\nSENTINEL_ONE_PROVIDER = 'SentinelOne'\nSENTINEL_PREFIX = 'SENO_'\nADDRESS = EntityTypes.ADDRESS\nHOSTNAME = EntityTypes.HOSTNAME\n\n\ndef main():\n    # Define Variables.\n    agent_statuses = {}\n    errors_dict = {}\n    entities_successed = []\n    result_value = False\n    # Configuration.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(SENTINEL_ONE_PROVIDER)\n    sentiel_one_manager = SentinelOneManager(conf['Api Root'], conf['Username'], conf['Password'])\n\n    # Get scope entities.\n    scope_entities = [entity for entity in siemplify.target_entities if entity.entity_type == ADDRESS or\n                      entity.entity_type == HOSTNAME]\n\n    # Run on entities.\n    for entity in scope_entities:\n        try:\n            if entity.entity_type == ADDRESS:\n                agent_status = sentiel_one_manager.get_agent_status(entity.identifier, by_ip_address=True)\n            elif entity.entity_type == HOSTNAME:\n                agent_status = sentiel_one_manager.get_agent_status(entity.identifier)\n\n            entities_successed.append(entity)\n            agent_statuses[entity.identifier] = agent_status\n\n        except Exception as err:\n            errors_dict[entity.identifier] = unicode(err.message)\n\n    if entities_successed:\n        output_message = 'Got status for: {0}'.format(\",\".join([entity.identifier for entity\n                                                                in entities_successed]))\n        # Convert result to CSV.\n        results_csv = flat_dict_to_csv(agent_statuses)\n        siemplify.result.add_data_table('Agents Statuses', results_csv)\n    else:\n        output_message = 'No statuses were found for target entities.'\n\n    # If were errors present them as a table.\n    if errors_dict:\n        # Produce error CSV.\n        errors_csv = flat_dict_to_csv(errors_dict)\n        # Draw table.\n        siemplify.result.add_data_table('Unsuccessful Attempts', errors_csv)\n\n    siemplify.update_entities(entities_successed)\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n\n", 
+    "ScriptResultName": "is success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

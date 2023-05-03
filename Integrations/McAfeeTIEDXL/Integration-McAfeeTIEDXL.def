@@ -1,0 +1,49 @@
+{
+    "Description": "McAfee Threat Intelligence Exchange optimizes threat detection and response by closing the gap from malware encounter to containment from days, weeks, and months down to milliseconds.",
+    "DisplayName": "McAfee TIE",
+    "Identifier": "McAfeeTIEDXL",
+    "Categories": [
+        "Threat Intelligence",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "McAfeeTIEDXL",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Server Address",
+            "PropertyName": "Server Address",
+            "PropertyType": "5",
+            "Value": "ssl://{IP}:{PORT}"
+        },
+        {
+            "IntegrationIdentifier": "McAfeeTIEDXL",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Broker CA Bundle Path",
+            "PropertyName": "Broker CA Bundle Path",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeTIEDXL",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client Cert File Path",
+            "PropertyName": "Client Cert File Path",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeTIEDXL",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client Key File Path",
+            "PropertyName": "Client Key File Path",
+            "PropertyType": "2",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"><g><g><path d=\"M21.5,3c0-0.2,0-0.4,0-0.7c-0.3,0.1-0.5,0.2-0.7,0.3c-2.6,1.2-5.1,2.4-7.7,3.6c-0.4,0.2-0.7,0.2-1.2,0C9.7,5.1,7.5,4.1,5.3,3C4.7,2.8,4.2,2.5,3.6,2.2c0,0.1,0,0.2,0,0.2c0,5.3,0,10.6,0,15.8c0,0.4,0.2,0.5,0.5,0.6c2.7,1.2,5.3,2.5,8,3.7c0.3,0.1,0.7,0.1,1,0c2.7-1.2,5.3-2.4,7.9-3.6c0.4-0.2,0.6-0.4,0.6-0.9C21.5,13,21.5,8,21.5,3z M17.3,16.6c-1.5,0.6-2.9,1.3-4.3,2c-0.2,0.1-0.6,0.1-0.8,0c-1.5-0.7-3-1.4-4.5-2.1c-0.2-0.1-0.4-0.4-0.4-0.5c0-2.6,0-5.3,0-8c1.4,0.7,2.8,1.2,4,1.9c0.9,0.5,1.6,0.5,2.5,0c1.1-0.6,2.2-1.1,3.4-1.6c0.2-0.1,0.4-0.2,0.7-0.3v1.9c0,2,0,3.9,0,5.9C17.8,16.2,17.7,16.5,17.3,16.6z\"/></g></g></svg>",
+    "Version": 5.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/mcafee-tiedxl",
+    "MarketingDisplayName": "McAfee TIE"
+}

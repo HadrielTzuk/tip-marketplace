@@ -1,0 +1,2 @@
+class SymantecESCCException(Exception):
+    pass

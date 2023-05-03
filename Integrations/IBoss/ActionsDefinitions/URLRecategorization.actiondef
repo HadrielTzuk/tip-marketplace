@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244, 
+    "Creator": "admin", 
+    "Description": "Submit URL for recategorization.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "IBoss", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "Name": "URL Recategorization", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

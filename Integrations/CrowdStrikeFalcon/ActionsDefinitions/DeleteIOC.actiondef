@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1524560820281, 
+    "Creator": "admin", 
+    "Description": "Delete custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.",
+    "Id": -1, 
+    "IntegrationIdentifier": "CrowdStrikeFalcon", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1524560820281, 
+    "Name": "Delete IOC", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\", \"FILEHASH\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

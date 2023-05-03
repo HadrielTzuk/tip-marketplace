@@ -1,0 +1,11 @@
+{
+	"Name": "ETL Monitor",
+	"Category": "Siemplify",
+	"Creator": "Siemplify System",
+	"RunIntervalInSeconds": 900,
+	"Description": "Notifies about any error in the (ETL) alert ingestion process",
+	"IsEnabled": true,
+	"IsCustom": false,
+	"Version": 1.0,
+	"Params": []
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - PhishRod.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Phishrod",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1668597294,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13045"
+    }
+]

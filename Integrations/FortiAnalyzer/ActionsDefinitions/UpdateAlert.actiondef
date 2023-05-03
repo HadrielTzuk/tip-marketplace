@@ -1,0 +1,74 @@
+{
+    "Id": -1,
+    "Creator": "admin",
+    "IntegrationIdentifier": "FortiAnalyzer",
+    "Name": "Update Alert",
+    "Description": "Update an alert in FortiAnalyzer.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 0,
+    "ModificationTimeUnixTimeInMs": 0,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "{\"alerttime\":\"1665653864\",\"logcount\":\"17\",\"alertid\":\"202xxxxxxxxxxxxx\",\"adom\":\"root\",\"epid\":\"1\",\"epname\":\"not implemented dev type\",\"subject\":\"desc:Trim local db\",\"euid\":\"1\",\"euname\":\"N/A\",\"devname\":\"fortianalyzer\",\"logtype\":\"event\",\"devtype\":\"FortiAnalyzer\",\"devid\":\"FAZ-VMxxxxxxxxxx\",\"vdom\":\"_self_locallog_\",\"groupby1\":\"desc:Trim local db\",\"triggername\":\"Local Device Event\",\"tag\":\"Default,System,Local\",\"eventtype\":\"event\",\"severity\":\"medium\",\"extrainfo\":\"{ \\\"msg\\\": \\\"Requested to trim database tables older than 60 days to enforce the retention policy of Adom FortiAuthenticator.\\\" }\",\"ackflag\":\"no\",\"readflag\":\"yes\",\"filterkey\":\"337xxxxxxxxxxxxxx\",\"firstlogtime\":\"1665653864\",\"multiflag\":\"\",\"lastlogtime\":\"1665653887\",\"updatetime\":\"1665747977\",\"filtercksum\":\"2072153473\",\"filterid\":\"1\",\"assignto\":\"api_user\",\"ackby\":\"admin\",\"acktime\":\"1665747892\"}",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "Name": "Alert ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the ID of the alert that needs to be updated.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Acknowledge Status",
+            "Type": 15,
+            "DefaultValue": "Select One",
+            "Value": "Select One",
+            "IsMandatory": false,
+            "Description": "Specify the acknowledgment status for alert.",
+            "OptionalValues": [
+                "Select One",
+                "Acknowledge",
+                "Unacknowledge"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Mark As Read",
+            "Type": 1,
+            "DefaultValue": false,
+            "Value": false,
+            "IsMandatory": false,
+            "Description": "If enabled, the action marks the alert as read.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Assign To",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify to whom the alert needs to be assigned.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

@@ -1,0 +1,49 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List available IP Sets in AWS WAF.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSWAF",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List IP Sets",
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"Regional\":[{\"Name\":\"My_IP_Set\",\"Id\":\"XXXXX-XXXXX-XXXXX-XXXXX\",\"Description\":\"XXXXXX\",  \"LockToken\":\"XXXXX-XXXXX-XXXXX-XXXXX\",\"ARN\":\"XXXXX-XXXXX-XXXXX-XXXXX\/ipset\/My_IP_Set\/XXXXX-XXXXX-XXXXX-XXXXX\"}],\"CloudFront\":[{\"Name\":\"My_IP_Set\",\"Id\":\"XXXXX-XXXXX-XXXXX-XXXXX\",\"Description\":\"my IP Set\",\"LockToken\":\"XXXXX-XXXXX-XXXXX-XXXXX\",\"ARN\":\"XXXXX-XXXXX-XXXXX-XXXXX\/ipset\/My_IP_Set\/XXXXX-XXXXX-XXXXX-XXXXX\"}]}]",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "CloudFront",
+            "Description": "Specify what should be the scope for the listing of IP Sets.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Scope",
+            "OptionalValues": [
+                "CloudFront",
+                "Regional",
+                "Both"
+            ],
+            "Type": 15,
+            "Value": "CloudFront"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify hou many IP sets to return. Default is 50. Maximum is 100.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max IP Sets To Return",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

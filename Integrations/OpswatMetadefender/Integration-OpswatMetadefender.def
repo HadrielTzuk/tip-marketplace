@@ -1,0 +1,42 @@
+{
+    "Description": "OpswatMetadefender scan and reputation",
+    "DisplayName": "Opswat Metadefender",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/opswat-metadefender",
+    "Identifier": "OpswatMetadefender",
+    "Categories": [
+        "Malware Analysis",
+        "Data Enrichment",
+        "Security"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAALYAAABjCAMAAAAB3QqqAAABEVBMVEX///+AgIMApt25ubuvr7GZmZvQ0NGVlZjm5uaTk5a+vsCpqaukpKYbsOH09PRAveb8/f2Dg4bk5OXBwcKGhomc3fLs7Oze3t/JycrX8frC6vfa2tu3t7itra+OjpHG6/j29vap4fTz8/Nvzexpy+tFvuY1ueTh4eIks+IRrN8GqN7W1teQkJOJiYz+/v73/f7y+/3c8/rJ7fi96PaV2/GH1e+C1O/o6OhNwegrteMVreDT09SXl5qNjZDn9/z5+fnU8Pnw8PB50O1fyOpaxulVxOg5uuXFxca7u72zs7WysrShoaOdnZ/s+f3i9fu15fWi3/ON2PBjyerNzc7Ly8yenqDd8/rP7vm05fV1z+0Kqt+1j3M6AAADE0lEQVR42u3WaVPiQBAG4O5wKUe4XEBERZAFkRVQUVHxvu9zr///Q7ZndsJkCKzIx61+qtCkgdSbnk4CMMYYY4wxxhhjjDHGGGOMMcYY+7+Vcv6IVFgF7dJnSGegr5jzGeRbDy/ni+DROd8Ej8fzst5ZS/u8bIC9NKUZzS4ksa/xBg4cVAAlN4OmPSAxy7JmYcApFZ9hwAYVv4IjgUNkILUfvfpX6m9omAdlelTuOSTe2HEKs9ICw6YlbIChLYunH8TOBm7SMFJRpJ6ZD6fD4bTvFsmNjh31aw1ELAJJ0DeS836X+W1Zr6kmakuWVD8Cl2bMkk6cISmog+0j9tQB/TYkgukgjHSNiL5DUFIieKofOwMuC4ir8jOUmnJ6za5QmDN3oS5OhF6xBChqVS7ER5/AlEOMwHhskRpcqJWhfuxjcKFmvALJUmwYat0iX/T+Lu1uQYX+xnWxLE6DxpscgSGMGIXxXNKEqFbowS05sa+CWgTVaRRpIxDUqtD3ZJG8u60Vda3+AuWLRQ4ATuT/SWP79cLodqdGXJJ3zuFNgTlwLFOW3bbejgFp1+Ui6AV5dE6q25owdgTxGgy9kbEDtv6SSTd8R2Tt30RWvoPws78ID2KmN0HqisGfMLYPcdooHCNixondCGjRoGuSIrq+j8YhamoyFi2y6J6MppqXZVW8F4twNlnsKiJmjfb3h31avDOGbBKTh+Bo1eV1eC+vTmN4amIt5NVZjsfjlfW/A9OZIDYJIDam9O4bIqbBiT0H45hBtPVe3iLPFflA0cRtsNwRk7+m7uZdtQhLE8WuIglvF+1SyS7NRWlnQT9uVmGIw9SUW0qszxpoMoxsq0tzV1Vn5fyQF3kzJD8miQ05FJLyJbcyH8SuoscNuG1ZQqxpPossonrbzufziyCcUen3wadje38Y3W271n5v6CzjoPcEGHZUW70P+i0YUHM95QuIARiffXXX6C2Q3vTtqy5HQ6EsDDEVMr1fwqCdWHfDU+zUYsueYusidnHk9C8UugbGGGOMMcYYY4wxxhhjjDHGGGOf8geU/j/wSDvp7QAAAABJRU5ErkJggg==",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "OpswatMetadefender",
+            "IsMandatory": true,
+            "PropertyDisplayName": "ApiRoot",
+            "PropertyName": "ApiRoot",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "OpswatMetadefender",
+            "IsMandatory": true,
+            "PropertyDisplayName": "ApiKey",
+            "PropertyName": "ApiKey",
+            "PropertyType": 3,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "OpswatMetadefender",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path d=\"M5.226 12.42V6.433C3.874 7.87 3 9.945 3 12.42 3 17.93 7.213 22 12.54 22c2.305 0 4.372-.798 5.883-2.076V17.37c-1.272 1.357-3.419 2.634-5.883 2.634-4.134 0-7.314-3.273-7.314-7.584z\"\/>\r\n  <path d=\"M12.46 3c-2.305 0-4.372.798-5.883 2.076V7.63c1.272-1.357 3.34-2.634 5.883-2.634 4.134 0 7.314 3.273 7.314 7.584v5.987C21.125 17.13 22 15.055 22 12.58 22 7.07 17.787 3 12.46 3z\"\/>\r\n<\/svg>",
+    "Version": 7.0,
+    "MarketingDisplayName": "OPSWAT Metadefender"
+}

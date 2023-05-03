@@ -1,0 +1,63 @@
+{
+    "CreationTimeUnixTimeInMs": 1520946503587,
+    "Creator": "admin",
+    "Description": "List available queries in McAfee ePO.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\":\"xx\",\"name\":\"Effective permissions for users\",\"description\":\"Shows all permissions for each user\",\"conditionSexp\":\"Permission Does not equal \\\"%%NOEPOROLES%%\\\"\",\"groupName\":\"Permissions\",\"userName\":\"Pubxxxxx\",\"databaseType\":\"\",\"target\":\"EntitlementView\",\"createdBy\":\"admin\",\"createdOn\":\"2020-09-16T12:21:03-07:00\",\"modifiedBy\":\"admin\",\"modifiedOn\":\"2020-09-16T12:21:03-07:00\"},{\"id\":\"xx\",\"name\":\"Permission set details\",\"description\":\"Shows the permissions associated with each permission set\",\"conditionSexp\":\"\",\"groupName\":\"Permissions\",\"userName\":\"Pubxxx\",\"databaseType\":\"\",\"target\":\"EntitlementView\",\"createdBy\":\"admin\",\"createdOn\":\"2020-09-16T12:21:03-07:00\",\"modifiedBy\":\"admin\",\"modifiedOn\":\"2020-09-16T12:21:03-07:00\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "McAfeeEPO",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1520946503587,
+    "Name": "List Queries",
+    "Parameters": [
+         {
+            "CreationTimeUnixTimeInMs": 1520946788971,
+            "CustomActionId": -1,
+            "DefaultValue": "Equal",
+            "Description": "Specify what filter logic should be applied.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1520946788971,
+            "Name": "Filter Logic",
+            "Type": 15,
+            "OptionalValues": [
+                "Equal",
+                "Contains"
+            ],
+            "Value": "Equal"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1520946788971,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what value should be used in the filter.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1520946788971,
+            "Name": "Filter Value",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1520946788971,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many results to return. Default: 50.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1520946788971,
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\":[]}",
+    "Type": 0,
+    "Version": 1.0
+}

@@ -1,0 +1,75 @@
+{
+  "Identifier": "3eb8a78e-0506-49fd-87b0-d71c53ff29cd",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "ReversinglabsTitanium",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "62df5b2e-da7b-4328-a474-63bce6f66ef2",
+      "ParentWorkflowIdentifier": "3eb8a78e-0506-49fd-87b0-d71c53ff29cd",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ReversinglabsTitanium_Get Malware Details_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ReversinglabsTitanium_Get Malware Details",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "62df5b2e-da7b-4328-a474-63bce6f66ef2",
+          "ParentWorkflowIdentifier": "3eb8a78e-0506-49fd-87b0-d71c53ff29cd",
+          "Name": "ScriptName",
+          "Value": "ReversinglabsTitanium_Get Malware Details",
+          "CreationTimeUnixTimeInMs": 1519210440602,
+          "ModificationTimeUnixTimeInMs": 1519210440602
+        },
+        {
+          "ParentStepIdentifier": "62df5b2e-da7b-4328-a474-63bce6f66ef2",
+          "ParentWorkflowIdentifier": "3eb8a78e-0506-49fd-87b0-d71c53ff29cd",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519210440602,
+          "ModificationTimeUnixTimeInMs": 1519210440602
+        },
+        {
+          "ParentStepIdentifier": "62df5b2e-da7b-4328-a474-63bce6f66ef2",
+          "ParentWorkflowIdentifier": "3eb8a78e-0506-49fd-87b0-d71c53ff29cd",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519210440602,
+          "ModificationTimeUnixTimeInMs": 1519210440602
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519210440602,
+      "ModificationTimeUnixTimeInMs": 1519210440602
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "2bc43d0e-cce2-4c6e-926f-45cb6f35ae29",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "3eb8a78e-0506-49fd-87b0-d71c53ff29cd",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "ReversinglabsTitanium",
+      "AllEnvironments": "",
+      "Id": 76,
+      "CreationTimeUnixTimeInMs": 1519210440602,
+      "ModificationTimeUnixTimeInMs": 1519210440602
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 76,
+  "CreationTimeUnixTimeInMs": 1519210440602,
+  "ModificationTimeUnixTimeInMs": 1519210440602
+}

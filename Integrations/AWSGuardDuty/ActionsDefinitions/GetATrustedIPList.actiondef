@@ -1,0 +1,44 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Get details about a trusted IP list in AWS GuardDuty.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSGuardDuty",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"EntityResult\": {\"Format\": \"TXT\", \"Name\": \"Test\", \"Location\": \"https://testsiemplify.s3.amazonaws.com/ips.txt\", \"Status\": \"INACTIVE\"}, \"Entity\": \"f6ba9dcaf89d16cd959921737f038cf7\"}]",
+		"ResultName": "JsonResult"
+	}],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Get a Trusted IP List",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the detector ID that should be used to get an IP set. This parameter can be found in the \"Settings\" tab.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Detector ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the comma-separated list of ids of ips sets. Example: id_1,id_2.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Trusted IP List IDs",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

@@ -1,0 +1,143 @@
+{
+    "CreationTimeUnixTimeInMs": 1524990933455, 
+    "Creator": "admin", 
+    "Description": "Cylance connector", 
+    "Id": -1, 
+    "Integration": "Cylance", 
+    "IsConnectorRulesSupported": true, 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "MappingRules": [], 
+    "ModificationTimeUnixTimeInMs": 1524990933455, 
+    "Name": "Cylance connector", 
+    "Parameters": [
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1524990933455, 
+            "DefaultValue": "device_product", 
+            "Description": "The field name used to determine the device product", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 0, 
+            "ModificationTimeUnixTimeInMs": 1524990933455, 
+            "Name": "DeviceProductField", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1524990933455, 
+            "DefaultValue": "cylance_event",
+            "Description": "The field name used to determine the event name (sub-type)", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 0, 
+            "ModificationTimeUnixTimeInMs": 1524990933455, 
+            "Name": "EventClassId", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1524990933455, 
+            "DefaultValue": "60", 
+            "Description": "The timeout limit (in seconds) for the python process running current script", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 0, 
+            "ModificationTimeUnixTimeInMs": 1524990933455, 
+            "Name": "PythonProcessTimeout", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1524990933455, 
+            "DefaultValue": null, 
+            "Description": "https://<instance>.cylance.com", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 2, 
+            "ModificationTimeUnixTimeInMs": 1524990933455, 
+            "Name": "Api Root", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1524990933455, 
+            "DefaultValue": null, 
+            "Description": " Used to sign the Application ID", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 2, 
+            "ModificationTimeUnixTimeInMs": 1524990933455, 
+            "Name": "Application Secret", 
+            "Type": 3
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1524990933455, 
+            "DefaultValue": null, 
+            "Description": "Used to indicate the token requested", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 2, 
+            "ModificationTimeUnixTimeInMs": 1524990933455, 
+            "Name": "Application ID", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1524990933455, 
+            "DefaultValue": null, 
+            "Description": "ID number of tenant information being queried", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 2, 
+            "ModificationTimeUnixTimeInMs": 1524990933455, 
+            "Name": "Tenant Identifier", 
+            "Type": 2
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1574099687000, 
+            "Name": "Proxy Server Address", 
+            "ModificationTimeUnixTimeInMs": 1574099687000, 
+            "Type": 2, 
+            "DefaultValue": null, 
+            "Description": "The address of the proxy server to use.", 
+            "ConnectorDefinitionId": -1, 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 2
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1574099687000, 
+            "Name": "Proxy Username", 
+            "ModificationTimeUnixTimeInMs": 1574099687000, 
+            "Type": 2, 
+            "DefaultValue": null, 
+            "Description": "The proxy username to authenticate with.", 
+            "ConnectorDefinitionId": -1, 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 2
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1525167465721, 
+            "Name": "Proxy Password", 
+            "ModificationTimeUnixTimeInMs": 1525167465721, 
+            "Type": 3, 
+            "DefaultValue": null, 
+            "Description": "The proxy password to authenticate with.", 
+            "ConnectorDefinitionId": -1, 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 2
+        }
+    ], 
+    "ProductToVisualFamilyRecords": [], 
+    "Rules": [], 
+    "Script": "# ============================================================================#\n# title           :CylanceConnector.py\n# description     :This Module contain all Cylance connector functionality.\n# author          :danield@siemplify.co\n# date            :03-29-2018\n# python_version  :2.7\n# ============================================================================#\n\n# ============================= IMPORTS ===================================== #\n\nimport sys\nimport pytz\nimport time\nimport logging\nimport uuid\nimport datetime\nfrom SiemplifyConnectors import CaseInfo, SiemplifyConnectorExecution\nfrom SiemplifyUtils import convert_datetime_to_unix_time\nfrom CylanceManager import CylanceManager\nfrom SiemplifyUtils import dict_to_flat, add_prefix_to_dict\n\n# ============================== CONSTS ===================================== #\nVENDOR = PRODUCT = \"CyLance\"\nDEFAULT_ALERT_NAME = 'Risky Hash'\nDEFAULT_PRIORITY = 20\nCYLANCE_TIME_FORMAT = \"%Y-%m-%dT%H:%M:%S\"\n\n# ============================= CLASSES ===================================== #\n\nclass CylanceConnectorException(Exception):\n    pass\n\nclass CylanceConnector(object):\n\n    def __init__(self, connector_scope, cylance_manager):  # , connector_scope)\n        self.connector_scope = connector_scope\n        self.logger = connector_scope.LOGGER\n        self.cylance_manager = cylance_manager\n\n    def retrieve_updated_threats(self, last_run_time):\n        \"\"\"\n        Gets a list of threats that were created since the last time the connector ran\n        :params last_run_time: {string} Timestamp to retrieve offenses from the timestamp to now (unix time).\n        :return: {list} List of new threats\n        \"\"\"\n        all_threats = self.cylance_manager.get_threats()\n        self.logger.info(\"Found total {0} threats\".format(len(all_threats)))\n\n        new_threats = []\n        for threat in all_threats:\n            threat_unix_time = self.convert_to_unix_time(threat[u'last_found'])\n            if threat_unix_time > last_run_time:\n                # Threat is new - set its start and end time and add to\n                # new threats list\n                threat['start_time'] = threat_unix_time\n                threat['end_time'] = threat_unix_time\n                new_threats.append(threat)\n\n        self.logger.info(\"Found {} new threats.\".format(len(new_threats)))\n        return new_threats\n\n    @staticmethod\n    def convert_to_unix_time(timestamp):\n        dt = datetime.datetime.strptime(timestamp, CYLANCE_TIME_FORMAT)\n        dt = pytz.utc.localize(dt)\n        return convert_datetime_to_unix_time(dt)\n\n    def build_case_info(self, threat):\n        \"\"\"\n        Builds CaseInfo\n        :params threat: {string} threat information from Cylance\n        :return: {CaseInfo} The newly created case\n        \"\"\"\n        case_info = CaseInfo()\n\n        self.logger.info(\"Build CaseInfo for threat {} - {}.\".format(threat['name'], threat['sha256']))\n\n        self.logger.info(\"Fetching events.\")\n\n        events = self.cylance_manager.get_threat_devices(\n            threat['sha256']\n        )\n\n        self.logger.info(\"Found {} events.\".format(len(events)))\n\n        if not events:\n            return case_info\n\n        events.sort(key=lambda event: time.mktime(\n            time.strptime(event['date_found'], '%Y-%m-%dT%H:%M:%S')))\n\n        for event in events:\n            event['threat'] = threat\n\n        case_info.start_time = self.convert_to_unix_time(events[0]['date_found'])\n        case_info.end_time = self.convert_to_unix_time(events[-1]['date_found'])\n        case_info.ticket_id = str(uuid.uuid4())\n        case_info.display_id = case_info.ticket_id\n        case_info.name = DEFAULT_ALERT_NAME\n        case_info.rule_generator = DEFAULT_ALERT_NAME\n        case_info.device_vendor = VENDOR\n        case_info.device_product = PRODUCT\n        case_info.priority = DEFAULT_PRIORITY\n\n        case_info.events = [dict_to_flat(event) for event in events]\n        case_info.environment = None\n\n        return case_info\n\n    def get_threats(self, save_timestamp=True):\n        \"\"\"\n        Get Alerts from Cylance\n        :return: {list}List of new cases (CaseInfo objects)\n        \"\"\"\n        # Get Alerts\n        logging.info(\"Getting threats from Cylance Protect\")\n\n        last_run_time = self.connector_scope.fetch_timestamp()\n        threats = self.retrieve_updated_threats(last_run_time)\n        if save_timestamp:\n            self.connector_scope.save_timestamp()\n\n        cases = []\n\n        for threat in threats:\n            try:\n                self.logger.info(\"Processing threat {} - {}.\".format(threat['name'], threat['sha256']))\n                cases.append(self.build_case_info(threat))\n            except Exception as e:\n                self.logger.error(\"Couldn't process threat {} - {}.\".format(threat['name'], threat['sha256']))\n                self.logger._log.exception(e)\n\n        self.logger.info(\"Found {} cases.\".format(len(cases)))\n\n        return cases\n\n\ndef main():\n    connector_scope = SiemplifyConnectorExecution()\n    connector_scope.script_name = \"Cylance Connector\"\n    output_variables = {}\n    log_items = []\n\n    try:\n        connector_scope.LOGGER.info(\"Starting Cylance Connector\")\n\n        server_address = connector_scope.parameters['Api Root']\n        application_secret = connector_scope.parameters['Application Secret']\n        application_id = connector_scope.parameters['Application ID']\n        tenant_identifier = connector_scope.parameters['Tenant Identifier']\n\n        logging.info(\"Connecting to Cylance Protect\")\n        cylance_manager = CylanceManager(server_address, application_id,\n                                         application_secret, tenant_identifier)\n\n        cylance_connector = CylanceConnector(connector_scope, cylance_manager)  # connector_scope)\n        connector_scope.LOGGER.info(\"Creating cases.\")\n        cases = cylance_connector.get_threats()\n\n        connector_scope.LOGGER.info(\"Created {} cases\".format(len(cases)))\n        connector_scope.return_package(cases, output_variables, log_items)\n\n        connector_scope.LOGGER.info(\"Completed.\")\n\n    except Exception as err:\n        connector_scope.LOGGER.error('Failed to run cCylance Connector. Error: {0}'.format(err))\n        connector_scope.LOGGER._log.exception(err)\n\n\ndef Test():\n    connector_scope = SiemplifyConnectorExecution()\n    connector_scope.script_name = \"Cylance Connector\"\n\n    connector_scope.LOGGER.info(\"Starting Cylance Connector\")\n\n    server_address = connector_scope.parameters['Api Root']\n    application_secret = connector_scope.parameters['Application Secret']\n    application_id = connector_scope.parameters['Application ID']\n    tenant_identifier = connector_scope.parameters['Tenant Identifier']\n\n    connector_scope.LOGGER.info(\"Connecting to Cylance Protect\")\n    cylance_manager = CylanceManager(server_address, application_id,\n                                     application_secret, tenant_identifier)\n\n    cylance_connector = CylanceConnector(connector_scope,\n                                         cylance_manager)  # connector_scope)\n    connector_scope.LOGGER.info(\"Creating cases.\")\n    cases = cylance_connector.get_threats(save_timestamp=False)\n\n    connector_scope.LOGGER.info(\"Created {} cases.\".format(len(cases)))\n    connector_scope.LOGGER.info(\"Completed.\")\n\n    connector_scope.return_test_result(True, {})\n\n\nif __name__ == \"__main__\":\n    if len(sys.argv) < 2 or sys.argv[1] == 'True':\n        print \"Main execution started\"\n        main()\n    else:\n        print \"Test execution started\"\n        Test()", 
+    "SimulationUseCases": {
+        "CasesForUseCase": [], 
+        "UseCaseName": null
+    }, 
+    "Version": 1
+}

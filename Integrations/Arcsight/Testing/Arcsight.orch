@@ -1,0 +1,295 @@
+{
+  "Identifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "Arcsight",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "666596de-e85f-4c5a-96f2-5f3bf61223a3",
+      "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+      "ParentStepIdentifiers": [
+        "b3dedb55-82f0-4196-beb0-73d434a4059e"
+      ],
+      "ParentStepIdentifier": "b3dedb55-82f0-4196-beb0-73d434a4059e",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Arcsight_Add Entries To Activelist_2",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Arcsight_Add Entries To Activelist",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "666596de-e85f-4c5a-96f2-5f3bf61223a3",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "ScriptName",
+          "Value": "Arcsight_Add Entries To Activelist",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        },
+        {
+          "ParentStepIdentifier": "666596de-e85f-4c5a-96f2-5f3bf61223a3",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Columns\":\"SourceUserId;SourceUserName;TargetUserName\",\"Entries\":\"122|ziv2|org2;124|yair|guy\",\"Active List UUID\":\"HtA-joV8BABCAFUeCiD3tfw==\"}",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        },
+        {
+          "ParentStepIdentifier": "666596de-e85f-4c5a-96f2-5f3bf61223a3",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519289320689,
+      "ModificationTimeUnixTimeInMs": 1519289320689
+    },
+    {
+      "Identifier": "b3dedb55-82f0-4196-beb0-73d434a4059e",
+      "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Arcsight_Add Entries To Activelist_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Arcsight_Add Entries To Activelist",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "b3dedb55-82f0-4196-beb0-73d434a4059e",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "ScriptName",
+          "Value": "Arcsight_Add Entries To Activelist",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        },
+        {
+          "ParentStepIdentifier": "b3dedb55-82f0-4196-beb0-73d434a4059e",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Columns\":\"DestinationHostName\",\"Entries\":\"www.test2.com;www.ziv.com\",\"Active List UUID\":\"Ha+46918BABCNNuuBplN0VA==\"}",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        },
+        {
+          "ParentStepIdentifier": "b3dedb55-82f0-4196-beb0-73d434a4059e",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519289320689,
+      "ModificationTimeUnixTimeInMs": 1519289320689
+    },
+    {
+      "Identifier": "bcf6a079-d5e5-42da-af1b-7bd24fcf1d24",
+      "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+      "ParentStepIdentifiers": [
+        "7c0fa863-f899-4a3a-a173-914cffcd20f9"
+      ],
+      "ParentStepIdentifier": "7c0fa863-f899-4a3a-a173-914cffcd20f9",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Arcsight_Is Value In Activelist Column_2",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Arcsight_Is Value In Activelist Column",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "bcf6a079-d5e5-42da-af1b-7bd24fcf1d24",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "ScriptName",
+          "Value": "Arcsight_Is Value In Activelist Column",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        },
+        {
+          "ParentStepIdentifier": "bcf6a079-d5e5-42da-af1b-7bd24fcf1d24",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Active list UUID\":\"HTcILQWABABCr553ieI0Xmw==\",\"Column name\":\"bla\"}",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        },
+        {
+          "ParentStepIdentifier": "bcf6a079-d5e5-42da-af1b-7bd24fcf1d24",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519289320689,
+      "ModificationTimeUnixTimeInMs": 1519289320689
+    },
+    {
+      "Identifier": "7c0fa863-f899-4a3a-a173-914cffcd20f9",
+      "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+      "ParentStepIdentifiers": [
+        "26b7aba0-f3f4-4d64-a7b7-a5900c7c01c0"
+      ],
+      "ParentStepIdentifier": "26b7aba0-f3f4-4d64-a7b7-a5900c7c01c0",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Arcsight_Is Value In Activelist Column_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Arcsight_Is Value In Activelist Column",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "7c0fa863-f899-4a3a-a173-914cffcd20f9",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "ScriptName",
+          "Value": "Arcsight_Is Value In Activelist Column",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        },
+        {
+          "ParentStepIdentifier": "7c0fa863-f899-4a3a-a173-914cffcd20f9",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Active list UUID\":\"HTcILQWABABCr553ieI0Xmw==\",\"Column name\":\"message\"}",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        },
+        {
+          "ParentStepIdentifier": "7c0fa863-f899-4a3a-a173-914cffcd20f9",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519289320689,
+      "ModificationTimeUnixTimeInMs": 1519289320689
+    },
+    {
+      "Identifier": "26b7aba0-f3f4-4d64-a7b7-a5900c7c01c0",
+      "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+      "ParentStepIdentifiers": [
+        "666596de-e85f-4c5a-96f2-5f3bf61223a3"
+      ],
+      "ParentStepIdentifier": "666596de-e85f-4c5a-96f2-5f3bf61223a3",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Arcsight_Get Activelist Entries_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Arcsight_Get Activelist Entries",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "26b7aba0-f3f4-4d64-a7b7-a5900c7c01c0",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "ScriptName",
+          "Value": "Arcsight_Get Activelist Entries",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        },
+        {
+          "ParentStepIdentifier": "26b7aba0-f3f4-4d64-a7b7-a5900c7c01c0",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Active list UUID\":\"Ha+46918BABCNNuuBplN0VA==\"}",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        },
+        {
+          "ParentStepIdentifier": "26b7aba0-f3f4-4d64-a7b7-a5900c7c01c0",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519289320689,
+      "ModificationTimeUnixTimeInMs": 1519289320689
+    },
+    {
+      "Identifier": "88259688-760d-4cd7-a18d-f5b251077f82",
+      "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+      "ParentStepIdentifiers": [
+        "bcf6a079-d5e5-42da-af1b-7bd24fcf1d24"
+      ],
+      "ParentStepIdentifier": "bcf6a079-d5e5-42da-af1b-7bd24fcf1d24",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Arcsight_Get Activelist Entries_2",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Arcsight_Get Activelist Entries",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "88259688-760d-4cd7-a18d-f5b251077f82",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "ScriptName",
+          "Value": "Arcsight_Get Activelist Entries",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        },
+        {
+          "ParentStepIdentifier": "88259688-760d-4cd7-a18d-f5b251077f82",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Active list UUID\":\"NotExistsHTcILQWABABCr553ieI0Xmw==\"}",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        },
+        {
+          "ParentStepIdentifier": "88259688-760d-4cd7-a18d-f5b251077f82",
+          "ParentWorkflowIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519289320689,
+          "ModificationTimeUnixTimeInMs": 1519289320689
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519289320689,
+      "ModificationTimeUnixTimeInMs": 1519289320689
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "c05da09a-9f6c-4706-a3ad-6605eae59ddf",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "560eda19-a56c-4c3b-9beb-c3b6fd3559df",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Arcsight",
+      "AllEnvironments": "",
+      "Id": 93,
+      "CreationTimeUnixTimeInMs": 1519289320689,
+      "ModificationTimeUnixTimeInMs": 1519289320689
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 93,
+  "CreationTimeUnixTimeInMs": 1519289320689,
+  "ModificationTimeUnixTimeInMs": 1519289320689
+}

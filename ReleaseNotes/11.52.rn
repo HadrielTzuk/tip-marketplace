@@ -1,0 +1,8 @@
+{
+  "Title": "Release Notes",
+  "Description": "",
+  "PublishedDate": "07/10/2018",
+  "MinimumSystemVersion": 4.25,
+  "MarketplaceVersion": 11.52,
+  "Content": "<span> <h2>Siemplify Marketplace Release Notes - 11.52</h2> <h5>Published on 7 October 2018</h5> <h3>Actions</h3> <ul> <li> <h4>Tanium</h4> <ul> <li> <strong>Ask Question</strong> <ul> <li>New action</li></ul> </li><li> <strong>Enrich Entities</strong> <ul> <li>New action</li></ul> </li></ul> </li><li> <h4>WildFire</h4> <ul> <li> <strong>Detonate File</strong> <ul> <li>Support multi paths input for detonation</li></ul> </li></ul> </li><li> <h4>Exchange</h4> <ul> <li> <strong>Extract EML Data</strong> <ul> <li>New Action</li></ul> </li></ul> </li><li> <h4>CA ServiceDesk</h4> <ul> <li> <strong>New mandatory integration property - Ticket Fields</strong> </li></ul> </li></ul> <hr> <h3>Jobs</h3> <ul> <li> <h4>CA ServiceDesk</h4> <ul> <li> <strong>CA Close Ticket In CA For Closed Case</strong> <ul> <li>New mandatory parameter - Ticket Fields</li></ul> </li><li> <strong>Sync Comments</strong> <ul> <li>New mandatory parameter - Ticket Fields</li></ul> </li></ul> </li></ul> <hr> <h3>Connectors</h3> <ul> <li> <h4>Email</h4> <ul> <li> <strong>Email Connector</strong> <ul> <li>Use Whitelist input for creating custom regex list for extracting extra messages data</li></ul> </li></ul> </li><li> <h4>Exchange</h4> <ul> <li> <strong>Exchange Connector</strong> <ul> <li>Use Whitelist input for creating custom regex list for extracting extra messages data</li></ul> </li></ul> </li><li> <h4>CA ServiceDesk</h4> <ul> <li> <strong>CA ServiceDesk Connector</strong> <ul> <li>New mandatory parameter - Ticket Fields</li></ul> </li></ul> </li></ul></span>"
+}

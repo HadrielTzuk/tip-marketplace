@@ -1,0 +1,56 @@
+{
+    "DisplayName": "Google Security Command Center",
+    "Identifier": "GoogleSecurityCommandCenter",
+    "Description": "Security management, data risk & compliance monitoring platform to help with vulnerability management. Detect & respond to security vulnerabilities.",
+    "MarketingDisplayName": "Google Security Command Center",
+    "Categories": [
+        "Cloud",
+        "Cloud Security",
+        "Google"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "GoogleSecurityCommandCenter",
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyDescription": "API root of the Google Security Command Center instance.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://securitycenter.googleapis.com"
+        },
+        {
+            "IntegrationIdentifier": "GoogleSecurityCommandCenter",
+            "PropertyDisplayName": "Organization ID",
+            "PropertyName": "Organization ID",
+            "PropertyDescription": "ID of the organization that should be used in Google Security Command Center integration.",
+            "PropertyType": 2,
+            "IsMandatory": false,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleSecurityCommandCenter",
+            "PropertyDisplayName": "User's Service Account",
+            "PropertyName": "User's Service Account",
+            "PropertyDescription": "Service account of the Google Security Command Center instance. A full content of the service account JSON file should be provided.",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleSecurityCommandCenter",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Google Security Command Center server is valid.",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M23.8,11.73L18.8,2.78c-.27-.47-.76-.78-1.3-.78H7.49c-.54,0-1.03,.31-1.3,.78L1.2,11.73c-.27,.47-.27,1.06,0,1.53l5.02,8.95c.27,.47,.76,.75,1.3,.78h9.99c.54,0,1.03-.31,1.3-.78l4.99-8.95c.27-.47,.27-1.06,0-1.53ZM6,7.43l5.51-2.43v3.64c-1.39,.36-2.48,1.43-2.84,2.81h-2.67V7.43Zm5.5,12.57c-2.77-1.18-4.76-3.63-5.33-6.56h2.5c.36,1.38,1.45,2.45,2.84,2.81v3.75Zm.99-5.59c-1.1,0-1.98-.88-1.98-1.97h0c0-1.1,.89-1.97,1.99-1.97h0c1.1,0,1.98,.88,1.98,1.97h0c0,1.09-.89,1.97-1.99,1.97h0Zm1,5.59v-3.75c1.39-.36,2.48-1.43,2.84-2.81h2.5c-.57,2.93-2.57,5.39-5.34,6.56Zm5.51-8.54h-2.66c-.36-1.38-1.45-2.46-2.84-2.81v-3.65l5.5,2.43v4.03Z\" fill-rule=\"evenodd\"/></svg>",
+    "Version": 2.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/google-security-command-center"
+}

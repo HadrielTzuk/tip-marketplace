@@ -1,0 +1,41 @@
+{
+    "Description": "Reversinglabs Titanium - Malware Analysis Solution.",
+    "DisplayName": "Reversinglabs Titanium",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/reversinglabs-titanium",
+    "Identifier": "ReversinglabsTitanium",
+    "Categories": [
+        "Threat Intelligence",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ReversinglabsTitanium",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://ticloud01.reversinglabs.com"
+        },
+        {
+            "IntegrationIdentifier": "ReversinglabsTitanium",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ReversinglabsTitanium",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M7.3,11.5c-2,1.5-3.1,3.9-3.1,7.1c0,1.8,0.5,3.5,1.5,4.9c1,1.4,2.4,2.6,4.3,3.4c-5,7.5-8.1,12-9.2,13.6h7.4l7.5-12h3.5v12\n\t\t\th6.6V9.2h-9.1C12.5,9.2,9.3,10,7.3,11.5z M19.2,14.7v8.4h-2.1c-2.1,0-3.6-0.3-4.6-1c-1-0.7-1.5-1.8-1.5-3.3c0-1.5,0.5-2.5,1.5-3.2\n\t\t\tc1-0.6,2.6-1,4.8-1H19.2z M36.3,35V9.2h-6.6v31.2H49V35H36.3z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 7.0,
+    "MarketingDisplayName": "ReversingLabs Titanium"
+}

@@ -1,0 +1,255 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 15.05</h2><h5>Published on 12 May, 2021</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     ActiveDirectory
+    </b>
+   </li>
+   <ul>
+    <li>
+     ActiveDirectory
+    </li>
+    <ul>
+     <li>
+      Added support for multiple groups in actions "Add User To Group" and "Remove User From Group"
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     McAfeeEPO
+    </b>
+   </li>
+   <ul>
+    <li>
+     McAfeeEPO
+    </li>
+    <ul>
+     <li>
+      Added new actions "Execute Query By ID", "Execute Custom Query", "Get Endpoint Events", "List Queries", "Execute Entity Query" and "List Tasks"
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     MicrosoftAzureSentinel
+    </b>
+   </li>
+   <ul>
+    <li>
+     Microsoft Azure Sentinel
+    </li>
+    <ul>
+     <li>
+      REGRESSIVE! Regression Note - The changes in this version might cause regressive changes, due to the changes in the following actions: List Incidents, List Alert Rules, Update Incident Details, Update Incident Labels. In short: Status values "Draft" and "InProgress" are no longer accepted by the api. Instead of "InProgress", "Active" status can be used. Severity value "Critical" is no longer accepted by the api. Json results were changed because updated endpoints return different data.
+     </li>
+     <li>
+      Updated the integration's code to work with Python version 3
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Office365ManagementAPI
+    </b>
+   </li>
+   <ul>
+    <li>
+     Office365ManagementAPI
+    </li>
+    <ul>
+     <li>
+      Added OAUTH2 Login endpoint url parameter to the Integration configuration.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     ActiveDirectory
+    </b>
+   </li>
+   <ul>
+    <li>
+     Set User Password
+    </li>
+    <ul>
+     <li>
+      Security enhancement in the "Set User Password" action.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     MicrosoftAzureSentinel
+    </b>
+   </li>
+   <ul>
+    <li>
+     List Alert Rules
+    </li>
+    <ul>
+     <li>
+      List Alert Rules: Due to Azure Sentinel backend changes, Severity value "Critical" is no longer accepted by the api. New action input parameter "Max Rules to Return" is added to limit the number of rules to return.
+     </li>
+    </ul>
+    <li>
+     List Incidents
+    </li>
+    <ul>
+     <li>
+      List Incidents: Action endpoint is updated due to deprecation. This change might cause regressions in existing playbooks.
+     </li>
+    </ul>
+    <li>
+     Update Incident Details
+    </li>
+    <ul>
+     <li>
+      Update Incident Details: Action endpoint is updated due to deprecation.This change might cause regressions in existing playbooks.
+     </li>
+    </ul>
+    <li>
+     Update Incident Labels
+    </li>
+    <ul>
+     <li>
+      Update Incident Labels: Action endpoint is updated due to deprecation, and logic has changed, to add labels on top of the existing ones, instead of replacing them. This change might cause regressions in existing playbooks.
+     </li>
+    </ul>
+    <li>
+     Get Alert Rule Details
+    </li>
+    <ul>
+     <li>
+      Get Alert Rule Details: Action's JSON result is updated to ensure compatibility with the Siemplify Expression Builder.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Office365ManagementAPI
+    </b>
+   </li>
+   <ul>
+    <li>
+     Start Subscription
+    </li>
+    <ul>
+     <li>
+      "Start Subscription" action updated to allow to subscribe for Audit.General events
+     </li>
+    </ul>
+    <li>
+     Stop Subscription
+    </li>
+    <ul>
+     <li>
+      "Stop Subscription" action updated to allow to subscribe for Audit.General events
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     MicrosoftAzureSentinel
+    </b>
+   </li>
+   <ul>
+    <li>
+     Incidents Connector
+    </li>
+    <ul>
+     <li>
+      Incidents Connector: Connector's logic is updated to gracefully skip incorrectly formatted Azure Sentinel incidents. To better handle these incidents, we recommended migrating to Microsoft Azure Sentinel Incidents Connector V2.
+     </li>
+    </ul>
+    <li>
+     Incidents Connector V2
+    </li>
+    <ul>
+     <li>
+      Incidents Connector V2: Improved functionality and logic of the connector.
+     </li>
+     <li>
+      Incidents Connector V2: Connector's default values for "Max Incidents per Cycle" and "PythonProcessTimeout" were changed. It's also recommended to increase the run intervals between connector cycles to at least 30 seconds instead of default 10.
+     </li>
+     <li>
+      Incidents Connector V2: "Max Incidents per Cycle" input parameter was changed to "Max New Incidents Per Cycle", and now controls how many new incidents will the connector request from Azure Sentinel in one connector cycle.
+     </li>
+     <li>
+      Incidents Connector V2: New parameter "Max Backlog Incidents Per Cycle" was added to control how many backlogged incidents connector will request from Azure Sentinel in one connector cycle.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Office365ManagementAPI
+    </b>
+   </li>
+   <ul>
+    <li>
+     Office 365 Management API Audit General Events Connector
+    </li>
+    <ul>
+     <li>
+      NEW! New O365 Management API Audit.General events connector added.
+     </li>
+    </ul>
+    <li>
+     Office 365 Management API DLP Events Connector
+    </li>
+    <ul>
+     <li>
+      Added OAUTH2 Login endpoint url parameter to the DLP Schema Connector configuration.
+     </li>
+     <li>
+      Improved "Office 365 Management API DLP Events Connector" functionality in cases of no data in the specified time interval.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     QRadar
+    </b>
+   </li>
+   <ul>
+    <li>
+     QRadar Correlation Events Connector V2
+    </li>
+    <ul>
+     <li>
+      Improved environment mapping functionality of the "QRadar Correlation Events Connector V2", domain_name and domain_id can be used to properly map QRadar domains and Siemplify Environments. Note: this may change existing mapping behavior in both the Environment Field Name and map.json file.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Splunk
+    </b>
+   </li>
+   <ul>
+    <li>
+     Notable Events Connector
+    </li>
+    <ul>
+     <li>
+      Notable Events Connector: Improved connector's parsing in case of special characters.
+     </li>
+     <li>
+      Notable Events Connector: Improved the way base events are fetched.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

@@ -1,0 +1,170 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583, 
+    "Creator": "admin", 
+    "Description": "Create a Freshservice ticket. Note: as of now, Freshservice API supports only creation of tickets with the type \"Incident\" and the ticket's priority is dynamically calculated according to the \"Urgency\" and \"Impact\" values, same as in FreshService's UI. Additionally, if file attachments to add are provided, the total size of the attachments must not exceed 15MB.",
+    "Id": -1, 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"ticket\":{\"cc_emails\":[],\"fwd_emails\":[],\"reply_cc_emails\":[],\"fr_escalated\":\"XXXX\",\"spam\":\"XXXX\",\"email_config_id\":\"None\",\"group_id\":\"XXXXXX\",\"priority\":\"X\",\"priority_name\":\"XXXXX\",\"requester_id\":\"XXXXXX\",\"requested_for_id\":\"XXXXXX\",\"responder_id\":\"XXXXXX\",\"source\":\"X\",\"source_name\":\"XXXXX\",\"status\":\"X\",\"status_name\":\"XXXXX\",\"subject\":\"XXXXX\",\"to_emails\":\"XXXX\",\"department_id\":\"XXXX\",\"id\":\"XX\",\"type\":\"Incident\",\"due_by\":\"XXXXXXXXXX\",\"fr_due_by\":\"XXXXXXXX\",\"is_escalated\":\"XXXXX\",\"description\":\"XXXXX\",\"description_text\":\"XXXXX\",\"category\":\"XXX\",\"sub_category\":\"XXXX\",\"item_category\":\"XXXX\",\"custom_fields\":{\"XXXX\":\"XXXX\"},\"created_at\":\"XXXXXXX\",\"updated_at\":\"XXXXXXX\",\"tags\":[\"XXXXX\",\"XXXX\"],\"attachments\":[]}}]", 
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "FreshworksFreshservice", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530451212583, 
+    "Name": "Create Ticket",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify subject field for created ticket.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Subject", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify description field for created ticket.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Description", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify requester email for created ticket.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Requester Email", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the agent email to assign the ticket to.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Agent Assign To", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the group name to assign the ticket to.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Group Assign To", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Medium", 
+            "Description": "Specify priority to assign to the ticket.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Priority", 
+            "OptionalValues": [
+                "Low", 
+                "Medium", 
+                "High", 
+                "Urgent"
+            ], 
+            "Type": 15, 
+            "Value": "Medium"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Medium", 
+            "Description": "Specify urgency to assign to the ticket.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Urgency", 
+            "OptionalValues": [
+                "Low", 
+                "Medium", 
+                "High"
+            ], 
+            "Type": 15, 
+            "Value": "Medium"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Medium", 
+            "Description": "Specify impact to assign to the ticket.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Impact", 
+            "OptionalValues": [
+                "Low", 
+                "Medium", 
+                "High"
+            ], 
+            "Type": 15, 
+            "Value": "Medium"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify tags to assign to the ticket. Parameter accepts multiple values as a comma separated string.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Tags", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify a JSON object that contains custom fields to add to the ticket. Action appends new custom fields to any existing for a ticket. Example format: {\"key1\":\"value1\",\"key2\":\"value2\"}",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Custom Fields", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the full path for the file to be uploaded with the ticket. Parameter accepts multiple values as a comma separated string. The total size of the attachments must not exceed 15MB",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "File Attachments to Add",
+            "Type": 0,
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

@@ -1,0 +1,51 @@
+{
+    "Description": "Sumo Logic is a cloud-based Machine data analytics company focusing on security, operations and BI usecases. It provides log management and analytics services that leverage machine-generated big data to deliver real-time IT insights.",
+    "DisplayName": "Sumologic",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/sumologic",
+    "Identifier": "Sumologic",
+    "Categories": [
+        "SIEM",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Sumologic",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://{IP}"
+        },
+        {
+            "IntegrationIdentifier": "Sumologic",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Access ID",
+            "PropertyName": "Access ID",
+            "PropertyType": "2",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Sumologic",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Access Key",
+            "PropertyName": "Access Key",
+            "PropertyType": "3",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Sumologic",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "PythonVersion": 2,
+    "SvgImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<path d=\"M35.7,6.7H14.3c-4.2,0-7.6,3.4-7.6,7.6v21.5c0,4.2,3.4,7.6,7.6,7.6h21.5c4.2,0,7.6-3.4,7.6-7.6V14.3\n\tC43.3,10.1,39.9,6.7,35.7,6.7z M32.5,27.1h-5.3v5.3c0,1.2-1,2.1-2.1,2.1s-2.1-1-2.1-2.1v-5.3h-5.3c-1.2,0-2.1-1-2.1-2.1\n\ts1-2.1,2.1-2.1h5.3v-5.3c0-1.2,1-2.1,2.1-2.1s2.1,1,2.1,2.1v5.3h5.3c1.2,0,2.1,1,2.1,2.1S33.6,27.1,32.5,27.1z\"/>\n</svg>\n",
+    "Version": 13.0,
+    "MarketingDisplayName": "Sumo Logic"
+}

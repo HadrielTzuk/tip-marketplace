@@ -1,0 +1,62 @@
+[
+    {
+        "ChangeDescription": "AWS Security Hub integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "AWSSecurityHub",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1602663004,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4463"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "AWSSecurityHub",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": " AWS Security Hub - Findings Connector - Updated connector to better handle the \"Product Field Name\" field.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "SecurityHubFindingsConnector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1626845783,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9145"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "AWSSecurityHub",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Findings Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "SecurityHubFindingsConnector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1662555518,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11867"
+    }
+]

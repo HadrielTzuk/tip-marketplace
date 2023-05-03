@@ -1,0 +1,51 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List available rule groups in AWS WAF.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSWAF",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"CloudFront\": [{\"Name\": \"BothRuleGroup\", \"Id\": \"123456\", \"Description\": \"\", \"LockToken\": \"123456\", \"ARN\": \"arn:aws:wafv2:us-east-1:123456:global/rulegroup/BothRuleGroup/123456\"}], \"Regional\": [{\"Name\": \"BothRuleGroup\", \"Id\": \"123456\", \"Description\": \"\", \"LockToken\": \"123456\", \"ARN\": \"arn:aws:wafv2:us-east-1:123456:regional/rulegroup/BothRuleGroup/123456\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Rule Groups",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "CloudFront",
+            "Description": "Specify what should be the scope for the listing of Rule Groups.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Scope",
+            "OptionalValues": [
+                "CloudFront",
+                "Regional",
+                "Both"
+            ],
+            "Type": 15,
+            "Value": "CloudFront"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many Rule Groups to return. Default is 50. Maximum is 100.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Rule Groups To Return",
+            "Type": 0,
+            "Value": 50
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

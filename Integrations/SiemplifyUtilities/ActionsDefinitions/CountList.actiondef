@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1544696115100,
+    "Creator": "Admin",
+    "Description": "Count the number of items on a list - separated by a configurable delimiter.",
+    "Id": -1,
+    "IntegrationIdentifier": "SiemplifyUtilities",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1544696115100,
+    "Name": "Count List",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1544696115116,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comma separated string list. For example: value1,value2,value3.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1544696115116,
+            "Name": "Input String",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1544696115118,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Define a symbol, which is used for separation of values from the input list.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1544696115118,
+            "Name": "Delimiter",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\n\n\nACTION_NAME = 'Siemplify_Count List'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n\n    list_count = 0\n\n    # Parameters.\n    input_string = siemplify.parameters.get('Input String', '')\n    delimiter = siemplify.parameters.get('Delimiter', ',')\n\n    if input_string:\n        list_count = len(input_string.split(delimiter))\n\n    output_message = \"List length is: {0}\".format(list_count)\n\n    siemplify.end(output_message, list_count)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "list_count",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

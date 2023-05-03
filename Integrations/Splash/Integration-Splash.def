@@ -1,0 +1,35 @@
+{
+    "Description": "Splash is a javascript rendering service with an HTTP API. It's a lightweight browser with an HTTP API, implemented in Python 3 using Twisted and QT5. It's fast, lightweight and state-less which makes it easy to distribute.",
+    "DisplayName": "Splash",
+    "Identifier": "Splash",
+    "MarketingDisplayName": "Splash",
+    "Categories": [
+        "Data Enrichment",
+        "Operational"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Splash",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https://{{ip address}}:8050"
+        },
+        {
+            "IntegrationIdentifier": "Splash",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)--><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 26\" style=\"enable-background:new 0 0 25 26;\" xml:space=\"preserve\"><g><g><path d=\"M21.7,16.9c-0.4,0-0.7,0.1-1,0.2c-1.2-0.1-1.4-0.6-1.5-2c0.2-0.5,0.3-1.1,0.3-1.6c0-0.9-0.2-1.7-0.6-2.4 c-0.3-3,0.9-3.7,3.2-4.9c0.1,0,0.1-0.1,0.2-0.1c0.8-0.4,1.3-1.2,1.3-2.1c0-1.4-1.1-2.4-2.5-2.4c-1.4,0-2.5,1.1-2.5,2.4 c0,0.1,0,0.2,0,0.2c-0.5,2.3-1.1,3.3-4.6,3.7c-0.1,0-0.2,0-0.3,0c-3.2,0-5.8,2.5-5.8,5.6c0,0.1,0,0.2,0,0.4 c-0.8,2.5-1.8,3-3.8,3.6c-0.1,0-0.2,0-0.3,0c-1.5,0-2.8,1.2-2.8,2.7c0,1.5,1.2,2.7,2.8,2.7s2.8-1.2,2.8-2.7c0.1-1.7,1.3-2.6,3-2.6 c1,1,2.5,1.6,4,1.6c1.1,0,2.2-0.3,3-0.8c1.5-0.2,2.1,0.1,2.8,1.2c0.2,1,1.1,1.8,2.2,1.8c1.3,0,2.3-1,2.3-2.2 C24,17.9,23,16.9,21.7,16.9z M13.8,16.7c-1.9,0-3.4-1.5-3.4-3.3c0-1.8,1.5-3.3,3.4-3.3c1.9,0,3.4,1.5,3.4,3.3 C17.2,15.2,15.6,16.7,13.8,16.7z M11.7,6.9c0.6,0,1.1-0.5,1.1-1.1s-0.5-1.1-1.1-1.1c-0.6,0-1.1,0.5-1.1,1.1S11.1,6.9,11.7,6.9z M3.9,10.8c1.2,0,2.1-0.9,2.1-2.1s-1-2.1-2.1-2.1c-1.2,0-2.1,0.9-2.1,2.1S2.7,10.8,3.9,10.8z M12,21.8c-0.8,0-1.4,0.6-1.4,1.3 c0,0.7,0.6,1.3,1.4,1.3s1.4-0.6,1.4-1.3C13.4,22.4,12.8,21.8,12,21.8z M21,12.3c0,0.8,0.7,1.5,1.5,1.5c0.8,0,1.5-0.7,1.5-1.5 c0-0.8-0.7-1.5-1.5-1.5C21.6,10.8,21,11.5,21,12.3z\"/></g></g></svg>",
+    "Version": 3.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/splash"
+}

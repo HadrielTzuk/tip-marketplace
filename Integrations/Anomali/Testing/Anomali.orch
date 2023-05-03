@@ -1,0 +1,119 @@
+{
+  "Identifier": "3752ec9a-ab98-4b45-a65c-0f5ce0a1ebc6",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": true,
+  "Name": "Anomali",
+  "Category": 1,
+  "Description": "Anomali Workflow",
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "cd0e6663-416e-46bc-83ed-84265daea722",
+      "ParentWorkflowIdentifier": "3752ec9a-ab98-4b45-a65c-0f5ce0a1ebc6",
+      "ParentStepIdentifiers": [
+        "0db89ca7-93d8-44e0-ac23-9ba91152a8b4"
+      ],
+      "ParentStepIdentifier": "0db89ca7-93d8-44e0-ac23-9ba91152a8b4",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Anomali_GetThreatInfo_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Anomali_GetThreatInfo",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "cd0e6663-416e-46bc-83ed-84265daea722",
+          "ParentWorkflowIdentifier": "3752ec9a-ab98-4b45-a65c-0f5ce0a1ebc6",
+          "Name": "ScriptName",
+          "Value": "Anomali_GetThreatInfo",
+          "CreationTimeUnixTimeInMs": 1519644062938,
+          "ModificationTimeUnixTimeInMs": 1519644062938
+        },
+        {
+          "ParentStepIdentifier": "cd0e6663-416e-46bc-83ed-84265daea722",
+          "ParentWorkflowIdentifier": "3752ec9a-ab98-4b45-a65c-0f5ce0a1ebc6",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Limit\":\"10\"}",
+          "CreationTimeUnixTimeInMs": 1519644062938,
+          "ModificationTimeUnixTimeInMs": 1519644062938
+        },
+        {
+          "ParentStepIdentifier": "cd0e6663-416e-46bc-83ed-84265daea722",
+          "ParentWorkflowIdentifier": "3752ec9a-ab98-4b45-a65c-0f5ce0a1ebc6",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519644054389,
+          "ModificationTimeUnixTimeInMs": 1519644054389
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519644054389,
+      "ModificationTimeUnixTimeInMs": 1519644054389
+    },
+    {
+      "Identifier": "0db89ca7-93d8-44e0-ac23-9ba91152a8b4",
+      "ParentWorkflowIdentifier": "3752ec9a-ab98-4b45-a65c-0f5ce0a1ebc6",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Anomali_Ping_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Anomali_Ping",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "0db89ca7-93d8-44e0-ac23-9ba91152a8b4",
+          "ParentWorkflowIdentifier": "3752ec9a-ab98-4b45-a65c-0f5ce0a1ebc6",
+          "Name": "ScriptName",
+          "Value": "Anomali_Ping",
+          "CreationTimeUnixTimeInMs": 1519644062937,
+          "ModificationTimeUnixTimeInMs": 1519644062937
+        },
+        {
+          "ParentStepIdentifier": "0db89ca7-93d8-44e0-ac23-9ba91152a8b4",
+          "ParentWorkflowIdentifier": "3752ec9a-ab98-4b45-a65c-0f5ce0a1ebc6",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519644062937,
+          "ModificationTimeUnixTimeInMs": 1519644062937
+        },
+        {
+          "ParentStepIdentifier": "0db89ca7-93d8-44e0-ac23-9ba91152a8b4",
+          "ParentWorkflowIdentifier": "3752ec9a-ab98-4b45-a65c-0f5ce0a1ebc6",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519644052965,
+          "ModificationTimeUnixTimeInMs": 1519644052965
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519644052965,
+      "ModificationTimeUnixTimeInMs": 1519644052965
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "40bff52a-53f8-4dbb-b189-fb1e0834a54d",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "3752ec9a-ab98-4b45-a65c-0f5ce0a1ebc6",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Anomali",
+      "AllEnvironments": "",
+      "Id": 24,
+      "CreationTimeUnixTimeInMs": 1519644062936,
+      "ModificationTimeUnixTimeInMs": 1519644062936
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 24,
+  "CreationTimeUnixTimeInMs": 1519644035706,
+  "ModificationTimeUnixTimeInMs": 1519644035706
+}

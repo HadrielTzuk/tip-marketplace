@@ -1,0 +1,42 @@
+{
+    "CreationTimeUnixTimeInMs": 1535884893446, 
+    "Creator": "admin", 
+    "Description": "Remove file from the endpoint.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "McAfeeMvisionEDR", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1535884893446, 
+    "Name": "Remove File", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the full path to the file that you want to remove.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1535884906829, 
+            "Name": "Full File Path", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829, 
+            "CustomActionId": -1, 
+            "DefaultValue": "False", 
+            "Description": "If enabled, will ignore files that may be critical or trusted.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1535884906829, 
+            "Name": "Safe Removal", 
+            "Type": 1, 
+            "Value": "False"
+        }
+    ], 
+    "Script": "", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0,
+    "IsAsync": true
+}

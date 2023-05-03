@@ -1,0 +1,58 @@
+{
+    "CreationTimeUnixTimeInMs": 1524560820281,
+    "Creator": "klim.lyapin@siemplify.co",
+    "Description": "List Custom Hunting Rules available in Sentinel",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Properties\": {\"Category\": \"General Exploration\", \"Tactics\": [\"Execution\"], \"Tags\": [{\"Name\": \"description\", \"Value\": \"456\"}, {\"Name\": \"tactics\", \"Value\": \"DefenseEvasion\"}], \"Version\": 2, \"Display_Name\": \"All Computers with their most recent data\", \"Query\": \"search not(ObjectName == \\\"Advisor Metrics\\\" or ObjectName == \\\"ManagedSpace\\\") | summarize AggregatedValue = max(TimeGenerated) by Computer | limit 500000 | sort by Computer asc\\r\\n// Oql: NOT(ObjectName=\\\"Advisor Metrics\\\" OR ObjectName=ManagedSpace) | measure max(TimeGenerated) by Computer | top 500000 | Sort Computer // Args: {OQ: True; WorkspaceId: 00000000-0000-0000-0000-000000000000} // Settings: {PTT: True; SortI: True; SortF: True} // Version: 0.1.122\"}, \"ETag\": null, \"ID\": \"subscriptions/a052d33b-b7c4-4dc7-9e17-5c89ea594669/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXX/savedSearches/LogManagement(XXXXXX)_General|AlphabeticallySortedComputers\", \"Name\": \"LogManagement(XXXXXX)_General|AlphabeticallySortedComputers\"}, {\"Properties\": {\"Category\": \"General Exploration\", \"Tactics\": [], \"Tags\": null, \"Version\": 2, \"Display_Name\": \"Stale Computers (data older than 24 hours)\", \"Query\": \"search not(ObjectName == \\\"Advisor Metrics\\\" or ObjectName == \\\"ManagedSpace\\\") | summarize lastdata = max(TimeGenerated) by Computer | limit 500000 | where lastdata < ago(24h)\\r\\n// Oql: NOT(ObjectName=\\\"Advisor Metrics\\\" OR ObjectName=ManagedSpace) | measure max(TimeGenerated) as lastdata by Computer | top 500000 | where lastdata < NOW-24HOURS // Args: {OQ: True; WorkspaceId: 00000000-0000-0000-0000-000000000000} // Settings: {PTT: True; SortI: True; SortF: True} // Version: 0.1.122\"}, \"ETag\": null, \"ID\": \"subscriptions/a052d33b-b7c4-4dc7-9e17-5c89ea594669/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXX/savedSearches/LogManagement(XXXXXX)_General|StaleComputers\", \"Name\": \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftAzureSentinel",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524560820281,
+    "Name": "List Custom Hunting Rules",
+    "Parameters": [
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Names for the hunting rules action should return. Comma-separated string",
+            "Name": "Hunting Rule Names to Return",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "What hunting rule tactics action should return. Comma-separated string",
+            "Name": "Fetch Specific Hunting Rule Tactics",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": 0,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "How many scheduled alert rules the action should return, for example, 50.",
+            "Name": "Max rules to return",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1617807892179,
+            "ModificationTimeUnixTimeInMs": 1617807892179
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

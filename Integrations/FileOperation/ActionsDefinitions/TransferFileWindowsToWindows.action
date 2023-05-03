@@ -1,0 +1,54 @@
+{
+    "CreationTimeUnixTimeInMs": 1511346467410,
+    "Creator": "admin",
+    "Description": "Transfer file between two windows shares",
+    "Id": -1,
+    "IntegrationIdentifier": "FileOperation",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511346467410,
+    "Name": "Transfer File Windows To Windows",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1511799971328,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The folder with the relevant files. Full path",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799971328,
+            "Name": "source_win_file_path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799971328,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The folder to put the files into",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799971328,
+            "Name": "dest_win_path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799971328,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "Indicates weather to keep the file in source or remove it",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799971328,
+            "Name": "keep_file",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from FileOperationManager import FileOperationManager\nfrom SiemplifyAction import *\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    file_manager = FileOperationManager()\n    source_file = siemplify.parameters['source_win_file_path']\n    dest_path = siemplify.parameters['dest_win_path']\n    keep_file = siemplify.parameters['keep_file']\n    transfer_result = file_manager.transfer_file_win_to_win(source_file, dest_path, keep_file)\n\n    output_message = \"Transfer File {0} to -> {1} completed \".format(source_file, dest_path)\n    result_value = transfer_result\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "FilePath",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

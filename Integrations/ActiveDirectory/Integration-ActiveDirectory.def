@@ -1,0 +1,77 @@
+{
+    "Description": "Microsoft Active Directory integration facilitates the centralized management and synchronization of Windows user accounts with Security Center's administrator and cardholder accounts.",
+    "DisplayName": "Active Directory",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/active-directory",
+    "Identifier": "ActiveDirectory",
+    "Categories": [
+        "IT & Infrastructure",
+        "Access Management",
+        "IAM",
+        "Identity"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ActiveDirectory",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Server",
+            "PropertyName": "Server",
+            "PropertyType": 2,
+            "Value": "x.x.x.x"
+        },
+        {
+            "IntegrationIdentifier": "ActiveDirectory",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": 2,
+            "Value": "user@domain.com"
+        },
+        {
+            "IntegrationIdentifier": "ActiveDirectory",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Domain",
+            "PropertyName": "Domain",
+            "PropertyType": 2,
+            "Value": "domain.com"
+        },
+        {
+            "IntegrationIdentifier": "ActiveDirectory",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "ActiveDirectory",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Custom Query Fields",
+            "PropertyName": "Custom Query Fields",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ActiveDirectory",
+            "IsMandatory": false,
+            "PropertyDisplayName": "CA Certificate File - parsed into Base64 String",
+            "PropertyName": "CA Certificate File - parsed into Base64 String",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ActiveDirectory",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Use SSL",
+            "PropertyName": "Use SSL",
+            "PropertyType": 0,
+            "Value": "False"
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M11.6,13.3c0,0,0,0.1,0,0.1c0,2.9,0,5.8,0,8.7c0,0.1,0.1,0.2,0.2,0.2c0.3,0,0.7,0.1,1,0.1c1.7,0.2,3.3,0.5,5,0.7\n\t\t\tc1.7,0.2,3.3,0.5,5,0.7c0.4,0.1,0.7,0.1,1.1,0.2V13.3H11.6z M11.6,11.7h12.2V1c0,0-0.1,0-0.1,0c-1.7,0.2-3.3,0.5-5,0.7\n\t\t\tc-2.3,0.3-4.7,0.7-7,1c-0.2,0-0.2,0.1-0.2,0.2c0,2.8,0,5.7,0,8.5C11.6,11.6,11.6,11.7,11.6,11.7z M0.9,13.4c0,2.4,0,4.9,0,7.3\n\t\t\tc0,0.1,0.1,0.2,0.2,0.2c1,0.1,2,0.3,3,0.4c1.5,0.2,3,0.4,4.5,0.6c0.5,0.1,1,0.1,1.5,0.2v-8.8L0.9,13.4C0.9,13.3,0.9,13.3,0.9,13.4\n\t\t\tz M10.1,3C7,3.4,3.9,3.8,0.9,4.3v7.5h9.2V3z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "MarketingDisplayName": "Active Directory",
+    "Version": 34.0
+}

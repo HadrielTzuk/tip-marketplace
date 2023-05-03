@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1522587140007, 
+    "Creator": "admin", 
+    "Description": "Retrieve a list of all available threats in the system", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"cylance_score\": -0.999, \"name\": \"BADguyFILE.exe\", \"classification\": \"\", \"last_found\": \"2018-03-29T14:26:56\", \"av_industry\": null, \"unique_to_cylance\": false, \"global_quarantined\": false, \"sub_classification\": \"\", \"file_size\": 31246, \"safelisted\": false, \"sha256\": \"19D51872FEC52363589C46E869B9A7A7EC567CB2AED6DBF9B206FC04AE7361DA\", \"md5\": \"859214628259F59A1DD3ABE8C3201346\"}, {\"cylance_score\": -1.0, \"name\": \"mpress.exe\", \"classification\": \"Trusted\", \"last_found\": \"2018-03-28T20:34:44\", \"av_industry\": null, \"unique_to_cylance\": true, \"global_quarantined\": false, \"sub_classification\": \"Local\", \"file_size\": 103424, \"safelisted\": false, \"sha256\": \"2852680C94A9D68CDAB285012D9328A1CECA290DB60C9E35155C2BB3E46A41B4\", \"md5\": \"8B632BFC3FE653A510CBA277C2D699D1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Cylance", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1522587140007, 
+    "Name": "Get Threats", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom SiemplifyUtils import dict_to_flat\r\nfrom CylanceManager import CylanceManager\r\n\r\nSCRIPT_NAME = \"Cylance - GetThreats\"\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n    siemplify.script_name = SCRIPT_NAME\r\n    conf = siemplify.get_configuration('Cylance')\r\n\r\n    server_address = conf['Server Address']\r\n    application_secret = conf['Application Secret']\r\n    application_id = conf['Application ID']\r\n    tenant_identifier = conf['Tenant Identifier']\r\n\r\n    cm = CylanceManager(server_address, application_id, application_secret,\r\n                        tenant_identifier)\r\n\r\n    threats = cm.get_threats()\r\n\r\n    if threats:\r\n        threats = map(dict_to_flat, threats)\r\n        csv_output = cm.construct_csv(threats)\r\n\r\n        siemplify.result.add_data_table('Cylance Threats', csv_output)\r\n\r\n    siemplify.end(\"Found {} threats.\".format(len(threats)), 'true')\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 1.0
+}

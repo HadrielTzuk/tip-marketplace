@@ -1,0 +1,62 @@
+{
+    "CreationTimeUnixTimeInMs": 1517826278026,
+    "Creator": "admin",
+    "Id": -1,
+    "IntegrationIdentifier": "PaloAltoCortexXDR",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1568213579914,
+    "Name": "Resolve an Incident",
+    "Description": "The ability to close XDR incidents with a close reason.",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518700589889,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The ID of the incident to be updated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518700589889,
+            "Name": "Incident ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518700589889,
+            "CustomActionId": -1,
+            "DefaultValue": "UNDER_INVESTIGATION",
+            "Description": "Updated incident status",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518700589889,
+            "Name": "Status",
+            "OptionalValues": [
+                "NEW",
+                "UNDER_INVESTIGATION",
+                "RESOLVED_THREAT_HANDLED",
+                "RESOLVED_KNOWN_ISSUE",
+                "RESOLVED_DUPLICATE",
+                "RESOLVED_FALSE_POSITIVE",
+                "RESOLVED_OTHER"
+            ],
+            "Type": 15,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518700589889,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Descriptive comment explaining the incident change.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518700589889,
+            "Name": "Resolve Comment",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

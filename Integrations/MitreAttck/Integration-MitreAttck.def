@@ -1,0 +1,36 @@
+{
+    "Description": "MITRE ATT&CK\u2122 is a globally-accessible knowledge base of adversary tactics and techniques based on real-world observations. The ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies in the private sector, in government, and in the cybersecurity product and service community.",
+    "DisplayName": "MITRE ATT&CK\u2122",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/mitre-att-and-ck",
+    "Identifier": "MitreAttck",
+    "Categories": [
+        "Threat Intelligence",
+        "Security",
+        "Free to use",
+        "Data Enrichment"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "MitreAttck",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "5",
+            "Value": "https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json"
+        },
+        {
+            "IntegrationIdentifier": "MitreAttck",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"><g> <path d=\"M16.5,20.8c-0.9,1-1.9,1.7-2.9,2.2c-1.1,0.5-2.2,0.7-3.4,0.7c-2.3,0-4-0.8-5.4-2.3c-1.1-1.2-1.6-2.6-1.6-4.2 c0-1.4,0.4-2.6,1.3-3.7c0.9-1.1,2.2-2.1,3.9-2.9c-1-1.1-1.7-2.1-2-2.8C6.2,7.3,6,6.6,6,6c0-1.3,0.5-2.5,1.6-3.4 c1-1,2.3-1.5,3.9-1.5c1.5,0,2.7,0.5,3.7,1.4c1,0.9,1.4,2,1.4,3.3c0,2.1-1.4,3.9-4.2,5.4l4,5c0.5-0.9,0.8-1.9,1.1-3.1l2.8,0.6 c-0.5,1.9-1.1,3.5-2,4.7c1,1.3,2.2,2.5,3.4,3.4L19.9,24C18.8,23.3,17.7,22.2,16.5,20.8z M14.9,18.7l-5-6.1c-1.5,0.9-2.4,1.7-3,2.4 c-0.5,0.7-0.8,1.5-0.8,2.2c0,0.9,0.4,1.8,1.1,2.8c0.7,1,1.7,1.4,3,1.4c0.8,0,1.6-0.3,2.5-0.8C13.6,20.2,14.3,19.5,14.9,18.7z M11.1,9.4c1.2-0.7,1.9-1.3,2.3-1.8c0.3-0.5,0.5-1.1,0.5-1.7c0-0.8-0.2-1.4-0.7-1.8c-0.5-0.5-1.1-0.7-1.8-0.7 C10.6,3.3,10,3.5,9.5,4C9,4.4,8.8,5,8.8,5.7c0,0.3,0.1,0.7,0.3,1.1C9.2,7.2,9.5,7.5,9.8,8L11.1,9.4z\"/></g></svg>",
+    "Version": 10.0,
+    "MarketingDisplayName": "MITRE ATT&CK"
+}

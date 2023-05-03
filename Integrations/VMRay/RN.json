@@ -1,0 +1,98 @@
+[
+    {
+        "ChangeDescription": "Integration refactored.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "VMRay",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1584001330,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1094"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "VMRay",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Fixed a bug, where action \"Upload File And Get Report\" was not working correctly, due to VMRay's API changes.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Upload File And Get Report",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1623746103,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8377"
+    },
+    {
+        "ChangeDescription": "Added \"Verify SSL\" parameter.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "VMRay",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1650451092,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11609"
+    },
+    {
+        "ChangeDescription": "Upload File And Get Report - Added an ability to provide multiple files in a single action run.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Upload File And Get Report",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1650451092,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10690"
+    },
+    {
+        "ChangeDescription": "Scan URL, Scan Hash - Updated the configuration parameters to be more flexible. Updated JSON result and added an optional Insight. Added new fields to enrichment table.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "VMRay",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1651659550,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10682"
+    },
+    {
+        "ChangeDescription": "Added information about platform and integration versions to headers.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "VMRay",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1651659550,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11657"
+    },
+    {
+        "ChangeDescription": "Integration updates to better support SaaS deployment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "VMRay",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1677024000,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "267456818"
+    }
+]

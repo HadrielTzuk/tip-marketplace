@@ -1,0 +1,110 @@
+[
+    {
+        "ChangeDescription": "New integration \"Darktrace\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Darktrace",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1618907918,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8043"
+    },
+    {
+        "ChangeDescription": "Enrich Entities - Added an ability to optionally fetch information about the connections.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Enrich Entities",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1649234547,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11440"
+    },
+    {
+        "ChangeDescription": "New Action Added - Execute Custom Search.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Execute Custom Search",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1649234547,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11438"
+    },
+    {
+        "ChangeDescription": "New Action Added - List Similar Devices.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "List Similar Devices",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1649234547,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11439"
+    },
+    {
+        "ChangeDescription": "New Action Added - Add Comment To Model Breach.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Add Comment To Model Breach",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1671621658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13392"
+    },
+    {
+        "ChangeDescription": "Integration - New OOTB mapping.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Darktrace",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1671621658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10332"
+    },
+    {
+        "ChangeDescription": "Integration - Updated description and logos.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Darktrace",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1671621658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13491"
+    },
+    {
+        "ChangeDescription": "List Similar Devices - Added Predefined Widgets.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "List Similar Devices",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1680566400,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "270310814"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Darktrace",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

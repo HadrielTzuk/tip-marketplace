@@ -1,0 +1,63 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Action will get as a parameter a list of Email Addresses, or will work on User entities with Email regexes (if parameters are not provided), and will be able to create a new rule,filtering the senders from your Exchange Server. Actions can be modified in the parameters using the rule parameter. Note - to use this action, please make sure you have Organization Management permissions, as stated here: https://docs.microsoft.com/en-us/exchange/permissions-exo/feature-permissions",
+    "Id": -1,
+    "IntegrationIdentifier": "ExchangeExtensionPack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Add Senders to Exchange-Siemplify Mail Flow Rule",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"success\":[\"test1@example.com\",\"test2@example.com\"],\"already_available\":[\"test3@example.com\"],\"invalid\":[\"invalid\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Email Addresses",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the email addresses you would like to add to the rule, in a comma separated list. If no parameter will be provided, action will work with User entities.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Rule to add senders to",
+            "Type": 15,
+            "DefaultValue": "Siemplify - Senders List - Permanently Delete",
+            "Value": "Siemplify - Senders List - Permanently Delete",
+            "IsMandatory": true,
+            "Description": "Specify the rule to add the sender to. If the rule doesn't exist - action will create it where it's missing.",
+            "OptionalValues": [
+                "Siemplify - Senders List - Permanently Delete"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Should add senders' domain to the corresponding Domains List rule as well?",
+            "Type": 1,
+            "DefaultValue": false,
+            "Value": false,
+            "IsMandatory": false,
+            "Description": "Specify whether the action should automatically take the domains of the provided email addresses and add them as well to the corresponding domain rules (same rule action for domains)",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}",
+    "IsAsync": true
+}

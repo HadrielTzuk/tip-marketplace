@@ -1,0 +1,51 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List available web ACLs in AWS WAF.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSWAF",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"CloudFront\": [{\"Name\": \"ACL1\", \"Id\": \"123456-1234-1234-1234-123456\", \"Description\": \"descript\", \"LockToken\": \"123456789\", \"ARN\": \"arn:aws:wafv2:us-east-1:123456798:global/webacl/ACL1/123456\"}], \"Regional\": [{\"Name\": \"ACL13\", \"Id\": \"123456\", \"Description\": \"\", \"LockToken\": \"123456\", \"ARN\": \"arn:aws:wafv2:us-east-1:123456:regional/webacl/ACL13/123456\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Web ACLs",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "CloudFront",
+            "Description": "Specify what should be the scope for the listing of Web ACLs.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Scope",
+            "OptionalValues": [
+                "CloudFront",
+                "Regional",
+                "Both"
+            ],
+            "Type": 15,
+            "Value": "CloudFront"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many Web ACLs to return. Default is 50. Maximum is 100.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Web ACLs To Return",
+            "Type": 0,
+            "Value": 50
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

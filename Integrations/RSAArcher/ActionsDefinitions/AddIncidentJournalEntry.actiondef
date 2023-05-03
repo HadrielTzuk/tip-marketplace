@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451342720,
+    "Creator": "admin",
+    "Description": "Add a journal entry to the Security Incident in RSA Archer.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"RequestedObject\": {\"Id\": \"26xxx6\"}, \"ValidationMessages\": [], \"IsSuccessful\": \"true\", \"Links\": []}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "RSAArcher",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530451342720,
+    "Name": "Add Incident Journal Entry",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451342720,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a content id of the security incident to which you want to add journal entry.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530451342720,
+            "Name": "Destination Content ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451342720,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the text for the journal entry.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530451342720,
+            "Name": "Text",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,45 @@
+{
+    "Description": "AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits that may affect availability, compromise security, or consume excessive resources.",
+    "DisplayName": "AWS WAF",
+    "Identifier": "AWSWAF",
+    "PythonVersion": 2,
+    "Categories": [
+        "Cloud Security",
+        "Cloud",
+        "Security",
+        "WAF"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "AWSWAF",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Access Key ID",
+            "PropertyName": "AWS Access Key ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AWSWAF",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Secret Key",
+            "PropertyName": "AWS Secret Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AWSWAF",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Default Region",
+            "PropertyName": "AWS Default Region",
+            "PropertyType": "2",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/aws-waf",
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"><g><g><path d=\"M10.3,12c0,0.1,0.1,0.2,0.1,0.3c0.1,0.1,0.1,0.1,0.3,0.1v0h0.6c0.1,0,0.2,0,0.3-0.1c0.1-0.1,0.1-0.1,0.1-0.3l1.1-4.5l1.1,4.5c0,0.1,0.1,0.2,0.1,0.3c0.1,0.1,0.2,0.1,0.3,0.1h0.6c0.1,0,0.2,0,0.3-0.1c0.1,0,0.1-0.1,0.1-0.3L17,6.6c0-0.1,0-0.1,0.1-0.2c0,0,0-0.1,0-0.1c0-0.1-0.1-0.2-0.2-0.2h-0.7c-0.1,0-0.2,0-0.3,0.1c-0.1,0-0.1,0.1-0.1,0.3l-1.2,4.7l-1.1-4.7c0-0.1-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.3-0.1h-0.6c-0.1,0-0.2,0-0.3,0.1c-0.1,0-0.1,0.1-0.1,0.3L11,11.1L9.8,6.5c0-0.1-0.1-0.2-0.1-0.3C9.6,6.2,9.6,6.2,9.4,6.2H8.7c-0.1,0-0.2,0.1-0.2,0.2c0,0.1,0,0.1,0.1,0.3L10.3,12z M17.8,12.2c0.2,0.1,0.5,0.2,0.8,0.3c0.3,0.1,0.7,0.1,1.1,0.1c0.4,0,0.7-0.1,1-0.1c0.3-0.1,0.6-0.2,0.8-0.4c0.2-0.2,0.4-0.4,0.5-0.6c0.1-0.2,0.2-0.5,0.2-0.8c0-0.4-0.1-0.7-0.3-1c-0.2-0.3-0.6-0.5-1.1-0.7l-1-0.3c-0.4-0.1-0.6-0.3-0.8-0.4c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.3,0.1-0.5,0.3-0.6s0.5-0.2,0.9-0.2c0.5,0,0.9,0.1,1.3,0.3c0.1,0.1,0.2,0.1,0.3,0.1c0.1,0,0.2-0.1,0.2-0.2V6.8c0-0.1,0-0.2-0.1-0.2c0-0.1-0.1-0.1-0.2-0.2c-0.1,0-0.2-0.1-0.3-0.1c-0.1,0-0.3-0.1-0.4-0.1c-0.2,0-0.3-0.1-0.5-0.1c-0.2,0-0.3,0-0.5,0c-0.3,0-0.6,0-0.9,0.1c-0.3,0.1-0.5,0.2-0.7,0.4c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.8c0,0.4,0.1,0.7,0.3,1c0.2,0.3,0.6,0.5,1.1,0.7l1,0.3c0.3,0.1,0.6,0.2,0.7,0.4c0.1,0.1,0.2,0.3,0.2,0.5c0,0.3-0.1,0.5-0.4,0.7c-0.2,0.2-0.6,0.2-1,0.2c-0.3,0-0.5,0-0.8-0.1c-0.3-0.1-0.5-0.1-0.8-0.2c-0.1,0-0.1-0.1-0.2-0.1c0,0-0.1,0-0.1,0c-0.1,0-0.2,0.1-0.2,0.2v0.4c0,0.1,0,0.1,0,0.2C17.6,12,17.7,12.1,17.8,12.2z M6,8.8c-0.3,0-0.5-0.1-0.7-0.1c-0.7,0-1.3,0.2-1.7,0.5s-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.5,1.3c0.3,0.3,0.8,0.5,1.4,0.5c0.8,0,1.5-0.3,2.1-1C6.9,11.7,7,11.9,7,12c0.1,0.1,0.2,0.2,0.3,0.3c0.1,0.1,0.1,0.1,0.2,0.1c0.1,0,0.1,0,0.2-0.1l0.4-0.3c0.1-0.1,0.1-0.1,0.1-0.2c0-0.1,0-0.1-0.1-0.2c-0.1-0.2-0.2-0.4-0.2-0.5c-0.1-0.2-0.1-0.4-0.1-0.6h0V8.3c0-0.8-0.2-1.3-0.6-1.7C7,6.2,6.3,6,5.5,6c-0.4,0-0.7,0-1.1,0.1C4.1,6.2,3.8,6.3,3.5,6.5c-0.1,0-0.2,0.1-0.2,0.1c0,0.1-0.1,0.1-0.1,0.2v0.3c0,0.1,0,0.2,0.1,0.2c0,0,0.1,0,0.1,0c0.1,0,0.1,0,0.2-0.1C4,7.2,4.3,7.1,4.5,7C4.8,7,5.1,7,5.3,7c0.5,0,0.9,0.1,1.1,0.3c0.2,0.2,0.3,0.6,0.3,1.1v0.5C6.5,8.8,6.2,8.8,6,8.8z M6.8,10c0,0.2,0,0.4-0.1,0.6c0,0.2-0.1,0.3-0.2,0.4c-0.2,0.2-0.4,0.4-0.7,0.4c-0.3,0.1-0.5,0.1-0.7,0.1c-0.3,0-0.6-0.1-0.8-0.3c-0.2-0.2-0.3-0.4-0.3-0.7c0-0.3,0.1-0.6,0.3-0.8c0.2-0.2,0.6-0.3,1-0.3c0.2,0,0.4,0,0.7,0c0.2,0,0.4,0.1,0.6,0.1V10z M20.7,15.4c-2.6,1.1-5.4,1.6-7.9,1.6c-3.8,0-7.4-1-10.4-2.8c-0.3-0.2-0.4,0.1-0.2,0.3c2.7,2.5,6.4,4,10.4,4c2.9,0,6.2-0.9,8.5-2.6C21.4,15.7,21,15.3,20.7,15.4z M22.9,14.1c-0.3-0.3-2.4-0.6-3.7,0.3c-0.2,0.1-0.2,0.3,0.1,0.3c0.8-0.1,2.4-0.3,2.7,0.1c0.3,0.4-0.3,1.9-0.6,2.6c-0.1,0.2,0.1,0.3,0.3,0.1C22.8,16.6,23.2,14.4,22.9,14.1z\"/></g></g></svg>",
+    "Version": 4.0,
+    "MarketingDisplayName": "Amazon WAF"
+}

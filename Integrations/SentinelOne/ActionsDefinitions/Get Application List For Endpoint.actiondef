@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1521991562459, 
+    "Creator": "admin", 
+    "Description": "Get a list of applications by endpoint (host or IP address)", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SentinelOne", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1521991562459, 
+    "Name": "Get Application List For Endpoint", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom SentinelOneManager import SentinelOneManager\r\nfrom SiemplifyDataModel import EntityTypes\r\nfrom SiemplifyUtils import add_prefix_to_dict_keys, dict_to_flat, flat_dict_to_csv\r\n\r\n# Consts.\r\nSENTINEL_ONE_PROVIDER = 'SentinelOne'\r\nSENTINEL_PREFIX = 'SENO_'\r\nADDRESS = EntityTypes.ADDRESS\r\nHOSTNAME = EntityTypes.HOSTNAME\r\n\r\n\r\ndef main():\r\n    # Define Variables.\r\n    entities_successed = []\r\n    result_value = False\r\n    # Configuration.\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration(SENTINEL_ONE_PROVIDER)\r\n    sentiel_one_manager = SentinelOneManager(conf['Api Root'], conf['Username'], conf['Password'])\r\n\r\n    # Get scope entities.\r\n    scope_entities = [entity for entity in siemplify.target_entities if entity.entity_type == ADDRESS or\r\n                      entity.entity_type == HOSTNAME]\r\n\r\n    # Run on entities.\r\n    for entity in scope_entities:\r\n        if entity.entity_type == ADDRESS:\r\n            applications_list = sentiel_one_manager.get_applications_from_endpoint(entity.identifier,\r\n                                                                                   is_ip_address=True, csv_output=True)\r\n        elif entity.entity_type == HOSTNAME:\r\n            applications_list = sentiel_one_manager.get_applications_from_endpoint(entity.identifier, csv_output=True)\r\n\r\n        if applications_list:\r\n            entities_successed.append(entity)\r\n            result_value = True\r\n            # Add entity table.\r\n            siemplify.result.add_entity_table(entity.identifier, applications_list)\r\n\r\n    if entities_successed:\r\n        output_message = 'Found applications for: {0}'.format(\",\".join([entity.identifier for entity\r\n                                                                     in entities_successed]))\r\n    else:\r\n        output_message = 'No applications were found for target entities.'\r\n\r\n    siemplify.update_entities(entities_successed)\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n\r\n\r\n\r\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

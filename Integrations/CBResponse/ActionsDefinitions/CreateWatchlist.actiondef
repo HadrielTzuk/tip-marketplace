@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1527425885796,
+    "Creator": "admin",
+    "Description": "Create a watchlist for processes (type = events) or for binaries (type = modules)",
+    "Id": -1,
+    "IntegrationIdentifier": "CBResponse",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527425885796,
+    "Name": "Create Watchlist",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527425885796,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Name of this watchlist",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1527425885796,
+            "Name": "Watchlist Name",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1527425885796,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The raw Carbon Black query that this watchlist matches",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1527425885796,
+            "Name": "Query",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1527425885796,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The type of watchlist. e.g. modules",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1527425885796,
+            "Name": "Watchlist Type",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CarbonBlackResponseManager import CBResponseManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    configurations = siemplify.get_configuration('CBResponse')\n    server_addr = configurations['Api Root']\n    api_key = configurations['Api Key']\n\n    name = siemplify.parameters['Watchlist Name']\n    query = siemplify.parameters['Query']\n    type = siemplify.parameters['Watchlist Type']\n\n    cb_response = CBResponseManager(server_addr, api_key)\n    cb_response.create_watchlist(name, query, type)\n\n    siemplify.end(\"Successfully created watchlist {}\".format(name), 'true')\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

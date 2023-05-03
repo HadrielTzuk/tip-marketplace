@@ -1,0 +1,1 @@
+INTEGRATION_NAME = "CyberArk PAM"

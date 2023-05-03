@@ -1,0 +1,42 @@
+{
+    "CreationTimeUnixTimeInMs": 1536142272545, 
+    "Creator": "System", 
+    "Description": "Remove a firewall address object from a suitable address group and delete the firewall address object. \nAction is running as async, please adjust script timeout value in Chronicle SOAR IDE for action as needed.",
+    "Id": -1, 
+    "IntegrationIdentifier": "FortiManager", 
+    "IsCustom": false, 
+    "IsEnabled": true,
+    "IsAsync": true,
+    "ModificationTimeUnixTimeInMs": 1536142272545, 
+    "Name": "Remove IP From Group", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1536142272545, 
+            "CustomActionId": 9, 
+            "DefaultValue": "", 
+            "Description": "The name of the ADOM. Default: root.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1536142272545, 
+            "Name": "ADOM Name", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1536142272545, 
+            "CustomActionId": 9, 
+            "DefaultValue": null, 
+            "Description": "The name of the address group to remove the address from.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1536142272545, 
+            "Name": "Address Group Name", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "Script": "from SiemplifyAction import *\nfrom SiemplifyDataModel import EntityTypes\nfrom FortiManager import FortiManager\n\n\nPROVIDER = 'FortiManager'\nACTION_NAME = 'FortiManager_UnBlock IP Address'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    verify_ssl = conf.get('Verify SSL', 'false').lower() == 'true'\n    forti_manager = FortiManager(conf['API Root'], conf['Username'], conf['Password'], verify_ssl)\n\n    result_value = False\n    errors = []\n    success_entities = []\n\n    target_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.ADDRESS]\n\n    # Parameters.\n    adom_name = siemplify.parameters.get('ADOM Name', 'root')\n    address_group_name = siemplify.parameters.get('Address Group Name')\n\n\n    for entity in target_entities:\n        try:\n            # Construct firewall address object name.\n            address_object_name = forti_manager.construct_address_object_name(entity.identifier)\n            # Remove address object from address group.\n            forti_manager.remove_address_object_to_address_group(adom_name, address_group_name, address_object_name)\n            # Delete address objecrt.\n            forti_manager.delete_address_object(adom_name, address_object_name)\n            success_entities.append(entity)\n            result_value = True\n\n        except Exception as err:\n            error_message = 'Error accrued unblocking {0}, Error: {1}'.format(entity.identifier, err.message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n\n    if success_entities:\n        output_message = 'The following entities were unblocked: {0}'.format(', '.join(\n            [entity.identifier for entity in success_entities]))\n    else:\n        output_message = 'No entities were unblocked.'\n\n    if errors:\n        output_message = \"{0} \\n \\n Errors:  \\n {1}\".format(output_message, ' \\n '.join(errors))\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 1.0
+}

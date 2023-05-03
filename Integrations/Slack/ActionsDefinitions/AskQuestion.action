@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1514124023595,
+    "Creator": "admin",
+    "Description": "Ask question in Slack. Note: this action will be deprecated in the future integration's versions and replaced with actions providing enhanced functionality.",
+    "Id": -1,
+    "IntegrationIdentifier": "Slack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1514124023595,
+    "Name": "Ask Question",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1514124447923,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Target channel.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1514124447923,
+            "Name": "Channel",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1514124447923,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Question content.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1514124447923,
+            "Name": "Question",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

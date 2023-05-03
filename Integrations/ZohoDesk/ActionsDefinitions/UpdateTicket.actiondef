@@ -1,0 +1,262 @@
+{
+    "CreationTimeUnixTimeInMs": 1658468059056,
+    "Creator": "admin",
+    "Description": "Update a ticket in Zoho Desk.",
+    "Id": -1,
+    "IntegrationIdentifier": "ZohoDesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1658468059056,
+    "Name": "Update Ticket",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\n    \"modifiedTime\": \"2022-07-01T11:00:33.000Z\",\n    \"subCategory\": null,\n    \"statusType\": \"On Hold\",\n    \"subject\": \"Here's your first ticket.\",\n    \"dueDate\": null,\n    \"departmentId\": \"XXX0900000000XXXX\",\n    \"channel\": \"Chat\",\n    \"onholdTime\": \"2022-07-01T09:32:14.717Z\",\n    \"language\": \"English\",\n    \"source\": {\n        \"appName\": null,\n        \"extId\": null,\n        \"permalink\": null,\n        \"type\": \"SYSTEM\",\n        \"appPhotoURL\": null\n    },\n    \"resolution\": \"Koko\",\n    \"sharedDepartments\": [],\n    \"closedTime\": null,\n    \"approvalCount\": \"0\",\n    \"isOverDue\": true,\n    \"isTrashed\": false,\n    \"createdTime\": \"2022-06-27T17:02:17.000Z\",\n    \"id\": \"XXX0000000000XXXX\",\n    \"isResponseOverdue\": false,\n    \"customerResponseTime\": \"2022-06-27T17:02:17.000Z\",\n    \"productId\": null,\n    \"contactId\": \"XXX00000000000XXX\",\n    \"threadCount\": \"1\",\n    \"secondaryContacts\": [],\n    \"priority\": null,\n    \"classification\": null,\n    \"commentCount\": \"1\",\n    \"taskCount\": \"0\",\n    \"accountId\": \"XXX00000000000XXX\",\n    \"phone\": \"1 111 111 1111\",\n    \"webUrl\": \"https://desk.zoho.com/\",\n    \"isSpam\": false,\n    \"status\": \"On Hold\",\n    \"entitySkills\": [],\n    \"ticketNumber\": \"42\",\n    \"customFields\": {},\n    \"isArchived\": false,\n    \"description\": \"Hello<\",\n    \"timeEntryCount\": \"0\",\n    \"channelRelatedInfo\": null,\n    \"responseDueDate\": null,\n    \"isDeleted\": false,\n    \"modifiedBy\": \"XXX00000000000XXX\",\n    \"email\": \"support@zohosupport.com\",\n    \"layoutDetails\": {\n        \"id\": \"XXX00000000000XXX\",\n        \"layoutName\": \"Siemplify\"\n    },\n    \"channelCode\": null,\n    \"cf\": {},\n    \"slaId\": null,\n    \"layoutId\": \"XXX00000000000XXX\",\n    \"assigneeId\": null,\n    \"teamId\": \"XXX00000000000XXX\",\n    \"attachmentCount\": \"0\",\n    \"isEscalated\": false,\n    \"category\": null\n}\n",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify an id of the ticket that needs to be updated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Ticket ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the title that should be set for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Title",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the description for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Description",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the department that should be set for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Department Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the email of the contact for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Contact",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the type of the assignee. If “Agent” or “Team” is selected “Assignee Name” is required.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Assignee Type",
+            "OptionalValues": [
+                "Agent",
+                "Team"
+            ],
+            "Type": 15,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the assignee for the ticket. For the agent type you can provide an email address or display name.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Assignee Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the resolution for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Resolution",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the priority for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Priority",
+            "OptionalValues": [
+                "No Priority",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "Type": 15,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the status for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Status",
+            "OptionalValues": [
+                "Open",
+                "On Hold",
+                "Escalated",
+                "Closed"
+            ],
+            "Type": 15,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the mark state for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Mark State",
+            "OptionalValues": [
+                "Read",
+                "Unread"
+            ],
+            "Type": 15,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the classification type for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Classification",
+            "OptionalValues": [
+                "No Classification",
+                "Question",
+                "Problem",
+                "Feature",
+                "Others"
+            ],
+            "Type": 15,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the channel for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Channel",
+            "OptionalValues": [
+                "Email",
+                "Phone",
+                "Web",
+                "Twitter",
+                "Facebook",
+                "Chat",
+                "Forums"
+            ],
+            "Type": 15,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the category for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Category",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the subcategory for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Sub Category",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the due date for the ticket. Format: ISO 8601. Example: 2022-07-06T07:05:43Z. Note: this parameter doesn’t have an impact, when status is “On Hold”.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Due Date",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1658468059056,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a json object containing the custom fields that need to be added. Note: you need to provide the API names of the keys.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1658468059056,
+            "Name": "Custom Fields",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,231 @@
+{
+    "CreationTimeUnixTimeInMs": 1513681752928,
+    "Creator": "admin",
+    "Description": "Execute an entity query in McAfee ePO. Note: this action prepares the \"Where\" clause based on the entities. Check documentation for additional information. Supported entities: IP, Host, User, Hash, URL.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EPOEvents_ServerID\":\"XXXXXXXXXXX\",\"EPOEvents_ReceivedUTC\":\"2020-09-17T01:24:18-07:00\",\"EPOEvents_DetectedUTC\":\"2020-09-17T01:13:14-07:00\",\"EPOEvents_EventTimeLocal\":\"2020-09-17T01:13:14-07:00\",\"EPOEvents_AgentGUID\":\"XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXX\",\"EPOEvents_Analyzer\":\"XXXXXXXXXXXX\",\"EPOEvents_AnalyzerName\":\"VirusScan Enterprise\",\"EPOEvents_AnalyzerVersion\":\"8.8\",\"EPOEvents_AnalyzerHostName\":\"XXXXXXXXXXXXXXXX\",\"EPOEvents_AnalyzerIPV4\":555555555,\"EPOEvents_AnalyzerIPV6\":\"0:0:0:0:0:XXXX:XXXX:XXXX\",\"EPOEvents_AnalyzerMAC\":null,\"EPOEvents_AnalyzerDATVersion\":null,\"EPOEvents_AnalyzerEngineVersion\":null,\"EPOEvents_SourceHostName\":\"_\",\"EPOEvents_SourceIPV4\":555555555,\"EPOEvents_SourceIPV6\":\"0:0:0:0:0:XXXX:XXXX:XXXX\",\"EPOEvents_SourceMAC\":null,\"EPOEvents_SourceUserName\":null,\"EPOEvents_SourceProcessName\":\"C:\\\\\\\\\\\\\\\\Windows\\\\\\\\\\\\\\\\System32\\\\\\\\\\\\\\\\svchost.exe\",\"EPOEvents_SourceURL\":null,\"EPOEvents_TargetHostName\":\"XXXXXXXXXXXXXXXX\",\"EPOEvents_TargetIPV4\":555555555,\"EPOEvents_TargetIPV6\":\"0:0:0:0:0:XXXX:XXXX:XXXX\",\"EPOEvents_TargetMAC\":null,\"EPOEvents_TargetUserName\":\"NT AUTHORITY\\\\\\\\\\\\\\\\SYSTEM\",\"EPOEvents_TargetPort\":null,\"EPOEvents_TargetProtocol\":null,\"EPOEvents_TargetProcessName\":null,\"EPOEvents_TargetFileName\":\"C:\\\\\\\\\\\\\\\\Program Files (x86)\\\\\\\\\\\\\\\\McAfee\\\\\\\\\\\\\\\\VXXXXXXXXXX\\\\\\\\\\\\\\\\XXXXXXXXXXX.exe\",\"EPOEvents_ThreatCategory\":\"hip.file\",\"EPOEvents_ThreatEventID\":5445445,\"EPOEvents_ThreatSeverity\":5,\"EPOEvents_ThreatName\":\"Common Standard Protection:Prevent termination of McAfee processes\",\"EPOEvents_ThreatType\":\"access protection\",\"EPOEvents_ThreatActionTaken\":\"deny terminate\",\"EPOEvents_ThreatHandled\":true,\"EPOEvents_AnalyzerDetectionMethod\":\"XXXX\"},{\"EPOEvents_ServerID\":\"XXXXXXXXXXX\",\"EPOEvents_ReceivedUTC\":\"2020-09-17T01:24:18-07:00\",\"EPOEvents_DetectedUTC\":\"2020-09-17T01:13:15-07:00\",\"EPOEvents_EventTimeLocal\":\"2020-09-17T01:13:15-07:00\",\"EPOEvents_AgentGUID\":\"XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXX\",\"EPOEvents_Analyzer\":\"XXXXXXXXXXXX\",\"EPOEvents_AnalyzerName\":\"VirusScan Enterprise\",\"EPOEvents_AnalyzerVersion\":\"8.8\",\"EPOEvents_AnalyzerHostName\":\"XXXXXXXXXXXXXXXX\",\"EPOEvents_AnalyzerIPV4\":555555555,\"EPOEvents_AnalyzerIPV6\":\"0:0:0:0:0:XXXX:XXXX:XXXX\",\"EPOEvents_AnalyzerMAC\":null,\"EPOEvents_AnalyzerDATVersion\":null,\"EPOEvents_AnalyzerEngineVersion\":null,\"EPOEvents_SourceHostName\":\"_\",\"EPOEvents_SourceIPV4\":555555555,\"EPOEvents_SourceIPV6\":\"0:0:0:0:0:XXXX:XXXX:XXXX\",\"EPOEvents_SourceMAC\":null,\"EPOEvents_SourceUserName\":null,\"EPOEvents_SourceProcessName\":\"C:\\\\\\\\\\\\\\\\Windows\\\\\\\\\\\\\\\\System32\\\\\\\\\\\\\\\\svchost.exe\",\"EPOEvents_SourceURL\":null,\"EPOEvents_TargetHostName\":\"XXXXXXXXXXXXXXXX\",\"EPOEvents_TargetIPV4\":555555555,\"EPOEvents_TargetIPV6\":\"0:0:0:0:0:XXXX:XXXX:XXXX\",\"EPOEvents_TargetMAC\":null,\"EPOEvents_TargetUserName\":\"NT AUTHORITY\\\\\\\\\\\\\\\\SYSTEM\",\"EPOEvents_TargetPort\":null,\"EPOEvents_TargetProtocol\":null,\"EPOEvents_TargetProcessName\":null,\"EPOEvents_TargetFileName\":\"C:\\\\\\\\\\\\\\\\Program Files\\\\\\\\\\\\\\\\Common Files\\\\\\\\\\\\\\\\McAfee\\\\\\\\\\\\\\\\XXXXXXXXXXX\\\\\\\\\\\\\\\\XXXXXXXXXXXX.exe\",\"EPOEvents_ThreatCategory\":\"hip.file\",\"EPOEvents_ThreatEventID\":5445445,\"EPOEvents_ThreatSeverity\":5,\"EPOEvents_ThreatName\":\"Common Standard Protection:Prevent termination of McAfee processes\",\"EPOEvents_ThreatType\":\"access protection\",\"EPOEvents_ThreatActionTaken\":\"deny terminate\",\"EPOEvents_ThreatHandled\":true,\"EPOEvents_AnalyzerDetectionMethod\":\"XXXXXXX\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeEPO",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1513681752928,
+    "Name": "Execute Entity Query",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the table from which you want to fetch results.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "Table Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what fields to return. If nothing is specified action will return all available fields.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "Fields To Return",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what field should be used for ordering of the results.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "Sort Field",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": "ASC",
+            "Description": "Specify what sort order should be applied to the query.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "Sort Order",
+            "Type": 15,
+            "OptionalValues": [
+                "ASC",
+                "DESC"
+            ],
+            "Value": "ASC"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": "Last Hour",
+            "Description": "Specify a time frame for the results. If \"Custom\" is selected, you also need to provide \"Start Time\".",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "Time Frame",
+            "Type": 15,
+            "OptionalValues": [
+                "Last Hour",
+                "Last 6 Hours",
+                "Last 24 Hours",
+                "Last Week",
+                "Last Month",
+                "Custom"
+            ],
+            "Value": "Last Hour"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the start time for the results. This parameter is mandatory, if \"Custom\" is selected for the \"Time Frame\" parameter. Format: ISO 8601",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the end time for the results. Format: ISO 8601. If nothing is provided and \"Custom\" is selected for the \"Time Frame\" parameter then this parameter will use current time.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "End Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many results to return. Default: 50.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "Value": 50
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with IP entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "IP Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with Hostname entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "Hostname Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with File Hash entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "File Hash Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with User entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "User Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with URL entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "URL Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with Email Address (User entity with email regex) entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "Email Address Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will not start execution, unless all of the entity types are available for the specified \".. Entity Keys\". Example: if \"IP Entity Key\" and \"File Hash Entity Key\" are specified, but in the scope there are no file hashes then if this parameter is enabled, action will not execute the query.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "Stop If Not Enough Entities",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516807123373,
+            "CustomActionId": -1,
+            "DefaultValue": "OR",
+            "Description": "Specify what should be the logical operator used between different entity types.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516807123373,
+            "Name": "Cross Entity Operator",
+            "Type": 15,
+            "OptionalValues": [
+                "OR",
+                "AND"
+            ],
+            "Value": "OR"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"HOSTNAME\", \"USERUNIQNAME\", \"FILEHASH\", \"DestinationURL\"]}",
+    "Type": 0,
+    "Version": 1.0
+}

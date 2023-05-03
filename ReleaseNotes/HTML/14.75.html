@@ -1,0 +1,108 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 14.75</h2><h5>Published on 30 March, 2021</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     MicrosoftAzureSentinel
+    </b>
+   </li>
+   <ul>
+    <li>
+     Microsoft Azure Sentinel
+    </li>
+    <ul>
+     <li>
+      Added OAUTH2 Login Endpoint Url parameter in Azure Sentinel Connectors and Integration.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     TrendMicroApexCentral
+    </b>
+   </li>
+   <ul>
+    <li>
+     TrendMicroApexCentral
+    </li>
+    <ul>
+     <li>
+      NEW! New integration "Trend Micro Apex Central"
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     ServiceNow
+    </b>
+   </li>
+   <ul>
+    <li>
+     Add Attachment
+    </li>
+    <ul>
+     <li>
+      Fixed a bug, where action "Add Attachment" wasn't working, because incorrect content-type header was applied.
+     </li>
+    </ul>
+    <li>
+     Get Incidents
+    </li>
+    <ul>
+     <li>
+      Updated JSON example for action "Get Incidents"
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     CBCloud
+    </b>
+   </li>
+   <ul>
+    <li>
+     VMware Carbon Black Cloud Alerts and Events Baseline Connector
+    </li>
+    <ul>
+     <li>
+      Added a fallback mechanism in the Events Baseline Connector, to better handle cases of bad API responses and temporary missing info cases.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     MicrosoftAzureSentinel
+    </b>
+   </li>
+   <ul>
+    <li>
+     Microsoft Azure Sentinel Incident Connector v2
+    </li>
+    <ul>
+     <li>
+      Added fallback logic in Microsoft Azure Sentinel Incident Connector v2 for Vendor Field Name, Product Field Name and Event Field Name fields. After the integration and connector upgrade, its recommended to change the value of Product Field Name and Event Field Name to product_type and event_type respectively for this new functionality to work.
+     </li>
+     <li>
+      Enhanced the Microsoft Azure Sentinel Incident Connector v2 logic for handling Start Time and End Time fields, connector will use a pre-defined list of fallback values for Start Time and End Time fields.
+     </li>
+     <li>
+      Updated Microsoft Azure Sentinel Connector v2 backlog management logic.
+     </li>
+     <li>
+      Fallback fields debug parameter added in Azure Sentinel Connector v2.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

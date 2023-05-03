@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1518516430366, 
+    "Creator": "admin", 
+    "Description": "Add URLs to a given URL category. Note:  You need to create a policy and add desired URL category to that policy in order to block the URL", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[\"www.ynet.co.il\", \"https: //www.epochconverter.com/\", \"www.abc.com\"]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "PaloAltoPanorama", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1518516430366, 
+    "Name": "Block Urls", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518700571020, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify name of the device. The default device name for Palo Alto Panorama is localhost.localdomain. Visit action documentation to get more insights on where you can find this value.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1518700571020, 
+            "Name": "Device Name", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1518700571020, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify name of the device group. Visit action documentation to get more insights on where you can find this value.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1518700571020, 
+            "Name": "Device Group Name", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1518700571020, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify name of the URL Category.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1518700571020, 
+            "Name": "URL Category Name", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1529480866167,
+    "Creator": "admin",
+    "Description": "Set some string value in a Redis key. If the key already holds a value, overwrite the value, regardless of its type",
+    "Id": -1,
+    "IntegrationIdentifier": "Redis",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1529480866167,
+    "Name": "Set Key",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529480866167,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Target key name.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529480866167,
+            "Name": "Key Name",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529480866167,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Can be any of the following types: str, int, dict, list, etc.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529480866167,
+            "Name": "Value",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom RedisManager import RedisManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('Redis')\n    server = conf['Server Address']\n    port = int(conf['Port'])\n\n    redis_manager = RedisManager(server, port, 0)\n    key = siemplify.parameters['Key Name']\n    value = siemplify.parameters['Value']\n\n    is_set = redis_manager.set_key(key, value)\n\n    output_message = \"Successfully set {value} to {key}.\".format(value=value, key=key)\n    siemplify.end(output_message, True)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_set",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

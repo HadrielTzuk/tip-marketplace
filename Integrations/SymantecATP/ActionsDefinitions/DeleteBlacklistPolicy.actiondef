@@ -1,0 +1,14 @@
+{
+    "CreationTimeUnixTimeInMs": 1530543579170, 
+    "Creator": "admin", 
+    "Description": "Delete a blacklist policy for a Siemplify entity.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SymantecATP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530543579170, 
+    "Name": "Delete Blacklist Policy", 
+    "ScriptResultName": "is_success ", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\", \"FILEHASH\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

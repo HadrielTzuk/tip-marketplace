@@ -1,0 +1,83 @@
+{
+    "CreationTimeUnixTimeInMs": 1511698992392,
+    "Creator": "admin",
+    "Description": "Action will get as a parameter a list of Email Addresses, or will work on User entities with Email regexes (if parameters are not provided), and will be able to create a new rule, filtering the senders from your mailboxes. Actions can be modified in the parameters using the rule parameter. WARNING: Action will modify your current users inbox rules, using EWS. NOTICE - to perform operation, please configure EDiscovery Group and Author permissions. For full details, please visit: https://integrations.siemplify.co/doc/exchang. NOTE: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed.",
+    "Id": -1,
+    "IntegrationIdentifier": "Exchange",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511698992392,
+    "Name": "Add Senders to Exchange-Siemplify Inbox Rule",
+    "Parameters": [
+        {
+            "Name": "Senders",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the Senders you would like to add to the rule, in a comma separated list. If no parameter will be provided, action will work with User entities.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Rule to add senders to",
+            "Type": 15,
+            "DefaultValue": "Siemplify - Senders List - Move To Junk",
+            "Value": "Siemplify - Senders List - Move To Junk",
+            "IsMandatory": true,
+            "Description": "Specify the rule to add the sender to. If the rule doesn't exist - action will create it where it's missing.",
+            "OptionalValues": [
+                "Siemplify - Senders List - Move To Junk",
+                "Siemplify - Senders List - Delete",
+                "Siemplify - Senders List - Permanently Delete"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Should add senders' domain to the corresponding Domains List rule as well?",
+            "Type": 1,
+            "DefaultValue": false,
+            "Value": false,
+            "IsMandatory": false,
+            "Description": "Specify whether the action should automatically take the domains of the provided email addresses and add them as well to the corresponding domain rules (same rule action for domains)",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "Perform action in all mailboxes",
+            "Type": 1,
+            "DefaultValue": false,
+            "Value": false,
+            "IsMandatory": false,
+            "Description": "If checked, action will be performed in all mailboxes accessible with current impersonalization settings",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        },
+        {
+            "Name": "How many mailboxes to process in a single batch",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "In case \"Perform action in all mailboxes\" is checked, action works in batches, this parameter controls how many mailboxes action should process in single batch (single connection to mail server).",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "ModificationTimeUnixTimeInMs": 1511800047298
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}",
+    "IsAsync": true
+}

@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1524560820281,
+    "Creator": "klim.lyapin@siemplify.co",
+    "Description": "Run Custom Hunting Rule Query",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Avg7Day\": 327, \"EventID\": 455625, \"Account\": \"host.local\\\\some.user\", \"StartTimeUtc\": \"2020-01-08T13:57:26.75Z\", \"LogonTypeName\": \"3 - Network\", \"timestamp\": \"2020-01-08T13:57:26.75Z\", \"CountLast7day\": 2292, \"EndTimeUtc\": \"2020-01-08T17:38:05.337Z\", \"CountToday\": 1554, \"SubStatus\": \"0xc0000071\", \"Computer\": \"XXXXXXXXXXX.XXX\", \"AccountType\": \"User\", \"HostCustomEntity\": \"XXXXXXXXXXX.XXX\", \"WorkstationName\": \"XXXXXX\", \"IpAddress\": \"127.0.0.1\", \"AccountCustomEntity\": \"host.local\\\\some.user\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftAzureSentinel",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524560820281,
+    "Name": "Run Custom Hunting Rule Query",
+    "Parameters": [
+        {
+            "CustomActionId": -1,
+            "IsMandatory": true,
+            "DefaultValue": "",
+            "Description": "Hunting Rule ID",
+            "Name": "Hunting Rule ID",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "180",
+            "Description": "Timeout value for the Azure Sentinel hunting rule API call",
+            "Name": "Timeout",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

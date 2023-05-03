@@ -1,0 +1,44 @@
+{% import 'Logo.html' as logo -%}
+
+<style>
+{% macro get_top_entity_title_style() -%}
+.top-title {
+    font-family: var(--widget-text-font);
+
+    color: var(--dark-gray-100);
+
+    border-bottom: 1px solid var(--dark-gray-400);
+    margin-bottom: 4px;
+
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.top-title-display-value {
+    font-weight: var(--font-weight-semibold);
+
+    line-height: 25px;
+    font-size: 20px;
+    max-width: 70%;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+{%- endmacro -%}
+</style>
+
+
+{% macro get_top_entity_title_and_logo_html(logo_svg, import_from_integration, imported_logo_content) %}
+<div class="top-title">
+  <div class="top-title-display-value" id="title-display-value"></div>
+  {{ logo.get_logo_div(logo_svg, import_from_integration, imported_logo_content) | indent }}
+</div>
+{%- endmacro -%}
+
+
+<script>
+{% macro set_title(key) %}
+$("#title-display-value").html({{ key }})
+{%- endmacro -%}
+</script>

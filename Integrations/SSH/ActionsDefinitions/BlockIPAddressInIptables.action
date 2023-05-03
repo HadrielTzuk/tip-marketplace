@@ -1,0 +1,77 @@
+{
+    "CreationTimeUnixTimeInMs": 1515628502093,
+    "Creator": "admin",
+    "Description": "Add rule to iptables to block IP address",
+    "Id": -1,
+    "IntegrationIdentifier": "SSH",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515628502093,
+    "Name": "Block IP Address in iptables",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516072612246,
+            "CustomActionId": -1,
+            "DefaultValue": "x.x.x.x",
+            "Description": "Remote server address(e.g: x.x.x.x).",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072612246,
+            "Name": "Remote Server",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072612246,
+            "CustomActionId": -1,
+            "DefaultValue": "root",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072612246,
+            "Name": "Remote Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072612246,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072612246,
+            "Name": "Remote Password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072612246,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516072612246,
+            "Name": "Remote Port",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072612246,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "IP address to block(e.g: x.x.x.x).",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072612246,
+            "Name": "Block IP Address",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,97 @@
+[
+    {
+        "ChangeDescription": "Added non-mandatory Proxy Parameters. Will be used if set (not empty).",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "CA Service Desk Connector",
+        "ItemType": "Connector",
+        "New": true,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-471"
+    },
+    {
+        "ChangeDescription": "Added support for non-english statuses.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 12.0,
+        "ItemName": "Wait For Status Change",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1583041698,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1507"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 13.0,
+        "ItemName": "CA Service Desk",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Updated the integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 14.0,
+        "ItemName": "CA Service Desk",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1638336195,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "CA Service Desk Connector - Updated the connector's logic.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 14.0,
+        "ItemName": "CA Service Desk Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1638336195,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "REGRESSIVE - Sync Comments - Updated Job's logic, to match Siemplify's SDK updates in newer Siemplify versions. Please bear that in mind before updating the integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 14.0,
+        "ItemName": "Sync Comments",
+        "ItemType": "Job",
+        "New": false,
+        "PublishTime": 1638336195,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 15.0,
+        "ItemName": "CA Service Desk",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Create Ticket - Added support for custom fields.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 16.0,
+        "ItemName": "Create Ticket",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1668597294,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13060"
+    }
+]

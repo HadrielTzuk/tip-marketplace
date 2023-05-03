@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1521035280782,
+    "Creator": "admin",
+    "Description": "Power off a VM",
+    "Id": -1,
+    "IntegrationIdentifier": "VSphere",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1521035280782,
+    "Name": "Power Off",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1521035318939,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Target VM name.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1521035318939,
+            "Name": "Vm Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

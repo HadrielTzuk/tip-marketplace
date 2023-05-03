@@ -1,0 +1,64 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Create a User-defined suspicious object based on a file in Trend Micro Apex Central.",
+    "Id": -1,
+    "IntegrationIdentifier": "TrendMicroApexCentral",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"XXXXXXXXXXXXXXXXXXXXXXX\",\"EntityResult\":{\"type\":\"file\",\"content\":\"XXXXXXXXXXXXXXXXXXXXXXX\",\"notes\":\"\",\"scan_action\":\"log\",\"expiration_utc_date\":\"2021-03-26T12:26:49.753\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Name": "Create File UDSO",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of file paths that needs to be used to create a UDSO.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "File Paths",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Block",
+            "Description": "Specify what action should be applied to the UDSO.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Action",
+            "OptionalValues": [
+                "Block",
+                "Log",
+                "Quarantine"
+            ],
+            "Type": 15,
+            "Value": "Block"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify an additional note for the provided UDSO.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Note",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

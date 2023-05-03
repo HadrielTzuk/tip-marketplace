@@ -1,0 +1,59 @@
+{
+    "Description": "AlienVault USM Anywhere delivers powerful threat detection, incident response, and compliance management for cloud, on-premises, and hybrid environments.",
+    "DisplayName": "AlienVault USM Anywhere",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/alienvault-usm-anywhere",
+    "Identifier": "AlienVaultAnywhere",
+    "Categories": [
+        "SIEM",
+        "Security"
+    ],
+    "PythonVersion": 2,
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "AlienVaultAnywhere",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": 5,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AlienVaultAnywhere",
+            "IsMandatory": true,
+            "PropertyDisplayName": "ClientID",
+            "PropertyName": "Username",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AlienVaultAnywhere",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Secret",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AlienVaultAnywhere",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Product Version",
+            "PropertyName": "Product Version",
+            "PropertyType": 2,
+            "Value": "V2"
+        },
+        {
+            "IntegrationIdentifier": "AlienVaultAnywhere",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Use SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": "True"
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<path d=\"M42.2,22.3c0.1,3.6-1.2,7.2-3.1,10.7c-2.6,4.8-5.9,9-10.3,12.2c-0.5,0.4-1.1,0.7-1.7,1c-1.4,0.7-2.8,0.7-4.2,0\n\t\tc-2.5-1.3-4.5-3.3-6.4-5.3c-3.3-3.7-6-7.8-7.6-12.5c-2.8-8,0.1-17.5,6.8-22.1c7.7-5.3,17.9-3.2,23.1,4.6\n\t\tC41.1,14.2,42.2,17.8,42.2,22.3z M11.5,22.7c-0.4,0-0.9,0-1.3,0c-0.4,0-0.6,0.2-0.6,0.6c0.1,2.6,0.7,5,2.5,7\n\t\tc2.9,3.3,6.8,4.1,10.9,4.2c0.1,0,0.4-0.4,0.4-0.6c0-0.9-0.1-1.8-0.3-2.6c-0.7-3.5-2.6-6.1-5.9-7.5C15.4,23,13.5,22.7,11.5,22.7z\n\t\t M26.7,34.5c0.6,0,1.1,0.1,1.6,0c1.4-0.2,2.7-0.4,4.1-0.7c4.9-1.3,7.9-5.2,8.1-10.3c0-0.6-0.2-0.8-0.7-0.8\n\t\tc-1.8,0.2-3.6,0.2-5.3,0.6C28.9,24.7,26.5,29.2,26.7,34.5z\"/>\n</g>\n</svg>",
+    "Version": 25.0,
+    "MarketingDisplayName": "AlienVault USM Anywhere"
+}

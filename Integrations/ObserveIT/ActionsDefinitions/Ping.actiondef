@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "klim.lyapin@siemplify.co",
+    "Description": "Test connectivity to the ObserveIT with parameters provided at the integration configuration page on the Marketplace tab.",
+    "Id": -1,
+    "IntegrationIdentifier": "ObserveIT",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

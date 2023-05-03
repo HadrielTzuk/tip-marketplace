@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1543507408948, 
+    "Creator": "Admin", 
+    "Description": "Fetch domain information for address.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"count\": 939, \"domain\": \"domain-example.net\", \"ip\": \"1.1.1.1\", \"range\": \"1.1.1.1/12\", \"domains\": [[\"domain-example.net\", \"domain-example.com\", \"domain16.com\", \"domain-examplenow.com\", \"domain-examplesportsnet.com\", \"domain15.net\", \"domain-exampleaddelivery.com\", \"bigtoptestdrive.com\", \"domain14.com\", \"domain-examplespotlight-mediafactbook.com\", \"domain13.com\", \"domain12.com\", \"jobsatdomain-example.com\", \"domain11.org\", \"domain10.net\", \"domain9.com\", \"domain-examplelabs.com\", \"domain8.org\", \"domain7.com\", \"domain6.com\", \"domain5.com\", \"domain4.net\", \"domain3.com\", \"domain2.com\", \"domain1.com\"]], \"asn\": \"AS7922\"}, \"Entity\": \"domain-example.net\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "IPInfo", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1543507408948, 
+    "Name": "Get Domain Information", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyDataModel import EntityTypes\nfrom IPInfoManager import IPInfoManager\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\n\nACTION_NAME = \"IPInfo Get_IP_Information\"\nPROVIDER = 'IPInfo'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    use_ssl = conf.get('Use SSL', 'false').lower() == 'true'\n    ipinfo_manager = IPInfoManager(conf['API Root'], conf['Token'], use_ssl)\n\n    success_entities = []\n    errors = []\n    result_value = False\n\n    ip_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.ADDRESS]\n\n    for entity in ip_entities:\n        try:\n            ip_information = ipinfo_manager.get_ip_information(entity.identifier)\n            if ip_information:\n                flat_info = dict_to_flat(ip_information)\n                entity.additional_properties.extend(flat_info)\n                siemplify.result.add_entity_table(entity.identifier, flat_dict_to_csv(flat_info))\n                success_entities.append(entity)\n                result_value = True\n        except Exception as err:\n            error_message = \"Failed fetching information for {0}, ERROR: {1}\".format(\n                entity.identifier,\n                err.message\n            )\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    siemplify.update_entities(success_entities)\n\n    if success_entities:\n        output_message = \"Fetched IP information for: {0}\".format(\", \".join([entity.identifier for entity in\n                                                                             success_entities]))\n    else:\n        output_message = \"Mo information fetched for target entities.\"\n\n    if errors:\n        output_message = \"{0} \\n \\n Errors: \\n {1}\".format(output_message, \"\\n \".join(errors))\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Version": 2.0
+}

@@ -1,0 +1,65 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Add deceptive users in Illusive Networks.",
+    "Id": -1,
+    "IntegrationIdentifier": "IllusiveNetworks",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1615981279206,
+    "Name": "Add Deceptive User",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1615981279206,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the username for the new deceptive user.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1615981279206,
+            "Name": "Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1615981279206,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the password for the new deceptive user.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1615981279206,
+            "Name": "Password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1615981279206,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the domain name for the new deceptive user.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1615981279206,
+            "Name": "DNS Domain",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1615981279206,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of policies that need to be applied to the new deceptive user. If nothing is provided action will use by default all policies.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1615981279206,
+            "Name": "Policy Names",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

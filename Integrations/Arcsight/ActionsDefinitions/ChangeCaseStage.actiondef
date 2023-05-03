@@ -1,0 +1,40 @@
+{
+    "CreationTimeUnixTimeInMs": 1534152831684,
+    "Creator": "Admin",
+    "Description": "Update the stage of the case in ArcSight.",
+    "Id": -1,
+    "IntegrationIdentifier": "Arcsight",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534152831684,
+    "Name": "Change Case Stage",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534152831684,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the case for which you want to update the stage.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534152831684,
+            "Name": "Case Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534152831684,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a new stage for the case. Possible values: INITIAL, QUEUED, CLOSED, FINAL, and FOLLOW_UP.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534152831684,
+            "Name": "Stage",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

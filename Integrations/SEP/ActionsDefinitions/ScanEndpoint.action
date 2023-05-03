@@ -1,0 +1,34 @@
+{
+    "CreationTimeUnixTimeInMs": 1517320188355, 
+    "Creator": "admin", 
+    "Description": "Scan an endpoint", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SEP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1517320188355, 
+    "Name": "ScanEndpoint", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517322102448, 
+            "CustomActionId": -1, 
+            "DefaultValue": "ScanNow_Full", 
+            "Description": "The type of the scan to perform. ScanNow_Full = Full scan, ScanNow_Quick = quick scan, ScanNow_Custom = custom scan.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1517322102448, 
+            "Name": "Scan Type", 
+            "OptionalValues": [
+                "ScanNow_Full", 
+                "ScanNow_Quick", 
+                "ScanNow_Custom"
+            ], 
+            "Type": 15, 
+            "Value": "scanType"
+        }
+    ], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

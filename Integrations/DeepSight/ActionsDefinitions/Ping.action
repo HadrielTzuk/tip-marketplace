@@ -1,0 +1,17 @@
+{
+    "CreationTimeUnixTimeInMs": 1509287216707,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "DeepSight",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1509287216707,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from DeepSight import DeepSight\nfrom SiemplifyAction import *\nfrom SiemplifyUtils import *\n\nADDRESS = 'ADDRESS' \n\ndef main():\n\tsiemplify = SiemplifyAction()\n\tconf = siemplify.get_configuration('DeepSight')\n\tds = DeepSight(api_key = conf['ApiKey'])\n\tadditional_data = {}\n\tentities_to_update = []\n\toutput_message =\"\"\n\n\ttry:\n\t\tresult = ds.scan_ip('8.8.8.8')\n\t\tprint result\n\t\toutput_message = 'Connection Established.'\n\t\tresult_value = 'true' \n\texcept:\n\t\toutput_message = 'Connection Failed.' \n\t\tresult_value = 'false' \n\tsiemplify.end(output_message, result_value) \n\nif __name__ == '__main__':\n\tmain()",
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

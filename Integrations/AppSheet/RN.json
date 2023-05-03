@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - AppSheet.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "AppSheet",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1629880631,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5651"
+    }
+]

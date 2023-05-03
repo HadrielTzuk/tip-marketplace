@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1543164953601,
+    "Creator": "admin",
+    "Description": "Send a message to a Google Chat space that the Siemplify app was added to. Note that action is not working on Siemplify entities.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleChat",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543164953601,
+    "Name": "Send Message",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"name\":\"spaces/sPPxxxxxx/messages/vcm8Cxxxxxxxxxxx\",\"sender\":{\"name\":\"users/1013903xxxxxxxx\",\"displayName\":\"Quickstart app\",\"domainId\":\"\",\"type\":\"BOT\",\"isAnonymous\":false},\"text\":\"Test Message\",\"cards\":[],\"annotations\":[],\"thread\":{\"name\":\"spaces/sPPxxxxxxx/threads/vcm8Cxxxx\"},\"space\":{\"name\":\"spaces/sPPxxxxxxx\",\"type\":\"DM\",\"singleUserBotDm\":true,\"threaded\":false,\"displayName\":\"\"},\"fallbackText\":\"\",\"argumentText\":\"Test Message\",\"attachment\":[],\"createTime\":\"2022-06-16T13:30:41.907695Z\",\"lastUpdateTime\":\"2022-06-16T13:30:41.907695Z\"}",
+            "ResultName": "JsonResult"
+	    }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a space name to send message to. Example space name: AAAAdaTsel0",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Space Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a message text to send.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Message Text",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,70 @@
+{
+    "CreationTimeUnixTimeInMs": 1523175419910,
+    "Creator": "admin",
+    "Description": "Upload files for analysis",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"/tmp/test.txt\", \"EntityResult\": {\"status\": {\"code\": 1002, \"label\": \"UPLOAD_SUCCESS\", \"message\": \"The file was uploaded successfully.\"}, \"sha1\": \"6caf005c3183d9b5b8dfa5b60f24eb1ebbfab876\", \"md5\": \"c12c504bbe0f7be6ca87d4933c43fac1\", \"sha256\": \"e757f729d149e047705ad6adfbcdd28b0ad28899385712ee0a58261bcb03ac36\", \"file_type\": \"\", \"file_name\": \"2020092414.log\", \"features\": [\"te\"], \"te\": {\"trust\": 0, \"images\": [{\"report\": {\"verdict\": \"unknown\"}, \"status\": \"not_found\", \"id\": \"e50e99f3-5963-4573-af9e-e3f4750b55e2\", \"revision\": 1}, {\"report\": {\"verdict\": \"unknown\"}, \"status\": \"not_found\", \"id\": \"5e5de275-a103-4f67-b55b-47532918fa59\", \"revision\": 1}], \"score\": -2147483648, \"status\": {\"code\": 1002, \"label\": \"UPLOAD_SUCCESS\", \"message\": \"The file was uploaded successfully.\"}}}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CheckPointSandBlast",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1523175419910,
+    "Name": "Upload File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1523175419910,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The full path of the file to upload. For multiple, use comma separated values.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1523175419910,
+            "Name": "File Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "If enabled, threat emulation feature will be enabled for the upload. By default, if no features are selected, threat emulation will be used.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560351300835,
+            "Name": "Enable Threat Emulation feature",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, antivirus feature will be enabled for the upload. By default, if no features are selected, threat emulation will be used.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560351300835,
+            "Name": "Enable AntiVirus feature",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, threat extraction feature will be enabled for the upload. By default, if no features are selected, threat emulation will be used.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560351300835,
+            "Name": "Enable Threat Extraction feature",
+            "Type": 1,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

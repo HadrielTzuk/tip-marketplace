@@ -1,0 +1,74 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Mandiant.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Mandiant",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1654076958,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11619"
+    },
+    {
+        "ChangeDescription": "Enrich Entities - Updated JSON result.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Enrich Entities",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1666158033,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12735"
+    },
+    {
+        "ChangeDescription": "Enrich Hash - Improved entity matching logic.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Enrich Entities",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1671621658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13212"
+    },
+    {
+        "ChangeDescription": "Enrich IOCs - Improved IOC searching and matching logic.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Enrich IOCs",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1671621658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13335"
+    },
+    {
+        "ChangeDescription": "Enrich IOCs, Get Malware Details - Updated JSON result structure.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Mandiant",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1671621658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13371"
+    },
+    {
+        "ChangeDescription": "Enrich Entities, Enrich IOCs, Get Malware Details - Added support for OOTB widget.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Mandiant",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1671621658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13273"
+    }
+]

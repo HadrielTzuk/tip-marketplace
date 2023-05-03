@@ -1,0 +1,56 @@
+{
+    "DisplayName": "Cloudflare",
+    "Identifier": "Cloudflare",
+    "Description": "Cloudflare is a global cloud services provider that delivers a broad range of services to businesses of all sizes and in all geographies—making them more secure, enhancing the performance of their business-critical applications, and eliminating the cost and complexity of managing individual network hardware.",
+    "MarketingDisplayName": "Cloudflare",
+    "Categories": [
+        "Cloud",
+        "Cloud Security",
+        "Network Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Cloudflare",
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyDescription": "API root of the Cloudflare instance.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://api.cloudflare.com"
+        },
+        {
+            "IntegrationIdentifier": "Cloudflare",
+            "PropertyDisplayName": "API Token",
+            "PropertyName": "API Token",
+            "PropertyDescription": "API Token of the Cloudflare instance.",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Cloudflare",
+            "PropertyDisplayName": "Account Name",
+            "PropertyName": "Account Name",
+            "PropertyDescription": "Name of the account that needs to be used in the integration.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Cloudflare",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Cloudflare server is valid.",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M15.65,15.55l-8.3-.11s-.05,0-.07-.02-.04-.03-.06-.05c-.03-.04-.03-.1-.02-.16,.03-.09,.11-.15,.2-.16l8.37-.11c.99-.05,2.07-.9,2.45-1.94l.48-1.32c.02-.06,.03-.11,.01-.17-.54-2.58-2.72-4.5-5.32-4.5-2.4,0-4.43,1.64-5.16,3.91-.47-.37-1.07-.57-1.72-.51-1.15,.12-2.08,1.1-2.19,2.32-.03,.31,0,.62,.06,.91-1.88,.06-3.38,1.68-3.38,3.69,0,.18,.01,.36,.03,.53,.01,.09,.08,.15,.16,.15h15.31c.09,0,.17-.06,.2-.16l.11-.43c.14-.51,.09-.98-.15-1.33-.22-.32-.58-.51-1.02-.53Zm3.81-3.78h0s-.23,0-.23,0c-.05,0-.1,.04-.12,.1l-.32,1.19c-.14,.51-.09,.98,.15,1.33,.22,.32,.58,.51,1.02,.53l1.77,.11s.05,0,.07,.02c.02,.01,.04,.03,.06,.05,.03,.04,.03,.11,.02,.16-.03,.09-.11,.15-.2,.16l-1.84,.11c-1,.05-2.07,.9-2.45,1.94l-.13,.36c-.03,.07,.02,.14,.09,.14h6.32c.07,0,.14-.05,.16-.13,.11-.41,.17-.85,.17-1.3,0-2.64-2.04-4.79-4.54-4.79Z\"/></svg>",
+    "Version": 1.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/cloudflare"
+}

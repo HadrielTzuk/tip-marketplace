@@ -1,0 +1,14 @@
+{
+    "CreationTimeUnixTimeInMs": 1527080318175,
+    "Creator": "Siemplify System",
+    "Description": "Notifies about any error in the (Connectors) alert ingestion process",
+    "Id": -1,
+    "Integration": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527080318175,
+    "Name": "Connectors Monitor",
+    "Parameters": [],
+    "RunIntervalInSeconds": 900,
+    "Version": 1
+}

@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1527581132448, 
+    "Creator": "admin", 
+    "Description": "Move a computer to a new policy", 
+    "Id": -1, 
+    "IntegrationIdentifier": "CBProtection", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1527581132448, 
+    "Name": "Change Computer Policy", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527581132448, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The new policy name. e.g. Default Policy", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1527581132448, 
+            "Name": "Policy Name", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat, add_prefix_to_dict, flat_dict_to_csv\nfrom CarbonBlackProtectionManager import CBProtectionManager, \\\n    CBProtectionManagerException\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    configurations = siemplify.get_configuration('CBProtection')\n    server_addr = configurations['Api Root']\n    api_key = configurations['Api Key']\n\n    cb_protection = CBProtectionManager(server_addr, api_key)\n\n    policy_name = configurations.get['Policy Name']\n\n    enriched_entities = []\n    errors = \"\"\n\n    for entity in siemplify.target_entities:\n        try:\n            computer = None\n\n            if entity.entity_type == EntityTypes.ADDRESS:\n                computer = cb_protection.get_computer_by_ip(entity.identifier)\n\n            elif entity.entity_type == EntityTypes.HOSTNAME:\n                computer = cb_protection.get_computer_by_hostname(\n                    entity.identifier)\n\n            if computer:\n                cb_protection.change_computer_policy(computer.id, policy_name)\n                enriched_entities.append(entity)\n\n        except Exception as e:\n            errors += \"Unable to change policy of {0}: \\n{1}\\n\".format(\n                entity.identifier, e.message)\n            continue\n\n    if enriched_entities:\n        entities_names = [entity.identifier for entity in enriched_entities]\n        output_message = 'Carbon Black Protection - The following computer were moved to policy {}:\\n'.format(\n            policy_name) + '\\n'.join(\n            entities_names)\n        output_message += errors\n\n        siemplify.update_entities(enriched_entities)\n\n    else:\n        output_message = 'Carbon Black Protection - No computers were moved to policy {}.\\n'.format(policy_name)\n        output_message += errors\n\n    siemplify.end(output_message, 'true')\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

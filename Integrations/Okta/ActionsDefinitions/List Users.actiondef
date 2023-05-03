@@ -1,0 +1,66 @@
+{
+    "Name": "List Users",
+    "Description": "Get the list of users",
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import construct_csv, dict_to_flat\nfrom OktaManager import OktaManager\nimport json\n\n\nPROVIDER = \"Okta\"\nACTION_NAME = \"Okta - ListUsers\"\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    q = siemplify.parameters.get('Query', \"\")\n    _filter = siemplify.parameters.get('Filter', \"\")\n    search =siemplify.parameters.get('Search', \"\")\n    limit = siemplify.parameters.get('Limit', \"\")\n    if limit:\n        try:\n            limit = int(limit)\n        except:\n            raise Exception(\"Limit must be an integer\")\n    okta = OktaManager(api_root=conf['Api Root'], api_token=conf['Api Token'],\n                       verify_ssl=conf['Verify SSL'].lower() == 'true')\n    users = {}\n    try:\n        users = okta.list_users(q=q, _filter=_filter, search=search, limit=limit)\n    except Exception as err:\n        siemplify.LOGGER.exception(err)\n        siemplify.LOGGER.error(err.message)\n        pass\n    output_message = \"No Users Were Found\"\n    if users:\n        output_message = \"Found {} users\".format(len(users))\n        for i, user in enumerate(users, 1):\n            flat_user = dict_to_flat(user)\n            csv_output = construct_csv([flat_user])\n            siemplify.result.add_data_table(\"Okta - User \" + str(i) + \": \" + user['profile']['login'], csv_output)\n    siemplify.end(output_message, json.dumps(users))\n\nif __name__ == '__main__':\n    main()",
+    "IntegrationIdentifier": "Okta",
+    "ScriptResultName": "ScriptResult",
+    "DynamicScriptResultNamesJson": "[\"ResultJson\"]",
+    "Creator": "System",
+    "IsEnabled": true,
+    "IsCustom": false,
+    "Version": 6.0,
+    "Parameters": [
+        {
+            "CustomActionId": 707,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Search for a match in the firstname, lastname or in the email",
+            "Name": "Query",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1548084433961,
+            "ModificationTimeUnixTimeInMs": 1548084433961
+        },
+        {
+            "CustomActionId": 707,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Custom search query for a subset of properties",
+            "Name": "Filter",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1548084433962,
+            "ModificationTimeUnixTimeInMs": 1548084433962
+        },
+        {
+            "CustomActionId": 707,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Custom search query for most properties",
+            "Name": "Search",
+            "Value": "",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1548084433963,
+            "ModificationTimeUnixTimeInMs": 1548084433963
+        },
+        {
+            "CustomActionId": 707,
+            "IsMandatory": false,
+            "DefaultValue": "200",
+            "Description": "Max amount of results to return",
+            "Name": "Limit",
+            "Value": "200",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1548084433963,
+            "ModificationTimeUnixTimeInMs": 1548084433963
+        }
+    ],
+    "Id": -1,
+    "CreationTimeUnixTimeInMs": 1548084433929,
+    "ModificationTimeUnixTimeInMs": 1548084433935,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

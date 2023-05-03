@@ -1,0 +1,34 @@
+{
+    "CreationTimeUnixTimeInMs": 1533271942188,
+    "Creator": "admin",
+    "Description": "Create a new Tanium question based on the specified parameters, and the question is immediately asked. Action returns question id that can be passed to “Get Question Results” action to get question results. Note that the action is not working with Siemplify entities.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"data\":{\"id\":481524545454}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Tanium",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1533271942188,
+    "Name": "Create Question",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the contents of Tanium question. Example: Get Operating System from all machines",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Question Text",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

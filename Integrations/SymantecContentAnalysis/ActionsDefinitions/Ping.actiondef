@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1530796922971,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "SymantecContentAnalysis",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530796922971,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecContentAnalysisManager import SymantecContentAnalysisManager\n\nINTEGRATION_PROVIDER = 'SymantecContentAnalysis'\nACTION_NAME = 'SymantecContentAnalysis_Ping'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(INTEGRATION_PROVIDER)\n\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    symantec_manager = SymantecContentAnalysisManager(conf.get('API Root'), conf.get('API Key'), verify_ssl)\n\n    connected = symantec_manager.ping()\n\n    if connected:\n        output_message = 'Connection Established.'\n    else:\n        output_message = 'Connection Failed'\n\n    siemplify.end(output_message, True)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

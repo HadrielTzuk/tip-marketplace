@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1530453435544, 
+    "Creator": "admin", 
+    "Description": "Download files related to event in MISP.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"absolute_paths\": [\"/etc/file1.txt\", \"/etc/file2.txt\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "MISP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530453435544, 
+    "Name": "Download File", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530453435544, 
+            "CustomActionId": -1, 
+            "DefaultValue": "",
+            "Description": "Specify the ID or UUID of the event from which you want to download files",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530453435544, 
+            "Name": "Event ID", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the absolute path to the folder, which should store files. If nothing is specified, action will create an attachment instead. Note: JSON result is only available, when you provide proper value for this parameter.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Download Folder Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will overwrite existing files.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Overwrite",
+            "Type": 1,
+            "Value": false
+        }
+    ], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom MISPManager import MISPManager\n\nSCRIPT_NAME = \"MISP - Get Reputation\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    conf = siemplify.get_configuration(\"MISP\")\n    server_address = conf[\"Api Root\"]\n    api_key = conf[\"Api Key\"]\n    use_ssl = conf.get('Use SSL', 'False').lower() == 'true'\n\n    misp_manager = MISPManager(server_address, api_key, use_ssl=use_ssl)\n\n    event_id = int(siemplify.parameters.get('Event ID')) if siemplify.parameters.get('Event ID') else None\n\n    enriched_entities = []\n\n    for entity in siemplify.target_entities:\n        try:\n            if entity.entity_type == EntityTypes.FILEHASH:\n                sapmle_details = misp_manager.download_sample(misp_manager.get_hash_type(entity.identifier),\n                                                              event_id)\n\n                if sapmle_details:\n                    siemplify.result.add_entity_attachment(\n                        entity.identifier,\n                        sapmle_details['filename'],\n                        sapmle_details['base64']\n                    )\n\n                    enriched_entities.append(entity)\n\n        except Exception as e:\n            # An error occurred - skip entity and continue\n            siemplify.LOGGER.error(\n                \"An error occurred on entity: {}.\\n{}.\".format(\n                    entity.identifier, str(e)\n                ))\n            siemplify.LOGGER.exception(e)\n\n    if enriched_entities:\n        entities_names = [entity.identifier for entity in enriched_entities]\n\n        output_message = 'MISP: Files were downloaded for the following hashes:\\n' + '\\n'.join(\n            entities_names)\n\n        siemplify.update_entities(enriched_entities)\n\n    else:\n        output_message = 'MISP: No files were downloaded.'\n\n    siemplify.end(output_message, 'true')\n\n\nif __name__ == '__main__':\n    main()", 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

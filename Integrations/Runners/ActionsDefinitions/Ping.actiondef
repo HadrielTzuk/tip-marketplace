@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1530084759376,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "Runners",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530084759376,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom RunAsManager import RunAsManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.end(\"Success\", 'true')\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

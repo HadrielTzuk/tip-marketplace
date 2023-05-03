@@ -1,0 +1,119 @@
+{
+    "CreationTimeUnixTimeInMs": 1511460515990,
+    "Creator": "admin",
+    "Description": "Search for strings in CSV files.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"Field2\": \"Value2\", \"Field3\": \"Value3\", \"Field1\": \"Value1\", \"Field4\": \"Value4\", \"Field5\": \"Value5\"}, \"Entity\": \"host\"}, {\"EntityResult\": {\"Field2\": \"Value2\", \"Field3\": \"Value3\", \"Field1\": \"Value1\", \"Field4\": \"Value4\", \"Field5\": \"Value5\"}, \"Entity\": \"1.1.1.1\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CSV",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511460515990,
+    "Name": "CSV Search by String",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the file path to the CSV file or a folder path that contains all of the CSV files. If folder is provide, action will iterate over all CSV files in the folder.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "CSV Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of columns that can contain entity information. If nothing is provided, action will search in all of the columns.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "CSV Column",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify how many days backwards to process the CSV files.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "Days Back",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a string that needs to be searched. If 'Search Multiple Strings' is enabled, this parameter is treated as a comma-separated list of strings that need to be searched.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "Search Value",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "If enabled, action will only return 1 row in the first file that matched the entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "Return the first row only",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": "utf-8, latin-1, iso-8859-1",
+            "Description": "A comma separated list CSV encoding types used for decoding your CSV files, e.g. utf-8, latin-1, iso-8859-1, utf-16... Order in which the encoding types are given sets the order in which they are used for decoding files, e.g.(from example above) the utf-8 has the highest priority and will be used primarily for decoding all the files, if there is a CSV file that uses some other encoding then the next in the order: latin-1 encoding will be used, and so on, until the last encoding is used.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "File Encoding Types",
+            "Type": 0,
+            "Value": "utf-8, latin-1, iso-8859-1"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of values that need to be returned.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "Fields To Return",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517133986707,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, 'Search Value' will work as a comma-separated list of values, instead of a single string.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517133986707,
+            "Name": "Search Multiple Strings",
+            "Type": 1,
+            "Value": false
+        }
+    ],
+    "ScriptResultName": "count_rows_csv",
+    "Type": 0,
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

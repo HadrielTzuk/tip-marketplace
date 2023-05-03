@@ -1,0 +1,74 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List Google Cloud IAM roles based on the specified search criteria. Note that action is not working on Siemplify entities.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleCloudIAM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"roles\":[{\"name\":\"roles\/XXXXXX.XXXXX\",\"role_id\":\"XXXXXXX\",\"title\":\"XXXXXXXXXXXXXXX\",\"description\":\"XXXXXXXXXXXXXX\",\"stage\":\"XXXX\",\"etag\":\"XXXXX\"},{\"name\":\"roles\/XXXXXXXXX.XXXXX\",\"role_id\":\"XXXXXXX\",\"title\":\"XXXXXXXXXXXXXXX\",\"description\":\"XXXXXXXXXXXXXX\",\"includedPermissions\":[\"XXXXXXXXXXXXXX.XXXXXXXX.XXXXXXX\",\"XXXXXXXXXXXXXX.XXXXXXXX.XXXXXXX\",\"XXXXXXXXXXXXXX.XXXXXXXX.XXXXXXX\",\"XXXXXXXXXXXXXX.XXXXXXXX.XXXXXXX\",\"XXXXXXXXXXXXXX.XXXXXXXX.XXXXXXX\",\"XXXXXXXXXXXXXX.XXXXXXXX.XXXXXXX\"],\"stage\":\"XXXX\",\"etag\":\"XXXX\"}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Roles",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Basic", 
+            "Description": "Specify which view should be used to return role information.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "View", 
+            "OptionalValues": [
+                "Basic", 
+                "Full"
+            ], 
+            "Type": 15, 
+            "Value": "Basic"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many roles the action should return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Rows To Return",
+            "Type": 0,
+            "Value": "50"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will return only custom roles defined for the current project id.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "List Project Custom Roles Only?",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will also return deleted roles.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Show Deleted",
+            "Type": 1,
+            "Value": false
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "New integration \"Splash\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Splash",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1627371945,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9219"
+    },
+    {
+        "ChangeDescription": "Improved the integration's visibility in the marketplace.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Splash",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1627557527,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9434"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Splash",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1628667444,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9554"
+    }
+]

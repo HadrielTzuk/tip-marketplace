@@ -1,0 +1,86 @@
+[
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Websense",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "New Parameter Added - \"Verify SSL\", allowing users to enable TLS validation when using the integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Websense",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1637151680,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "REGRESSIVE - Block Url CLI, PingCLI - We are removing these actions from this integration in order to comply with security best practices in our Marketplace. Please note that if you update the integration, these actions will be removed from your integration. Please keep that in mind and review your playbooks before updating. Please contact your Customer Success Manager for more information.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Websense",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1637151680,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "TIPG-10499"
+    },
+    {
+        "ChangeDescription": "Security enhancements throughout the integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Websense",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1638336196,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Websense",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "WebSense - Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "Websense",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1663749893,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11417"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "Websense",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

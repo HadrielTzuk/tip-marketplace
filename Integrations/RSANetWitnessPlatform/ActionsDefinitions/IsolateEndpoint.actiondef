@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244, 
+    "Creator": "admin", 
+    "Description": "Request endpoint isolation in RSA Netwitness. Requires RSA Netwitness Respond license, endpoint server service running in the background, configured Web Username and Web Password in the integration configuration.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "RSANetWitnessPlatform", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1570446244, 
+    "Name": "Isolate Endpoint", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Add comment, which describes the reason behind the isolation request.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1534420803928, 
+            "Name": "Comment", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

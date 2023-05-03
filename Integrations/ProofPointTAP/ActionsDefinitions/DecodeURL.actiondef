@@ -1,0 +1,50 @@
+{
+    "CreationTimeUnixTimeInMs": 1534436861977, 
+    "Creator": "Admin", 
+    "Description": "Decode URLs in Proofpoint TAP. Supported entities: URL.",
+    "Id": -1, 
+    "IntegrationIdentifier": "ProofPointTAP", 
+    "IsCustom": false, 
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"encodedUrl\":\"https://urldefense.com/v3/__https://firebasestorage.googleapis.com/v0/b/gund-50757.appspot.com/o/owa*2Findex2gun.html?alt=media&token=02497332-ff04-xxxxxxx-a76b-xxxxx*vicky@rsrchxchange.com__;JSM!!Fjc1LPEtn8I!xxxxx-xxxxxxxx$\",\"decodedUrl\":\"https://firebasestorage.googleapis.com/v0/b/gund-xxxxx.appspot.com/o/owa%2Findex2gun.html?alt=media&token=xxxx-ff04-xxxxxx-a76b-xxxxxx#vicky@rsrchxchange.com\",\"success\":true}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1534436861977, 
+    "Name": "DecodeURL", 
+    "Parameters": [
+        {
+          "CustomActionId": 0,
+          "IsMandatory": false,
+          "DefaultValue": null,
+          "Description": "Specify a comma-separated list of URLs that need to be decoded. Note: URL entities in the scope of the alert will be decoded together.",
+          "Name": "Encoded URLs",
+          "Value": null,
+          "Type": 0,
+          "OptionalValues": null,
+          "OptionalValuesJson": null,
+          "Id": 0,
+          "CreationTimeUnixTimeInMs": 1654704763141,
+          "ModificationTimeUnixTimeInMs": 1654704763141
+        },
+        {
+          "CustomActionId": 0,
+          "IsMandatory": false,
+          "DefaultValue": "true",
+          "Description": "If enabled, action will create URL entities that were successfully decoded.",
+          "Name": "Create URL Entities",
+          "Value": "true",
+          "Type": 1,
+          "OptionalValues": null,
+          "OptionalValuesJson": null,
+          "Id": 0,
+          "CreationTimeUnixTimeInMs": 1654704763141,
+          "ModificationTimeUnixTimeInMs": 1654704763141
+        }
+  ],
+    "ScriptResultName": "decoded_urls", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Version": 1.0
+}

@@ -1,0 +1,38 @@
+{
+	"CreationTimeUnixTimeInMs": 1570446244,
+	"Creator": "admin",
+	"Id": -1,
+	"IntegrationIdentifier": "IBoss",
+	"IsCustom": false,
+	"IsEnabled": true,
+	"Name": "List Policy Block List Entries",
+	"Description": "Return iBoss Block List entries in a specific group.",
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"applyKeywordAndSafeSearch\": 0, \"direction\": 0, \"endPort\": 13, \"isRegex\": 1, \"isTimedUrl\": 0, \"note\": \"testing\", \"priority\": 20, \"startPort\": 12, \"timedUrlExpiresInMinutes\": 0, \"type\": 1, \"url\": \"https://stackoverflow.com/\", \"weight\": 10504}, {\"applyKeywordAndSafeSearch\": 0, \"direction\": 1, \"endPort\": 66, \"isRegex\": 1, \"isTimedUrl\": 0, \"note\": \"testing note\", \"priority\": 50, \"startPort\": 5, \"timedUrlExpiresInMinutes\": 0, \"type\": 1, \"url\": \"222.22.22.22\", \"weight\": 25600}, {\"applyKeywordAndSafeSearch\": 0, \"direction\": 1, \"endPort\": 66, \"isRegex\": 1, \"isTimedUrl\": 0, \"note\": \"testnig note\", \"priority\": 50, \"startPort\": 5, \"timedUrlExpiresInMinutes\": 0, \"type\": 1, \"url\": \"222.222.222.222\", \"weight\": 25600}, {\"applyKeywordAndSafeSearch\": 0, \"direction\": 1, \"endPort\": 66, \"isRegex\": 1, \"isTimedUrl\": 0, \"note\": \"testing note\", \"priority\": 50, \"startPort\": 5, \"timedUrlExpiresInMinutes\": 0, \"type\": 1, \"url\": \"222.222.222.222\", \"weight\": 25600}]",
+		"ResultName": "JsonResult"
+	}],
+	"Parameters": [{
+		"Name": "Category ID",
+		"Type": 0,
+		"Value": 1001,
+		"DefaultValue": 1001,
+		"IsMandatory": true,
+		"Description": "Specify in which policy category do you want to list Block List entries.",
+		"CustomActionId": -1,
+		"Id": -1
+	},
+	{
+		"Name": "Max Entries to Return",
+		"Type": 0,
+		"Value": 50,
+		"DefaultValue": 50,
+		"IsMandatory": false,
+		"Description": "Specify how many entries to return.",
+		"CustomActionId": -1,
+		"Id": -1
+	}],
+	"ScriptResultName": "is_success",
+	"Type": 0,
+	"Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

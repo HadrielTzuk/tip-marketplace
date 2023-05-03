@@ -1,0 +1,54 @@
+{
+	"CreationTimeUnixTimeInMs": 1535993960679,
+	"Creator": "Admin",
+	"Description": "List available threat intelligence sets in AWS GuardDuty.",
+	"Id": -1,
+	"IntegrationIdentifier": "AWSGuardDuty",
+	"IsCustom": false,
+	"IsEnabled": true,
+	"DynamicResultsMetadata": [{
+		"ResultExample": "{\"ThreatIntelSetIds\": [\"14ba8b942b76c1be6d985715eb7443eb\"]}",
+		"ResultName": "JsonResult"
+	}],
+	"ModificationTimeUnixTimeInMs": 1535993960679,
+	"Name": "List Threat Intelligence Sets",
+	"Parameters": [{
+			"CreationTimeUnixTimeInMs": 1535381792970,
+			"CustomActionId": -1,
+			"DefaultValue": "",
+			"Description": "Specify the detector ID that should be used to list threat intelligence sets. This parameter can be found in the \"Settings\" tab.",
+			"Id": -1,
+			"IsMandatory": true,
+			"ModificationTimeUnixTimeInMs": 1535381792970,
+			"Name": "Detector ID",
+			"Type": 0,
+			"Value": ""
+		},
+		{
+			"CreationTimeUnixTimeInMs": 1535381792970,
+			"CustomActionId": -1,
+			"DefaultValue": "50",
+			"Description": "Specify how many threat intelligence sets to return. Default is 50.",
+			"Id": -1,
+			"IsMandatory": false,
+			"ModificationTimeUnixTimeInMs": 1535381792970,
+			"Name": "Max Threat Intelligence Sets To Return",
+			"Type": 0,
+			"Value": "50"
+		},
+		{
+            "CreationTimeUnixTimeInMs": 1660914084000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Optionally specify the AWS Region to be used in the action that can be different from the default region specified in the integration configuration page.",
+            "Id": -1,
+            "IsMandatory": false,
+            "Name": "AWS Region",
+            "Type": 0,
+            "Value": ""
+        }
+	],
+	"ScriptResultName": "is_success",
+	"Version": 1.0,
+	"SimulationDataJson": "{\"Entities\":[]}"
+}

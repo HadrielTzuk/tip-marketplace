@@ -1,0 +1,74 @@
+[
+    {
+        "ChangeDescription": "New BlueLiv integration added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "BlueLiv",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1611747738,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-6896"
+    },
+    {
+        "ChangeDescription": "Threat Connector - added additional events with additional info when \"Threat Type\" is \"Malware\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Threats Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1621415182,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7292"
+    },
+    {
+        "ChangeDescription": "Added new action \"Remove Labels From Threats\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Remove Labels From Threats",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1621415182,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8322"
+    },
+    {
+        "ChangeDescription": "Improved functionality of \"Add Labels To Threats\" action.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Add Labels to Threats",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1621415182,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8322"
+    },
+    {
+        "ChangeDescription": "Added new action \"Enrich Entities\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Enrich Entities",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1621415182,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8349"
+    },
+    {
+        "ChangeDescription": "New Action Added - List Entity Threats.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "List Entity Threats",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1632295393,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9793"
+    }
+]

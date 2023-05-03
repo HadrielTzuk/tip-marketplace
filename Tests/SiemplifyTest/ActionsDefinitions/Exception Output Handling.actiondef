@@ -1,0 +1,39 @@
+{
+    "Name": "Exception Output Handling", 
+    "Description": "Test the exception and error output handling. When configured to, this action should fail and the action output should be displayed along with the exception and error message.",
+    "Script": "from SiemplifyAction import *\r\nfrom SiemplifyUtils import output_handler\r\n\r\n@output_handler\r\ndef main(stdout_handler=None):\r\n    siemplify = SiemplifyAction(stdout_handler=stdout_handler)\r\n    print \"Sample output\"\r\n    if siemplify.parameters.get(\"Fail\", \"False\").lower() == 'true':\r\n        raise Exception(\"ERROR\")\r\n    output_message = 'output message'\r\n    result_value = 'true'\r\n    siemplify.end(output_message, result_value)\r\n\r\nif __name__ == \"__main__\":\r\n    main()", 
+    "IntegrationIdentifier": "SiemplifyTest", 
+    "ScriptResultName": "ScriptResult", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultName": "JsonResult", 
+            "ResultExample": ""
+        }
+    ], 
+    "Creator": "Admin", 
+    "IsEnabled": true, 
+    "IsCustom": false, 
+    "IsSystem": false, 
+    "Version": 3.0, 
+    "TimeoutSeconds": 600, 
+    "Parameters": [
+        {
+            "CustomActionId": -1, 
+            "IsMandatory": false, 
+            "DefaultValue": "false", 
+            "Description": null, 
+            "Name": "Fail", 
+            "Value": "false", 
+            "Type": 1, 
+            "OptionalValues": null, 
+            "OptionalValuesJson": null, 
+            "Id": -1, 
+            "CreationTimeUnixTimeInMs": 1561373400228, 
+            "ModificationTimeUnixTimeInMs": 1561373400228
+        }
+    ], 
+    "DefaultResultValue": "", 
+    "Id": -1, 
+    "CreationTimeUnixTimeInMs": 1561373400215, 
+    "ModificationTimeUnixTimeInMs": 1561373400219
+}

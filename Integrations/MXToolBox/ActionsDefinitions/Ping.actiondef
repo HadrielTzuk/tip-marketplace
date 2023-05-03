@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1529569272030,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "MXToolBox",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1529569272030,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom MXToolBoxManager import MXToolBoxManager\n\nMXTOOLBOX_PROVIDER = 'MXToolBox'\n\n\ndef main():\n    # Configurations.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(MXTOOLBOX_PROVIDER)\n    mx_tool_box_manager = MXToolBoxManager(conf['API Root'], conf['API Key'], conf['Verify SSL'])\n\n    result_value = mx_tool_box_manager.ping()\n\n    if result_value:\n        output_message = \"Connection Established.\"\n    else:\n        output_message = \"Connection Failed.\"\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

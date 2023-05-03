@@ -1,0 +1,126 @@
+{
+    "CreationTimeUnixTimeInMs": 1530453125371,
+    "Creator": "admin",
+    "Description": "This job will synchronize closed ServiceNow incidents and Siemplify alerts.",
+    "Id": -1,
+    "Integration": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530453125371,
+    "Name": "Sync Closed Incidents",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "https://{dev-instance}.service-now.com/api/now/v1/",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Api Root",
+            "Description": "API root of the ServiceNow instance.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Username",
+            "Description": "Username of the ServiceNow account.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Password",
+            "Description": "Password of the ServiceNow account.",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530435938022,
+            "DefaultValue": true,
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530435938022,
+            "Name": "Verify SSL",
+            "Description": "If enabled, verify the SSL certificate for the connection to the Splunk server is valid.",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Client ID",
+            "Description": "Client ID of Service Now application. Required for Oauth authentication.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Client Secret",
+            "Description": "Client Secret of Service Now application. Required for Oauth authentication.",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Refresh Token",
+            "Description": "Refresh token for Service Now application. Required for Oauth authentication.",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530435938022,
+            "DefaultValue": false,
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530435938022,
+            "Name": "Use Oauth Authentication",
+            "Description": "If enabled, integration will use Oauth authentication. Parameters “Client ID“, “Client Secret“ and “Refresh Token“ are mandatory.",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": 24,
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Max Hours Backwards",
+            "Description": "Specify how many hours backwards to synchronize statuses. Default: 24 hours.",
+            "Type": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530435938022,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530435938022,
+            "Name": "Table Name",
+            "Description": "Name of the table, where you want to search for the incident. Example: incident.",
+            "Type": 2
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Script": "# -*- coding: utf-8 -*-\n# ==============================================================================\n# title           :SyncClosure.py\n# description     :Job - Closes ticket at ServiceNow for closed cases in Siemplify.\n# author          :zivh@siemplify.co\n# date            :06-28-18\n# python_version  :2.7\n# Doc: https://developer.servicenow.com/app.do#!/rest_api_doc?v=jakarta&id=r_AggregateAPI-GET\n# ==============================================================================\n# =====================================\n#              IMPORTS                #'\n# =====================================\nfrom ServiceNowManager import ServiceNowManager\nfrom SiemplifyJob import SiemplifyJob\nfrom SiemplifyUtils import convert_datetime_to_unix_time\nfrom SiemplifyUtils import utc_now\n\nimport urllib3\nimport requests\nimport datetime\n\nurllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)\nrequests.packages.urllib3.disable_warnings()\n\n# =====================================\n#             CONSTANTS               #\n# =====================================\nDEFAULT_DAYS_BACKWARDS = 2\nCLOSE_REASON = \"Closed by Siemplify\"\n\n# =====================================\n#              CLASSES                #\n# =====================================\n\n\ndef validate_timestamp(last_run_timestamp, offset):\n    \"\"\"\n    Validate timestamp in range\n    :param last_run_timestamp: {datetime} last run timestamp\n    :param offset: {datetime} last run timestamp\n    :return: {datetime} if first run, return current time minus offset time, else return timestamp from file\n    \"\"\"\n    current_time = utc_now()\n    # Check if first run\n    if current_time - last_run_timestamp > datetime.timedelta(days=offset):\n        return current_time - datetime.timedelta(days=offset)\n    else:\n        return last_run_timestamp\n\n\ndef get_incident_number_from_alert(siemplify, alert_ticket_id):\n    \"\"\"\n    Extract incident number from the alert\n    :param siemplify: Siemplify instance\n    :param alert_ticket_id: {string} alert id\n    :return: {string} incident number\n    \"\"\"\n    case_ids = siemplify.get_cases_by_ticket_id(alert_ticket_id)\n    if case_ids:\n        case = siemplify._get_case_by_id(str(case_ids[0]))\n\n        # Update all Alert's tickets in ServiceNow\n        for alert in case['cyber_alerts']:\n            if alert_ticket_id.lower() == alert['external_id'].lower() and alert['additional_data']:\n                return alert['additional_data']\n\n\ndef main():\n    siemplify = SiemplifyJob()\n\n    try:\n        siemplify.script_name = 'ServiceNow - SyncClosure'\n\n        siemplify.LOGGER.info('--------------- JOB STARTED ---------------')\n\n        # Configurations.\n        api_root = siemplify.parameters['API Root']\n        username = siemplify.parameters['Username']\n        password = siemplify.parameters['Password']\n        days_backwards = int(siemplify.parameters.get('Days Backwards', DEFAULT_DAYS_BACKWARDS))\n        service_now_manager = ServiceNowManager(api_root, username, password, default_incident_table)\n\n        # Get last Successful execution time.\n        last_successful_execution_time = siemplify.fetch_timestamp(datetime_format=True)\n        last_successful_execution_time = validate_timestamp(last_successful_execution_time, days_backwards)\n        unix_last_successful_execution = convert_datetime_to_unix_time(last_successful_execution_time)\n        siemplify.LOGGER.info(\n            'Last successful execution run: {0}'.format(unicode(last_successful_execution_time).encode('utf-8')))\n\n        siemplify.LOGGER.info('--- Start Closing Incidents in ServiceNow ---')\n\n        # Get  all scope alerts.\n        closed_cases_alerts_ids = siemplify.get_alerts_ticket_ids_from_cases_closed_since_timestamp(unix_last_successful_execution, None)\n\n        # Get dismissed alerts ids. # TODO: need to be checked. Currently NOT work!!\n        dismissed_alerts = siemplify.get_ticket_ids_for_alerts_dismissed_since_timestamp(unix_last_successful_execution)\n\n        # use sets to obtain merged list of unique values\n        alerts_ids = list(set(closed_cases_alerts_ids + dismissed_alerts))\n\n        if alerts_ids:\n            siemplify.LOGGER.info(\"Found {0} closed alerts\".format(len(alerts_ids)))\n\n        for alert_id in alerts_ids:\n            siemplify.LOGGER.info('Run on alert with id: {0}'.format(unicode(alert_id).encode('utf-8')))\n            ticket_number = get_incident_number_from_alert(siemplify, alert_id)\n            try:\n                siemplify.LOGGER.info(\"ServiceNow incident - {0} was closed\".format(unicode(ticket_number).encode('utf-8')))\n                service_now_manager.close_incident(ticket_number, CLOSE_REASON)\n\n            except Exception as e:\n                siemplify.LOGGER.error('Failed to close incident {0}. This incident may no longer exists.'\n                                       ' Error: {1}.'.format(unicode(ticket_number).encode('utf-8'), e.message))\n\n        siemplify.LOGGER.info(\" --- Finish synchronize clousre from Siemplify to ServiceNow tickets --- \")\n\n        siemplify.LOGGER.info('--- Start Dismiss Alerts in Siemplify ---')\n        sn_last_time_format = service_now_manager.convert_datetime_to_sn_format(last_successful_execution_time)\n\n        # Get tickets that where closed since last success time.\n        closed_tickets = service_now_manager.get_incident_ids_by_close_status(sn_last_time_format)\n        siemplify.LOGGER.info(\n            'Found {0} closed incidents since {1}'.format(unicode(len(closed_tickets)).encode('utf-8'),\n                                                            unicode(sn_last_time_format).encode('utf-8')))\n\n        for ticket_id in closed_tickets:\n            # Extract context case data.\n            ticket = service_now_manager.get_ticket_by_id(ticket_id)['result']\n            # Ticket short description is the related alert id in Siemplify\n            alert_id = ticket['short_description']\n            case_ids = siemplify.get_cases_by_ticket_id(alert_id)\n\n            # Dismiss alert.\n            if case_ids:\n                for case_id in case_ids:\n                    # Get alert identifier.\n                    case = siemplify._get_case_by_id(str(case_id))\n                    for alert in case['cyber_alerts']:\n                        if alert_id.lower() == alert['external_id'].lower():\n                            # Dismiss alert.\n                            # TODO: need to be checked. Currently NOT work!!\n                            siemplify.dismiss_alert(alert['alert_group_identifier'], True, case_id)\n                            siemplify.LOGGER.info('Alert with ticket id {0} was dismissed'.format(unicode(\n                                alert['external_id']).encode('utf-8')))\n\n        # Update last successful run time.\n        siemplify.save_timestamp(datetime_format=True)\n        siemplify.LOGGER.info(\"Update Job last execution timestamp\")\n        siemplify.LOGGER.info('--------------- JOB FINISHED ---------------')\n\n    except Exception as err:\n        siemplify.LOGGER._log.exception('Got exception on main handler.Error: {0}'.format(err.message))\n        raise\n\n\nif __name__ == '__main__':\n    main()\n",
+    "Version": 1
+}

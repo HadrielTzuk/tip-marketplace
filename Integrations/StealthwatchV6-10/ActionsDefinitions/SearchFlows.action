@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1520335077671, 
+    "Creator": "admin", 
+    "Description": "Get flows by IP address for a given time frame", 
+    "Id": -1, 
+    "IntegrationIdentifier": "StealthwatchV6-10", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1520335077671, 
+    "Name": "Search Flows", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1520342434313, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Time frame in hours(e.g: 3).", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520342434313, 
+            "Name": "Timeframe", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1520342434313, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The limit of the recieved flow.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520342434313, 
+            "Name": "Limit", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

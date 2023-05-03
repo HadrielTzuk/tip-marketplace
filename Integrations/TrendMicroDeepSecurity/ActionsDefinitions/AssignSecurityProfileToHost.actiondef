@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1538566734639, 
+    "Creator": "Admin", 
+    "Description": "Assign the specified policy to computers", 
+    "Id": -1, 
+    "IntegrationIdentifier": "TrendMicroDeepSecurity", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1538566734639, 
+    "Name": "Assign Security Profile To Host", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1538566734639, 
+            "CustomActionId": 10018, 
+            "DefaultValue": null, 
+            "Description": "Policy name.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1538566734639, 
+            "Name": "Security Profile Name", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "Script": "from TrendmicroDeepSecurityManager import TrendmicroManager\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyDataModel import EntityTypes\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('TrendMicro')\n    api_key = conf.get('Api Secret Key')\n    api_version = conf.get('Api Version')\n    server_address = conf.get('Server Address')\n    use_ssl = conf.get(\"Verify SSL\")\n    trendmicro_manager = TrendmicroManager(api_key, server_address, api_version, use_ssl)\n\n    # security profile that will be assigned to the hosts\n    security_profile = siemplify.parameters['Security Profile Name']\n    # Get policy ID\n    policy_id = trendmicro_manager.get_policy_id_by_name(security_profile)\n\n    entities = []\n\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.HOSTNAME and not entity.is_internal:\n            computer_id = trendmicro_manager.get_computer_id_by_name(entity.identifier)\n            if computer_id:\n                assigned_policy = trendmicro_manager.assign_policy_to_computers(policy_id, computer_id)\n                if assigned_policy:\n                    entities.append(entity.identifier)\n\n    if entities:\n        result_value = 'true'\n        output_message = '{0} policy was assign to {1}'.format(security_profile, ', '.join([entity for entity in entities]))\n    else:\n        result_value = 'false'\n        output_message = 'Can not assign {0} security profile'.format(security_profile)\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()", 
+    "ScriptResultName": "is_assigned", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Version": 1.0
+}

@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "New Rapid7 InsightIDR Integration added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Rapid7InsightIDR",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1609233872,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-6496"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Rapid7InsightIDR",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    },
+    {
+        "ChangeDescription": "New Action Added - Update Investigation.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Update Investigation",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1671621658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13370"
+    },
+    {
+        "ChangeDescription": "New Connector Added - Investigations Connector.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Rapid7 InsightIDR - Investigations Connector",
+        "ItemType": "Connector",
+        "New": true,
+        "PublishTime": 1671621658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13316"
+    }
+]

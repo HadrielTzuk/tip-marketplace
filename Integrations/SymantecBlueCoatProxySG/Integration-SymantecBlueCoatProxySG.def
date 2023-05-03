@@ -1,0 +1,46 @@
+{
+    "DisplayName": "Symantec Blue Coat ProxySG",
+    "Identifier": "SymantecBlueCoatProxySG",
+    "Description": "Symantec delivers its high-performance, proxy-based, Edge Secure Web Gateway (SWG) solution where you need it: on high-performance hardware, as a virtual appliance, or in your private cloud infrastructure. Symantec's industry-leading proxy protects organizations across the web, social media, applications, and mobile networks",
+    "MarketingDisplayName": "Symantec Blue Coat ProxySG",
+    "Categories": [
+        "Network Security",
+        "Threat Intelligence"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "SymantecBlueCoatProxySG",
+            "PropertyName": "SSH Root",
+            "PropertyDisplayName": "SSH Root",
+            "PropertyDescription": "SSH root of the Blue Coat ProxySG instance.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "{ip address}:22"
+        },
+        {
+            "IntegrationIdentifier": "SymantecBlueCoatProxySG",
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyDescription": "Username of the Blue Coat ProxySG SSH account.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "SymantecBlueCoatProxySG",
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyDescription": "Password of the Blue Coat ProxySG account.",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M23,2h-.67v.65h.67v-.65Zm0,1.94v-.65h-.67v.65h.67Zm-1.34-1.29v.65h.67v-.65h-.67Zm-1.34,1.29h-.67v1.29h.67v-.65h.67v-.65h.67v-.65h-1.34v.65Zm-2,.65v.65h.67v-.65h-.67Zm3.34,.65v-.65h-.67v.65h.67Zm-2,0h-.67v.65h.67v-.65Zm.67,.65h.67v-.65h-.67v.65Zm-.67,.65h-.67v-.65h-1.34v.65h-.67v.65h.67v.65h-.67v-.65h-.67v.65h-.67v.65h-.67v.65h-.67c-1.74,2.11-2.18,3.03-2.88,4.74-.79-1.54-1.73-2.61-3.35-3.31h-.02c-.3-.08-.45-.11-.65,.16-.21,.28-.08,.54,.17,.83,.17,.21,.35,.41,.53,.62,.49,.56,.99,1.13,1.36,1.78,.37,.65,.79,1.55,1.12,2.25,.2,.43,.37,.78,.46,.95,.2,.36,.68,.51,.86,.51,.89-.1,.98-.51,1.12-1.21,.02-.07,.03-.15,.05-.23,.3-1.38,.7-2.8,2.55-4.51v-.65h.67v-.65h.67v-.65h.67v-.65h-.67v-.65h.67v.65h.67v-.65h.67v-.65h.67v-.65h.67v-1.29h-.67v.65Zm-2.24,4.33c.45,.86,.71,1.83,.71,2.86,0,3.49-2.93,6.33-6.54,6.33s-6.51-2.84-6.51-6.33,2.9-6.33,6.51-6.33c.91,0,1.78,.18,2.56,.51l2.29-2.19c-1.42-.81-3.08-1.27-4.85-1.27C6.3,4.42,2,8.58,2,13.71s4.3,9.29,9.6,9.29,9.6-4.16,9.6-9.29c0-1.85-.56-3.57-1.52-5.02l-2.25,2.16Z\"/></svg>",
+    "Version": 2.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/symantec-blue-coat-proxysg"
+}

@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1538890882657,
+    "Creator": "Admin",
+    "Description": "Check whether an Entity Identifier is part of a predefined dynamic categorized Custom List",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1538890882657,
+    "Name": "Is In Custom List",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1538890882657,
+            "CustomActionId": 24,
+            "DefaultValue": "",
+            "Description": "Custom list category.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1538890882657,
+            "Name": "Category",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\tsiemplify.script_name = \"Is In Custom List\"\n\n\tcategory = siemplify.parameters[\"Category\"]\n\n\tresult_value = siemplify.any_alert_entities_in_custom_list(category)\n\n\tif result_value:\n\t\toutput_message = \"This alert contains entities in the given custom list category: {0}.\".format(category)\n\telse:\n\t\toutput_message = \"This alert does not contain entities in the given custom list category: {0}.\".format(category)\n\tsiemplify.LOGGER.info(output_message)\n\n\tsiemplify.end(output_message, result_value)\n\nif __name__ == '__main__':\n\tmain()",
+    "ScriptResultName": "ScriptResult",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

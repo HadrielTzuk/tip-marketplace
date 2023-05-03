@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Internet Storm Center.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Internet Storm Center",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1641975658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10678"
+    }
+]

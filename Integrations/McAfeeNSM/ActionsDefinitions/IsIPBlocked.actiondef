@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1524473456823, 
+    "Creator": "admin", 
+    "Description": "Check if an IP address is blocked", 
+    "Id": -1, 
+    "IntegrationIdentifier": "McAfeeNSM", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1524473456823, 
+    "Name": "Is IP Blocked", 
+    "Parameters": [], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom NSMManager import NsmManager\n\n# Consts\n# Provider Sign.\nNSM_PROVIDER = 'McAfeeNSM'\nADDRESS = EntityTypes.ADDRESS\n\n\ndef main():\n    # Define Variables.\n    blocked_entitites = []\n    unblocked_entities = []\n    result_value = False\n    # configurations.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(NSM_PROVIDER)\n    nsm_manager = NsmManager(conf['API Root'], conf['Username'], conf['Password'], conf['Domain ID'],\n                             conf['Siemplify Policy Name'], conf['Sensors Names List Comma Separated'])\n\n    # Fetch scope entities.\n    scope_entities = [entity for entity in siemplify.target_entities if entity.entity_type == ADDRESS]\n\n    # Run on entities.\n    for entity in scope_entities:\n        # Check if address blocked.\n        block_status = nsm_manager.is_ip_blocked(entity.identifier)\n        if block_status:\n            blocked_entitites.append(entity)\n            result_value = True\n        else:\n            unblocked_entities.append(entity)\n\n    # Logout from NSM.\n    nsm_manager.logout()\n\n    # Form output message.\n    if scope_entities:\n        output_message = \"Blocked Entities: {0} \\n Unblocked Entities: {1}\".format(\",\".join(map(str, blocked_entitites)),\n                                                                                   \",\".join(map(str, unblocked_entities)))\n    else:\n        output_message = \"No entities with type address at the case.\"\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 1.0
+}

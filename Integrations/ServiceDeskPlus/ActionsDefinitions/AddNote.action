@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1517737701996,
+    "Creator": "admin",
+    "Description": "Add a note to a request",
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceDeskPlus",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517737701996,
+    "Name": "Add Note",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517835376849,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The requests' ID.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517835376849,
+            "Name": "Request ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517835376849,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The note's content.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517835376849,
+            "Name": "Note",
+            "Type": 11,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517835376849,
+            "CustomActionId": -1,
+            "DefaultValue": "false",
+            "Description": "Whether to make the note public or not.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517835376849,
+            "Name": "Is Public",
+            "Type": 1,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

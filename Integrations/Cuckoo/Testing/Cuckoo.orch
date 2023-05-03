@@ -1,0 +1,207 @@
+{
+  "Identifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": true,
+  "Name": "Cuckoo",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "18872630-e824-4e28-b890-0293b83f94d7",
+      "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+      "ParentStepIdentifiers": [
+        "e0955951-65cd-49fd-a23a-3a40ccae74f7"
+      ],
+      "ParentStepIdentifier": "e0955951-65cd-49fd-a23a-3a40ccae74f7",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Cuckoo_Detonate File_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Cuckoo_Detonate File",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "18872630-e824-4e28-b890-0293b83f94d7",
+          "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+          "Name": "ScriptName",
+          "Value": "Cuckoo_Detonate File",
+          "CreationTimeUnixTimeInMs": 1520236880299,
+          "ModificationTimeUnixTimeInMs": 1520236880299
+        },
+        {
+          "ParentStepIdentifier": "18872630-e824-4e28-b890-0293b83f94d7",
+          "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"File Path\":\"C:\\\\temp\\\\NPPJSONViewer.dll\"}",
+          "CreationTimeUnixTimeInMs": 1520236880299,
+          "ModificationTimeUnixTimeInMs": 1520236880299
+        },
+        {
+          "ParentStepIdentifier": "18872630-e824-4e28-b890-0293b83f94d7",
+          "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520236858529,
+          "ModificationTimeUnixTimeInMs": 1520236858529
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520236858528,
+      "ModificationTimeUnixTimeInMs": 1520236858528
+    },
+    {
+      "Identifier": "e0955951-65cd-49fd-a23a-3a40ccae74f7",
+      "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+      "ParentStepIdentifiers": [
+        "78c615ca-ae1f-4969-8bf8-9e598390ac72"
+      ],
+      "ParentStepIdentifier": "78c615ca-ae1f-4969-8bf8-9e598390ac72",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Cuckoo_Get Report_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Cuckoo_Get Report",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "e0955951-65cd-49fd-a23a-3a40ccae74f7",
+          "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+          "Name": "ScriptName",
+          "Value": "Cuckoo_Get Report",
+          "CreationTimeUnixTimeInMs": 1520236880298,
+          "ModificationTimeUnixTimeInMs": 1520236880298
+        },
+        {
+          "ParentStepIdentifier": "e0955951-65cd-49fd-a23a-3a40ccae74f7",
+          "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Task ID\":\"8\"}",
+          "CreationTimeUnixTimeInMs": 1520236880298,
+          "ModificationTimeUnixTimeInMs": 1520236880298
+        },
+        {
+          "ParentStepIdentifier": "e0955951-65cd-49fd-a23a-3a40ccae74f7",
+          "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520236849103,
+          "ModificationTimeUnixTimeInMs": 1520236849103
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520236849102,
+      "ModificationTimeUnixTimeInMs": 1520236849102
+    },
+    {
+      "Identifier": "eb049142-4698-4c85-9dae-54722a1eb374",
+      "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Cuckoo_Ping_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Cuckoo_Ping",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "eb049142-4698-4c85-9dae-54722a1eb374",
+          "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+          "Name": "ScriptName",
+          "Value": "Cuckoo_Ping",
+          "CreationTimeUnixTimeInMs": 1520236880298,
+          "ModificationTimeUnixTimeInMs": 1520236880298
+        },
+        {
+          "ParentStepIdentifier": "eb049142-4698-4c85-9dae-54722a1eb374",
+          "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520236880298,
+          "ModificationTimeUnixTimeInMs": 1520236880298
+        },
+        {
+          "ParentStepIdentifier": "eb049142-4698-4c85-9dae-54722a1eb374",
+          "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520236842448,
+          "ModificationTimeUnixTimeInMs": 1520236842448
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520236842448,
+      "ModificationTimeUnixTimeInMs": 1520236842448
+    },
+    {
+      "Identifier": "78c615ca-ae1f-4969-8bf8-9e598390ac72",
+      "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+      "ParentStepIdentifiers": [
+        "eb049142-4698-4c85-9dae-54722a1eb374"
+      ],
+      "ParentStepIdentifier": "eb049142-4698-4c85-9dae-54722a1eb374",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Cuckoo_Detonate Url_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Cuckoo_Detonate Url",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "78c615ca-ae1f-4969-8bf8-9e598390ac72",
+          "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+          "Name": "ScriptName",
+          "Value": "Cuckoo_Detonate Url",
+          "CreationTimeUnixTimeInMs": 1520236880298,
+          "ModificationTimeUnixTimeInMs": 1520236880298
+        },
+        {
+          "ParentStepIdentifier": "78c615ca-ae1f-4969-8bf8-9e598390ac72",
+          "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520236880298,
+          "ModificationTimeUnixTimeInMs": 1520236880298
+        },
+        {
+          "ParentStepIdentifier": "78c615ca-ae1f-4969-8bf8-9e598390ac72",
+          "ParentWorkflowIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520236844828,
+          "ModificationTimeUnixTimeInMs": 1520236844828
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520236844828,
+      "ModificationTimeUnixTimeInMs": 1520236844828
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "545ab1e6-d908-47fc-8475-38ee988915fe",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "29d34f1e-419f-49b4-acb5-1a1cba8f031b",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Cuckoo",
+      "AllEnvironments": "",
+      "Id": 35,
+      "CreationTimeUnixTimeInMs": 1520236880296,
+      "ModificationTimeUnixTimeInMs": 1520236880296
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 35,
+  "CreationTimeUnixTimeInMs": 1520236830945,
+  "ModificationTimeUnixTimeInMs": 1520236830945
+}

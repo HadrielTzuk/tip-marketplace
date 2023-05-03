@@ -1,0 +1,119 @@
+{
+    "CreationTimeUnixTimeInMs": 1518514906976, 
+    "Creator": "admin", 
+    "Description": "Allow IPs in AlgoSec. Supported entities: IP address. Note: IP address entities are treated as destinations in the change request. This action creates a traffic change request to allow traffic to IP entities.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"status\":\"Success\",\"messages\":[],\"data\":{\"id\":10,\"fields\":[{\"name\":\"Owner\",\"values\":[\"admin<xxxxxxxx@siemplify.co>\"]},{\"name\":\"Creator\",\"values\":[\"admin<xxxxxxxx@siemplify.co>\"]},{\"name\":\"Due\",\"values\":[\"2021-08-31 00:00:00\"]},{\"name\":\"LastUpdated\",\"values\":[\"2021-08-13 12:31:23\"]},{\"name\":\"Requestor\",\"values\":[\"admin<xxxxxxxxxx@siemplify.co>\"]}],\"originalTraffic\":[{\"source\":{\"items\":[{\"value\":\"all\"}]},\"destination\":{\"items\":[{\"value\":\"10.0.0.3\"}]},\"service\":{\"items\":[{\"value\":\"ALL\"}]},\"application\":{\"items\":[{\"value\":\"any\"}]},\"user\":{\"items\":[{\"value\":\"any\"}]},\"action\":\"Allow\"}],\"plannedTraffic\":[{\"source\":{\"items\":[{\"value\":\"0.0.0.0-255.255.255.255\"}]},\"destination\":{\"items\":[{\"value\":\"10.0.0.3\"}]},\"service\":{\"items\":[{\"value\":\"tcp/*\"},{\"value\":\"udp/*\"},{\"value\":\"ospf\"},{\"value\":\"icmp/*\"},{\"value\":\"gre\"},{\"value\":\"ipsec_50\"},{\"value\":\"ipsec_51\"}]},\"application\":{\"items\":[{\"value\":\"any\"}]},\"user\":{\"items\":[{\"value\":\"any\"}]},\"action\":\"Allow\"}]}}",
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "AlgoSec",
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1518514906976, 
+    "Name": "Allow IP",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1520155635793, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Standard",
+            "Description": "Specify the template for the change request.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520155635793, 
+            "Name": "Template",
+            "Type": 0, 
+            "Value": "Standard"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1520155635793, 
+            "CustomActionId": -1, 
+            "DefaultValue": "all",
+            "Description": "Specify a comma-separated list of sources for the allow rule. It can be an IP address, IP Set or special keyword like (all).",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520155635793, 
+            "Name": "Source",
+            "Type": 0, 
+            "Value": "all"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1520155635793, 
+            "CustomActionId": -1, 
+            "DefaultValue": "ALL",
+            "Description": "Specify a comma-separated list of services that needs to be allowed. Values can have a look of {TCP/UDP}/{port} (tcp/80) or special reserved keyword (all).",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520155635793, 
+            "Name": "Service",
+            "Type": 0, 
+            "Value": "ALL"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1520155635793, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the subject for the change request. If nothing is provided action will put \"Siemplify Allow IP request\" in the subject.",
+            "Id": -1, 
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1520155635793, 
+            "Name": "Subject",
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1520155635793,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify who should be the owner of the change request. If nothing is provided, the user that created the ticket will be the owner.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1520155635793,
+            "Name": "Owner",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1520155635793,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the due date for the change request. Format: ISO 8601. Example: 2021-08-13T08:16:10Z.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1520155635793,
+            "Name": "Due Date",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1520155635793,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the expiration date for the change request. Format: ISO 8601. Example: 2021-08-13T08:16:10Z.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1520155635793,
+            "Name": "Expiration Date",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1520155635793,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a JSON object containing information about all of the fields that need to be added to the change request. Note: this parameter has a priority over other fields",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1520155635793,
+            "Name": "Custom Fields",
+            "Type": 0,
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1516023545506,
+    "Creator": "admin",
+    "Description": "Download log attachments from CheckPoint FireWall.",
+    "Id": -1,
+    "IntegrationIdentifier": "CheckPointFirewall",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1516023545506,
+    "Name": "Download Log Attachment",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"tasks\": [{\"task-id\": \"012asd-89ab-cdef-xxxx\", \"task-name\": \"Packet Capture operation\", \"status\": \"succeeded\", \"progress-percentage\": 100, \"suppressed\": false, \"absolute_path\": \"home/test\", \"task-details\": [{\"attachments\": [{\"base64-data\": \"1MOyoQIABAD///xxxx//APBqlv//AAAnB0DlUBEEAaDBAAA=\\n\", \"file-name\": \"Anti-Virus-blob-file.cap\"}]}]}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the comma-separated list of log IDs from which you want to download attachments.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Log IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the absolute path for the folder where the action should store the attachments.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Download Folder Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "If enabled, action will create a case wall attachment for each successfully downloaded file. Note: that attachment will only be created if it’s size is less than 3 MB.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Create Case Wall Attachment",
+            "Type": 1,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

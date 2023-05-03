@@ -1,0 +1,28 @@
+{
+    "CreationTimeUnixTimeInMs": 1522678428226,
+    "Creator": "admin",
+    "Description": "Close a case",
+    "Id": -1,
+    "IntegrationIdentifier": "Salesforce",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1522678428226,
+    "Name": "Close Case",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1522678428226,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The number of the case.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1522678428226,
+            "Name": "Case Number",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

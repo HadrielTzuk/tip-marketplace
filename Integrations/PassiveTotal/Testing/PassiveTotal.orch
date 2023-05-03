@@ -1,0 +1,207 @@
+{
+  "Identifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "PassiveTotal",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "d284f4d4-6b4f-4ba9-b007-115c90447de0",
+      "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+      "ParentStepIdentifiers": [
+        "7190a3b4-15db-45a3-92af-be52bcb1da96"
+      ],
+      "ParentStepIdentifier": "7190a3b4-15db-45a3-92af-be52bcb1da96",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "PassiveTotal_Whois Host Reputation_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "PassiveTotal_Whois Host Reputation",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "d284f4d4-6b4f-4ba9-b007-115c90447de0",
+          "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+          "Name": "ScriptName",
+          "Value": "PassiveTotal_Whois Host Reputation",
+          "CreationTimeUnixTimeInMs": 1519145259378,
+          "ModificationTimeUnixTimeInMs": 1519145259378
+        },
+        {
+          "ParentStepIdentifier": "d284f4d4-6b4f-4ba9-b007-115c90447de0",
+          "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519145259378,
+          "ModificationTimeUnixTimeInMs": 1519145259378
+        },
+        {
+          "ParentStepIdentifier": "d284f4d4-6b4f-4ba9-b007-115c90447de0",
+          "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145259378,
+          "ModificationTimeUnixTimeInMs": 1519145259378
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145259378,
+      "ModificationTimeUnixTimeInMs": 1519145259378
+    },
+    {
+      "Identifier": "15213b49-9327-4358-a7ac-1f7b7d74c3a2",
+      "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "PassiveTotal_WhoIs Address Reputation_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "PassiveTotal_WhoIs Address Reputation",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "15213b49-9327-4358-a7ac-1f7b7d74c3a2",
+          "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+          "Name": "ScriptName",
+          "Value": "PassiveTotal_WhoIs Address Reputation",
+          "CreationTimeUnixTimeInMs": 1519145259378,
+          "ModificationTimeUnixTimeInMs": 1519145259378
+        },
+        {
+          "ParentStepIdentifier": "15213b49-9327-4358-a7ac-1f7b7d74c3a2",
+          "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519145259378,
+          "ModificationTimeUnixTimeInMs": 1519145259378
+        },
+        {
+          "ParentStepIdentifier": "15213b49-9327-4358-a7ac-1f7b7d74c3a2",
+          "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145259378,
+          "ModificationTimeUnixTimeInMs": 1519145259378
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145259378,
+      "ModificationTimeUnixTimeInMs": 1519145259378
+    },
+    {
+      "Identifier": "7119d24a-e9d2-4333-84f3-adc3fe899ea2",
+      "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+      "ParentStepIdentifiers": [
+        "15213b49-9327-4358-a7ac-1f7b7d74c3a2"
+      ],
+      "ParentStepIdentifier": "15213b49-9327-4358-a7ac-1f7b7d74c3a2",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "PassiveTotal_WhoIs Scan Address_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "PassiveTotal_WhoIs Scan Address",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "7119d24a-e9d2-4333-84f3-adc3fe899ea2",
+          "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+          "Name": "ScriptName",
+          "Value": "PassiveTotal_WhoIs Scan Address",
+          "CreationTimeUnixTimeInMs": 1519145259378,
+          "ModificationTimeUnixTimeInMs": 1519145259378
+        },
+        {
+          "ParentStepIdentifier": "7119d24a-e9d2-4333-84f3-adc3fe899ea2",
+          "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519145259378,
+          "ModificationTimeUnixTimeInMs": 1519145259378
+        },
+        {
+          "ParentStepIdentifier": "7119d24a-e9d2-4333-84f3-adc3fe899ea2",
+          "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145259378,
+          "ModificationTimeUnixTimeInMs": 1519145259378
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145259378,
+      "ModificationTimeUnixTimeInMs": 1519145259378
+    },
+    {
+      "Identifier": "7190a3b4-15db-45a3-92af-be52bcb1da96",
+      "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+      "ParentStepIdentifiers": [
+        "7119d24a-e9d2-4333-84f3-adc3fe899ea2"
+      ],
+      "ParentStepIdentifier": "7119d24a-e9d2-4333-84f3-adc3fe899ea2",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "PassiveTotal_WhoIs Scan Domain_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "PassiveTotal_WhoIs Scan Domain",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "7190a3b4-15db-45a3-92af-be52bcb1da96",
+          "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+          "Name": "ScriptName",
+          "Value": "PassiveTotal_WhoIs Scan Domain",
+          "CreationTimeUnixTimeInMs": 1519145259378,
+          "ModificationTimeUnixTimeInMs": 1519145259378
+        },
+        {
+          "ParentStepIdentifier": "7190a3b4-15db-45a3-92af-be52bcb1da96",
+          "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519145259378,
+          "ModificationTimeUnixTimeInMs": 1519145259378
+        },
+        {
+          "ParentStepIdentifier": "7190a3b4-15db-45a3-92af-be52bcb1da96",
+          "ParentWorkflowIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145259378,
+          "ModificationTimeUnixTimeInMs": 1519145259378
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145259378,
+      "ModificationTimeUnixTimeInMs": 1519145259378
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "9b7526fe-15dc-43c6-8b76-b23ca94ffb13",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "d7b9d6a6-e675-4da2-8ab1-a54181df275a",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "PassiveTotal",
+      "AllEnvironments": "",
+      "Id": 49,
+      "CreationTimeUnixTimeInMs": 1519145259378,
+      "ModificationTimeUnixTimeInMs": 1519145259378
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 49,
+  "CreationTimeUnixTimeInMs": 1519145259378,
+  "ModificationTimeUnixTimeInMs": 1519145259378
+}

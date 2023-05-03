@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1575015001,
+    "Creator": "klim.lyapin@siemplify.co",
+    "Description": "Get Current Task Status",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"status\": \"Succeeded\", \"creation_date_time_utc\": \"2020-02-08T03:24:52.8526634Z\", \"cancellation_requestor\": null, \"cancellation_date_time_utc\": null, \"id\": \"00000000-0000-0000-0000-000000000000\", \"last_update_date_time_utc\": \"2020-02-08T03:25:35.8345081Z\", \"related_file_info\": null, \"cancellation_comment\": null, \"requestor\": \"00000000-0000-0000-0000-000000000000\", \"error_h_result\": 0, \"scope\": \"Selective\", \"machine_id\": \"0000000000000000000000000000000000000000\", \"type\": \"Isolate\", \"requestor_comment\": \"test\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftDefenderATP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1575015001,
+    "Name": "Get Current Task Status",
+    "Parameters": [
+        {
+            "CustomActionId": -1,
+            "IsMandatory": true,
+            "DefaultValue": "",
+            "Description": "Task IDs list. Comma-separated string",
+            "Name": "Task IDs",
+            "Value": null,
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

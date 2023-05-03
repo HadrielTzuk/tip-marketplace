@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1533210105447,
+    "Creator": "Admin",
+    "Description": "List IP addresses in the user's account. By default, all hosts in the user's account are included.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[\"1.1.1.1\", \"1.1.100.100\", \"10.10.10.10\"]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "QualysVM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1533210105447,
+    "Name": "List Ips",
+    "Parameters": [],
+    "ScriptResultName": "ip_list",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}
+

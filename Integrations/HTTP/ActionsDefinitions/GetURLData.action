@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1519808078509, 
+    "Creator": "admin", 
+    "Description": "Send HTTP GET request to URL entities", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"redirects\": [\"http://blank.org/\"], \"data\": \"<html>\\n\\n<head>\\n<title>\\nblank\\n</title>\\n</head>\\n\\n<body bgcolor=#ffffff text=#2222ff link=#ff0000 vlink=#880000 alink=#00ff00>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<center>\\n<a style=\\\"text-decoration:none\\\" href=\\\"blank.html\\\">.</a>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n<br>\\n</center>\\n</body>\\n</html>\\n\"}, \"Entity\": \"http://blank.org/\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "HTTP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1519808078509, 
+    "Name": "Get URL Data", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519808945784, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "Username for basic authentication. Optional.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1519808945784, 
+            "Name": "Username", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1519808945784, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "Password for basic authentication. Optional.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1519808945784, 
+            "Name": "Password", 
+            "Type": 12, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1519808945784, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "Whether to verify the SSL certificate of the destination server.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1519808945784, 
+            "Name": "SSL Verification", 
+            "Type": 1, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

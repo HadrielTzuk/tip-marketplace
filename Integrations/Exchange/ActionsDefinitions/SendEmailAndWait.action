@@ -1,0 +1,109 @@
+{
+    "CreationTimeUnixTimeInMs": 1511165868441, 
+    "Creator": "admin", 
+    "Description": "Send email and wait action, Send to field is comma separated. Note: Sender's display name can be configured in the client under the account settings",
+    "Id": -1, 
+    "IntegrationIdentifier": "Exchange", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1511165868441, 
+    "Name": "Send Email And Wait",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"attachments\": [], \"sensitivity\": \"Normal\", \"effective_rights\": \" test\", \"has_attachments\": \"false\", \"last_modified_name\": \"mail\", \"is_submitted\": \"false\"}, \"Entity\": \"mail@mail.com\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "Subject",
+            "Type": 0,
+            "Value": "",
+            "Description": "The subject of the email"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": "user@domain.com",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "Send to",
+            "Type": 0,
+            "Value": "",
+            "Description": "Recipient email address. Multiple addresses can be separated by commas"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": "user@domain.com",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "CC",
+            "Type": 0,
+            "Value": "",
+            "Description": "CC email address. Multiple addresses can be separated by commas"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "BCC",
+            "Type": 0,
+            "Value": "",
+            "Description": "bcc email address. Multiple addresses can be separated by commas"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "Mail content",
+            "Type": 10,
+            "Value": "",
+            "Description": "Email body"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "Fetch Response Attachments",
+            "Type": 1,
+            "Value": "",
+            "Description": "Allows attachment of files from response mail."
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": "Inbox",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "Folder to Check for Reply",
+            "Type": 0,
+            "Value": "Inbox",
+            "Description": "Parameter can be used to specify mailbox email folder (mailbox that was used to send the email with question) to search for the user reply in this folder. Parameter should also accept comma separated list of folders to check the user response in multiple folders. Parameter is case sensitive."
+        }
+    ],
+    "Script": "import uuid\nfrom SiemplifyAction import *\nfrom ExchangeManager import ExchangeManager\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\t# Create new exchange manager instance\n    conf = siemplify.get_configuration(\"Exchange\")\n    em = ExchangeManager(conf['ServerAddress'], conf['Domain'], conf['Username'],\n                         conf['Password'], conf['Mail Address']\n                         )\n\t# Crete uniqu subject\n\tsubject = str(uuid.uuid4())\n\tem.send_mail(siemplify.parameters['sendTo'], subject, siemplify.parameters['mailContent'])\n\toutput_message = \"Mail sent successfully\"\n\tprint(output_message)\n\tsiemplify.end(output_message, subject, EXECUTION_STATE_INPROGRESS)\n\n        \n\ndef query_job():\n\tsiemplify = SiemplifyAction()\n\t# Create new exchange manager instance\n    conf = siemplify.get_configuration(\"Exchange\")\n    em = ExchangeManager(conf['ServerAddress'], conf['Domain'], conf['Username'],\n                         conf['Password'], conf['Mail Address']\n                         )\n\tsubject = siemplify.parameters[\"additional_data\"]\n\tquery = em.receive_mail(subject_filter=subject, mark_as_read=True, json_results=True)\n\tif query[\"results\"]:\n\t\t# Get the firest item in the query results dict\n\t\tbody = query[\"results\"][0][\"body\"]\n\t\toutput_message = \"Response:\\n{0}\".format(body)\n\t\tsiemplify.end(output_message, body, EXECUTION_STATE_COMPLETED)\n\telse:\n\t\toutput_message = \"Continuing...searching subject {0}\".format(subject)\n\t\tsiemplify.end(output_message, subject, EXECUTION_STATE_INPROGRESS)\n\n\t\t\n\t\t\nif __name__ == \"__main__\":\n\tif len(sys.argv) < 3 or sys.argv[2] == 'True':\n\t\tmain()\n\telse:\n\t\tquery_job()\n\n\n",
+    "ScriptResultName": "Mail_body",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

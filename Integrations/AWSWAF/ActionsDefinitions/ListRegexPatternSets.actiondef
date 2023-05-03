@@ -1,0 +1,49 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List available Regex Pattern Sets in AWS WAF.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSWAF",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Regex Pattern Sets",
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"Regional\":[{\"Name\":\"XXXXXXXXX\", \"Id\":\"XXXXXX-XXXX-XXXX-XXXX-XXXXXXXX\",\"Description\":\"\",\"LockToken\":\"XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX\",\"ARN\":\"arn:aws:wafv2:us-east-1:XXXXXXXXX\"}],\"CloudFront\":[{\"Name\":\"XXXXXXXXX\",\"Id\":\"XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXX\",\"Description\":\"XXXXX\",\"LockToken\":\"XXXXXX-XXXXX-XXXX-XXXX-XXXXXX\",\"ARN\":\"arn:aws:wafv2:us-east-1:XXXXXXX\"}]}]",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "CloudFront",
+            "Description": "Specify what should be the scope for the listing of Regex Pattern Sets.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Scope",
+            "OptionalValues": [
+                "CloudFront",
+                "Regional",
+                "Both"
+            ],
+            "Type": 15,
+            "Value": "CloudFront"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "5",
+            "Description": "Specify how many Regex Patttern Sets to return. Default is 5. Maximum is 10",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Regex Pattern Sets To Return",
+            "Type": 0,
+            "Value": "5"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

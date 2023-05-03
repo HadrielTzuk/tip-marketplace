@@ -1,0 +1,203 @@
+    {
+    "CreationTimeUnixTimeInMs": 1543164953601,
+    "Creator": "admin",
+    "Description": "Create a ticket in Zoho Desk.",
+    "Id": -1,
+    "IntegrationIdentifier": "ZohoDesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543164953601,
+    "Name": "Create Ticket",
+    "DynamicResultsMetadata": [{
+		"ResultExample": "{\"modifiedTime\":\"2022-07-01T11:00:33.000Z\",\"subCategory\":null,\"statusType\":\"On Hold\",\"subject\":\"Here's your first ticket.\",\"dueDate\":null,\"departmentId\":\"9770xxxxxxxxxxx\",\"channel\":\"Chat\",\"onholdTime\":\"2022-07-01T09:32:14.717Z\",\"language\":\"English\",\"source\":{\"appName\":null,\"extId\":null,\"permalink\":null,\"type\":\"SYSTEM\",\"appPhotoURL\":null},\"resolution\":\"Koko\",\"sharedDepartments\":[],\"closedTime\":null,\"approvalCount\":\"0\",\"isOverDue\":true,\"isTrashed\":false,\"createdTime\":\"2022-06-27T17:02:17.000Z\",\"id\":\"9770xxxxxxxxxxx\",\"isResponseOverdue\":false,\"customerResponseTime\":\"2022-06-27T17:02:17.000Z\",\"productId\":null,\"contactId\":\"9770xxxxxxxxxxx\",\"threadCount\":\"1\",\"secondaryContacts\":[],\"priority\":null,\"classification\":null,\"commentCount\":\"1\",\"taskCount\":\"0\",\"accountId\":\"9770xxxxxxxxxxx\",\"phone\":\"1 888 xxx xxxx\",\"webUrl\":\"https://desk.zoho.eu/support/siemplify/ShowHomePage.do#Cases/dv/9770xxxxxxxxxxx\",\"isSpam\":false,\"status\":\"On Hold\",\"entitySkills\":[],\"ticketNumber\":\"xxx\",\"customFields\":{},\"isArchived\":false,\"description\":\"Hello<\",\"timeEntryCount\":\"0\",\"channelRelatedInfo\":null,\"responseDueDate\":null,\"isDeleted\":false,\"modifiedBy\":\"9770xxxxxxxxxxx\",\"email\":\"support@zohosupport.com\",\"layoutDetails\":{\"id\":\"9770xxxxxxxxxxx\",\"layoutName\":\"Siemplify\"},\"channelCode\":null,\"cf\":{},\"slaId\":null,\"layoutId\":\"9770xxxxxxxxxxx\",\"assigneeId\":null,\"teamId\":\"9770xxxxxxxxxxx\",\"attachmentCount\":\"0\",\"isEscalated\":false,\"category\":null}",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the title for the ticket.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Title",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the description of the ticket.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Description",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the department in which you want to create a ticket.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Department Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the email of the contact for the ticket.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Contact",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Select One",
+            "Description": "Specify the type of the assignee. If \"Agent\" or \"Team\" is selected \"Assignee Name\" is required.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Assignee Type",
+            "OptionalValues": [
+                "Select One",
+                "Agent",
+                "Team"
+            ],
+            "Type": 15,
+            "Value": "Select One"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the assignee for the ticket. For the agent type you can provide an email address or display name.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Assignee Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "No Priority",
+            "Description": "Specify the priority for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Priority",
+            "OptionalValues": [
+                "No Priority",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "Type": 15,
+            "Value": "No Priority"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "No Classification",
+            "Description": "Specify the classification type for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Classification",
+            "OptionalValues": [
+                "No Classification",
+                "Question",
+                "Problem",
+                "Feature",
+                "Others"
+            ],
+            "Type": 15,
+            "Value": "No Classification"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Email",
+            "Description": "Specify the channel for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Channel",
+            "OptionalValues": [
+                "Email",
+                "Phone",
+                "Web",
+                "Twitter",
+                "Facebook",
+                "Chat",
+                "Forums"
+            ],
+            "Type": 15,
+            "Value": "Email"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the category for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Category",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the subcategory for the ticket.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Sub Category",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the due date for the ticket. Format: ISO 8601. Example: 2022-07-06T07:05:43Z.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Due Date",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a json object containing the custom fields that need to be added. Note: you need to provide the API names of the keys.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Custom Fields",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

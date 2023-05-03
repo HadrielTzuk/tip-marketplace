@@ -1,0 +1,63 @@
+{
+    "Description": "Sumo Logic Cloud SIEM provides threat detection and incident response for modern IT environments such as hybrid, multi-cloud, and microservices. Whether you’re looking for your first cloud SIEM, replacing your legacy SIEM, looking for an add-on solution to monitor cloud workloads, or seeking to consolidate your SIEM tools, Sumo Logic is the leading solution in the market.",
+    "DisplayName": "Sumo Logic Cloud SIEM",
+    "Identifier": "SumoLogicCloudSIEM",
+    "MarketingDisplayName": "Sumo Logic Cloud SIEM",
+    "Categories": [
+        "SIEM"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAYAAAClr220AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAZmSURBVHgB7Z2/cxNHFMdXmYxpYIwTGkhhUQBFYAwhRZLGcpFUYbAnVSrJTVqLv8DiL8Bu01iqUmWMh1SkADeQIgQz0ACF7SZpQjBDGmjIffayx+p8ln9E5yeT72dG+HQ/dt/uft/bt3sGKm8SnBD7zHtOCAMkPGGChCdMkPCECRKeMEHCEyZIeMIECU+YIOEJEyQ8YYKEJ0yQ8IQJEp4wQcITJkh4wgQJT5gg4QkTJDxhgoQnTJDwhAkSnjBBwhMmSHjCBAlPmCDhCRMkPGGChCdMkPCECRKeMEHCEyZIeCVSrf7gKpXv/Wdt7aWzoNG4ndnQat1zg4KEJ0x434l3mmr1iKvVjmfHg4KE947Tal1M/rzoBo3ShXf79u+u3X6S/PzDvXjxyg0PH/KeNzk5mnyqXV5IPhJot2td5Vy/vpp81v0xHtxonPHH5C0hf6KT2+3Hyeepr4uyL1+uumbzrL8+N/fQX4ORkSF3/vyHbnb2YmEkwO65uUduZeWZW19/6UZHj/j7Go1TWd3/ldTWJ4n9f/s6sIdPvX4mi1K97AptnJk56/uy2by7qX+og76HtM9PbiovjA82HD065MbGjvW1nUVUyvw3kFutX93Vq79teb1aPezFQkd7Y5IEOPDmzXe5su4lZaXJcaNx2i0s1PxxrXbDLS+nHcugMSB5OL+x8coPcNG1+/e/6TqHA3Q6T9xW1Gon3OLil8kgHXK9YHHBYMLq6reZwHEU6gh2F9FsnnPXrn3eda5Xf1J2cMC4f+K24GRpBNy+vLTMw+7WrUulTNGlRTwGOjSKASLqEDU2Nl67paVV72EIAe/qF4gOUYyPH0/qWMtEGH6Gaw8ePEui51p2jWMiBjSbd7pExyBiN4MazhMlpqZ+Tgbla7cXJiZuZE5A39Trp/zPuA6iMwTxYWcsktAW+nlpaX3Xq+a86IrKw0b6BifoNyUK73V2TIjH2wKIkMEL00u/iD0dzx4ZaWd2UE8sFAY/TEEMKsKjs+fnH2X3EAlj+yjzwoUffZnYz/NbTYlbwdQXREckwaY4olDe9PSyP0Z8s7Of/Ou4d7J7sHVx8avsO8KYmPhpx+JDXLFz0a54fPjO7BKm/TLYl+0UcojJyZu+I8Ng42H9btT4+Imu7+R3gXr9dNe1sbHNgo8HjsHNO0XIGYvu3ynxdI9N+WmMvCquN3bgwMzMuU125dvXC8p8G3GHukSXnjuURNovShMdlBbx6Iw452Lq4wM0loGlA/sZ8XqRz8e2y8+w0Yrh4f2re7t+KItSIx5TFVMf00fcQDyOKMi0FXIZ8f+i9KmWvIuV0fPn9UyIcZQj0T9IkB9ZQ36Zx+qV3F4pVXgs5eOIhuAQYpwYb0XIBQOdzmNXNvH0ymouvzXD4MaOspdpKq6DNuUFg6jibZZwf7yImZ9/6BcpgCPkV+I7sSGUS/35WYcyp6Zu7mrBsltKy/FCZ3Q6aUel+dwx36iwlZGHzgjJ9PT0rSy5ZTCK9uD6DfaRe2IfdpAK4CgsWlZW/vTtCfaFTfDdQnmsnMN2BatrFizUTR3xqprVfxA3K9dO56l/DhtY+YbV726hTDadw3bKlSt3vUOx4ApbOm/HYXnP20a9KE14rFrj/SAal4cOiFdUHIf7eCZsGKf3DhWu8PrNwsK4d44QcclF+cQQuXcStYugzQxkiCa0MxZbAIGyssw/x0Z6Prqlby8+TvruF7dTWq1Pkzcfr/1bEMi3EWgn/VEGpQmPyMH0wGsuppSVlb+y/Cjdlhj1XhxvJ/CdDiZChmkufU112kcFzkO8bUI9J08eye6NQfyViiu8Fqb9cBxIB/iSH4jYbs5zH23Kbz/06gNea6Xlvp1isYU3GdQRtzXUQflF+4M8x6tE9tl4BkdMdw8+2JSaFPVBfgcBYbOBnx8fntlNO/dCRf9t6MGBtw212keFoiQnCylM/tXYICLhHRBYTIScjsjFDEC0CzlzvCCJ3wsPKvq1qANCvLpkmi36ZQim6rm5zwZedKCId4BAfOTM/JLFTnLmQUbCEybo71wIEyQ8YYKEJ0yQ8IQJEp4wQcITJkh4wgQJT5gg4QkTJDxhgoQnTJDwhAkSnjBBwhMmSHjCBAlPmCDhCRMkPGGChCdMkPCECRKeMEHCEyZIeMIECU+YIOEJEyQ8YYKEJ0yQ8IQJEp4wQcITJvwDPpAnuL0zmmgAAAAASUVORK5CYII=",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "SumoLogicCloudSIEM",
+            "PropertyName": "API Root",
+            "PropertyDisplayName": "API Root",
+            "PropertyDescription": "API root of the Sumo Logic Cloud SIEM instance.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://{instance}"
+        },
+        {
+            "IntegrationIdentifier": "SumoLogicCloudSIEM",
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyDescription": "API Key of the Sumo Logic Cloud SIEM account. Note: API key has priority over other authentication method.",
+            "PropertyType": 3,
+            "IsMandatory": false,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "SumoLogicCloudSIEM",
+            "PropertyDisplayName": "Access ID",
+            "PropertyName": "Access ID",
+            "PropertyDescription": "Access ID of the Sumo Logic Cloud SIEM account. Note: both Access ID and Access Key are required for this type of authentication.",
+            "PropertyType": 2,
+            "IsMandatory": false,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "SumoLogicCloudSIEM",
+            "PropertyDisplayName": "Access Key",
+            "PropertyName": "Access Key",
+            "PropertyDescription": "Access Key of the Sumo Logic Cloud SIEM account. Note: both Access ID and Access Key are required for this type of authentication.",
+            "PropertyType": 3,
+            "IsMandatory": false,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "SumoLogicCloudSIEM",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Sumo Logic Cloud SIEM server is valid.",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M18.67 19.52a1.69 1.69 0 0 0 1.63-1.16v-2a1.67 1.67 0 0 0-1.62-1.16A1.7 1.7 0 0 0 17 16.34v2a1.72 1.72 0 0 0 1.67 1.18Z\"/><path d=\"M22 1H3a2 2 0 0 0-2 2v19a2 2 0 0 0 2 2h19a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-6.27 3.22h1.75v4.41a1 1 0 0 0 1.15 1.13A1.28 1.28 0 0 0 20 8.35V4.22h1.77v6.85H20.2v-.73a2.22 2.22 0 0 1-2 .93c-1.63 0-2.44-.84-2.44-2.17ZM4 8.86a5.2 5.2 0 0 0 1.24.81 2.86 2.86 0 0 0 1.12.21 1.29 1.29 0 0 0 1.14-.42v-.6a1.07 1.07 0 0 0-.6-.36l-.78-.17-.24-.06C4.51 8 3.82 7.65 3.53 7.07V5.35A2.77 2.77 0 0 1 6.22 4a4.16 4.16 0 0 1 3 1.08l-.97 1.13a3 3 0 0 0-2.07-.81 1.27 1.27 0 0 0-1.09.41v.52a1 1 0 0 0 .52.29h.18c.2 0 .48.12.83.19 1.41.32 2.17.66 2.49 1.3v1.78a2.81 2.81 0 0 1-2.77 1.38A4.56 4.56 0 0 1 3 10Zm9.37 12h-1.74v-4.28c0-.82-.33-1.32-1.1-1.32a1.21 1.21 0 0 0-1.21 1.36v4.22H7.56v-4.26c0-.87-.36-1.32-1.09-1.32a1.2 1.2 0 0 0-1.21 1.36v4.22H3.5V14h1.63v.75a2.15 2.15 0 0 1 2-1 2.09 2.09 0 0 1 1.92 1 2.38 2.38 0 0 1 2.07-1 2.1 2.1 0 0 1 2.3 2.29Zm8.61-2a3.39 3.39 0 0 1-3.3 2.14 3.42 3.42 0 0 1-3.35-2.21v-2.88a3.43 3.43 0 0 1 3.35-2.21A3.42 3.42 0 0 1 22 15.9Z\" style=\"fill-rule:evenodd\"/></svg>",
+    "Version": 3.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/sumo-logic-cloud-siem"
+}

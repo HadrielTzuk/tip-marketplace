@@ -1,0 +1,63 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Action will get as a parameter a list of Senders, or will work on User entities (if parameters are not provided), and will be able to remove the provided Senders from the existing rules. Note - to use this action, please make sure you have Organization Management permissions, as stated here: https://docs.microsoft.com/en-us/exchange/permissions-exo/feature-permissions",
+    "Id": -1,
+    "IntegrationIdentifier": "ExchangeExtensionPack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Remove Senders from Exchange-Siemplify Mail Flow Rules",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"success\":[\"test1@example.com\",\"test2@example.com\"],\"didn't_exist\":[\"test3@example.com\"],\"invalid\":[\"invalid\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Email Addresses",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the email addresses you would like to remove from the rule, in a comma separated list. If no parameter will be provided, action will work with entities.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Rule to remove Senders from",
+            "Type": 15,
+            "DefaultValue": "Siemplify - Senders List - Permanently Delete",
+            "Value": "Siemplify - Senders List - Permanently Delete",
+            "IsMandatory": true,
+            "Description": "Specify the rule to remove the Senders from. If the rule doesn't exist - action will do nothing.",
+            "OptionalValues": [
+                "Siemplify - Senders List - Permanently Delete"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Should remove senders' domains from the corresponding Domains List rule as well?",
+            "Type": 1,
+            "DefaultValue": false,
+            "Value": false,
+            "IsMandatory": false,
+            "Description": "Specify whether the action should automatically take the domains of the provided email addresses and remove them as well from the corresponding domain rules (same rule action for domains)",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}",
+    "IsAsync": true
+}

@@ -1,0 +1,25 @@
+{
+    "CreationTimeUnixTimeInMs": 1527521072245,
+    "Creator": "Siemplify System",
+    "Description": "Delete case files that are older than X days from Done and Error folders of the ETL",
+    "Id": -1,
+    "Integration": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527521072245,
+    "Name": "Delete Case Files History",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527521072245,
+            "DefaultValue": "10",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1527521072245,
+            "Name": "Days",
+            "Type": 1
+        }
+    ],
+    "RunIntervalInSeconds": 86400,
+    "Version": 1
+}

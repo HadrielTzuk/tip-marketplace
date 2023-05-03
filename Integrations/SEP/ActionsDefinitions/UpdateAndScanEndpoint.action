@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1517733432992, 
+    "Creator": "admin", 
+    "Description": "Update and scan an endpoint", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SEP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1517733432992, 
+    "Name": "UpdateAndScanEndpoint", 
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

@@ -1,0 +1,62 @@
+{
+    "CreationTimeUnixTimeInMs": 1560871511871,
+    "Creator": "Admin",
+    "DefaultResultValue": "",
+    "Description": "Update detection in Crowdstrike Falcon.",
+    "Id": -1,
+    "IntegrationIdentifier": "CrowdStrikeFalcon",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1560871511871,
+    "Name": "Update Detection",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID of the detection that needs to be updated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Detection ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": "Select One",
+            "Description": "Specify the new status for the detection.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Status",
+            "Type": 15,
+            "OptionalValues": [
+                "new",
+                "in_progress",
+                "true_positive",
+                "false_positive",
+                "ignored",
+                "closed",
+                "Select One"
+            ],
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the email address of the Crowdstrike Falcon user, who needs to be assigned to this detection",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Assign Detection to",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "TimeoutSeconds": 600,
+    "Version": 1.0
+}

@@ -1,0 +1,36 @@
+{
+    "CreationTimeUnixTimeInMs": 1536076018353, 
+    "Creator": "Admin", 
+    "Description": "Query XForce for hash information", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"malware\": {\"hash\": \"0x474B9CCF5AB9D72CA8A333889BBB3000\", \"family\": [\"tsunami\"], \"origins\": {\"downloadServers\": {}, \"subjects\": {}, \"CnCServers\": {\"count\": 1, \"rows\": [{\"count\": 483, \"origin\": \"CnC\", \"domain\": \"domain.net\", \"filepath\": \"v.html\", \"ip\": \"1.1.1.1\", \"uri\": \"http://domain.net/v.html\", \"lastseen\": \"2014-10-20T23:19:00Z\", \"md5\": \"474B9CCF5AB9D72CA8A333889BBB3000\", \"type\": \"CnC\", \"firstseen\": \"2014-10-20T23:19:00Z\", \"schema\": \"http\"}]}, \"emails\": {}, \"external\": {\"detectionCoverage\": 46, \"family\": [\"heuristic\", \"trojan\"]}}, \"created\": \"2014-10-20T23:19:00Z\", \"familyMembers\": {\"tsunami\": {\"count\": 61}}, \"md5\": \"0x474B9CCF5AB9D72CA8A333889BBB3000\", \"type\": \"md5\", \"risk\": \"high\"}, \"tags\": []}, \"Entity\": \"474B9CCF5AB9D72CA8A333889BBB3000\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "XForce", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1536076018353, 
+    "Name": "Get Hash Info", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1536076018353, 
+            "CustomActionId": 31, 
+            "DefaultValue": "", 
+            "Description": "The value of the threshold can be: low, medium or high.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1536076018353, 
+            "Name": "Threshold", 
+            "Type": 0, 
+            "Value": "", 
+            "Values": []
+        }
+    ], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import add_prefix_to_dict_keys, construct_csv, is_dict_in_list\nfrom XForceManager import XForceManager\nimport base64\nimport json\n\nHASH = EntityTypes.FILEHASH\nSCRIPT_NAME = \"IBM XForce - Get Hash Info\"\nRISK_MAP = {'high': 3, 'medium': 2, 'low': 1}\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n\n    conf = siemplify.get_configuration('XForce')\n    address = conf['Address']\n    api_key = conf['Api Key']\n    api_password = conf['Api Password']\n    use_ssl = conf['Use SSL'].lower() == 'true'\n\n    xf_manager = XForceManager(api_key, api_password, address, use_ssl)\n    threshold = siemplify.parameters.get('Threshold', 'low')\n\n    risk_score = 'low'\n    enriched_entities = []\n    csv_results = []\n    entity_with_score = []\n    output_message = ''\n\n    for entity in siemplify.target_entities:\n        if entity.entity_type == HASH:\n            try:\n                report = xf_manager.get_hash_info(entity.identifier)\n                if report:\n                    risk_score = report.get('malware').get('risk')\n                    families_list = report.get('malware').get('origins').get('external').get('family')\n                    families = '| '.join(str(family) for family in families_list)\n                    created = str(report.get('malware').get('created'))\n\n                    # Attach report\n                    siemplify.result.add_entity_attachment(entity.identifier, \"IBM_XForce_Report.json\", base64.b64encode(json.dumps(report)))\n\n                    # Build csv table (URL - Score - Categories(comma separated))\n                    csv_results.append({\"HASH\": entity.identifier, \"Created\": created, \"Risk\": str(risk_score), \"Families\": families})\n\n                    # Enrich - Score and Families (comma separated)\n                    enrich_dict = {\"Risk\": str(risk_score), \"Families\": families}\n                    flat_report = add_prefix_to_dict_keys(enrich_dict, \"IBM XForce\")\n                    entity.additional_properties.update(flat_report)\n                    entity.is_enriched = True\n\n                    threshold_int = RISK_MAP.get(threshold)\n                    risk_score_int = RISK_MAP.get(risk_score)\n                    if threshold_int < risk_score_int:\n                        # Add Insight\n                        insight_msg = 'IBM XForce - entity was marked as malware'\n                        siemplify.add_entity_insight(entity, insight_msg, triggered_by='XForce')\n\n                    entity_with_score.append({entity.identifier: risk_score})\n                    enriched_entities.append(entity)\n\n            except Exception as e:\n                # An error occurred - skip entity and continue\n                siemplify.LOGGER.error(\"An error occurred on entity: {}.\\n{}.\".format(entity.identifier, str(e)))\n                siemplify.LOGGER.exception(e)\n\n    if csv_results:\n        # Add csv table\n        siemplify.result.add_data_table(\"Summary\", construct_csv(csv_results))\n\n    if entity_with_score:\n        for url_with_score in entity_with_score:\n            output_message = '{0} {1} risk score marked as: {2} \\n'.format(output_message, url_with_score.keys()[0], url_with_score.values()[0])\n        siemplify.update_entities(enriched_entities)\n\n    else:\n        output_message = 'No entities were enriched.'\n\n    siemplify.end(output_message, str(risk_score))\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "is_risk", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 1.0
+}

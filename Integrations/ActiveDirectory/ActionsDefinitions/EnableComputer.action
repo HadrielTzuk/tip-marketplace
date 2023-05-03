@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1512666057801, 
+    "Creator": "admin", 
+    "Description": "Enable a computer account", 
+    "Id": -1, 
+    "IntegrationIdentifier": "ActiveDirectory", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1512666057801, 
+    "Name": "Enable computer", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

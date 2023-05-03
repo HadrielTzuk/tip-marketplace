@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 1517416644721,
+    "Creator": "admin",
+    "Description": "Download attachments related to a table record in ServiceNow.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"size_bytes\": \"62192\", \"file_name\": \"image_xxx.png\", \"sys_mod_count\": \"3\", \"average_image_color\": \"#251f30\", \"image_width\": \"1049\", \"sys_updated_on\": \"2020-11-23 12:11:54\", \"sys_tags\": \"\", \"table_name\": \"incident\", \"sys_id\": \"a539ce1b2f2c6010c518532axxxx\", \"image_height\": \"611\", \"sys_updated_by\": \"admin\", \"download_link\": \"https://dev98xxx.service-now.com/api/now/v1//attachment/a539ce1b2f2c6010c518532axxxx/file\", \"content_type\": \"image/png\", \"sys_created_on\": \"2020-11-23 12:11:54\", \"size_compressed\": \"55526\", \"compressed\": \"true\", \"state\": \"available\", \"table_sys_id\": \"0043fde92fd02010c518532axxxx\", \"chunk_size_bytes\": \"700000\", \"hash\": \"ffe386b22c572b14134533da96c9dd44be89bb8da785a16b073faxxxx\", \"sys_created_by\": \"admin\", \"absolute_file_path\": \"/opt/siemplify/siemplify_xxxx/xxxxx\"}, {\"size_bytes\": \"26625\", \"file_name\": \"image (2).png\", \"sys_mod_count\": \"3\", \"average_image_color\": \"#251f30\", \"image_width\": \"805\", \"sys_updated_on\": \"2020-11-23 12:11:54\", \"sys_tags\": \"\", \"table_name\": \"incident\", \"sys_id\": \"7539ce1b2f2c6010c518532axxxx\", \"image_height\": \"599\", \"sys_updated_by\": \"admin\", \"download_link\": \"https://dev98xxx.service-now.com/api/now/v1//attachment/7539ce1b2f2c6010c518532axxxx/file\", \"content_type\": \"image/png\", \"sys_created_on\": \"2020-11-23 12:11:54\", \"size_compressed\": \"20733\", \"compressed\": \"true\", \"state\": \"available\", \"table_sys_id\": \"0043fde92fd02010c518532axxx\", \"chunk_size_bytes\": \"700000\", \"hash\": \"640ac979019cb2fd968aa16fc7d1bce16b0c980e3995a8360axxxx\", \"sys_created_by\": \"admin\", \"absolute_file_path\": \"/opt/siemplify/siemplify_xxxx/xxx\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517416644721,
+    "Name": "Download Attachments",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify name of the table, where the record from which you want to download attachments is located. Example: incident.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Table Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify sys id of the record from which you want to download attachment.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Record Sys ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517836054743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the absolute folder path, where you want to store the downloaded attachments.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517836054743,
+            "Name": "Download Folder Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will overwrite files with the same name.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Overwrite",
+            "Type": 1,
+            "Value": false
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

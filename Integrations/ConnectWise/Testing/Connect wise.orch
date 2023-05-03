@@ -1,0 +1,383 @@
+{
+  "Identifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "Connect wise",
+  "Category": 1,
+  "Description": "",
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "1feb5ba6-1bf8-4785-99a0-035b6a6d372e",
+      "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+      "ParentStepIdentifiers": [
+        "6c5b5889-343c-44c0-b100-64b8814ae528"
+      ],
+      "ParentStepIdentifier": "6c5b5889-343c-44c0-b100-64b8814ae528",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ConnectWise_Get Ticket_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ConnectWise_Get Ticket",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "1feb5ba6-1bf8-4785-99a0-035b6a6d372e",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptName",
+          "Value": "ConnectWise_Get Ticket",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "1feb5ba6-1bf8-4785-99a0-035b6a6d372e",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Ticket Id\":\"[ConnectWise_Create Ticket_1.ticket_id]\"}",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "1feb5ba6-1bf8-4785-99a0-035b6a6d372e",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519206248459,
+      "ModificationTimeUnixTimeInMs": 1519206248459
+    },
+    {
+      "Identifier": "32651df5-fa96-473a-83ac-0cfe5653d0bf",
+      "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+      "ParentStepIdentifiers": [
+        "1105e831-ddd5-4f77-a7e8-e5147fee2868"
+      ],
+      "ParentStepIdentifier": "1105e831-ddd5-4f77-a7e8-e5147fee2868",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ConnectWise_Close Ticket_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ConnectWise_Close Ticket",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "32651df5-fa96-473a-83ac-0cfe5653d0bf",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptName",
+          "Value": "ConnectWise_Close Ticket",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "32651df5-fa96-473a-83ac-0cfe5653d0bf",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Ticket Id\":\"[ConnectWise_Create Ticket_1.ticket_id]\",\"Custom Close Status\":\"Completed\"}",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "32651df5-fa96-473a-83ac-0cfe5653d0bf",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519206248459,
+      "ModificationTimeUnixTimeInMs": 1519206248459
+    },
+    {
+      "Identifier": "24953649-99cd-417c-96be-23d42ce08644",
+      "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+      "ParentStepIdentifiers": [
+        "1feb5ba6-1bf8-4785-99a0-035b6a6d372e"
+      ],
+      "ParentStepIdentifier": "1feb5ba6-1bf8-4785-99a0-035b6a6d372e",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ConnectWise_Update Ticket_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ConnectWise_Update Ticket",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "24953649-99cd-417c-96be-23d42ce08644",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptName",
+          "Value": "ConnectWise_Update Ticket",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "24953649-99cd-417c-96be-23d42ce08644",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Ticket Id\":\"[ConnectWise_Create Ticket_1.ticket_id]\",\"Summary\":\"PB Update Connect wise - Test action\",\"Type Name\":\"\",\"SubType Name\":\"\",\"Item Name\":\"\"}",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "24953649-99cd-417c-96be-23d42ce08644",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519206248459,
+      "ModificationTimeUnixTimeInMs": 1519206248459
+    },
+    {
+      "Identifier": "17373eeb-c0dd-4093-a058-3cf37c088156",
+      "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+      "ParentStepIdentifiers": [
+        "24953649-99cd-417c-96be-23d42ce08644"
+      ],
+      "ParentStepIdentifier": "24953649-99cd-417c-96be-23d42ce08644",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ConnectWise_Add Comment To Ticket_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ConnectWise_Add Comment To Ticket",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "17373eeb-c0dd-4093-a058-3cf37c088156",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptName",
+          "Value": "ConnectWise_Add Comment To Ticket",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "17373eeb-c0dd-4093-a058-3cf37c088156",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Ticket Id\":\"[ConnectWise_Create Ticket_1.ticket_id]\",\"Comment\":\"pb comment\",\"Internal\":\"False\"}",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "17373eeb-c0dd-4093-a058-3cf37c088156",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519206248459,
+      "ModificationTimeUnixTimeInMs": 1519206248459
+    },
+    {
+      "Identifier": "6c5b5889-343c-44c0-b100-64b8814ae528",
+      "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+      "ParentStepIdentifiers": [
+        "3383872c-6b73-4d8f-b1b0-8df3c5264e4f"
+      ],
+      "ParentStepIdentifier": "3383872c-6b73-4d8f-b1b0-8df3c5264e4f",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ConnectWise_Create Ticket_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ConnectWise_Create Ticket",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "6c5b5889-343c-44c0-b100-64b8814ae528",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptName",
+          "Value": "ConnectWise_Create Ticket",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "6c5b5889-343c-44c0-b100-64b8814ae528",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Company\":\"Siemplify\",\"Board\":\"Siemplify - T&M\",\"Summary\":\"desc pb\",\"Status\":\"Unassigned\",\"Priority\":\"Priority 3 - Normal Response\"}",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "6c5b5889-343c-44c0-b100-64b8814ae528",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519206248459,
+      "ModificationTimeUnixTimeInMs": 1519206248459
+    },
+    {
+      "Identifier": "3383872c-6b73-4d8f-b1b0-8df3c5264e4f",
+      "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ConnectWise_Create Alerts Ticket_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ConnectWise_Create Alerts Ticket",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "3383872c-6b73-4d8f-b1b0-8df3c5264e4f",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptName",
+          "Value": "ConnectWise_Create Alerts Ticket",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "3383872c-6b73-4d8f-b1b0-8df3c5264e4f",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Company\":\"Siemplify\",\"Board\":\"Siemplify - T&M\",\"Status\":\"Unassigned\",\"Priority\":\"Priority 3 - Normal Response\",\"Initial Description\":\"desc\"}",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "3383872c-6b73-4d8f-b1b0-8df3c5264e4f",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519206248459,
+      "ModificationTimeUnixTimeInMs": 1519206248459
+    },
+    {
+      "Identifier": "1105e831-ddd5-4f77-a7e8-e5147fee2868",
+      "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+      "ParentStepIdentifiers": [
+        "17373eeb-c0dd-4093-a058-3cf37c088156"
+      ],
+      "ParentStepIdentifier": "17373eeb-c0dd-4093-a058-3cf37c088156",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ConnectWise_Get Ticket_2",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ConnectWise_Get Ticket",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "1105e831-ddd5-4f77-a7e8-e5147fee2868",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptName",
+          "Value": "ConnectWise_Get Ticket",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "1105e831-ddd5-4f77-a7e8-e5147fee2868",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Ticket Id\":\"[ConnectWise_Create Ticket_1.ticket_id]\"}",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "1105e831-ddd5-4f77-a7e8-e5147fee2868",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519206248459,
+      "ModificationTimeUnixTimeInMs": 1519206248459
+    },
+    {
+      "Identifier": "ee62394e-be78-4769-8400-e7e2c26e0284",
+      "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+      "ParentStepIdentifiers": [
+        "32651df5-fa96-473a-83ac-0cfe5653d0bf"
+      ],
+      "ParentStepIdentifier": "32651df5-fa96-473a-83ac-0cfe5653d0bf",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ConnectWise_Delete Ticket_2",
+      "IsAutomatic": false,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ConnectWise_Delete Ticket",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "ee62394e-be78-4769-8400-e7e2c26e0284",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptName",
+          "Value": "ConnectWise_Delete Ticket",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "ee62394e-be78-4769-8400-e7e2c26e0284",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Ticket Id\":\"[ConnectWise_Create Ticket_1.ticket_id]\"}",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        },
+        {
+          "ParentStepIdentifier": "ee62394e-be78-4769-8400-e7e2c26e0284",
+          "ParentWorkflowIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519206248459,
+          "ModificationTimeUnixTimeInMs": 1519206248459
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519206248459,
+      "ModificationTimeUnixTimeInMs": 1519206248459
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "8248a123-7b99-48ce-95ff-ae31eceb8527",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "b2468c75-51f9-4db5-9d4c-5091e1ea3d93",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Connect wise",
+      "AllEnvironments": "",
+      "Id": 67,
+      "CreationTimeUnixTimeInMs": 1519206248459,
+      "ModificationTimeUnixTimeInMs": 1519206248459
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 67,
+  "CreationTimeUnixTimeInMs": 1519206248459,
+  "ModificationTimeUnixTimeInMs": 1519206248459
+}

@@ -1,0 +1,50 @@
+{
+    "Description": "A threat intelligence platform designed to accelerate security operations.",
+    "DisplayName": "ThreatQ",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/threatq",
+    "Identifier": "ThreatQ",
+    "Categories": [
+        "Threat Intelligence",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ThreatQ",
+            "IsMandatory": true,
+            "PropertyDisplayName": "ServerAddress",
+            "PropertyName": "ServerAddress",
+            "PropertyType": "4",
+            "Value": "xx.xx.xx.xx"
+        },
+        {
+            "IntegrationIdentifier": "ThreatQ",
+            "IsMandatory": true,
+            "PropertyDisplayName": "ClientId",
+            "PropertyName": "ClientId",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ThreatQ",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ThreatQ",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M23.6,9c0,2-1.7,2.4-1.7,2.4c0.4-0.1,0.4-0.7,0.4-0.7c-0.5,0.2-1,0.1-1.1,0.1c0,0,0,0,0,0l-1.1-1.1c0,0,0,0,0,0l-0.4-1.2\n\t\t\tc0-0.1-0.1-0.1-0.1,0L19.3,9c0,0-0.1,0.1-0.1,0l-1.4-0.5c0,0,0,0,0,0c-0.1-0.1-1.3-0.9-4.4-0.3c-3.1,0.5-5,0.3-5.1,0.3\n\t\t\tc0,0,0,0,0,0C3.8,9,3.6,13.9,3.5,14.2c0,0,0,0,0,0L2.3,16c0,0,0,0,0,0V17c0,0,0,0,0,0l-1.1,1.8c0,0,0,0.1,0.1,0.1l1.7,0\n\t\t\tc0,0,0.1,0,0.1-0.1c0.2-2.9,2.9-4.3,3.3-4.5c0,0,0.1,0,0.1,0L7.1,15c0,0,0,0.1,0,0.1l-0.9,1c0,0,0,0.1,0,0.1l1.1,0.6\n\t\t\tc0,0,0,0,0,0.1L7.6,18c0,0,0,0.1,0.1,0.1l1.7,0c0.1,0,0.1-0.1,0.1-0.1l-1.1-1.5c0,0,0-0.1,0-0.1l1.3-1.2c0,0,0,0,0.1,0\n\t\t\tc2.2,0.8,3.6,0.2,3.9,0.1c0,0,0.1,0,0.1,0l0.9,1.8c0,0,0,0,0,0.1l-0.5,1c0,0,0,0,0,0.1c0.2,0.9,0.9,1,1.4,1c0.2,0,0.3-0.2,0.2-0.3\n\t\t\tc-0.1-0.6-0.1-2-0.1-2l0.1-2.2c0,0,0.1-0.1,0.1-0.1l1.7,0.7c0,0,0.1,0.1,0,0.1l-0.7,0.6c0,0,0,0,0,0.1v0.6c0,0.2,0.2,0.3,0.4,0.2\n\t\t\tl2-1.6c0,0,0-0.1,0-0.1l-1.1-1.3c0,0,0-0.1,0-0.1l0.5-0.2c0,0,0,0,0.1,0l2.8,1.4c0,0,0,0,0,0c1.5-0.4,1.7-1.5,1.7-1.5l-0.4-0.5\n\t\t\tC24.4,10.9,23.6,9,23.6,9z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 11.0,
+    "MarketingDisplayName": "ThreatQ"
+}

@@ -1,0 +1,15 @@
+INTEGRATION_NAME = 'McAfeeMvisionEPOV2'
+INTEGRATION_DISPLAY_NAME = 'McAfee Mvision ePO V2'
+DEFAULT_SCOPES = 'epo.device.r epo.device.w epo.evt.r epo.taggroup.r epo.taggroup.w epo.tags.r epo.tags.w mi.user.investigate soc.inv.ade'
+PING_SCRIPT_NAME = '{} - Ping'.format(INTEGRATION_NAME)
+ADD_TAG_SCRIPT_NAME = '{} - Add Tag To Device'.format(INTEGRATION_NAME)
+REMOVE_TAG_SCRIPT_NAME = '{} - Remove Tag From Device'.format(INTEGRATION_NAME)
+ENRICH_ENDPOINT_SCRIPT_NAME = '{} - Enrich Endpoint'.format(INTEGRATION_NAME)
+ENRICHMENT_PREFIX = 'MMV_EPO_V2'
+LIST_TAGS_SCRIPT_NAME = '{} - List Tags'.format(INTEGRATION_NAME)
+LIST_DEVICES_SCRIPT_NAME = '{} - List Devices'.format(INTEGRATION_NAME)
+PER_PAGE_LIMIT = 100
+DEFAULT_LIMIT_TAGS = 100
+DEFAULT_LIMIT_DEVICES = 100
+DEFAULT_VENDOR = "McAfee"
+DEFAULT_PRODUCT = "McAfeeMVisionEPO"

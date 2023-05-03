@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1506519715480,
+    "Creator": "admin",
+    "Description": "Ability to set Case Description from playbooks.",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506519715480,
+    "Name": "Update Case Description",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1510914827832,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what description should be set for the case.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1510914827832,
+            "Name": "Description",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

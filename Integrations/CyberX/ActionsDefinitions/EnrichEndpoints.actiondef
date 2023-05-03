@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1542558561242, 
+    "Creator": "Admin", 
+    "Description": "Fetch endpoint information.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "CyberX", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1542558561242, 
+    "Name": "Enrich Endpoints", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyDataModel import EntityTypes\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv, add_prefix_to_dict\nfrom CyberXManager import CyberXManager\n\nACTION_NAME = 'CyberX_Enrich Endpoint'\nPROVIDER = 'CyberX'\nCYBERX_PREFIX = 'CX_'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n\n    config = siemplify.get_configuration(PROVIDER)\n    api_root = config['API Root']\n    access_token = config['Access Token']\n    use_ssl = config.get('Use SSL', 'false').lower() == 'true'\n\n    cyberx_manager = CyberXManager(api_root=api_root, access_token=access_token, use_ssl=use_ssl)\n\n    result_value = False\n    endpoint_information = None\n    success_entities = []\n    errors = []\n\n    target_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.ADDRESS or\n                       entity.entity_type == EntityTypes.HOSTNAME]\n\n    for entity in target_entities:\n        try:\n            if entity.entity_type == EntityTypes.ADDRESS:\n                endpoint_information = cyberx_manager.get_device_by_ip_address(entity.identifier)\n            elif entity.entity_type == EntityTypes.HOSTNAME:\n                endpoint_information = cyberx_manager.get_device_by_host_name(entity.identifier)\n\n            if endpoint_information:\n                siemplify.result.add_entity_table(entity.identifier, flat_dict_to_csv(dict_to_flat(\n                    endpoint_information)))\n                entity.additional_properties.update(add_prefix_to_dict(dict_to_flat(endpoint_information),\n                                                                       CYBERX_PREFIX))\n                result_value = True\n                success_entities.append(entity)\n        except Exception as err:\n            error_message = 'Error occurred fetching endpoint data for \"{0}\", ERROR: {1}'.format(\n                entity.identifier,\n                err.message\n            )\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    if success_entities:\n        output_message = 'The following entities were enriched: {0}'.format(\", \".join([entity.identifier for\n                                                                                       entity in success_entities]))\n    else:\n        output_message = 'No entities were enriched.'\n\n    if errors:\n        output_message = '{0} \\n \\n Errors: \\n {1}'.format(\n            output_message,\n            '\\n '.join(errors)\n        )\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 2.0
+}

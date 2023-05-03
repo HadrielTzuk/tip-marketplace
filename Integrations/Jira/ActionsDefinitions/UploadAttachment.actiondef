@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1516267324982,
+    "Creator": "admin",
+    "Description": "Add an attachment to an issue.",
+    "Id": -1,
+    "IntegrationIdentifier": "Jira",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1516267324982,
+    "Name": "Upload Attachment",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516267455235,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The key of the issue",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516267455235,
+            "Name": "Issue Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516267455235,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The paths of the files to upload, comma separated",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516267455235,
+            "Name": "File Paths",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

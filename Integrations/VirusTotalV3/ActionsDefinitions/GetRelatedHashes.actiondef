@@ -1,0 +1,51 @@
+{
+    "CreationTimeUnixTimeInMs": "1570446244",
+    "Creator": "admin",
+    "Description": "Get related hashes to the provided entities from VirusTotal. Note: this action requires a VT Enterprise token. Supported entities: IP, URL, Filehash, Hostname. Note: only MD5, SHA-1 and SHA-256 are supported.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"sha256_hashes\": [\"8b2e701e91101955c73865589a4c72999aeabc11043f712e0xxxxx\", \"0b01ec5df4dfdafc887303ac3d9c0ab1d13fd8aaf60499168fxxxx\", \"e23334f6454b5a889bb232211c4ec9df91a10e6c587ed20a9200xxxx\", \"cf29825d5b1bff484597c35f5b9e6c8e32068a0105715569xxxx\", \"729b785931e3acb5a45220c588f9f5a6638a2720ebb41fc606xxxx\"],\"EntityResults\":[{\"Entity\":\"HTTP://MARKOSSOLOMON.COM/F1Q7QX.PHP\",\"EntityResult\":[\"576448fd7f4d93f8b4def78755425580a1dfb9f7404d6c73378c74xxxxxxxxxx\",\"69fb7b96d2da05f2aef88efc9e788ede343c9112ae164fe026e504xxxxxxxxxx\"]},{\"Entity\":\"192.xxx.xx.x\",\"EntityResult\":[\"81c1ecc1bbb512788887bcab692e6cd6a9a0ffc1f5620c3305c54dxxxxxxxxxx\",\"e206fd22c59022f7ccf96f8b389fd78c07409adc1f9eb4ef2b2702xxxxxxxxxx\"]}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "VirusTotalV3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Get Related Hashes",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "Combined",
+            "Description": "Specify how the JSON result should look like. If \"Combined\" is selected then action will return all of the unique results that were found among the provided entities. If \"Per Entity\" is selected, then action will return all of the unique items per entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Results",
+            "Type": 15,
+            "Value": "Combined",
+            "OptionalValues": [
+                "Combined",
+                "Per Entity"
+            ]
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": 40,
+            "Description": "Specify how many URLs to return. Depending on the parameter \"Results\", this parameter will behave differently. For \"Combined\" the limit will define how many results to return from ALL entities. For \"Per Entity\" this parameter dictates how many results to return per entity. Default: 40.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Max Hashes To Return",
+            "Type": 0,
+            "Value": 40
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\", \"DestinationURL\", \"ADDRESS\", \"HOSTNAME\"]}",
+    "Type": 0,
+    "Version": 1.0
+}

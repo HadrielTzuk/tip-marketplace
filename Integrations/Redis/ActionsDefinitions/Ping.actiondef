@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1529480804312,
+    "Creator": "admin",
+    "Description": "Ping the Redis server",
+    "Id": -1,
+    "IntegrationIdentifier": "Redis",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1529480804312,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom RedisManager import RedisManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('Redis')\n    server = conf['Server Address']\n    port = int(conf['Port'])\n\n    redis_manager = RedisManager(server, port, 0)\n\n    # Check if the connection is established or not.\n    redis_manager.test_connectivity()\n\n    # If no exception occur - then connection is successful\n    output_message = \"Successfully connected to Redis at {server_addr}:{port}.\".format(server_addr=server, port=port)\n    siemplify.end(output_message, True)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_connect",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,82 @@
+{
+    "CreationTimeUnixTimeInMs": 1524560820281,
+    "Creator": "klim.lyapin@siemplify.co",
+    "Description": "Update Azure Sentinel Custom Hunting Rule",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Properties\": {\"Category\": \"Log Management O\", \"Tactics\": [\"NewCustomTactic\", \"NewNotCustomTactic\"], \"Tags\": [{\"Name\": \"description\", \"Value\": \"New Description\"}, {\"Name\": \"tactics\", \"Value\": \"NewCustomTactic\"}, {\"Name\": \"tactics\", \"Value\": \"NewNotCustomTactic\"}], \"Version\": 2, \"Display_Name\": \"New Display Name\", \"Query\": \"let timeframe = 7d;AWSCloudTrail| where TimeGenerated >= ago(timeframe)| where  EventName in~ (\\\"AttachGroupPolicy\\\", \\\"AttachRolePolicy\\\", \\\"AttachUserPolicy\\\", \\\"CreatePolicy\\\",\\\"DeleteGroupPolicy\\\", \\\"DeletePolicy\\\", \\\"DeleteRolePolicy\\\", \\\"DeleteUserPolicy\\\", \\\"DetachGroupPolicy\\\",\\\"PutUserPolicy\\\", \\\"PutGroupPolicy\\\", \\\"CreatePolicyVersion\\\", \\\"DeletePolicyVersion\\\", \\\"DetachRolePolicy\\\", \\\"CreatePolicy\\\")| project TimeGenerated, EventName, EventTypeName, UserIdentityAccountId, UserIdentityPrincipalid, UserAgent, UserIdentityUserName, SessionMfaAuthenticated, SourceIpAddress, AWSRegion, EventSource, AdditionalEventData, ResponseElements| extend timestamp = TimeGenerated, IPCustomEntity = SourceIpAddress, AccountCustomEntity = UserIdentityAccountId\"}, \"ETag\": \"W/\\\"datetime'2020-01-23T21%3A14%3A33.2335395Z'\\\"\", \"ID\": \"subscriptions/a052d33b-b7c4-4dc7-9e17-5c89ea594669/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/sentinelwork01/savedSearches/a5a24268-XXXX-XXXX-XXXX-4ab6c9b7ad5b\", \"Name\": \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftAzureSentinel",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524560820281,
+    "Name": "Update Custom Hunting Rule",
+    "Parameters": [
+        {
+            "CustomActionId": -1,
+            "IsMandatory": true,
+            "DefaultValue": "",
+            "Description": "Hunting Rule ID",
+            "Name": "Hunting Rule ID",
+            "Value": null,
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Display name of the new custom hunting rule",
+            "Name": "Display Name",
+            "Value": null,
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Query of the new custom hunting rule",
+            "Name": "Query",
+            "Value": null,
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Description of the new custom hunting rule",
+            "Name": "Description",
+            "Value": null,
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "Tactics of the new custom hunting rule. Comma-separated values.",
+            "Name": "Tactics",
+            "Value": null,
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

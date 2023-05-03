@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1510641022356, 
+    "Creator": "Admin", 
+    "Description": "Update McAfee Agent on the provided endpoints in McAfee ePO. Task for Windows: DAT_Update_Windows_CWS. Task for Linux: DAT_Update_Linux_CWS. Supported entities: Hostname, IP.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"status\": \"success\"}, \"Entity\": \"Host\"}, {\"EntityResult\": {\"status\": \"failure\"}, \"Entity\": \"Host2\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1, 
+    "IntegrationIdentifier": "McAfeeEPO", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1510641022356, 
+    "Name": "Update Mcafee Agent", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1513005977930, 
+            "CustomActionId": -1, 
+            "DefaultValue": "DAT_Update_Windows_CWS",
+            "Description": "Specify what task should be executed in order to update the McAfee Agent. Default for Windows is DAT_Update_Windows_CWS. For Linux it’s DAT_Update_Linux_CWS",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1513005977930, 
+            "Name": "Task Name", 
+            "Type": 0, 
+            "Value": "DAT_Update_Windows_CWS"
+        }
+    ], 
+    "ScriptResultName": "Update_Status", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 2.0
+}

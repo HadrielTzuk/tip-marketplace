@@ -1,0 +1,45 @@
+{
+  "Categories": [
+    "IT & Infrastructure"
+  ],
+  "Description": "Automox is the modern, cloud-native endpoint-hardening platform that empowers organizations to remediate vulnerabilities faster than they can be weaponized.",
+  "DisplayName": "Automox",
+  "DocumentationLink": "https://integrations.siemplify.co/doc/automox",
+  "Identifier": "Automox",
+  "PythonVersion": 2,
+  "ImageBase64": "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",
+  "IntegrationProperties": [
+    {
+      "IntegrationIdentifier": "Automox",
+      "IsMandatory": true,
+      "PropertyDisplayName": "API Root",
+      "PropertyName": "API Root",
+      "PropertyType": "2",
+      "PropertyDescription": "API root of the Automox instance.",
+      "Value": "https://{{api_root}}"
+    },
+    {
+      "IntegrationIdentifier": "Automox",
+      "IsMandatory": true,
+      "PropertyDisplayName": "API Key",
+      "PropertyName": "API Key",
+      "PropertyType": "3",
+      "PropertyDescription": "API key of the Automox instance.",
+      "Value": ""
+    },
+    {
+      "IntegrationIdentifier": "Automox",
+      "IsMandatory": true,
+      "PropertyDisplayName": "Verify SSL",
+      "PropertyName": "Verify SSL",
+      "PropertyType": "0",
+      "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Automox is valid.",
+      "Value": true
+    }
+  ],
+  "SVGImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"25\" height=\"25\" fill=\"none\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"m1.5 18.7 9.266-15.502h3.802L23.5 18.699l-1.738 3.103H3.387L1.5 18.7ZM13.258 4.255h-1.895L3.1 18.199h12.735l-.864-1.546H5.644l7.614-12.397Zm-5.647 11.3 6.605-10.744 8.006 13.887-.958 1.597-7.048-12.558-4.877 7.817H7.61Zm6.605-5.666 6.181 11.02H4.155L3.1 19.286H17.74l-4.483-7.931.958-1.464Zm.183 5.665-1.77-3.136-1.863 3.136H14.4Z\" clip-rule=\"evenodd\"/></svg>",
+  "IsAvailableForCommunity": true,
+  "MarketingDisplayName": "Automox",
+  "MinimumSystemVersion": 5.3,
+  "Version": 2.0
+}

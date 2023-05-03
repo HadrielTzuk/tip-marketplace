@@ -1,0 +1,58 @@
+{
+    "Description": "Chronicle enables you to examine the aggregated security information for your enterprise going back for months or longer. Use Chronicle to search across all of the domains accessed from within your enterprise. To enable the Google API client to communicate with the Backstory API you will need Google Developer Service Account Credential, https://developers.google.com/identity/protocols/OAuth2#serviceaccount.",
+    "DisplayName": "Google Chronicle",
+    "Identifier": "GoogleChronicle",
+    "Categories": [
+        "SIEM",
+        "Cloud",
+        "Security",
+        "Google"
+    ],
+    "PythonVersion": 2,
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "GoogleChronicle",
+            "IsMandatory": true,
+            "PropertyDisplayName": "UI Root",
+            "PropertyDescription": "UI root of the Chronicle instance. It will be used to create a link that points back to Chronicle across multiple actions.",
+            "PropertyName": "UI Root",
+            "PropertyType": "2",
+            "Value": "https://{instance}.chronicle.security"
+        },
+        {
+            "IntegrationIdentifier": "GoogleChronicle",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyDescription": "API root of the Chronicle instance.",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https://backstory.googleapis.com"
+        },
+        {
+            "IntegrationIdentifier": "GoogleChronicle",
+            "IsMandatory": true,
+            "PropertyDisplayName": "User's Service Account",
+            "PropertyDescription": "Service account of the Chronicle instance. A full JSON file should be provided.",
+            "PropertyName": "User's Service Account",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "GoogleChronicle",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Google Chronicle server is valid.",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "ShouldInstalledInSystem": true,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M12.4,23l8.3-5.2v-4.6L8.4,20.6L12.4,23z M8.4,20.6V8.9L4,6.3v11.5L8.4,20.6z M4,2v4.3h17V2H4z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 16.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/google-chronicle",
+    "MarketingDisplayName": "Google Chronicle"
+}

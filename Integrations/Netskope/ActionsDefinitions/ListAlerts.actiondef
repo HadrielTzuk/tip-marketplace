@@ -1,0 +1,106 @@
+{
+    "CreationTimeUnixTimeInMs": 1534436861977,
+    "Creator": "Admin",
+    "Description": "List alerts.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[[{\"src_region\": \"Quebec\", \"dstip\": \"13.107.6.000\", \"dst_location\": \"Des Moines\", \"app\": \"LastPass\", \"_insertion_epoch_timestamp\": 1595484010, \"site\": \"LastPass\", \"device\": \"Win Device\", \"browser_version\": \"54.0.2840.90\", \"file_size\": 10174706, \"object_type\": \"File\", \"app_session_id\": 7870854727506923561, \"browser_session_id\": 5221268058711925774, \"page_site\": \"lastpass.com\", \"dst_country\": \"US\", \"category\": \"Identity and Access Management\", \"dst_region\": \"Iowa\", \"hostname\": \"EC2AMAZ-1OAJxxx\", \"severity\": \"unknown\", \"object_id\": \"1996cb6d-4436-4153-9202-a6b7ddfacxxx\", \"managed_app\": \"yes\", \"os_version\": \"Win\", \"parent_id\": \"/personal/perftester2_perfskope_com/Documents\", \"src_zipcode\": \"H3G\", \"src_timezone\": \"America/Toronto\", \"src_location\": \"Montreal\", \"traffic_type\": \"CloudApp\", \"slc_longitude\": -73.5792999268, \"type\": \"anomaly\", \"transaction_id\": 1131115872485042512, \"slc_latitude\": 45.4986991882, \"object\": \"10MB.jpg_20170904-000456_demo.jpg\", \"timestamp\": 1595484010, \"organization_unit\": \"\", \"telemetry_app\": \"\", \"alert\": \"yes\", \"referer\": \"https:// \", \"user\": \"Abe@mail.com\", \"userkey\": \"v@test.com\", \"srcip\": \"35.182.91.154\", \"dst_timezone\": \"America/Los_Angeles\", \"src_country\": \"CA\", \"md5\": \"60d2e411eb2f43968bd63f3ea0949xxx\", \"count\": 1, \"access_method\": \"Client\", \"dst_zipcode\": \"9000\", \"url\": \" GetFolderByServerRelativeUrl(@a1)/Files/Add(url=@a2,overwrite=@a3)\", \"instance_id\": \"perfskope\", \"ccl\": \"excellent\", \"activity\": \"Upload\", \"userip\": \"172.31.11.000\", \"os\": \"Win\", \"page\": \" \", \"browser\": \"Chrome\", \"nsdeviceuid\": \"\", \"managementID\": \"\", \"src_geoip_src\": 2, \"dst_geoip_src\": 1, \"ur_normalized\": \"abe@mail.com\", \"profile_id\": \"NS_306\", \"download_app\": \"Cisco WebEx\", \"bin_timestamp\": 1595491200, \"threshold_time\": 7200, \"event_type\": \"data_exfiltration\", \"alert_name\": \"data_exfiltration\", \"risk_level\": \"high\", \"risk_level_id\": 2, \"alert_type\": \"anomaly\", \"acked\": \"false\", \"orig_ty\": \"nspolicy\", \"_id\": \"d14ab47c90b2a257b6ab2322\", \"other_categories\": [\"Cloud Storage\"], \"cci\": 81, \"page_id\": 7638768646583785531, \"appcategory\": \"Identity and Access Management\"}]]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Netskope",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534436861977,
+    "Name": "List Alerts",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "This acts as a filter for all the cloud app events in the alerts database.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Query",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The type of the alert to filter by. Valid values: anomaly | 'Compromised Credential' | policy | 'Legal Hold' | malsite | Malware | DLP | watchlist | quarantine | Remediation.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Type",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Time period to search alerts at (milliseconds backwards). Valid Values: 3600 | 86400 | 604800 | 2592000.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Time Period",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Restrict alerts to those that have timestamps greater than this (unixtime). Needed only if time period is not passed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Restrict alerts to those that have timestamps less than this (unixtime). Needed only if time period is not passed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "End Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Whether to get only acknowledged alerts.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Is Acknowledged",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522665793363,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Number of results to return. Default: 100.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1522665793363,
+            "Name": "Limit",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "alerts",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

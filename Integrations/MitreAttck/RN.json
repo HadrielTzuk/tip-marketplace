@@ -1,0 +1,142 @@
+[
+    {
+        "ChangeDescription": "Added new integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "MitreAttck",
+        "ItemType": "Integration",
+        "New": true,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1097"
+    },
+    {
+        "ChangeDescription": "Changed action to be case insensitive.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Get Technique Details",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2001"
+    },
+    {
+        "ChangeDescription": "Added support for the External ID of the attack technique.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Get Technique Details",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2490"
+    },
+    {
+        "ChangeDescription": "Added support for the different attack technique identifiers (Name, Attack ID, External ID). After the upgrade, there is a need to update all Playbooks that use this action. 1. Go to the playbook 2. Find the action 3. Configure new mandatory parameter Identifier Type.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Get Mitigations",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2490"
+    },
+    {
+        "ChangeDescription": "Added support for the different attack technique identifiers (Name, Attack ID, External ID). After the upgrade, there is a need to update all Playbooks that use this action.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Get Associated Intrusions",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1588832282,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2490"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "MitreAttck",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "New Action - Get mitigations for multiple techniques.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Get Techniques Mitigations",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1605008252,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5657"
+    },
+    {
+        "ChangeDescription": "New Action - Get techniques Details.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Get Techniques Details",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1605008252,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5658"
+    },
+    {
+        "ChangeDescription": "Added support for multiple techniques and insight creation in action \"Get Technique Details\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Get Technique Details",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1605622658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5082"
+    },
+    {
+        "ChangeDescription": "Get Technique Details, Get Techniques Details - Improved technique searching mechanism",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "MittreAttck",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1666158033,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12886"
+    },
+    {
+        "ChangeDescription": "Get Techniques Details, Get Techniques Mitigations - Added support for OOTB widget.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "MittreAttck",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1673428608,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-134936"
+    },
+    {
+        "ChangeDescription": "GetTechniquesMitigations - Updated the widget to support template.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "MittreAttck",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1680566400,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "276863080"
+    }
+]

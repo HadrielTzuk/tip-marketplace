@@ -1,0 +1,40 @@
+{
+    "CreationTimeUnixTimeInMs": 1525002829777,
+    "Creator": "admin",
+    "Description": "Add a note to a Qradar offense.",
+    "Id": -1,
+    "IntegrationIdentifier": "QRadar",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1525002829777,
+    "Name": "Add Offense Note",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1525002829777,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Offense ID to add a note to.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1525002829777,
+            "Name": "Offense ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525002829777,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Note text to add to offense.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1525002829777,
+            "Name": "Note Text",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

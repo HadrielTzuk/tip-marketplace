@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1534155307462,
+    "Creator": "Admin",
+    "Description": "Test Active Response connectivity.",
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeActiveResponse",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534155307462,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom McAfeeActiveResponseManager import McAfeeActiveResponseManager\n\nPROVIDER = 'McAfeeActiveResponse'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(PROVIDER)\n\n    # The connection is established at the Init function of the class.\n    mar_manager = McAfeeActiveResponseManager(conf.get('Broker URLs List').split(',') if conf.get('Broker URLs List')\n                                              else [],\n                                              conf.get('Broker CA Bundle File Path'),\n                                              conf.get('Certificate File Path'),\n                                              conf.get('Private Key File Path'))\n\n    siemplify.end('Connection Established.', True)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

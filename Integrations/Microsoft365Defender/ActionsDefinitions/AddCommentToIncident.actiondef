@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Add comment to incident in Microsoft 365 Defender.",
+    "Id": -1,
+    "IntegrationIdentifier": "Microsoft365Defender",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Add Comment To Incident",
+    "Parameters": [
+        {
+             "Name": "Incident ID",
+             "Type": 0,
+             "DefaultValue": "",
+             "Value": "",
+             "IsMandatory": true,
+             "Description": "Specify the id of the incident that needs to be updated.",
+             "CustomActionId": -1,
+             "Id": -1,
+             "CreationTimeUnixTimeInMs": 0,
+             "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+             "Name": "Comment",
+             "Type": 0,
+             "DefaultValue": "",
+             "Value": "",
+             "IsMandatory": true,
+             "Description": "Specify the comment that needs to be added to the incident.",
+             "CustomActionId": -1,
+             "Id": -1,
+             "CreationTimeUnixTimeInMs": 0,
+             "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

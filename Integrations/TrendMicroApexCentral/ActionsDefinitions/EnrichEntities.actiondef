@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Enrich entities with information from Trend Micro Apex Central. Supported entities: IP Address, MAC Address, Hostname, URL, Hash. Note: only SHA-1 hashes are supported.",
+    "Id": -1,
+    "IntegrationIdentifier": "TrendMicroApexCentral",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"XXX.XX.XXX.XXX\",\"EntityResult\":{\"type\":\"ip\",\"content\":\"XXX.XX.XXX.XXX\",\"notes\":\"mynote\",\"scan_action\":\"log\",\"expiration_utc_date\":\"None\",\"entity_id\":\"XXX.XX.XXX.XXX\",\"product\":\"XXXX_XXX_XXX\",\"managing_server_id\":\"XXXXXXX-XXXX-XXXX-XXXX-XXXXXXX\",\"ad_domain\":\"\",\"folder_path\":\"Workgroup\",\"ip_address_list\":\"XXX.XX.XXX.XXX\",\"mac_address_list\":\"XX-XX-XX-XX-XX-XX\",\"host_name\":\"DESKTOP-XXXXXX\",\"isolation_status\":\"endpoint_isolation_pending\",\"capabilities\":[\"cmd_restore_isolated_agent\",\"cmd_isolate_agent\",\"cmd_relocate_agent\",\"cmd_uninstall_agent\"]}},{\"Entity\":\"XXX.XX.XXX.XXX\",\"EntityResult\":{\"entity_id\":\"XXXXXXX-XXXX-XXXX-XXXX-XXXXXXX\",\"product\":\"XXX_XXXX_XXX\",\"managing_server_id\":\"XXXXXXX-XXXX-XXXX-XXXX-XXXXXXX\",\"ad_domain\":\"\",\"folder_path\":\"Siemplifylab\",\"ip_address_list\":\"XXX.XX.XXX.XXX\",\"mac_address_list\":\"XX-XX-XX-XX-XX-XX\",\"host_name\":\"XXXXXX\",\"isolation_status\":\"normal\",\"capabilities\":[\"cmd_restore_isolated_agent\",\"cmd_isolate_agent\",\"cmd_relocate_agent\",\"cmd_uninstall_agent\"]}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Name": "Enrich Entities",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "If enabled, action will create an insight consisting of the information regarding the endpoints that were enriched.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Create Endpoint Insight",
+            "Type": 1,
+            "Value": "True"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "If enabled, action will create an insight consising of the information regarding the entities that matched UDSO.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Create UDSO Insight",
+            "Type": 1,
+            "Value": "True"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "If enabled, action will mark all of the entities that were seen in the User-Defined Suspicious Objects list as suspicious.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Mark UDSO Entities",
+            "Type": 1,
+            "Value": "True"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will extract domain part of the URL entity and use it for enrichment.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Extract Domain",
+            "Type": 1,
+            "Value": "False"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\",\"FILEHASH\",\"ADDRESS\",\"MacAddress\",\"HOSTNAME\"]}"
+}

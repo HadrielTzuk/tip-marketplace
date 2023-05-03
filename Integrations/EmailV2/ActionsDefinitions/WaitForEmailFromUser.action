@@ -1,0 +1,111 @@
+{
+    "CreationTimeUnixTimeInMs": 1518362568633,
+    "Creator": "admin",
+    "Description": "Wait for user's response based on an email sent via Send Email action. Note: This is a Siemplify async action, if required, please adjust the async timeout for action (polling timeout) and global action timeout as needed. Action input parameter “Wait stage timeout (minutes)“ cant be larger than global timeout. Note: Please make sure to set IDE timeout as well, as the IDE timeout will override the action’s timeout if the IDE timeout will be shorter. Requires: IMAP configuration",
+    "Id": -1,
+    "IntegrationIdentifier": "EmailV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518362568633,
+    "Name": "Wait for Email from User",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Message_id of the email, which current action would be waiting for. If message has been sent using Send Email action, please select SendEmail.JSONResult.message_id field as a placeholder.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Email Message_id",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Send timestamp of the email, which current action would be waiting for. If message has been sent using Send Email action, please select SendEmail.JSONResult.email_date field as a placeholder.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Email Date",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comma-separated list of recipient emails, response from which current action would be waiting for. If message has been sent using Send Email action, please select Select SendEmail.JSONResult.recipients field as a placeholder.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Email Recipients",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "1440",
+            "Description": "How long in minutes to wait for the user’s reply before marking it timed out.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Wait stage timeout (minutes)",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "Parameter can be used to define if there are multiple recipients - should the Action wait for responses from all of recipients until timeout, or Action should wait for first reply to proceed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Wait for all recipients to reply?",
+            "Type": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Regular expression to exclude specific replies from the wait stage. Works with body part of email. Example is, to exclude automatic Out-Of-Office emails to be considered as recipient reply, and instead wait for actual user reply",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Wait stage exclude pattern",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "Inbox",
+            "Description": "Parameter can be used to specify mailbox email folder (mailbox that was used to send the email with question) to search for the user reply in this folder. Parameter should also accept comma separated list of folders to check the user response in multiple folders. Parameter is case sensitive.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Folder to check for reply",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If selected, if recipient replies with attachment – fetch recipient response and add it as attachment for the action result.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Fetch Response Attachments",
+            "Type": 1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Responses\": [{\"recipient\": \"aaa@aaa.com\", \"content\": \"It's approved, John!\"}, {\"recipient\": \"xxx@xxx.com\", \"content\": \"I approve going forward on this\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

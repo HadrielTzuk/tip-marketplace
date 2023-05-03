@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1515424421559,
+    "Creator": "admin",
+    "Description": "Get ConnectWise ticket by ID and attach ticket JSON as a file",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"773256\": {\"customerUpdatedFlag\": false, \"estimatedTimeCost\": 0.0, \"recordType\": \"ServiceTicket\", \"siteName\": \"Main\", \"billTime\": \"NoDefault\", \"site\": {\"_info\": {\"site_href\": \"\", \"mobileGuid\": \"c5e7be2e-af3b-461f-a637-1b3e7e24bdc6\"}, \"id\": 23188, \"name\": \"Main\"}, \"currency\": {\"symbol\": \"$\", \"isoCode\": \"USD\", \"_info\": {\"currency_href\": \"\"}, \"name\": \"US Dollars\", \"id\": 7}, \"estimatedProductCost\": 0.0, \"estimatedExpenseRevenue\": 0.0, \"contactName\": \"user name\", \"addressLine1\": \"110 Fifth Avenue \", \"billingMethod\": \"ActualRates\", \"id\": 773256, \"impact\": \"Medium\", \"city\": \"New York\", \"billProducts\": \"NoDefault\", \"businessUnitId\": 20, \"zip\": \"10011\", \"estimatedExpenseCost\": 0.0, \"mobileGuid\": \"f7b5a0eb-6038-4e14-a661-05c393917841\", \"closedFlag\": false, \"enteredBy\": \"Siemplify\", \"priority\": {\"sort\": 6, \"_info\": {\"image_href\": \"\", \"priority_href\": \"\"}, \"id\": 4, \"name\": \"Priority 3 - Normal Response\"}, \"source\": {\"_info\": {\"source_href\": \"\"}, \"id\": 2, \"name\": \"Customer Phone Call\"}, \"automaticEmailCcFlag\": false, \"board\": {\"_info\": {\"board_href\": \"\"}, \"id\": 70, \"name\": \"Siemplify - T&M\"}, \"customFields\": [{\"numberOfDecimals\": 0, \"caption\": \"2nd Shift\", \"type\": \"Checkbox\", \"id\": 20, \"entryMethod\": \"EntryField\"}, {\"numberOfDecimals\": 0, \"caption\": \"3rd Shift\", \"type\": \"Checkbox\", \"id\": 21, \"entryMethod\": \"EntryField\"}, {\"numberOfDecimals\": 0, \"caption\": \"Huddle Rvw\", \"type\": \"Checkbox\", \"id\": 22, \"entryMethod\": \"EntryField\"}], \"contactEmailAddress\": \"john_doe@example.com\", \"status\": {\"_info\": {\"status_href\": \"\"}, \"id\": 1351, \"name\": \"Unassigned\"}, \"contactPhoneNumber\": \"+972-50-5613528\", \"dateResponded\": \"2019-01-17T09:21:03Z\", \"isInSla\": false, \"company\": {\"_info\": {\"mobileGuid\": \"42fcabed-a0f6-4171-bd7a-ca563ba45f7c\", \"company_href\": \"\"}, \"identifier\": \"Siemplify\", \"id\": 18304, \"name\": \"Siemplify\"}, \"automaticEmailContactFlag\": false, \"hasChildTicket\": false, \"billExpenses\": \"NoDefault\", \"estimatedTimeRevenue\": 0.0, \"locationId\": 119, \"estimatedProductRevenue\": 0.0, \"automaticEmailResourceFlag\": false, \"dateEntered\": \"2019-01-17T09:21:03Z\", \"approved\": true, \"severity\": \"Medium\", \"resolveMinutes\": 0, \"serviceLocation\": {\"_info\": {\"location_href\": \"\"}, \"id\": 6, \"name\": \"Remote\"}, \"resPlanMinutes\": 0, \"stateIdentifier\": \"NY\", \"dateResplan\": \"2019-01-17T09:21:03Z\", \"subBillingMethod\": \"ActualRates\", \"country\": {\"_info\": {\"country_href\": \"\"}, \"id\": 1, \"name\": \"United States\"}, \"respondMinutes\": 0, \"allowAllClientsPortalView\": false, \"hasMergedChildTicketFlag\": false, \"summary\": \"TikcetApiTest\", \"contact\": {\"_info\": {\"contact_href\": \"\", \"mobileGuid\": \"c86377ec-7726-4057-aca2-e992b550140f\"}, \"id\": 59249, \"name\": \"user name\"}, \"team\": {\"_info\": {\"team_href\": \"\"}, \"id\": 78, \"name\": \"Siemplify\"}, \"addressLine2\": \"5th Floor\", \"_info\": {\"configurations_href\": \"\", \"tasks_href\": \"\", \"updatedBy\": \"Siemplify\", \"expenseEntries_href\": \"\", \"lastUpdated\": \"2019-01-17T09:21:03Z\", \"products_href\": \"\", \"activities_href\": \"\", \"timeentries_href\": \"\", \"notes_href\": \"\", \"documents_href\": \"\", \"scheduleentries_href\": \"\"}}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "ConnectWise",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515424421559,
+    "Name": "Get Ticket",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1515696395185,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Fetch ticket by ID",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1515696395185,
+            "Name": "Ticket Id",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyDataModel import EntityTypes\r\n# Imports\r\nfrom SiemplifyAction import SiemplifyAction\r\nfrom ConnectWiseManager import ConnectWiseManager\r\nimport base64\r\nimport json\r\n\r\n# Consts\r\n\r\nATTACHED_FILE_TITLE = 'Attached Result File.'\r\nRESULT_FILE_NAME_FORMAT = 'ticket_{0}.json'  # {0} - Ticket Id.\r\n\r\n\r\ndef main():\r\n\r\n    # Variables Definitions.\r\n    output_message = ''\r\n    result_value = False\r\n\r\n\r\n    siemplify = SiemplifyAction()\r\n    # Configuration.\r\n    configuration_settings = siemplify.get_configuration('ConnectWise')\r\n    company_url = configuration_settings['Api Root']\r\n    company_name = configuration_settings['Company Name']\r\n    public_key = configuration_settings['Public Key']\r\n    private_key = configuration_settings['Private Key']\r\n    connectwise_manager = ConnectWiseManager(company_url, company_name, public_key, private_key)\r\n\r\n    # Parameters.\r\n    ticket_id = siemplify.parameters['Ticket Id']\r\n\r\n    # Execute Test Connectivity.\r\n    result = connectwise_manager.get_ticket(ticket_id)\r\n    \r\n    if result:\r\n\r\n        ticket_json = json.dumps(result, indent=4, sort_keys=True)\r\n        siemplify.result.add_json(result)\r\n        # Add result file to action result.\r\n        encoded_base64_result = base64.b64encode(ticket_json)\r\n        siemplify.result.add_entity_attachment(ATTACHED_FILE_TITLE, RESULT_FILE_NAME_FORMAT.(formatticket_id),\r\n                                        encoded_base64_result)\r\n        # Form output message.\r\n        output_message = \"Ticket with id {0} received.\".format(ticket_id)\r\n        result_value = ticket_json\r\n    else:\r\n        # Form output message.\r\n        output_message = 'Ticket with id {0} was not received.'\r\n        result_value = False\r\n\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n",
+    "ScriptResultName": "ticket_json",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

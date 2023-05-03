@@ -1,0 +1,49 @@
+{
+    "Description": "Palo Alto Networks next-generation firewalls are architected to safely enable applications and prevent modern threats.",
+    "DisplayName": "Palo Alto Next Gen Firewall",
+    "Identifier": "PaloAltoNGFW",
+    "Categories": [
+        "Network Security",
+        "Firewall",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "PaloAltoNGFW",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://x.x.x.x/api"
+        },
+        {
+            "IntegrationIdentifier": "PaloAltoNGFW",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "PaloAltoNGFW",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "PaloAltoNGFW",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M22.8,15.7v-0.3c-0.1,0-0.1,0.1-0.2,0.1c-0.7,0.2-1.1-0.2-1-0.9c0-0.3,0.1-0.5,0.1-0.8c0.1-0.6,0.4-1,1-1.1v-0.3\n\t\t\tc0-2.2,0-4.4,0-6.7c0-0.2,0-0.4-0.1-0.6c-0.3-1.4-1.7-2.5-3-2.5c-4.8,0-9.5,0-14.3,0c-0.2,0-0.4,0-0.6,0.1C3.4,3,2.4,4.3,2.4,5.7\n\t\t\tc0,4.8,0,9.6,0,14.3c0,0.1,0,0.2,0,0.4C2.8,22.1,4,23,5.8,23c4.6,0,9.1,0,13.7,0c0.3,0,0.6,0,0.9-0.1c1.4-0.3,2.5-1.6,2.5-3\n\t\t\tC22.8,18.5,22.8,17.1,22.8,15.7z M4.9,16.5c-0.1,0.4-0.6,0.7-1.1,0.7c-0.4,0-0.7-0.4-0.6-0.8c0.1-0.4,0.1-0.8,0.2-1.2\n\t\t\tc0.1-0.4,0.5-0.8,0.9-0.8c0.5-0.1,0.8,0.2,0.8,0.9C5.1,15.6,5,16.1,4.9,16.5z M7.9,16.6c-0.1,0.8-0.3,1.7-0.4,2.5\n\t\t\tc-0.1,0.6-0.6,1-1.2,0.9c-0.4-0.1-0.6-0.4-0.6-0.8c0.2-1.2,0.4-2.3,0.6-3.5c0.1-0.5,0.1-0.9,0.6-1.2c0.3-0.1,0.6-0.2,0.9,0\n\t\t\tc0.2,0.1,0.3,0.4,0.3,0.6C8.1,15.6,8,16.1,7.9,16.6z M11.2,15c-0.2,1-0.4,2.1-0.5,3.1c-0.2,1-0.3,2-0.5,3\n\t\t\tc-0.1,0.5-0.7,0.9-1.2,0.8c-0.4-0.1-0.6-0.5-0.5-1c0.4-2.1,0.8-4.3,1.1-6.4c0.1-0.4,0.1-0.7,0.2-1.1c0.1-0.4,0.5-0.8,0.9-0.8\n\t\t\tc0.4,0,0.8,0.3,0.8,0.7C11.4,13.9,11.3,14.4,11.2,15z M15.1,9.9c-0.2,1.1-0.4,2.3-0.6,3.4c-0.2,1.1-0.4,2.3-0.6,3.4\n\t\t\tc-0.2,1.1-0.4,2.2-0.6,3.4c-0.1,0.5-0.5,0.8-1,0.8c-0.5,0-0.8-0.5-0.7-0.9c0.3-1.5,0.5-3,0.8-4.5c0.3-1.7,0.6-3.4,0.9-5.1\n\t\t\tc0-0.3,0.1-0.5,0.1-0.8c0.1-0.5,0.7-0.8,1.2-0.7C15,9.2,15.2,9.5,15.1,9.9z M18.1,10.5c-0.2,1-0.4,2.1-0.5,3.1c-0.2,1-0.3,2-0.5,3\n\t\t\tc-0.1,0.5-0.7,0.9-1.2,0.8c-0.4-0.1-0.6-0.5-0.5-1c0.4-2.1,0.8-4.3,1.1-6.4c0.1-0.4,0.1-0.7,0.2-1.1c0.1-0.4,0.5-0.8,0.9-0.8\n\t\t\tc0.4,0,0.8,0.3,0.8,0.7C18.3,9.5,18.2,10,18.1,10.5z M20.3,14.7c-0.1,0.5-0.5,0.9-1,0.9c-0.5,0-0.8-0.4-0.7-0.9\n\t\t\tc0.2-1.3,0.4-2.5,0.6-3.8c0.1-0.5,0.3-0.8,0.8-0.9c0.6-0.2,1.1,0.2,1,0.9C20.8,12.1,20.6,13.4,20.3,14.7z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 21.0,
+    "MarketingDisplayName": "Palo Alto Next Generation Firewall"
+}

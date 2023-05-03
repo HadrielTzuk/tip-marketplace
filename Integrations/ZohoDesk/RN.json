@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Zoho Desk.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Zoho Desk",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1660725408,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12229"
+    },
+    {
+        "ChangeDescription": "Zoho Desk - Updated authentication logic",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Zoho Desk",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1663749893,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12743"
+    }
+]

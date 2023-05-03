@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1517733763874, 
+    "Creator": "admin", 
+    "Description": "Enable NTP on endpoints", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SEP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1517733763874, 
+    "Name": "EnableNTP", 
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

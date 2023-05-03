@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1513614105103,
+    "Creator": "admin",
+    "Description": "Send a message to a Slack channel or user. Note that action is not working on Siemplify entities.",
+    "Id": -1,
+    "IntegrationIdentifier": "Slack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1513614105103,
+    "Name": "Send Message",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"message\": {\"text\": \"Test message\", \"ts\": \"1594730989.000200\", \"bot_profile\": {\"updated\": 1578312330, \"name\": \"Test\", \"icons\": {\"image_36\": \"https://a.slack-edge.com/80588/img/plugins/app/bot_36.png\", \"image_48\": \"https://a.slack-edge.com/80588/img/plugins/app/bot_48.png\", \"image_72\": \"https://a.slack-edge.com/80588/img/plugins/app/service_72.png\"}, \"deleted\": false, \"app_id\": \"12345678\", \"team_id\": \"12345678\", \"id\": \"12345678\"}, \"user\": \"12345678\", \"team\": \"12345678\", \"type\": \"message\", \"bot_id\": \"12345678\"}, \"ok\": true, \"ts\": \"1594730989.000200\", \"channel\": \"12345678\"}, \"Entity\": \"test\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1513614626960,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the Slack channel or the email address of the user to whom to send the message. Parameter accepts multiple values as a comma-separated string.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513614626960,
+            "Name": "Channel",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1513614626960,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the message content to send.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513614626960,
+            "Name": "Message",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

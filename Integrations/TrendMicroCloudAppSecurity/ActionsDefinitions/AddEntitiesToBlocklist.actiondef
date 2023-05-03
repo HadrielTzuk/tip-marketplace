@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Add entities to a blocklist in Trend Micro Cloud App Security. Supported entities: URL, Hash and Email (User entity that matches email address pattern). Note: only SHA-1 hashes are supported.",
+    "Id": -1,
+    "IntegrationIdentifier": "TrendMicroCloudAppSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Add Entities To Blocklist",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\",\"FILEHASH\",\"USERUNIQNAME\"]}"
+}

@@ -1,0 +1,119 @@
+{
+  "Identifier": "60235dea-41b5-4ac2-9f3c-181c5260e50e",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": true,
+  "Name": "Test F5BigIQ",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "1ba4cd56-a409-4b3b-8db6-1d3f17f17dc3",
+      "ParentWorkflowIdentifier": "60235dea-41b5-4ac2-9f3c-181c5260e50e",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "F5BigIQ_Change Policy Enforcement Mode_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "F5BigIQ_Change Policy Enforcement Mode",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "1ba4cd56-a409-4b3b-8db6-1d3f17f17dc3",
+          "ParentWorkflowIdentifier": "60235dea-41b5-4ac2-9f3c-181c5260e50e",
+          "Name": "ScriptName",
+          "Value": "F5BigIQ_Change Policy Enforcement Mode",
+          "CreationTimeUnixTimeInMs": 1520258672774,
+          "ModificationTimeUnixTimeInMs": 1520258672774
+        },
+        {
+          "ParentStepIdentifier": "1ba4cd56-a409-4b3b-8db6-1d3f17f17dc3",
+          "ParentWorkflowIdentifier": "60235dea-41b5-4ac2-9f3c-181c5260e50e",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Policy ID\":\"387638638\",\"Enforcement Mode\":\"blocking\"}",
+          "CreationTimeUnixTimeInMs": 1520258672774,
+          "ModificationTimeUnixTimeInMs": 1520258672774
+        },
+        {
+          "ParentStepIdentifier": "1ba4cd56-a409-4b3b-8db6-1d3f17f17dc3",
+          "ParentWorkflowIdentifier": "60235dea-41b5-4ac2-9f3c-181c5260e50e",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520258645787,
+          "ModificationTimeUnixTimeInMs": 1520258645787
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520258645787,
+      "ModificationTimeUnixTimeInMs": 1520258645787
+    },
+    {
+      "Identifier": "effadaf2-0cf4-4927-bbb0-c32873a920a7",
+      "ParentWorkflowIdentifier": "60235dea-41b5-4ac2-9f3c-181c5260e50e",
+      "ParentStepIdentifiers": [
+        "1ba4cd56-a409-4b3b-8db6-1d3f17f17dc3"
+      ],
+      "ParentStepIdentifier": "1ba4cd56-a409-4b3b-8db6-1d3f17f17dc3",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "F5BigIQ_Get Event Logs By Blocking ID_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "F5BigIQ_Get Event Logs By Blocking ID",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "effadaf2-0cf4-4927-bbb0-c32873a920a7",
+          "ParentWorkflowIdentifier": "60235dea-41b5-4ac2-9f3c-181c5260e50e",
+          "Name": "ScriptName",
+          "Value": "F5BigIQ_Get Event Logs By Blocking ID",
+          "CreationTimeUnixTimeInMs": 1520258672774,
+          "ModificationTimeUnixTimeInMs": 1520258672774
+        },
+        {
+          "ParentStepIdentifier": "effadaf2-0cf4-4927-bbb0-c32873a920a7",
+          "ParentWorkflowIdentifier": "60235dea-41b5-4ac2-9f3c-181c5260e50e",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Blocking ID\":\"423442342\"}",
+          "CreationTimeUnixTimeInMs": 1520258672774,
+          "ModificationTimeUnixTimeInMs": 1520258672774
+        },
+        {
+          "ParentStepIdentifier": "effadaf2-0cf4-4927-bbb0-c32873a920a7",
+          "ParentWorkflowIdentifier": "60235dea-41b5-4ac2-9f3c-181c5260e50e",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520258648243,
+          "ModificationTimeUnixTimeInMs": 1520258648243
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520258648243,
+      "ModificationTimeUnixTimeInMs": 1520258648243
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "cf08bda8-221d-49c1-b247-cc79990557cf",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "60235dea-41b5-4ac2-9f3c-181c5260e50e",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Test F5BigIQ",
+      "AllEnvironments": "",
+      "Id": 10004,
+      "CreationTimeUnixTimeInMs": 1520258672774,
+      "ModificationTimeUnixTimeInMs": 1520258672774
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 10004,
+  "CreationTimeUnixTimeInMs": 1520258625878,
+  "ModificationTimeUnixTimeInMs": 1520258625878
+}

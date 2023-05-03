@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Get detailed information about the incidents from BMC Remedy ITSM.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Work Log ID\":\"WLG00000xxxxxx\",\"Submitter\":\"Admin\",\"Submit Date\":\"2022-01-06T10:42:43.000+0000\",\"Assigned To\":null,\"Last Modified By\":\"Admin\",\"Last Modified Date\":\"2022-01-06T10:42:43.000+0000\",\"Status\":\"Enabled\",\"Short Description\":\".\",\"Status History\":null,\"Assignee Groups\":\"\",\"Worknotes\":[{\"Submitter\":\"Admin\",\"Detailed Description\":\"asdasd\",\"Work Log Type\":\"Working Log\",\"Work Log Submit Date\":\"2022-01-06T11:21:56.000+0000\"},{\"Submitter\":\"Demo\",\"Detailed Description\":\"Work Log Entry from Bob.\",\"Work Log Type\":\"Customer Communication\",\"Work Log Submit Date\":\"2008-11-07T00:30:41.000+0000\"}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "BMCRemedyITSM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Get Incident Details",
+    "Parameters": [
+        {
+            "Name": "Incident IDs",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the ids of incidents for which you want to return details.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Fields To Return",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what fields to return. If invalid fields are provided, action will fail. If nothing is provided, action will return all fields.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will return work notes related to the incident.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "Name": "Fetch Work Notes",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many Work Notes to return. If nothing is provided, action will return 50 Work Notes.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "Name": "Max Work Notes To Return",
+            "Type": 0,
+            "Value": 50
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

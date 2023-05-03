@@ -1,0 +1,91 @@
+{
+    "CreationTimeUnixTimeInMs": 1513615605969,
+    "Creator": "admin",
+    "Description": "Get conversation history for a user or a channel based on provided input criteria. Action works with either channel or user id, which could be searched with either 'List Channels' or 'List User' actions. Note that action is not working on Siemplify entities.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"bot_id\": \"B02D9QYM7P0\", \"type\": \"message\", \"text\": \"test\", \"user\": \"U02D1RPLVST\", \"ts\": \"1665988448.627219\", \"app_id\": \"A02DDGD942Z\", \"team\": \"T02CX3N6B0B\", \"bot_profile\": {\"id\": \"B02D9QYM7P0\", \"deleted\": false, \"name\": \"Siemplify-test\", \"updated\": 1630908872, \"app_id\": \"A02DDGD942Z\", \"icons\": {\"image_36\": \"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_36.png\", \"image_48\": \"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_48.png\", \"image_72\": \"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/service_72.png\"}, \"team_id\": \"T02CX3N6B0B\"}, \"blocks\": [{\"type\": \"rich_text\", \"block_id\": \"JbVUf\", \"elements\": [{\"type\": \"rich_text_section\", \"elements\": [{\"type\": \"text\", \"text\": \"test\"}]}]}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Slack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1663592688000,
+    "Name": "Get Channel Or User Conversation History",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1663592688000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the channel or user id to fetch the conversation history for.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1663592688000,
+            "Name": "Channel or User ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663592688000,
+            "CustomActionId": -1,
+            "DefaultValue": "Last Hour",
+            "Description": "Specify a time frame for the results. If Custom is selected, you also need to provide Start Time.",
+            "OptionalValues": [
+                "Last Hour",
+                "Last 6 Hours",
+                "Last 24 Hours",
+                "Last Week",
+                "Last Month",
+                "Custom"
+            ],
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1663592688000,
+            "Name": "Time Frame",
+            "Type": 15,
+            "Value": "Last Hour"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663592688000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the start time for the results. This parameter is mandatory, if Custom is selected for the Time Frame parameter. 'Format: ISO 8601. Example: 2021-08-05T05:18:42Z'",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1663592688000,
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663592688000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the end time for the results. 'Format: ISO 8601. Example: 2021-08-05T05:18:42Z'. If nothing is provided and Custom is selected for the Time Frame parameter then this parameter will use current time.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1663592688000,
+            "Name": "End Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1663592688000,
+            "CustomActionId": -1,
+            "DefaultValue": "20",
+            "Description": "Specify how many records to return. If nothing is provided, action will return 20 records.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1663592688000,
+            "Name": "Max Records to Return",
+            "Type": 0,
+            "Value": "20"
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

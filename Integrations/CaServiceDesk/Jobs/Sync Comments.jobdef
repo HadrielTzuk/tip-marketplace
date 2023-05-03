@@ -1,0 +1,116 @@
+{
+    "CreationTimeUnixTimeInMs": 1525369353697,
+    "Creator": "admin",
+    "Description": "Sync comments from CA Desk Manager to Siemplify.",
+    "Id": -1,
+    "Integration": "CaServiceDesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1525369353697,
+    "Name": "Sync Comments",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1525369353697,
+            "DefaultValue": "http://x.x.x.x:<port>",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1525369353697,
+            "Name": "API Root",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525369353697,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1525369353697,
+            "Name": "Username",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525369353697,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1525369353697,
+            "Name": "Password",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525369353697,
+            "DefaultValue": "summery.combo_name",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1525369353697,
+            "Name": "Summery Field",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525369353697,
+            "DefaultValue": "summery.combo_name,customer.combo_name,category.sym,status.sym,priority.sym,active,log_agent.combo_name,assignee.combo_name,group.combo_name,affected_service.name,severity.sym,urgency.sym,impact.sym,problem.ref_num,resolution_code.sym,call_back_date,change.chg_ref_num,caused_by_chg.chg_ref_num,external_system_ticket,resolution_method.sym,symptom_code.sym,requested_by.combo_name,persistent_id,summary,description,open_date,last_mod_dt,resolve_date,close_date,ref_num",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1525369353697,
+            "Name": "Ticket Fields",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525369353697,
+            "DefaultValue": "Test",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1525369353697,
+            "Name": "Script Name",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525369353697,
+            "DefaultValue": null,
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1525369353697,
+            "Name": "Ticket Type Field",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525369353697,
+            "DefaultValue": null,
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1525369353697,
+            "Name": "Analyst Type Field",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525369353697,
+            "DefaultValue": null,
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1525369353697,
+            "Name": "Time Stamp Field",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525369353697,
+            "DefaultValue": "UTC",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1525369353697,
+            "Name": "Timezone String",
+            "Type": 0
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Script": "# -*- coding: utf-8 -*-\n# ==============================================================================\n# title           :CaSoapManager.py\n# description     :This Module contain all CA Desk operations functionality using Soap API\n# author          :zdemoniac@gmail.com\n# date            :1-9-18\n# python_version  :2.7\n# libraries       :time, xml, zeep\n# requirements    :pip install zeep, ticketFields names in CA\n# product_version :\n# ==============================================================================\n\n# =====================================\n#              IMPORTS                #'\n# =====================================\nfrom CaSoapManager import CaSoapManager\nfrom SiemplifyJob import SiemplifyJob\nimport urllib3\nimport requests\nimport datetime\n\nurllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)\nrequests.packages.urllib3.disable_warnings()\n\n# =====================================\n#             CONSTANTS               #\n# =====================================\n# Configurations.\nDEFAULT_DAYS_BACKWARDS = 0\n\nCA_RULE_NAME = 'CA Desk Manager Ticket.'\nOPEN_CASE_STATUS_ENUM = 1\nID_PREFIX_IN_SUMMERY = 'SIEMPLIFY_CASE_ID:'\n\n# Prefixes.\nCA_PREFIX = 'CA: History Sync Job CA <-> Siemplify'\nSIEMPLIFY_PREFIX = 'SIEMPLIFY:'\n\n\n# =====================================\n#              CLASSES                #\n# =====================================\ndef main():\n    try:\n        siemplify = SiemplifyJob()\n\n        siemplify.script_name = siemplify.parameters['Script Name']\n\n        siemplify.LOGGER.info('--------------- JOB ITERATION STARTED ---------------')\n\n        # Parameters.\n        api_root = siemplify.parameters['API Root']\n        username = siemplify.parameters['Username']\n        password = siemplify.parameters['Password']\n        summery_field = siemplify.parameters.get('Summery Field', 'summary')\n        ticket_type_field = siemplify.parameters.get('Ticket Type Field', 'type.sym')\n        analyst_name_field = siemplify.parameters.get('Analyst Type Field', 'analyst.combo_name')\n        time_stamp_field = siemplify.parameters.get('Time Stamp Field', 'time_stamp')\n        ticket_fields_str = siemplify.parameters['Ticket Fields']\n\n        # Turn str lists params to lists object.\n        ticket_fields = ticket_fields_str.split(',') if ticket_fields_str else []\n\n        # Configurations.\n        ca_manager = CaSoapManager(api_root, username, password)\n\n        # Get last Successful execution time.\n        last_success_time = siemplify.fetch_timestamp(datetime_format=False)\n        siemplify.LOGGER.info('Got last successful run: {0}'.format(str(last_success_time)))\n\n        # ----------------- Sync Tickets Comment to Siemplify -----------------\n        siemplify.LOGGER.info('########## Sync Tickets Comment to Siemplify ##########')\n\n        # Get tickets that where modified since last success time.\n        last_modified_ticket_ids = ca_manager.get_incident_ids_by_filter(\n            last_modification_unixtime_milliseconds=last_success_time)\n        siemplify.LOGGER.info('Found {0} modifieda tickets with ids: {1} since {2}'.format(\n            str(len(last_modified_ticket_ids)),\n            str(last_modified_ticket_ids),\n            str(last_success_time)))\n\n        for ticket_id in last_modified_ticket_ids:\n            siemplify.LOGGER.info('Run on CA incident with id: {0}'.format(ticket_id))\n            # Get Last comments for ticket.\n            ticket_comments = ca_manager.get_incident_comments_since_time(ticket_id, last_success_time)\n            siemplify.LOGGER.info('Found {0} comment for ticket with id: {1}'.format(str(len(ticket_comments)),\n                                                                                     str(ticket_id)))\n            # Get Cases id for ticket.\n            siemplify.LOGGER.info('Get case IDs for ticket_id: {0}'.format(ticket_id))\n            cases_ids_for_ticket = siemplify.get_cases_by_ticket_id(ticket_id)\n            siemplify.LOGGER.info('Got {0} case related to ticket id {1}, the cases IDs are: {2}'.format(\n                len(cases_ids_for_ticket),\n                ticket_id,\n                str(cases_ids_for_ticket)))\n\n            # Add comments to cases.\n            for case_id in cases_ids_for_ticket:\n                siemplify.LOGGER.info('Add comments to case with id: {0}'.format(case_id))\n\n                # fetch alert id for case.\n                case_obj = siemplify._get_case_by_id(str(case_id))\n                if case_obj:\n                    alert_ids = [cyber_alert['external_id'] for cyber_alert in case_obj['cyber_alerts']]\n                else:\n                    alert_ids = []\n\n                for comment in ticket_comments:\n                    # Validate that the comment is not from sieplify.\n                    # Compare with Siemplify prefix without the column because of the split.\n                    siemplify.LOGGER.info('Check if prefix in comment. comment keys:{0}'.format(comment.keys()))\n                    if SIEMPLIFY_PREFIX not in comment.get('description', ''):\n                        siemplify.LOGGER.info('No prefix found.')\n                        # Add prefix to comment.\n                        description = comment.get('description', 'No Comment description')\n                        if 'description' in comment:\n                            del (comment['description'])\n\n                        analyst = comment.get(analyst_name_field, None)\n                        ticket_type = comment.get(ticket_type_field, None)\n                        ticket_time_stamp = comment.get(time_stamp_field, None)\n\n                        # Convert Unix time to UTC datetime.\n                        ticket_time_datetime = datetime.datetime.utcfromtimestamp(\n                            float(ticket_time_stamp)) if ticket_time_stamp else None\n                        siemplify.LOGGER.info('Building Comment.')\n                        case_comment = u\"{0} \\nTicket ID: {1} \\nComment: {2} \\nAnalyst: {3} \\nTicket Type: {4} \\nTime: {5}\".format(\n                            CA_PREFIX, ticket_id, description, analyst, ticket_type, ticket_time_datetime)\n                        # Add comment to case.\n                        try:\n                            # Validate alert in case.\n                            if ticket_id in alert_ids:\n                                siemplify.add_comment(case_id=case_id, comment=case_comment)\n                                siemplify.LOGGER.info(\"Comment Added\")\n                            else:\n                                siemplify.LOGGER.info(\"Alert is not contained in case, comment was not added.\")\n                        except Exception as err:\n                            siemplify.LOGGER.error('Error adding comment to case {0}, ERROR: {1}'.format(case_id,\n                                                                                                         err.message))\n\n        # ----------------- Sync Tickets Created From Workflow to Siemplify Cases -----------------\n        siemplify.LOGGER.info('########## Sync Tickets Created From Workflow to Siemplify Cases ##########')\n\n        # Extract ticket ids from modified tickets that where opened from workflow.\n        for ticket_id in last_modified_ticket_ids:\n            siemplify.LOGGER.info('Run on ticket id {0}'.format(ticket_id))\n            # Bring the ticket.\n            ticket_data = ca_manager.get_incident_by_id(ticket_id, ticket_fields)\n            if ticket_data[summery_field] and ID_PREFIX_IN_SUMMERY in ticket_data[summery_field]:\n                siemplify.LOGGER.info('Incident with ID {0} was created workflow.'.format(ticket_id))\n                # Extract ticket comments.\n                ticket_comments = ca_manager.get_incident_comments_since_time(ticket_id, last_success_time)\n                # Extract case id from ticket summery.\n                case_id = ticket_data[summery_field].split(':')[1]\n\n                # fetch alert id for case.\n                case_obj = siemplify._get_case_by_id(str(case_id))\n                if case_obj:\n                    alert_ids = [cyber_alert['external_id'] for cyber_alert in case_obj['cyber_alerts']]\n                else:\n                    alert_ids = []\n\n                for comment in ticket_comments:\n                    # Validate that the comment is not from sieplify.\n                    # Compare with Siemplify prefix without the column because of the split.\n                    if SIEMPLIFY_PREFIX not in comment.get('description', ''):\n                        # Add prefix to comment.\n                        description = comment.get('description', 'No Comment description')\n                        if 'description' in comment:\n                            del (comment['description'])\n\n                        analyst = comment.get(analyst_name_field, None)\n                        ticket_type = comment.get(ticket_type_field, None)\n                        ticket_time_stamp = comment.get(time_stamp_field, None)\n\n                        # Convert Unix time to UTC datetime.\n                        ticket_time_datetime = datetime.datetime.utcfromtimestamp(\n                            float(ticket_time_stamp)) if ticket_time_stamp else None\n\n                        case_comment = u\"{0} \\nTicket ID: {1} \\nComment: {2} \\nAnalyst: {3} \\nTicket Type: {4} \\nTime: {5}\".format(\n                            CA_PREFIX, ticket_id, description, analyst, ticket_type, ticket_time_datetime)\n\n                        # Add comment to case.\n                        try:\n                            # Validate alert in case.\n                            if ticket_id in alert_ids:\n                                siemplify.add_comment(case_id=case_id, comment=case_comment)\n                                siemplify.LOGGER.info(\"Comment Added\")\n                            else:\n                                siemplify.LOGGER.info(\"Alert is not contained in case, comment was not added.\")\n                        except Exception as err:\n                            siemplify.LOGGER.error('Error adding comment to case {0}, ERROR: {1}'.format(case_id,\n                                                                                                         err.message))\n            else:\n                siemplify.LOGGER.info('Incident with id {0} was not created by workflow.'.format(ticket_id))\n\n        # # ----------------- Sync Siemplify Comments to Tickets -----------------\n        siemplify.LOGGER.info('########## Sync Siemplify Comments to Tickets ##########')\n        scope_cases = []  # Cases that are in the relevant time scope.\n        # Get all open cases.\n        open_cases_ids = siemplify.get_cases_by_filter(statuses=[OPEN_CASE_STATUS_ENUM])\n\n        for case_id in open_cases_ids:\n            # Get case data.\n            case = siemplify._get_case_by_id(str(case_id))\n            for alert in case['cyber_alerts']:\n                siemplify.LOGGER.info(\"Iterate over case {0} alerts\".format(str(case_id)))\n                if alert['rule_generator'] == CA_RULE_NAME:\n                    case_comments = siemplify.get_case_comments(case['identifier'])\n                    siemplify.LOGGER.info(\"Fetch case {0} comments\".format(str(case_id), len(case_comments)))\n                    ticket_id = alert['external_id']\n                    for comment in case_comments:\n                        # Covert to datetime\n                        comment_time = comment['modification_time_unix_time_in_ms']\n                        # Check that the comment is newer than the JOB timestamp\n                        if comment_time > last_success_time and CA_PREFIX not in \\\n                                comment['comment']:\n                            siemplify.LOGGER.info(\"Found Case {0} new comment\".format(str(case_id)))\n                            # Add to comment Siemplify prefix in order to identify the comment as a siemplify TN comment\n                            comment_text = \"{0}{1}\".format(SIEMPLIFY_PREFIX, comment['comment'])\n                            # Update all Alert's tickets in ConnectWise\n                            # Add the comment to CA ticket\n                            try:\n                                siemplify.LOGGER.info(\"Add comment to ticket {0}\".format(ticket_id))\n                                ca_manager.add_comment_to_incident(ref_num=ticket_id, comment=comment_text)\n                            except Exception as err:\n                                siemplify.LOGGER.error(\"Failed to add comment to ticket {0}, error: {1}\".format(\n                                    ticket_id, err.message))\n\n        # Update last successful run time.\n        siemplify.save_timestamp(datetime_format=True)\n        siemplify.LOGGER.info('--------------- JOB ITERATION FINISHED ---------------')\n\n    except Exception as err:\n        siemplify.LOGGER.error('Got exception on main handler.Error: {0}'.format(err.message))\n        raise\n\n\nif __name__ == '__main__':\n    main()\n",
+    "Version": 1
+}

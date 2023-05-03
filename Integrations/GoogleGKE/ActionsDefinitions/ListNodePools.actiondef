@@ -1,0 +1,86 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List node pools for the Google Kubernetes Engine cluster based on the specified search criteria. Note that action is not working on Siemplify entities. Additionally, filtering logic is working based on the node pool name field.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleGKE",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"nodePools\":[{\"name\":\"XXXXX-XXXX\",\"config\":{\"machineType\":\"XX-XXX\",\"diskSizeGb\":\"XX\",\"oauthScopes\":[\"https:\/\/www.googleapis.com\/auth\/devstorage.read_only\",\"https:\/\/www.googleapis.com\/auth\/logging.write\",\"https:\/\/www.googleapis.com\/auth\/monitoring\",\"https:\/\/www.googleapis.com\/auth\/servicecontrol\",\"https:\/\/www.googleapis.com\/auth\/service.management.readonly\",\"https:\/\/www.googleapis.com\/auth\/trace.append\"], \"metadata\":{\"disable-legacy-endpoints\":\"true\"},\"imageType\":\"COS\",\"tags\":[\"pod-net-tag\"],\"serviceAccount\":\"default\", \"diskType\":\"pd-standard\",\"shieldedInstanceConfig\":{\"enableIntegrityMonitoring\":\"true\"}},\"initialNodeCount\":\"3\", \"autoscaling\":{\"enabled\":\"true\",\"minNodeCount\":\"2\",\"maxNodeCount\":\"10\"},\"management\":{\"autoUpgrade\":\"true\",\"autoRepair\":\"true\"},\"maxPodsConstraint\":{\"maxPodsPerNode\":\"8\"},\"podIpv4CidrSize\":\"28\", \"locations\":[\"europe-XXXXXXX-X\"],\"networkConfig\":{\"podRange\":\"gke-XXXXXX-XXXX-XXXX-XXXXXXX\",\"podIpv4CidrBlock\":\"XX.X.X.X\/XX\"},\"selfLink\":\"https:\/\/container.googleapis.com\/v1\/projects\/XXXXXX-XXXXXX-XXXXXXX\/zones\/europe-XXXXXXX-X\/clusters\/XXXXX-XXXX\/nodePools\/XXXXX-XXXX\",\"version\":\"1.18.20-XXX.XXX\",\"instanceGroupUrls\":[\"https:\/\/www.googleapis.com\/compute\/v1\/projects\/XXXXXX-XXXXXX-XXXXXXX\/zones\/XXXXX-XXXX\/instanceGroupManagers\/gke-XXXXXX-XXXX-XXXX-XXXXXXX\"],\"status\":\"RUNNING\",\"upgradeSettings\":{\"maxSurge\":\"X\"}}],\"cluster_name\":\"XXXXXXXX\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Node Pools",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify Google Compute Engine location in which to search for clusters in. Example: europe-central2-a",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Cluster Location",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify Google Kubernetes Engine cluster name.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Cluster Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Equal", 
+            "Description": "Specify what filter logic should be applied. Filtering logic is working based on the node pool name field.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Filter Logic", 
+            "OptionalValues": [
+                "Equal", 
+                "Contains"
+            ], 
+            "Type": 15, 
+            "Value": "Equal"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what value should be used in the filter. If \"Equal\" is selected, action should will try to find the exact match among results and if \"Contains\" is selected, action will try to find results that contain the substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the node pool name field.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Filter Value",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many records to return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Records To Return",
+            "Type": 0,
+            "Value": 50
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

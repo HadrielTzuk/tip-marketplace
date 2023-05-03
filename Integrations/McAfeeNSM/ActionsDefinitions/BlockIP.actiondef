@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1523548952351, 
+    "Creator": "admin", 
+    "Description": "Block IP address", 
+    "Id": -1, 
+    "IntegrationIdentifier": "McAfeeNSM", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1523548952351, 
+    "Name": "Block IP", 
+    "Parameters": [], 
+    "Script": "from SiemplifyDataModel import EntityTypes\r\nfrom SiemplifyAction import SiemplifyAction\r\nfrom NSMManager import NsmManager\r\n\r\n# Consts\r\n# Provider Sign.\r\nACTION_SCRIPT_NAME = 'NSM Block IP'\r\nNSM_PROVIDER = 'McAfeeNSM'\r\nADDRESS = EntityTypes.ADDRESS\r\n\r\n\r\ndef main():\r\n    # Define variables.\r\n    blocked_entities = []\r\n    result_value = False\r\n    # Configuration.\r\n    siemplify = SiemplifyAction()\r\n    # Script Name.\r\n    siemplify.script_name = ACTION_SCRIPT_NAME\r\n    conf = siemplify.get_configuration(NSM_PROVIDER)\r\n    nsm_manager = NsmManager(conf['API Root'], conf['Username'], conf['Password'], conf['Domain ID'],\r\n                             conf['Siemplify Policy Name'], conf['Sensors Names List Comma Separated'])\r\n    # Fetch Scope entities.\r\n    scope_entities = [entity for entity in siemplify.target_entities if entity.entity_type == ADDRESS]\r\n\r\n    # Scan entities.\r\n    for entity in scope_entities:\r\n        # and continue to next entity\r\n        try:\r\n            block_status = nsm_manager.block_ip(entity.identifier)\r\n            if block_status:\r\n                blocked_entities.append(entity)\r\n                result_value = True\r\n        except Exception as err:\r\n            siemplify.LOGGER.info('Error blocking ip {0}, ERROR: {1}'.format(entity.identifier, err.message))\r\n            siemplify.LOGGER._log.exception(err)\r\n\r\n    # Deploy changes.\r\n    nsm_manager.deploy_changes()\r\n\r\n    # Logout from NSM.\r\n    nsm_manager.logout()\r\n\r\n    # Form output message\r\n    if blocked_entities:\r\n        output_message = \"Successfully blocked {0}\".format(\",\".join([entity.identifier for\r\n                                                                     entity in blocked_entities]))\r\n    else:\r\n        output_message = \"No entities were blocked.\"\r\n\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 1.0
+}

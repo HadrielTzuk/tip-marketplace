@@ -1,0 +1,77 @@
+{
+    "CreationTimeUnixTimeInMs": 1529502968924,
+    "Creator": "admin",
+    "Description": "Create a new incident",
+    "Id": -1,
+    "IntegrationIdentifier": "MicroFocusITSMA",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1529502968924,
+    "Name": "Create Incident",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The display label of the incident",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Display Label",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The description of the incident",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Description",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The impact scope of the incident",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Impact Scope",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The urgency of the incident",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Urgency",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The id of the category of the incident",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Service ID",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom MicroFocusITSMAManager import MicroFocusITSMAManager\n\n\nITSMA_PROVIDER = 'MicroFocusITSMA'\n\n\ndef main():\n    # Configuration\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(ITSMA_PROVIDER)\n    itsma_manager = MicroFocusITSMAManager(conf['API Root'], conf['Username'], conf['Password'], conf['Tenant ID'],\n                                           conf['External System'], conf['External ID'], conf['Verify SSL'])\n\n    # Parameters.\n    display_label = siemplify.parameters.get('Display Label')\n    description = siemplify.parameters.get('Description')\n    impact_scope = siemplify.parameters.get('Impact Scope')\n    urgency = siemplify.parameters.get('Urgency')\n    service_id = siemplify.parameters.get('Service ID')\n\n    incident_id = itsma_manager.create_incident(display_label, description, impact_scope, urgency, service_id)\n\n    if incident_id:\n        output_message = 'An incident with id \"{0}\" was successfully created.'.format(incident_id)\n    else:\n        output_message = 'No ticket was created.'\n\n    siemplify.end(output_message, incident_id)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "incident_id",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

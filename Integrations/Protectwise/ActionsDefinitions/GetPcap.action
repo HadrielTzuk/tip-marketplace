@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1519298005126,
+    "Creator": "admin",
+    "Description": "Download an event's packet capture",
+    "Id": -1,
+    "IntegrationIdentifier": "Protectwise",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519298005126,
+    "Name": "Get Pcap",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

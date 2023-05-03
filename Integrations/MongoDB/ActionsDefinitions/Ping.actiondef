@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1527426727287,
+    "Creator": "admin",
+    "Description": "Test connectivity to MongoDB",
+    "Id": -1,
+    "IntegrationIdentifier": "MongoDB",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527426727287,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom MongoDBManager import MongoDBManager\n\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('MongoDB')\n    server = conf[\"Server Address\"]\n    username = conf.get(\"Username\", '')\n    password = conf.get(\"Password\", '')\n    port = int(conf.get(\"Port\"))\n    is_authenticate = conf[\"Use Authentication\"]\n\n    mongodb_manager = MongoDBManager(username=username, password=password, server=server, port=port,\n                                     is_authenticate=is_authenticate)\n\n    # Check if the connection is established or not.\n    mongodb_manager.test_connectivity()\n\n    # If no exception occur - then connection is successful\n    output_message = \"Successfully connected to MongoDB at {server_addr}:{port}.\".format(server_addr=server, port=port)\n    siemplify.end(output_message, True)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

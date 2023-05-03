@@ -1,0 +1,38 @@
+{
+    "CreationTimeUnixTimeInMs": 1553605689077,
+    "Creator": "Admin",
+    "DefaultResultValue": "",
+    "Description": "Get list of blocked addresses in a specific network group by it's name. ",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CiscoFirepowerManagementCenter",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1553605689077,
+    "Name": "Get Addresses List By Name",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1553605689082,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The name of the needed network group.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1553605689082,
+            "Name": "Network Group Name",
+            "OptionalValuesJson": null,
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CiscoFirepowerManager import CiscoFirepowerManager\nfrom SiemplifyUtils import construct_csv\n\nINTEGRATION_PROVIDER = 'CiscoFirepowerManagementCenter'\nSCRIPT_NAME = \"CiscoFirepowerManagementCenter_Get Addresses List By Name\"\nCSV_TABLE_HEADER = \"{0} Addresses List.\"\n\n\ndef main():\n\n    siemplify = SiemplifyAction()\n\n    # Set script name.\n    siemplify.script_name = SCRIPT_NAME\n\n    conf = siemplify.get_configuration(INTEGRATION_PROVIDER)\n    verify_ssl = conf['Verify SSL'].lower() == 'true'\n    cisco_firepower_manager = CiscoFirepowerManager(conf['API Root'],\n                                                    conf['Username'],\n                                                    conf['Password'],\n                                                    verify_ssl)\n    result_value = 'false'\n\n    # Parameters.\n    network_group_name = siemplify.parameters.get('Network Group Name')\n\n    # Get url group object to pass to the block function.\n    network_group_object = cisco_firepower_manager.get_network_group_object_by_name(network_group_name)\n\n    siemplify.result.add_result_json(network_group_object)\n\n    if network_group_object.get('literals'):\n        siemplify.result.add_data_table(CSV_TABLE_HEADER.format(network_group_name), construct_csv(\n            network_group_object.get('literals')))\n        output_message = 'Found addresses for the following list: {0}'.format(network_group_name)\n        result_value = \",\".join([address_obj.get('value') for address_obj in network_group_object.get('literals')])\n    else:\n        output_message = 'No addresses were found for group: {0}'.format(network_group_name)\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "addresses_list",
+    "TimeoutSeconds": 600,
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

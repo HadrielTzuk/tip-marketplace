@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Azure AD Identity Protection.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "AzureADIdentityProtection",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1639563779,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10553"
+    },
+    {
+        "ChangeDescription": "Risk Detections Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "RiskDetectionsConnector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1657087429,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11929"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Azure AD Identity Protection",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

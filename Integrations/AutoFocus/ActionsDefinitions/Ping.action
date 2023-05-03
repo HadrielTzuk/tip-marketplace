@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1518517190274,
+    "Creator": "admin",
+    "Description": "Test connectivity to AutoFocus",
+    "Id": -1,
+    "IntegrationIdentifier": "AutoFocus",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518517190274,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

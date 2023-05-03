@@ -1,0 +1,43 @@
+{
+    "Description": "CloudGuard is a cloud security posture management solution for cloud environments such as Amazon AWS, Microsoft Azure, and Google Cloud Platform. CloudGuard provides network security policy management and automation for your cloud environment across providers, regions and accounts. Organizations trust CloudGuard to ensure that their network security is well defined and understood, and then to enforce that security policy on a continuous basis. In the event of an unauthorized change, (for example, somebody or something attempts to open network ports) CloudGuard prevents this and instead enforces the configuration you have previously defined.",
+    "DisplayName": "Check Point CloudGuard",
+    "Identifier": "CheckPointCloudGuard",
+    "PythonVersion": 2,
+    "Categories": [
+        "Cloud Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "CheckPointCloudGuard",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Key ID",
+            "PropertyName": "API Key ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CheckPointCloudGuard",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Key Secret",
+            "PropertyName": "API Key Secret",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CheckPointCloudGuard",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M19,10.5C18.8,8.7,17.3,5,13.5,5C9.8,5,8.2,7.8,7.9,9.2C6,9.1,1.7,10.5,2,15.3c0.3,4.8,5.7,5.2,8.1,4.2\n\t\t\tc1.4-2.8,5.8-7.2,12.9-3.5C22.7,13.9,22.8,12.2,19,10.5z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 3.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/check-point-cloud-guard-dome9",
+    "MarketingDisplayName": "Check Point CloudGuard"
+}

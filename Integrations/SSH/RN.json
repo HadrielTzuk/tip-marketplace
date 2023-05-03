@@ -1,0 +1,74 @@
+[
+    {
+        "ChangeDescription": "Updated all password fields to be encrypted in all actions.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "SSH",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1592201918,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3407"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "SSH",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Updated JSON result, so that it can be used easier in the playbooks.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Run Command",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1614072507,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2229"
+    },
+    {
+        "ChangeDescription": "Removed unnecessary comments from the integration's code.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "SSH",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1636521986,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "SSH - Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "SSH",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1663749893,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11417"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 12.0,
+        "ItemName": "SSH",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

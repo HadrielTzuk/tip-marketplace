@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1526483224750, 
+    "Creator": "admin", 
+    "Description": "Search for hashes in MalShare", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"SHA1\": \"72bc52b0962ce9043d2104c511a0c5f1c3b5faf3\", \"SOURCES\": [\"http://dubaifridays.com/437gfinw2?NzGQTrl=AJQIIksfc\"], \"F_TYPE\": \"HTML\", \"SSDEEP\": \"768:uTqtXcyd1AlOIkRZAI+rVEGvbnP0+Dod58GO5Fyk31Qc2vGn:uTKXcyd1pujd5Fyc4I\", \"SHA256\": \"32d1b186a7ae51b2aa0485fbfff44323576f7195286c44619b5bd43b446678b8\", \"MD5\": \"9e0e9014a11cc149174d0b306f2ac698\"}, \"Entity\": \"9e0e9014a11cc149174d0b306f2ac698\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "MalShare", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1526483224750, 
+    "Name": "Enrich Hash", 
+    "Parameters": [], 
+    "Script": "from SiemplifyDataModel import EntityTypes\n# Imports\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv, add_prefix_to_dict_keys\nfrom MalShareManager import MalShareManager, MalShareError\n\n\n# Enrich target entity with alienvault info and add csv table to entity\ndef enrich_entity(report, entity, siemplify):\n    flat_report = dict_to_flat(report)\n    csv_output = flat_dict_to_csv(flat_report)\n    flat_report = add_prefix_to_dict_keys(flat_report, \"MalShare\")\n    siemplify.result.add_entity_table(entity.identifier, csv_output)\n    entity.additional_properties.update(flat_report)\n    entity.is_enriched = True\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    entities_to_enrich = []\n    not_found_entities = []\n    output_message = ''\n    result_value = True\n\n    # Configuration.\n    conf = siemplify.get_configuration('MalShare')\n    api_key = conf['Api Key']\n    malshare = MalShareManager(api_key)\n\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.FILEHASH:\n            try:\n                hash_info = malshare.search_hash(entity.identifier)\n                if hash_info:\n                    enrich_entity(hash_info, entity, siemplify)\n                    entities_to_enrich.append(entity)\n\n            except MalShareError:\n                # Hash is not found\n                not_found_entities.append(entity)\n\n            except Exception as e:\n                # An error occurred - skip entity and continue\n                siemplify.LOGGER.error(\n                    \"An error occurred on entity: {}.\\n{}.\".format(entity.identifier, str(e)))\n                siemplify.LOGGER._log.exception(e)\n\n    if entities_to_enrich:\n        output_message += \"The following entities were enriched by MalShare. \\n{0}\".format(entities_to_enrich)\n        siemplify.update_entities(entities_to_enrich)\n    if not_found_entities:\n        output_message += \"Can't find the following entities in MalShare. \\n{0}\".format(entities_to_enrich)\n    if not entities_to_enrich and not not_found_entities:\n        output_message = 'No entities were enriched.'\n        result_value = False\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 1.0
+}

@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1518094282499, 
+    "Creator": "admin", 
+    "Description": " Return the processing status in the A1000 system for the list of hash values", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": \"processed\", \"Entity\": \"2f61c5a77a64b3d45d651dc2fa7ba000\"}, {\"EntityResult\": \"processed\", \"Entity\": \"526e57077b938b3c3dbce56f8aaaa000\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "ReversinglabsA1000", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1518094282499, 
+    "Name": "Get Scan Status", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

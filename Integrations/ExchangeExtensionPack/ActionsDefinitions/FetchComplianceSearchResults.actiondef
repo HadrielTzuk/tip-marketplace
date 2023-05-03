@@ -1,0 +1,72 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Fetch results for the completed Compliance Search. Note: Action is not working on Siemplify entities. Note2: Maximum of 200 elements will be displayed, but actual search can have more findings that are shown.",
+    "Id": -1,
+    "IntegrationIdentifier": "ExchangeExtensionPack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Fetch Compliance Search Results",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Location\":\"test@example.com\",\"Sender\":\"James Bond\",\"Subject\":\"search test\",\"Type\":\"Email\",\"Size\":\"61772\",\"Received Time\":\"3/12/2021 9:43:59 AM\",\"Data Link\":\"data/All/FLDR5402c62d-7730-4c93-8f34-6bxxxxxxxxxx/BATCH0000/MSG192bc965-18c9-4c06-8834-2cxxxxxxxxxx.eml\",\"Name\":\"test\"},{\"Location\":\"test@example.com\",\"Sender\":\"James Bond\",\"Subject\":\"search test 2\",\"Type\":\"Email\",\"Size\":\"60881\",\"Received Time\":\"3/12/2021 9:43:59 AM\",\"Data Link\":\"data/All/FLDR5402c62d-7730-4c93-8f34-6bxxxxxxxxxx/BATCH0000/MSG9eefda9c-b1b5-46f0-8a54-bdxxxxxxxxxx.eml\",\"Name\":\"test\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Compliance Search Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Name for the Compliance Search. Note that name shouldn't contain special characters.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Emails To Return",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify how many emails action can return.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Remove Compliance Search Once Action Completes?",
+            "Type": 1,
+            "DefaultValue": true,
+            "Value": true,
+            "IsMandatory": false,
+            "Description": "Specify whether action should remove from Exchange server the search action and any related fetch or purge tasks once the action completes.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Create Case Wall Output Table?",
+            "Type": 1,
+            "DefaultValue": true,
+            "Value": true,
+            "IsMandatory": false,
+            "Description": "Specify if action should create case wall output table. If Max Emails To Return is set to a bigger number, its recommended to uncheck this to increase action performance.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

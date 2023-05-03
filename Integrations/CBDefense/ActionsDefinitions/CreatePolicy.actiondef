@@ -1,0 +1,65 @@
+{
+    "CreationTimeUnixTimeInMs": 1528099800904,
+    "Creator": "admin",
+    "Description": "Create a new Policy on Cb Defense",
+    "Id": -1,
+    "IntegrationIdentifier": "CBDefense",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1528099800904,
+    "Name": "Create Policy",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1528099800904,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Name for the policy",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528099800904,
+            "Name": "Policy Name",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528099800904,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "A description of the policy",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528099800904,
+            "Name": "Policy Description",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528099800904,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The priority score associated with sensors assigned to this policy. e.g. LOW",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528099800904,
+            "Name": "Priority Level",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528099800904,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The policy details",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528099800904,
+            "Name": "Policy Details",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CarbonBlackDefenseManager import CBDefenseManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    configurations = siemplify.get_configuration('CBDefense')\n    server_addr = configurations['Api Root']\n    api_key = configurations['Api Key']\n    policy_name = siemplify.parameters['Policy Name']\n    policy_desc = siemplify.parameters['Policy Description']\n    priority = siemplify.parameters['Priority Level']\n\n    cb_defense = CBDefenseManager(server_addr, api_key)\n    new_policy_id = cb_defense.create_new_policy(description=policy_desc, name=policy_name, priority_level=priority)\n\n    if new_policy_id:\n        output_message = 'Carbon Black Defense - Policy {0} created successfully. Policy ID: {1}'.format(policy_name, new_policy_id)\n\n    else:\n        output_message = 'Could not create new policy.'\n\n    siemplify.end(output_message, 'true')\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "new_policy_id",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

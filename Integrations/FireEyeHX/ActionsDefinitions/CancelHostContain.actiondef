@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1535369916860, 
+    "Creator": "Admin", 
+    "Description": "Create a cancel host contain task on the FireEye HX server based on the Siemplify IP or Host Siemplify entities. Note: Action is not supported for Linux hosts by Fireye HX.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "FireEyeHX", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1535369916860, 
+    "Name": "Cancel Host Contain", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

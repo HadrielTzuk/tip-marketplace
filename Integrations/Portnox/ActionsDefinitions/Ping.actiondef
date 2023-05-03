@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1513674706716,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "Portnox",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1513674706716,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom PortnoxManager import PortnoxManager\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration(\"Portnox\")\r\n    portnox_manager = PortnoxManager(conf['Api Root'], conf['Username'],\r\n                                     conf['Password'], conf['Verify SSL'])\r\n    portnox_manager.test_conectivity()\r\n\r\n    output_message = 'Connection Established'\r\n    result_value = 'true'\r\n\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n",
+    "ScriptResultName": "is_success",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

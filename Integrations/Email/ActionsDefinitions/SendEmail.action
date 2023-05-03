@@ -1,0 +1,77 @@
+{
+    "CreationTimeUnixTimeInMs": 1518362436003,
+    "Creator": "admin",
+    "Description": "Send email message",
+    "Id": -1,
+    "IntegrationIdentifier": "Email",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518362436003,
+    "Name": "Send Email",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Recipient email address. Multiple addresses can be separated by commas",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Recipients",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "CC email address. Multiple addresses can be separated by commas",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "CC",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "bcc email address. Multiple addresses can be separated by commas",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "bcc",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The subject of the email",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Subject",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The body of the email",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Content",
+            "Type": 10,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

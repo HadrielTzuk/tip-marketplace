@@ -1,0 +1,23 @@
+{
+  "Name": "Test Action Output",
+  "Description": "",
+  "Script": "from SiemplifyAction import *\nfrom SiemplifyUtils import flat_dict_to_csv\nimport json\n\nJSON = {\n    \"Record72\": \"Record72\",\n    \"Record73\": \"Record73\",\n    \"Record70\": \"Record70\",\n    \"Record71\": \"Record71\",\n    \"Record76\": \"Record76\",\n    \"Record77\": \"Record77\",\n    \"Record74\": \"Record74\",\n    \"Record75\": \"Record75\",\n    \"Record78\": \"Record78\",\n    \"Record79\": \"Record79\",\n    \"Record38\": \"Record38\",\n    \"Record39\": \"Record39\",\n    \"Record36\": \"Record36\",\n    \"Record37\": \"Record37\",\n    \"Record34\": \"Record34\",\n    \"Record35\": \"Record35\",\n    \"Record32\": \"Record32\",\n    \"Record33\": \"Record33\",\n    \"Record30\": \"Record30\",\n    \"Record31\": \"Record31\",\n    \"Record8\": \"Record8\",\n    \"Record9\": \"Record9\",\n    \"Record6\": \"Record6\",\n    \"Record7\": \"Record7\",\n    \"Record4\": \"Record4\",\n    \"Record5\": \"Record5\",\n    \"Record2\": \"Record2\",\n    \"Record3\": \"Record3\",\n    \"Record0\": \"Record0\",\n    \"Record1\": \"Record1\",\n    \"Record61\": \"Record61\",\n    \"Record60\": \"Record60\",\n    \"Record63\": \"Record63\",\n    \"Record62\": \"Record62\",\n    \"Record65\": \"Record65\",\n    \"Record64\": \"Record64\",\n    \"Record67\": \"Record67\",\n    \"Record66\": \"Record66\",\n    \"Record69\": \"Record69\",\n    \"Record68\": \"Record68\",\n    \"Record58\": \"Record58\",\n    \"Record29\": \"Record29\",\n    \"Record28\": \"Record28\",\n    \"Record59\": \"Record59\",\n    \"Record25\": \"Record25\",\n    \"Record24\": \"Record24\",\n    \"Record27\": \"Record27\",\n    \"Record26\": \"Record26\",\n    \"Record21\": \"Record21\",\n    \"Record20\": \"Record20\",\n    \"Record23\": \"Record23\",\n    \"Record22\": \"Record22\",\n    \"Record14\": \"Record14\",\n    \"Record15\": \"Record15\",\n    \"Record16\": \"Record16\",\n    \"Record17\": \"Record17\",\n    \"Record10\": \"Record10\",\n    \"Record11\": \"Record11\",\n    \"Record12\": \"Record12\",\n    \"Record13\": \"Record13\",\n    \"Record50\": \"Record50\",\n    \"Record51\": \"Record51\",\n    \"Record52\": \"Record52\",\n    \"Record53\": \"Record53\",\n    \"Record18\": \"Record18\",\n    \"Record55\": \"Record55\",\n    \"Record56\": \"Record56\",\n    \"Record57\": \"Record57\",\n    \"Record54\": \"Record54\",\n    \"Record19\": \"Record19\",\n    \"Record98\": \"Record98\",\n    \"Record99\": \"Record99\",\n    \"Record94\": \"Record94\",\n    \"Record95\": \"Record95\",\n    \"Record96\": \"Record96\",\n    \"Record97\": \"Record97\",\n    \"Record90\": \"Record90\",\n    \"Record91\": \"Record91\",\n    \"Record92\": \"Record92\",\n    \"Record93\": \"Record93\",\n    \"Record49\": \"Record49\",\n    \"Record48\": \"Record48\",\n    \"Record47\": \"Record47\",\n    \"Record46\": \"Record46\",\n    \"Record45\": \"Record45\",\n    \"Record44\": \"Record44\",\n    \"Record43\": \"Record43\",\n    \"Record42\": \"Record42\",\n    \"Record41\": \"Record41\",\n    \"Record40\": \"Record40\",\n    \"Record83\": \"Record83\",\n    \"Record82\": \"Record82\",\n    \"Record81\": \"Record81\",\n    \"Record80\": \"Record80\",\n    \"Record87\": \"Record87\",\n    \"Record86\": \"Record86\",\n    \"Record85\": \"Record85\",\n    \"Record84\": \"Record84\",\n    \"Record89\": \"Record89\",\n    \"Record88\": \"Record88\"\n}\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    print \"Action started\"\n    for entity in siemplify.target_entities:\n        siemplify.result.add_entity_json(entity.identifier, json.dumps(JSON))\n        siemplify.result.add_entity_table(entity.identifier, flat_dict_to_csv(JSON))\n    output_message = 'output message'\n    result_value = 'true'\n    print \"Action done\"\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+  "IntegrationIdentifier": "SiemplifyTest",
+  "ScriptResultName": "ScriptResult",
+  "DynamicResultsMetadata": [
+    {
+      "ResultName": "JsonResult",
+      "ResultExample": "{\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 1 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 1 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}"
+    }
+  ],
+  "Creator": "Admin",
+  "IsEnabled": true,
+  "IsCustom": false,
+  "Version": 2.0,
+  "TimeoutSeconds": 600,
+  "Parameters": [],
+  "DefaultResultValue": "",
+  "Id": -1,
+  "CreationTimeUnixTimeInMs": 1562227796986,
+  "ModificationTimeUnixTimeInMs": 1562227796986
+}

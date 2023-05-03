@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1525020015859,
+    "Creator": "System",
+    "Description": "Add comment to a CA ServiceDesk incident",
+    "Id": -1,
+    "IntegrationIdentifier": "CaServiceDesk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1525020015859,
+    "Name": "Add Comment",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1525020015859,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Incident's ref num. e.g. 338",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1525020015859,
+            "Name": "Ticket ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525020015859,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comment to add to an incident",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1525020015859,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom CaSoapManager import CaSoapManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('CaServiceDesk')\n    api_root = conf['Api Root']\n    username = conf['Username']\n    password = conf['Password']\n    \n    ca_manager = CaSoapManager(api_root, username, password)\n\n    ticket_id = siemplify.parameters['Ticket ID']\n    comment = siemplify.parameters['Comment']\n\n    add_comment_status = ca_manager.add_comment_to_incident(ticket_id, comment)\n\n    if add_comment_status:\n        output_message = 'Added comment to Incident {0}.'.format(ticket_id)\n        result_value = 'true'\n\n    else:\n        output_message = 'There was a problem adding comment to ticket number {0}.'.format(ticket_id)\n        result_value = 'false'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_succeed",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

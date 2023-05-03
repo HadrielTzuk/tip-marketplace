@@ -1,0 +1,72 @@
+{
+    "CreationTimeUnixTimeInMs": 1519822593041,
+    "Creator": "admin",
+    "Description": "Download a file from a host running VMware CB Cloud Agent based on the Siemplify Host or IP entity. Note: The File name can be provided either as a Siemplify File entity (artifact) or as an action input parameter. If the File name is passed to action both as an entity and input parameter - action will be executed on the input parameter. File name is case insensitive. File name will be appended to both Local Directory Path and Remote Directory Path to get the resulting file paths that CB Cloud API accepts. If action is executed against multiple Host or IP entities, to not overwrite the file downloaded from multiple entities, the downloaded file name is appended with Hostname or IP address, example format: hostname_filename. File Name also can be specified as a \"full path\" having both path and a file name, or having file name and file path as separate parameters",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"api_v3\",\"EntityResult\":[{\"obj\":{\"name\":\"get file\",\"object\":\"C:\\\\\\\\TMP\\\\\\\\/file.txt\"},\"id\":\"xxx\",\"name\":\"get file\",\"username\":null,\"creation_time\":1628600630,\"completion_time\":1628600631,\"result_code\":0,\"result_type\":\"WinHresult\",\"result_desc\":\"\",\"status\":\"complete\",\"file_id\":\"ea36c75c-c0e1-4551-89e5-xxxxx\",\"offset\":0,\"count\":0,\"files\":[],\"processes\":[],\"step\":\"Session Check\",\"reason\":\"Max retry for Session Check reached.\",\"is_success\":false,\"absolute_file_path\":\"filepath_v3\"}]},{\"Entity\":\"api_v6\",\"EntityResult\":[{\"file\":\"test.txt\",\"status\":\"COMPLETE\",\"values\":[],\"file_details\":{\"offset\":0,\"count\":0,\"file_id\":\"ca0b62cc-0445-4dce-b4b1-xxxxxxx\"},\"id\":\"xxxxx\",\"name\":\"get file\",\"result_code\":0,\"result_type\":\"WinHresult\",\"result_desc\":\"\",\"sub_keys\":[],\"files\":[],\"input\":{\"name\":\"get file\",\"object\":\"C:\\\\\\\\TMP\\\\\\\\/file.txt\"},\"create_time\":\"2021-08-03T11:37:23Z\",\"finish_time\":\"2021-08-03T11:37:24Z\",\"processes\":[],\"step\":\"Session Check\",\"reason\":\"Max retry for Session Check reached.\",\"is_success\":false,\"absolute_file_path\":\"filepath_v6\"}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CBLiveResponse",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519822593041,
+    "Name": "Download File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the file name to download. File name is case insensitive. File Name can be specified as a \"full path\" having both path and a file name, in that case Remote Directory Path parameter will not be used.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "File Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the remote directory path action should take to download the file. Example: C:\\TMP\\",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Remote Directory Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the local directory path action should save the file to. Example: /tmp/",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Local Directory Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519823687190,
+            "CustomActionId": -1,
+            "DefaultValue": "20",
+            "Description": "How many attempts action should make to get active session for the entity. Check is made every 2 seconds.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519823687190,
+            "Name": "Check for active session x times",
+            "Type": 0,
+            "Value": "20"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\", \"FILENAME\"]}",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

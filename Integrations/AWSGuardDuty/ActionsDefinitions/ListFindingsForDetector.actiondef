@@ -1,0 +1,82 @@
+{
+	"CreationTimeUnixTimeInMs": 1535993960679,
+	"Creator": "Admin",
+	"Description": "Lists all Amazon GuardDuty findings for the specified detector ID.",
+	"Id": -1,
+	"IntegrationIdentifier": "AWSGuardDuty",
+	"IsCustom": false,
+	"IsEnabled": true,
+	"DynamicResultsMetadata": [{
+		"ResultExample": "{\"FindingIds\": [\"10ba96ae50733ae38b9cae95431b7558\"]}",
+		"ResultName": "JsonResult"
+	}],
+	"ModificationTimeUnixTimeInMs": 1535993960679,
+	"Name": "List Findings for a Detector",
+	"Parameters": [{
+			"CreationTimeUnixTimeInMs": 1535381792970,
+			"CustomActionId": -1,
+			"DefaultValue": "",
+			"Description": "The unique ID of the detector that you want to retrieve.",
+			"Id": -1,
+			"IsMandatory": true,
+			"ModificationTimeUnixTimeInMs": 1535381792970,
+			"Name": "Detector ID",
+			"Type": 0,
+			"Value": ""
+		},
+		{
+			"CreationTimeUnixTimeInMs": 1535381792970,
+			"CustomActionId": -1,
+			"DefaultValue": "50",
+			"Description": "Specify how many detectors to return. Default is 50.",
+			"Id": -1,
+			"IsMandatory": false,
+			"ModificationTimeUnixTimeInMs": 1535381792970,
+			"Name": "Max Findings To Return",
+			"Type": 0,
+			"Value": "50"
+		},
+		{
+			"CreationTimeUnixTimeInMs": 1535381792970,
+			"CustomActionId": -1,
+			"DefaultValue": "",
+			"Description": "Represents the finding attribute (for example, accountId) to sort findings by.",
+			"Id": -1,
+			"IsMandatory": false,
+			"ModificationTimeUnixTimeInMs": 1535381792970,
+			"Name": "Sort By",
+			"Type": 0,
+			"Value": ""
+		},
+		{
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The order by which the sorted findings are to be displayed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Order By",
+            "OptionalValues": [
+                "ASC",
+                "DESC"
+            ],
+            "Type": 15,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1660914084000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Optionally specify the AWS Region to be used in the action that can be different from the default region specified in the integration configuration page.",
+            "Id": -1,
+            "IsMandatory": false,
+            "Name": "AWS Region",
+            "Type": 0,
+            "Value": ""
+        }
+	],
+	"ScriptResultName": "is_success",
+	"Version": 1.0,
+	"SimulationDataJson": "{\"Entities\":[]}"
+}

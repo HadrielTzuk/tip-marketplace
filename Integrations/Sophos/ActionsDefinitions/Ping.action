@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1519312904571,
+    "Creator": "admin",
+    "Description": "Test connectivity to the Sophos with parameters provided at the integration configuration page on the Marketplace tab.",
+    "Id": -1,
+    "IntegrationIdentifier": "Sophos",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519312904571,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

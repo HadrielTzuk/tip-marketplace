@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "NEW! FireEye ETP integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "FireEyeETP",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1606820480,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5989"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "FireEyeETP",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "FireEyeETP",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Email Alerts Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "FireEyeETP",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1670388158,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11960"
+    }
+]

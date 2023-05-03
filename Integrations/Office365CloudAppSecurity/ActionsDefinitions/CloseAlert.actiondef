@@ -1,0 +1,81 @@
+{
+    "CreationTimeUnixTimeInMs": 1513525130286,
+    "Creator": "admin",
+    "Description": "Close alert in Microsoft Cloud App Security.",
+    "Id": -1,
+    "IntegrationIdentifier": "Office365CloudAppSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1513525130286,
+    "Name": "Close Alert",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518700589889,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID of the alert that needs to be closed and marked as benign.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518700589889,
+            "Name": "Alert ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518700589889,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comment about why the alerts are closed and marked as benign.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518700589889,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "True Positive",
+            "Description": "Specify what should be the state of the alert.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "State",
+            "OptionalValues": [
+                "True Positive",
+                "Benign",
+                "False Positive"
+            ],
+            "Type": 15,
+            "Value": "True Positive"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "No Reason",
+            "Description": "Specify a reason why the alert should be closed. Note: this parameter doesn't have an impact, if state is \"True Positive\".",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Reason",
+            "OptionalValues": [
+                "No Reason",
+                "Actual Severity Is Lower",
+                "Other",
+                "Confirmed With End User",
+                "Triggered By Test",
+                "Not Of Interest",
+                "Too Many Similar Alerts",
+                "Alert Is Not Accurate"
+            ],
+            "Type": 15,
+            "Value": "No Reason"
+        }
+    ],
+    "Script": "",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

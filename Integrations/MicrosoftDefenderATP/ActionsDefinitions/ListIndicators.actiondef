@@ -1,0 +1,83 @@
+{
+    "CreationTimeUnixTimeInMs": 1575015001, 
+    "Creator": "admin",
+    "Description": "List indicators in Microsoft Defender ATP.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\":\"16\",\"indicatorValue\":\"https://www.google.com\",\"indicatorType\":\"Url\",\"action\":\"Audit\",\"createdBy\":\"45e9773c-100e-4a9f-ad37-xxxxxxx\",\"severity\":\"Informational\",\"category\":1,\"application\":\"demo-test\",\"educateUrl\":null,\"bypassDurationHours\":null,\"title\":\"test\",\"description\":\"test\",\"recommendedActions\":\"nothing\",\"creationTimeDateTimeUtc\":\"2022-02-08T14:04:11.3831384Z\",\"expirationTime\":null,\"lastUpdateTime\":\"2022-02-08T14:13:02.177086Z\",\"lastUpdatedBy\":\"45e9773c-100e-4a9f-ad37-xxxxxxxx\",\"rbacGroupNames\":[],\"rbacGroupIds\":[],\"notificationId\":null,\"notificationBody\":null,\"version\":null,\"mitreTechniques\":[],\"historicalDetection\":false,\"lookBackPeriod\":null,\"generateAlert\":true,\"additionalInfo\":null,\"createdByDisplayName\":\"Gabriel Defender ATP\",\"externalId\":null,\"createdBySource\":\"PublicApi\",\"certificateInfo\":null},{\"id\":\"10\",\"indicatorValue\":\"b753b5cbe151bba8befa6d9111bfda5a7d47ba601xxxxxxxxx\",\"indicatorType\":\"FileSha256\",\"action\":\"Audit\",\"createdBy\":\"vasil.d@siemplifycyarx.onmicrosoft.com\",\"severity\":\"High\",\"category\":1,\"application\":null,\"educateUrl\":null,\"bypassDurationHours\":null,\"title\":\"אהבה\",\"description\":\"אהבה\",\"recommendedActions\":\"אהבה\",\"creationTimeDateTimeUtc\":\"2020-07-16T13:33:24.8228025Z\",\"expirationTime\":null,\"lastUpdateTime\":\"2020-07-16T13:33:24.8383959Z\",\"lastUpdatedBy\":null,\"rbacGroupNames\":[],\"rbacGroupIds\":[],\"notificationId\":null,\"notificationBody\":null,\"version\":null,\"mitreTechniques\":[],\"historicalDetection\":false,\"lookBackPeriod\":null,\"generateAlert\":true,\"additionalInfo\":null,\"createdByDisplayName\":\"vasil.d@siemplifycyarx.onmicrosoft.com\",\"externalId\":null,\"createdBySource\":\"Portal\",\"certificateInfo\":null}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "MicrosoftDefenderATP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1575015001, 
+    "Name": "List Indicators",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of indicators that you would like to retrieve.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1578672183844,
+            "Name": "Indicators",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "CustomActionId": -1,
+            "DefaultValue": "FileSha1,FileSha256,FileMd5,CertificateThumbprint,IpAddress,DomainName,Url",
+            "Description": "Specify a comma-separated list of indicator types that you want to retrieve. Possible values: FileSha1, FileSha256, FileMd5, CertificateThumbprint, IpAddress, DomainName, Url.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1578672183844,
+            "Name": "Indicator Types",
+            "Type": 0,
+            "Value": "FileSha1,FileSha256,FileMd5,CertificateThumbprint,IpAddress,DomainName,Url"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "CustomActionId": -1,
+            "DefaultValue": "Warn,Block,Audit,Alert,AlertAndBlock,BlockAndRemediate,Allowed",
+            "Description": "Specify a comma-separated list of indicator actions that you want to use for filtering. Possible values: Warn,Block,Audit,Alert,AlertAndBlock,BlockAndRemediate,Allowed.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1578672183844,
+            "Name": "Actions",
+            "Type": 0,
+            "Value": "Warn,Block,Audit,Alert,AlertAndBlock,BlockAndRemediate,Allowed"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "CustomActionId": -1,
+            "DefaultValue": "Informational,Low,Medium,High",
+            "Description": "Specify a comma-separated list of severities that you want to use for filtering. Possible values: Informational,Low,Medium,High.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1578672183844,
+            "Name": "Severity",
+            "Type": 0,
+            "Value": "Informational,Low,Medium,High"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many indicators to return. Default: 50.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "Value": 50
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Type": 0, 
+    "Version": 1.0
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New Nozomi Networks integration added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "NozomiNetworks",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1608036680,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-6279"
+    }
+]

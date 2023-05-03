@@ -1,0 +1,119 @@
+{
+  "Identifier": "2f5f25f7-9ce7-4b42-b1ff-ed3ccb7fb63a",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "Splunk",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "25d66938-4704-45ee-8f22-63de32ed5726",
+      "ParentWorkflowIdentifier": "2f5f25f7-9ce7-4b42-b1ff-ed3ccb7fb63a",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Splunk_SplunkQuery_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Splunk_SplunkQuery",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "25d66938-4704-45ee-8f22-63de32ed5726",
+          "ParentWorkflowIdentifier": "2f5f25f7-9ce7-4b42-b1ff-ed3ccb7fb63a",
+          "Name": "ScriptName",
+          "Value": "Splunk_SplunkQuery",
+          "CreationTimeUnixTimeInMs": 1519310219334,
+          "ModificationTimeUnixTimeInMs": 1519310219334
+        },
+        {
+          "ParentStepIdentifier": "25d66938-4704-45ee-8f22-63de32ed5726",
+          "ParentWorkflowIdentifier": "2f5f25f7-9ce7-4b42-b1ff-ed3ccb7fb63a",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Query\":\"index=_internal\",\"Results count limit\":\"10\",\"Results From\":\"-24h\",\"Results To\":\"now\"}",
+          "CreationTimeUnixTimeInMs": 1519310219334,
+          "ModificationTimeUnixTimeInMs": 1519310219334
+        },
+        {
+          "ParentStepIdentifier": "25d66938-4704-45ee-8f22-63de32ed5726",
+          "ParentWorkflowIdentifier": "2f5f25f7-9ce7-4b42-b1ff-ed3ccb7fb63a",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519310219334,
+          "ModificationTimeUnixTimeInMs": 1519310219334
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519310219334,
+      "ModificationTimeUnixTimeInMs": 1519310219334
+    },
+    {
+      "Identifier": "5f674bdc-73fb-4dde-9237-997dc9e2405a",
+      "ParentWorkflowIdentifier": "2f5f25f7-9ce7-4b42-b1ff-ed3ccb7fb63a",
+      "ParentStepIdentifiers": [
+        "25d66938-4704-45ee-8f22-63de32ed5726"
+      ],
+      "ParentStepIdentifier": "25d66938-4704-45ee-8f22-63de32ed5726",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "Splunk_SplunkCsvViewer_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "Splunk_SplunkCsvViewer",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "5f674bdc-73fb-4dde-9237-997dc9e2405a",
+          "ParentWorkflowIdentifier": "2f5f25f7-9ce7-4b42-b1ff-ed3ccb7fb63a",
+          "Name": "ScriptName",
+          "Value": "Splunk_SplunkCsvViewer",
+          "CreationTimeUnixTimeInMs": 1519310219334,
+          "ModificationTimeUnixTimeInMs": 1519310219334
+        },
+        {
+          "ParentStepIdentifier": "5f674bdc-73fb-4dde-9237-997dc9e2405a",
+          "ParentWorkflowIdentifier": "2f5f25f7-9ce7-4b42-b1ff-ed3ccb7fb63a",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Results\":\"[Splunk_SplunkQuery_1.results]\"}",
+          "CreationTimeUnixTimeInMs": 1519310219334,
+          "ModificationTimeUnixTimeInMs": 1519310219334
+        },
+        {
+          "ParentStepIdentifier": "5f674bdc-73fb-4dde-9237-997dc9e2405a",
+          "ParentWorkflowIdentifier": "2f5f25f7-9ce7-4b42-b1ff-ed3ccb7fb63a",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519310219334,
+          "ModificationTimeUnixTimeInMs": 1519310219334
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519310219334,
+      "ModificationTimeUnixTimeInMs": 1519310219334
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "b67f0f21-bcf8-45f5-a574-b06fb2d4f1aa",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "2f5f25f7-9ce7-4b42-b1ff-ed3ccb7fb63a",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Splunk",
+      "AllEnvironments": "",
+      "Id": 98,
+      "CreationTimeUnixTimeInMs": 1519310219334,
+      "ModificationTimeUnixTimeInMs": 1519310219334
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 98,
+  "CreationTimeUnixTimeInMs": 1519310219333,
+  "ModificationTimeUnixTimeInMs": 1519310219333
+}

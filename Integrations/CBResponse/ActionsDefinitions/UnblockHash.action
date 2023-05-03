@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1520849387881, 
+    "Creator": "admin", 
+    "Description": "Unblock a hash", 
+    "Id": -1, 
+    "IntegrationIdentifier": "CBResponse", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1520849387881, 
+    "Name": "Unblock Hash", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

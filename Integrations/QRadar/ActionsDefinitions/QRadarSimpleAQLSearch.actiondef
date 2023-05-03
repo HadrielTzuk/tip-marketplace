@@ -1,0 +1,147 @@
+{
+    "CreationTimeUnixTimeInMs": 1525002829777,
+    "Creator": "admin",
+    "Description": "Execute an AQL query based on parameters in QRadar.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"flows\":[{\"destinationflags\":\"XX\",\"destinationpackets\":\"X.X\",\"sourcebytes\":\"XXX.X\",\"protocolid\":\"X\",\"sourceip\":\"XXX.XX.XXX.X\",\"destinationbytes\":\"XXX.X\",\"lastpackettime\":\"162845XXXXXXX\",\"sourceflags\":\"XX\",\"sourcepackets\":\"X.X\",\"qid\":\"5325XXXX\",\"flowtype\":\"X\",\"destinationip\":\"XXX.XX.XXX.XXX\",\"firstpackettime\":\"162845XXXXXXX\",\"category\":\"XXXXX\"}],\"events\":[{\"starttime\":\"1628454727XXX\",\"protocolid\":\"XXX\",\"sourceip\":\"XXX.XX.XXX.XX\",\"logsourceid\":\"XXX\",\"qid\":\"XXXXXXX\",\"sourceport\":\"X\",\"eventcount\":\"X\",\"magnitude\":\"X\",\"identityip\":\"X.X.X.X\",\"destinationip\":\"XXX.XX.XXX.XX\",\"destinationport\":\"X\",\"category\":\"XXXXX\",\"username\":\"XXXXX\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "QRadar",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1525002829777,
+    "Name": "QRadar Simple AQL Search",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Flows",
+            "Description": "Specify what table should be queried.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Table Name",
+            "OptionalValues": [
+                "Flows",
+                "Events"
+            ],
+            "Type": 15,
+            "Value": "Flows"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525002829777,
+            "CustomActionId": -1,
+            "DefaultValue": "*",
+            "Description": "Specify what fields to return. If nothing is provided, action will return all fields.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525002829777,
+            "Name": "Fields To Return",
+            "Type": 0,
+            "Value": "*"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525002829777,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the WHERE filter for the query that needs to be executed. Note: you don't need to provide time filter, limiting and sorting. Also, you don't need to provide WHERE string in the payload.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525002829777,
+            "Name": "Where Filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Last Hour",
+            "Description": "Specify a time frame for the results. If \"Custom\" is selected, you also need to provide \"Start Time\".",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Time Frame",
+            "OptionalValues": [
+                "Last Hour",
+                "Last 6 Hours",
+                "Last 24 Hours",
+                "Last Week",
+                "Last Month",
+                "Custom"
+            ],
+            "Type": 15,
+            "Value": "Last Hour"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525002829777,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the start time for the results. This parameter is mandatory, if \"Custom\" is selected for the \"Time Frame\" parameter. Format: ISO-8601",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525002829777,
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525002829777,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the end time for the results. Format: ISO-8601. If nothing is provided and \"Custom\" is selected for the \"Time Frame\" parameter then this parameter will use current time.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525002829777,
+            "Name": "End Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525002829777,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what parameter should be used for sorting.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525002829777,
+            "Name": "Sort Field",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "ASC",
+            "Description": "Specify the order of sorting. Requires \"Sort Field\" to be provided.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Sort Order",
+            "OptionalValues": [
+                "ASC",
+                "DESC"
+            ],
+            "Type": 15,
+            "Value": "ASC"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many results to return. Default: 50.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "Value": 50
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

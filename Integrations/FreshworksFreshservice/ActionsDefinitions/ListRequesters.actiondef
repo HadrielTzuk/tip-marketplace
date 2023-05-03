@@ -1,0 +1,70 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583,
+    "Creator": "admin",
+    "Description": "List requesters registered in Freshservice based on the specified search criteria. Note that action is not working on Siemplify entities.",
+    "Id": -1,
+    "IntegrationIdentifier": "FreshworksFreshservice",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"requesters\": [{\"active\": true, \"address\": null, \"background_information\": null,\"can_see_all_tickets_from_associated_departments\": false, \"created_at\": \"12345\", \"custom_fields\": {\"aaaa\": null}, \"department_ids\": [12345, 12345], \"external_id\": null, \"first_name\": \"aaa\", \"has_logged_in\": true, \"id\": 21345, \"job_title\": null, \"language\": \"en\", \"last_name\": \"aaaa\", \"location_id\": 12344, \"mobile_phone_number\": null, \"primary_email\": \"aaaa@aaaa.aaa\", \"reporting_manager_id\": null, \"secondary_emails\": [], \"time_format\": \"12h\", \"time_zone\": \"Eastern Time (US & Canada)\", \"updated_at\": \"12345\", \"work_phone_number\": null, \"department_names\": [\"aaaa\", \"aaaaa\"], \"location_name\": \"America\"}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1530451212583,
+    "Name": "List Requesters",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the email address to return requester records for.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Requester Email",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": 30,
+            "Description": "Specify how many requester records should be returned per page for Freshservice pagination.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Rows per Page",
+            "Type": 0,
+            "Value": 30
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": 1,
+            "Description": "Specify starting from which page requester records should be returned with Freshservice pagination.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Start at Page",
+            "Type": 0,
+            "Value": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": 30,
+            "Description": "Specify how many requester records action should return in total.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Max Rows to Return",
+            "Type": 0,
+            "Value": 30
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

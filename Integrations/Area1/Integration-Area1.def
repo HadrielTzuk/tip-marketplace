@@ -1,0 +1,48 @@
+{
+    "Description": "Area 1 Horizon, a cloud-based service that stops phishing attacks across all traffic vectors—email, web, or network. Protects users against phishing emails using a cloud-based MTA or cloud APIs/connectors. Protects users against web-based phishing campaigns through a globally distributed, recursive DNS service. Shut downs phishing attacks at your network edge.",
+    "DisplayName": "Area1",
+    "Identifier": "Area1",
+    "Categories": [
+        "Email Security",
+        "Operational"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Area1",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://api.area1security.com/"
+        },
+        {
+            "IntegrationIdentifier": "Area1",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Area1",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Area1",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "Version": 3.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/area1",
+    "MarketingDisplayName": "Area 1 Horizon"
+}

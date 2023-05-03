@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1519138869663,
+    "Creator": "admin",
+    "Description": "List all users configured on a system",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Status\": \"Degraded\", \"Domain\": \"PC-01\", \"Description\": \"Built-in account for administering the computer/domain\", \"InstallDate\": null, \"Caption\": \"PC-01\\\\Administrator\", \"Disabled\": true, \"PasswordChangeable\": true, \"Lockout\": false, \"AccountType\": 512, \"SID\": \"S-1-5-21-3501119061-1410835827-1917537121-500\", \"LocalAccount\": true, \"FullName\": \"\", \"SIDType\": 1, \"PasswordRequired\": true, \"PasswordExpires\": false, \"Name\": \"Administrator\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "WMI",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519138869663,
+    "Name": "ListUsers",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519140310506,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519140310506,
+            "Name": "Server Address",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519140310506,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519140310506,
+            "Name": "Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519140310506,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1519140310506,
+            "Name": "Password",
+            "Type": 12,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "users",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

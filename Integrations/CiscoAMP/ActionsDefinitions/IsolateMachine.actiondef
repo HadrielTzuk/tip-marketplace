@@ -1,0 +1,21 @@
+{
+    "CreationTimeUnixTimeInMs": 1527754004945, 
+    "Creator": "admin", 
+    "Description": "Isolate Machine by connector guid.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{ \"EntityResult\": { \"available\": true, \"status\": \"not_isolated\", \"unlock_code\": \"unlock_code\", \"isolated_by\": \"Name Surname\", \"comment\": \"Some comment\"}, \"Entity\": \"1.1.1.1\"}", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "CiscoAMP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1527754004995, 
+    "Name": "Isolate Machine", 
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

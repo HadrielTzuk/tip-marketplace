@@ -1,0 +1,51 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Set the status for the specific Rapid7 InsightIDR investigation. Note: Action is not working with Siemplify Entities.",
+    "Id": -1,
+    "IntegrationIdentifier": "Rapid7InsightIDR",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Set Investigation Status",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"id\":\"xxxxxxxx-4522-4a6e-9838-81496a0cxxxx\",\"title\":\"Process reported as malicious ran on asset xx-srv2016-rpxx.rapid7.local\",\"status\":\"OPEN\",\"source\":\"ALERT\",\"assignee\":{\"name\":\"Tip Labops\",\"email\":\"example@siemplify.co\"},\"alerts\":[{\"type\":\"Malicious Hash On Asset\",\"type_description\":\"A malicious hash was found on an asset.\",\"first_event_time\":\"2020-12-02T13:16:14.197Z\"}],\"created_time\":\"2020-12-02T13:18:16.758Z\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Investigation ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "ID of investigation to update status for. ID should be in the format like 8ec8e324-4522-4a6e-9838-81496a0cadb0",
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Status",
+            "Type": 15,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "New Status of investigation.",
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "Id": -1,
+            "OptionalValues": [
+                "open",
+                "closed"
+            ]
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

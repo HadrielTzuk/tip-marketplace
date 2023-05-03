@@ -1,0 +1,35 @@
+{
+    "Description": "SSL Labs analyzes SSL web server deployments and identifies configuration issues. ",
+    "DisplayName": "SSL Labs",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/ssl-labs",
+    "Identifier": "SSLLabs",
+    "Categories": [
+        "Vulnerability & Risk Management",
+        "Data Enrichment",
+        "Free to use",
+        "Operational"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "SSLLabs",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Warning Threshold",
+            "PropertyName": "Warning Threshold",
+            "PropertyType": "2",
+            "Value": "C"
+        },
+        {
+            "IntegrationIdentifier": "SSLLabs",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": false
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M21.6,5c0-0.2-0.1-0.4-0.3-0.5c-0.2-0.2-0.4-0.4-0.7-0.6C19,2.8,17.2,2,15.3,1.7C11,1,7.1,1.7,3.7,4.5\n\t\t\tC3.5,4.6,3.4,4.8,3.4,5c-0.1,1.8-0.1,3.6-0.2,5.4c-0.1,3,0.8,5.7,2.7,8c1.7,2.1,3.9,3.8,6.3,5.1c0.1,0.1,0.4,0.1,0.6,0\n\t\t\tc0.9-0.6,1.8-1.1,2.7-1.7c1.6-1.1,3-2.5,4.1-4c1.1-1.5,1.9-3.1,2-5c0.1-1.3,0.2-2.6,0.2-3.8C21.7,7.6,21.7,6.3,21.6,5z M18.1,14.4\n\t\t\tc-0.3,0.5-0.8,1-1.2,1.5c-0.1,0.1-0.3,0.2-0.4,0.2c-0.8-0.2-1.5-0.4-2.2-0.6c0,0-0.1-0.1-0.1-0.1c0.6-0.7,1.3-1.2,1.8-1.9\n\t\t\tc1.7-2.1,1.1-4.7-0.7-6.1C13.5,5.8,10.7,6,9.1,7.9c-1.3,1.5-1.5,3.3-0.8,5.2c0.5,1.4,1.6,2.3,2.8,3c1.3,0.8,2.8,1.1,4.3,1.4\n\t\t\tc0.6,0.1,1.1,0.2,1.8,0.3c-0.3,0.3-0.5,0.6-0.8,0.8c-1.1,1-1.1,1-2.5,0.7c-1.7-0.4-3.3-1-4.8-2.1c-2.3-1.6-3.5-3.8-3.4-6.6\n\t\t\tc0.1-2.8,1.5-4.8,4.1-5.9c2.8-1.2,5.9-0.4,7.7,1.8C19.5,8.8,19.8,11.8,18.1,14.4z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 7.0,
+    "MarketingDisplayName": "Qualys SSL Labs"
+}

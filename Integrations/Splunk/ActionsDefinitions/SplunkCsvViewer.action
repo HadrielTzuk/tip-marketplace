@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1519305187913,
+    "Creator": "admin",
+    "Description": "Deprecated. This action creates a CSV table based on the raw results.",
+    "Id": -1,
+    "IntegrationIdentifier": "Splunk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519305187913,
+    "Name": "SplunkCsvViewer",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519305955295,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Raw results.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519305955295,
+            "Name": "Results",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_succeed",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

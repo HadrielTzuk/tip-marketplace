@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1523175577572,
+    "Creator": "admin",
+    "Description": "Test connectivity to Falcon Sandbox",
+    "Id": -1,
+    "IntegrationIdentifier": "FalconSandbox",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1523175577572,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom FalconSandboxManager import FalconSandboxManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    configurations = siemplify.get_configuration('FalconSandbox')\n    key = configurations['Api Key']\n\n    falcon_manager = FalconSandboxManager(key)\n    falcon_manager.test_connectivity()\n\n    siemplify.end(\"Connected successfully.\", 'true')\n\n\nif __name__ == '__main__':\n    main()\n\n",
+    "ScriptResultName": "success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

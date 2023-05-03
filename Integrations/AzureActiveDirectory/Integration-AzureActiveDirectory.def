@@ -1,0 +1,54 @@
+{
+    "Description": "Azure Active Directory (Azure AD) is Microsoft\u2019s cloud-based identity and access management service, which helps your employees sign in and access  both internal and external resources.",
+    "DisplayName": "Azure Active Directory",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/azure-ad",
+    "Identifier": "AzureActiveDirectory",
+    "Categories": [
+        "Cloud",
+        "Identity",
+        "IAM",
+        "Access Management",
+        "Operational"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "AzureActiveDirectory",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AzureActiveDirectory",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client Secret",
+            "PropertyName": "Client Secret",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AzureActiveDirectory",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Directory ID",
+            "PropertyName": "Directory ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AzureActiveDirectory",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\"><g>\t<g>\t\t<path d=\"M15.7,26.3c0.5,0.6,0.8,1.4,0.8,2.2c0,0.6-0.2,1.2-0.5,1.8l6.5,4.8c0.5-0.5,1.2-0.9,2-1V19.9c-0.5-0.1-1-0.3-1.4-0.5\t\t\tL15.7,26.3z M25,2L2,30l23,18l23-18L25,2z M37,32c-0.9,0-1.8-0.4-2.4-1l-6.5,4.8c0.3,0.5,0.4,1,0.4,1.6c0,1.9-1.6,3.5-3.5,3.5\t\t\ts-3.5-1.6-3.5-3.5c0-0.6,0.2-1.1,0.4-1.6L15.4,31c-0.6,0.6-1.5,1-2.4,1c-1.9,0-3.5-1.6-3.5-3.5c0-0.6,0.1-1.1,0.4-1.5l0,0l0.1-0.1\t\t\tc0.6-1.1,1.7-1.9,3.1-1.9c0.7,0,1.4,0.2,2,0.6l7.4-6.9c-0.5-0.6-0.8-1.4-0.8-2.3c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5\t\t\tc0,0.6-0.2,1.2-0.5,1.7l6.6,7.7c0.6-0.6,1.4-0.9,2.3-0.9c1.3,0,2.5,0.8,3.1,1.9l0.1,0.1l0,0c0.2,0.5,0.4,1,0.4,1.5\t\t\tC40.5,30.4,38.9,32,37,32z M27.4,19c-0.5,0.5-1.2,0.8-1.9,0.9v14.1c0.8,0.1,1.5,0.5,2,1l6.5-4.8c-0.3-0.5-0.5-1.1-0.5-1.8\t\t\tc0-0.7,0.2-1.3,0.5-1.8L27.4,19z\"/>\t</g></g></svg>",
+    "Version": 11.0,
+    "MarketingDisplayName": "Azure Active Directory"
+}

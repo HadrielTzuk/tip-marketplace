@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 12.32</h2><h5>Published on 05 May, 2020</h5><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     McAfeeESM\n    </b>\n   </li>\n   <ul>\n    <li>\n     McAfee ESM Connector\n    </li>\n    <ul>\n     <li>\n      Fixed timezone handling and updated pagination mechanism\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "12.32",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "05/05/20",
+    "Title": "Release Notes"
+}

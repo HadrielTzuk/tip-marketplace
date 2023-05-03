@@ -1,0 +1,109 @@
+[
+    {
+        "ChangeDescription": "Added non-mandatory Proxy Parameters. Will be used if set (not empty).",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Sumologic Connector",
+        "ItemType": "Connector",
+        "New": true,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-471"
+    },
+    {
+        "ChangeDescription": "Modified connector to parse out the \"_raw\" field for each alert to allow the data to be mapped within Event Mapping settings.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Sumologic Connector",
+        "ItemType": "Connector",
+        "New": true,
+        "PublishTime": 1597648049,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4199"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Sumologic",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": " Sumo Logic - Update - Updated the integration's code to work with Python version 3.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "Sumologic",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1614677797,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7444"
+    },
+    {
+        "ChangeDescription": " Connector Improvement - Add the ability to run complex saved queries to identify alerts that need to be investigated using the whitelist.  Improve timestamp mechanism to be more accurate.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "Sumologic Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1614677797,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7445"
+    },
+    {
+        "ChangeDescription": " Update - Added the ability to delete jobs after a search is completed.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "Search",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1614677797,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7450"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "Sumologic",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Search - Added Predefined Widgets.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 12.0,
+        "ItemName": "Search",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1680566400,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "269738141"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 13.0,
+        "ItemName": "Sumologic",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

@@ -1,0 +1,97 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Update incident in Microsoft 365 Defender.",
+    "Id": -1,
+    "IntegrationIdentifier": "Microsoft365Defender",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Update Incident",
+    "Parameters": [
+        {
+             "Name": "Incident ID",
+             "Type": 0,
+             "DefaultValue": "",
+             "Value": "",
+             "IsMandatory": true,
+             "Description": "Specify the id of the incident that needs to be updated.",
+             "CustomActionId": -1,
+             "Id": -1,
+             "CreationTimeUnixTimeInMs": 0,
+             "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+             "Name": "Status",
+             "Type": 15,
+             "DefaultValue": "Select One",
+             "Value": "Select One",
+             "IsMandatory": false,
+             "Description": "Specify what status to set for the incident.",
+             "OptionalValues": [
+                 "Select One",
+                 "Active",
+                 "Resolved"
+             ],
+             "CustomActionId": -1,
+             "Id": -1,
+             "CreationTimeUnixTimeInMs": 1512975883225,
+             "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+             "Name": "Classification",
+             "Type": 15,
+             "DefaultValue": "Select One",
+             "Value": "Select One",
+             "IsMandatory": false,
+             "Description": "Specify what classification to set for the incident..",
+             "OptionalValues": [
+                 "Select One",
+                 "False Positive",
+                 "True Positive"
+             ],
+             "CustomActionId": -1,
+             "Id": -1,
+             "CreationTimeUnixTimeInMs": 1512975883225,
+             "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+             "Name": "Determination",
+             "Type": 15,
+             "DefaultValue": "Select One",
+             "Value": "Select One",
+             "IsMandatory": false,
+             "Description": "Specify what determination to set for the incident. Note: determination can only be set, when classification is true positive.",
+             "OptionalValues": [
+                 "Select One",
+                 "Not Available",
+                 "Apt",
+                 "Malware",
+                 "Security Personnel",
+                 "Security Testing",
+                 "Unwanted Software",
+                 "Other"
+             ],
+             "CustomActionId": -1,
+             "Id": -1,
+             "CreationTimeUnixTimeInMs": 1512975883225,
+             "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+             "Name": "Assign To",
+             "Type": 0,
+             "DefaultValue": "",
+             "Value": "",
+             "IsMandatory": false,
+             "Description": "Specify to whom to assign this incident.",
+             "CustomActionId": -1,
+             "Id": -1,
+             "CreationTimeUnixTimeInMs": 0,
+             "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

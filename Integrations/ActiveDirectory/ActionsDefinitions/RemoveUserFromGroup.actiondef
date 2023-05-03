@@ -1,0 +1,28 @@
+{
+    "CreationTimeUnixTimeInMs": 1527419044459, 
+    "Creator": "admin", 
+    "Description": "Remove user from groups.",
+    "Id": -1, 
+    "IntegrationIdentifier": "ActiveDirectory", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1527419044459, 
+    "Name": "Remove User From Group", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527419044459, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "Specify a comma-separated list of groups from which action should remove users.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1527419044459, 
+            "Name": "Group Name", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Version": 1.0
+}

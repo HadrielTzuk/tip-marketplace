@@ -1,0 +1,17 @@
+{
+    "CreationTimeUnixTimeInMs": 1510138468693,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "Zabbix",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1510138468693,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import *\nfrom SplunkWrapper import SplunkWrapper\n \ndef main():\n\t\n\tsiemplify = SiemplifyAction()\n\t\n\tconf = siemplify.get_configuration('Splunk')\n\toutput_massage = '' \n\t\n\tsw = SplunkWrapper(base_url = conf['ServerAddress'], username = conf['Username'], password = conf['Password'])\n\tresult_value = sw.ping()\n\t\n\tif(result_value):\n\t\toutput_massage = 'Connection Established.'\n\telse:\n\t\toutput_massage = 'Connection Failed.'\n\t\n\tsiemplify.end(output_massage, result_value)\n\t\nif __name__ == '__main__':\n\tmain()",
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

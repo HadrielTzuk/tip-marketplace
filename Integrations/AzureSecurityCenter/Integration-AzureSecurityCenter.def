@@ -1,0 +1,83 @@
+{
+    "Description": "Azure Security Center is a unified infrastructure security management system that strengthens the security posture of your data centers, and provides advanced threat protection across your hybrid workloads in the cloud - whether they're in Azure or not - as well as on premises.",
+    "DisplayName": "Azure Security Center",
+    "Identifier": "AzureSecurityCenter",
+    "PythonVersion": 2,
+    "Categories": [
+        "Cloud Security",
+        "Cloud",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "AzureSecurityCenter",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AzureSecurityCenter",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client Secret",
+            "PropertyName": "Client Secret",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AzureSecurityCenter",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AzureSecurityCenter",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AzureSecurityCenter",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Subscription ID",
+            "PropertyName": "Subscription ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AzureSecurityCenter",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Tenant ID",
+            "PropertyName": "Tenant ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AzureSecurityCenter",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Refresh Token",
+            "PropertyName": "Refresh Token",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AzureSecurityCenter",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "false"
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/azure-security-center",
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M12.3731 23.9851C11.1343 23.2687 9.85075 22.6119 8.64179 21.8358C7.20895 20.8955 5.89552 19.806 4.92537 18.3582C4.31343 17.4328 4 16.4179 4 15.2985C4.01493 11.6269 4 7.95522 4 4.28358C4 4.13433 4 4 4 3.83582C4.77612 3.79104 5.52239 3.76119 6.25373 3.70149C7.82089 3.55224 9.34328 3.25373 10.7313 2.49254C11.403 2.13433 11.9851 1.67164 12.4179 1C13.8507 2.85075 15.9104 3.31343 18.0298 3.62687C18.9701 3.76119 19.9104 3.79104 20.9104 3.86567C20.9104 4 20.9104 4.13433 20.9104 4.28358C20.9104 7.92537 20.8806 11.5522 20.9254 15.194C20.9403 16.7164 20.3881 17.9701 19.4328 19.0896C17.806 21 15.7313 22.3134 13.5373 23.4776C13.2239 23.6418 12.9104 23.8209 12.597 24C12.5224 23.9851 12.4478 23.9851 12.3731 23.9851ZM9.59701 12.1791C9.49254 12.1791 9.44776 12.194 9.40298 12.194C8.79104 12.209 8.73134 12.2687 8.73134 12.8657C8.73134 14.1493 8.73134 15.4328 8.73134 16.7015C8.73134 17.1493 8.85075 17.2836 9.28358 17.2836C11.403 17.2836 13.5224 17.2836 15.6418 17.2836C16.0597 17.2836 16.1791 17.1493 16.1791 16.7313C16.1791 15.4925 16.1791 14.2388 16.1791 13C16.1791 12.209 16.1791 12.209 15.403 12.1791C15.3881 12.1791 15.3582 12.1642 15.3134 12.1343C15.3134 11.5522 15.3284 10.9552 15.3134 10.3731C15.2836 9.23881 14.4925 8.1194 13.4328 7.73134C11.4925 7.02985 9.73134 8.52239 9.61194 10.3731C9.56716 10.9701 9.59701 11.5672 9.59701 12.1791Z\" \/>\r\n<path d=\"M10.9403 12.1791C10.9701 11.4627 10.9403 10.7612 11.0597 10.0896C11.194 9.31343 11.8657 8.89552 12.6119 8.97015C13.2985 9.02985 13.8806 9.62687 13.9104 10.3731C13.9403 10.9701 13.9104 11.5672 13.9104 12.194C12.9552 12.1791 11.9851 12.1791 10.9403 12.1791Z\" \/>\r\n<\/svg>",
+    "Version": 6.0
+}

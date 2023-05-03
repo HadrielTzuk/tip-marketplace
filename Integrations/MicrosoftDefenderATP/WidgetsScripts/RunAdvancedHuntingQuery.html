@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i"
+    rel="stylesheet">
+  <link
+    href='https://fonts.googleapis.com/css?family=Source Sans Pro'
+    rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <title>Query Widget</title>
+  <style>
+      :root {
+          --dark-gray-100: hsl(0, 0%, 1000%);
+          --dark-gray-200: hsl(216, 45%, 84%);
+          --dark-gray-300: hsl(220, 22%, 62%);
+          --dark-gray-400: hsl(221, 26%, 46%);
+          --dark-gray-500: hsl(221, 30%, 33%);
+          --dark-gray-600: hsl(221, 32%, 27%);
+          --dark-gray-700: hsl(221, 35%, 23%);
+          --dark-gray-800: hsl(221, 35%, 20%);
+          --dark-gray-900: hsl(240, 25%, 12%);
+          
+          --color-table-even-row: hsl(226, 32%, 15%);
+          --color-link: hsl(217, 89%, 76%);
+
+          --widget-width-in-screen: 100%;
+          --widget-height-in-screen: 100%;
+
+          --widget-font-style: normal;
+
+          --widget-text-font: 'Source Sans Pro', sans-serif;
+          --widget-number-font: 'Open Sans', sans-serif;
+
+          --font-weight-bold: 700;
+          --font-weight-semibold: 600;
+          --font-weight-regular: 400;
+
+          --font-size-big: 16px;
+          --font-size-medium: 14px;
+
+          --default-line-height: 16px;
+
+          --scrollbar-size: 12px;
+      }
+
+      html {
+          height: var(--widget-height-in-screen);
+          width: var(--widget-width-in-screen);
+      }
+
+      body {
+          background-color: var(--dark-gray-800);
+
+          height: var(--widget-height-in-screen);
+          width: var(--widget-width-in-screen);
+
+          padding: 0;
+          margin: 0;
+
+          overflow: hidden;
+      }
+
+      .logo {
+          padding-bottom: 8px;
+          padding-top: 8px;
+
+          float: right;
+      }
+
+      .logo svg {
+          height: 32px;
+
+          vertical-align: top;
+      }
+
+      .main-counter {
+          font-style: var(--widget-font-style);
+
+          padding: 12px 4% 12px 4%;
+          
+          justify-content: center;
+          clear: both;
+      }
+
+      .counter {
+          font-weight: var(--font-weight-bold);
+          font-family: var(--widget-number-font);
+
+          color: var(--dark-gray-100);
+
+          font-size: 64px;
+          line-height: 0;
+
+          align-items: center;
+          text-align: center;
+      }
+
+      .counter-title {
+          font-weight: var(--font-weight-semibold);
+          font-family: var(--widget-text-font);
+
+          color: var(--dark-gray-100);
+
+          font-size: 20px;
+
+          text-transform: uppercase;
+          text-align: center;
+      }
+      
+      .main-table {
+          font-family: var(--widget-text-font);
+          font-style: var(--widget-font-style);
+
+          line-height: var(--default-line-height);
+
+          color: var(--dark-gray-100);
+
+          overflow-x: scroll;
+      }
+
+      .main-table table {
+          font-size: var(--font-size-medium);
+
+          width: 100%;
+
+          border-collapse: collapse;
+          word-break: keep-all;
+      }
+
+      .main-table th {
+          font-weight: var(--font-weight-semibold);
+          line-height: var(--default-line-height);
+
+          background-color: var(--dark-gray-600);
+
+          padding: 8px 16px;
+
+          text-transform: uppercase;
+          vertical-align: top;
+          text-align: left;
+          white-space: nowrap;
+      }
+
+      .main-table tr {
+          font-weight: var(--font-weight-regular);
+      }
+
+      .main-table tr:nth-child(even) {
+          background-color: var(--color-table-even-row);
+      }
+
+      .main-table td {
+          padding: 8px 16px;
+
+          vertical-align: top;
+      }
+      
+      p.long-text {
+          margin-top: 0;
+          margin-bottom: 0px;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          max-width: 500px;
+      }
+
+      .long-text .hidden-content {
+          visibility: hidden;
+          overflow: hidden;
+          max-height: 0;
+          float: left;
+      }
+  
+      .widget-container {
+          padding: 8px 16px 8px 10px;
+          height: 100%;
+
+          overflow: scroll;
+      }
+
+      ::-webkit-scrollbar {
+          width: var(--scrollbar-size);
+          height: var(--scrollbar-size);
+      }
+
+      ::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          border: 3px solid transparent;
+          background: var(--dark-gray-400);
+          background-clip: content-box;
+      }
+
+      ::-webkit-scrollbar-track {
+          background-color: transparent;
+      }
+
+      ::-webkit-scrollbar-corner {
+          background-color: transparent;
+      }
+
+      .link {
+          color: var(--color-link);
+
+          font-family: var(--widget-text-font);
+          font-weight: var(--font-weight-regular);
+          font-style: var(--widget-font-style);
+          font-size: var(--font-size-medium);
+
+          line-height: var(--default-line-height);
+
+          text-decoration-line: underline;
+          align-items: center;
+      }
+  </style>
+</head>
+  <body>
+<div class="widget-container">
+  <div class="logo">
+<svg fill="currentColor" height="25" viewbox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg">
+      <path clip-rule="evenodd" d="M13.05 2.75V12h9.2V2.75h-9.2zm0 19.5h9.2V13h-9.2v9.25zM2.75 12h9.2V2.75h-9.2V12zm0 10.25h9.2V13h-9.2v9.25z" fill-rule="evenodd">
+      </path>
+    </svg>
+</div>
+  <div class="main-counter">
+  <h1 class="counter" id="counter"></h1>
+  <h2 class="counter-title" id="counter-title"></h2>
+</div>
+  <div class="main-table">
+  <table id="main-table">
+    <thead id="main-table-header"></thead>
+    <tbody id="main-table-body"></tbody>
+  </table>
+</div>
+</div>
+<script>
+    $(document).ready(() => {
+        if ($("body").css("background-color") === "rgb(255, 255, 255)") {
+            $(".logo svg path").attr("fill", "black");
+        } else {
+            $(".logo svg path").attr("fill", "white");
+        }
+        
+        const actionListData = [{stepInstanceName}.JsonResult];
+        if (!actionListData.length) {
+            return;
+        }
+
+        const dataCount = actionListData.length;
+        if (dataCount === 1) {
+            $("#counter-title").html("RESULT FOUND");
+        } else {
+            $("#counter-title").html("RESULTS FOUND");
+        }
+
+        $("#counter").html(dataCount);
+        const iterListData = actionListData;
+        const tableMapping = {};
+
+        for (const item of iterListData) {
+            for (const key of Object.keys(item)) {
+                if (tableMapping[key] === undefined) {
+                    tableMapping[key] = [];
+                }
+            }
+        }
+
+        for (const [heading, dataArray] of Object.entries(tableMapping)) {
+            for (const item of iterListData) {
+                dataArray.push(fieldExists(item[heading]));
+            }
+        }
+
+        const initialValue = "";
+
+        const keys = Object.keys(tableMapping);
+        const headerHTML = `<tr>${keys.map(
+            key => key.toString()
+                .replace(/^[-_]*(.)/, (_, c) => c.toUpperCase())
+                .replace(/[-_]+(.)/g, (_, c) => " " + c.toUpperCase())
+        ).reduce((headerString, key) => headerString + `<th>${key}</th>`, initialValue)}</tr>`;
+
+        const tableColumns = Object.values(tableMapping);
+        // Transposing from columns to rows
+        const tableRows = tableColumns[0].map((col, i) => tableColumns.map(row => row[i]));
+
+        const isObject = obj => obj && obj.constructor === ({}).constructor;
+        const bodyHTML = tableRows.reduce(
+            (tableRows, tableRowArray) => tableRows + `<tr>${tableRowArray.reduce(
+                (dataCells, dataCell) => {
+                    if (Array.isArray(dataCell)) {
+                        dataCell = dataCell
+                            .map(item => isObject(item) ? JSON.stringify(item, null, 4) : item)
+                            .join(", ");
+                    } else if (isObject(dataCell)) {
+                        dataCell = JSON.stringify(dataCell, null, 4);
+                    }
+
+                    return dataCells + `<td>${getCollapsableEscapedHTML(dataCell ? dataCell.toString() : "")}</td>`;
+                },
+                initialValue
+            )}</tr>`,
+            initialValue
+        );
+
+        $("#main-table-header").html(headerHTML);
+        $("#main-table-body").html(bodyHTML);
+
+        // Toggle off a column if all the values in it are "N/A"
+        $("th").each(function (idx, _) {
+            const check = Boolean(
+                $("tbody tr").find("td:eq(" + idx + ")").filter(function () {
+                    return ["N/A", ""].includes($.trim($(this).text())) ? 0 : 1;
+                }).length
+            );
+
+            $("tr").find("td:eq(" + idx + "), th:eq(" + idx + ")").toggle(check);
+        });
+
+        function fieldExists(field) {
+            return [undefined, ""].includes(field) ? "N/A" : field;
+        }
+
+        addLongTextClickLogic();
+
+        function getCollapsableEscapedHTML(text, maxCharsLimit = 250) {
+            if (!text) {
+                return text;
+            }
+
+            if (text.length < maxCharsLimit) {
+                return `<p class="long-text">${escapeHTML(text)}</p>`;
+            }
+
+            text = escapeHTML(text);
+            let firstPart = text.slice(0, maxCharsLimit);
+            let secondPart = text.slice(maxCharsLimit);
+
+            const lastSpaceIndex = firstPart.lastIndexOf(" ");
+            const spaceSearchPercentage = 0.6;
+            const newMaxWithSpace = maxCharsLimit * spaceSearchPercentage;
+            if (lastSpaceIndex >= newMaxWithSpace) {
+                firstPart = text.slice(0, lastSpaceIndex);
+                secondPart = text.slice(lastSpaceIndex);
+            }
+
+            return `<p class="long-text">` +
+            `${firstPart}<span>... </span>` +
+            `<br><a href="#" class="more link">Show more</a>` +
+            `<span class="hidden-content">` +
+            `${secondPart}` +
+            `<br><a href="#" class="less link">Show less</a>` +
+            `</span>` +
+            `</p>`;
+        }
+
+        function addLongTextClickLogic() {
+            $(".more").click(function (event) {
+                event.preventDefault();
+                $(this).hide()
+                    .prev().hide()
+                    .prev().hide();
+
+                $(this).next().toggleClass("hidden-content");
+            });
+
+            $(".less").click(function (event) {
+                event.preventDefault();
+                $(this).parent().toggleClass("hidden-content")
+                    .prev().show()
+                    .prev().show()
+                    .prev().show();
+            });
+        }
+
+        function escapeHTML(unsafe) {
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+        
+        
+    });
+</script>
+</body>
+</html>

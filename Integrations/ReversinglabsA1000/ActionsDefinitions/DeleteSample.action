@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1518095169794, 
+    "Creator": "admin", 
+    "Description": "Delete a set of samples that exist on the A1000 appliance. All related data, including extracted samples and metadata, will be deleted", 
+    "Id": -1, 
+    "IntegrationIdentifier": "ReversinglabsA1000", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1518095169794, 
+    "Name": "Delete Sample", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

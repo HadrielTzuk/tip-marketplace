@@ -1,0 +1,75 @@
+{
+    "Id": -1,
+    "Creator": "admin",
+    "IntegrationIdentifier": "Siemplify",
+    "Name": "Set Case SLA",
+    "Description": "Set the SLA for a case. This action has the highest priority and it will override the existing SLA defined for the specific case.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 0,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Parameters": [
+        {
+            "Name": "SLA Period",
+            "Type": 0,
+            "Value": 5,
+            "DefaultValue": 5,
+            "IsMandatory": true,
+            "Description": "The period of time after which the SLA is in breach.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "SLA Time Unit",
+            "Type": 15,
+            "Value": "Minutes",
+            "DefaultValue": "Minutes",
+            "IsMandatory": true,
+            "Description": "Specify the unit for SLA Time.",
+            "OptionalValues": [
+                "Minutes",
+                "Hours",
+                "Days"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "SLA Time To Critical Period",
+            "Type": 0,
+            "Value": 4,
+            "DefaultValue": 4,
+            "IsMandatory": true,
+            "Description": "The period of time after which the SLA enters the critical period.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "SLA Time To Critical Unit",
+            "Type": 15,
+            "Value": "Minutes",
+            "DefaultValue": "Minutes",
+            "IsMandatory": true,
+            "Description": "Specify the unit for SLA Time To Critical.",
+            "OptionalValues": [
+                "Minutes",
+                "Hours",
+                "Days"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

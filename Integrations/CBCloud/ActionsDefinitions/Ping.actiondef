@@ -1,0 +1,17 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351027650,
+    "Creator": "Admin",
+    "DefaultResultValue": "",
+    "Description": "Test connectivity to the VMware Carbon Black Cloud",
+    "Id": -1,
+    "IntegrationIdentifier": "CBCloud",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1560351027650,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "TimeoutSeconds": 600,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

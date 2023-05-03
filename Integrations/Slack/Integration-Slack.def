@@ -1,0 +1,44 @@
+{
+    "Description": "Slack is where work flows. It's where the people you need, the information you share, and the tools you use come together to get things done.",
+    "DisplayName": "Slack",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/slack",
+    "Identifier": "Slack",
+    "Categories": [
+        "IT & Infrastructure",
+        "Free to use",
+        "Communications"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Slack",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Token",
+            "PropertyName": "ApiToken",
+            "PropertyType": "3",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Slack",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Webhook Base URL",
+            "PropertyName": "WebhookBaseURL",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Slack",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M24.3,13.4c-0.3-0.8-1.2-1.3-2-1l-2.6,0.9l-1.8-5.4L20.5,7c0.8-0.3,1.3-1.2,1-2c-0.3-0.8-1.2-1.3-2-1l-2.6,0.9L16,2.2\n\t\t\tc-0.3-0.8-1.2-1.3-2-1c-0.8,0.3-1.3,1.2-1,2l0.9,2.6L8.5,7.7L7.6,5.1c-0.3-0.8-1.2-1.3-2-1c-0.8,0.3-1.3,1.2-1,2l0.9,2.6L2.8,9.6\n\t\t\tc-0.8,0.3-1.3,1.2-1,2c0.2,0.7,0.8,1.1,1.5,1.1c0.2,0,0.3,0,0.5-0.1l2.6-0.9l1.8,5.4L5.6,18c-0.8,0.3-1.3,1.2-1,2\n\t\t\tc0.2,0.7,0.8,1.1,1.5,1.1c0.2,0,0.3,0,0.5-0.1l2.6-0.9l0.9,2.6c0.2,0.7,0.8,1.1,1.5,1.1c0.2,0,0.3,0,0.5-0.1c0.8-0.3,1.3-1.2,1-2\n\t\t\tl-0.9-2.6l5.4-1.8l0.9,2.6c0.2,0.7,0.8,1.1,1.5,1.1c0.2,0,0.3,0,0.5-0.1c0.8-0.3,1.3-1.2,1-2l-0.9-2.6l2.6-0.9\n\t\t\tC24.2,15.1,24.6,14.2,24.3,13.4z M11.3,16.1l-1.8-5.4l5.4-1.8l1.8,5.4L11.3,16.1z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 19.0,
+    "MarketingDisplayName": "Slack"
+}

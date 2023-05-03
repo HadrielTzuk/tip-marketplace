@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1528799162980, 
+    "Creator": "admin", 
+    "Description": "Unblock address in Cisco Firepower", 
+    "Id": -1, 
+    "IntegrationIdentifier": "CiscoFirepowerManagementCenter", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1528799162980, 
+    "Name": "Unblock Address", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1528799162980, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "Network object name.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528799162980, 
+            "Name": "Network Group Name", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CiscoFirepowerManager import CiscoFirepowerManager\nfrom SiemplifyDataModel import EntityTypes\n\nINTEGRATION_PROVIDER = 'CiscoFirepower'\n\n\ndef main():\n\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(INTEGRATION_PROVIDER)\n    cisco_firepower_manager = CiscoFirepowerManager(conf['API Root'],\n                                                    conf['Username'],\n                                                    conf['Password'],\n                                                    conf['Verify SSL'])\n    # Parameters.\n    network_group_name = siemplify.parameters.get('Network Group Name')\n\n    # variables.\n    error_flag = False\n    blocked_entities = []\n    errors = []\n\n    # Set script name.\n    siemplify.script_name = 'CiscoFirepower_Unblock_Address'\n\n    target_addresses = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.ADDRESS]\n\n    # Get url group object to pass to the block function.\n    network_group_object = cisco_firepower_manager.get_network_group_object_by_name(network_group_name)\n\n    for address_entity in target_addresses:\n        try:\n            cisco_firepower_manager.unblock_ip_address(network_group_object, address_entity.identifier)\n            result_value = True\n            blocked_entities.append(address_entity.identifier)\n        except Exception as err:\n            error_message = 'Error unblocking address \"{0}\", ERROR: {1}.'.format(address_entity.identifier,\n                                                                                      err.message)\n\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            error_flag = True\n            errors.append(error_message)\n\n    if result_value:\n        output_message = 'The following entities were unblocked: {0}'.format(','.join(blocked_entities))\n    else:\n        output_message = 'No entities were unblocked.'\n\n    if error_flag:\n        output_message = \"{0}  \\n \\n  ERRORS: {1}\".format(output_message, errors)\n\n    siemplify.end(output_message, True)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_succeed", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 1.0
+}

@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 18.65</h2><h5>Published on 29 September, 2022</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     Arcsight\n    </b>\n   </li>\n   <ul>\n    <li>\n     Arcsight\n    </li>\n    <ul>\n     <li>\n      Arcsight - Security Enhancements.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     RecordedFuture\n    </b>\n   </li>\n   <ul>\n    <li>\n     Security Alerts Connector\n    </li>\n    <ul>\n     <li>\n      Security Alerts Connector - Improved the logic behind \"Environment Field Name\" parameter.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "18.65",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "29/09/22",
+    "Title": "Release Notes"
+}

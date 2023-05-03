@@ -1,0 +1,56 @@
+{
+    "CreationTimeUnixTimeInMs": 1534248991561,
+    "Creator": "Admin",
+    "Description": "This job will synchronize ServiceDeskPlus requests that were created within Siemplify Case playbook and Siemplify cases. Note: in ServiceDeskPlus statuses \"Cancelled\", \"Closed\" and \"Resolved\" are treated as closed. Additionally, in order for the job to work, it’s required for the case to have 2 tags. First tag should be \"ServiceDeskPlus\" and the second should be with the prefix \"ServiceDeskPlus Requests:{request id}\".",
+    "Id": -1,
+    "Integration": "ServiceDeskPlusV3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534248991561,
+    "Name": "Sync Closed Requests By Tag",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "http://{IP OR FQDN}:8080/api/v3/",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Api Root",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Api Key",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "24",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Max Hours Backwards",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": true,
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Verify SSL",
+            "Type": 0
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Script": "",
+    "Version": 1
+}

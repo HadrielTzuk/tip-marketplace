@@ -1,0 +1,207 @@
+{
+  "Identifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "autoFocus",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "b5871dd3-8645-47f0-b7c4-0f7951d50a8f",
+      "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+      "ParentStepIdentifiers": [
+        "cfda58f2-8472-4a35-a2bf-4e633da9b934"
+      ],
+      "ParentStepIdentifier": "cfda58f2-8472-4a35-a2bf-4e633da9b934",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "AutoFocus_Hunt Ip_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "AutoFocus_Hunt Ip",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "b5871dd3-8645-47f0-b7c4-0f7951d50a8f",
+          "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+          "Name": "ScriptName",
+          "Value": "AutoFocus_Hunt Ip",
+          "CreationTimeUnixTimeInMs": 1519213382756,
+          "ModificationTimeUnixTimeInMs": 1519213382756
+        },
+        {
+          "ParentStepIdentifier": "b5871dd3-8645-47f0-b7c4-0f7951d50a8f",
+          "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519213382756,
+          "ModificationTimeUnixTimeInMs": 1519213382756
+        },
+        {
+          "ParentStepIdentifier": "b5871dd3-8645-47f0-b7c4-0f7951d50a8f",
+          "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519213382756,
+          "ModificationTimeUnixTimeInMs": 1519213382756
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519213382756,
+      "ModificationTimeUnixTimeInMs": 1519213382756
+    },
+    {
+      "Identifier": "5c248e17-a97e-4d00-816c-32be36164793",
+      "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+      "ParentStepIdentifiers": [
+        "b5871dd3-8645-47f0-b7c4-0f7951d50a8f"
+      ],
+      "ParentStepIdentifier": "b5871dd3-8645-47f0-b7c4-0f7951d50a8f",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "AutoFocus_Hunt File_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "AutoFocus_Hunt File",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "5c248e17-a97e-4d00-816c-32be36164793",
+          "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+          "Name": "ScriptName",
+          "Value": "AutoFocus_Hunt File",
+          "CreationTimeUnixTimeInMs": 1519213382756,
+          "ModificationTimeUnixTimeInMs": 1519213382756
+        },
+        {
+          "ParentStepIdentifier": "5c248e17-a97e-4d00-816c-32be36164793",
+          "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519213382756,
+          "ModificationTimeUnixTimeInMs": 1519213382756
+        },
+        {
+          "ParentStepIdentifier": "5c248e17-a97e-4d00-816c-32be36164793",
+          "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519213382756,
+          "ModificationTimeUnixTimeInMs": 1519213382756
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519213382756,
+      "ModificationTimeUnixTimeInMs": 1519213382756
+    },
+    {
+      "Identifier": "cfda58f2-8472-4a35-a2bf-4e633da9b934",
+      "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+      "ParentStepIdentifiers": [
+        "7ec60541-8533-4b6d-9eab-ef2ea25262fe"
+      ],
+      "ParentStepIdentifier": "7ec60541-8533-4b6d-9eab-ef2ea25262fe",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "AutoFocus_Hunt Domain_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "AutoFocus_Hunt Domain",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "cfda58f2-8472-4a35-a2bf-4e633da9b934",
+          "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+          "Name": "ScriptName",
+          "Value": "AutoFocus_Hunt Domain",
+          "CreationTimeUnixTimeInMs": 1519213382756,
+          "ModificationTimeUnixTimeInMs": 1519213382756
+        },
+        {
+          "ParentStepIdentifier": "cfda58f2-8472-4a35-a2bf-4e633da9b934",
+          "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519213382756,
+          "ModificationTimeUnixTimeInMs": 1519213382756
+        },
+        {
+          "ParentStepIdentifier": "cfda58f2-8472-4a35-a2bf-4e633da9b934",
+          "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519213382756,
+          "ModificationTimeUnixTimeInMs": 1519213382756
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519213382756,
+      "ModificationTimeUnixTimeInMs": 1519213382756
+    },
+    {
+      "Identifier": "7ec60541-8533-4b6d-9eab-ef2ea25262fe",
+      "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "AutoFocus_Hunt Url_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "AutoFocus_Hunt Url",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "7ec60541-8533-4b6d-9eab-ef2ea25262fe",
+          "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+          "Name": "ScriptName",
+          "Value": "AutoFocus_Hunt Url",
+          "CreationTimeUnixTimeInMs": 1519213382756,
+          "ModificationTimeUnixTimeInMs": 1519213382756
+        },
+        {
+          "ParentStepIdentifier": "7ec60541-8533-4b6d-9eab-ef2ea25262fe",
+          "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519213382756,
+          "ModificationTimeUnixTimeInMs": 1519213382756
+        },
+        {
+          "ParentStepIdentifier": "7ec60541-8533-4b6d-9eab-ef2ea25262fe",
+          "ParentWorkflowIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519213382756,
+          "ModificationTimeUnixTimeInMs": 1519213382756
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519213382756,
+      "ModificationTimeUnixTimeInMs": 1519213382756
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "67ffbac5-f6d3-473b-9f84-ac4a11eb614c",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "abb81686-c447-470c-b486-2ab46d7eb423",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "autoFocus",
+      "AllEnvironments": "",
+      "Id": 81,
+      "CreationTimeUnixTimeInMs": 1519213382756,
+      "ModificationTimeUnixTimeInMs": 1519213382756
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 81,
+  "CreationTimeUnixTimeInMs": 1519213382756,
+  "ModificationTimeUnixTimeInMs": 1519213382756
+}

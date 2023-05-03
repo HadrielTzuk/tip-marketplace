@@ -1,0 +1,230 @@
+{
+   "CreationTimeUnixTimeInMs":1530621343817,
+   "Creator":"admin",
+   "Description":"Vectra - Detections Connector",
+   "Id":-1,
+   "Integration":"Vectra",
+   "IsConnectorRulesSupported":false,
+   "IsCustom":false,
+   "IsEnabled":true,
+   "ModificationTimeUnixTimeInMs":1530621343817,
+   "Name":"Vectra - Detections Connector",
+   "Parameters":[
+      {
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1532871487965,
+         "DefaultValue":"Product Name",
+         "Description":"Enter the source field name in order to retrieve the Product Field name.",
+         "Id":-1,
+         "IsMandatory":true,
+         "Mode":0,
+         "ModificationTimeUnixTimeInMs":1532871487965,
+         "Name":"DeviceProductField",
+         "Type":2
+      },
+      {
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1532871487965,
+         "DefaultValue":"detection_detection_category",
+         "Description":"Enter the source field name in order to retrieve the Event Field name.",
+         "Id":-1,
+         "IsMandatory":true,
+         "Mode":0,
+         "ModificationTimeUnixTimeInMs":1532871487965,
+         "Name":"EventClassId",
+         "Type":2
+      },
+      {
+         "Name":"Environment Field Name",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+
+      {
+         "Name":"Environment Regex Pattern",
+         "Type":2,
+         "DefaultValue":".*",
+         "IsMandatory":false,
+         "Description":"A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"PythonProcessTimeout",
+         "Type":1,
+         "DefaultValue":180,
+         "IsMandatory":true,
+         "Description":"Timeout limit for the python process running the current script.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"API Root",
+         "Type":2,
+         "DefaultValue":"https://x.x.x.x:x",
+         "IsMandatory":true,
+         "Description":"API root of the Vectra server.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"API Token",
+         "Type":3,
+         "DefaultValue":"",
+         "IsMandatory":true,
+         "Description":"API token of the Vectra account.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Lowest Threat Score To Fetch",
+         "Type":1,
+         "DefaultValue":50,
+         "IsMandatory":true,
+         "Description":"Lowest threat score that will be used to fetch detections. Min:0 Max:100",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Lowest Certainty Score To Fetch",
+         "Type":1,
+         "DefaultValue":0,
+         "IsMandatory":false,
+         "Description":"Lowest certainty score that will be used to fetch detections. Min: 0 Max: 100",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Category Filter",
+         "Type":2,
+         "DefaultValue":"Command & Control, Botnet, Reconnaissance, Lateral Movement, Exfiltration, Info",
+         "IsMandatory":false,
+         "Description":"Specify which categories of detections to ingest into Siemplify. Possible values: Command & Control  Botnet  Reconnaissance  Lateral Movement  Exfiltration  Info",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Fetch Max Hours Backwards",
+         "Type":1,
+         "DefaultValue":1,
+         "IsMandatory":false,
+         "Description":"Amount of hours from where to fetch threats.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Max Detections To Fetch",
+         "Type":1,
+         "DefaultValue":25,
+         "IsMandatory":false,
+         "Description":"How many detections to process per one connector iteration. Limit is 5000. This is a Vectra limitation.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Use whitelist as a blacklist",
+         "Type":0,
+         "DefaultValue":false,
+         "IsMandatory":true,
+         "Description":"If enabled, whitelist will be used as a blacklist.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Verify SSL",
+         "Type":0,
+         "DefaultValue":true,
+         "IsMandatory":true,
+         "Description":"If enabled, verify the SSL certificate for the connection to the Vectra server is valid.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Server Address",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"The address of the proxy server to use.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Username",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"The proxy username to authenticate with.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Password",
+         "Type":3,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"The proxy password to authenticate with.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      }
+   ],
+   "ProductToVisualFamilyRecords":[
+   ],
+   "Rules":[
+   ],
+   "SimulationUseCases":{
+      "CasesForUseCase":[
+      ],
+      "UseCaseName":null
+   },
+   "Version":1,
+   "DocumentationLink":"https://integrations.siemplify.co/doc/vectra#vectra-detections-connector"
+}

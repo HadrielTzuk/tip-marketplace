@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1535884893446, 
+    "Creator": "System", 
+    "Description": "Scan IP via VirusTotal. Returns table of reverse domains and full Json result", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"asn\": 4436, \"undetected_urls\": [[\"http://domain-example.il/short/commerce/2015/links/79/\", \"2ed06796f95e7c1cf48d4bd68d81754acf535c999e901bfe2cf9c45612396f66\", 0, 66, \"2017-11-23 06:51:49\"]], \"undetected_downloaded_samples\": [{\"date\": \"2018-07-09 07:53:30\", \"positives\": 0, \"sha256\": \"6a0bf66dbbd6473ddc73d7e64eb2ff0dd3512c5378c0c63c2ad4e13c0e1429fe\", \"total\": 60}], \"country\": \"US\", \"response_code\": 1, \"as_owner\": \"nLayer Communications, Inc.\", \"verbose_msg\": \"IP address in dataset\", \"detected_downloaded_samples\": [{\"date\": \"2015-05-26 08:38:00\", \"positives\": 6, \"sha256\": \"9cf5c07c99c3b261f97342d83b241c25850da0bf231ee150cb962cab1e8399cb\", \"total\": 57}], \"resolutions\": [{\"last_resolved\": \"2014-05-13 00:00:00\", \"hostname\": \"40515350444d1369ff68-2f7735d5ad283fa41a203a082d9a8f25.ssl.cf3.rackcdn.com\"}], \"detected_urls\": [{\"url\": \"http://domain-example.co.il/flowplayerlive/VideoLiveTricastHdsMbrNa.html?,,,470,268\", \"positives\": 2, \"total\": 67, \"scan_date\": \"2018-05-20 07:16:45\"}]}, \"Entity\": \"1.1.1.1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "VirusTotal", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1535884893446, 
+    "Name": "Scan IP", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535884935059,
+            "CustomActionId": -1,
+            "DefaultValue": 25,
+            "Description": "Specify the accepted threshold for the detected samples related to the IP address. If the number of engines that marked related samples as malicious is higher than the specified threshold, IP address will be marked as suspicious.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884935059,
+            "Name": "Threshold",
+            "Type": 0,
+            "Value": 25
+        }
+    ],
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom VirusTotal import VirusTotalManager\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import construct_csv, add_prefix_to_dict\n\n# Const\nADDRESS_RESULT_URL_FORMAT = 'https://www.virustotal.com/#/ip-address/{0}'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('VirusTotal')\n    api_key = conf['Api Key']\n    use_ssl = conf['Use SSL'].lower() == 'true'\n    vt = VirusTotalManager(api_key, use_ssl)\n\n    entities_to_update = []\n    result_value = False\n\n    for entity in siemplify.target_entities:\n        # Search an external ip address in virus total.\n        if entity.entity_type == EntityTypes.ADDRESS and not entity.is_internal:\n            address_report = vt.get_address_report(entity.identifier)\n            # If report is none, and error not raised - probably entity can't be found.\n            if address_report:\n                entity.is_enriched = True\n                entities_to_update.append(entity)\n                result_value = True\n\n                web_link = ADDRESS_RESULT_URL_FORMAT.format(entity.identifier)\n                siemplify.result.add_entity_link(\"{0} Link to web report\".format(entity.identifier), web_link)\n\n                entity.additional_properties.update({\"VT_Country\":  address_report.get('country'),\n                                                     \"VT_Related Domains\": \",\".join([resolution['hostname']\n                                                                                     for resolution in\n                                                                                     address_report.get('resolutions')])})\n\n            if address_report.get('resolutions'):\n                siemplify.result.add_entity_table(entity.identifier, construct_csv(address_report.get('resolutions')))\n\n    if entities_to_update:\n        siemplify.update_entities(entities_to_update)\n        entities_names = [entity.identifier for entity in entities_to_update]\n        output_massage = 'The following IPs were submitted and analyzed in VirusTotal: {0}. \\n'.format('\\n'.join(\n            entities_names))\n\n    else:\n        output_massage = 'No entities were enriched by VirusTotal.'\n\n    siemplify.end(output_massage, result_value)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 2.0
+}

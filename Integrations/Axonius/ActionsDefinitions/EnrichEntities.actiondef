@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Enrich entities using information from Axonius. Supported entities: IP Address, Hostname, Mac Address, User, Email Addresses (User entities that match email regex).",
+    "Id": -1,
+    "IntegrationIdentifier": "Axonius",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"xxxxx.xxxx@xxxx.xxxx\",\"EntityResult\":{\"adapters\":[{\"accurate_for_datetime\":\"Wed,31Mar202115:45:14GMT\",\"client_used\":\"xxxxx.xxxxx.xxxxx\",\"plugin_name\":\"xxxxx.xxxxx.xxxxx\",\"plugin_type\":\"xxxxx\",\"plugin_unique_name\":\"xxxxx.xxxxx.xxxxx\",\"quick_id\":\"xxxxx.xxxxx\",\"type\":\"xxxxx\",\"raw\":{\"account_disabled\":\"False\",\"ad_display_name\":\"XXXXXXXXXX\",\"ad_distinguished_name\":\"CN=xxxxx.xxxxx,CN=xxxxx,DC=xxxxx,DC=xxxxx\",\"ad_sid\":\"xxxxx-xxxxx-xxxxx-xxxxx-xxxxx-xxxxx\",\"ad_uac_dont_expire_password\":\"False\",\"ad_uac_password_not_required\":\"False\",\"display_name\":\"xxxxxxxxxx\",\"domain\":\"xxxxx.xxxxx\",\"employee_id\":\"xxxxx\",\"first_name\":\"xxxxx\",\"id\":\"CN=xxxxx.xxxxx,CN=xxxxx,DC=xxxxx,DC=xxxxx\",\"is_admin\":\"False\",\"is_local\":\"False\",\"is_locked\":\"False\",\"last_name\":\"xxxxx\",\"last_password_change\":\"Sat,27Mar202121:12:24GMT\",\"last_seen\":\"Sun,28Mar202121:25:21GMT\",\"mail\":\"xxxxx.xxxxx@xxxxx.xxxxx\",\"password_never_expires\":\"False\",\"password_not_required\":\"False\",\"user_city\":\"xxxxx\",\"user_telephone_number\":\"xxxxx-xxxxx-xxxxx-xxxxx\",\"username\":\"xxxxx.xxxxx@xxxxx.xxxxx\"}}],\"internal_axon_id\":\"xxxxx\",\"labels\":[\"xxxxx\",\"xxxxx\"],\"notes\":[{\"accurate_for_datetime\":\"Sun,21Mar202115:35:00GMT\",\"note\":\"xxxxx\",\"user_id\":\"xxxxx\",\"user_name\":\"xxxxxxxxxx\",\"uuid\":\"xxxxx-xxxxx-xxxxx-xxxxx-xxxxx\"}]}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Name": "Enrich Entities",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "If enabled, action will create an insight containing information about the endpoints.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Create Endpoint Insight",
+            "Type": 1,
+            "Value": "True"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "If enabled, action will create an insight containing information about the user.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Create User Insight",
+            "Type": 1,
+            "Value": "True"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many notes to show in the case wall table. Default: 50.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Notes To Return",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"MacAddress\", \"HOSTNAME\", \"USERUNIQNAME\"]}"
+}

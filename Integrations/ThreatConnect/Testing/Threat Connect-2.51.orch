@@ -1,0 +1,75 @@
+{
+  "Identifier": "e7b18748-a576-4d88-b573-0fd6f80602d3",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": true,
+  "Name": "Threat Connect",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "26707eea-3b96-4407-81b7-897b178ea671",
+      "ParentWorkflowIdentifier": "e7b18748-a576-4d88-b573-0fd6f80602d3",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "ThreatConnect_Enrich Entities_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "ThreatConnect_Enrich Entities",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "26707eea-3b96-4407-81b7-897b178ea671",
+          "ParentWorkflowIdentifier": "e7b18748-a576-4d88-b573-0fd6f80602d3",
+          "Name": "ScriptName",
+          "Value": "ThreatConnect_Enrich Entities",
+          "CreationTimeUnixTimeInMs": 1519633894939,
+          "ModificationTimeUnixTimeInMs": 1519633894939
+        },
+        {
+          "ParentStepIdentifier": "26707eea-3b96-4407-81b7-897b178ea671",
+          "ParentWorkflowIdentifier": "e7b18748-a576-4d88-b573-0fd6f80602d3",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519633894939,
+          "ModificationTimeUnixTimeInMs": 1519633894939
+        },
+        {
+          "ParentStepIdentifier": "26707eea-3b96-4407-81b7-897b178ea671",
+          "ParentWorkflowIdentifier": "e7b18748-a576-4d88-b573-0fd6f80602d3",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519633893398,
+          "ModificationTimeUnixTimeInMs": 1519633893398
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519633893398,
+      "ModificationTimeUnixTimeInMs": 1519633893398
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "34d84efd-ee71-4294-aac0-bdc002e8535c",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "e7b18748-a576-4d88-b573-0fd6f80602d3",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Threat Connect",
+      "AllEnvironments": "",
+      "Id": 24,
+      "CreationTimeUnixTimeInMs": 1519570378191,
+      "ModificationTimeUnixTimeInMs": 1519570378191
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 24,
+  "CreationTimeUnixTimeInMs": 1519570378191,
+  "ModificationTimeUnixTimeInMs": 1519570378191
+}

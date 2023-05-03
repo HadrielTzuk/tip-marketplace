@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1517319212706, 
+    "Creator": "admin", 
+    "Description": "Unquarantine an endpoint", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SEP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1517319212706, 
+    "Name": "UnquarantineEndpoint", 
+    "Parameters": [], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

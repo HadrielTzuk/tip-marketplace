@@ -1,0 +1,94 @@
+{
+    "CreationTimeUnixTimeInMs": 1667322879000,
+    "Creator": "admin",
+    "Description": "Send a message as a reply to the email thread.",
+    "Id": -1, 
+    "IntegrationIdentifier": "Exchange", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1667322879000,
+    "Name": "Send Thread Reply",
+    "DynamicResultsMetadata": [
+    {
+        "ResultExample": "{\"mime_content\": \"'From: Administrator <Administrator@siemplifylab.local>\\\\r\\\\nTo: Administrator <Administrator@siemplifylab.local>\\\\r\\\\nSubject: Test subject\\\\r\\\\nThread-Topic: Test subject\\\\r\\\\nThread-Index: AQHWmsTgBEcHjewfyEKH4YkB+Lo0RQ==\\\\r\\\\nDate: Mon, 5 Oct 2020 06:09:02 +0300\\\\r\\\\nMessage-ID: <160186734388.8568.315529398955149940@siemplify>\\\\r\\\\nAccept-Language: en-US\\\\r\\\\nContent-Language: en-US\\\\r\\\\nX-MS-Has-Attach:\\\\r\\\\nX-MS-Exchange-Organization-SCL: -1\\\\r\\\\nX-MS-TNEF-Correlator:\\\\r\\\\nX-MS-Exchange-Organization-RecordReviewCfmType: 0\\\\r\\\\nContent-Type: multipart/alternative;\\\\r\\\\n\\\\tboundary=\\\"_000_1601867343888568315529398955149940siemplify_\\\"\\\\r\\\\nMIME-Version: 1.0\\\\r\\\\n\\\\r\\\\n--_000_1601867343888568315529398955149940siemplify_\\\\r\\\\nContent-Type: text/plain; charset=\\\"us-ascii\\\"\\\\r\\\\n\\\\r\\\\nTest mail content\\\\r\\\\n\\\\r\\\\n--_000_1601867343888568315529398955149940siemplify_\\\\r\\\\nContent-Type: text/html; charset=\\\"us-ascii\\\"\\\\r\\\\n\\\\r\\\\n<html>\\\\r\\\\n<head>\\\\r\\\\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=us-ascii\\\">\\\\r\\\\n</head>\\\\r\\\\n<body>\\\\r\\\\n<p>Test mail content </p>\\\\r\\\\n</body>\\\\r\\\\n</html>\\\\r\\\\n\\\\r\\\\n--_000_1601867343888568315529398955149940siemplify_--\\\\r\\\\n'\", \"_id\": \"ItemId(id='AQMkADIzZjA2MWY0LTcwMTMtNDcxMy1iZWY4LTdlMzk2OTVkNDFmMgBGAAADneAeRbLkN0i93LTVa54xxwcAMnX/0/LnCkytWTOh2sCWzQAAAgEJAAAAMnX/0/LnCkytWTOh2sCWzQAAARDFFwAAAA==', changekey='CQAAABYAAAAydf/T8ucKTK1ZM6HawJbNAAAAEZla')\", \"parent_folder_id\": \"ParentFolderId(id='AQMkADIzZjA2MWY0LTcwMTMtNDcxMy1iZWY4LTdlMzk2OTVkNDFmMgAuAAADneAeRbLkN0i93LTVa54xxwEAMnX/0/LnCkytWTOh2sCWzQAAAgEJAAAA', changekey='AQAAAA==')\", \"item_class\": \"IPM.Note\", \"subject\": \"Test subject\", \"sensitivity\": \"Normal\", \"text_body\": \"Test mail content\\r\\n\", \"body\": \"<html>\\r\\n<head>\\r\\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\">\\r\\n</head>\\r\\n<body>\\r\\n<p>Test mail content </p>\\r\\n</body>\\r\\n</html>\\r\\n\", \"attachments\": [], \"datetime_received\": \"2020-10-05 03:09:02+00:00\", \"size\": 2568, \"categories\": null, \"importance\": \"Normal\", \"in_reply_to\": null, \"is_submitted\": true, \"is_draft\": true, \"is_from_me\": false, \"is_resend\": false, \"is_unmodified\": false, \"headers\": null, \"datetime_sent\": \"2020-10-05 03:09:02+00:00\", \"datetime_created\": \"2020-10-05 03:09:02+00:00\", \"reminder_due_by\": null, \"reminder_is_set\": false, \"reminder_minutes_before_start\": 0, \"display_cc\": null, \"display_to\": \"Administrator\", \"has_attachments\": false, \"culture\": \"en-US\", \"effective_rights\": \"EffectiveRights(create_associated=False, create_contents=False, create_hierarchy=False, delete=True, modify=True, read=True, view_private_items=True)\", \"last_modified_name\": \"Administrator\", \"last_modified_time\": \"2020-10-05 03:09:02+00:00\", \"is_associated\": false, \"web_client_read_form_query_string\": \"?ItemID=AQMkADIzZjA2MWY0LTcwMTMtNDcxMy1iZWY4LTdlMzk2OTVkNDFmMgBGAAADneAeRbLkN0i93LTVa54xxwcAMnX%2F0%2FLnCkytWTOh2sCWzQAAAgEJAAAAMnX%2F0%2FLnCkytWTOh2sCWzQAAARDFFwAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem\", \"web_client_edit_form_query_string\": null, \"conversation_id\": \"ConversationId(id='AAQkADIzZjA2MWY0LTcwMTMtNDcxMy1iZWY4LTdlMzk2OTVkNDFmMgAQAARHB43sH8hCh+GJAfi6NEU=')\", \"unique_body\": \"<html><body><div>\\r\\n<div>\\r\\n<div style=\\\"margin-top:14pt;margin-bottom:14pt;\\\">Test mail content </div>\\r\\n</div>\\r\\n</div>\\r\\n</body></html>\", \"sender\": \"Mailbox(name='Administrator', email_address='Administrator@siemplifylab.local', routing_type='SMTP', mailbox_type='Mailbox')\", \"to_recipients\": [\"Mailbox(name='Administrator', email_address='Administrator@siemplifylab.local', routing_type='SMTP', mailbox_type='Mailbox')\"], \"cc_recipients\": null, \"bcc_recipients\": null, \"is_read_receipt_requested\": false, \"is_delivery_receipt_requested\": false, \"conversation_index\": \"\\\\x01\\\\x01\\\\xd6\\\\x9a\\\\xc4\\\\xe0\\\\x04G\\\\x07\\\\x8d\\\\xec\\\\x1f\\\\xc8B\\\\x87\\\\xe1\\\\x89\\\\x01\\\\xf8\\\\xba4E'\", \"conversation_topic\": \"Test subject\", \"author\": \"Mailbox(name='Administrator', email_address='Administrator@siemplifylab.local', routing_type='SMTP', mailbox_type='Mailbox')\", \"message_id\": \"<160186734388.8568.315529398955149940@siemplify>\", \"is_read\": true, \"is_response_requested\": false, \"references\": null, \"reply_to\": null, \"received_by\": null, \"received_representing\": null, \"email_date\": 1601867342}",
+        "ResultName": "JsonResult"
+    }],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1667322879000,
+            "CustomActionId": -1, 
+            "DefaultValue": "",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1667322879000,
+            "Name": "Message ID",
+            "Type": 0,
+            "Value": "", 
+            "Description": "Specify the ID of the message to which you want to send a reply."
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1667322879000,
+            "CustomActionId": -1,
+            "DefaultValue": "Inbox",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1667322879000,
+            "Name": "Folder Name",
+            "Type": 0,
+            "Value": "Inbox",
+            "Description": "Specify a comma-separated list of mailbox folders in which action should search for email."
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1667322879000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1667322879000,
+            "Name": "Content",
+            "Type": 10,
+            "Value": "",
+            "Description": "Specify the content of the reply."
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1667322879000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1667322879000,
+            "Name": "Attachments Paths",
+            "Type": 0,
+            "Value": "",
+            "Description": "Specify a comma separated list of attachments file paths stored on the server for addition to the email."
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1667322879000,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1667322879000,
+            "Name": "Reply All",
+            "Type": 1,
+            "Value": true,
+            "Description": "If enabled, action will send a reply to all recipients related to the original email. Note: this parameter has priority over “Reply To“ parameter."
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1667322879000,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1667322879000,
+            "Name": "Reply To",
+            "Type": 0,
+            "Value": "",
+            "Description": "Specify a comma-separated list of emails to which you want to send this reply. If nothing is provided and “Reply All“ is disabled, action will only send a reply to the sender of the email. If “Reply All“ is enabled, action will ignore this parameter."
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,75 @@
+{
+  "Identifier": "c310541b-1a05-4858-ba8f-c8c361cd8947",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "DShield",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "efc336d8-f903-4005-9188-58f3a119195b",
+      "ParentWorkflowIdentifier": "c310541b-1a05-4858-ba8f-c8c361cd8947",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "DShield_Get Ip Info_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "DShield_Get Ip Info",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "efc336d8-f903-4005-9188-58f3a119195b",
+          "ParentWorkflowIdentifier": "c310541b-1a05-4858-ba8f-c8c361cd8947",
+          "Name": "ScriptName",
+          "Value": "DShield_Get Ip Info",
+          "CreationTimeUnixTimeInMs": 1519206653939,
+          "ModificationTimeUnixTimeInMs": 1519206653939
+        },
+        {
+          "ParentStepIdentifier": "efc336d8-f903-4005-9188-58f3a119195b",
+          "ParentWorkflowIdentifier": "c310541b-1a05-4858-ba8f-c8c361cd8947",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519206653939,
+          "ModificationTimeUnixTimeInMs": 1519206653939
+        },
+        {
+          "ParentStepIdentifier": "efc336d8-f903-4005-9188-58f3a119195b",
+          "ParentWorkflowIdentifier": "c310541b-1a05-4858-ba8f-c8c361cd8947",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519206653939,
+          "ModificationTimeUnixTimeInMs": 1519206653939
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519206653939,
+      "ModificationTimeUnixTimeInMs": 1519206653939
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "4da49e59-0754-4f81-bd3e-2feacf316455",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "c310541b-1a05-4858-ba8f-c8c361cd8947",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "DShield",
+      "AllEnvironments": "",
+      "Id": 72,
+      "CreationTimeUnixTimeInMs": 1519206653939,
+      "ModificationTimeUnixTimeInMs": 1519206653939
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 72,
+  "CreationTimeUnixTimeInMs": 1519206653939,
+  "ModificationTimeUnixTimeInMs": 1519206653939
+}

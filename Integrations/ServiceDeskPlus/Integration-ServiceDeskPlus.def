@@ -1,0 +1,33 @@
+{
+    "Description": "ServiceDesk Plus is a game changer in turning IT teams from daily fire-fighting to delivering awesome customer service.",
+    "DisplayName": "ServiceDesk Plus",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/service-desk-plus",
+    "Identifier": "ServiceDeskPlus",
+    "Categories": [
+        "IT & Infrastructure",
+        "ITSM"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAMAAACScZ2GAAACEFBMVEX///8rKin9/f1qaWn7+/uwr69HRkXu7u67u7pCQUDZ2diQj488Ozro6OiamZmMi4rIyMigoJ9QUE8zMjHj4+La2tq1tbRnZmVgX1/z8/PU1NPLy8uenZ1/fn4/Pj03Nzb4+Pj29/ekpKOTkpJeXVzX19fS0tLQ0M/FxcTBwMC/v76NjYyEhIN3d3ZxcG9jYmEtLCv7+vq5ubm4uLizsrKqqqqnpqabm5qZmJh8fHt6eXlVVVTm5ubOzs68vLyYl5d2dXVzc3JLS0pJSEc1NDMwLy75+fn19fXV1dWJiIhpaWhZWVg5ODfw8fDk5OTCwsKtrKyVlpVvbm1tbGtbWlpXVlXl5eXh4eHf3t62tbWop6dUU1IyMTDg4OCcnJtlZGRPTk3q6urd3d2Hh4aBgIBoZ2by+Pn//fb78+//9c5aWln/4Ej//ez65eejyORDi9/e3t3/+Nzc3Nz6ys9wrcD0nKfgjZSZrYjtSWH/5Vr/4x33+/661fPO4e6bxO7o9e0AWera59zJ69knfdbp6tTIzs3J3crL1sP+8cJYrMF6pcH/98Cz2cCZ178kjb+RsbdGmLf3qbVxnrP/8bH/7Knom6NjxJ2+xpr+6Jeru5dQqpSmsZKJio9VvI53v4Ggm3wzsXl/pHmUnHlSwnbu2HTxX3NaYHLwXHH/7G1dbmzpVmvv1VozvFkcMC3/1iodKiiLj7EVAAAGaklEQVRo3uzRV8/SABSH8efUtooUGSUIKgUExYkiIIJiFMEFrry44uuMce+999577739iorGCxONXjRqTH+XJ+fiSf44HA6Hw+FwOBwOh8Ph+A/s33BgBf+og+dvPLqzbePJlfyDlCPn7j588uDptkO3z/LvWXF4x65dL3c8fnfp6LPV2CVL20R+h6KqqsJPTHvzfOuq9dsv77y/cecrbNK1mQK0Zp5fKzVrprmM7wySCF9d306bsv7EhSu712GPeSJjYImM4tdcKd+AAZP4ztJKli9WbeWb02fW2rVub5EhzBCZwtySNXoGnqivrLuhsMDyKpB0dYxyQ2iCPhOsIkCvkb1bnx/p1WiM9McjGpOL6VTjeJaur1ODadtw0ba8nCyoMztm9SQfWzRMuk4T0XXRqHb0kA6i0qUldTTp45cCo1MzC93pJoa7p6gRGe+vi5KWL4fwRyLvvRUrA7Dv5p6V2KOvpM2kzJ86ASK9kzIQGQYyFbaMNVyKZGBBDMPsNlY6mRoLVGfikzRIcJQB3SXez8QnPrLDE7OGjx2UERX2rni7Fpu4hSliEG4yMxboaOflQZZnw7WUPlqVHpCpMVxf3BoyEt0LMN8EtRYsNUA1p33OywksNacNbUYz0aIKHNuzGZuUhLnmSMImEmChzEAKIP5BojAhhtHZNVjXMSxAxUoCaDWVuLlwoEykjyj9OslJHE89XhS+WvXhFnapCkyCqUJGRhsyAimClOdIoCXD6V4Xw9BZJuKSwegSTrXm+WQiCcmxuLNRtZT+giaTmC69WBMbGnihrLu6+xq2GRiibbIG/vLkXBBtHmi9SZe1fvOBuaxpb+cu5xNU/IO9Xk88pKCEglAZ5JExkRBzNJVE3gN9x9+brmw+tZI/xTdOi0qSH1EK3Te5XFn+pkq1bvXlh5SSPmF8Asen9urkK20oCgP49wUlEGZKkFFBbAUBQZyVCqhVqVPFqhXr0Fo3XfX0/1+Um6DZhB7P6a4nvwXTybvve+/dBMc/SC+VAvgbVWvCTk7Xde27ihEuNRWWXDMQaBrzjJ2oeLWwmwPzlxitwijspGi4mIatGbZg8VB8yAA6P+K1Tsip+U3yFqONX5Rh54CM1g4loAIbCQZhWeR5vx/0MwONNbyWjw/7wPIqRlMwwlvyBFBDZBY2JpiBNd7DRfm8SwTowmtl+YShsbUL730DQKRzedybXmmPA7iq9hZSVTm+/bPP7lrkGMD1xGS0ZcZLYaBMNmXYZ28tLnV8mzvn8ZwZr9juJIfxpAjaXNiXeMXKFYBmZQ5Y8LndjzpsbZHrSTPdDsUyEGVokt0M6+bUaEnvqZMUF9KKombEewcxxT6UKEUESoIiiQkGoZo7a8VLUElKvC5LAN6ziuQ2p/xMwN4Psp5NGR96CtJkHi6Sj6k9Y/JtdtGSej856YmdzkwjTe+JhNmy4s3QhxAPc0jViTyZTkbW5HDnkOAmnuPJYYTpRUzKBZkGkGII17KA9xpGKMlqC1J1WZ/Vp1iSeF8A9FiBRupGvJT8ZnCxdzurd9iB9hyvxiA+8Oz37HcvwwoZVMze2/DRq74ck9+945dymhXvgCG844OGvwlHyasch5bh4rpZ0IsId4A1ulBgFKYHmg6hP8fz0gMOrWKFZFeReANlq4u+Hu3652OAbsXTGYJcP5PCaObyyU+L8fhcMQAX74xm/MrYPMfNeBm6Ybphdi4eXywevOzeEqmCXGnI8Bjwtk1u52X3CpwKvBzuJ4hhvBbfG73nA/DrB7kCW3uPMQBPDMH/Mt7FIMQ6XbvcM+MFyCUAx19Q4YT1YFEBNMiE7KAPpn3It1Wj9zat3ntJoLEDnBkr6/EMQvESttZZr9w9kWH0yWypcfEmj49sQYRJ4wHfktd5snXaH8RtkjXP6SPnJN5GIVSjsUXjZLXkmakryfp9KXzEZePO1chr6841xbgTQIOd3H5Zmj7dOwDchK1GlEIWEaJwq7hhF4Y35BaALm8A5ZziKY/iEYUH72iob3zDQIHCuxd4I+/30qQ+wEdqEOMyhylBQtnmwDSrWKS4g72xpcpGqAiR9rWzSwrgWZuFoRiMjAGYXfMYK6m0zQubq9V2Rv4vMpnMXSQegylVaK+PLwDqdLXal+uDcn6RslnsNniAoXymDKjliWoMq2Hg0pdwNeBwOBwOh8PhcDgcDsf/6Q/hFd7bmq+JlwAAAABJRU5ErkJggg==",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ServiceDeskPlus",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "http://{IP or FQDN}/sdpapi/"
+        },
+        {
+            "IntegrationIdentifier": "ServiceDeskPlus",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "Api Key",
+            "PropertyType": "3",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<path d=\"M17.8,7.3c1.9,3.4,2.1,7,0.7,10.8c0.6-0.8,1.1-1.7,1.5-2.6c2.4-5.8-0.5-12.3-6.2-13.8c-0.5-0.1-3.3-0.4-5.2,0.1\n\t\tC12.8,1.8,15.9,3.7,17.8,7.3z\"/>\n\t<path d=\"M18,3c3.2,3.2,4.3,7.1,3.4,11.5c-0.9,4.4-3.4,7.5-8,9.1c4.9-0.2,9-3.8,10-8.6C24.5,10.2,22.2,5,18,3z\"/>\n\t<path d=\"M11.8,5.2c3.2,1.3,5.3,3.7,6.3,7.2c0.5-3.9-2-7.6-5.6-8.9c-3.6-1.3-7.7,0-9.8,3.2C5.4,4.3,8.5,3.9,11.8,5.2z\"/>\n\t<path d=\"M7.9,5.7c-3.7,0.5-6.2,3.1-6.6,7.1c2-6,10-7.3,14.5-2.7C14.7,7.2,11.2,5.2,7.9,5.7z\"/>\n</g>\n</svg>\n",
+    "Version": 4.0,
+    "MarketingDisplayName": "ServiceDesk Plus"
+}

@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1516267173418,
+    "Creator": "admin",
+    "Description": "Delete an issue",
+    "Id": -1,
+    "IntegrationIdentifier": "Jira",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1516267173418,
+    "Name": "Delete Issue",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516267302727,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The key of the issue to delete",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516267302727,
+            "Name": "Issue Key",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

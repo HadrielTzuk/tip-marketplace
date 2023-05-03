@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1535884906829, 
+    "Creator": "admin", 
+    "Description": "Enrich the Siemplify Host entity based on the information from the CheckPoint Threat Reputation service.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\":{\"resource\":\"google.com\",\"reputation\":{\"classification\":\"Benign\",\"severity\":\"N/A\",\"confidence\":\"High\"},\"risk\":0,\"context\":{\"categories\":[{\"id\":52000132,\"name\":\"Search Engines / Portals\"}],\"indications\":[\"The domain is known benign by Check Point's Threat Cloud\",\"The domain\u2019s Alexa rank is 1\",\"The domain has good reputation\",\"The URL is known benign by Check Point's Threat Cloud\",\"The domain is popular in Hungary\",\"The domain's registrant is connected to domains with good reputation\",\"The domain is popular among websites with good reputation\",\"VirusTotal vendors detected benign URLs of the domain\",\"The domain is hosted on an IP address that belongs to benign ASN: Google LLC\"],\"vt_positives\":0,\"alexa_rank\":1,\"registrant\":\"dns-admin@google.com\",\"safe\":true,\"creation_date\":\"2017:01:30 00:00:00\",\"related_ips\":[{\"ip\":\"172.217.18.206\",\"classification\":\"Benign\",\"confidence\":\"Low\"},{\"ip\":\"216.58.209.36\",\"classification\":\"Benign\",\"confidence\":\"Low\"}]}},\"Entity\":\"google.com\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "CheckPointThreatReputation", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1535884906829, 
+    "Name": "Get Host Reputation", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "0", 
+            "Description": "Mark entity as suspicious if the returned risk value for entity is above a given threshold.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Threshold", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify whether the Siemplify Insight should be created based on the action result.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535884906829, 
+            "Name": "Create Insight?", 
+            "Type": 1, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Version": 1.0
+}

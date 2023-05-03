@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New Varonis Data Security Platform integration added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Varonis Data Security Platform",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1670388158,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13289"
+    }
+]

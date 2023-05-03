@@ -1,0 +1,36 @@
+{
+    "Description": "AWS Identity and Access Management (IAM) enables you to create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources.",
+    "DisplayName": "AWS Identity and Access Management (IAM)",
+    "Identifier": "AWSIAM",
+    "Categories": [
+        "Operational",
+        "IAM",
+        "Identity",
+        "Cloud"
+    ],
+    "PythonVersion": 2,
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "AWSIAM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Access Key ID",
+            "PropertyName": "AWS Access Key ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AWSIAM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "AWS Secret Key",
+            "PropertyName": "AWS Secret Key",
+            "PropertyType": "3",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/aws-iam",
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n\t<path d=\"M16.0621 18.1936L13.5404 17.5975V16.7961L16.0649 16.2956V14.4362L17.0991 14.3433V12.4995H14.8732V10.849L17.0991 10.7073H17.0981V9.21133L18.0373 9.10184V5.70323L17.0981 5.32877V3.53562L12.0187 1L6.93829 3.53562V5.32877L6 5.70323V9.10184L6.93829 9.21041V10.7073L9.16326 10.849V20.5609L10.496 21.0927V23.241L12.0187 24L13.5404 23.241V21.0927L16.0649 20.0935L16.0594 18.1982L16.0621 18.1936ZM10.6739 4.91016L10.6794 4.90832L12.0187 4.44002L13.3625 4.91016V8.16801L12.0187 7.90028L10.6739 8.16893V4.91016Z\" \/>\r\n<\/svg>",
+    "Version": 3.0
+}

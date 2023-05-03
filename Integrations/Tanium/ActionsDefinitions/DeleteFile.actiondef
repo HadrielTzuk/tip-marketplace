@@ -1,0 +1,34 @@
+{
+    "Id": -1,
+    "IntegrationIdentifier": "Tanium",
+    "Creator": "admin",
+    "Name": "Delete File",
+    "Description": "Download a file from endpoints in Tanium. Action works with Tanium Threat Response API. Supported Entities: Hostname, IP Address.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"centos-xxx.xxx.xxx\",\"EntityResult\":{\"success\":[\"filepath1\"],\"not_exist_already_or_errors\":[\"invalid.jar\",\"badfile.txt\"]}},{\"Entity\":\"172.30.xxx.xxx\",\"EntityResult\":{\"success\":[\"filepath1\"],\"not_exist_already_or_errors\":[\"invalid.jar\",\"badfile.txt\"]}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 1533271942188,
+    "ModificationTimeUnixTimeInMs": 1533271942188,
+    "Parameters": [
+        {
+            "Name": "File Paths",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the absolute path of the files on the endpoint that needs to be deleted.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}"
+}

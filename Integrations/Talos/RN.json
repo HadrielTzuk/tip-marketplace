@@ -1,0 +1,130 @@
+[
+    {
+        "ChangeDescription": "Improvements in REST-API requests for all actions.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Talos",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1639"
+    },
+    {
+        "ChangeDescription": "Added support for JSON results and JSON result example for use in playbooks.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "WhoIs Action",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1951"
+    },
+    {
+        "ChangeDescription": "Added support for Unicode data.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Get Reputation",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2483"
+    },
+    {
+        "ChangeDescription": "Added logs and better error handling.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Get Reputation",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2867"
+    },
+    {
+        "ChangeDescription": "Added support for both lowercase and uppercase entities.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Get Reputation",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1592202522,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2978"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Talos",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Get Reputation - Added more information about entities in JSON result.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "Get Reputation",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1628667444,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9275"
+    },
+    {
+        "ChangeDescription": "Updated the integration to match API requirement's changes.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "Talos",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1630483516,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9799"
+    },
+    {
+        "ChangeDescription": "Integration Update - Updated the logic of all actions to support latest API changes. Note - Talos have significantly updated their API's behavior, please go over your workflows and make sure they are aligned with the new actions outputs and JSON results.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 12.0,
+        "ItemName": "Talos",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1640778241,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "TIPG-10734"
+    },
+    {
+        "ChangeDescription": "Get Reputation - Improved the action's flow.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 13.0,
+        "ItemName": "Get Reputation",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1643175420,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10665"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 14.0,
+        "ItemName": "Talos",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

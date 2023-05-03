@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1515580856713, 
+    "Creator": "admin", 
+    "Description": "Find domains with an email address in their WhoIs record", 
+    "Id": -1, 
+    "IntegrationIdentifier": "DomainTools", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1515580856713, 
+    "Name": "Reverse Email", 
+    "Parameters": [], 
+    "ScriptResultName": null, 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

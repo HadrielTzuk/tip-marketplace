@@ -1,0 +1,62 @@
+{
+	"Cases": [{
+			"Events": [{
+					"_fields": {
+						"BaseEventIds": "[]",
+						"ParentEventId": -1,
+						"DeviceProduct": "DLP_Product",
+						"StartTime": "1528803279405",
+						"EndTime": "1528803279405"
+					},
+					"_rawDataFields": {
+						"applicationProtocol": "TCP",
+						"categoryOutcome": "blocked",
+						"destinationAddress": "10.0.0.28",
+						"destinationHostName": "example.com",
+						"destinationPort": "770",
+						"destinationProcessName": "MrlCS.sob",
+						"destinationUserName": "meny@siemplify.co",
+						"deviceAddress": "172.21.135.124",
+						"deviceEventClassId": "Data Exfiltration",
+						"deviceHostName": "ckIYC2",
+						"Field_24": "B0:E7:DF:6C:EF:71",
+						"deviceProduct": "DLP_Product",
+						"usb": "USB_DEVICE_1",
+						"deviceVendor": "Vendor",
+						"eventId": "0aa16009-5bb4-41a3-91ed-81347442ca29",
+						"managerReceiptTime": "1480867860000",
+						"message": "Data Exfiltration",
+						"name": "Data Exfiltration",
+						"sourceUserName": "User41@siemplify",
+						"severity": "8",
+						"sourceAddress": "10.0.0.51",
+						"cs1": "VID_078654",
+						"sourceHostName": "AppTransaction.db.siemplify",
+						"startTime": "1529263330532",
+						"endTime": "1529263330532",
+						"sourcetype": "DLP_Product"
+					},
+					"Environment": null,
+					"SourceSystemName": null
+				}
+			],
+			"Environment": null,
+			"SourceSystemName": "Splunk",
+			"TicketId": "71b98116-8220-486c-aa63-e170997ef705 0000",
+			"Description": "Data Exfiltration",
+			"DisplayId": "71b98116-8220-486c-aa63-e170997ef705 0000",
+			"Reason": null,
+			"Name": "Data Exfiltration",
+			"DeviceVendor": "DLP",
+			"DeviceProduct": "DLP_Product",
+			"StartTime": 1529263330532,
+			"EndTime": 1529263330532,
+			"IsTestCase": true,
+			"Priority": -1,
+			"RuleGenerator": "Simulation_Original_Data Exfiltration",
+			"PlaybookTriggerKeywords": [],
+			"Extensions": []
+		}
+	],
+	"IsTestCase": true
+}

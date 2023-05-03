@@ -1,0 +1,54 @@
+{
+    "CreationTimeUnixTimeInMs": 1511346898047,
+    "Creator": "admin",
+    "Description": "Create a zip file from source windows share files",
+    "Id": -1,
+    "IntegrationIdentifier": "FileOperation",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511346898047,
+    "Name": "Zip Files Windows",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1511799308535,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The folder with the relevant files",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799308535,
+            "Name": "source_folder",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799308535,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "files extension to include in zip file {ex: *.txt}",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799308535,
+            "Name": "file_filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799308535,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The folder to put the zip file into",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799308535,
+            "Name": "output_folder",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from FileOperationManager import FileOperationManager\nfrom SiemplifyAction import *\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    file_manager = FileOperationManager()\n    source_folder = siemplify.parameters['source_folder']\n    file_filter = siemplify.parameters['file_filter']\n    output_folder = siemplify.parameters['output_folder']\n    zip_file_path = file_manager.zip_windows(source_folder, file_filter, output_folder)\n\n    output_message = \"Successfully created {0}\".format(zip_file_path)\n    result_value = True\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "ZIpPath",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

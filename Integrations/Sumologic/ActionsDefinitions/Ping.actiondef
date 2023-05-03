@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1521378304285,
+    "Creator": "admin",
+    "Description": "Test Connectivity to Sumologic",
+    "Id": -1,
+    "IntegrationIdentifier": "Sumologic",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1521378304285,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

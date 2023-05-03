@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1527419010185, 
+    "Creator": "admin", 
+    "Description": "Change a user's Organizational Unit (OU)", 
+    "Id": -1, 
+    "IntegrationIdentifier": "ActiveDirectory", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1527419010185, 
+    "Name": "Change User OU", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527419010185, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "The name of the new user's OU", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1527419010185, 
+            "Name": "OU Name", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom ActiveDirectoryManager import ActiveDirectoryManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('ActiveDirectory')\n    server = conf['Server']\n    username = conf['Username']\n    password = conf['Password']\n    domain = conf['Domain']\n\n    ou_name = siemplify.parameters['OU Name']\n\n    ad = ActiveDirectoryManager(server, domain, username, password)\n\n    affected_users = []\n\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.USER:\n            res = ad.change_user_ou(entity.identifier, ou_name)\n        else:\n            continue\n\n        if res:\n            affected_users.append(entity)\n\n    if affected_users:\n        entities_names = [entity.identifier for entity in affected_users]\n\n        output_message = 'The following users were moved to OU {}:\\n'.format(\n            ou_name) + '\\n'.join(\n            entities_names)\n\n    else:\n        output_message = 'No users were added to OU {}.'.format(ou_name)\n\n    siemplify.end(output_message, 'true')\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Version": 1.0
+}

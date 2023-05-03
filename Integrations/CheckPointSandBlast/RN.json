@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "NEW! Check Point SandBlast integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "CheckPointSandBlast",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1601460501,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4226"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "CheckPointSandBlast",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Updated the integration's categories.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "CheckPointSandBlast",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629880631,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9737"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "CheckPointSandBlast",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

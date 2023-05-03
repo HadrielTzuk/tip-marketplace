@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1516022322464,
+    "Creator": "admin",
+    "Description": "Add IP to the Checkpoint FireWall Group",
+    "Id": -1,
+    "IntegrationIdentifier": "CheckPointFirewall",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1516022322464,
+    "Name": "Add Ip To Group",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the group to which you want to add IP address.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Blacklist Group Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_blocked", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

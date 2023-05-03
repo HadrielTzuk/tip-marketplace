@@ -1,0 +1,50 @@
+{
+    "Description": "Jira Software is part of a family of products designed to help teams of all types manage work. Originally, Jira was designed as a bug and issue tracker. But today, Jira has evolved into a powerful work management tool for all kinds of use cases, from requirements and test case management to agile software development. Jira will be the perfect fit for: requirements & test case management, agile teams, project management teams, software development teams, product management teams, task management, bug tracking and much more...",
+    "DisplayName": "Jira",
+    "Identifier": "Jira",
+    "Categories": [
+        "IT & Infrastructure",
+        "ITSM"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAALYAAABjCAMAAAAB3QqqAAACmlBMVEX///8AM2YAM2fCz9oAMmWuvs9HbJEAM2UANWgANGa7yNaqu8wAMmcAMmYANGd1kawANGmktsgANGU+ZYwANWoANWWQprwGOGo7YokkUHzo7PJWeJqLo7r6+/vV3eZvjKkANWzy9ffq7vIANWsAMWcANWYAMWPl6/Dc5OuPpbwuV4IANm79/f73+Prs8PTk6e/g5u2XrsKTqcBmhKRkgqBae50sVYEpVIDX3+fO2OLJ1N/F0d2xwNCjtcaNpLtefZ05YYo5Yog0XIUjUHoIOmsFN2j7/P309vjv8/bu8vXi6O3U3ObQ2uPL1uGtvM6oucufscafscGDm7VwjqluiaFUdpg3XocpUnwdTHgVRHYFPHYXRXIANm0AN2YCNWPb4unM1N3H0t3AytS4x9S1xNSes8eIorh+mLJ5lbBriaZaeZpJbIwiTXkbSnYPQHITQW8OPG0AOWwAL2fu7/TT3+bR2uXX3eS9yti6yNWzwM6ltsiarL+Oo7mKoLeEn7WGm7F3laxoiqlmhKdlh6RLb5FZeI9QcY09Y4gyW38jUXwAN3ERRG8JPG4AMmsAOGPe5Ovi5ura4una4OXDzNrJ0divwdKnts+pu864wsyrusiYsMizvMeotsOSq7+Xs71/mreRn65ykahlgaRcgaRUgZpXdZVFapFGbo5CaIo2WoYwWYY5YIIhUX4HQXsANXgAP3YpT3UANnAJPm8APW8AOG4AO2kALmm/zdnN0ti3vtfFztOZq9Grv8uluMqSpcd9lr6Qp7yRpbmMoLiZrbaBlq5pia6Ooq1/la1vjq1shat8kqZ5iZtNcphNcZZCZ5REb5JYbZFEYZBNaI45WI0mXIsaTH9CX30ZSXUfW3QhS3IfUXAOO3AJNm0NNWsPA0iTAAAHkUlEQVR42u3aZZfTQBQG4PeGQBJoQykt7u7u7u7u7u7u7u7u7u7u7s5/oZmZpG2AQwc5Bw55PvXu7knevZnmTrYLj8fj8Xg8Ho/H4/F4/oAiqUokwT+n8kfSlLn18W8pTwoR6cnwT6iQpAiY3SFi8rGqXpIK+Hs1KkO0qB97OU/ErmQVJYYQpe+Fv1Q+kyKUyazbAWLKAShOGpHfbIi/U1WyaHp2ABU1g4h81QFk/mS9pMVz8HcqQFxFq8ifxyCjTF4ADYlR5+PvVC1IlnAWVnWt0jcpe1GUuLL4O13prFqp08OlBkX4zSn4S83pZJC25Ku33tKORErn/fhrlUhdo38WfCVH1jZzpxSC5/dYtqEoElKpKf4ipQK1JyUyj6oqlMMulmfKnyYif5Vi/H5TJVJGZOK3nwaVU31D5QlNuheGW6ESVdIIVfJnl4g9PY8eSl+i6w92V9PMMNUuYpfNSajEyp4Ud5+sTN/TsZ87WWOKUmUuZ2VFoYi2rVt+e+eRuXjfAWXJUga2FCQkZ2USu9zDyib0Xb6OYxGnhY8cRmuJ2OUUNr91xT+U1RMyCq1LsUW/rqBJXMYfxuZ73aT0fSbFX9fqSkxsn8wqqakQl6u8VT5V/KIOs/YPyE1CiV+PbV8zWz3DJIcSWC8R+55qry3Wzu5B+0i160bKwtmC9lGL/ZbYVBFRxSlOSYnY3UjkDI5oZNUPOvH2525iVa0KklADvyW2kRJRqVWK4W8HCfMVEtqyuiw7lm8HIsacJk4rOPFXYmuKc5JZcBQOKBQrMEYi9mpFI27EFqsultZqfXVYDgwX31MWFZaOXSOro2R1sqWGY7wSH1u/AQnzAnZPzmSw6lFHyM93T3ey+UTqxTchHbsPYvQc/nXs/s7yEOffAwkrs4Xt3HxgbCzYvi4bBqf8JLyGfOyUiDVV/yp2TeIKVCOuVmFI2JuLhOOzYVlXjE2aRapBjNpp/C/HXqobrtj5iAs2q2jYryChgY9sC7bB8USzl162g/jl2Hk1d7cnhYhrCOICsyAjaWfn5n3yIoTZJ+2lQx2y/3rsBuSO3dbkCzttIXu56LUyQ8aL4STkOtoDzNXTeUgouAm/HruYO3ZR0X4j8pUZYqj5zkJGoXZhEvQ8LHemoJ+E4c+AP9DtiQFiwlWASuL0oe2QUqyznVLVj3YHrgXJrkOv8DtiF3XHnpNNdHgUUHgYMTnbQs75JRTtd7cmZNNydhj5W2I3cr0l6wxR+QnYSC/l4z0K5IWcPguct2UgoJKjQw/8ltglAvGxKxIXqmpVa3KLwVMckqaaCrmp5uHx+D2x34f4Ee3Y/XzEBNiWsIhYpEYNyJoZIrfcem8Ivzjcd+oqT7nP3lLwJqnteVlN5bGVHJDVktyObMPPx06dP5OQv28BzZ4opcCM0Uy+Rgbw+pZOjF4Z0kpRHH94A34hdpTfCJPQRczvraTxAdyc16tyEuPbCXklKdaQLfjV2G4G1YtfFGoGMTkW8sXt74ifMD2nn2xKG/z22NpMMCNJdz00leZr3Qh1w09orZBjxPbfHnuYaPZ6+wlhGoQMOv+K2QKyrI3MrpCPBONMhd8aW9Nrl4t/Fxm5GltV02a9mzVPS1w6SOp26ByAl13I0a7O74xdq1oWCINFbPZcslYlUgJOs7pCzrGcHUYBdd5Fd1F5Sv5CbL1WWqZWbn48ZQZs5RWx32QjqaZBMYKTIaV3NlUdWgTI8DkcvaxFfz52/yI5mAzP+fH0wSsgtAqJzo6LFBWUuNihgZAyzLpOH0ZGehFdJtlm/3zsvhDq59bsiSi0M2IeCwbGT2czbV1IWMsPXgBA8TzRDWDdb8T2S+5JpopZMmI6r/OpvPbNsn4pRXMNp56QUCbMjrRkl7U98ZFg3sVXmoQlYyN1kK/uThtZed0eiZutG7aP4uVsJZE6iSF62OFhZqB9dFTiK/mlYxfz81WhZWNPpQN5bFNbEel80B07dEwidlWDOON4XesvmCTkGge3vfaJKiUaG1t1jffX2rcWPqHypT3IGjONswjlHtvPV6ORsPYiqNpptVXeDqgidsuvhlJako6NjouJKdgcGEtc2DUQL/lEhJRIVCO7gwXf8GxdsvE6UAAuAxUSKiQeu5x9887TEC3tc5VDnCIKb51RBokqLpqrLFgFxP6J2KidPabR9SpMLuukNrMnHhv3w3x1+w6gLT+C/y1c2hCn5038EzOxJuzm5nNugivhyHtC1Z3Uyj5IxC60UCPGPFjb5I9OO+DSQhGxJyJBc3VybcAOqcT1jjn30EDMxmiNTGyM9Qd5kxVTLO2mcGksVo8vIxI0iMdW9B7uAaxNQVRJJ7Z6qiakYmOGHv/hgVkfboN9PPbCzEhI9mEmcfkgTLITlkRUT+fMerYG4MaRwNfXBFEZ7m1YnS5xUzxYBl+Zlotf8sAmJGSZZsd27pn9jLSM3h8xhurEHb7g3ISqp2Pa8Ftl8prpmUF94NJ0fnrxrQKRH6/WHF8ZbR+qOBJSv2rG0pYBGZdDyJE3A5M3O2K05mtJfZQB/5LNPj/R4Kp/7T+rfUfelJkul68Dj8fj8Xg8Ho/H4/H8R74ABHAoagYUZA4AAAAASUVORK5CYII=",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Jira",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://{jira_address}"
+        },
+        {
+            "IntegrationIdentifier": "Jira",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Jira",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Token",
+            "PropertyName": "Api Token",
+            "PropertyType": "3",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Jira",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path d=\"M19.406 7.706L16.4 8.52s-1.3 3.25-3.9 4.875c0 0-3.412-2.357-3.981-4.875l-3.006-.813S5.188 9.9 7.3 12.42c2.113 2.518 6.825 6.418 6.744 9.425h3.006s-.406-3.494-2.6-5.932c0 0 5.606-4.793 4.956-8.206zM7.95 21.762h2.925c0-1.38.731-2.6.731-2.6L9.738 16.97c-1.95 1.787-1.788 4.793-1.788 4.793zm4.55-10.318c1.544-.975 1.544-2.438 1.544-2.438h-3.006c-.082-.081-.082 1.381 1.462 2.438zm0-5.85c.65 0 1.219-.488 1.219-1.219 0-.731-.569-1.219-1.219-1.219-.65 0-1.219.569-1.219 1.219 0 .65.57 1.219 1.22 1.219zM8.438 6.812c.65 0 1.218-.568 1.218-1.218s-.568-1.219-1.218-1.219-1.22.569-1.22 1.219c0 .65.57 1.218 1.22 1.218zm8.125 0c.65 0 1.218-.568 1.218-1.218s-.568-1.219-1.218-1.219-1.22.569-1.22 1.219c0 .65.57 1.218 1.22 1.218z\"\/>\r\n<\/svg>\r\n",
+    "Version": 29.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/jira",
+    "MarketingDisplayName": "Atlassian Jira"
+}

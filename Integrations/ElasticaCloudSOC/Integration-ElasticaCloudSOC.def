@@ -1,0 +1,49 @@
+{
+    "Description": "Security Operations Center for cloud apps that provides full life cycle of security for SaaS.",
+    "DisplayName": "Elastica Cloud SOC",
+    "Identifier": "ElasticaCloudSOC",
+    "Categories": [
+        "Cloud Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ElasticaCloudSOC",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "6",
+            "Value": "https://api-vip.elastica.net/<company_name>/"
+        },
+        {
+            "IntegrationIdentifier": "ElasticaCloudSOC",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Key ID",
+            "PropertyName": "Key ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ElasticaCloudSOC",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Key Secret",
+            "PropertyName": "Key Secret",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ElasticaCloudSOC",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\"><g><path d=\"M4.8,14.3c0-2.1-0.5-3.8-1.6-5.4C2.8,8.3,2.5,7.8,2.4,7.1c-0.6-2.5,1.2-5,3.8-5.3C7.7,1.7,9,2.3,10,3.5c0.3,0.4,0.6,1,1,1.4C12,6.2,13.4,6.8,15,7c0.8,0.1,1.7,0,2.5-0.2c1-0.3,2-0.1,2.9,0.4c1.3,0.7,2.1,1.9,2.3,3.4c0.1,1-0.1,1.9-0.6,2.7c-0.7,1.2-1.8,1.9-3.1,2.1c-0.5,0.1-1,0.1-1.6,0.1c-2.4,0.4-4.4,2.2-5,4.5c-0.3,1.1-1,2-2,2.6c-1.6,0.9-3.3,0.8-4.8-0.3c-1-0.7-1.5-1.7-1.7-2.9c-0.1-0.8,0-1.5,0.3-2.2C4.6,16.2,4.8,15.1,4.8,14.3z\"/></g></svg>",
+    "Version": 4.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/elastica-cloudsoc",
+    "MarketingDisplayName": "Elastica Cloud SOC"
+}

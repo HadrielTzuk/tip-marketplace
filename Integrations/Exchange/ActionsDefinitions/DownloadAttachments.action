@@ -1,0 +1,156 @@
+{
+    "CreationTimeUnixTimeInMs": 1511698992392,
+    "Creator": "admin",
+    "Description": "Download email attachments from email to specific file path on Siemplify server. NOTICE - to search for an email in all mailboxes, please configure impersonation permissions. https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/impersonation-and-ews-in-exchange. Note: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed. Additionally, please note that if the downloaded attachments have \"/\" or \"\\\" characters in the names, those will be replaced with the '_' character.",
+    "Id": -1,
+    "IntegrationIdentifier": "Exchange",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511698992392,
+    "Name": "Download Attachments",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"attachment_name\":\"name1.png\",\"downloaded_path\":\"file_path/name1.png\"},{\"attachment_name\":\"name2.png\",\"downloaded_path\":\"file_path/name2.png\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "Inbox",
+            "Description": "Mailbox folder to search email in. Parameter should also accept comma separated list of folders to check the user response in multiple folders",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Folder Name",
+            "Type": 0,
+            "Value": "Inbox"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "File path on the server where to download the email attachments",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Download Path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition, specify emails with which email ids to find. Should accept comma separated multiple message ids. If message id is provided, subject filter is ignored",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Message IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition to search emails by specific subject",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Subject Filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition to search emails by specific sender",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Sender Filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If checked, download attachments only from unread emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Only Unread",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If checked, download attachments also from attached EML files",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Download Attachments from EML",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If checked, download attachments to unique path  under file path provided in “Download Path” parameter to avoid previously downloaded attachments overwrite.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Download Attachments to unique path?",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If checked, search in all mailboxes accessible with current impersonalization settings",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Search in all mailboxes",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "25",
+            "Description": "In case \"Search in all mailboxes\" is checked, action works in batches, this parameter controls how many mailboxes action should process in single batch (single connection to mail server).",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "How many mailboxes to process in a single batch",
+            "Type": 0,
+            "Value": "25"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800047298,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of mailboxes that need to be searched. This parameter has priority over \"Search in all mailboxes\".",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800047298,
+            "Name": "Mailboxes",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "file_paths",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

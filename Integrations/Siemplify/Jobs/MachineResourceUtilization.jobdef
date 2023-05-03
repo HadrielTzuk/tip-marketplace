@@ -1,0 +1,55 @@
+{
+    "CreationTimeUnixTimeInMs": 1527521072245,
+    "Creator": "Siemplify System",
+    "Description": "Machine resource utilization  - Notifies if the machine resource utilization is close to full usage, according to the following rules: CPU - over 90% MEM - over 85% Drive - over 80%",
+    "Id": -1,
+    "Integration": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527521072245,
+    "Name": "Machine Resource Utilization",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527521072245,
+            "DefaultValue": "90",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1527521072245,
+            "Name": "CPU Limit",
+            "Type": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1527521072245,
+            "DefaultValue": "85",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1527521072245,
+            "Name": "Memory Limit",
+            "Type": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1527521072245,
+            "DefaultValue": "80",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1527521072245,
+            "Name": "Drives Limit",
+            "Type": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1527521072245,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1527521072245,
+            "Name": "Disks",
+            "Type": 2
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Version": 1
+}

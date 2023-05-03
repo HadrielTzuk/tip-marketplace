@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1517347674160,
+    "Creator": "admin",
+    "Description": "Get all scan templates from the server",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Templates\": [{\"name\": \"wannacry\", \"title\": \"WannaCryRansomware\", \"is_agent\": null, \"unsupported\": false, \"manager_only\": false, \"desc\": \"RemoteandlocalchecksforMS17-010.\", \"subscription_only\": false, \"uuid\": \"00000-000000-0000-00000-00000000000\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "NessusScanner",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517347674160,
+    "Name": "Get Scan Templates",
+    "Parameters": [],
+    "Script": "# Imports\r\nfrom SiemplifyAction import SiemplifyAction\r\n# CR: Remove unused imports\r\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv, add_prefix_to_dict_keys\r\nfrom NessusScannerManager import NessusScanner\r\n\r\n# Consts\r\nTEMPLATE = 'Template Name'\r\n\r\ndef main():\r\n    # Configuration.\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration('NessusScanner')\r\n    access_key = conf['Access Key']\r\n    secret_key = conf['Secret Key']\r\n    server_address = conf['Api Root']\r\n    nessus_client = NessusScanner(access_key, secret_key, server_address)\r\n\r\n    templates_csv = nessus_client.get_scan_templates_csv()\r\n\r\n    # Verify Result.\r\n    if len(templates_csv) > 1:\r\n        # Display Table.\r\n        siemplify.result.add_data_table('Nessus Scan Templates', templates_csv)\r\n        result_value = 'true'\r\n        output_message = 'Scan templates were received.'\r\n    else:\r\n        result_value = 'false'\r\n        output_message = 'No scan templates were received.'\r\n\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n",
+    "ScriptResultName": "is_succeed",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

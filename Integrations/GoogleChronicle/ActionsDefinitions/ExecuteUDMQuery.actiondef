@@ -1,0 +1,94 @@
+{
+    "Id": -1,
+    "Creator": "Admin",
+    "IntegrationIdentifier": "GoogleChronicle",
+    "Name": "Execute UDM Query",
+    "Description": "Execute custom UDM query in Google Chronicle. Note: 60 action executions are allowed per hour.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "CreationTimeUnixTimeInMs": 0,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"events\":[{\"name\":\"02c2c701c5bb7e7042701axxxxxxxxxx,4,16496990275xxxxx,EMAIL,\",\"udm\":{\"metadata\":{\"eventTimestamp\":\"2022-04-11T17:43:47.586Z\",\"eventType\":\"EMAIL_TRANSACTION\",\"productName\":\"Chronicle Internal\",\"ingestedTimestamp\":\"2022-04-11T15:50:21.912562Z\",\"enrichmentState\":\"ENRICHED\"},\"principal\":{\"hostname\":\"test-pc\",\"assetId\":\"CS:8973060bcf1d441a8cf10exxxxxxxxxx\",\"user\":{\"userid\":\"test\",\"userDisplayName\":\"test test\",\"windowsSid\":\"S-1-5-21-2623356xxx-8883713xxx-9684409xxx-xxxxx\",\"emailAddresses\":[\"test@example.com\"],\"productObjectId\":\"test\",\"attribute\":{\"labels\":[{\"key\":\"2FA Enabled\",\"value\":\"false\"}]},\"groupIdentifiers\":[\"Contractors\"],\"title\":\"IT Support Agent\",\"department\":[\"Cymbal Investments IT Contractors\"]},\"ip\":[\"10.2.xx.xxx\"],\"mac\":[\"b5:1c:8b:xx:xx:xx\"],\"location\":{\"city\":\"San Francisco\",\"state\":\"California\",\"countryOrRegion\":\"US\"},\"asset\":{\"hostname\":\"test-pc\",\"assetId\":\"CS:8973060bcf1d441a8cf10exxxxxxxxxx\",\"ip\":[\"10.2.xx.xxx\"],\"mac\":[\"b5:1c:8b:xx:xx:xx\"]}},\"securityResult\":[{\"action\":[\"ALLOW\"]}],\"network\":{\"email\":{\"from\":\"test@example.com\",\"to\":[\"test@example.com\"],\"subject\":[\"I did not create this service account\"]}}}},{\"name\":\"02c2c701c5bb7e7042701axxxxxxxxxx,3,16496987245xxxxx,EMAIL,\",\"udm\":{\"metadata\":{\"eventTimestamp\":\"2022-04-11T17:38:44.586Z\",\"eventType\":\"EMAIL_TRANSACTION\",\"productName\":\"Chronicle Internal\",\"ingestedTimestamp\":\"2022-04-11T15:50:21.912562Z\",\"enrichmentState\":\"ENRICHED\"},\"principal\":{\"hostname\":\"test-pc\",\"assetId\":\"CS:8973060bcf1d441a8cf10exxxxxxxxxx\",\"user\":{\"userid\":\"test\",\"userDisplayName\":\"test test\",\"windowsSid\":\"S-1-5-21-2623356xxx-8883713xxx-9684409xxx-xxxxx\",\"emailAddresses\":[\"test@example.com\"],\"productObjectId\":\"test\",\"attribute\":{\"labels\":[{\"key\":\"2FA Enabled\",\"value\":\"false\"}]},\"groupIdentifiers\":[\"Contractors\"],\"title\":\"IT Support Agent\",\"department\":[\"Cymbal Investments IT Contractors\"]},\"ip\":[\"10.2.xx.xxx\"],\"mac\":[\"b5:1c:8b:xx:xx:xx\"],\"location\":{\"city\":\"San Francisco\",\"state\":\"California\",\"countryOrRegion\":\"US\"},\"asset\":{\"hostname\":\"test-pc\",\"assetId\":\"CS:8973060bcf1d441a8cf10exxxxxxxxxx\",\"ip\":[\"10.2.xx.xxx\"],\"mac\":[\"b5:1c:8b:xx:xx:xx\"]}},\"securityResult\":[{\"action\":[\"ALLOW\"]}],\"network\":{\"email\":{\"from\":\"test@example.com\",\"to\":[\"test@example.com\"],\"subject\":[\"Did you create this service account\"]}}}}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Query",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the query that needs to be executed in Chronicle.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Time Frame",
+            "Type": 15,
+            "Value": "Last Hour",
+            "DefaultValue": "Last Hour",
+            "IsMandatory": false,
+            "Description": "Specify a time frame for the results. If \"Alert Time Till Now\" is selected, action will use start time of the alert as start time for the search and end time will be current time. If \"30 Minutes Around Alert Time\" is selected, action will search the alerts 30 minutes before the alert happened till the 30 minutes after the alert has happened.  Same idea applies to \"1 Hour Around Alert Time\" and \"5 Minutes Around Alert Time\". If \"Custom\" is selected, you also need to provide \"Start Time\".",
+            "OptionalValues": [
+                "Last Hour",
+                "Last 6 Hours",
+                "Last 24 Hours",
+                "Last Week",
+                "Last Month",
+                "Alert Time Till Now",
+                "5 Minutes Around Alert Time",
+                "30 Minutes Around Alert Time",
+                "1 Hour Around Alert Time",
+                "Custom"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specify the start time for the results. This parameter is mandatory, if \"Custom\" is selected for the \"Time Frame\" parameter. Format: ISO 8601. Note: The maximum time window (start time to end time) is 90 days.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "End Time",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specify the end time for the results. Format: ISO 8601. If nothing is provided and \"Custom\" is selected for the \"Time Frame\" parameter then this parameter will use current time. Note: The maximum time window (start time to end time) is 90 days.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "Value": 50,
+            "DefaultValue": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many results to return for the query. Default: 50. Maximum: 200.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+    }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

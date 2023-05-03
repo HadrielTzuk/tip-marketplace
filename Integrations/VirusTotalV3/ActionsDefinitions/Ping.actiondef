@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1506238234929,
+    "Creator": "admin",
+    "Description": "Test connectivity to the VirusTotal with parameters provided at the integration configuration page on the Marketplace tab.",
+    "Id": -1,
+    "IntegrationIdentifier": "VirusTotalV3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506238753331,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

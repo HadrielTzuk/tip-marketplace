@@ -1,0 +1,36 @@
+{
+    "CreationTimeUnixTimeInMs": 1536138915093,
+    "Creator": "Admin",
+    "Description": "",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"ip\": \"string\", \"score\": \"integer\", \"created\": \"string\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "XForce",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1536138915093,
+    "Name": "Get IP By Category",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1536138915093,
+            "CustomActionId": 32,
+            "DefaultValue": null,
+            "Description": "Category for IP.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1536138915093,
+            "Name": "Category",
+            "Type": 0,
+            "Value": null,
+            "Values": []
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom XForceManager import XForceManager\nfrom SiemplifyUtils import construct_csv\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('XForce')\n    address = conf['Address']\n    api_key = conf['Api Key']\n    api_password = conf['Api Password']\n    use_ssl = conf['Use SSL'].lower() == 'true'\n    xf_manager = XForceManager(api_key, api_password, address, use_ssl)\n\n    # Category options:\n    # Spam, Anonymisation Services, Scanning IPs, Dynamic IPs, Malware, Bots, Botnet Command and Control Server\n    category = siemplify.parameters['Category']\n\n    ips = xf_manager.get_ip_by_category(category)\n    if ips:\n        ips_csv = construct_csv(ips)\n        siemplify.result.add_data_table('IPS in {0}'.format(category), ips_csv)\n\n        output_message = \"Successfully retrieved the IPs that are in {0}.\".format(category)\n        result_value = \"true\"\n    else:\n        output_message = \"Failed to retrieved the IPs that are in {0}.\".format(category)\n        result_value = \"false\"\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

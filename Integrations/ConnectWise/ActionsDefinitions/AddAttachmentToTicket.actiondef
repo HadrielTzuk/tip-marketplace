@@ -1,0 +1,95 @@
+{
+  "Name": "Add Attachment To Ticket",
+  "Description": "Add an attachment to the ticket in ConnectWise.",
+  "IntegrationIdentifier": "ConnectWise",
+  "ScriptResultName": "is_success",
+  "DynamicResultsMetadata": [
+    {
+      "ResultName": "JsonResult",
+      "ResultExample": "{\"id\":\"xxxx\",\"title\":\"test file\",\"fileName\":\"test.json\",\"serverFileName\":\"24e7db8d-41b5-4bd0-9db3-xxxxxx.json\",\"owner\":\"Admin\",\"linkFlag\":false,\"imageFlag\":false,\"publicFlag\":false,\"htmlTemplateFlag\":false,\"readOnlyFlag\":true,\"size\":22131,\"urlFlag\":false,\"guid\":\"b9fc3fc6-f368-40bb-bc06-xxxxxx\",\"_info\":{\"lastUpdated\":\"2022-05-10T14:02:23Z\",\"updatedBy\":\"Admin\"}}"
+    }
+  ],
+  "Creator": "Admin",
+  "IsEnabled": true,
+  "IsCustom": false,
+  "IsSystem": false,
+  "Version": 1.0,
+  "TimeoutSeconds": 600,
+  "Parameters": [
+    {
+      "CustomActionId": 0,
+      "IsMandatory": false,
+      "DefaultValue": true,
+      "Description": "If enabled, action will only allow the owner to update the attachment.",
+      "Name": "Allow Only Owner Update",
+      "Value": true,
+      "Type": 1,
+      "OptionalValues": null,
+      "OptionalValuesJson": null,
+      "Id": 0,
+      "CreationTimeUnixTimeInMs": 1654791350308,
+      "ModificationTimeUnixTimeInMs": 1654791350308
+    },
+    {
+      "CustomActionId": 0,
+      "IsMandatory": false,
+      "DefaultValue": true,
+      "Description": "If enabled, attachment will be shown in the customer portal.",
+      "Name": "Display In Customer Portal",
+      "Value": true,
+      "Type": 1,
+      "OptionalValues": null,
+      "OptionalValuesJson": null,
+      "Id": 0,
+      "CreationTimeUnixTimeInMs": 1654791350308,
+      "ModificationTimeUnixTimeInMs": 1654791350308
+    },
+    {
+      "CustomActionId": 0,
+      "IsMandatory": true,
+      "DefaultValue": "{filename}.{extension}",
+      "Description": "Specify the filename behind the attachment. This value will be also used as a title. Note: action needs to provide the correct extension for the file.",
+      "Name": "Filename",
+      "Value": "{filename}.{extension}",
+      "Type": 0,
+      "OptionalValues": null,
+      "OptionalValuesJson": null,
+      "Id": 0,
+      "CreationTimeUnixTimeInMs": 1654791350308,
+      "ModificationTimeUnixTimeInMs": 1654791350308
+    },
+    {
+      "CustomActionId": 0,
+      "IsMandatory": true,
+      "DefaultValue": "",
+      "Description": "Specify the base64 encoded file that needs to be added as an attachment.",
+      "Name": "Base64 Encoded File",
+      "Value": "",
+      "Type": 0,
+      "OptionalValues": null,
+      "OptionalValuesJson": null,
+      "Id": 0,
+      "CreationTimeUnixTimeInMs": 1654791350308,
+      "ModificationTimeUnixTimeInMs": 1654791350308
+    },
+    {
+      "CustomActionId": 0,
+      "IsMandatory": true,
+      "DefaultValue": "",
+      "Description": "Specify the ID of the ticket to which the document would need to be added.",
+      "Name": "Ticket ID",
+      "Value": "",
+      "Type": 0,
+      "OptionalValues": null,
+      "OptionalValuesJson": null,
+      "Id": 0,
+      "CreationTimeUnixTimeInMs": 1654791350308,
+      "ModificationTimeUnixTimeInMs": 1654791350308
+    }
+  ],
+  "DefaultResultValue": "",
+  "PythonVersion": "None",
+  "Id": 0,
+  "CreationTimeUnixTimeInMs": 1654791350299,
+  "ModificationTimeUnixTimeInMs": 1654791350301
+}

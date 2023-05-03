@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1527067976805,
+    "Creator": "admin",
+    "Description": "Test connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeTIEDXL",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527067976805,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom McAfeeTIEDXLManager import McAfeeTIEDXLManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('McAfeeTIEDXL')\n    server_addr = conf[\"Server Address\"]\n    broker_ca_bundle_path = conf[\"Broker CA Bundle Path\"]\n    cert_file_path = conf[\"Client Cert File Path\"]\n    private_key_path = conf[\"Client Key File Path\"]\n\n    mcafee_dxl_manager = McAfeeTIEDXLManager(server_addr,\n                                      broker_ca_bundle_path,\n                                      cert_file_path,\n                                      private_key_path)\n\n    # If no exception occur - then connection is successful\n    output_message = \"Successfully connected to {server_addr}.\".format(\n        server_addr=server_addr,\n    )\n    siemplify.end(output_message, True)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

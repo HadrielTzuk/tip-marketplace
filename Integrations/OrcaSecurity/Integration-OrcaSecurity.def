@@ -1,0 +1,66 @@
+{
+    "DisplayName": "Orca Security",
+    "Identifier": "OrcaSecurity",
+    "Description": "Orca Security offers a radical new, agentless approach to cloud security and compliance that provides 100% visibility and coverage of cloud configurations and workloads while eliminating the cost, organizational friction, and performance hits associated with agent-based solutions.",
+    "MarketingDisplayName": "Orca Security",
+    "Categories": [
+        "Vulnerability & Risk Management",
+        "Cloud Security",
+        "Endpoint Security",
+        "Cloud"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "OrcaSecurity",
+            "PropertyName": "UI Root",
+            "PropertyDisplayName": "UI Root",
+            "PropertyDescription": "UI root of the Orca Security instance.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://{ui instance}"
+        },
+        {
+            "IntegrationIdentifier": "OrcaSecurity",
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyDescription": "API root of the Orca Security instance.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://{api instance}"
+        },
+        {
+            "IntegrationIdentifier": "OrcaSecurity",
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyDescription": "API Key of the Orca Security instance account. If both \"API Key\" and \"API Token\" are provided, \"API Token\" will be used.",
+            "PropertyType": 3,
+            "IsMandatory": false,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "OrcaSecurity",
+            "PropertyDisplayName": "API Token",
+            "PropertyName": "API Token",
+            "PropertyDescription": "API Token of the Orca Security instance account. If both \"API Key\" and \"API Token\" are provided, \"API Token\" will be used.",
+            "PropertyType": 3,
+            "IsMandatory": false,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "OrcaSecurity",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Orca Security SIEM server is valid.",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg id=\"a\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M12.86,1c-1.39,0-2.74,.22-3.98,.65,1.94,1.52,3.51,3.51,4.42,5.86,2.7,.22,4.71,2.24,4.71,5.21s-1.97,4.99-4.64,5.21c-.91,2.35-2.45,4.38-4.38,5.86,1.2,.4,2.52,.62,3.87,.62,6.57,0,11.87-5.1,11.87-11.72S19.43,1,12.86,1ZM7.31,12.76c-.04-3.04-1.57-5.65-3.94-7.13-.4,.51-.77,1.09-1.06,1.66,1.64,1.27,2.7,3.22,2.7,5.46s-1.02,4.2-2.67,5.43c.33,.58,.69,1.16,1.1,1.66,2.34-1.48,3.87-4.09,3.87-7.09Zm5.18,5.14c-.8,0-1.53-.22-2.19-.58-.88,2.1-2.34,3.84-4.2,5.07,.62,.4,1.28,.76,1.97,1.05,1.94-1.38,3.47-3.29,4.42-5.54Zm-2.22-9.77c.66-.36,1.39-.58,2.19-.62-.99-2.24-2.52-4.13-4.49-5.5-.69,.29-1.35,.65-1.94,1.09,1.86,1.23,3.32,2.97,4.24,5.03Zm-2.34,2.93c.29-1.01,.88-1.88,1.64-2.46-.88-2.1-2.34-3.84-4.24-4.99-.51,.43-1.02,.87-1.46,1.38,2.12,1.34,3.58,3.51,4.05,6.08Zm1.72,5.83c-.8-.62-1.39-1.45-1.68-2.46-.44,2.57-1.94,4.74-4.02,6.08,.44,.51,.95,.98,1.5,1.38,1.9-1.19,3.36-2.93,4.2-4.99Zm-5.48-4.13c0-1.92-.84-3.62-2.23-4.7-.62,1.41-.95,3-.95,4.67s.37,3.29,.99,4.74c1.35-1.09,2.19-2.79,2.19-4.7Z\"/></svg>",
+    "Version": 4.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/orca-security"
+}

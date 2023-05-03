@@ -1,0 +1,35 @@
+### Json Structure Params ###
+json_result_has_entities: yes
+entity_result_list_path: EntityResult.mitigations
+
+### HTML Structure Params ###
+main_text_singular: MITIGATION
+main_text_plural: MITIGATIONS
+
+import_svg_from_integration: yes
+
+### Table Structure Params ###
+# key_not_found_display_value: ---
+auto_map_columns: no
+table_data:
+  - header: External ID
+    th_style:
+      width: 25%
+    value:
+      pass_to_function: createTitleId
+      keys_to_display:
+        - external_references
+
+  - header: Mitigation
+    th_style:
+      width: 30%
+
+    value:
+      keys_to_display:
+        - name
+
+  - header: Description
+    value:
+      collapse_long_text: yes
+      keys_to_display:
+        - description

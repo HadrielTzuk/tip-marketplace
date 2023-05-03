@@ -1,0 +1,23 @@
+{
+    "CreationTimeUnixTimeInMs": 1506260633110, 
+    "Creator": "admin", 
+    "Description": "DeepSight scan IP address", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"geolocation\": {\"latitude\": 39.91176055, \"city\": \"Beijing\", \"longitude\": 116.3792325, \"country\": \"China\"}, \"network\": {\"carrier\": \"ChinaUnicomBeijingProvinceNetwork\", \"asn\": 4808, \"lineSpeed\": \"High\", \"ipRouting\": \"Fixed\"}, \"targetIndustries\": [{\"name\": \"Utilities\", \"naics\": 221}, {\"name\": \"Telecommunications\", \"naics\": 517}], \"ip\": \"1.1.1.1\", \"whitelisted\": false, \"behaviours\": [{\"behaviour\": \"Attacks\", \"type\": \"WWWAttacks\", \"description\": \"FakeBrowserUpdate\"}], \"targetCountries\": [\"fra\", \"tur\", \"twn\"], \"lastSeen\": \"2019-01-20T00: 00: 00Z\", \"urls\": [{\"url\": \"http: //iremedypro.com/assets/img/jQuery/014/LOGS/c1dabc02e7c9c23688fcdccb9c94379f\", \"uri\": \"/v1/urls/http: //iremedypro.com/assets/img/jQuery/014/LOGS/c1dabc02e7c9c23688fcdccb9c94379f\"}], \"domains\": [{\"domain\": \"iremedypro.com\", \"uri\": \"/v1/domains/iremedypro.com\"}], \"organization\": {\"isic\": \"J6110\", \"type\": \"InternetServiceProvider\", \"name\": \"ChinaUnicomBeijingProvinceNetwork\", \"naics\": 517110}, \"schemaVersion\": 2, \"firstSeen\": \"2016-01-01T00: 00: 00Z\"}, \"Entity\": \"1.1.1.1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "DeepSight", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1506528144588, 
+    "Name": "Scan IP", 
+    "Parameters": [], 
+    "Script": "from DeepSight import DeepSight\nfrom SiemplifyAction import *\nfrom SiemplifyUtils import *\n\nADDRESS = 'ADDRESS' \n\ndef main():\n\tsiemplify = SiemplifyAction()\n\tconf = siemplify.get_configuration('DeepSight')\n\tds = DeepSight(api_key = conf['ApiKey'])\n\tadditional_data = {}\n\tentities_to_update = []\n\toutput_message =\"\"\n\t\n\tfor entity in siemplify.target_entities:   \n\t\tif entity.entity_type == ADDRESS:\n\t\t\tresult = ds.scan_ip(entity.identifier)\n\t\t\tif result:\n\t\t\t\tadditional_data[entity.identifier] = result\n\t\t\t\tif not \"message\" in result:\n\t\t\t\t\tadditional_data[entity.identifier] = {}\n\t\t\t\t\tentities_to_update.append(entity)\n\t\t\t\t\t\n\t\t\t\t\tfor key,val in result.iteritems():\n\t\t\t\t\t\tadditional_data[entity.identifier]['DS_' + key] = str(val)\n\t\t\t\t\t\tif 'geolocation_country' in additional_data[entity.identifier]:\n\t\t\t\t\t\t\tentity.additional_properties['Country'] = additional_data[entity.identifier]['geolocation_country']\n\t\t\t\t\t\telse:\n\t\t\t\t\t\t\tentity.additional_properties['DS_' + key] = str(val) \n\n\tif len(entities_to_update) > 0:\n\t\tfor entity in entities_to_update:\n\t\t\tsiemplify.result.add_entity_enrichment(entity.identifier, additional_data[entity.identifier])\n\t\t\tif len(output_message) == 0:\n\t\t\t\toutput_message = entity.identifier\n\t\t\telse:\n\t\t\t\toutput_message += ', ' + entity.identifier\n\t\toutput_message += ' enriched.'\n\telse:\n\t\toutput_message = 'No entites were enriched' \n\tresult_value = 'true' if len(entities_to_update) > 0 else 'false' \n\tsiemplify.update_entities(entities_to_update)\n\tsiemplify.end(output_message, result_value) \n\nif __name__ == '__main__':\n\tmain()", 
+    "ScriptResultName": null, 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

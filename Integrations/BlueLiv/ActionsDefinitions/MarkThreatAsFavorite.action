@@ -1,0 +1,69 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "The action will mark the specified threat as a favorite threat in BlueLiv",
+    "Id": -1,
+    "IntegrationIdentifier": "BlueLiv",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Mark Threat as a Favorite",
+    "Parameters": [        
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the module type the resource belongs to", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Module Type", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the module ID the resource belongs to", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Module ID", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the Resource ID to add the comment to", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Resource ID", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CustomActionId": -1,
+            "DefaultValue": "User Starred",
+            "Description": "Provide the Favorite status you would like to apply on the specified threat",
+            "Id": -1,
+            "IsMandatory": true,
+            "Name": "Favorite Status",
+            "OptionalValues": [
+                "Not Starred",
+                "User Starred",
+                "Group Starred",
+                "Full Starred"
+            ],
+            "Type": 15,
+            "Value": "User Starred"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

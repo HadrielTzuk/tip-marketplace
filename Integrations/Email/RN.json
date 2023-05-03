@@ -1,0 +1,82 @@
+[
+    {
+        "ChangeDescription": "Fix URL Regexes",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 23.0,
+        "ItemName": "Email Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-55"
+    },
+    {
+        "ChangeDescription": "Fix URL Regexes",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 23.0,
+        "ItemName": "Email EML Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-55"
+    },
+    {
+        "ChangeDescription": "Added the ability to exclude emails by subject or body regex",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 24.0,
+        "ItemName": "Send Email and Wait",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-294"
+    },
+    {
+        "ChangeDescription": "Added non-mandatory Proxy Parameters. Will be used if set (not empty).",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 25.0,
+        "ItemName": "Email Connector",
+        "ItemType": "Connector",
+        "New": true,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-471"
+    },
+    {
+        "ChangeDescription": "Added non-mandatory Proxy Parameters. Will be used if set (not empty).",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 25.0,
+        "ItemName": "Email EML Connector",
+        "ItemType": "Connector",
+        "New": true,
+        "PublishTime": 1579071557,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-471"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 26.0,
+        "ItemName": "Email",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 27.0,
+        "ItemName": "Email",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

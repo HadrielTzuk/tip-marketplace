@@ -1,0 +1,8 @@
+{
+	"Description": "",
+	"PublishedDate": "28/10/19",
+	"Title": "Release Notes",
+	"Content": "<html><head\/><body><h2>Siemplify Marketplace Release Notes - 12.19<\/h2><h5>Published on 28 October, 2019<\/h5><hr><h3>Connectors<\/h3><ul><li><b>CSV<\/b><\/li><ul><li>CSV Connector<\/li><ul><li>REGRESSIVE! Added support for multi-language int 'utf-8' & 'iso-8859-1' encoding<\/li><\/ul><\/ul><li><b>McAfeeESM<\/b><\/li><ul><li>McAfee ESM<\/li><ul><li>REGRESSIVE! Added support for multiple McAfee ESM versions. Version must be stated in Integration Param & Connectors (Options: 10.1, 10.4, 11.1)<\/li><\/ul><li>McAfee ESM Connector<\/li><ul><li>Updated connectors to use paging mechanism.<\/li><li>Now fetching fields for base events as well (and not only for correlations)<\/li><li>Fixed DateTime Fields in events<\/li><\/ul><\/ul><ul><li>SentinelOne V2<\/li><ul><li>REGRESSIVE! All Connectors Password parameters where changed to encrypted type - they should be re-inputed<\/li><\/ul><\/ul><\/ul><hr><h3>Actions<\/h3><ul><li><b>APIVoid<\/b><\/li><ul><li>Get Domain Reputation<\/li><ul><li>Fixed a bug that caused the action to fail.<\/li><\/ul><\/ul><li><b>CrowdStrikeFalcon<\/b><\/li><ul><li>Crowd Strike Falcon<\/li><ul><li>Updated to support latest (22\/10\/2019) API<\/li><\/ul><\/ul><\/ul><\/body><\/html>",
+	"MarketplaceVersion": 12.19,
+	"MinimumSystemVersion": 5.1
+}

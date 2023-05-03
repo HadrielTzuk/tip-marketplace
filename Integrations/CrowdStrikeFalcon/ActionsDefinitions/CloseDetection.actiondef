@@ -1,0 +1,40 @@
+{
+    "CreationTimeUnixTimeInMs": 1524560820281,
+    "Creator": "Admin",
+    "Description": "Close a Crowdstrike Falcon detection. Note: Action \"Update Detection\" is the best practice for this use case.",
+    "Id": -1,
+    "IntegrationIdentifier": "CrowdStrikeFalcon",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524560820281,
+    "Name": "Close Detection",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the id of the detection that needs to be closed.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Detection ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "Name": "Hide Detection",
+            "Type": 1,
+            "DefaultValue": true,
+            "Value": true,
+            "IsMandatory": false,
+            "Description": "If enabled, action will hide the detection in the UI.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

@@ -1,0 +1,74 @@
+{
+    "CreationTimeUnixTimeInMs": 1524560820281,
+    "Creator": "admin",
+    "Description": "List available custom IOCs in CrowdStrike Falcon.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\":\"6b2987ace3c0f5dbfa5414fa13e7302bc61cca5a5db6cde8e1d135xxxxxxxxxx\",\"type\":\"sha256\",\"value\":\"908b64b1971a979c7e3e8ce4621945cba84854cb98d76367b791a6xxxxxxxxxx\",\"source\":\"testSource\",\"action\":\"detect\",\"severity\":\"medium\",\"description\":\"test description update\",\"metadata\":{\"company_name\":\"Microsoft Corporation\",\"original_filename\":\"PowerShell.EXE\",\"file_version\":\"10.0.18362.1 (WinBuild.160101.0800)\",\"file_description\":\"Windows PowerShell\",\"product_name\":\"Microsoft® Windows® Operating System\",\"product_version\":\"10.0.18362.1\",\"signed\":false,\"av_hits\":0},\"platforms\":[\"windows\",\"mac\",\"linux\"],\"tags\":[\"f09f1a25-e6d0-4709-a105-05xxxxxxxxxx\"],\"expiration\":\"2022-05-01T12:00:00Z\",\"expired\":false,\"deleted\":false,\"applied_globally\":true,\"from_parent\":false,\"created_on\":\"2021-02-15T11:36:58Z\",\"created_by\":\"\",\"modified_on\":\"2021-10-13T09:42:13.466234223Z\",\"modified_by\":\"7fff03c3227242a0bae84bxxxxxxxxxx\"},{\"id\":\"fbe8c2739f3c6df95e62e0ae54569974437b2d9306eaf6740134ccxxxxxxxxxx\",\"type\":\"sha256\",\"value\":\"8a86c4eecf12446ff273afc03e1b3a09a911d0b7981db1af58cb45xxxxxxxxxx\",\"action\":\"no_action\",\"severity\":\"\",\"metadata\":{\"signed\":false,\"av_hits\":-1},\"platforms\":[\"windows\"],\"tags\":[\"Hashes 22.Nov.20 15:29 (Windows)\"],\"expired\":false,\"deleted\":false,\"applied_globally\":true,\"from_parent\":false,\"created_on\":\"2021-04-22T03:54:09.235120463Z\",\"created_by\":\"internal@crowdstrike.com\",\"modified_on\":\"2021-04-22T03:54:09.235120463Z\",\"modified_by\":\"internal@crowdstrike.com\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CrowdStrikeFalcon",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524560820281,
+    "Name": "List Uploaded IOCs",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "ipv4,ipv6,md5,sha256,domain",
+            "Description": "Specify a comma-separated list of IOC types that should be returned. If nothing is provided, action will return IOCs from all types. Possible values: ipv4,ipv6,md5,sha256,domain.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "IOC Type Filter",
+            "Type": 0,
+            "Value": "ipv4,ipv6,md5,sha256,domain"
+        },
+{
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": "Equal",
+            "Description": "Specify the value filter logic. If \"Equal\" is selected, action will try to find the exact match among IOCs and if \"Contains\" is selected, action will try to find IOCs that contain that substring.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Value Filter Logic",
+            "Type": 15,
+            "OptionalValues": [
+                "Equal",
+                "Contains"
+            ],
+            "Value": "Equal"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the string that should be searched among IOCs.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Value Filter String",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516389592057,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many IOCs to return. Default: 50. Maximum: 500.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516389592057,
+            "Name": "Max IOCs To Return",
+            "Type": 0,
+            "Value": "50"
+        }
+     ],
+    "ScriptResultName": "iocs_count",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

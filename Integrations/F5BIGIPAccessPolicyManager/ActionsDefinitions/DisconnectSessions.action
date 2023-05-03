@@ -1,0 +1,65 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "The action will disconnect the specified sessions from the F5 BIG-IP instance. Action can work using entities or using parameters, according to the Use Case Entities parameter’s value. Supported entities are Address and User Name. NOTE - Filters will be used with an OR logic, so that every session that even one of the parameters, or entities, will be matched in - will be disconnected.",
+    "Id": -1,
+    "IntegrationIdentifier": "F5BIGIPAccessPolicyManager",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Disconnect Sessions",
+    "Parameters": [ 
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "False", 
+            "Description": "Specify whether the action should disconnect sessions using Address and Client IP entities found in the case, or work on the provided parameters only. NOTE - once checked, action will ignore all other parameters in the action", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Use Case Entities", 
+            "Type": 1, 
+            "Value": "False"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify specific session IDs you would like to disconnect, in a comma separated list", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Session IDs", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify Logon User Names you would like to disconnect sessions for, in a comma separated list, so only sessions for these Logon User Names will be disconnected.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Logon User Names", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify Client IPs you would like to disconnect the sessions for,in a comma separated list, so only sessions for these Client IPs will be disconnected.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Client IPs", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\",\"ADDRESS\"]}"
+}

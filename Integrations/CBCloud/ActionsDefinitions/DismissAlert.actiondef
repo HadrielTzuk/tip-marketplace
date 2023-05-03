@@ -1,0 +1,65 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805,
+    "Creator": "Admin",
+    "DefaultResultValue": "",
+    "Description": "Dismiss VMware Carbon Black Cloud alert. Note: action accepts alert id in format 27162661199ea9a043c11ea9a29a93652bc09fd, not in format that is shown in UI as DONAELUN.",
+    "Id": -1,
+    "IntegrationIdentifier": "CBCloud",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1560351300805,
+    "Name": "Dismiss VMware Carbon Black Cloud Alert",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Alert ID to dismiss on VMware Carbon Black Cloud server.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1560351300835,
+            "Name": "Alert ID",
+            "OptionalValues": null,
+            "OptionalValuesJson": null,
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835,
+            "CustomActionId": -1,
+            "DefaultValue": "No dismissal reason",
+            "Description": "VMware Carbon Black Cloud reason for alert dismissal.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560351300835,
+            "Name": "Reason for dismissal",
+            "OptionalValues": [
+                "No dismissal reason",
+                "False positive",
+                "Alert list cleanup/duplicate",
+                "Known good software/behavior",
+                "Investigated/Escalated"
+            ],
+            "Type": 15,
+            "Value": "No dismissal reason"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835,
+            "CustomActionId": -1,
+            "DefaultValue": "The alert has been dismissed by Siemplify",
+            "Description": "Message to add to alert dismissal.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1560351300835,
+            "Name": "Message for alert dismissal",
+            "OptionalValues": null,
+            "OptionalValuesJson": null,
+            "Type": 0,
+            "Value": "The alert has been dismissed by Siemplify"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "TimeoutSeconds": 600,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

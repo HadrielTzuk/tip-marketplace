@@ -1,0 +1,81 @@
+{
+    "Id": -1,
+    "Creator": "admin",
+    "IsCustom": false,
+    "Name": "Update Insight",
+    "Description": "Update insight status in Sumo Logic Cloud SIEM.",
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 0,
+    "ModificationTimeUnixTimeInMs": 0,
+    "IntegrationIdentifier": "SumoLogicCloudSIEM",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"data\":{\"artifacts\":[],\"assignedTo\":null,\"assignee\":null,\"closed\":null,\"closedBy\":null,\"confidence\":0.25,\"created\":\"2022-03-28T09:31:19.593192\",\"description\":\"Detects multiple failed login attempts for the same username over a 1 hour timeframe. This is designed to catch attacks leveraging domain resources to attempt credential validation. The threshold and time frame can be adjusted based on the customer's environment.\",\"entity\":{\"entityType\":\"_username\",\"hostname\":null,\"id\":\"_username-administrator\",\"macAddress\":null,\"name\":\"administrator\",\"sensorZone\":\"\",\"value\":\"administrator\"},\"id\":\"2fe4e9f8-xxxx-4849-8a9f-1fxxxxxxxxxx\",\"lastUpdated\":\"2022-04-04T10:16:13.397311\",\"lastUpdatedBy\":null,\"name\":\"Initial Access\",\"orgId\":\"test\",\"readableId\":\"INSIGHT-13xxx\",\"recordSummaryFields\":[],\"resolution\":null,\"severity\":\"LOW\",\"source\":\"USER\",\"status\":{\"displayName\":\"New\",\"name\":\"new\"},\"subResolution\":null,\"tags\":[\"_mitreAttackTactic:TA0xxx\",\"_mitreAttackTactic:TA0xxx\"],\"teamAssignedTo\":null,\"timeToDetection\":290.810192,\"timeToRemediation\":null,\"timeToResponse\":607493.8023,\"timestamp\":\"2022-03-28T09:27:11.557000\"},\"errors\":[]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Insight ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the ID of the insight needs to be updated.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Status",
+            "Type": 15,
+            "DefaultValue": "Select One",
+            "Value": "Select One",
+            "IsMandatory": true,
+            "Description": "Specify what status to set for the insight.",
+            "OptionalValues": [
+                "Select One",
+                "New",
+                "In Progress",
+                "Closed"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Assignee Type",
+            "Type": 15,
+            "DefaultValue": "User",
+            "Value": "User",
+            "IsMandatory": true,
+            "Description": "Specify the assignee type for the \"Assignee\" parameter.",
+            "OptionalValues": [
+                "User",
+                "Team"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Assignee",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the assignee identifier.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

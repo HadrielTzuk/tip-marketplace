@@ -1,0 +1,17 @@
+{
+    "CreationTimeUnixTimeInMs": 1506519969934,
+    "Creator": "admin",
+    "Description": "Mark case as important",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506519969934,
+    "Name": "Mark As Important",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import *\n\ndef main():\n    siemplify = SiemplifyAction()\n    \n    isImportantStatus = siemplify.case.is_important\n    if (isImportantStatus):\n        output_message = \"The case is already important.\"    \n    else:\n        siemplify.mark_case_as_important()\n        output_message = \"The case was automatically marked as important.\"    \n    \n    siemplify.end(output_message, \"true\")\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

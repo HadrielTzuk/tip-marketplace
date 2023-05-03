@@ -1,0 +1,75 @@
+{
+  "Identifier": "7449b819-de81-4a53-b6f0-170b8e8736a2",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": true,
+  "Name": "phishing-initiative",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "7542dfce-a218-4327-92c0-794d103ed830",
+      "ParentWorkflowIdentifier": "7449b819-de81-4a53-b6f0-170b8e8736a2",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "PhishingInitiative_Get Url Status_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "PhishingInitiative_Get Url Status",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "7542dfce-a218-4327-92c0-794d103ed830",
+          "ParentWorkflowIdentifier": "7449b819-de81-4a53-b6f0-170b8e8736a2",
+          "Name": "ScriptName",
+          "Value": "PhishingInitiative_Get Url Status",
+          "CreationTimeUnixTimeInMs": 1520778236009,
+          "ModificationTimeUnixTimeInMs": 1520778236009
+        },
+        {
+          "ParentStepIdentifier": "7542dfce-a218-4327-92c0-794d103ed830",
+          "ParentWorkflowIdentifier": "7449b819-de81-4a53-b6f0-170b8e8736a2",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520778236009,
+          "ModificationTimeUnixTimeInMs": 1520778236009
+        },
+        {
+          "ParentStepIdentifier": "7542dfce-a218-4327-92c0-794d103ed830",
+          "ParentWorkflowIdentifier": "7449b819-de81-4a53-b6f0-170b8e8736a2",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520778227599,
+          "ModificationTimeUnixTimeInMs": 1520778227599
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520778227599,
+      "ModificationTimeUnixTimeInMs": 1520778227599
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "40932e81-cc36-460f-9936-982f8409161a",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "7449b819-de81-4a53-b6f0-170b8e8736a2",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "phishing-initiative",
+      "AllEnvironments": "",
+      "Id": 47,
+      "CreationTimeUnixTimeInMs": 1520778236009,
+      "ModificationTimeUnixTimeInMs": 1520778236009
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 47,
+  "CreationTimeUnixTimeInMs": 1520778208719,
+  "ModificationTimeUnixTimeInMs": 1520778208719
+}

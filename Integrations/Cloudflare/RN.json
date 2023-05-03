@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Cloudflare.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Cloudflare",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1665057489,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12573"
+    }
+]

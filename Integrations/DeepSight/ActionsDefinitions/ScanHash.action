@@ -1,0 +1,23 @@
+{
+    "CreationTimeUnixTimeInMs": 1506257545670, 
+    "Creator": "admin", 
+    "Description": "DeepSight scan hash", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"matiReports\": [{\"date\": \"2015-04-27T01:10:47Z\", \"title\": \"Laziok Trojan Activity and Infrastructure\\u2014January to April 2015\", \"uri\": \"/v1/mati/reports/300156\", \"id\": 300156}], \"intelligence\": {\"countries\": [\"kor\", \"gtm\", \"are\"], \"paths\": [\"CSIDL_PROFILE\\\\appdata\\\\local\\\\searchlike\"], \"fileNames\": [\"SEARCHLIKE.EXE\"], \"parentProcesses\": [\"f8403ce30c3a2a42b4604c2cf952533ed828a3d7bdb289b0cec82b8844a72a5a\"], \"filesCreated\": [{\"path\": \"CSIDL_PROFILE\\\\appdata\\\\local\\\\searchlike\", \"sha256\": \"6d873e6198f7aca685b4c697dfbf82e3450ed5277c5f3c55b1b6fb0338521e0f\", \"fileName\": \"B_SEARCHLIKEEX.EXE\"}]}, \"detection_name\": \"Trojan.Mdropper\", \"activity\": {\"dns\": [{\"type\": \"A\", \"target\": \"acroipm2.adobe.com\"}], \"urls\": [{\"url\": \"http://acroipm.adobe.com/assets/102.zip\"}]}, \"schemaVersion\": 3, \"sha256\": \"e46d5472e49793017892cb18a0aa174ff9c5b79cec0a9451f1b70e21b19855c2\", \"events\": [{\"pid\": 2528, \"type\": \"PROCESS:CURRENT\", \"target\": \"C:\\\\Windows\\\\SysWOW64\\\\cmd.exe\", \"severity\": 1, \"details\": \"B41859D39D786D32B23A9D2E00F4011DEC7A02402AE\"}], \"md5\": \"a77e89bf60e931477f5858a004fb5e0a\", \"reputation\": \"Malicious\"}, \"Entity\": \"a77e89bf60e931477f5858a004fb5e0a\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "DeepSight", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1506528133303, 
+    "Name": "Scan Hash", 
+    "Parameters": [], 
+    "Script": "from DeepSight import DeepSight\nfrom SiemplifyAction import *\nfrom SiemplifyUtils import *\n\nFILEHASH = 'FILEHASH'\n\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\tconf = siemplify.get_configuration('DeepSight')\n\tds = DeepSight(api_key = conf['ApiKey'])\n\tadditional_data = {}\n\tentities_to_update = []\n\toutput_message =\"\"\n\t\n\tfor entity in siemplify.target_entities:   \n\t\tif entity.entity_type == FILEHASH:\n\t\t\tresult = ds.scan_file(entity.identifier)\n\t\t\tif result:\n\t\t\t\tif not \"message\" in result:\n\t\t\t\t\tadditional_data[entity.identifier] = {}\n\t\t\t\t\tentities_to_update.append(entity)\n\t\t\t\t\tfor key,val in result.iteritems():\n\t\t\t\t\t\tadditional_data[entity.identifier]['DS_' + key] = str(val)\n\t\t\t\t\t\tentity.additional_properties['DS_' + key] = str(val)\n\t\t\t\t\t\n\t\n\tif len(entities_to_update) > 0:\n\t\tfor entity in entities_to_update:\n\t\t\tif 'DS_reputation' in entity.additional_properties:\n\t\t\t\tif entity.additional_properties['DS_reputation'] == 'Malicious':\n\t\t\t\t\tentity.is_suspicious = True\n\t\t\tsiemplify.result.add_entity_enrichment(entity.identifier, additional_data[entity.identifier])\n\t\t\tif len(output_message) == 0:\n\t\t\t\toutput_message = entity.identifier\n\t\t\telse:\n\t\t\t\toutput_message += ', ' + entity.identifier\n\t\toutput_message += ' enriched.'\n\telse:\n\t\toutput_message = 'No entites were enriched' \n\t\n\tsiemplify.update_entities(entities_to_update)\n\tfor entity in entities_to_update:\n\t\tif entity.is_suspicious:\n\t\t\tsiemplify.add_entity_insight(entity, 'Detected as malicious by DeepSight')\n\tresult_value = 'true' if len(entities_to_update) else 'false'\n\tsiemplify.end(output_message, result_value) \n\nif __name__ == '__main__':\n\tmain()", 
+    "ScriptResultName": null, 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

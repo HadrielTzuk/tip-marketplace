@@ -1,0 +1,47 @@
+{
+    "IntegrationIdentifier": "Cloudflare",
+    "Id": -1,
+    "Creator": "admin",
+    "Name": "Add IP To Rule List",
+    "Description": "Add IP addresses to the rule list in Cloudflare. Supported Entities: IP Address.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\":\"55ec8dxxxxxxxxxx\",\"paused\":false,\"description\":\"rulle2\",\"action\":\"allow\",\"filter\":{\"id\":\"2bb05xxxxxxxxxxx\",\"expression\":\"(ip.geoip.country eq \\\"BG\\\")\",\"paused\":false},\"created_on\":\"2022-07-05T13:53:39Z\",\"modified_on\":\"2022-07-05T13:53:39Z\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Rule Name",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the rule list to which you want to add rule list items.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Description",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify a description for the newly added rule list items.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

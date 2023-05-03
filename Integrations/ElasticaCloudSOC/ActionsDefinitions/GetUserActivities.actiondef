@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1529333464542, 
+    "Creator": "admin", 
+    "Description": "Fetch user activities from Elastica Cloud SOC", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"browser\": \"Chrome\", \"_domain\": \"siemplify.co\", \"severity\": \"error\", \"service\": \"Elastica\", \"latitude\": 32.0678, \"user\": \"john_doe@example.com\", \"object_type\": \"Session\", \"location\": \"Tel Aviv (Israel)\", \"longitude\": 34.7647, \"device\": \"Windows\", \"host\": \"1.1.1.1\", \"user_agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36\", \"created_timestamp\": \"2019-01-20T07:49:14\", \"event_type\": \"PORTAL_LOGIN_FAILURE\", \"message\": \"Failed login attempt by user 'john_doe@example.com'\", \"_id\": \"--Fi3z-1QHewAgPiTQlvXQ\", \"user_name\": \"Meny Har\", \"inserted_timestamp\": \"2019-01-20T07:49:14\", \"activity_type\": \"Failure\"}, \"Entity\": \"john_doe@example.com\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "ElasticaCloudSOC", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1529333464542, 
+    "Name": "Get User Activities", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529333464542, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "Fetch logs since 'x' minutes backwards. e.g. 5", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1529333464542, 
+            "Name": "Minutes Back", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom ElasticaCloudSOCManager import ElasticaCloudSOCManager\nfrom SiemplifyUtils import dict_to_flat, construct_csv\nfrom SiemplifyDataModel import EntityTypes\nimport arrow\nimport datetime\n\nELASTICA_PROVIDER = 'ElasticaCloudSOC'\nACTION_SCRIPT_NAME = 'ElasticaCloudSOC_Get_User_Activity'\n\n\ndef main():\n    # Configurations.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(ELASTICA_PROVIDER)\n    elastica_manager = ElasticaCloudSOCManager(conf['API Root'],\n                                               conf['Key ID'],\n                                               conf['Key Secret'],\n                                               conf['Verify SSL'])\n    siemplify.script_name = ACTION_SCRIPT_NAME\n\n    # Parameters.\n    result_limit = int(siemplify.parameters.get('Results Limit', 100))\n    minutes_back = int(siemplify.parameters.get('Minutes Back', 60))\n\n    # Variables.\n    errors = []\n    succeeded_entities = []\n    result_value = False\n\n    # Time to fetch from.\n    # CR: Use arrow.now()\n    time_to_fetch_from = arrow.Arrow.now() - datetime.timedelta(minutes=minutes_back)\n\n    target_users = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.USER]\n\n    for user in target_users:\n        try:\n            result = elastica_manager.get_user_investigation_logs_since_time(user_name=user.additional_properties.get('OriginalIdentifier'),\n                                                                             creation_arrow_timestamp=time_to_fetch_from)\n            if result:\n                flat_results = map(dict_to_flat, result)\n                csv_result = construct_csv(flat_results)\n                siemplify.result.add_entity_table(user.identifier, csv_result)\n                succeeded_entities.append(user)\n                result_value = True\n\n        except Exception as err:\n            error_message = 'Error fetching logs for user \"{0}\", ERROR: {1}'.format(user.identifier, unicode(err))\n            errors.append(error_message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n\n    if result_value:\n        output_message = 'Found activities for: {0}'.format(\" , \".join([entity.identifier for entity in succeeded_entities]))\n    else:\n        output_message = 'Not found activities for target entities.'\n\n    if errors:\n        output_message = \"{0}  \\n \\n  Errors: \\n {0}\".format(\" \\n \".join(errors))\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_succeed", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Version": 1.0
+}

@@ -1,0 +1,74 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Execute queries on endpoints based on IP and Hostname entities in Cisco Orbital. Note: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed. Maximum timeout is 24 hours.",
+    "Id": -1,
+    "IntegrationIdentifier": "CiscoOrbital",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Execute Query",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"node\":\"xxxxxxxxxx1ql3R2J13GSw\",\"osQuery\":[{\"sql\":\"SELECT * FROM processes;\"}],\"osQueryResult\":[{\"types\":[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"user\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],\"columns\":[\"pid\",\"name\",\"path\",\"cmdline\",\"state\",\"cwd\",\"root\",\"uid\",\"gid\",\"euid\",\"egid\",\"suid\",\"sgid\",\"on_disk\",\"wired_size\",\"resident_size\",\"total_size\",\"user_time\",\"system_time\",\"disk_bytes_read\",\"disk_bytes_written\",\"start_time\",\"parent\",\"pgroup\",\"threads\",\"nice\",\"is_elevated_token\",\"elapsed_time\",\"handle_count\",\"percent_processor_time\"],\"values\":[\"0\",\"[System Process]\",\"\",\"\",\"\",\"\",\"\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"0\",\"-1\",\"2\",\"-1\",\"\",\"-1\",\"-1\",\"-1\",\"4\",\"System\",\"\",\"\",\"STILL_ACTIVE\",\"\",\"\",\"18\",\"18\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"272\",\"20480\",\"200704\",\"0\",\"4590609\",\"57501505306\",\"37693530902\",\"1602636306\",\"0\",\"-1\",\"118\",\"32\",\"1\",\"1940244\",\"2603\",\"45906093750\"],\"error\":\"\",\"secs\":0.6471806764602661,\"label\":\"\",\"name\":\"\"}],\"error\":{\"en\":\"\"},\"hostinfo\":{\"osinfo\":{\"os\":\"windows\",\"osname\":\"Windows 10 Enterprise Evaluation\",\"release\":\"6.3\",\"version\":\"10.0.18363\",\"arch\":\"amd64\"},\"hostname\":\"TIP-HW-xxxx-xxx\",\"interfaces\":{\"Ethernet0\":{\"name\":\"Ethernet0\",\"mac\":\"00:50:56:xx:xx:xx\",\"ipv4\":\"172.30.xxx.xxx/xx\",\"ipv6\":\"fe80::84:xxxx:xxxx:xx/xx\",\"active\":true}},\"external\":{\"name\":\"\",\"mac\":\"\",\"ipv4\":\"185.180.xxx.xxx\",\"active\":true},\"updated\":\"2020-10-14T00:45:31.5859305Z\",\"version\":\"v1.7.6\"},\"rowcount\":130},{\"node\":\"xxxxxxxxxx1ql3R2J13GSw\",\"osQuery\":[{\"sql\":\"SELECT * FROM processes;\"}],\"osQueryResult\":[{\"types\":[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"user\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],\"columns\":[\"pid\",\"name\",\"path\",\"cmdline\",\"state\",\"cwd\",\"root\",\"uid\",\"gid\",\"euid\",\"egid\",\"suid\",\"sgid\",\"on_disk\",\"wired_size\",\"resident_size\",\"total_size\",\"user_time\",\"system_time\",\"disk_bytes_read\",\"disk_bytes_written\",\"start_time\",\"parent\",\"pgroup\",\"threads\",\"nice\",\"is_elevated_token\",\"elapsed_time\",\"handle_count\",\"percent_processor_time\"],\"values\":[\"0\",\"[System Process]\",\"\",\"\",\"\",\"\",\"\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"0\",\"-1\",\"2\",\"-1\",\"\",\"-1\",\"-1\",\"-1\",\"4\",\"System\",\"\",\"\",\"STILL_ACTIVE\",\"\",\"\",\"18\",\"18\",\"-1\",\"-1\",\"-1\",\"-1\",\"-1\",\"272\",\"20480\",\"200704\",\"0\",\"4590609\",\"57501505306\",\"37693530902\",\"1602636306\",\"0\",\"-1\",\"118\",\"32\",\"1\",\"1940244\",\"2603\",\"45906093750\"],\"error\":\"\",\"secs\":0.6471806764602661,\"label\":\"\",\"name\":\"\"}],\"error\":{\"en\":\"\"},\"hostinfo\":{\"osinfo\":{\"os\":\"windows\",\"osname\":\"Windows 10 Enterprise Evaluation\",\"release\":\"6.3\",\"version\":\"10.0.18363\",\"arch\":\"amd64\"},\"hostname\":\"TIP-HW-xxxx-xxx\",\"interfaces\":{\"Ethernet0\":{\"name\":\"Ethernet0\",\"mac\":\"00:50:56:xx:xx:xx\",\"ipv4\":\"172.30.xxx.xxx/xx\",\"ipv6\":\"fe80::84:xxxx:xxxx:xx/xx\",\"active\":true}},\"external\":{\"name\":\"\",\"mac\":\"\",\"ipv4\":\"185.180.xxx.xxx\",\"active\":true},\"updated\":\"2020-10-14T00:45:31.5859305Z\",\"version\":\"v1.7.6\"},\"rowcount\":130}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Query",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the query that needs to be executed.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Name",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specify the name for the query job. If nothing is specified, action will use a name in the following format: Siemplify-{guid}",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Custom Context Fields",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specify additional custom context fields that should be added to the job. Format: key_1:value_1,key_2:value_1.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "Value": 100,
+            "DefaultValue": 100,
+            "IsMandatory": false,
+            "Description": "Specify how many results should be returned.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Hide Case Wall Table",
+            "Type": 1,
+            "Value": false,
+            "DefaultValue": false,
+            "IsMandatory": false,
+            "Description": "If enabled, action will not prepare a case wall table.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\",\"HOSTNAME\"]}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

@@ -1,0 +1,45 @@
+{
+    "CreationTimeUnixTimeInMs": 1522664948559,
+    "Description": "Falcon Sandbox is a high end malware analysis framework with a very agile architecture.",
+    "DisplayName": "Falcon Sandbox",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/falcon-sandbox",
+    "Identifier": "FalconSandbox",
+    "Categories": [
+        "Malware Analysis",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "FalconSandbox",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://<server-address>/api/v2"
+        },
+        {
+            "IntegrationIdentifier": "FalconSandbox",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "Api Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "FalconSandbox",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Threshold",
+            "PropertyName": "Threshold",
+            "PropertyType": "1",
+            "Value": "50.0"
+        }
+    ],
+    "IntegrationSupportedActions": [],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.1,
+    "ModificationTimeUnixTimeInMs": 1522664948559,
+    "SvgImage": "<svg width=\"25\" height=\"26\" viewBox=\"0 0 25 26\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M7.64689 22.2345L7.73297 24.5L8.33554 22.5523C13.6582 24.7625 19.8417 22.4003 22.1372 17.2754C24.2032 12.6754 22.4529 7.30189 18.0197 4.66347L18.1058 7.1085C18.7657 7.32952 19.1244 8.02021 18.8948 8.66945C18.6653 9.30488 17.948 9.65023 17.2737 9.42921C17.0011 9.34632 16.7715 9.16675 16.6137 8.93191L13.4574 10.6863C13.9165 11.667 13.6152 12.8136 12.7257 13.4628L14.4617 16.0598C15.1503 15.9631 15.8103 16.419 15.9107 17.082C16.0111 17.7451 15.5377 18.3805 14.849 18.4772C14.2465 18.5601 13.6726 18.2286 13.4574 17.6898L8.30685 18.643C8.24946 19.0298 7.94818 19.3475 7.54647 19.4165L7.64689 22.2345Z\" \/>\r\n<path d=\"M12.496 3.15765C13.859 3.15765 15.1933 3.4063 16.4558 3.90359L17.1444 1.5L17.2736 4.74623L17.3596 7.08075C16.8288 7.21889 16.4414 7.67474 16.4271 8.21348L13.0412 10.0921C12.1517 9.15281 10.6453 9.08375 9.66971 9.9402C8.69413 10.7966 8.62239 12.2471 9.5119 13.1864C10.1575 13.8633 11.1618 14.1119 12.0513 13.808L13.7729 16.3774C13.5864 16.5432 13.4573 16.7504 13.3999 16.9714L8.09156 17.9522C7.76158 17.5516 7.15901 17.4963 6.7573 17.814C6.34124 18.1317 6.28385 18.7119 6.61383 19.0987C6.67122 19.154 6.7286 19.2092 6.78599 19.2645L6.88642 21.8062C1.97979 18.8224 0.530751 12.5786 3.62968 7.85432C5.55216 4.93962 8.89498 3.15765 12.496 3.15765Z\" \/>\r\n<\/svg>",
+    "Version": 14.0,
+    "MarketingDisplayName": "Falcon Sandbox"
+}

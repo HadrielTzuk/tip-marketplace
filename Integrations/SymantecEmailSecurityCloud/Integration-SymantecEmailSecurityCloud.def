@@ -1,0 +1,54 @@
+{
+    "Description": "Symantec™ Email Security.cloud is a complete email security solution that safeguards cloud email such as Office 365 and G Suite and on-premises email such as Microsoft Exchange. It blocks new and sophisticated email threats such as ransomware, spear phishing, and BEC with a multilayered defense and insights from the world’s largest civilian global intelligence network.",
+    "DisplayName": "Symantec Email Security.Cloud",
+    "Identifier": "SymantecEmailSecurityCloud",
+    "MarketingDisplayName": "Symantec Email Security.Cloud",
+    "Categories": [
+        "Email Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "SymantecEmailSecurityCloud",
+            "PropertyName": "IOC API Root",
+            "PropertyDisplayName": "IOC API Root",
+            "PropertyDescription": "IOC API root of the Symantec Email Security.Cloud instance.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://iocapi.emailsecurity.symantec.com"
+        },
+        {
+            "IntegrationIdentifier": "SymantecEmailSecurityCloud",
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyDescription": "Username of the Symantec Email Security.Cloud instance.",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "SymantecEmailSecurityCloud",
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyDescription": "Password of the Symantec Email Security.Cloud instance.",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "SymantecEmailSecurityCloud",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyDescription": "If enabled, verify the SSL certificate for the connection to the Symantec Email Security.Cloud server is valid.",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg id=\"a\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M23,2h-.67v.65h.67v-.65Zm0,1.94v-.65h-.67v.65h.67Zm-1.34-1.29v.65h.67v-.65h-.67Zm-1.34,1.29h-.67v1.29h.67v-.65h.67v-.65h.67v-.65h-1.34v.65Zm-2,.65v.65h.67v-.65h-.67Zm3.34,.65v-.65h-.67v.65h.67Zm-2,0h-.67v.65h.67v-.65Zm.67,.65h.67v-.65h-.67v.65Zm-.67,.65h-.67v-.65h-1.34v.65h-.67v.65h.67v.65h-.67v-.65h-.67v.65h-.67v.65h-.67v.65h-.67c-1.74,2.11-2.18,3.03-2.88,4.74-.79-1.54-1.73-2.61-3.35-3.31h-.02c-.3-.08-.45-.11-.65,.16-.21,.28-.08,.54,.17,.83,.17,.21,.35,.41,.53,.62,.49,.56,.99,1.13,1.36,1.78,.37,.65,.79,1.55,1.12,2.25,.2,.43,.37,.78,.46,.95,.2,.36,.68,.51,.86,.51,.89-.1,.98-.51,1.12-1.21,.02-.07,.03-.15,.05-.23,.3-1.38,.7-2.8,2.55-4.51v-.65h.67v-.65h.67v-.65h.67v-.65h-.67v-.65h.67v.65h.67v-.65h.67v-.65h.67v-.65h.67v-1.29h-.67v.65Zm-2.24,4.33c.45,.86,.71,1.83,.71,2.86,0,3.49-2.93,6.33-6.54,6.33s-6.51-2.84-6.51-6.33,2.9-6.33,6.51-6.33c.91,0,1.78,.18,2.56,.51l2.29-2.19c-1.42-.81-3.08-1.27-4.85-1.27C6.3,4.42,2,8.58,2,13.71s4.3,9.29,9.6,9.29,9.6-4.16,9.6-9.29c0-1.85-.56-3.57-1.52-5.02l-2.25,2.16Z\"/></svg>",
+    "Version": 1.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/symantec-email-security-cloud"
+}

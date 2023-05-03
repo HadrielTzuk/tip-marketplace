@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "NEW! Exabeam Advanced Analytics Integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "ExabeamAdvancedAnalytics",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1612343014,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7053"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "ExabeamAdvancedAnalytics",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "ExabeamAdvancedAnalytics",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Integration - Updated integration to use new authentication method.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "ExabeamAdvancedAnalytics",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1675330912,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "261027413"
+    }
+]

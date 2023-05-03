@@ -1,0 +1,49 @@
+{%- import 'CommonStyles.html' as common_styles -%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block base_template_head_meta %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% endblock %}
+  {% block base_template_head_link %}
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i"
+    rel="stylesheet">
+  <link
+    href='https://fonts.googleapis.com/css?family=Source Sans Pro'
+    rel='stylesheet'>
+  {% endblock %}
+  {% block base_template_head_script %}
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  {% endblock %}
+  <title>{% block base_template_title %}Widget{% endblock %}</title>
+  <style>
+      {{ common_styles.get_root_vars() | indent(6) }}
+      {{ common_styles.get_html_style() | indent(6) }}
+      {{ common_styles.get_body_style() | indent(6) }}
+    {% block base_template_head_style %}
+      {{ base_template_head_style | indent(6) }}
+    {% endblock base_template_head_style %}
+
+      {{ common_styles.get_webkit_scroller_style() | indent(6) }}
+      {{ common_styles.get_link_style() | indent(6) }}
+  </style>
+</head>
+{% block base_template_body_opening_tag %}
+  <body>
+{% endblock %}
+{% block base_template_body %}
+{% endblock %}
+{% block base_template_body_script %}
+<script>
+    $(document).ready(() => {
+        {{ base_template_body_script | indent }}
+    });
+</script>
+{% endblock %}
+</body>
+</html>
+

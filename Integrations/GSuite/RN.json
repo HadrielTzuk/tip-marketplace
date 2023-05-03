@@ -1,0 +1,122 @@
+[
+    {
+        "ChangeDescription": "Fixed minor bug",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Generate Token",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1573662385,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-426"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "GSuite",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "GSuite - Update - Updated the integration's code to work with Python version 3.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "GSuite",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4526"
+    },
+    {
+        "ChangeDescription": "Added authentication based on service account.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "GSuite",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-6698"
+    },
+    {
+        "ChangeDescription": "Security enhancements throughout the integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "GSuite",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1636521986,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "GSuite",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Integration - \"Service Account Json File Location\" parameter now also works with service account JSON object directly.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "GSuite",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1668597294,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13270"
+    },
+    {
+        "ChangeDescription": "Update User - Added ability to block and unblock user.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Update User",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1677024000,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "265188126"
+    },
+    {
+        "ChangeDescription": "Gsuite - REGRESSIVE! - Integration configuration parameters update, \"Service Account Json File Location\" parameter was renamed to \"Service Account JSON\", due to this change, service account json file content need to be provided in \"Service Account JSON\"  parameter for integration to continue to work.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "GSuite",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1677024000,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "265187744"
+    },
+    {
+        "ChangeDescription": "List Users, List Group Members, List OU Of Account - Added Predefined Widgets.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "GSuite",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1680566400,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "270308816"
+    }
+]

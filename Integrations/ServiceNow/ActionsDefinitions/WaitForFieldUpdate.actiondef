@@ -1,0 +1,76 @@
+{
+    "CreationTimeUnixTimeInMs": 1535985788252,
+    "Creator": "Admin",
+    "Description": "",
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535985788252,
+    "Name": "Wait For Field Update",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"parent\": \"\", \"made_sla\": \"true\", \"caused_by\": \"\", \"watch_list\": \"\", \"upon_reject\": \"cancel\", \"sys_updated_on\": \"2020-11-22 17:40:35\", \"child_incidents\": \"0\", \"hold_reason\": \"\", \"approval_history\": \"\", \"skills\": \"\", \"number\": \"INC0010xxx\", \"resolved_by\": \"\", \"sys_updated_by\": \"Admin\", \"opened_by\": {\"link\": \"https://dev98xxx.service-now.com/api/now/v1/table/sys_user/6816f79cc0a8016401c5a33bxxxxxx\", \"value\": \"6816f79cc0a8016401c5a33bxxxxxx\"}, \"user_input\": \"\", \"sys_created_on\": \"2020-11-22 17:40:35\", \"sys_domain\": {\"link\": \"https://dev98xxx.service-now.com/api/now/v1/table/sys_user_group/global\", \"value\": \"global\"}, \"state\": \"1\", \"sys_created_by\": \"Admin\", \"knowledge\": \"false\", \"order\": \"\", \"calendar_stc\": \"\", \"closed_at\": \"\", \"cmdb_ci\": \"\", \"delivery_plan\": \"\", \"contract\": \"\", \"impact\": \"2\", \"active\": \"true\", \"work_notes_list\": \"\", \"business_service\": \"\", \"priority\": \"2\", \"sys_domain_path\": \"/\", \"rfc\": \"\", \"time_worked\": \"\", \"expected_start\": \"\", \"opened_at\": \"2020-11-22 17:40:35\", \"business_duration\": \"\", \"group_list\": \"\", \"work_end\": \"\", \"caller_id\": {\"link\": \"https://dev98xxx.service-now.com/api/now/v1/table/sys_user/6816f79cc0a8016401c5a33bxxxxx\", \"value\": \"6816f79cc0a8016401c5a33bxxxxx\"}, \"reopened_time\": \"\", \"resolved_at\": \"\", \"approval_set\": \"\", \"subcategory\": \"\", \"work_notes\": \"\", \"short_description\": \"short description\", \"close_code\": \"\", \"correlation_display\": \"\", \"delivery_task\": \"\", \"work_start\": \"\", \"assignment_group\": \"\", \"additional_assignee_list\": \"\", \"business_stc\": \"\", \"description\": \"\", \"calendar_duration\": \"\", \"close_notes\": \"\", \"notify\": \"1\", \"service_offering\": \"\", \"sys_class_name\": \"incident\", \"closed_by\": \"\", \"follow_up\": \"\", \"parent_incident\": \"\", \"sys_id\": \"aada0a4f2f6c2010c518532xxxxx\", \"contact_type\": \"\", \"reopened_by\": \"\", \"incident_state\": \"1\", \"urgency\": \"1\", \"problem_id\": \"\", \"company\": \"\", \"reassignment_count\": \"0\", \"activity_due\": \"\", \"assigned_to\": \"\", \"severity\": \"3\", \"comments\": \"\", \"approval\": \"not requested\", \"sla_due\": \"\", \"comments_and_work_notes\": \"\", \"due_date\": \"\", \"sys_mod_count\": \"0\", \"reopen_count\": \"0\", \"sys_tags\": \"\", \"escalation\": \"0\", \"upon_approval\": \"proceed\", \"correlation_id\": \"\", \"location\": \"\", \"category\": \"inquiry\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535985788252,
+            "CustomActionId": 15,
+            "DefaultValue": null,
+            "Description": "Specify what table should be used to create a record. ",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535985788252,
+            "Name": "Table Name",
+            "Type": 0,
+            "Value": null,
+            "Values": []
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535985788252,
+            "CustomActionId": 15,
+            "DefaultValue": null,
+            "Description": "Specify Sys ID of the needed record.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535985788252,
+            "Name": "Record Sys ID",
+            "Type": 0,
+            "Value": null,
+            "Values": []
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535985788252,
+            "CustomActionId": 15,
+            "DefaultValue": null,
+            "Description": "Specify name of the column that is expected to be updated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535985788252,
+            "Name": "Field - Column name",
+            "Type": 0,
+            "Value": null,
+            "Values": []
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535985788252,
+            "CustomActionId": 15,
+            "DefaultValue": null,
+            "Description": "Specify values that are expected in the column. Example: In Progress,Resolved.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535985788252,
+            "Name": "Field - Values",
+            "Type": 0,
+            "Value": null,
+            "Values": []
+        }
+    ],
+    "Script": "# Imports\nimport sys\nfrom SiemplifyAction import SiemplifyAction\nfrom ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_INPROGRESS\nfrom ServiceNowManager import ServiceNowManager\nimport json\n\nDEFAULT_TABLE = 'incident'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = 'ServiceNow - Wait For Field Update'\n    siemplify.LOGGER.info(\"=======Action START=======\")\n\n    table_name = siemplify.parameters.get('Table Name') if siemplify.parameters.get(\n        'Table Name') else DEFAULT_TABLE\n    record_sys_id = siemplify.parameters['Record Sys ID']\n    column_name = siemplify.parameters['Field - Column name']\n    column_value = siemplify.parameters['Field - Values']\n    output_message = \"Waiting till field update.\"\n\n    param_json = {'sys_id': record_sys_id, 'column_name': column_name, 'column_value': column_value, 'table_name': table_name}\n    # TODO: should return only 'record_sys_id'. Currently return json because of Siemplify bug\n    siemplify.end(output_message, json.dumps(param_json), EXECUTION_STATE_INPROGRESS)\n\n\ndef query_job():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = 'ServiceNow - Wait For Field Update'\n    # Configuration.\n    conf = siemplify.get_configuration('ServiceNow')\n    username = conf['Username']\n    password = conf['Password']\n    api_root = conf['Api Root']\n    service_now_manager = ServiceNowManager(api_root, username, password, default_incident_table)\n\n    is_updated = False\n    # Extract record sys id, field name and value\n    additional_data = json.loads(siemplify.parameters[\"additional_data\"])\n    sys_id = str(additional_data['sys_id'])\n    column_name = str(additional_data['column_name'])\n    column_values = str(additional_data['column_value'])\n    table_name = str(additional_data['table_name'])\n\n    if column_values:\n        # Split string to list.\n        values_list = column_values.lower().split(',')\n    else:\n        values_list = []\n\n    # Get ticket status\n    ticket = service_now_manager.get_ticket_by_id(str(sys_id), table_name=table_name)\n    ticket_updated_field = ticket.get('result').get(column_name).lower()\n\n    if ticket_updated_field:\n        if ticket_updated_field in values_list:\n            # Object field was updated\n            is_updated = True\n\n    if is_updated:\n        siemplify.LOGGER.info(\"Record with sys_id {0} Field: {1} was updated successfully to {2}\".format(sys_id, column_name, ticket_updated_field))\n        siemplify.LOGGER.info(\"=======Action DONE=======\")\n        output_message = \"Record with sys_id {0} Field: {1} was updated successfully to {2}\".format(sys_id, column_name, ticket_updated_field)\n        siemplify.end(output_message, ticket_updated_field, EXECUTION_STATE_COMPLETED)\n    else:\n        output_message = \"Continuing...waiting for record with sys_id {0} to be updated\".format(sys_id)\n        siemplify.LOGGER.info(\n            \"Record with sys_id {0} still not changed. Current Field value: {1}\".format(sys_id, ticket_updated_field))\n        siemplify.end(output_message, siemplify.parameters[\"additional_data\"], EXECUTION_STATE_INPROGRESS)\n\n\nif __name__ == \"__main__\":\n    if len(sys.argv) < 3 or sys.argv[2] == 'True':\n        main()\n    else:\n        query_job()\n",
+    "ScriptResultName": "updated_field",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

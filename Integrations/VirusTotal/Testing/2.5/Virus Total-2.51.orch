@@ -1,0 +1,163 @@
+{
+  "Identifier": "b23ba05d-330d-49b6-9cb0-29aea2e701ac",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "Virus Total",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "9e05ce54-68dd-4050-ae03-06f2118c2849",
+      "ParentWorkflowIdentifier": "b23ba05d-330d-49b6-9cb0-29aea2e701ac",
+      "ParentStepIdentifiers": [
+        "d8321028-2a6c-45f2-8220-a6c09038d38c"
+      ],
+      "ParentStepIdentifier": "d8321028-2a6c-45f2-8220-a6c09038d38c",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "VirusTotal_Scan Files_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "VirusTotal_Scan Files",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "9e05ce54-68dd-4050-ae03-06f2118c2849",
+          "ParentWorkflowIdentifier": "b23ba05d-330d-49b6-9cb0-29aea2e701ac",
+          "Name": "ScriptName",
+          "Value": "VirusTotal_Scan Files",
+          "CreationTimeUnixTimeInMs": 1519145949386,
+          "ModificationTimeUnixTimeInMs": 1519145949386
+        },
+        {
+          "ParentStepIdentifier": "9e05ce54-68dd-4050-ae03-06f2118c2849",
+          "ParentWorkflowIdentifier": "b23ba05d-330d-49b6-9cb0-29aea2e701ac",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Threshold\":\"0\"}",
+          "CreationTimeUnixTimeInMs": 1519145949386,
+          "ModificationTimeUnixTimeInMs": 1519145949386
+        },
+        {
+          "ParentStepIdentifier": "9e05ce54-68dd-4050-ae03-06f2118c2849",
+          "ParentWorkflowIdentifier": "b23ba05d-330d-49b6-9cb0-29aea2e701ac",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145949386,
+          "ModificationTimeUnixTimeInMs": 1519145949386
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145949386,
+      "ModificationTimeUnixTimeInMs": 1519145949386
+    },
+    {
+      "Identifier": "d8321028-2a6c-45f2-8220-a6c09038d38c",
+      "ParentWorkflowIdentifier": "b23ba05d-330d-49b6-9cb0-29aea2e701ac",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "VirusTotal_Scan Address_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "VirusTotal_Scan Address",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "d8321028-2a6c-45f2-8220-a6c09038d38c",
+          "ParentWorkflowIdentifier": "b23ba05d-330d-49b6-9cb0-29aea2e701ac",
+          "Name": "ScriptName",
+          "Value": "VirusTotal_Scan Address",
+          "CreationTimeUnixTimeInMs": 1519145949386,
+          "ModificationTimeUnixTimeInMs": 1519145949386
+        },
+        {
+          "ParentStepIdentifier": "d8321028-2a6c-45f2-8220-a6c09038d38c",
+          "ParentWorkflowIdentifier": "b23ba05d-330d-49b6-9cb0-29aea2e701ac",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Threshold\":\"0\"}",
+          "CreationTimeUnixTimeInMs": 1519145949386,
+          "ModificationTimeUnixTimeInMs": 1519145949386
+        },
+        {
+          "ParentStepIdentifier": "d8321028-2a6c-45f2-8220-a6c09038d38c",
+          "ParentWorkflowIdentifier": "b23ba05d-330d-49b6-9cb0-29aea2e701ac",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145949386,
+          "ModificationTimeUnixTimeInMs": 1519145949386
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145949386,
+      "ModificationTimeUnixTimeInMs": 1519145949386
+    },
+    {
+      "Identifier": "30cc3d2b-b72d-4794-9fa7-aa4364ab6f69",
+      "ParentWorkflowIdentifier": "b23ba05d-330d-49b6-9cb0-29aea2e701ac",
+      "ParentStepIdentifiers": [
+        "9e05ce54-68dd-4050-ae03-06f2118c2849"
+      ],
+      "ParentStepIdentifier": "9e05ce54-68dd-4050-ae03-06f2118c2849",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "VirusTotal_Scan Hosts Names_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "VirusTotal_Scan Hosts Names",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "30cc3d2b-b72d-4794-9fa7-aa4364ab6f69",
+          "ParentWorkflowIdentifier": "b23ba05d-330d-49b6-9cb0-29aea2e701ac",
+          "Name": "ScriptName",
+          "Value": "VirusTotal_Scan Hosts Names",
+          "CreationTimeUnixTimeInMs": 1519145949386,
+          "ModificationTimeUnixTimeInMs": 1519145949386
+        },
+        {
+          "ParentStepIdentifier": "30cc3d2b-b72d-4794-9fa7-aa4364ab6f69",
+          "ParentWorkflowIdentifier": "b23ba05d-330d-49b6-9cb0-29aea2e701ac",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519145949386,
+          "ModificationTimeUnixTimeInMs": 1519145949386
+        },
+        {
+          "ParentStepIdentifier": "30cc3d2b-b72d-4794-9fa7-aa4364ab6f69",
+          "ParentWorkflowIdentifier": "b23ba05d-330d-49b6-9cb0-29aea2e701ac",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519145949386,
+          "ModificationTimeUnixTimeInMs": 1519145949386
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519145949386,
+      "ModificationTimeUnixTimeInMs": 1519145949386
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "ba60104b-1a88-4f42-8815-66dcd5e01a7c",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "b23ba05d-330d-49b6-9cb0-29aea2e701ac",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Virus Total",
+      "AllEnvironments": "",
+      "Id": 56,
+      "CreationTimeUnixTimeInMs": 1519145949386,
+      "ModificationTimeUnixTimeInMs": 1519145949386
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 56,
+  "CreationTimeUnixTimeInMs": 1519145949386,
+  "ModificationTimeUnixTimeInMs": 1519145949386
+}

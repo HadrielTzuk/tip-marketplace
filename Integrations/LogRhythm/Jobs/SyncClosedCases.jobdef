@@ -1,0 +1,55 @@
+{
+    "CreationTimeUnixTimeInMs": 1530435938022,
+    "Creator": "admin",
+    "Description": "This job will synchronize closed LogRhythm cases and Siemplify alerts. Note: in LogRhythm statuses “Completed” and “Resolved” are treated as closed.",
+    "Id": -1,
+    "Integration": "LogRhythm",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530435938022,
+    "Name": "Sync Closed Cases",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530435938022,
+            "DefaultValue": "https:/{{IP}}:8501",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1530435938022,
+            "Name": "Api Root",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530435938022,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1530435938022,
+            "Name": "Api Token",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "true",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Verify SSL",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534248991561,
+            "DefaultValue": "24",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": 21,
+            "ModificationTimeUnixTimeInMs": 1534248991561,
+            "Name": "Max Hours Backwards",
+            "Type": 2
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Version": 1
+}

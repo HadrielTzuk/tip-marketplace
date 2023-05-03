@@ -1,0 +1,50 @@
+{
+    "Description": "The Cisco Identity Services Engine (ISE) is your one-stop solution to streamline security policy management and reduce operating costs. With ISE, you can see users and devices controlling access across wired, wireless, and VPN connections to the corporate network.",
+    "DisplayName": "Cisco ISE",
+    "Identifier": "CiscoISE",
+    "Categories": [
+        "Network Security",
+        "NAC",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "CiscoISE",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "6",
+            "Value": "https://x.x.x.x/"
+        },
+        {
+            "IntegrationIdentifier": "CiscoISE",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CiscoISE",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "CiscoISE",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path d=\"M22 13.556c0-.486-.41-.866-.91-.866-.51 0-.92.39-.92.866v1.826c0 .486.41.876.92.876.5 0 .91-.39.91-.876v-1.826zm-4.037-2.407c0-.475-.41-.866-.92-.866-.511 0-.921.39-.921.866v4.233c0 .486.41.876.92.876s.921-.39.921-.876v-4.233zm-4.037-3.283c0-.486-.41-.866-.92-.866s-.921.39-.921.866v9.258c0 .485.41.876.92.876s.921-.39.921-.876V7.866zm-4.048 3.283c0-.475-.41-.866-.92-.866s-.921.39-.921.866v4.233c0 .486.41.876.92.876.511 0 .921-.39.921-.876v-4.233zm-4.036 2.407c0-.486-.41-.866-.921-.866-.51 0-.921.39-.921.866v1.826c0 .486.41.876.92.876.511 0 .922-.39.922-.876v-1.826z\"\/>\r\n<\/svg>",
+    "Version": 8.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/cisco-ise",
+    "MarketingDisplayName": "Cisco ISE"
+}

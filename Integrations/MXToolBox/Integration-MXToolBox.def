@@ -1,0 +1,42 @@
+{
+    "Description": "MXToolbox is a trusted tool that offers a free, accurate, and fast network lookup and diagnostic tools. The tool is used by millions of technology experts to diagnose and resolve a wide scope of network infrastructure issues. It is capable of detecting issues relating to IP or host, DNS, domain and URL, and SMTP.",
+    "DisplayName": "MX ToolBox",
+    "Identifier": "MXToolBox",
+    "Categories": [
+        "Data Enrichment",
+        "Free to use",
+        "Operational"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "MXToolBox",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "6",
+            "Value": "https://mxtoolbox.com/"
+        },
+        {
+            "IntegrationIdentifier": "MXToolBox",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MXToolBox",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path d=\"M20 20h-5l-2.5-3.5L10 20H5l5-7.5L5 5h5l2.5 3.5L15 5h5l-5 7.5 5 7.5z\"\/>\r\n<\/svg>\r\n",
+    "Version": 10.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/mx-toolbox",
+    "MarketingDisplayName": "MXToolBox"
+}

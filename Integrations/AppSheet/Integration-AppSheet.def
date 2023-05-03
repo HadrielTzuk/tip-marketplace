@@ -1,0 +1,51 @@
+{
+    "Description": "AppSheet provides a no-code development platform for application software, which allows users to create mobile, tablet, and web applications using data sources like Google Drive, DropBox, Office 365, and other cloud-based spreadsheet and database platforms.",
+    "DisplayName": "AppSheet",
+    "Identifier": "AppSheet",
+    "MarketingDisplayName": "AppSheet",
+    "Categories": [
+        "Development Tools",
+        "Operational"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "AppSheet",
+            "PropertyName": "API Root",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://api.appsheet.com"
+        },
+        {
+            "IntegrationIdentifier": "AppSheet",
+            "PropertyName": "App ID",
+            "PropertyDisplayName": "App ID",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AppSheet",
+            "PropertyDisplayName": "Access Token",
+            "PropertyName": "Access Token",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "AppSheet",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">  <path d=\"M24 4l-5.308 17-5.75-4.371L8.962 21l1.327-6.314L22.672 4.97 7.193 13.23 1 10.8 24 4z\"/></svg>",
+    "Version": 1.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/appsheet"
+}

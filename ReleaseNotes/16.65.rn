@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 16.65</h2><h5>Published on 22 December, 2021</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     Exchange\n    </b>\n   </li>\n   <ul>\n    <li>\n     Exchange\n    </li>\n    <ul>\n     <li>\n      Updated the integration's dependencies.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Actions</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     FreshworksFreshservice\n    </b>\n   </li>\n   <ul>\n    <li>\n     Update Ticket\n    </li>\n    <ul>\n     <li>\n      Update Ticket - Added an ability to upload files when updating tickets.\n     </li>\n    </ul>\n    <li>\n     Create Ticket\n    </li>\n    <ul>\n     <li>\n      Create Ticket - Added an ability to upload files when creating tickets.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "16.65",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "22/12/21",
+    "Title": "Release Notes"
+}

@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1532532526232, 
+    "Creator": "admin", 
+    "Description": "A record lookup returns the IP address for a specific domain name", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [{\"IP Address\": \"1.1.1.1\", \"Type\": \"A\", \"Domain Name\": \"domain.co\", \"TTL\": \"10 min\"}], \"Entity\": \"domain.co\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "MXToolBox", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1532532526232, 
+    "Name": "A Record Lookup", 
+    "Parameters": [], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom MXToolBoxManager import MXToolBoxManager\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\n\nMXTOOLBOX_PROVIDER = 'MXToolBox'\nSCRIPT_NAME = 'MXToolBox_A_Lookup'\n\n\ndef main():\n    # Configurations.\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    conf = siemplify.get_configuration(MXTOOLBOX_PROVIDER)\n    verify_ssl = True if conf['Verify SSL'] == 'true' else False\n    mx_tool_box_manager = MXToolBoxManager(conf['API Root'], conf['API Key'], verify_ssl)\n\n    # Variables.\n    errors = []\n    success_entities = []\n    ip_addresses = []\n    entities_results = {}\n    result_value = False\n\n    domain_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.HOSTNAME]\n\n    for domain_entity in domain_entities:\n        try:\n            result = mx_tool_box_manager.domain_a_lookup(domain_entity.identifier)\n            if result:\n                success_entities.append(domain_entity)\n                entities_results[domain_entity.identifier] = \",\".join([record.get('IP Address') for record in result])\n                for record in result:\n                \tip_addresses.append(record.get('IP Address'))\n                result_value = True\n        except Exception as err:\n            error_message = 'Error fetching A lookup data for \"{0}\", ERROR: {1}'.format(domain_entity.identifier,\n                                                                                         unicode(err))\n            errors.append(error_message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n\n    if result_value:\n        output_message = \"Found results for: {0}\".format(\",\".join([entity.identifier for entity in success_entities]))\n    else:\n        output_message = 'Not found data for target entities.'\n\n    if errors:\n        output_message = \"{0}  \\n \\n {1}\".format(output_message, \" \\n \".join(errors))\n\n    siemplify.end(output_message, \",\".join(ip_addresses))\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "ip_addresses", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\", \"USERUNIQNAME\"]}", 
+    "Version": 1.0
+}

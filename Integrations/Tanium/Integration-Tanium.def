@@ -1,0 +1,42 @@
+{
+    "Description": "Tanium is a feature-packed endpoint management and endpoint security platform designed to strengthen and optimize an organization’s cybersecurity efforts. The platform gives security teams the tools they need to fortify existing security gaps or completely overhaul their cybersecurity environments, providing complete threat response capabilities from a single endpoint agent. Encompassing everything from asset and threat discovery to complete threat response capabilities from a single endpoint agent, Tanium gives security teams the tools they need to fortify existing security gaps and/or completely overhaul their cyber security environments to adequately prepare themselves for future generations of cyber threats.",
+    "DisplayName": "Tanium",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/tanium",
+    "Identifier": "Tanium",
+    "Categories": [
+        "Endpoint Management",
+        "IT & Infrastructure"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAMAAACScZ2GAAABL1BMVEX///8RGCHjHRry8vNna3EdJCzFx8n85OP6+vvS1NW8vsCPkpfmODYnLjbP0dPBw8YVHCSkp6v39/eNkJUtMzsiKDHg4eJNUlkgJi/8/Pzzn55manBlam8/REw9Qkrp6erm5+h1eX7i4+Tb3N3Y2dqWmZ1VWmHrWlg4PkUaISr/+/vs7e3k5ea3ubyvsbTwhoV6foNzd3xscHZdYWjmNjPMzc/5zs3Jy83Hycu/wcP4wsL1q6r0qKeJjZGEh4xgZWtQVlzqVlNHTVP4+fn09PXU1df61dT3u7rznJrylJJCR04xNz/nPz3nPDn97Oz73t67vb+ztrj2s7Knqq2doKT0o6KSlZmGiY7vfn3udXPta2lXXGLsYV7oSUflKSb86umhpKfvgH/uc3HpTkvjIR4OiXMIAAADW0lEQVRo3u3XaVPaQBgH8D8ksaho8ShCpUBBWhFvqPdZtVqP3h716vn9P0OfZ3cTkxgc7fRFpvP8XrAXu/xns9kZIIQQQgghhBBCCCH+uaWpl+nr1ubZ7hji5/gw6Wq9jVvA97+SfkdLiJOl38mQFcTHUvK2Y8TFu2SUN4iJzch4acTDXDLaMtiXgh1UArHsYdsuTMMYoRa116BVqDG8g/zzYbswAawV7MJnGNlhGquiqmfU4Krx7/BI2GWbeIdgrxMhIyCzuj4JbcKMDUB5pce2uJgGHCqaMBa4swtdZkbWTW3aXQh5xFHan74X4XhV32JPoD12Bz+AdeofSvVQ0Q08o+I5jF4e60CHmbABbcO0OxCy3Dbentqn3BNSp5kZruRyWX/mWihepvGQeKwTeka7eFMmzM9HYe9AUtv9ZJVmDvYrfNR4oS/8gOt5L15ukHuLD4iXy9DHa+8IZXJR8b6aeFO4Q41mHsA1xIthPEHWvHj1qjqmM/ePV+zm+rx7WLuLfx1vgHcvcLoHOCVpeA83byVY373j1dUhGQUwSuUL1O96uGcIG4uKZxbLuS+I7cV7hUnzavfe8+yhzJ8f8ZGLMiLP3oqJd51WlkHOudZajopnbhF1j81wreLG6zUdPbBux5uGseOLV8KG2r6ieoVLkfHeJwPeglyp6lx0vFFeZojtc+3CF49/iKNkAvG4cwbMfa0e63gVZNVa+gKsRMbDy0C8p15XGhHxOErIiC9eI8O19Z5buzdoQZv27d44YCc0GyhHx5trE28lOt5BON6+L565z4K711Q3+MV6s7ne3FfjJS+eldETrJt4DQRtRsZrISqePv4zfYa6nxex6MXDiQntxePDGjIELx5WVc8qTLwFfLAnEfAtMt4cfNZopsOV/ox+bY2thGrO6zdX4cRsAin+7imA9WA6J2v2uwLiqCuGjOvdG5hdRdBuON4ll34njuOMcuV7gmp98JxSM9FbckgnlHzRURaROqCiBlIrclKtZ5ZTLTikDNLnLljmrnnMdy8i5FMoXjq5h4CUZVnbXClZBD7cbqjPvK9LN7epSEEp7XRqVd2Rv1nHq5hZW7jlzZU/3th5nP5qKHtHN/de3P5HKrs/Ng9bR58ghBBCCCGEEEIIIf4bfwAmDFGKnvcOawAAAABJRU5ErkJggg==",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Tanium",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Tanium",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Token",
+            "PropertyName": "API Token",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Tanium",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": true
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M25.3,1.4c-13,0-23.5,10.5-23.5,23.5s10.5,23.7,23.7,23.7c1.3,0,2.4-0.2,3.5-0.2V28.6h-8.1v-5.5h22.8v5.5h-8.1v17.6\n\t\t\tc7.9-3.7,13.4-11.9,13.4-21.3C49.1,11.9,38.3,1.4,25.3,1.4z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 8.0,
+    "MarketingDisplayName": "Tanium"
+}

@@ -1,0 +1,43 @@
+{
+    "Description": "Bulk Whois API is based on a rich experience that the company gained by providing online services to thousands of users worldwide since 2010. For last several years, WHOIS and domain systems are our daily bread. The service knows how they work and how to use them, so that you can care less about it.",
+    "DisplayName": "BulkWhoIs",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/bulkwhols",
+    "Identifier": "BulkWhoIs",
+    "Categories": [
+        "Data Enrichment",
+        "Free to use",
+        "Operational"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAMAAACScZ2GAAAC/VBMVEX///8AAAABBAX7/P3t8vbx9fn8/f74+ftVgKssYZcBBwpZg61Ec6Pz9vnv8/fg6PBSfqoPTIrq7/Xo7vTe5u5ylbk5a54pYJYIFBr+/v/Z4+2Nqsdtk7g8jbY6h64WMUDs8fXm7fTO2+fK1+W4ytyvxNift9CYssxqkLZgibFdhrBHdqUXUo0SLDkDCxLl6/KmvdOjutGSrclWocaKp8VQncRnjrRKeKYNICsECg30+Pv2+Pri6vHB0eGswdaEu9apv9Vvr89prM1BlsF6nL05g6lOe6hMeqc1aZwsZ4YFRYUAP4AAPH8JGCHV3+rF1OJCncpcpMhHmcOBocF9nr91mLs/cKE7bJ8xZZkvdJcmXZQiWpIBQoIpYX0aQ1caQFIHDxTF3+zR3eigyt+Qv9d2stCDo8J+nr8+krxkjLM2faI9b6AwcpMgWZIub5AUUIwoZIMPW4IAN3sXWXooXXkANHkiT2YQJzQCHC4AAQuu0eTd39++zt9Krd6zx9p8ttOcts+atM5jqcyFpMN4mr03gKVDgJ4bVY8ubIsfZoo/Z3wkVm8fUGodR1sYOkoAJDsOHSQGEhkBBw4AAQn4+/3t9Pju7/DN4u1vw+zi5ee82Oe01ebA0OBjtd9tud6ax91dsNl5tdNfp8yuvMNtpsJMlruirrVgmbUhgrNHj7JPiqdChKWWnqI0ep4MSYdZdYMmWXMGR2hJWmIYSGFgX183T1oFPFgSOk8VNUYgHR2P4v/i9P3L6fhawfbc7PPu7etqv+qFx+jL3udYtuWpz+Jzut7V2dvX2dpPq9l0ttdqs9e7zdZMptPEzdGFt9Dg1c+5x83GycvAx8vDx8llp8m7w8fCxMSUs8Ipj8KdtcG+vb52pr6CqLwxjbsoiLmCpbc5i7R+oLKKorBTj60pfqh7mqdokKRgjaMTcqOppKJ4lKIec54Ya5Wal5QOZZFNeZCIioxwg4x+gYMcXn8AMng1YHZca3JSVlgnRlYiQVEAME0AMUoAL0kkMjspMTXgumkkAAAFX0lEQVRo3u3UZUwbYRzH8d9TNyq0hdKWFncfQ7cxwQdzgTFg7u7u7u7u7u7u7u7u7lt213bJ5AW8WdIXzyd5musld/ne/wQURVEURVEURVEURVHU/9P1yuPzW11gl06v20xCOpO8AVdrw+5M/kjGhkg65OmGtX3xbOEO2Je5tQgxZ3LM7Vq1aGYa9iXmOezJXEI4HEJ0urx27dKymyR1IstgPzzGEg6TVys4P7/DqlaD+pfRbby0B/bC5TMh7OyCg0eO/Lo2d1C266q8wfPt5g2+2JkwfbUyR2euX7ny/epWzZp0Dyad78OCiz8JbMuGa1vsD7dwV8S1DUVg2S6QMHeMxJypixnz/SyAnXfatjCZmDclJA6scH9jZW1AOfxSUqoV8LTKkrDqIY0ylkCELzz9/CMiRSX/OHG0H/4Q3hcML3+/xCqi4qgc5adVoEBHN3CChwbHdOz8AV0XHAAetG6USzgSsgAst6g2Jes4i91gw1OqeC7ly2phxY98FyVHalMIA3LU5com4nd9ffEHpyA+e4ihfUN9ygqFQhzkyUWBbq7O1G3KzxzVac3rTZ06TMbl1q7ZsZxYsgYWYTU1qJpezNFDD3dPDdC3hhu44kiNp7cl2UUshdxZHAp/A4TOPhovsDzDiwFqRzkQHzatGKzKDxxoma5Hejh6tO8GqRMK4WHbdrU4w/PMwR07bRw5ZAJutza5jiax5AcsegVF+IjD4atSwpBuBKo488Cr4VWyTUAoWMYgeIpzvBFdDrzA6OQgqRwCbZZSHGY5xENmzBLBSusjSgajeMuIOqliPkRODijYgFZpabqOQ0fkDx/xjak7PjjbVCGGEDJqnDUvJ0DZ3AfCFBkznShbXmrlyj6wKlG2fG/f6H51pADPKVDTI8MbvhnTkFhTz40ORNWa7noDLMrJHBqke7B5zskiv1AUNq9Z2qChwToSErPhJXDq7eD+SRVcJTEdzDyweq/wgKFNOBrLgOp+tjxly+Z8WKnFKVGonBrtC2aokVCowiEVC1C+bBj8ZQitrvLXwMJQw18aVIXNU0UyXYXNu5vdIq1FroQQMvYMurZt3STJ5Hpo8ZwZQ+RghaV7QlPTD1IZkKoFGjjHQ+iU2DhIDittRlV4BdVQAPHiBtC39Ebj5gIUz/BCQDTqKMKcnRzBSvF0dwtgr8ojvQQYhXz25j1d3mz5cA5HIiGb1y+955qU5Fqm0qwZ8xaC5dAvw1fdsH1vGFVevQbK9IKolhpoVAaolLY+7zbecMhJAZjdRmZqEfDKiFAEih2Esiyu0Z+5v8UACBPZmAbtqwq5PmX92GB19ZxyAhSo3qOkJqZRJDZWwlm37El+mompK1pkdv16YBmqS0WippFc6JPFAY2rlfCuFpjorg2spg9TNYSFWqkAjJGAoF81UfGGsmQ9fJoGihSIqNbU2ytLmWKZlU+WzIBuMlFqiW7VpbIAHkJFycpADxRo4qJbpkbDiCRWQg7iJCFruzN1fWYm1AbLkQ++It66CQjgKBeohe4uvDjw1PiLu4Dv5gZHB0CoYP/GCd3gEsq1nSdeDb4aDnK5I+KLcSFkVmgcClbkRiPXCmbCTO/NhVdkdP9jRYtUnL2vLh/2YcqiSo0qMN+SkBDCyN3O1JWaWXci7EX960XLdC+j44SMkRDO4lkV55RO6DJlHOwFv0iZIkX3jiAhEmKeP71in9I9606Ng/1wr1ipz3QzIcS8a9K50qXq1+vCgz0Z37PopE+k45Ij+5m4Uj27jIedmbp7KVmy5XCpUqVLJ9QWwO44bLt2IiEhoV7d2vbyRfmHPI7PBUVRFEVRFEVRFEVRFFUIPwEHSDZk90NwUQAAAABJRU5ErkJggg==",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "BulkWhoIs",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "Api Key",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "BulkWhoIs",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Secret",
+            "PropertyName": "Secret Key",
+            "PropertyType": 3,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "BulkWhoIs",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\">\n    <path d=\"M17.1 4c-1.1-.9-2.6-1.3-4.4-1.3-2.3 0-4.1.6-5.2 1.9-1.1 1.3-1.8 2.9-1.9 5l4.9.7c.1-1.1.4-1.9.7-2.4.4-.5.9-.7 1.5-.7s1 .1 1.2.4c.3.3.4.7.4 1.2s-.3 1.1-1 1.7c-1.3 1.2-2.1 2.1-2.4 2.5-.4.5-.6 1-.8 1.6-.2.6-.3 1.3-.3 2.3v.5h4.8c0-.7.1-1.3.3-1.8.2-.5.8-1.1 1.6-1.8 1.2-1.1 2-2 2.4-2.8.4-.8.6-1.5.6-2.4-.1-1.8-.8-3.4-2.4-4.6zM10.3 18.9h4.4v3.3h-4.4z\"/>\n</svg>",
+    "Version": 13.0,
+    "MarketingDisplayName": "Bulk Whois API"
+}

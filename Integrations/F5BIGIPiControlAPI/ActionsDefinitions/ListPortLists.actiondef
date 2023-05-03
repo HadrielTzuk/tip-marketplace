@@ -1,0 +1,63 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List available port lists in F5 BIG-IP.",
+    "Id": -1,
+    "IntegrationIdentifier": "F5BIGIPiControlAPI",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Port Lists",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"kind\":\"tm:security:firewall:port-list:port-liststate\",\"name\":\"_sys_self_allow_udp_defaults\",\"partition\":\"Common\",\"fullPath\":\"/Common/_sys_self_allow_udp_defaults\",\"generation\":1,\"selfLink\":\"https://localhost/mgmt/tm/security/firewall/port-list/~Common~_sys_self_allow_udp_defaults?ver=16.0.1.1\",\"ports\":[{\"name\":\"53\"},{\"name\":\"161\"},{\"name\":\"520\"},{\"name\":\"1026\"},{\"name\":\"4353\"}]},{\"kind\":\"tm:security:firewall:port-list:port-liststate\",\"name\":\"koko\",\"partition\":\"Common\",\"fullPath\":\"/Common/koko\",\"generation\":811,\"selfLink\":\"https://localhost/mgmt/tm/security/firewall/port-list/~Common~koko?ver=16.0.1.1\",\"ports\":[{\"name\":\"123\"}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1554655351176,
+            "CustomActionId": -1,
+            "DefaultValue": "Equal",
+            "Description": "Specify what filter logic should be applied.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1554655351176,
+            "Name": "Filter Logic",
+            "Type": 15,
+            "OptionalValues": [
+                "Equal",
+                "Contains"
+            ],
+            "Value": "Equal"
+        },
+        {
+            "Name": "Filter Value",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what value should be used in the filter. If \"Equal\" is selected, action will try to find the exact match among record types and if \"Contains\" is selected, action will try to find items that contain that substring. If nothing is provided in this parameter, the filter will not be applied.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Port Lists To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many port lists to return. Default: 50.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

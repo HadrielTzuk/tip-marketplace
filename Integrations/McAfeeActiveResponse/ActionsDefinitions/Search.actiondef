@@ -1,0 +1,77 @@
+{
+    "CreationTimeUnixTimeInMs": 1534086631897,
+    "Creator": "Admin",
+    "Description": "Provide searchat McAfee Active Response.",
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeActiveResponse",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534086631897,
+    "Name": "Search",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534086631897,
+            "CustomActionId": 20300,
+            "DefaultValue": null,
+            "Description": "The collectors to search in",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534086631897,
+            "Name": "Collectors",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534086631897,
+            "CustomActionId": 20300,
+            "DefaultValue": null,
+            "Description": "The collector filter",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534086631897,
+            "Name": "Filter Collector",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534086631897,
+            "CustomActionId": 20300,
+            "DefaultValue": null,
+            "Description": "The field to filter by",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534086631897,
+            "Name": "Filter By",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534086631897,
+            "CustomActionId": 20300,
+            "DefaultValue": "",
+            "Description": "The operator of the filter. Must be on of those: GreaterEqualThan,GreaterThan,LessEqualThan,LessThan,Equals,Contains,StartWith,EndsWith,Before,After",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534086631897,
+            "Name": "Filter Operator",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534086631897,
+            "CustomActionId": 20300,
+            "DefaultValue": null,
+            "Description": "The filter value",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534086631897,
+            "Name": "Filter Value",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom McAfeeActiveResponseManager import McAfeeActiveResponseManager\n\nPROVIDER = 'McAfeeActiveResponse'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(PROVIDER)\n    mar_manager = McAfeeActiveResponseManager(conf.get('Broker URLs List').split(',') if conf.get('Broker URLs List')\n                                              else [],\n                                              conf.get('Broker CA Bundle File Path'),\n                                              conf.get('Certificate File Path'),\n                                              conf.get('Private Key File Path'))\n\n    result_value = False\n\n    # Parameters.\n    collectors = siemplify.parameters.get('Collectors').split(',') if siemplify.parameters.get('Collectors') else []\n    filter_collector = siemplify.parameters.get('Filter Collector')\n    filter_by = siemplify.parameters.get('Filter By')\n    filter_operator = siemplify.parameters.get('Filter Operator')\n    filter_value = siemplify.parameters.get('Filter Value')\n\n    result = mar_manager.search_multiple_collectors(collectors, filter_collector, filter_by, filter_operator,\n                                                    filter_value)\n\n    if result:\n        result_value = True\n        output_massage = 'Found results for search.'\n    else:\n        output_massage = 'No results were found.'\n\n    siemplify.end(output_massage, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

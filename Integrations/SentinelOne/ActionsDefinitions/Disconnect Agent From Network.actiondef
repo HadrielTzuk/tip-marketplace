@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1521980548069, 
+    "Creator": "admin", 
+    "Description": "Disconnect agent from network connection", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SentinelOne", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1521980548069, 
+    "Name": "Disconnect Agent From Network", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom SentinelOneManager import SentinelOneManager\r\nfrom SiemplifyDataModel import EntityTypes\r\n\r\n\r\n# Consts.\r\nSENTINEL_ONE_PROVIDER = 'SentinelOne'\r\nADDRESS = EntityTypes.ADDRESS\r\nHOSTNAME = EntityTypes.HOSTNAME\r\n\r\n\r\ndef main():\r\n    # Define variables.\r\n    entities_successed = []\r\n    result_value = False\r\n    # Configuration.\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration(SENTINEL_ONE_PROVIDER)\r\n    sentinel_one_manager = SentinelOneManager(conf['Api Root'], conf['Username'], conf['Password'])\r\n\r\n    # Get scope entities.\r\n    scope_entities = [entity for entity in siemplify.target_entities if entity.entity_type == ADDRESS or\r\n                      entity.entity_type == HOSTNAME]\r\n\r\n    # Initiate full scan.\r\n    for entity in scope_entities:\r\n        if entity.entity_type == ADDRESS:\r\n            action_status = sentinel_one_manager.disconnect_agent_from_network(entity.identifier, is_ip_address=True)\r\n        else:\r\n            action_status = sentinel_one_manager.disconnect_agent_from_network(entity.identifier)\r\n\r\n        if action_status:\r\n            result_value = True\r\n            entities_successed.append(entity)\r\n\r\n    # Form output message.\r\n    if entities_successed:\r\n        output_message = 'The following entities were disconnected from the network: {0}'.format(\r\n            \",\".join([entity.identifier for entity in entities_successed]))\r\n    else:\r\n        output_message = 'No target entities were disconnected from the network.'\r\n\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

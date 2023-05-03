@@ -1,0 +1,48 @@
+{
+    "CreationTimeUnixTimeInMs": 1534435125179,
+    "Creator": "Admin",
+    "Description": "Get report for task ids.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"95\": {\"Summary\": {\"JSONversion\": \"1.002\", \"SubmitterName\": \"User\", \"Subject\": {\"Name\": \"events.txt\", \"Timestamp\": \"2018-08-21 08:29:48\", \"FileType\": \"2\", \"sha-256\": \"74834D752D73B4C81EAD10184A091C12AA30BD809D575FD9CFA07B0EBBD7A0D7\", \"sha-1\": \"6BDA9FCFB56CE2B34168D499EE04970F640ADD9A\", \"parent_archive\": \"Not Available\", \"md5\": \"11FBEF3A9916BF50EC5002B5795B23C3\", \"Type\": \"ASCII text\", \"size\": \"481231\"}, \"Process\": [{\"Reason\": \"processed by down selectors\", \"Name\": \"events.txt\", \"Severity\": \"0\"}], \"Data\": {\"compiled_with\": \"Not Available\", \"analysis_seconds\": \"181\", \"sandbox_analysis\": \"0\"}, \"SUMversion\": \"1.1.1.1\", \"JobId\": \"95\", \"SubmitterType\": \"STAND_ALONE\", \"Behavior\": [\"Identified as --- by GTI File Reputation\", \"Identified as --- by Anti-Malware\"], \"hasDynamicAnalysis\": \"false\", \"TaskId\": \"95\", \"Verdict\": {\"Severity\": \"0\", \"Description\": \"No malicious activity was detected, but this does NOT mean that execution of the sample is safe\"}, \"OSversion\": \"StaticAnalysis\", \"Selectors\": [{\"Engine\": \"GTI File Reputation\", \"Severity\": \"0\", \"MalwareName\": \"---\"}, {\"Engine\": \"Anti-Malware\", \"Severity\": \"0\", \"MalwareName\": \"---\"}, {\"Engine\": \"Sandbox\", \"Severity\": \"0\", \"MalwareName\": \"---\"}], \"MISversion\": \"1.1.1.1\", \"DETversion\": \"1.1.1.1\"}}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeATD",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534435125179,
+    "Name": "Get Report",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534435125179,
+            "CustomActionId": 20334,
+            "DefaultValue": "",
+            "Description": "The IDs of the tasks to fetch reports for, comma separated",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534435125179,
+            "Name": "Task IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "Name": "Create Insight",
+            "Type": 1,
+            "DefaultValue": true,
+            "Value": true,
+            "IsMandatory": false,
+            "Description": "If enabled, action will create an insight containing all of the retrieved information about the report.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\nfrom McAfeeATDManager import McAfeeATDManager\nimport base64\n\nPROVIDER = \"McAfeeATD\"\nACTION_NAME = \"McAfeeATD_Get Report\"\nPDF_FILE_NAME = \"{0}.pdf\"\nPDF_FILE_HEADER = \"{0} PDF Report\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(PROVIDER)\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    atd_manager = McAfeeATDManager(server_address=conf.get('Server Address'),\n                                   username=conf.get('Username'),\n                                   password=conf.get('Password'),\n                                   verify_ssl=verify_ssl)\n\n    # Parameters\n    task_ids = siemplify.parameters.get('Task IDs')\n    # Split string to list.\n    task_ids_list = task_ids.split(',')\n    result_value = False\n    errors = []\n\n    for task_id in task_ids_list:\n        try:\n            json_report = atd_manager.get_json_report(task_id)\n            pdf_report = atd_manager.get_pdf_report(task_id)\n\n            if json_report:\n                siemplify.result.add_data_table(task_id, flat_dict_to_csv(dict_to_flat(json_report)))\n            if pdf_report:\n                siemplify.result.add_attachment(PDF_FILE_HEADER.format(task_id),\n                                                PDF_FILE_NAME.format(task_id),\n                                                base64.b64encode(pdf_report))\n            result_value = True\n        except Exception as err:\n            error_message = 'Error fetching report for task ID \"{0}\", Error: {1}'.format(\n                task_id,\n                err.message\n            )\n            errors.append(error_message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n\n    if result_value:\n        output_message = 'Found report for task IDs.'\n    else:\n        output_message = 'No reports were found.'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "report",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

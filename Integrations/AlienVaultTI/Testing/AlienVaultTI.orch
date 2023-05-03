@@ -1,0 +1,75 @@
+{
+  "Identifier": "e874c07b-f2c5-475a-a700-21f481504680",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "AlienVaultTI",
+  "Category": 1,
+  "Description": "",
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "930ef23b-7147-496a-bbaf-734a935f6cd2",
+      "ParentWorkflowIdentifier": "e874c07b-f2c5-475a-a700-21f481504680",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "AlienVaultTI_Enriches Entities_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "AlienVaultTI_Enriches Entities",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "930ef23b-7147-496a-bbaf-734a935f6cd2",
+          "ParentWorkflowIdentifier": "e874c07b-f2c5-475a-a700-21f481504680",
+          "Name": "ScriptName",
+          "Value": "AlienVaultTI_Enriches Entities",
+          "CreationTimeUnixTimeInMs": 1519206620563,
+          "ModificationTimeUnixTimeInMs": 1519206620563
+        },
+        {
+          "ParentStepIdentifier": "930ef23b-7147-496a-bbaf-734a935f6cd2",
+          "ParentWorkflowIdentifier": "e874c07b-f2c5-475a-a700-21f481504680",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519206620564,
+          "ModificationTimeUnixTimeInMs": 1519206620564
+        },
+        {
+          "ParentStepIdentifier": "930ef23b-7147-496a-bbaf-734a935f6cd2",
+          "ParentWorkflowIdentifier": "e874c07b-f2c5-475a-a700-21f481504680",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519206620564,
+          "ModificationTimeUnixTimeInMs": 1519206620564
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519206620563,
+      "ModificationTimeUnixTimeInMs": 1519206620563
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "477b84f0-d058-4188-bab2-196c7c983108",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "e874c07b-f2c5-475a-a700-21f481504680",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "AlienVaultTI",
+      "AllEnvironments": "",
+      "Id": 71,
+      "CreationTimeUnixTimeInMs": 1519206620564,
+      "ModificationTimeUnixTimeInMs": 1519206620564
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 71,
+  "CreationTimeUnixTimeInMs": 1519206620563,
+  "ModificationTimeUnixTimeInMs": 1519206620563
+}

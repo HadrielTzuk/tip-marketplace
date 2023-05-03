@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1543507313568,
+    "Creator": "Admin",
+    "Description": "Test connectivity to Netskope.",
+    "Id": -1,
+    "IntegrationIdentifier": "Netskope",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543507313568,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,55 @@
+{
+    "CreationTimeUnixTimeInMs": "1570446244",
+    "Creator": "admin",
+    "Description": "Search graphs based on the entities in VirusTotal. Supported entities: IP, URL, Filehash, Hostname, Threat Actor, User. Note: only MD5, SHA-1 and SHA-256 are supported.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"attributes\": {\"graph_data\": {\"description\": \"Malware Testing Graph\", \"version\": \"5.0.0\"}}, \"id\": \"gb0adf6b6dff1441e9baa366620ffae364aeed1bf77cd4bf5b2xxxxx\"}, {\"attributes\": {\"graph_data\": {\"description\": \"show_derek\", \"version\": \"5.0.0\"}}, \"id\": \"gf755db149d0343ddbb68f743cad1be40733d2a2914cd4f63xxxxx\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "VirusTotalV3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Search Entity Graphs",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "Name",
+            "Description": "Specify what should be the sort field.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Sort Field",
+            "Type": 15,
+            "OptionalValues": [
+                "Name",
+                "Owner",
+                "Creation Date",
+                "Last Modified Date",
+                "Views Count",
+                "Comments Count"
+            ],
+            "Value": "Name"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "10",
+            "Description": "Specify how many graphs to return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Max Graphs To Return",
+            "Type": 0,
+            "Value": "10"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\", \"DestinationURL\", \"ADDRESS\", \"THREATACTOR\", \"USERUNIQNAME\", \"HOSTNAME\"]}",
+    "Type": 0,
+    "Version": 1.0
+}

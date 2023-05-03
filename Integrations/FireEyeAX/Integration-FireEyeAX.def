@@ -1,0 +1,51 @@
+{
+    "Description": "FireEye AX provides a secure environment to test, replay, characterize, and document advanced malicious activities. Malware Analysis shows the cyber attack lifecycle, from the initial exploit and malware execution path to callback destinations and follow-on binary download attempts.",
+    "DisplayName": "FireEye AX",
+    "Identifier": "FireEyeAX",
+    "Categories": [
+        "Malware Analysis",
+        "Security"
+    ],
+    "PythonVersion": 2,
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "FireEyeAX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": 2,
+            "Value": "https:/{{ip address}}"
+        },
+        {
+            "IntegrationIdentifier": "FireEyeAX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": 2,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "FireEyeAX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "FireEyeAX",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": "True"
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M17.8304 5.66197C18.04 5.69192 18.2496 5.57213 18.2496 5.33255C18.2796 4.31434 18.2496 1.85866 16.6025 1.25972C14.4763 0.481087 11.0323 1.55919 8.39698 3.0865C5.70173 4.61382 2.34763 8.1476 1 11.8012C1 11.8012 5.97125 7.48876 11.0623 6.26092C14.9255 5.3026 17.0218 5.51224 17.8304 5.66197Z\" \/>\r\n<path d=\"M5.31241 11.9509C5.25252 11.7413 5.01294 11.6514 4.80331 11.7413C3.90489 12.1905 1.80858 13.4782 2.10805 15.2152C2.49737 17.4612 5.16268 19.8869 7.79804 21.4143C10.4334 22.9715 15.225 24.1095 19.0283 23.4507C19.0283 23.4507 12.8292 21.2945 9.17561 17.4912C6.45041 14.6162 5.58194 12.6996 5.31241 11.9509Z\" \/>\r\n<path d=\"M17.0518 19.7372C16.902 19.9169 16.9619 20.1565 17.1117 20.2463C17.9502 20.7854 20.1064 21.9833 21.484 20.8453C23.2508 19.4078 23.9995 15.874 23.9995 12.8194C24.0295 9.73481 22.622 5.03308 20.1363 2.06829C20.1363 2.06829 21.3642 8.50697 19.8967 13.5681C18.8186 17.4013 17.5908 19.1083 17.0518 19.7372Z\" \/>\r\n<\/svg>",
+    "Version": 2.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/fireeye-ax",
+    "MarketingDisplayName": "FireEye AX"
+}

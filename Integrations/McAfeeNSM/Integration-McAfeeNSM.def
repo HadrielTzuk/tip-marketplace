@@ -1,0 +1,65 @@
+{
+    "Description": "McAfee Network Security Platform is a next-generation intrusion prevention system (IPS) that redefines how organizations block advanced threats.",
+    "DisplayName": "McAfeeNSM",
+    "Identifier": "McAfeeNSM",
+    "Categories": [
+        "Policy Manager",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "McAfeeNSM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "6",
+            "Value": "https://x.x.x.x/sdkapi/"
+        },
+        {
+            "IntegrationIdentifier": "McAfeeNSM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeNSM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeNSM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Domain ID",
+            "PropertyName": "Domain ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeNSM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Siemplify Policy Name",
+            "PropertyName": "Siemplify Policy Name",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "McAfeeNSM",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Sensors Names List Comma Separated",
+            "PropertyName": "Sensors Names List Comma Separated",
+            "PropertyType": "2",
+            "Value": "sensor_name1,sensor_name2,sensor_name3"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M21.5,3c0-0.2,0-0.4,0-0.7c-0.3,0.1-0.5,0.2-0.7,0.3c-2.6,1.2-5.1,2.4-7.7,3.6c-0.4,0.2-0.7,0.2-1.2,0\n\t\t\tC9.7,5.1,7.5,4.1,5.3,3C4.7,2.8,4.2,2.5,3.6,2.2c0,0.1,0,0.2,0,0.2c0,5.3,0,10.6,0,15.8c0,0.4,0.2,0.5,0.5,0.6\n\t\t\tc2.7,1.2,5.3,2.5,8,3.7c0.3,0.1,0.7,0.1,1,0c2.7-1.2,5.3-2.4,7.9-3.6c0.4-0.2,0.6-0.4,0.6-0.9C21.5,13,21.5,8,21.5,3z M17.3,16.6\n\t\t\tc-1.5,0.6-2.9,1.3-4.3,2c-0.2,0.1-0.6,0.1-0.8,0c-1.5-0.7-3-1.4-4.5-2.1c-0.2-0.1-0.4-0.4-0.4-0.5c0-2.6,0-5.3,0-8\n\t\t\tc1.4,0.7,2.8,1.2,4,1.9c0.9,0.5,1.6,0.5,2.5,0c1.1-0.6,2.2-1.1,3.4-1.6c0.2-0.1,0.4-0.2,0.7-0.3v1.9c0,2,0,3.9,0,5.9\n\t\t\tC17.8,16.2,17.7,16.5,17.3,16.6z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 5.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/mcafeensm",
+    "MarketingDisplayName": "McAfee NSM"
+}

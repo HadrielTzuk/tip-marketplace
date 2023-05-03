@@ -1,0 +1,74 @@
+{
+    "CreationTimeUnixTimeInMs": 1515073753262,
+    "Creator": "admin",
+    "Description": "Create an event in ThreatQ.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"data\": {\"hash\": \"5d1ee5105448a27443f8b451c5b081e1\", \"title\": \"123123\", \"created_at\": \"2020-08-14 11:30:05\", \"type_id\": 1, \"updated_at\": \"2020-08-14 11:30:05\", \"touched_at\": \"2020-08-14 11:30:05\", \"happened_at\": \"2020-08-14 11:30:02\", \"type\": {\"updated_at\": \"2020-06-29 17:13:28\", \"user_editable\": \"N\", \"created_at\": \"2020-06-29 17:13:28\", \"id\": 1, \"name\": \"Spearphish\"}, \"id\": 55}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "ThreatQ",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515073753262,
+    "Name": "Create Event",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "Spearphish",
+            "Description": "Specify the type of the event.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Event Type",
+            "Type": 15,
+            "OptionalValues": [
+                "Spearphish",
+                "Watering Hole",
+                "SQL Injection Attack",
+                "DoS Attack",
+                "Malware",
+                "Watchlist",
+                "Command and Control",
+                "Anonymization",
+                "Exfiltration",
+                "Host Characteristics",
+                "Compromised PKI Certificate",
+                "Login Compromise",
+                "Incident",
+                "Sighting"
+            ],
+            "Value": "Spearphish"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the title of the event.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Title",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify when the event happened. If nothing is entered in this field, action will use current time. Format: YYYY-MM-DD hh:mm:ss",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Happened At",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

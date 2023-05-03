@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244, 
+    "Creator": "admin", 
+    "Description": "Fetch endpoint's system information by its hostname or IP address. Requires RSA Netwitness Respond license, endpoint server service running in the background, configured Web Username and Web Password in the integration configuration.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"RSA-HOST-1\",\"EntityResult\":{\"agentId\":\"575EDC44-BDF9-6D00-FFCD-D354FB64xxxx\",\"hostName\":\"RSA-HOST-1\",\"riskScore\":100,\"lastSeenTime\":\"2020-09-15T13:44:54.949Z\",\"networkInterfaces_0_name\":\"Intel(R)82574LGigabitNetworkConnection\",\"networkInterfaces_0_macAddress\":\"00:50:56:A2:30:03\",\"networkInterfaces_0_ipv4\":[\"172.30.203.145\"],\"networkInterfaces_0_ipv6\":[\"fe80::dce6:5825:454a:968d\"],\"networkInterfaces_0_networkIdv6\":[\"fe80::\"],\"networkInterfaces_0_gateway\":[\"172.30.203.1\"],\"networkInterfaces_0_dns\":[\"8.8.8.8\"],\"networkInterfaces_0_promiscuous\":false}},{\"Entity\":\"172.30.203.145\",\"EntityResult\":{\"agentId\":\"575EDC44-BDF9-6D00-FFCD-D354FB64xxxx\",\"hostName\":\"RSA-HOST-1\",\"riskScore\":100,\"lastSeenTime\":\"2020-09-15T13:44:54.949Z\",\"networkInterfaces_0_name\":\"Intel(R)82574LGigabitNetworkConnection\",\"networkInterfaces_0_macAddress\":\"00:50:56:A2:30:03\",\"networkInterfaces_0_ipv4\":[\"172.30.203.145\"],\"networkInterfaces_0_ipv6\":[\"fe80::dce6:5825:454a:968d\"],\"networkInterfaces_0_networkIdv6\":[\"fe80::\"],\"networkInterfaces_0_gateway\":[\"172.30.203.1\"],\"networkInterfaces_0_dns\":[\"8.8.8.8\"],\"networkInterfaces_0_promiscuous\":false}}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "RSANetWitnessPlatform", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1570446244, 
+    "Name": "Enrich Endpoint", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928, 
+            "CustomActionId": -1, 
+            "DefaultValue": 50, 
+            "Description": "Specify risk threshold for the endpoint. If the endpoint exceeds the threshold, the related entity will be marked as suspicious. If nothing is specified, action won\u2019t check the risk score.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1534420803928, 
+            "Name": "Risk Score Threshold", 
+            "Type": 0, 
+            "Value": 50
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

@@ -1,0 +1,72 @@
+{
+    "CreationTimeUnixTimeInMs": 1544542946868,
+    "Creator": "Admin",
+    "Description": "Get all alerts",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"category\": \"category-value\", \"azureTenantId\": \"azureTenantId-value\", \"assignedTo\": \"assignedTo-value\", \"activityGroupName\": \"activityGroupName-value\", \"closedDateTime\": \"datetime-value\", \"azureSubscriptionId\": \"azureSubscriptionId-value\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftGraphSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1544542946868,
+    "Name": "List Alerts",
+    "Parameters": [
+        {
+            "CustomActionId": -1,
+            "DefaultValue": "Not Specified",
+            "Description": "Specify the key that needs to be used to filter alerts.",
+            "Id": -1,
+            "IsMandatory": false,
+            "Name": "Filter Key",
+            "OptionalValues": [
+                "Not Specified",
+                "Category",
+                "Title"
+            ],
+            "Type": 15,
+            "Value": ""
+        },
+        {
+            "CustomActionId": -1,
+            "DefaultValue": "Not Specified",
+            "Description": "Specify what filter logic should be applied. Filtering logic is working based on the value  provided in the “Filter Key” parameter.",
+            "Id": -1,
+            "IsMandatory": false,
+            "Name": "Filter Logic",
+            "OptionalValues": [
+                "Not Specified",
+                "Equal",
+                "Contains"
+            ],
+            "Type": 15,
+            "Value": ""
+        },
+        {
+            "CustomActionId": -1,
+            "Description": "Specify what value should be used in the filter. If “Equal“ is selected, action will try to find the exact match among results and if “Contains“ is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the value  provided in the “Filter Key” parameter.",
+            "Id": -1,
+            "IsMandatory": false,
+            "Name": "Filter Value",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CustomActionId": -1,
+            "DefaultValue": 50,
+            "Description": "Specify how many records to return. If nothing is provided, action will return 50 records.",
+            "Id": -1,
+            "IsMandatory": false,
+            "Name": "Max Records To Return",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom MicrosoftGraphSecurityManager import MicrosoftGraphSecurityManager\nimport json\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration(\"MicrosoftGraphSecurity\")\n    client_id = conf[\"Client ID\"]\n    secret_id = conf[\"Secret ID\"]\n    tenant = conf[\"Tenant\"]\n    token = conf.get(\"Refresh Token\")\n\n    mtm = MicrosoftGraphSecurityManager(client_id, secret_id, tenant, token)\n\n    alerts = mtm.list_alerts()\n\n    for alert in alerts:\n        siemplify.result.add_json(\"Alert - {0}\".format(alert.get(\"title\")), json.dumps(alert))\n    if alerts:\n        output_message = \"Successfully get all alerts.\"\n    else:\n        output_message = \"No results were found.\"\n\n    siemplify.end(output_message, json.dumps(alerts))\n\n\nif __name__ == \"__main__\":\n    main()\n\n",
+    "ScriptResultName": "alerts_details",
+    "Version": 3.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

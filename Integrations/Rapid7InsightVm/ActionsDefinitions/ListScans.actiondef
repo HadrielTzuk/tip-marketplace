@@ -1,0 +1,34 @@
+{
+    "CreationTimeUnixTimeInMs": 1533210105447,
+    "Creator": "Admin",
+    "Description": "List scans",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"status\": \"finished\", \"scanType\": \"Manual\", \"assets\": 1, \"links\": [{\"href\": \"https://1.1.1.1:3780/api/3/scans/8\", \"rel\": \"self\"}], \"vulnerabilities\": {\"severe\": 12, \"total\": 18, \"critical\": 0, \"moderate\": 6}, \"startTime\": \"2019-04-11T07:44:00.095Z\", \"duration\": \"PT7M58.298S\", \"engineName\": \"Local scan engine\", \"endTime\": \"2019-04-11T07:51:58.393Z\", \"id\": 8, \"scanName\": \"siemplify_20190411-104353\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Rapid7InsightVm",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1533210105447,
+    "Name": "List Scans",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1533212260721,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Number of days backwards to fetch scans from.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1533212260721,
+            "Name": "Days Backwards",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

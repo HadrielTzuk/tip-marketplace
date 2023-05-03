@@ -1,0 +1,18 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351027650,
+    "Creator": "Admin",
+    "DefaultResultValue": "",
+    "Description": "Test connectivity to the Endgame",
+    "Id": -1,
+    "IntegrationIdentifier": "Endgame",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1560351027650,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom EndgameManager import EndgameManager\n\nPROVIDER = 'Endgame'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(PROVIDER)\n    api_root = conf['API Root']\n    username = conf['Username']\n    password = conf['Password']\n    use_ssl = conf.get('Verify SSL', 'False').lower() == 'true'\n    egm = EndgameManager(api_root, username=username, password=password, use_ssl=use_ssl)\n\n    # logout\n    egm.logout()\n    siemplify.end(\"Connection Established.\", 'true')\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "TimeoutSeconds": 600,
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

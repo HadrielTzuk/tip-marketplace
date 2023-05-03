@@ -1,0 +1,42 @@
+{
+    "CreationTimeUnixTimeInMs": 1508239534025,
+    "Creator": "admin",
+    "Description": "Send SMS",
+    "Id": -1,
+    "IntegrationIdentifier": "Twilio",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1508239534025,
+    "Name": "Send SMS",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1513260252544,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Target phone number.The phone number must include a dial code.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513260252544,
+            "Name": "Phone Number",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1513260252544,
+            "CustomActionId": -1,
+            "DefaultValue": "Testing",
+            "Description": "Message content.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513260252544,
+            "Name": "Message",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import *\nfrom twilio.rest import Client\n\ndef main():\n\t#Enable User Account\n\tsiemplify = SiemplifyAction()\n\tconf = siemplify.get_configuration('Twilio')\n\tparams = siemplify.parameters\n\taccount_sid = conf['AccountSid']\n\tauth_token = conf['AuthenticationToken']\n\tfrom_number = conf['SmsPhoneNumber']\n\tphone_number = params['phone_number']\n\tmessage = params['message']\n\tclient = Client(account_sid, auth_token)\n\tclient.api.account.messages.create(to=phone_number, from_=from_number, body=message)\n\toutput_message = \"SMS sent to {0}\\nMessage: {1}\".format(phone_number, message)\n\tsiemplify.end(output_message, True) \n\t\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

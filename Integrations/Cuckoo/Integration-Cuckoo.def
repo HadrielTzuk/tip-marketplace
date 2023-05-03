@@ -1,0 +1,66 @@
+{
+    "Description": "Cuckoo Sandbox is an advanced, extremely modular, and 100% open source automated malware analysis system with infinite application opportunities. Cuckoo provides you all the requirements to easily integrate the sandbox into your existing framework and backend in the way you want, with the format you want, and all of that without licensing requirements.",
+    "DisplayName": "Cuckoo",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/cuckoo",
+    "Identifier": "Cuckoo",
+    "Categories": [
+        "Malware Analysis",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Cuckoo",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "5",
+            "Value": "http://x.x.x.x:8090"
+        },
+        {
+            "IntegrationIdentifier": "Cuckoo",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Web Interface Address",
+            "PropertyName": "Web Interface Address",
+            "PropertyType": "5",
+            "Value": "http://x.x.x.x:8000"
+        },
+        {
+            "IntegrationIdentifier": "Cuckoo",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Warning Threshold",
+            "PropertyName": "Warning Threshold",
+            "PropertyType": "1",
+            "Value": "5.0"
+        },
+        {
+            "IntegrationIdentifier": "Cuckoo",
+            "IsMandatory": false,
+            "PropertyDisplayName": "CA Certificate File",
+            "PropertyName": "CA Certificate File",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Cuckoo",
+            "PropertyName": "API Token",
+            "PropertyDisplayName": "API Token",
+            "PropertyType": "3",
+            "IsMandatory": false,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Cuckoo",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M20.7,18.5c-1,0.4-3,1-4.7,1c-4.3,0-6.3-3.1-6.3-7.2c0-4.1,2.4-7,6.2-7c1.9,0,3,0.3,4.1,0.8l0.5-4.5\n\t\t\tC18.9,1.3,17.1,1,14.7,1C7.3,1,3.3,6,3.3,12.4C3.3,19.1,7.2,24,14.9,24c2.5,0,4.3-0.2,6.1-0.7L20.7,18.5z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 9.0,
+    "MarketingDisplayName": "Cuckoo"
+}

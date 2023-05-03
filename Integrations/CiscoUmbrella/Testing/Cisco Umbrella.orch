@@ -1,0 +1,339 @@
+{
+  "Identifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "Cisco Umbrella",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "09261a3b-9038-41bf-8454-30aee2268909",
+      "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+      "ParentStepIdentifiers": [
+        "34aac834-f291-4eda-9897-b2d9ad2d3d8e"
+      ],
+      "ParentStepIdentifier": "34aac834-f291-4eda-9897-b2d9ad2d3d8e",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "CiscoUmbrella_Get Domain Security Info_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "CiscoUmbrella_Get Domain Security Info",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "09261a3b-9038-41bf-8454-30aee2268909",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "ScriptName",
+          "Value": "CiscoUmbrella_Get Domain Security Info",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        },
+        {
+          "ParentStepIdentifier": "09261a3b-9038-41bf-8454-30aee2268909",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        },
+        {
+          "ParentStepIdentifier": "09261a3b-9038-41bf-8454-30aee2268909",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205791657,
+      "ModificationTimeUnixTimeInMs": 1519205791657
+    },
+    {
+      "Identifier": "8175e1bd-961d-49bd-9cd4-31c6680eade3",
+      "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+      "ParentStepIdentifiers": [
+        "09261a3b-9038-41bf-8454-30aee2268909"
+      ],
+      "ParentStepIdentifier": "09261a3b-9038-41bf-8454-30aee2268909",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "CiscoUmbrella_Get Domain Status_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "CiscoUmbrella_Get Domain Status",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "8175e1bd-961d-49bd-9cd4-31c6680eade3",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "ScriptName",
+          "Value": "CiscoUmbrella_Get Domain Status",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        },
+        {
+          "ParentStepIdentifier": "8175e1bd-961d-49bd-9cd4-31c6680eade3",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        },
+        {
+          "ParentStepIdentifier": "8175e1bd-961d-49bd-9cd4-31c6680eade3",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205791657,
+      "ModificationTimeUnixTimeInMs": 1519205791657
+    },
+    {
+      "Identifier": "9414e33b-1a16-4d65-9472-4a075e673b9c",
+      "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+      "ParentStepIdentifiers": [
+        "664d97ba-3ed7-4d4d-a48d-91423eb6ae2f"
+      ],
+      "ParentStepIdentifier": "664d97ba-3ed7-4d4d-a48d-91423eb6ae2f",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "CiscoUmbrella_Get Whois_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "CiscoUmbrella_Get Whois",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "9414e33b-1a16-4d65-9472-4a075e673b9c",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "ScriptName",
+          "Value": "CiscoUmbrella_Get Whois",
+          "CreationTimeUnixTimeInMs": 1519205791658,
+          "ModificationTimeUnixTimeInMs": 1519205791658
+        },
+        {
+          "ParentStepIdentifier": "9414e33b-1a16-4d65-9472-4a075e673b9c",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519205791658,
+          "ModificationTimeUnixTimeInMs": 1519205791658
+        },
+        {
+          "ParentStepIdentifier": "9414e33b-1a16-4d65-9472-4a075e673b9c",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205791658,
+          "ModificationTimeUnixTimeInMs": 1519205791658
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205791657,
+      "ModificationTimeUnixTimeInMs": 1519205791657
+    },
+    {
+      "Identifier": "37184365-700d-4a00-bd7f-7d9e5eccf6d9",
+      "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+      "ParentStepIdentifiers": [
+        "b161611c-d4ae-4238-9b6d-d092864f70ff"
+      ],
+      "ParentStepIdentifier": "b161611c-d4ae-4238-9b6d-d092864f70ff",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "CiscoUmbrella_Delete Domain_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "CiscoUmbrella_Delete Domain",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "37184365-700d-4a00-bd7f-7d9e5eccf6d9",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "ScriptName",
+          "Value": "CiscoUmbrella_Delete Domain",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        },
+        {
+          "ParentStepIdentifier": "37184365-700d-4a00-bd7f-7d9e5eccf6d9",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        },
+        {
+          "ParentStepIdentifier": "37184365-700d-4a00-bd7f-7d9e5eccf6d9",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205791657,
+      "ModificationTimeUnixTimeInMs": 1519205791657
+    },
+    {
+      "Identifier": "664d97ba-3ed7-4d4d-a48d-91423eb6ae2f",
+      "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+      "ParentStepIdentifiers": [
+        "8175e1bd-961d-49bd-9cd4-31c6680eade3"
+      ],
+      "ParentStepIdentifier": "8175e1bd-961d-49bd-9cd4-31c6680eade3",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "CiscoUmbrella_Get Malicious Domains_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "CiscoUmbrella_Get Malicious Domains",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "664d97ba-3ed7-4d4d-a48d-91423eb6ae2f",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "ScriptName",
+          "Value": "CiscoUmbrella_Get Malicious Domains",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        },
+        {
+          "ParentStepIdentifier": "664d97ba-3ed7-4d4d-a48d-91423eb6ae2f",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        },
+        {
+          "ParentStepIdentifier": "664d97ba-3ed7-4d4d-a48d-91423eb6ae2f",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205791657,
+      "ModificationTimeUnixTimeInMs": 1519205791657
+    },
+    {
+      "Identifier": "34aac834-f291-4eda-9897-b2d9ad2d3d8e",
+      "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+      "ParentStepIdentifiers": [
+        "37184365-700d-4a00-bd7f-7d9e5eccf6d9"
+      ],
+      "ParentStepIdentifier": "37184365-700d-4a00-bd7f-7d9e5eccf6d9",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "CiscoUmbrella_Get Associated Domains_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "CiscoUmbrella_Get Associated Domains",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "34aac834-f291-4eda-9897-b2d9ad2d3d8e",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "ScriptName",
+          "Value": "CiscoUmbrella_Get Associated Domains",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        },
+        {
+          "ParentStepIdentifier": "34aac834-f291-4eda-9897-b2d9ad2d3d8e",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        },
+        {
+          "ParentStepIdentifier": "34aac834-f291-4eda-9897-b2d9ad2d3d8e",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205791657,
+      "ModificationTimeUnixTimeInMs": 1519205791657
+    },
+    {
+      "Identifier": "b161611c-d4ae-4238-9b6d-d092864f70ff",
+      "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "CiscoUmbrella_Add Domain_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "CiscoUmbrella_Add Domain",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "b161611c-d4ae-4238-9b6d-d092864f70ff",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "ScriptName",
+          "Value": "CiscoUmbrella_Add Domain",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        },
+        {
+          "ParentStepIdentifier": "b161611c-d4ae-4238-9b6d-d092864f70ff",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        },
+        {
+          "ParentStepIdentifier": "b161611c-d4ae-4238-9b6d-d092864f70ff",
+          "ParentWorkflowIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205791657,
+          "ModificationTimeUnixTimeInMs": 1519205791657
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205791657,
+      "ModificationTimeUnixTimeInMs": 1519205791657
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "8fdd37dd-9a69-491a-ad1e-f495aaa4f618",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "c2b89cb8-6580-4247-a047-278cec3a786b",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "Cisco Umbrella",
+      "AllEnvironments": "",
+      "Id": 63,
+      "CreationTimeUnixTimeInMs": 1519205791658,
+      "ModificationTimeUnixTimeInMs": 1519205791658
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 63,
+  "CreationTimeUnixTimeInMs": 1519205791657,
+  "ModificationTimeUnixTimeInMs": 1519205791657
+}

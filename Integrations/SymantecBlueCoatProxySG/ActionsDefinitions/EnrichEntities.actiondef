@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Enrich entities using information from Symantec Blue Coat ProxySG. Supported entities: Hostname, IP Address, URL.",
+    "Id": -1,
+    "IntegrationIdentifier": "SymantecBlueCoatProxySG",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Enrich Entities",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"172.30.xxx.xx\",\"EntityResult\":{\"raw_output\":\"172.30.xxx.xxx - Blue Coat SG-VA Series>test geolocation...\",\"Country\":\"Ambiguous - Special Use\"}},{\"Entity\":\"https://google.com\",\"EntityResult\":{\"raw_output\":\"172.30.xxx.xxx - Blue Coat SG-VA Series>test threat-risk...\",\"risk level\":\"1\",\"% categories\":{\"Policy\":\"none\",\"IWF\":\"none\",\"Proventia\":\"unavailable\",\"Blue Coat\":\"Search Engines/Portals\",\"Local\":\"test\"},\"category groups\":{\"Blue Coat\":\"Business Related; Information Related\"}}},{\"Entity\":\"twitter.com\",\"EntityResult\":{\"raw_output\":\"172.30.xxx.xxx - Blue Coat SG-VA Series>test dns twitter.com...\",\"DNS Response data\":\"\",\"Official Host Name\":\"twitter.com\",\"Resolved Addresses\":[\"104.244.xx.xx\",\"104.244.xx.xx\"],\"Cache TTL\":\"971, cache MISS\",\"DNS Resolver Response\":\"Success\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Create Insight",
+            "Type": 1,
+            "DefaultValue": true,
+            "Value": true,
+            "IsMandatory": false,
+            "Description": "If enabled, action will create an insight containing all of the retrieved information about the entity.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\", \"DestinationURL\"]}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

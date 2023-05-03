@@ -1,0 +1,68 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244,
+    "Creator": "admin",
+    "Description": "Update Incident in RSA Netwitness. Requires RSA Netwitness Respond license, configured Web Username and Web Password in the integration configuration.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"id\": \"INC-000\", \"title\": \"High Risk Alerts: NetWitness Endpoint for RSA-HOST-1\", \"summary\": \"\", \"priority\": \"Critical\", \"riskScore\": 90, \"status\": \"Assigned\", \"alertCount\": 16, \"averageAlertRiskScore\": 90, \"sealed\": true, \"totalRemediationTaskCount\": 0, \"openRemediationTaskCount\": 0, \"created\": \"2020-09-04T08:22:51.456Z\", \"lastUpdated\": \"2020-09-17T08:31:13.074Z\", \"lastUpdatedBy\": null, \"assignee\": \"admin\", \"sources\": [\"ECAT\"], \"ruleId\": \"5ef1b33614c0552a2884cxxx\", \"firstAlertTime\": \"2020-08-31T16:09:50.071Z\", \"categories\": [], \"journalEntries\": null, \"createdBy\": \"High Risk Alerts: NetWitness Endpoint\", \"deletedAlertCount\": 0, \"eventCount\": 16, \"alertMeta\": {\"SourceIp\": [\"\"], \"DestinationIp\": [\"\"]}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "RSANetWitnessPlatform",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Update Incident",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify ID of the incident that needs to be updated.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Incident ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify new status for the incident.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Status",
+            "Type": 15,
+            "OptionalValues": [
+                "New",
+                "Assigned",
+                "In Progress",
+                "Task Requested",
+                "Task Complete",
+                "Closed",
+                "Closed - False Positive"
+            ],
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify new assignee for the incident.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1534420803928,
+            "Name": "Assignee",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[\"ADDRESS\"]}"
+}

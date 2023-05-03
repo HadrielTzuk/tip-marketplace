@@ -1,0 +1,34 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Retrieve a list of buckets from Google Cloud Storage.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleCloudStorage",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Buckets\": [{\"CreationDate\": [\"2020-11-09T12:57:03.981Z\"], \"ModificationDate\": [\"2021-01-03T16:20:44.729Z\"], \"Name\": [\"siemplify-tip\"], \"Owner\": \"\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Buckets",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Maximum number of buckets to return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Results",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\":[]}",
+    "Version": 1.0
+}

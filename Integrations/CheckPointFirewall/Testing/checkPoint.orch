@@ -1,0 +1,207 @@
+{
+  "Identifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "checkPoint",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "d318464e-9e55-4028-900c-07a2e46a61ae",
+      "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+      "ParentStepIdentifiers": [
+        "8221ffe0-0362-45d4-81ac-0c77d1270b1e"
+      ],
+      "ParentStepIdentifier": "8221ffe0-0362-45d4-81ac-0c77d1270b1e",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "CheckPointFirewall_ListPoliciesOnSite_1",
+      "IsAutomatic": false,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "CheckPointFirewall_ListPoliciesOnSite",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "d318464e-9e55-4028-900c-07a2e46a61ae",
+          "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+          "Name": "ScriptName",
+          "Value": "CheckPointFirewall_ListPoliciesOnSite",
+          "CreationTimeUnixTimeInMs": 1519813999918,
+          "ModificationTimeUnixTimeInMs": 1519813999918
+        },
+        {
+          "ParentStepIdentifier": "d318464e-9e55-4028-900c-07a2e46a61ae",
+          "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519813999918,
+          "ModificationTimeUnixTimeInMs": 1519813999918
+        },
+        {
+          "ParentStepIdentifier": "d318464e-9e55-4028-900c-07a2e46a61ae",
+          "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519813999918,
+          "ModificationTimeUnixTimeInMs": 1519813999918
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519813999918,
+      "ModificationTimeUnixTimeInMs": 1519813999918
+    },
+    {
+      "Identifier": "8221ffe0-0362-45d4-81ac-0c77d1270b1e",
+      "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "CheckPointFirewall_ListLayersOnSite_1",
+      "IsAutomatic": false,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "CheckPointFirewall_ListLayersOnSite",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "8221ffe0-0362-45d4-81ac-0c77d1270b1e",
+          "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+          "Name": "ScriptName",
+          "Value": "CheckPointFirewall_ListLayersOnSite",
+          "CreationTimeUnixTimeInMs": 1519813999918,
+          "ModificationTimeUnixTimeInMs": 1519813999918
+        },
+        {
+          "ParentStepIdentifier": "8221ffe0-0362-45d4-81ac-0c77d1270b1e",
+          "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519813999918,
+          "ModificationTimeUnixTimeInMs": 1519813999918
+        },
+        {
+          "ParentStepIdentifier": "8221ffe0-0362-45d4-81ac-0c77d1270b1e",
+          "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519813999918,
+          "ModificationTimeUnixTimeInMs": 1519813999918
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519813999917,
+      "ModificationTimeUnixTimeInMs": 1519813999917
+    },
+    {
+      "Identifier": "0846ca10-7037-4051-85f2-45676823f5e7",
+      "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+      "ParentStepIdentifiers": [
+        "e59ae07a-4260-4e64-8ab0-c84a3ead756f"
+      ],
+      "ParentStepIdentifier": "e59ae07a-4260-4e64-8ab0-c84a3ead756f",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "CheckPointFirewall_UnBlock Ip_1",
+      "IsAutomatic": false,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "CheckPointFirewall_UnBlock Ip",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "0846ca10-7037-4051-85f2-45676823f5e7",
+          "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+          "Name": "ScriptName",
+          "Value": "CheckPointFirewall_UnBlock Ip",
+          "CreationTimeUnixTimeInMs": 1519813999918,
+          "ModificationTimeUnixTimeInMs": 1519813999918
+        },
+        {
+          "ParentStepIdentifier": "0846ca10-7037-4051-85f2-45676823f5e7",
+          "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519813999918,
+          "ModificationTimeUnixTimeInMs": 1519813999918
+        },
+        {
+          "ParentStepIdentifier": "0846ca10-7037-4051-85f2-45676823f5e7",
+          "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519813999918,
+          "ModificationTimeUnixTimeInMs": 1519813999918
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519813999918,
+      "ModificationTimeUnixTimeInMs": 1519813999918
+    },
+    {
+      "Identifier": "e59ae07a-4260-4e64-8ab0-c84a3ead756f",
+      "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+      "ParentStepIdentifiers": [
+        "d318464e-9e55-4028-900c-07a2e46a61ae"
+      ],
+      "ParentStepIdentifier": "d318464e-9e55-4028-900c-07a2e46a61ae",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "CheckPointFirewall_Block Ip_1",
+      "IsAutomatic": false,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "CheckPointFirewall_Block Ip",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "e59ae07a-4260-4e64-8ab0-c84a3ead756f",
+          "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+          "Name": "ScriptName",
+          "Value": "CheckPointFirewall_Block Ip",
+          "CreationTimeUnixTimeInMs": 1519813999918,
+          "ModificationTimeUnixTimeInMs": 1519813999918
+        },
+        {
+          "ParentStepIdentifier": "e59ae07a-4260-4e64-8ab0-c84a3ead756f",
+          "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1519813999918,
+          "ModificationTimeUnixTimeInMs": 1519813999918
+        },
+        {
+          "ParentStepIdentifier": "e59ae07a-4260-4e64-8ab0-c84a3ead756f",
+          "ParentWorkflowIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519813999918,
+          "ModificationTimeUnixTimeInMs": 1519813999918
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519813999918,
+      "ModificationTimeUnixTimeInMs": 1519813999918
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "fc84a42f-6bbc-496f-820c-cbc112c494af",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "fb572cb7-388b-4fea-b539-11ff63febc55",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "checkPoint",
+      "AllEnvironments": "",
+      "Id": 28,
+      "CreationTimeUnixTimeInMs": 1519813999918,
+      "ModificationTimeUnixTimeInMs": 1519813999918
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 28,
+  "CreationTimeUnixTimeInMs": 1519813999917,
+  "ModificationTimeUnixTimeInMs": 1519813999917
+}

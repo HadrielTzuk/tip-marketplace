@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244,
+    "Creator": "severins",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "RecordedFuture",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_successful",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

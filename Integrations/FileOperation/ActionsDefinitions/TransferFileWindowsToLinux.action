@@ -1,0 +1,90 @@
+{
+    "CreationTimeUnixTimeInMs": 1511345529160,
+    "Creator": "admin",
+    "Description": "Transfer file from windows share to a remote Linux host",
+    "Id": -1,
+    "IntegrationIdentifier": "FileOperation",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511345529160,
+    "Name": "Transfer File Windows To Linux",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1511799978825,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The server folder with the relevant files. Full path",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799978825,
+            "Name": "source_win_file_path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799978825,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The remote server folder to put the files into",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799978825,
+            "Name": "dest_linux_path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799978825,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "x.x.x.x",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799978825,
+            "Name": "dest_linux_ip",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799978825,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799978825,
+            "Name": "dest_linux_username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799978825,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799978825,
+            "Name": "dest_linux_password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799978825,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "Indicates weather to keep the file in source or remove it",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799978825,
+            "Name": "keep_file",
+            "Type": 1,
+            "Value": ""
+        }
+    ],
+    "Script": "from FileOperationManager import FileOperationManager\nfrom SiemplifyAction import *\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    file_manager = FileOperationManager()\n    source_win_file = siemplify.parameters['source_win_file_path']\n    dest_linux_path = siemplify.parameters['dest_linux_path']\n    dest_linux_ip = siemplify.parameters['dest_linux_ip']\n    dest_linux_username = siemplify.parameters['dest_linux_username']\n    dest_linux_password = siemplify.parameters['dest_linux_password']\n    keep_file = siemplify.parameters['keep_file']\n    transfer_result = file_manager.transfer_file_win_to_unix(source_win_file, dest_linux_ip, dest_linux_username,\n                                                             dest_linux_password, dest_linux_path, keep_file)\n\n    output_message = \"Transfer File {0} to -> {1} completed \".format(source_win_file, dest_linux_path)\n    result_value = transfer_result\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "FilePath",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

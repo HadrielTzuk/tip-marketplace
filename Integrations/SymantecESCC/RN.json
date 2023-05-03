@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New integration \"Symantec Endpoint Security Complete\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "SymantecESCC",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1620208381,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8187"
+    }
+]

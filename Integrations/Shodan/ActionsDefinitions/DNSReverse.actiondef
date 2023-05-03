@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1545759211733,
+    "Creator": "Admin",
+    "Description": "Look up the hostnames that have been defined for the given list of IP addresses",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"146.125.10.5\": null, \"8.8.8.8\": [\"google-public-dns-a.google.com\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Shodan",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1545759211733,
+    "Name": "DNS Reverse",
+    "Parameters": [],
+    "Script": "from ShodanManager import ShodanManager\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import flat_dict_to_csv\nfrom SiemplifyDataModel import EntityTypes\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    conf = siemplify.get_configuration('Shodan')\n    verify_ssl = conf.get('Verify SSL', 'False').lower() == 'true'\n    api_key = conf.get('API key', \"\")\n    shodan = ShodanManager(api_key, verify_ssl=verify_ssl)\n\n    ips_list = []\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.ADDRESS:\n            ips_list.append(entity.identifier)\n    # Convert ips list to string\n    ips = \",\".join(ips_list)\n\n    ips_info = shodan.dns_reverse(ips)\n    if ips_info:\n        siemplify.result.add_data_table(\"Shodan DNS Reverse Report\", flat_dict_to_csv(ips_info))\n        output_message = \"Successfully look up hostnames that have been defined for the following IP addresses: {0} \\n\".format('\\n'.join(ips_list))\n        result_value = 'true'\n    else:\n        output_message = \"Failed to look up hostnames that have been defined for the following IP addresses: {0} \\n\".format('\\n'.join(ips_list))\n        result_value = 'false'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}"
+}

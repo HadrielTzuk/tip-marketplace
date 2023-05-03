@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1521035515449,
+    "Creator": "admin",
+    "Description": "Take a snapshot of a VM",
+    "Id": -1,
+    "IntegrationIdentifier": "VSphere",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1521035515449,
+    "Name": "Take Snapshot",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1521035695592,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The name of the target VM.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1521035695592,
+            "Name": "Vm Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1521035695592,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The name of the target snapshot.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1521035695592,
+            "Name": "Snapshot Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1521035695592,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Snapshot description value.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1521035695592,
+            "Name": "Snapshot Description",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

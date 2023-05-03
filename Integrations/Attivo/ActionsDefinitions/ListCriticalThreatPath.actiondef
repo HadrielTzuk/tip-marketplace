@@ -1,0 +1,80 @@
+{
+	"CreationTimeUnixTimeInMs": 0,
+	"Creator": "admin",
+	"Description": "List available critical ThreatPaths in Attivo.",
+	"Id": -1,
+	"IntegrationIdentifier": "Attivo",
+	"IsCustom": false,
+	"IsEnabled": true,
+	"ModificationTimeUnixTimeInMs": 0,
+	"Name": "List Critical ThreatPath",
+	"DynamicResultsMetadata": [{
+        "ResultExample": "[{\"destIp\":\"172.30.xxx.xxx\",\"permissionId\":-1,\"reason\":null,\"srcHostName\":\"Unmanaged host\",\"acmId\":-1,\"source\":null,\"type\":\"Paths\",\"permScore\":\"Medium\",\"cancellable\":false,\"targetScore\":\"Medium\",\"crRuleName\":\"System Default: Domain Admin Pilferage\",\"credOuPath\":\"CN=Users,DC=exlab,DC=local\",\"submissionId\":-1,\"credAcctStatus\":\"Enabled\",\"credential\":\"exlab.local\\\\administrator\",\"srcId\":\"dummy-endpoint-1SUB1\",\"destHostName\":\"HOST02SMIME\",\"cid2\":\"rdp1\",\"id\":\"Unmanaged host172.16.30.5HOST02SMIME172.30.201.198RDP Memory Credentialexlab.local\\\\administratorPaths\",\"srcIp\":\"172.16.xxx.xxx\",\"firstSeen\":1636667535105,\"credDept\":null,\"subscriberId\":1,\"remediable\":false,\"credLastPswResetTime\":1620201383000,\"credLastLogonTime\":1636729127000,\"moretarget\":false,\"destId\":\"27f018b6-47c8-4b20-ab62-545c672ddf7cHOST02SMIME:S-1-5-21-2143737273-3756110848-2070699859-500\",\"shareName\":null,\"desc\":\"rdp Active logon session for exlab.local\\\\administrator at Unmanaged OU/172.16.30.5 (unmanaged host). Potential movement to Computers/HOST02SMIME.\",\"cid\":\"rdp0\",\"permissionName\":\"\",\"destOu\":\"Computers\",\"critical\":true,\"isgrouppath\":false,\"credUpn\":\"Administrator@exlab.local\",\"credCreatedTime\":1610374114000,\"memberList\":null,\"memberOf\":null,\"remediateStatus\":null,\"severity\":\"High\",\"srcOu\":\"Unmanaged\",\"target\":\"HOST02SMIME(172.30.201.198)\",\"loggedOn\":false,\"credSamAcctName\":\"Administrator\",\"service\":\"RDP Memory Credential\",\"credDisplayName\":null,\"ukey\":null,\"category\":\"Saved credential\"}]",
+        "ResultName": "JsonResult"
+    }],
+	"Parameters": [{
+        "Name": "Filter Key",
+        "Type": 15,
+        "DefaultValue": "Select One",
+        "Value": "Select One",
+        "IsMandatory": false,
+        "Description": "Specify the key that needs to be used to filter critical paths.",
+        "OptionalValues": [
+            "Select One",
+            "Rule Name",
+            "Service",
+            "Severity",
+            "Description",
+            "Category"
+        ],
+        "Id": -1,
+        "CustomActionId": -1,
+        "CreationTimeUnixTimeInMs": 0,
+        "ModificationTimeUnixTimeInMs": 0
+    },
+    {
+        "Name": "Filter Logic",
+        "Type": 15,
+        "DefaultValue": "Not Specified",
+        "Value": "Not Specified",
+        "IsMandatory": false,
+        "Description": "Specify what filter logic should be applied. Filtering logic is working based on the value provided in the \"Filter Key\" parameter.",
+        "OptionalValues": [
+            "Not Specified",
+            "Equal",
+            "Contains"
+        ],
+        "Id": -1,
+        "CustomActionId": -1,
+        "CreationTimeUnixTimeInMs": 0,
+        "ModificationTimeUnixTimeInMs": 0
+    },
+    {
+        "Name": "Filter Value",
+        "Type": 0,
+        "DefaultValue": "",
+        "Value": "",
+        "IsMandatory": false,
+        "Description": "Specify what value should be used in the filter. If \"Equal\" is selected, action will try to find the exact match among results and if \"Contains\" is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the value  provided in the \"Filter Key\" parameter.",
+        "Id": -1,
+        "CustomActionId": -1,
+        "CreationTimeUnixTimeInMs": 0,
+        "ModificationTimeUnixTimeInMs": 0
+    },
+    {
+        "Name": "Max Records To Return",
+        "Type": 0,
+        "DefaultValue": 50,
+        "Value": 50,
+        "IsMandatory": false,
+        "Description": "Specify how many records to return. If nothing is provided, action will return 50 records.",
+        "Id": -1,
+        "CustomActionId": -1,
+        "CreationTimeUnixTimeInMs": 0,
+        "ModificationTimeUnixTimeInMs": 0
+    }],
+	"SimulationDataJson": "{\"Entities\": []}",
+	"ScriptResultName": "is_success",
+	"Type": 0,
+	"Version": 1.0
+}

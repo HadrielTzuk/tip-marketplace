@@ -1,0 +1,54 @@
+{
+    "Creator": "admin",
+    "Description": "Creates an entity and adds to requested alert. Note - Please make sure to read our documentation regarding the differences in the delimiter’s behavior, between different Siemplify’s platform versions 5.6.0 inclusive and 5.6.2 exclusive, here: https://integrations.siemplify.co/doc/siemplify#create-entity",
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "Name": "Create Entity",
+    "Parameters": [
+        {
+            "DefaultValue": "",
+            "Description": "Entity identifier or comma-separated list of identifiers (Example: value1,value2,value3).",
+            "IsMandatory": true,
+            "Name": "Entities Identifies",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "DefaultValue": ",",
+            "Description": "Provide a delimiter character, with which the action will split the input it gets into a number of entities instead of a single one. If no value will be provided, action will not perform any splitting on the input, and it will be handled as a single entity. Note - Please make sure to read our documentation regarding the differences in the delimiter's behavior, between different Siemplify's platform versions 5.6.0 inclusive and 5.6.2 exclusive.",
+            "IsMandatory": false,
+            "Name": "Delimiter",
+            "Type": 0,
+            "Value": ","
+        },
+        {
+            "DefaultValue": "",
+            "Description": "Siemplify entity type. Example: HOSTNAME / USERNAME / etc.",
+            "IsMandatory": true,
+            "Name": "Entity Type",
+            "Type": 13,
+            "Value": ""
+        },
+        {
+            "DefaultValue": "False",
+            "Description": "Mark if entities are part of an internal network.",
+            "IsMandatory": true,
+            "Name": "Is Internal",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "DefaultValue": "False",
+            "Description": "Mark if entities are suspicious.",
+            "IsMandatory": true,
+            "Name": "Is Suspicious",
+            "Type": 1,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "StatusResult",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

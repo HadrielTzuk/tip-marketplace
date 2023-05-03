@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 12.91</h2><h5>Published on 16 July, 2020</h5><hr><h3>Actions</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     MalShare\n    </b>\n   </li>\n   <ul>\n    <li>\n     Enrich Hash\n    </li>\n    <ul>\n     <li>\n      Updated action to mark entities as suspicious if they are found in the database.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     Slack\n    </b>\n   </li>\n   <ul>\n    <li>\n     Send Message\n    </li>\n    <ul>\n     <li>\n      Updated action to support email as input for channel parameter.\n     </li>\n     <li>\n      REGRESSIVE! Updated action to support sending message to multiple channels (comma separated).\n     </li>\n    </ul>\n    <li>\n     List Users\n    </li>\n    <ul>\n     <li>\n      Added support for non-ASCII users.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "12.91",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "16/07/20",
+    "Title": "Release Notes"
+}

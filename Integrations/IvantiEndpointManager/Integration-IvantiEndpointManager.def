@@ -1,0 +1,51 @@
+{
+    "Description": "Ivanti is a recognized leader in unified endpoint management. Ivanti® Endpoint Manager, powered by Landesk, increases user and IT productivity by helping IT administrators gather detailed device data, automate software and OS deployments, and quickly fix user issues. It integrates and unifies the management of all end-user devices and provides core data and services leveraged by other Ivanti solutions and Ivanti partners.",
+    "DisplayName": "Ivanti Endpoint Manager",
+    "Identifier": "IvantiEndpointManager",
+    "MarketingDisplayName": "Ivanti Endpoint Manager",
+    "Categories": [
+        "Endpoint Security",
+        "IT & Infrastructure"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "IvantiEndpointManager",
+            "PropertyName": "API Root",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://{{ip address}}"
+        },
+        {
+            "IntegrationIdentifier": "IvantiEndpointManager",
+            "PropertyName": "Username",
+            "PropertyDisplayName": "Username",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "IvantiEndpointManager",
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "IvantiEndpointManager",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": "true"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">  <path d=\"M3 3h19v19h-7.823V10.545H3V3z\"/>  <path d=\"M3 14.5h7.823V22H3v-7.5z\"/></svg>",
+    "Version": 3.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/ivanti-endpoint-manager"
+}

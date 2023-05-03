@@ -1,0 +1,33 @@
+{
+    "Id": -1,
+    "Creator": "admin",
+    "IntegrationIdentifier": "GoogleSecurityCommandCenter",
+    "Name": "Enrich Assets",
+    "Description": "Enrich assets using information from Google Security Command Center.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 0,
+    "ModificationTimeUnixTimeInMs": 0,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"asset_name\":\"//appengine.googleapis.com/apps/orbital-signal-xxxx/services/default\",\"asset_result\":{\"siemplify_asset_display_name\":\"test_name\",\"asset\":{\"name\":\"organizations/xxxxx/assets/1035834xxxxx\",\"securityCenterProperties\":{\"resourceName\":\"//appengine.googleapis.com/apps/orbital-signal-xxxx/services/default\",\"resourceType\":\"google.appengine.Service\",\"resourceParent\":\"//appengine.googleapis.com/apps/orbital-signal-xxxxx\",\"resourceProject\":\"//cloudresourcemanager.googleapis.com/projects/xxxxx\",\"resourceOwners\":{\"serviceAccount\":[\"xxxxxx@cloudbuild.gserviceaccount.com\",\"alpha-xxxx-acct@orbital-signal-xxxx.iam.gserviceaccount.com\"],\"user\":[\"olxxxx@brinstar.net\",\"olxxxxxxa@google.com\",\"test-xxxxx@brinstar.net\"]},\"resourceDisplayName\":\"default\",\"resourceParentDisplayName\":\"orbital-signal-xxxxxx\",\"resourceProjectDisplayName\":\"orbital-signal-xxxxxx\"},\"resourceProperties\":{\"split\":{\"allocations\":{\"live\":1}},\"name\":\"apps/orbital-signal-xxxxx/services/default\",\"id\":\"xxxxx\"},\"securityMarks\":{\"name\":\"organizations/xxxxxx/assets/xxxxxx/securityMarks\"},\"createTime\":\"2021-05-27T08:53:00.096Z\",\"updateTime\":\"2021-05-31T17:24:05.171Z\",\"iamPolicy\":{},\"canonicalName\":\"projects/xxxxx/assets/xxxxx\"}}},{\"asset_name\":\"//compute.googleapis.com/projects/prj-n-shared-restricted-xxxx/regions/europe-west1/addresses/xxxx\",\"asset_result\":{\"siemplify_asset_display_name\":\"test_name\",\"asset\":{\"name\":\"organizations/xxxxx/assets/xxxxxx\",\"securityCenterProperties\":{\"resourceName\":\"//compute.googleapis.com/projects/prj-n-shared-restricted-xxxx/regions/europe-west1/addresses/xxxxx\",\"resourceType\":\"google.compute.Address\",\"resourceParent\":\"//cloudresourcemanager.googleapis.com/projects/xxxxx\",\"resourceProject\":\"//cloudresourcemanager.googleapis.com/projects/xxxxx\",\"resourceOwners\":{\"serviceAccount\":[\"org-terraform@cft-seed-xxxxx.iam.gserviceaccount.com\"]},\"resourceDisplayName\":\"dns-forwarding-xxxxx\",\"resourceParentDisplayName\":\"prj-n-shared-restricted-xxxx\",\"resourceProjectDisplayName\":\"prj-n-shared-restricted-xxxx\",\"folders\":[{\"resourceFolder\":\"//cloudresourcemanager.googleapis.com/folders/xxxxx\",\"resourceFolderDisplayName\":\"fldr-non-production\"},{\"resourceFolder\":\"//cloudresourcemanager.googleapis.com/folders/xxxxxx\",\"resourceFolderDisplayName\":\"lz-demo\"}]},\"resourceProperties\":{\"address\":\"10.0.xx.xx\",\"creationTimestamp\":\"2020-11-06T03:23:29.485-08:00\",\"kind\":\"compute#address\",\"name\":\"dns-forwarding-xxxx\",\"purpose\":\"DNS_RESOLVER\",\"subnetwork\":\"https://www.googleapis.com/compute/v1/projects/prj-n-shared-restricted-xxxx/regions/europe-west1/subnetworks/sb-n-shared-restricted-europe-west1\",\"description\":\"\",\"selfLink\":\"https://www.googleapis.com/compute/v1/projects/prj-n-shared-restricted-xxxx/regions/europe-west1/addresses/dns-forwarding-90313a174f3913cd\",\"addressType\":\"INTERNAL\",\"networkTier\":\"PREMIUM\",\"region\":\"https://www.googleapis.com/compute/v1/projects/prj-n-shared-restricted-xxxxx/regions/europe-west1\",\"status\":\"RESERVED\",\"id\":\"xxxxxxx\"},\"securityMarks\":{\"name\":\"organizations/xxxxx/assets/xxxxxxxx/securityMarks\"},\"createTime\":\"2020-11-06T11:23:31.146Z\",\"updateTime\":\"2020-11-06T11:23:31.708Z\",\"iamPolicy\":{},\"canonicalName\":\"projects/xxxxx/assets/xxxxxx\"}}}]",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "Name": "Asset Resource Names",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify a comma-separated list of resource names of the assets for which you want to return data.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": [\"ALERT\", \"HOSTNAME\", \"USERUNIQNAME\", \"ADDRESS\", \"MacAddress\", \"PROCESS\", \"FILENAME\", \"FILEHASH\", \"DestinationURL\", \"THREATSIGNATURE\", \"EMAILSUBJECT\", \"USB\", \"EVENT\", \"CVEID\", \"DEPLOYMENT\", \"CREDITCARD\", \"PHONENUMBER\", \"CVE\", \"THREATACTOR\", \"THREATCAMPAIGN\", \"GENERICENTITY\"]}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

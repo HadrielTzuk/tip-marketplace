@@ -1,0 +1,121 @@
+[
+    {
+        "ChangeDescription": "Added support for unicode characters.(Ex. Hebrew)",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 12.0,
+        "ItemName": "PaloAltoNGFW",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1325"
+    },
+    {
+        "ChangeDescription": "Removed sensitive data from logs",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 13.0,
+        "ItemName": "PaloAltoNGFW",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1589441512,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3018"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 14.0,
+        "ItemName": "PaloAltoNGFW",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Fixed a bug, where action \"Commit Changes\" wouldn't work, when \"Only My Changes\" option is enabled.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 15.0,
+        "ItemName": "Commit Changes",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1606820480,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5704"
+    },
+    {
+        "ChangeDescription": "Added support for shared objects in actions \"Unblock Urls\" \"Block Urls\", \"Remove Ips from group\", \"Add Ips to group\" in Palo Alto NGFW.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 16.0,
+        "ItemName": "PaloAltoNGFW",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1623145530,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8315"
+    },
+    {
+        "ChangeDescription": "Add Ips to group, Remove Ips from group, Block Urls, Unblock Urls, Block Ips in policy, Unblock Ips in policy - Added more context to the JSON Result.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 17.0,
+        "ItemName": "PaloAltoNGFW",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1631090615,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9614"
+    },
+    {
+        "ChangeDescription": "Security enhancements throughout the integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 18.0,
+        "ItemName": "PaloAltoNGFW",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1636521986,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "Integration Actions - Improved error handling.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 19.0,
+        "ItemName": "PaloAltoNGFW",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1657692968,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11756"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 20.0,
+        "ItemName": "PaloAltoNGFW",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Palo Alto Next Gen Firewall - Added certificate verification for the integration configuration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 21.0,
+        "ItemName": "PaloAltoNGFW",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1667989752,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10836"
+    }
+]

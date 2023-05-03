@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1534427144826,
+    "Creator": "Admin",
+    "Description": "Get alert data by id.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"name\": \"MALWARE: Blacklisted File Detected\", \"assignTo\": \"---\", \"description\": {\"definition\": \"A McAfee-maintained blacklist that is dynamically updated with Callback Detectors updates.\", \"signatures\": [{\"conditions\": \"null\"}], \"componentAttacks\": \"null\", \"target\": \"ServerOrClient\", \"reference\": {\"cveId\": \"[]\", \"certId\": \"null\", \"bugtraqId\": \"[]\", \"nspId\": \"0x4840c300\", \"microsoftId\": \"[]\", \"additionInfo\": \"null\", \"arachNidsId\": \"[]\"}, \"protocals\": \"[smtp, ftp, http]\", \"comments\": {\"availabeToChildDomains\": \"true\", \"parentDomainComments\": \"null\", \"comments\": \"\"}, \"rfSB\": \"No\", \"attackCategory\": \"Malware\", \"attackSubCategory\": \"---\", \"protectionCategory\": \"[Malware/Bot]\", \"httpResponseAttack\": \"No\", \"btf\": \"Medium\"}, \"summary\": {\"destination\": \"null\", \"zoombie\": \"null\", \"target\": {\"ipAddrs\": \"1.1.1.1\", \"risk\": \"N/A\", \"country\": \"India\", \"networkObject\": \"---\", \"hostName\": \"null\", \"vmName\": \"null\", \"proxyIP\": \"1.1.1.1\", \"user\": \"Unknown\", \"os\": \"---\", \"port\": 41128}, \"attacker\": {\"ipAddrs\": \"1.1.1.1\", \"risk\": \"N/A\", \"country\": \"India\", \"networkObject\": \"---\", \"hostName\": \"null\", \"vmName\": \"null\", \"proxyIP\": \"1.1.1.1\", \"user\": \"Unknown\", \"os\": \"---\", \"port\": 80}, \"cAndcServer\": \"null\", \"source\": \"null\", \"compromisedEndpoint\": \"null\", \"attackedHIPEndpoint\": {\"ipAddrs\": \"1.1.1.1\", \"risk\": \"N/A\", \"country\": \"India\", \"networkObject\": \"---\", \"hostName\": \"null\", \"vmName\": \"null\", \"proxyIP\": \"1.1.1.1\", \"user\": \"Unknown\", \"os\": \"---\", \"port\": 41128}, \"fastFluxAgent\": \"null\", \"event\": {\"domain\": \"My Company\", \"protocol\": \"http\", \"zone\": \"null\", \"alertId\": \"2246015847757997493\", \"attackCount\": 1, \"vlan\": \"-11\", \"direction\": \"Inbound\", \"detection\": \"Signature\", \"application\": \"HTTP\", \"device\": \"NS9100-50\", \"result\": \"Inconclusive\", \"time\": \"Jan 04, 2016 09:50:39\", \"relevance\": \"Unknown\", \"matchedPolicy\": \"CustomFP_Engine_With_AlertOnly\", \"interface\": \"G3/1-G3/2\"}}, \"details\": {\"malwareFile\": {\"engine\": \"Manager Blacklist\", \"fileHash\": \"3f3f7c3b9722912ddeddf006cff9d9d0\", \"malwareConfidence\": \"Very High\", \"malwareName\": \"null\", \"fileName\": \"/Firewall.cpl\", \"size\": \"6144 bytes\"}, \"exceededThreshold\": \"null\", \"callbackDetectors\": \"null\", \"layer7\": {\"httpReturnCode\": 200, \"httpURI\": \"/Firewall.cpl\", \"httpRequestMethod\": \"GET\", \"httpServerType\": \"Apache/2.2.13 (Fedora) Last - Modified: Wed, 10 Oct 2012 05: 19: 15 GMT \", \"httpHostHeader\": \"null\", \"httpUserAgent\": \"Wget/1.11.4 (Red Hat modified)\"}, \"portScan\": \"null\", \"sqlInjection\": \"null\", \"triggeredComponentAttacks\": \"null\", \"hostSweep\": \"null\", \"matchedSignature\": \"null\", \"communicationRuleMatch\": \"null\", \"fastFlux\": \"null\"}, \"alertState\": \"UnAcknowledged\", \"uniqueAlertId\": \"6245941293374080682\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "McAfeeNSM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1534427144826,
+    "Name": "Get Alert Info Data",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534427144826,
+            "CustomActionId": 20333,
+            "DefaultValue": null,
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534427144826,
+            "Name": "Alert ID",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1534427144826,
+            "CustomActionId": 20333,
+            "DefaultValue": null,
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1534427144826,
+            "Name": "Sensor Name",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\nfrom NSMManager import NsmManager\n\n\n# Consts\nACTION_SCRIPT_NAME = 'NSM Get Alert Details'\nNSM_PROVIDER = 'McAfeeNSM'\nTABLE_NAME = 'Alert Details: {0}'\n\n\ndef main():\n    # Define variables.\n    result_value = False\n\n    # Configuration.\n    siemplify = SiemplifyAction()\n    # Script Name.\n    siemplify.script_name = ACTION_SCRIPT_NAME\n    conf = siemplify.get_configuration(NSM_PROVIDER)\n    nsm_manager = NsmManager(conf['API Root'], conf['Username'], conf['Password'], conf['Domain ID'],\n                             conf['Siemplify Policy Name'], conf['Sensors Names List Comma Separated'])\n\n    # Parameters.\n    alert_id = siemplify.parameters.get('Alert ID')\n    sensor_name = siemplify.parameters.get('Sensor Name')\n\n    alert_data = nsm_manager.get_alert_info_by_id(alert_id, sensor_name)\n\n    if alert_data:\n        siemplify.result.add_data_table(TABLE_NAME.format(alert_id), flat_dict_to_csv(dict_to_flat(alert_data)))\n        result_value = True\n\n    if result_value:\n        output_message = 'Found alert info data for alert with ID - \"{0}\"'.format(alert_id)\n    else:\n        output_message = 'Not found alert info data for alert with ID - \"{0}\"'.format(alert_id)\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "alert_json",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

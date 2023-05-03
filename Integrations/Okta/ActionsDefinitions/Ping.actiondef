@@ -1,0 +1,17 @@
+{
+    "Name": "Ping",
+    "Description": "Test Connection With Okta",
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom OktaManager import OktaManager\n\nPROVIDER = \"Okta\"\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(PROVIDER)\n    okta = OktaManager(api_root=conf['Api Root'], api_token=conf['Api Token'],\n                       verify_ssl=conf['Verify SSL'].lower() == 'true')\n    try:\n        success = okta.test_connectivity()\n        #if success:\n        output_message = \"Connection Established Successfully\"\n        #else:\n    except Exception as err:\n        raise Exception(\"Connection Failed: \" + err.message)\n    siemplify.end(output_message, success)\n\nif __name__ == '__main__':\n    main()",
+    "IntegrationIdentifier": "Okta",
+    "ScriptResultName": "Success",
+    "DynamicScriptResultNamesJson": "[\"ResultJson\"]",
+    "Creator": "System",
+    "IsEnabled": true,
+    "IsCustom": false,
+    "Version": 3.0,
+    "Parameters": [],
+    "Id": -1,
+    "CreationTimeUnixTimeInMs": 1548084442999,
+    "ModificationTimeUnixTimeInMs": 1548084443111,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

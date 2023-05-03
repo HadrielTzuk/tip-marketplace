@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1529220580125,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "Tor",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1529220580125,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom TorManager import TorManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(\"Tor\")\n    use_ssl = conf.get('Use SSL', 'False')\n\n    if use_ssl.lower() == 'true':\n        use_ssl = True\n    else:\n        use_ssl = False\n\n    tor_manager = TorManager(use_ssl=use_ssl)\n\n    # Test connectivity\n    tor_manager.test_connectivity()\n    siemplify.end(\"Connected successfully.\", 'true')\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

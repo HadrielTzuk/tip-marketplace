@@ -1,0 +1,151 @@
+[
+    {
+        "ChangeDescription": "Added support for unicode characters.(Ex. Hebrew)",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "IronPort",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1325"
+    },
+    {
+        "ChangeDescription": "Action refactored. Action now supports unicode in email subjects. Action input parameters were updated: - New mandatory action input parameter was added - Search Emails for Last X Days. Parameter has a default value. - New mandatory action input parameter was added - Max Recipients to Return. Parameter has a default value.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "GetAllRecipientsBySubject",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3191"
+    },
+    {
+        "ChangeDescription": "Action refactored. Action input parameters were updated: - New mandatory action input parameter was added - Search Emails for Last X Days. Parameter has a default value. - New mandatory action input parameter was added - Max Recipients to Return. Parameter has a default value.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "GetAllRecipientsBySender",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3422"
+    },
+    {
+        "ChangeDescription": "Action refactored.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Ping",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3423"
+    },
+    {
+        "ChangeDescription": "Action refactored.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "AddSendertoBlocklsit",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3424"
+    },
+    {
+        "ChangeDescription": "Action refactored. In action, mail_sender_ip_hostname_detail and mail_incoming_ip_hostname_detail reports work based on Siemplify IP or Host entities;  mail_users_detail works on Siemplify User entity (with email address). Other reports are working without Siemplify entities. Action input parameters were updated: - New mandatory action input parameter was added - Search Reports Data for Last X Days. Parameter has a default value. - New mandatory action input parameter was added - Max Records to Return. Parameter has a default value.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "GetReport",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3430"
+    },
+    {
+        "ChangeDescription": "Integration configuration page updated: - added separate fields to specify AsyncOS REST API and SSH ports - added a \"Use SSL\" checkbox to specify whether AsynOS REST API should be accessed over HTTP or HTTPS.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "IronPort",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3421"
+    },
+    {
+        "ChangeDescription": "Updated integration image and logo to Cisco's image and logo",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "IronPort",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1599033687,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4283"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "IronPort",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Added the option to add CA Certificate file to the integration configuration page.\nPlease note - the certificate file should be parsed into base64 string and put into the configuration parameter for now. It will be changed to accept a file soon.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "IronPort",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1606820480,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5975"
+    },
+    {
+        "ChangeDescription": " Updated Get all Recipients by Sender and Get all Recipients by Subject actions to be able to specify less time frame to search for.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "IronPort",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1614677797,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5084"
+    },
+    {
+        "ChangeDescription": "REGRESSIVE - Add Sender To Blocklist - We are removing this action from the integration in order to comply with security best practices in our Marketplace. Please note that if you update the integration, this action will be removed from your integration. Please keep that in mind and review your playbooks before updating. Please contact your Customer Success Manager for more information.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "IronPort",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1637151679,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "TIPG-10499"
+    },
+    {
+        "ChangeDescription": "IronPort - Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "IronPort",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1663749893,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11417"
+    }
+]

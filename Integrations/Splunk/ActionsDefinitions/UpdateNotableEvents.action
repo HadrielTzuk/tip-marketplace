@@ -1,0 +1,101 @@
+{
+    "CreationTimeUnixTimeInMs": 1517760859856,
+    "Creator": "admin",
+    "Description": "Update notable events in Splunk ES. Note: This action is only supported for Splunk ES.",
+    "Id": -1,
+    "IntegrationIdentifier": "Splunk",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1517760859856,
+    "Name": "Update Notable Events",
+    "Parameters": [
+        {
+            "Name": "Notable Event IDs",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify IDs of notable events. Example:1A082D7B-D5A1-4A2B-BB94-41C439BE3EB7@@notable@@cb87390ae72763679d3f6f8f097ebe2b,1D234D5B-1531-2D2B-BB94-41C439BE12B7@@notable@@cb87390ae72763679d3f6f8f097ebe2b",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Status",
+            "Type": 15,
+            "DefaultValue": "Select One",
+            "Value": "Select One",
+            "IsMandatory": false,
+            "Description": "Specify the new status for notable events.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "OptionalValues": [
+                "Select One",
+                "Unassigned",
+                "New",
+                "In Progress",
+                "Pending",
+                "Resolved",
+                "Closed"
+            ]
+        },
+        {
+            "Name": "Urgency",
+            "Type": 15,
+            "DefaultValue": "Select One",
+            "Value": "Select One",
+            "IsMandatory": false,
+            "Description": "Specify the new urgency for the notable event.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "OptionalValues": [
+                "Select One",
+                "Critical",
+                "High",
+                "Medium",
+                "Low",
+                "Informational"
+            ]
+        },
+        {
+            "Name": "New Owner",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the new owner of the notable event.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Comment",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify comment for the notable event.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Disposition",
+            "Type": 15,
+            "DefaultValue": "Select One",
+            "Value": "Select One",
+            "IsMandatory": false,
+            "Description": "Specify the disposition for the notable event.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "OptionalValues": [
+                "Select One",
+                "True Positive - Suspicious Activity",
+                "Benign Positive - Suspicious But Expected",
+                "False Positive - Incorrect Analytic Logic",
+                "False Positive - Inaccurate Data",
+                "Other"
+            ]
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0
+}

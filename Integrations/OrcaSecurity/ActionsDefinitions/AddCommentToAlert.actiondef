@@ -1,0 +1,45 @@
+{
+    "Id": -1,
+    "Creator": "admin",
+    "IntegrationIdentifier": "OrcaSecurity",
+    "Name": "Add Comment To Alert",
+    "Description": "Add a comment to alert in Orca Security.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 0,
+    "ModificationTimeUnixTimeInMs": 0,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "{\"unique_id\":\"387xxxxxx\",\"user_email\":\"test@example.com\",\"user_name\":\"test name\",\"alert_id\":\"orca-xxx\",\"asset_unique_id\":\"AwsIamRole_57xxxxxxxxxx_e739eb76-918b-42d3-1d8b-bcxxxxxxxxxx\",\"create_time\":\"2022-05-10T07:18:13+00:00\",\"type\":\"comment\",\"details\":{\"description\":\"Added comment\",\"comment\":\"test comment\"}}",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "Name": "Alert ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the ID of the alert to which action needs to add a comment.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Comment",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the comment that needs to be added to alert.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

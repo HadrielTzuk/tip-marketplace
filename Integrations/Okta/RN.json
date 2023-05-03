@@ -1,0 +1,74 @@
+[
+    {
+        "ChangeDescription": "Added new integration with Okta",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Okta",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1573662385,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-532"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Okta",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Get User - Added JSON Result to the action.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Get User",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1657692968,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12421"
+    },
+    {
+        "ChangeDescription": "Security enhancements throughout the integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Okta",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1658294355,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11772"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Okta",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Get User - Updated action input handling.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Get User",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1681862400,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "276272487"
+    }
+]

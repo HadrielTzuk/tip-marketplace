@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "New integration \"Armis\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Armis",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1618312410,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-7983"
+    },
+    {
+        "ChangeDescription": "Alerts Connector - Updated connector's logic to use a different attribute for ID, due to Armis API changes.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Alerts Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1643792207,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11132"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "Armis",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Armis",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

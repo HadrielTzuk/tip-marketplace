@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 18.2</h2><h5>Published on 28 July, 2022</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     Cylance\n    </b>\n   </li>\n   <ul>\n    <li>\n     Cylance\n    </li>\n    <ul>\n     <li>\n      Get Global List, Get Threat Devices, Get Threats - Added unicode support.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Actions</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     Exchange\n    </b>\n   </li>\n   <ul>\n    <li>\n     DeleteMail\n    </li>\n    <ul>\n     <li>\n      Delete Mail - Added an ability to specify mailboxes that need to be searched.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     MicrosoftAzureSentinel\n    </b>\n   </li>\n   <ul>\n    <li>\n     Microsoft Azure Sentinel Incident Connector v2\n    </li>\n    <ul>\n     <li>\n      Microsoft Azure Sentinel Incident Connector v2 - Added an option to ingest Microsoft Azure Sentinel incidents with 0 entities.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "18.2",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "28/07/22",
+    "Title": "Release Notes"
+}

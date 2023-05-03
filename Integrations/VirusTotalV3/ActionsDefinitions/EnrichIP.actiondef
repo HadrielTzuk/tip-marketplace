@@ -1,0 +1,135 @@
+{
+    "CreationTimeUnixTimeInMs": "1570446244",
+    "Creator": "admin",
+    "Description": "Enrich IP using information from VirusTotal. Supported entities: IP address.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"results\": [{\"Entity\": \"192.16x.x.x\", \"EntityResult\": {\"execution_status\": \"success\", \"widget_url\": \"https://www.virustotal.com/ui/widget/html/\", \"widget_html\": \"\", \"attributes\": {\"last_analysis_results\": {\"ADMINUSLabs\": {\"category\": \"harmless\", \"engine_name\": \"ADMINUSLabs\", \"method\": \"blacklist\", \"result\": \"clean\"}, \"AegisLab WebGuard\": {\"category\": \"harmless\", \"engine_name\": \"AegisLab WebGuard\", \"method\": \"blacklist\", \"result\": \"clean\"}, \"AlienVault\": {\"category\": \"harmless\", \"engine_name\": \"AlienVault\", \"method\": \"blacklist\", \"result\": \"clean\"}, \"Antiy-AVL\": {\"category\": \"harmless\", \"engine_name\": \"Antiy-AVL\", \"method\": \"blacklist\", \"result\": \"clean\"}, \"Armis\": {\"category\": \"harmless\", \"engine_name\": \"Armis\", \"method\": \"blacklist\", \"result\": \"clean\"}, \"desenmascara.me\": {\"category\": \"harmless\", \"engine_name\": \"desenmascara.me\", \"method\": \"blacklist\", \"result\": \"clean\"}, \"malwares.com URL checker\": {\"category\": \"harmless\", \"engine_name\": \"malwares.com URL checker\", \"method\": \"blacklist\", \"result\": \"clean\"}, \"securolytics\": {\"category\": \"harmless\", \"engine_name\": \"securolytics\", \"method\": \"blacklist\", \"result\": \"clean\"}, \"zvelo\": {\"category\": \"harmless\", \"engine_name\": \"zvelo\", \"method\": \"blacklist\", \"result\": \"clean\"}}, \"last_analysis_stats\": {\"harmless\": 87, \"malicious\": 0, \"suspicious\": 0, \"timeout\": 0, \"undetected\": 10}, \"last_modification_date\": 1606937955, \"reputation\": 11, \"tags\": [\"private\"], \"total_votes\": {\"harmless\": 12, \"malicious\": 1}, \"whois\": \"NetRange: 192.16x.x.x - 192.16x.x.x\\nCIDR: 192.16x.x.x/16\\nNetName: PRIVATE-ADDRESS-CBLK-RFC1918-IANA-RESERVED\\nNetHandle: NET-192-16x-x-x-1\\nParent: NET192 (NET-192-0-0-0-0)\\nNetType: IANA Special Use\\nOriginAS: \\nOrganization: Internet Assigned Numbers Authority (IANA)\\nRegDate: 1994-03-15\\nUpdated: 2013-08-30\\nComment: These addresses are in use by many millions of independently operated networks, which might be as small as a single computer connected to a home gateway, and are automatically configured in hundreds of millions of devices. They are only intended for use within a private context and traffic that needs to cross the Internet will need to use a different, unique address.\\r\\nComment: \\r\\nComment: These addresses can be used by anyone without any need to coordinate with IANA or an Internet registry. The traffic from these addresses does not come from ICANN or IANA. We are not the source of activity you may see on logs or in e-mail records. Please refer to http://www.iana.org/abuse/answers\\r\\nComment: \\r\\nComment: These addresses were assigned by the IETF, the organization that develops Internet protocols, in the Best Current Practice document, RFC 1918 which can be found at:\\r\\nComment: http://datatracker.ietf.org/doc/rfc1918\\nRef: https://rdap.arin.net/registry/ip/192.16x.x.x\\nOrgName: Internet Assigned Numbers Authority\\nOrgId: IANA\\nAddress: 12025 Waterfront Drive\\r\\nAddress: Suite 300\\nCity: Los Angeles\\nStateProv: CA\\nPostalCode: 90292\\nCountry: US\\nRegDate: \\nUpdated: 2012-08-31\\nRef: https://rdap.arin.net/registry/entity/IANA\\nOrgTechHandle: IANA-IP-ARIN\\nOrgTechName: ICANN\\nOrgTechPhone: +1-310-301-5xxx \\nOrgTechEmail: abuse@iana.org\\nOrgTechRef: https://rdap.arin.net/registry/entity/IANA-IP-ARIN\\nOrgAbuseHandle: IANA-IP-ARIN\\nOrgAbuseName: ICANN\\nOrgAbusePhone: +1-310-301-5xxx \\nOrgAbuseEmail: abuse@xxxx.org\\nOrgAbuseRef: https://rdap.arin.net/registry/entity/IANA-IP-ARIN\\n\", \"whois_date\": 1604797603}, \"id\": \"192.16x.x.x\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/ip_addresses/192.16x.x.x\"}, \"type\": \"ip_address\", \"comments\": [{\"attributes\": {\"date\": 1605448527, \"html\": \"normal ip \", \"tags\": [], \"text\": \"normal ip \", \"votes\": {\"abuse\": 0, \"negative\": 0, \"positive\": 0}}, \"id\": \"i-192.16x.x.x-3daxxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/comments/i-192.16x.x.x-3dxxxx\"}, \"type\": \"comment\"}, {\"attributes\": {\"date\": 1605389242, \"html\": \"common router ip address<br />#safe #ip #network\", \"tags\": [\"safe\", \"ip\", \"network\"], \"text\": \"common router ip address\\n#safe #ip #network\", \"votes\": {\"abuse\": 0, \"negative\": 0, \"positive\": 0}}, \"id\": \"i-192.16x.x.x-495xxxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/comments/i-192.16x.x.x-495xxxx\"}, \"type\": \"comment\"}, {\"attributes\": {\"date\": 1596742979, \"html\": \"lol\", \"tags\": [], \"text\": \"lol\", \"votes\": {\"abuse\": 0, \"negative\": 0, \"positive\": 0}}, \"id\": \"i-192.16x.x.x-c98xxxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/comments/i-192.16x.x.x-c98xxxx\"}, \"type\": \"comment\"}, {\"attributes\": {\"date\": 1593669190, \"html\": \"This IP was carrying out SSH bruteforce attack on 02-Jul-2020 (10:45:06.935387)\", \"tags\": [], \"text\": \"This IP was carrying out SSH bruteforce attack on 02-Jul-2020 (10:45:06.935387)\", \"votes\": {\"abuse\": 0, \"negative\": 0, \"positive\": 0}}, \"id\": \"i-192.16x.x.x-8018xxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/comments/i-192.16x.x.x-8018xxx\"}, \"type\": \"comment\"}, {\"attributes\": {\"date\": 1593627348, \"html\": \"This IP was carrying out SSH bruteforce attack on 01-Jul-2020 (16:31:52.434387)\", \"tags\": [], \"text\": \"This IP was carrying out SSH bruteforce attack on 01-Jul-2020 (16:31:52.434387)\", \"votes\": {\"abuse\": 0, \"negative\": 0, \"positive\": 0}}, \"id\": \"i-192.16x.x.x-9d4xxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/comments/i-192.16x.x.x-9d4xxx\"}, \"type\": \"comment\"}, {\"attributes\": {\"date\": 1592919494, \"html\": \"This IP was carrying out SSH bruteforce attack on 23-Jun-2020 (12:42:14.959049)\", \"tags\": [], \"text\": \"This IP was carrying out SSH bruteforce attack on 23-Jun-2020 (12:42:14.959049)\", \"votes\": {\"abuse\": 0, \"negative\": 0, \"positive\": 0}}, \"id\": \"i-192.16x.x.x-c06xxxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/comments/i-192.16x.x.x-c06xxx\"}, \"type\": \"comment\"}, {\"attributes\": {\"date\": 1592838875, \"html\": \"This IP was carrying out SSH bruteforce attack on 22-Jun-2020 (17:26:46.313363)\", \"tags\": [], \"text\": \"This IP was carrying out SSH bruteforce attack on 22-Jun-2020 (17:26:46.313363)\", \"votes\": {\"abuse\": 0, \"negative\": 0, \"positive\": 0}}, \"id\": \"i-192.168.x.x-093xxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/comments/i-192.16x.x.x-093xxx\"}, \"type\": \"comment\"}, {\"attributes\": {\"date\": 1592541570, \"html\": \"This IP was carrying out SSH bruteforce attack on 19-Jun-2020 (09:32:43.439549)\", \"tags\": [], \"text\": \"This IP was carrying out SSH bruteforce attack on 19-Jun-2020 (09:32:43.439549)\", \"votes\": {\"abuse\": 0, \"negative\": 0, \"positive\": 0}}, \"id\": \"i-192.16x.x.x-40a5xxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/comments/i-192.16x.x.x-40a5xxx\"}, \"type\": \"comment\"}, {\"attributes\": {\"date\": 1590169005, \"html\": \"<strong>login</strong> interface of routers\", \"tags\": [], \"text\": \"[b]login[/b] interface of routers\", \"votes\": {\"abuse\": 0, \"negative\": 0, \"positive\": 0}}, \"id\": \"i-192.16x.x.x-ac57xxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/comments/i-192.16x.x.x-ac57xxx\"}, \"type\": \"comment\"}, {\"attributes\": {\"date\": 1588893055, \"html\": \"A Regular Router IP Adress\", \"tags\": [], \"text\": \"A Regular Router IP Adress\", \"votes\": {\"abuse\": 0, \"negative\": 0, \"positive\": 0}}, \"id\": \"i-192.16x.x.x-c53xxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/comments/i-192.16x.x.x-c53xxx\"}, \"type\": \"comment\"}]}}], \"is_risky\": false}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "VirusTotalV3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Enrich IP",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify how many engines should mark the entity as malicious or suspicious, for Siemplify to label it as suspicious. Note: if \"Engine Whitelist\" contains values, action will only count results from those engines.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Engine Threshold",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the percentage of engines should mark the entity as malicious or suspicious, for Siemplify to label it as suspicious. Note: if \"Engine Whitelist\" contains values, action will only count the percentage from those engines. If both \"Engine Threshold\" and \"Engine Percentage Threshold\" are provided, \"Engine Threshold\" will be used. Maximum value: 100. Minimum: 0.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Engine Percentage Threshold",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of engines that should be used to retrieve information, whether an entity is malicious or not. Example: AlienVault,Kaspersky. Note: if nothing is specified in this parameter, action will take results from every available engine. If the engine didn't return any information about the entity it’s not going to be counted for the parameters \"Engine Threshold\" and \"Engine Percentage Threshold\".",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Engine Whitelist",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will retrieve comments about the entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Retrieve Comments",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will create an insight containing information about the entities.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Create Insight",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will only create an insight for suspicious entities. Note: parameter \"Create Insight\" should be enabled.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Only Suspicious Entity Insight",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "10",
+            "Description": "Specify how many comments to return. Default: 10",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Max Comments To Return",
+            "Type": 0,
+            "Value": "10"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "Dark",
+            "Description": "Specify the theme for the widget.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Widget Theme",
+            "Type": 15,
+            "Value": "Dark",
+            "OptionalValues": [
+                "Light",
+                "Dark"
+            ]
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will fetch augmented widget related to the entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Fetch Widget",
+            "Type": 1,
+            "Value": true
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}",
+    "Type": 0,
+    "Version": 1.0
+}

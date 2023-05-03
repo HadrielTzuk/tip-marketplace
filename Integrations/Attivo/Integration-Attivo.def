@@ -1,0 +1,51 @@
+{
+    "Description": "Efficiently derail attacker discovery, lateral movement, privilege escalation, & collection activities early in the attack cycle with Attivo.",
+    "DisplayName": "Attivo",
+    "Identifier": "Attivo",
+    "MarketingDisplayName": "Attivo",
+    "Categories": [
+        "Network Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Attivo",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https:/{{ip address}}"
+        },
+        {
+            "IntegrationIdentifier": "Attivo",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Attivo",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Attivo",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\"><path d=\"M5.063 23H2l8.75-21h3.063L23 23h-3.063l-1.19-2.025a.998.998 0 00-.327-.339l-8.983-5.679 5.837 1.987a1 1 0 001.253-1.311L12.062 4.234 5.063 23z\"/></svg>",
+    "Version": 3.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/attivo"
+}

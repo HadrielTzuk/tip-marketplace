@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1516267324982,
+    "Creator": "admin",
+    "Description": "Add a comment to a issue",
+    "Id": -1,
+    "IntegrationIdentifier": "Jira",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1516267324982,
+    "Name": "Add Comment",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516267455235,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The issue key of the issue, i.e: ABC-123",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516267455235,
+            "Name": "Issue Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516267455235,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The comment content to add to the issue",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516267455235,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "comment_id",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

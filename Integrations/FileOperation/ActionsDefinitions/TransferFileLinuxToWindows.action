@@ -1,0 +1,90 @@
+{
+    "CreationTimeUnixTimeInMs": 1511344949667,
+    "Creator": "admin",
+    "Description": "Transfer file from windows share to remote Linux host",
+    "Id": -1,
+    "IntegrationIdentifier": "FileOperation",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511344949667,
+    "Name": "Transfer File Linux To Windows",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1511799988450,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The remote server folder with the relevant files. Full path",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799988450,
+            "Name": "source_linux_file_path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799988450,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "x.x.x.x",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799988450,
+            "Name": "source_linux_ip",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799988450,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799988450,
+            "Name": "source_linux_username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799988450,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799988450,
+            "Name": "source_linux_password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799988450,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The server folder to put the files into",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799988450,
+            "Name": "dest_win_path",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511799988450,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "Indicates weather to keep the file in source or remove it",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511799988450,
+            "Name": "keep_file",
+            "Type": 1,
+            "Value": ""
+        }
+    ],
+    "Script": "from FileOperationManager import FileOperationManager\nfrom SiemplifyAction import *\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    file_manager = FileOperationManager()\n    source_linux_file = siemplify.parameters['source_linux_file_path']\n    source_linux_ip = siemplify.parameters['source_linux_ip']\n    source_linux_username = siemplify.parameters['source_linux_username']\n    source_linux_password = siemplify.parameters['source_linux_password']\n    dest_win_path = siemplify.parameters['dest_win_path']\n    keep_file = siemplify.parameters['keep_file']\n    transfer_result = file_manager.transfer_file_unix_to_win(source_linux_ip, source_linux_username,\n                                                             source_linux_password, source_linux_file,\n                                                             dest_win_path, keep_file)\n\n    output_message = \"Transfer File {0} to -> {1} completed \".format(source_linux_file, dest_win_path)\n    result_value = transfer_result\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()",
+    "ScriptResultName": "FilePath",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

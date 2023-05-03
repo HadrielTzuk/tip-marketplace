@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1520849387881, 
+    "Creator": "admin", 
+    "Description": "Isolate an endpoint from the network", 
+    "Id": -1, 
+    "IntegrationIdentifier": "CBResponse", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1520849387881, 
+    "Name": "Isolate Host", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

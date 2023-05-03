@@ -1,0 +1,118 @@
+{
+    "CreationTimeUnixTimeInMs": 1511165868441,
+    "Creator": "admin",
+    "Description": "Wait for user's response based on an email sent via Send Email action. Note: please adjust the async timeout for action (polling timeout) and global action timeout in Siemplify server configuration as needed. Action input parameter \"How long to wait for recipient reply (minutes)\" cant be bigger than Siemplify server global timeout value.",
+    "Id": -1,
+    "IntegrationIdentifier": "Exchange",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1511165868441,
+    "Name": "Wait for mail from user",
+    "DynamicResultsMetadata": [
+    {
+        "ResultExample": "{\"Responses\": [{\"recipient\": \"some_other_mail_3@siemplifylab.local\", \"content\": {\"mime_content\": \"Received: from EX001.siemplifylab.local (0.0.0.0) by\\r\\n EX001.siemplifylab.local (0.0.0.0) with Microsoft SMTP Server\\r\\n (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id 0.0.0.0\\r\\n via Mailbox Transport; Thu, 8 Oct 2020 08:39:35 -0700\\r\\nReceived: from EX001.siemplifylab.local (0.0.0.0) by\\r\\n EX001.siemplifylab.local (0.0.0.0) with Microsoft SMTP Server\\r\\n (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id\\r\\n 0.0.0.0; Thu, 8 Oct 2020 08:39:34 -0700\\r\\nReceived: from EX001.siemplifylab.local ([0000::0000:0000:0000:0000]) by\\r\\n EX001.siemplifylab.local ([0000::0000:0000:0000:0000%5]) with mapi id\\r\\n 00.00.0000.000; Thu, 8 Oct 2020 08:39:34 -0700\\r\\nFrom: some_other_mail_3 <some_other_mail_3@siemplifylab.local>\\r\\nTo: some_other_mail_3 <some_other_mail_3@siemplifylab.local>\\r\\nSubject: Re: *h1test\\r\\nThread-Topic: *h1test\\r\\nThread-Index: AQHWnYjyAIejNr20W0S3qVKQbznvY6mN11k+\\r\\nDate: Thu, 8 Oct 2020 15:39:34 +0000\\r\\nMessage-ID: <some_mail@siemplifylab.local>\\r\\nReferences: <some_other_mail@siemplifylab.local>\\r\\nIn-Reply-To: <some_other_mail@siemplifylab.local>\\r\\nAccept-Language: en-US\\r\\nContent-Language: en-US\\r\\nX-MS-Exchange-Organization-AuthAs: Internal\\r\\nX-MS-Exchange-Organization-AuthMechanism: 04\\r\\nX-MS-Exchange-Organization-AuthSource: EX001.siemplifylab.local\\r\\nX-MS-Has-Attach:\\r\\nX-MS-Exchange-Organization-Network-Message-Id:\\r\\n\\tad1fcc4b-55e0-4cc1-a39f-08d86ba05ba1\\r\\nX-MS-Exchange-Organization-SCL: -1\\r\\nX-MS-TNEF-Correlator:\\r\\nX-MS-Exchange-Organization-RecordReviewCfmType: 0\\r\\nContent-Type: multipart/alternative;\\r\\n\\tboundary=\\\"_000_some_mailsiemplifylablocal_\\\"\\r\\nMIME-Version: 1.0\\r\\n\\r\\n--_000_some_mailsiemplifylablocal_\\r\\nContent-Type: text/plain; charset=\\\"iso-8859-1\\\"\\r\\nContent-Transfer-Encoding: quoted-printable\\r\\n\\r\\n*h1 reply\\r\\n\\r\\n________________________________\\r\\nFrom: some_other_mail_3\\r\\nSent: Thursday, October 8, 2020 5:37:36 PM\\r\\nTo: some_other_mail_3; Test User1\\r\\nSubject: *h1test\\r\\n\\r\\n\\r\\n*h1test\\r\\n\\r\\n--_000_some_mailsiemplifylablocal_\\r\\nContent-Type: text/html; charset=\\\"iso-8859-1\\\"\\r\\nContent-Transfer-Encoding: quoted-printable\\r\\n\\r\\n<html>\\r\\n<head>\\r\\n<meta http-equiv=3D\\\"Content-Type\\\" content=3D\\\"text/html; charset=3Diso-8859-=\\r\\n1\\\">\\r\\n<style type=3D\\\"text/css\\\" style=3D\\\"display:none;\\\"><!-- P {margin-top:0;margi=\\r\\nn-bottom:0;} --></style>\\r\\n</head>\\r\\n<body dir=3D\\\"ltr\\\">\\r\\n<style type=3D\\\"text/css\\\" style=3D\\\"display:none;\\\"><!-- P {margin-top:0;margi=\\r\\nn-bottom:0;} --></style>\\r\\n<div id=3D\\\"divtagdefaultwrapper\\\" style=3D\\\"font-size:12pt;color:#000000;font=\\r\\n-family:Calibri,Helvetica,sans-serif;\\\" dir=3D\\\"ltr\\\">\\r\\n<p>*h1 reply</p>\\r\\n</div>\\r\\n<hr style=3D\\\"display:inline-block;width:98%\\\" tabindex=3D\\\"-1\\\">\\r\\n<div id=3D\\\"divRplyFwdMsg\\\" dir=3D\\\"ltr\\\"><font face=3D\\\"Calibri, sans-serif\\\" st=\\r\\nyle=3D\\\"font-size:11pt\\\" color=3D\\\"#000000\\\"><b>From:</b> some_other_mail_3<br>\\r\\n<b>Sent:</b> Thursday, October 8, 2020 5:37:36 PM<br>\\r\\n<b>To:</b> some_other_mail_3; Test User1<br>\\r\\n<b>Subject:</b> *h1test</font>\\r\\n<div>&nbsp;</div>\\r\\n</div>\\r\\n<div>\\r\\n<div id=3D\\\"divtagdefaultwrapper\\\" style=3D\\\"font-size:12pt;color:#000000;font=\\r\\n-family:Calibri,Helvetica,sans-serif;\\\" dir=3D\\\"ltr\\\">\\r\\n<p><span>*h1test</span><br>\\r\\n</p>\\r\\n</div>\\r\\n</div>\\r\\n</body>\\r\\n</html>\\r\\n\\r\\n--_000_some_mailsiemplifylablocal_--\\r\\n\", \"_id\": \"ItemId(id='AQMkADIzZjA2MWY0LTcwMTMtNDcxMy1iZWY4LTdlMzk2OTVkNDFmMgBGAAADneAeRbLkN0i93LTVa54xxwcAMnX/0/LnCkytWTOh2sCWzQAAAgEMAAAAMnX/0/LnCkytWTOh2sCWzQAAARCmyQAAAA==', changekey='CQAAABYAAAAydf/T8ucKTK1ZM6HawJbNAAAAEhnK')\", \"parent_folder_id\": \"ParentFolderId(id='AQMkADIzZjA2MWY0LTcwMTMtNDcxMy1iZWY4LTdlMzk2OTVkNDFmMgAuAAADneAeRbLkN0i93LTVa54xxwEAMnX/0/LnCkytWTOh2sCWzQAAAgEMAAAA', changekey='AQAAAA==')\", \"item_class\": \"IPM.Note\", \"subject\": \"Re: *h1test\", \"sensitivity\": \"Normal\", \"text_body\": \"*h1 reply\\r\\n\\r\\n________________________________\\r\\nFrom: some_other_mail_3\\r\\nSent: Thursday, October 8, 2020 5:37:36 PM\\r\\nTo: some_other_mail_3; Test User1\\r\\nSubject: *h1test\\r\\n\\r\\n\\r\\n*h1test\\r\\n\", \"body\": \"*h1 reply\\r\\n\\r\\n________________________________\\r\\nFrom: some_other_mail_3\\r\\nSent: Thursday, October 8, 2020 5:37:36 PM\\r\\nTo: some_other_mail_3; Test User1\\r\\nSubject: *h1test\\r\\n\\r\\n\\r\\n*h1test\", \"attachments\": [], \"datetime_received\": \"2020-10-08 15:39:35+00:00\", \"size\": \"9163\", \"categories\": \"None\", \"importance\": \"Normal\", \"in_reply_to\": \"<some_other_mail@siemplifylab.local>\", \"is_submitted\": \"False\", \"is_draft\": \"False\", \"is_from_me\": \"True\", \"is_resend\": \"False\", \"is_unmodified\": \"True\", \"headers\": [\"MessageHeader(name='Received', value='from EX001.siemplifylab.local (0.0.0.0) by EX001.siemplifylab.local (0.0.0.0) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id 0.0.0.0 via Mailbox Transport; Thu, 8 Oct 2020 08:39:35 -0700')\", \"MessageHeader(name='Received', value='from EX001.siemplifylab.local (0.0.0.0) by EX001.siemplifylab.local (0.0.0.0) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id 0.0.0.0; Thu, 8 Oct 2020 08:39:34 -0700')\", \"MessageHeader(name='Received', value='from EX001.siemplifylab.local ([0000::0000:0000:0000:0000]) by EX001.siemplifylab.local ([0000::0000:0000:0000:0000%5]) with mapi id 00.00.0000.000; Thu, 8 Oct 2020 08:39:34 -0700')\", \"MessageHeader(name='Content-Type', value='application/ms-tnef')\", \"MessageHeader(name='Content-Transfer-Encoding', value='binary')\", \"MessageHeader(name='Subject', value='Re: *h1test')\", \"MessageHeader(name='Thread-Topic', value='*h1test')\", \"MessageHeader(name='Thread-Index', value='AQHWnYjyAIejNr20W0S3qVKQbznvY6mN11k+')\", \"MessageHeader(name='Date', value='Thu, 8 Oct 2020 08:39:34 -0700')\", \"MessageHeader(name='Message-ID', value='<some_mail@siemplifylab.local>')\", \"MessageHeader(name='References', value='<some_other_mail@siemplifylab.local>')\", \"MessageHeader(name='In-Reply-To', value='<some_other_mail@siemplifylab.local>')\", \"MessageHeader(name='Accept-Language', value='en-US')\", \"MessageHeader(name='Content-Language', value='en-US')\", \"MessageHeader(name='X-MS-Exchange-Organization-SCL', value='-1')\", \"MessageHeader(name='X-MS-TNEF-Correlator', value='<some_mail@siemplifylab.local>')\", \"MessageHeader(name='MIME-Version', value='1.0')\", \"MessageHeader(name='X-MS-Exchange-Organization-MessageDirectionality', value='Originating')\", \"MessageHeader(name='X-MS-Exchange-Organization-AuthSource', value='EX001.siemplifylab.local')\", \"MessageHeader(name='X-MS-Exchange-Organization-AuthAs', value='Internal')\", \"MessageHeader(name='X-MS-Exchange-Organization-AuthMechanism', value='04')\", \"MessageHeader(name='X-Originating-IP', value='[0.0.0.0]')\", \"MessageHeader(name='X-MS-Exchange-Organization-Network-Message-Id', value='ad1fcc4b-55e0-4cc1-a39f-08d86ba05ba1')\", \"MessageHeader(name='Return-Path', value='some_other_mail_3@siemplifylab.local')\", \"MessageHeader(name='X-MS-Exchange-Organization-AVStamp-Enterprise', value='1.0')\", \"MessageHeader(name='X-MS-Exchange-Transport-EndToEndLatency', value='00:00:00.2609087')\", \"MessageHeader(name='X-MS-Exchange-Processed-By-BccFoldering', value='15.01.1847.001')\"], \"datetime_sent\": \"2020-10-08 15:39:34+00:00\", \"datetime_created\": \"2020-10-08 15:39:35+00:00\", \"reminder_due_by\": \"None\", \"reminder_is_set\": \"False\", \"reminder_minutes_before_start\": \"0\", \"display_cc\": \"None\", \"display_to\": \"some_other_mail_3\", \"has_attachments\": \"False\", \"culture\": \"en-US\", \"effective_rights\": \"EffectiveRights(create_associated=False, create_contents=False, create_hierarchy=False, delete=True, modify=True, read=True, view_private_items=True)\", \"last_modified_name\": \"some_other_mail_3\", \"last_modified_time\": \"2020-10-08 15:39:35+00:00\", \"is_associated\": \"False\", \"web_client_read_form_query_string\": \"?ItemID=AQMkADIzZjA2MWY0LTcwMTMtNDcxMy1iZWY4LTdlMzk2OTVkNDFmMgBGAAADneAeRbLkN0i93LTVa54xxwcAMnX%2F0%2FLnCkytWTOh2sCWzQAAAgEMAAAAMnX%2F0%2FLnCkytWTOh2sCWzQAAARCmyQAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem\", \"web_client_edit_form_query_string\": \"None\", \"conversation_id\": \"ConversationId(id='AAQkADIzZjA2MWY0LTcwMTMtNDcxMy1iZWY4LTdlMzk2OTVkNDFmMgAQAACHoza9tFtEt6lSkG8572M=')\", \"unique_body\": \"<html><body><div>\\r\\n<div dir=\\\"ltr\\\">\\r\\n<div id=\\\"divtagdefaultwrapper\\\"><font face=\\\"Calibri,Helvetica,sans-serif\\\" size=\\\"3\\\" color=\\\"black\\\"><span style=\\\"font-size:12pt;\\\" id=\\\"divtagdefaultwrapper\\\">\\r\\n<div style=\\\"margin-top:0;margin-bottom:0;\\\">*h1 reply</div>\\r\\n</span></font></div>\\r\\n</div>\\r\\n</div>\\r\\n</body></html>\", \"sender\": \"Mailbox(name='some_other_mail_3', email_address='some_other_mail_3@siemplifylab.local', routing_type='SMTP', mailbox_type='Mailbox')\", \"to_recipients\": [\"Mailbox(name='some_other_mail_3', email_address='some_other_mail_3@siemplifylab.local', routing_type='SMTP', mailbox_type='Mailbox')\"], \"cc_recipients\": \"None\", \"bcc_recipients\": \"None\", \"is_read_receipt_requested\": \"False\", \"is_delivery_receipt_requested\": \"False\", \"conversation_topic\": \"*h1test\", \"author\": \"some_other_mail_3@siemplifylab.local\", \"message_id\": \"<some_mail@siemplifylab.local>\", \"is_read\": \"False\", \"is_response_requested\": \"False\", \"references\": \"<some_other_mail@siemplifylab.local>\", \"reply_to\": \"None\", \"received_by\": \"Mailbox(name='some_other_mail_3', email_address='some_other_mail_3@siemplifylab.local', routing_type='SMTP', mailbox_type='Mailbox')\", \"received_representing\": \"Mailbox(name='some_other_mail_3', email_address='some_other_mail_3@siemplifylab.local', routing_type='SMTP', mailbox_type='Mailbox')\", \"plaintext_body\": \"*h1 reply\\r\\n\\r\\n________________________________\\r\\nFrom: some_other_mail_3\\r\\nSent: Thursday, October 8, 2020 5:37:36 PM\\r\\nTo: some_other_mail_3; Test User1\\r\\nSubject: *h1test\\r\\n\\r\\n\\r\\n*h1test\", \"html_body\": \"<html>\\r\\n<head>\\r\\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\">\\r\\n<style type=\\\"text/css\\\" style=\\\"display:none;\\\"><!-- P {margin-top:0;margin-bottom:0;} --></style>\\r\\n</head>\\r\\n<body dir=\\\"ltr\\\">\\r\\n<style type=\\\"text/css\\\" style=\\\"display:none;\\\"><!-- P {margin-top:0;margin-bottom:0;} --></style>\\r\\n<div id=\\\"divtagdefaultwrapper\\\" style=\\\"font-size:12pt;color:#000000;font-family:Calibri,Helvetica,sans-serif;\\\" dir=\\\"ltr\\\">\\r\\n<p>*h1 reply</p>\\r\\n</div>\\r\\n<hr style=\\\"display:inline-block;width:98%\\\" tabindex=\\\"-1\\\">\\r\\n<div id=\\\"divRplyFwdMsg\\\" dir=\\\"ltr\\\"><font face=\\\"Calibri, sans-serif\\\" style=\\\"font-size:11pt\\\" color=\\\"#000000\\\"><b>From:</b> some_other_mail_3<br>\\r\\n<b>Sent:</b> Thursday, October 8, 2020 5:37:36 PM<br>\\r\\n<b>To:</b> some_other_mail_3; Test User1<br>\\r\\n<b>Subject:</b> *h1test</font>\\r\\n<div>&nbsp;</div>\\r\\n</div>\\r\\n<div>\\r\\n<div id=\\\"divtagdefaultwrapper\\\" style=\\\"font-size:12pt;color:#000000;font-family:Calibri,Helvetica,sans-serif;\\\" dir=\\\"ltr\\\">\\r\\n<p><span>*h1test</span><br>\\r\\n</p>\\r\\n</div>\\r\\n</div>\\r\\n</body>\\r\\n</html>\\r\\n\", \"attachments_list\": {}}}, {\"recipient\": \"some_other_mail_4@siemplifylab.local\", \"content\": null}]}",
+        "ResultName": "JsonResult"
+    }],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "Mail message_id",
+            "Type": 0,
+            "Value": "",
+            "Description": "Message_id of the email, which current action would be waiting for. If message has been sent using Send Email action, please select SendEmail.JSONResult.message_id field as a placeholder."
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "Mail Date",
+            "Type": 0,
+            "Value": "",
+            "Description": "Send timestamp of the email, which current action would be waiting for. If message has been sent using Send Email action, please select SendEmail.JSONResult.email_date field as a placeholder."
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "Mail Recipients",
+            "Type": 0,
+            "Value": "",
+            "Description": "Comma-separated list of recipient emails, response from which current action would be waiting for. If message has been sent using Send Email action, please select Select SendEmail.JSONResult.recipients field as a placeholder."
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": "1440",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "How long to wait for recipient reply (minutes)",
+            "Type": 0,
+            "Value": "1440",
+            "Description": "How long in minutes to wait for the user's reply before marking it timed out."
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "Wait for All Recipients to Reply?",
+            "Type": 1,
+            "Value": true,
+            "Description": "Parameter can be used to define if there are multiple recipients - should the Action wait for responses from all of recipients until timeout, or Action should wait for first reply to proceed."
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "Wait Stage Exclude pattern",
+            "Type": 0,
+            "Value": "",
+            "Description": "Regular expression to exclude specific replies from the wait stage. Works with body part of email. Example is, to exclude automatic Out-Of-Office emails to be considered as recipient reply, and instead wait for actual user reply."
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": "Inbox",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "Folder to Check for Reply",
+            "Type": 0,
+            "Value": "Inbox",
+            "Description": "Parameter can be used to specify mailbox email folder (mailbox that was used to send the email with question) to search for the user reply in this folder. Parameter should also accept comma separated list of folders to check the user response in multiple folders. Parameter is case sensitive."
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1511800055323,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1511800055323,
+            "Name": "Fetch Response Attachments",
+            "Type": 1,
+            "Value": false,
+            "Description": "If selected, if recipient replies with attachment - fetch recipient response and add it as attachment for the action result"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "IsAsync": true
+}

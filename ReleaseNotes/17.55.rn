@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 17.55</h2><h5>Published on 27 April, 2022</h5><hr><h3>Jobs</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     QRadar\n    </b>\n   </li>\n   <ul>\n    <li>\n     SyncCloseOffenses\n    </li>\n    <ul>\n     <li>\n      SyncCloseOffenses job - functionality updates.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Connectors</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     MicrosoftAzureSentinel\n    </b>\n   </li>\n   <ul>\n    <li>\n     Incident Connector v2\n    </li>\n    <ul>\n     <li>\n      Microsoft Azure Sentinel Incident Connector v2 - Enhanced connector logic to handle issues when getting entities data from the Microsoft Azure Sentinel.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     QRadar\n    </b>\n   </li>\n   <ul>\n    <li>\n     Qradar Correlation Events Connector V2\n    </li>\n    <ul>\n     <li>\n      Added ability to limit number of events that will be fetched for offense in Siemplify, other functionality updates.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "17.55",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "27/04/22",
+    "Title": "Release Notes"
+}

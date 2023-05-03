@@ -1,0 +1,46 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "List the members of a group",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"status\": \"ACTIVE\", \"kind\": \"admin#directory#member\", \"email\": \"XXXX_XXX@example.com\", \"etag\": \"\\\"XXXXXXXXXXXXXXXXXXX\\\"\", \"role\": \"MEMBER\", \"type\": \"USER\", \"id\": \"XXX\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "GSuite",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Group Members",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Email address of the group.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Group Email Address",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381915816,
+            "CustomActionId": -1,
+            "DefaultValue": "true",
+            "Description": "Whether to list indirect memberships.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381915816,
+            "Name": "Include Derived Membership",
+            "Type": 1,
+            "Value": "true"
+        }
+    ],
+    "ScriptResultName": "members",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

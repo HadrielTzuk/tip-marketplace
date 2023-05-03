@@ -1,0 +1,2 @@
+class BlueLivException(Exception):
+    pass

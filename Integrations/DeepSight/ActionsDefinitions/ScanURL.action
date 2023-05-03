@@ -1,0 +1,23 @@
+{
+    "CreationTimeUnixTimeInMs": 1506263252908, 
+    "Creator": "admin", 
+    "Description": "DeepSight scan URL", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"url\": \"https: //www.facebook.com\", \"host\": {\"domain\": \"facebook.com\", \"uri\": \"/v1/domains/facebook.com\"}, \"whitelisted\": true, \"schemaVersion\": 2, \"whois\": {\"city\": \"MenloPark\", \"updated\": \"2015-08-25T00: 00: 00Z\", \"created\": \"1997-03-29T00: 00: 00Z\", \"nameServers\": [\"A.NS.FACEBOOK.COM\", \"B.NS.FACEBOOK.COM\"], \"country\": \"Us\", \"expires\": \"2020-03-30T00: 00: 00Z\", \"person\": \"DomainAdministrator\", \"registrar\": \"MarkmonitorInc.\", \"postalCode\": \"94025\", \"organization\": \"Facebook,Inc.\", \"email\": \"john_doe@example.com\"}}, \"Entity\": \"https: //www.facebook.com\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "DeepSight", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1506528156764, 
+    "Name": "Scan URL", 
+    "Parameters": [], 
+    "Script": "from DeepSight import DeepSight\nfrom SiemplifyAction import *\nfrom SiemplifyUtils import *\n\nURL = \"URL\"\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\tconf = siemplify.get_configuration('DeepSight')\n\tds = DeepSight(api_key = conf['ApiKey'])\n\tadditional_data = {}\n\tentities_to_update = []\n\toutput_message = \"\"\n\t\n\tfor entity in siemplify.target_entities:   \n\t\tif entity.entity_type == URL:\n\t\t\tresult = ds.scan_url(entity.identifier)\n\t\t\tif result:\n\t\t\t\tif not \"message\" in result:\n\t\t\t\t\tadditional_data[entity.identifier] = {}\n\t\t\t\t\tfor key,val in result.iteritems():\n\t\t\t\t\t\tif not key.split('_')[0] == 'DS':\n\t\t\t\t\t\t\tadditional_data[entity.identifier]['DS_' + key] = str(val)\n\t\t\t\t\t\tif key =='whois_country':\n\t\t\t\t\t\t\tentity.additional_properties['Country'] = result['whois_country']\n\t\t\t\t\t\telse:\n\t\t\t\t\t\t\tentity.additional_properties['DS_' + key] = val\n\t\t\t\t\t\t\t\n\t\t\t\t\tentities_to_update.append(entity)\n\t\t\t\t\t\t\t\n\tif len(entities_to_update) > 0:\n\t\tfor entity in entities_to_update:\n\t\t\tsiemplify.result.add_entity_enrichment(entity.identifier, additional_data[entity.identifier])\n\t\t\tif len(output_message) == 0:\n\t\t\t\toutput_message = entity.identifier\n\t\t\telse:\n\t\t\t\toutput_message += ', ' + entity.identifier\n\t\toutput_message += ' enriched.'\n\telse:\n\t\toutput_message = 'No entites were enriched' \n\t\n\tsiemplify.update_entities(entities_to_update)\n\tresult_value = 'true' if len(entities_to_update) else 'false'\n\tsiemplify.end(output_message, result_value) \n\nif __name__ == '__main__':\n\tmain()", 
+    "ScriptResultName": null, 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

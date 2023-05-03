@@ -1,0 +1,74 @@
+[
+    {
+        "ChangeDescription": "New \"Google Cloud IAM\" integration added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "GoogleCloudIAM",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1625639577,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8347"
+    },
+    {
+        "ChangeDescription": "Improved the integration's visibility in the marketplace.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "GoogleCloudIAM",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1627557526,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9434"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "GoogleCloudIAM",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1628667444,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9554"
+    },
+    {
+        "ChangeDescription": "Google Cloud IAM - Updated action's matching mechanism.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Enrich Entities",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1656489978,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-12024"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "GoogleCloudIAM",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Improved support for SaaS environments in integration configuration, other integration configuration updates.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "GoogleCloudIAM",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1679443200,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "265188580"
+    }
+]

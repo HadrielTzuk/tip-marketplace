@@ -1,0 +1,16 @@
+{
+    "Description": "Windows Management Instrumentation (WMI) is the infrastructure for management data and operations on Windows-based operating systems.",
+    "DisplayName": "WMI",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/wmi",
+    "Identifier": "WMI",
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAALYAAABjBAMAAADELeerAAAAMFBMVEX///9ul87N2ezE0umSr9h7n9G6zOacttyGp9X3+fzn7fbW4O+nvt+xxeLv8/ne5vMADHC0AAACjElEQVRo3u2WTY7TQBCFDfmRQiKQMbEIDpFG4gCxYMXKvsFkyS6+AdwAbuARF4j3LJIbODeYuQHcAG5Av6pnt8QGqVYI1ZNsV7u7v+qufvlJXC6Xy+VyuVwul+ufUpemaS5RHaKPCFZpUJvcpFClw0ppfE6Sx+kw7O+ahaEvECww6Ta+Inunw64WNha5RrDEpFdxK2RnOuxgYU8w9hSCuZK4/2JgbxNNbGE/wdh9CKYjqQnBZmCvW7yaG9jc7X14PsKkl8OhVmCLzgkS29hXkKTKUMtDPZKNKOjOxi5RAXlylc/4JLuSQTY21luMLjvydFuyaZ2rjT2jPQ7DKld0PNg1+rTzi4EN1BZ+Ed1qspzsBn1apgcDewKj6aOWCvxAkcjG1aoFLwa2LPi7TG+kAoBsyH6jxzoNVfplYEuhz+LgTirQoOxkv8XxigXzGwu7xnxMX8/CxTbZ73EEYsHCwOY6UYntVKor9iZ7f8ARwIIfTOwL1oYM+RxUqX9L9n2gZlK2vrSw7+QDEiDFBNWYqL3JLtFAur2JjUpkWNoOjB5+z0c2ErfYz8nExszXT1GYBW5I9Xxko3We4oxN7CWKgFsPi2ykRCN7zsXnNvYCo7+ipDjQolPbkb1EK0SFhU2DfwvXT1gmA6Mf2QlMeA3bMbJh8HdivC5UHq19ZMOEgV8Z2TB4I8abhfsnmCKygUQ2C5sGr8V4q2CIA0wR2Z2yT0Y2fKbGm2i0jWzpRDYjez7+eC01yiKbnVsrG0Q13oJZIpudmZVNYg87apbIZufOygaRxnvQLJHNn/jKzG7GP1ClZolsvjqa2ZfhLxUdd4psvjpb2TA4v7NnarjI5qv2T7bL5XK5XC6Xy/Wf6DeShsfr7HgMqwAAAABJRU5ErkJggg==",
+    "IntegrationProperties": [],
+    "MinimumSystemVersion": 5.1,
+    "Categories": [
+        "IT & Infrastructure",
+        "Free to use"
+    ],
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<line x1=\"57.8\" y1=\"-4\" x2=\"76.5\" y2=\"-6.6\"/>\n<g>\n\t<g>\n\t\t<path d=\"M16.9,12.3c-0.2,0.5-0.3,1-0.5,1.5h-0.1c-0.2-0.5-0.3-1-0.5-1.5l-1.4-3.7h-2.1v8.3h1.7v-3.1c0-0.8-0.2-2-0.2-2.8H14l0.7,2\n\t\t\tl1.2,3.2h1l1.2-3.2l0.7-2h0.1c-0.1,0.8-0.2,2-0.2,2.8v3.1h1.7V8.6h-2.1L16.9,12.3z M9.3,12.5c-0.1,0.9-0.2,1.7-0.3,2.6H9\n\t\t\tc-0.2-0.9-0.3-1.8-0.5-2.6L7.6,8.6H6l-0.9,3.9c-0.2,0.9-0.3,1.8-0.5,2.6H4.5c-0.1-0.9-0.2-1.8-0.3-2.6L3.6,8.6H1.7l1.5,8.3h2.3\n\t\t\tl0.8-3.8c0.1-0.6,0.2-1.3,0.3-1.9h0.1c0.1,0.6,0.2,1.3,0.3,1.9l0.8,3.8h2.4l1.5-8.3H9.9L9.3,12.5z M21.7,8.6v8.3h1.9V8.6H21.7z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 6.0,
+    "MarketingDisplayName": "WMI"
+}

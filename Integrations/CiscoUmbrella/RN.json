@@ -1,0 +1,96 @@
+[
+    {
+        "ChangeDescription": "Fixed a bug in the get malicious domain action.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "CiscoUmbrella",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "TIPG-533"
+    },
+    {
+        "ChangeDescription": "Fixed a bug in the add domain action.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "CiscoUmbrella",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "TIPG-525"
+    },
+    {
+        "ChangeDescription": "Fixed a parsing issue that caused the action to fail.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Get Whois",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1590293199,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2501"
+    },
+    {
+        "ChangeDescription": "Updated domain information search logic.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "CiscoUmbrella",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604395162,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4286"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "CiscoUmbrella",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Security Enhancement Added to the integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "CiscoUmbrella",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5737"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "CiscoUmbrella",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "CiscoUmbrella",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

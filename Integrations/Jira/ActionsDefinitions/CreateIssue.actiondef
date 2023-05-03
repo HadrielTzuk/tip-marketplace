@@ -1,0 +1,131 @@
+{
+    "CreationTimeUnixTimeInMs": 1516264382271,
+    "Creator": "admin",
+    "Description": "Create an issue in a project. (Jira username could be: name, mail, etc...). For new Jira Api, action will try to find a match for the assignee to assign an issue based on User email or displayName field.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"comment\": {\"total\": 0, \"startAt\": 0, \"comments\": [], \"maxResults\": 0}, \"creator\": {\"displayName\": \"user1\", \"name\": \"user1\", \"self\": \"\", \"avatarUrls\": {\"24x24\": \"\", \"16x16\": \"\", \"48x48\": \"\", \"32x32\": \"\"}, \"emailAddress\": \"john_doe@example.com\", \"key\": \"user1user\", \"active\": true, \"timeZone\": \"Asia/Jerusalem\", \"accountId\": \"0\"}, \"aggregatetimeestimate\": null, \"labels\": [\"Label1\"], \"aggregatetimespent\": null, \"watches\": {\"self\": \"\", \"watchCount\": 1, \"isWatching\": false}, \"assignee\": {\"displayName\": \"user2\", \"name\": \"user2\", \"self\": \"\", \"avatarUrls\": {\"24x24\": \"\", \"16x16\": \"\", \"48x48\": \"\", \"32x32\": \"\"}, \"emailAddress\": \"john_doe@example.com\", \"key\": \"user2\", \"active\": true, \"timeZone\": \"Asia/Jerusalem\", \"accountId\": \"\"}, \"lastViewed\": \"2019-01-22T10:14:02.910+0200\", \"issuelinks\": [], \"worklog\": {\"worklogs\": [], \"total\": 0, \"startAt\": 0, \"maxResults\": 20}, \"aggregateprogress\": {\"progress\": 0, \"total\": 0}, \"priority\": {\"iconUrl\": \"\", \"self\": \"\", \"name\": \"Medium\", \"id\": \"3\"}, \"votes\": {\"hasVoted\": false, \"self\": \"\", \"votes\": 0}, \"workratio\": -1, \"fixVersions\": [], \"environment\": null, \"timespent\": null, \"attachment\": [{\"mimeType\": \"binary/octet-stream\", \"created\": \"2018-06-19T15:23:07.369+0300\", \"self\": \"\", \"author\": {\"displayName\": \"user1\", \"name\": \"user1\", \"self\": \"\", \"avatarUrls\": {\"24x24\": \"\", \"16x16\": \"\", \"48x48\": \"\", \"32x32\": \"\"}, \"emailAddress\": \"john_doe@example.com\", \"key\": \"user1\", \"active\": true, \"timeZone\": \"Asia/Jerusalem\", \"accountId\": \"0\"}, \"filename\": \"file.rar\", \"content\": \"\", \"id\": \"0\", \"size\": 0}], \"progress\": {\"progress\": 0, \"total\": 0}, \"duedate\": null, \"status\": {\"statusCategory\": {\"name\": \"Done\", \"self\": \"\", \"id\": 3, \"key\": \"done\", \"colorName\": \"green\"}, \"description\": \"\", \"self\": \"\", \"iconUrl\": \"\", \"id\": \"0\", \"name\": \"DONE\"}, \"updated\": \"2018-09-18T10:02:06.347+0300\", \"subtasks\": [], \"description\": \"Create Enrich entites action using Insights API (IOC search)\\n\\nWrite connector for laerts\\n\\nIn a couple of days we will have access to an instance\", \"reporter\": {\"displayName\": \"user1\", \"name\": \"user1\", \"self\": \"\", \"avatarUrls\": {\"24x24\": \"\", \"16x16\": \"\", \"48x48\": \"\", \"32x32\": \"\"}, \"emailAddress\": \"john_doe@example.com\", \"key\": \"user1\", \"active\": true, \"timeZone\": \"Asia/Jerusalem\", \"accountId\": \"0\"}, \"timeoriginalestimate\": null, \"aggregatetimeoriginalestimate\": null, \"created\": \"2018-06-19T15:23:13.701+0300\", \"versions\": [], \"resolutiondate\": \"2018-09-18T10:02:06.340+0300\", \"summary\": \"Sample issue\", \"project\": {\"name\": \"Project 1\", \"self\": \"\", \"projectTypeKey\": \"software\", \"avatarUrls\": {\"24x24\": \"\", \"16x16\": \"\", \"48x48\": \"\", \"32x32\": \"\"}, \"key\": \"PR\", \"id\": \"0\"}, \"timetracking\": {}, \"components\": [], \"issuetype\": {\"name\": \"Task\", \"self\": \"\", \"iconUrl\": \"\", \"subtask\": false, \"avatarId\": 10318, \"id\": \"10002\", \"description\": \"A task that needs to be done.\"}, \"security\": null, \"resolution\": {\"id\": \"10000\", \"self\": \"\", \"description\": \"Work has been completed on this issue.\", \"name\": \"Done\"}, \"timeestimate\": null}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Jira",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1516264382271,
+    "Name": "Create Issue",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517930458281,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The key of the project to create an issue in",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517930458281,
+            "Name": "Project Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517930458281,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The summary of the issue",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517930458281,
+            "Name": "Summary",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517930458281,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The description of the issue",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517930458281,
+            "Name": "Description",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517930458281,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The type of the issue",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517930458281,
+            "Name": "Issue Type",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517930462609,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The Jira username of the initiator of the action. Note: If a username is not provided, action will not create a comment in the issue",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517930462609,
+            "Name": "Jira Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517930462609,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The new assignee of the issue.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517930462609,
+            "Name": "Assignee",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517930462609,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The Components field of the issue. Parameter accepts multiple values as a comma separated string.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517930462609,
+            "Name": "Components",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1517930462609,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The Labels field of the issue. Parameter accepts multiple values as a comma separated string.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1517930462609,
+            "Name": "Labels",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451342720,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a JSON object containing all of the fields and values that will be used during issue creation. Note: this parameter has priority and all of the fields will be overwritten with the value that is provided for this parameter. Example: {\"field\":\"value\"}",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451342720,
+            "Name": "Custom Fields",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "issue_key",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1515335756225, 
+    "Creator": "admin", 
+    "Description": "Query Certly for URL reputation", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Certly", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1515335756225, 
+    "Name": "Get Url Status", 
+    "Parameters": [], 
+    "ScriptResultName": "is_risky", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

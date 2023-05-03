@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1527753639166,
+    "Creator": "admin",
+    "Description": "Get the items listed in a given file list",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"items\": [{\"source\": \"Created by uploading 1_Credit Card Magnetic Tracks - Notepad (2).TXT via Web from 1.1.1.1.\", \"sha256\": \"640e9583763fa553069a4984f8df5e81d6890897a6eb0f5de881218e3ed409c8\", \"description\": \"\"}, {\"source\": \"Created by entering SHA-256 via Public api.\", \"sha256\": \"5fd924625f6ab16a19cc9807c7c506ae1813490e4ba675f843d5a10e0baacdb8\", \"description\": \"Added by Siemplify\"}, {\"source\": \"Created by entering SHA-256 via Public api.\", \"sha256\": \"1248712441dbbf43bb37f91d626a020e7e0f4486f050142034b8a267b06a2f0c\", \"description\": \"Added by Siemplify\"}], \"guid\": \"cef9b12e-4a25-4f1a-93f4-3836ebd97ed5\", \"name\": \"File Blacklist\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CiscoAMP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527753639166,
+    "Name": "Get File List Items",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527753639166,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "e.g. File Blacklist",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1527753639166,
+            "Name": "File List Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat\nfrom CiscoAMPManager import CiscoAMPManager\nimport json\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    configurations = siemplify.get_configuration('CiscoAMP')\n    server_addr = configurations['Api Root']\n    client_id = configurations['Client ID']\n    api_key = configurations['Api Key']\n    use_ssl = configurations['Use SSL'].lower() == 'true'\n\n    cisco_amp_manager = CiscoAMPManager(server_addr, client_id, api_key,\n                                        use_ssl)\n\n    file_list_name = siemplify.parameters[\"File List Name\"]\n\n    file_list = cisco_amp_manager.get_file_list_by_name(file_list_name)\n\n    if file_list.get(\"items\"):\n        flat_items = []\n\n        for item in file_list.get(\"items\"):\n            # Remove links - irrelevant\n            if item.get(\"links\"):\n                del item[\"links\"]\n            flat_items.append(dict_to_flat(item))\n\n        # Attach file lists in csv\n        csv_output = cisco_amp_manager.construct_csv(flat_items)\n        siemplify.result.add_data_table(\"Items - {}\".format(file_list_name), csv_output)\n\n    siemplify.end(\"Successfully found {} items in {}.\".format(\n        len(file_list.get(\"items\", [])), file_list_name), json.dumps(file_list.get(\"items\")))\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "items",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

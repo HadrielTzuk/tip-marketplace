@@ -1,0 +1,33 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Scan resources using AWS IAM Access Analyzer.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSIAMAccessAnalyzer",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Scan Resources",
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"resources\":[{\"analyzedAt\":1606289201000,\"isPublic\":\"True\",\"resourceArn\":\"arn:aws:s3:::accessanalyzerXXX\",\"resourceOwnerAccount\":\"XXXXXXXXXXX\",\"resourceType\":\"AWS::S3::Bucket\"}]}]",
+        "ResultName": "JsonResult"
+    }],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of resource ARNs that need to be scanned.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Resource ARNs",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}",
+    "IsAsync": true
+}

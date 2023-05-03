@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1531744380612, 
+    "Creator": "admin", 
+    "Description": "Create a blacklist policy for an entity", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SymantecATP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1531744380612, 
+    "Name": "Add To Blacklist", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecATPManager import SymantecATPManager\nfrom SiemplifyDataModel import EntityTypes\nfrom SymantecATPManager import ATPEntityTypes\n\n\nATP_PROVIDER = 'SymantecATP'\nACTION_NAME = \"SymantecATP_Add To Blacklist\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(ATP_PROVIDER)\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    atp_manager = SymantecATPManager(conf.get('API Root'), conf.get('Client ID'), conf.get('Client Secret'), verify_ssl)\n\n    errors = []\n    blacklisted_entities = []\n    result_value = False\n\n    for entity in target_entities:\n        try:\n\n            result = None\n\n            if entity.entity_type == EntityTypes.FILEHASH:\n                # Check if md5 or sha265 by hash length.\n                if len(entity.identifier) == 32:\n                    result = atp_manager.create_blacklist_policy(entity.identifier, ATPEntityTypes.MD5)\n                elif len(entity.identifier) == 64:\n                    result = atp_manager.create_blacklist_policy(entity.identifier, ATPEntityTypes.SHA256)\n            elif entity.entity_type == EntityTypes.HOSTNAME:\n                result = atp_manager.create_blacklist_policy(entity.identifier, ATPEntityTypes.HOST)\n            elif entity.entity_type == EntityTypes.ADDRESS:\n                result = atp_manager.create_blacklist_policy(entity.identifier, ATPEntityTypes.ADDRESS)\n            elif entity.entity_type == EntityTypes.URL:\n                result = atp_manager.create_blacklist_policy(entity.identifier, ATPEntityTypes.URL)\n\n            if result:\n                blacklisted_entities.append(entity)\n                result_value = True\n\n        except Exception as err:\n            error_message = 'Error adding \"{0}\" to a blacklist, Error: {1}'.format(entity.identifier, err.message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    if result_value:\n        output_message = \"{0} were blacklisted.\".format(\",\".join([entity.identifier for entity in\n                                                                  blacklisted_entities]))\n    else:\n        output_message = \"No entities were blacklisted.\"\n\n    # Attach errors if exists.\n    if errors:\n        output_message = \"{0}, \\n \\n  ERRORS: \\n {1} \".format(output_message, ' \\n '.join(errors))\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [null, \"HOSTNAME\", \"DestinationURL\", \"FILEHASH\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

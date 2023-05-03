@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List Rapid7 InsightIDR saved queries.  Note: Action is not working with Siemplify entities, only with action input parameters.",
+    "Id": -1,
+    "IntegrationIdentifier": "Rapid7InsightIDR",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Saved Queries",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\":\"xxxxxxxx-0003-xxxx-0000-00000000xxxx\",\"name\":\"MySearch\",\"leql\":{\"statement\":\"where(bar=foo)\",\"during\":{\"time_range\":null,\"to\":1450557608000,\"from\":1450557604000}},\"logs\":[\"xxxxxxxx-8ddd-xxxx-9e15-2dc488f0xxxx\",\"xxxxxxxx-113e-xxxx-a6b8-ea0be1a4xxxx\"]},{\"id\":\"xxxxxxxx-0003-xxxx-0000-00000000xxxx\",\"name\":\"test\",\"leql\":{\"statement\":\"groupby('destination_account')\",\"during\":{\"time_range\":\"Last 5 Minutes\",\"to\":null,\"from\":null}},\"logs\":[\"xxxxxxxx-8ddd-xxxx-9e15-2dc488f0xxxx\",\"xxxxxxxx-113e-xxxx-a6b8-ea0be1a4xxxx\",\"xxxxxxxx-a7c4-xxxx-b221-d60d260bxxxx\",\"xxxxxxxx-cf85-xxxx-9ac5-e329b523xxxx\"]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Record limit",
+            "Type": 0,
+            "DefaultValue": 20,
+            "Value": 20,
+            "IsMandatory": false,
+            "Description": "Specify how many records can be returned by the action.",
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

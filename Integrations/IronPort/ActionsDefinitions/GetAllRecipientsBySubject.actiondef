@@ -1,0 +1,87 @@
+{
+    "CreationTimeUnixTimeInMs": 1523457565939,
+    "Creator": "admin",
+    "Description": "Get a list of all recipients that received an email with the same subject. Note: for action to work, please make sure that message tracking is enabled in IronPort, along with AsyncOS API.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Survive in bed (men only)\": [\"email1@dworld.co.uk\", \"email2@dworld.co.uk\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "IronPort",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1523457565939,
+    "Name": "Get All Recipients By Subject",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1523458933405,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The subject to filter by",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1523458933405,
+            "Name": "Subject",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523458933405,
+            "CustomActionId": -1,
+            "DefaultValue": 7,
+            "Description": "Specify a time frame for which to search for emails. Note that this value should be set accordingly to the amount of emails processed by Ironport, if big enough value will be provided action can time out.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1523458933405,
+            "Name": "Search Emails for Last X",
+            "Type": 0,
+            "Value": 7
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Days",
+            "Description": "Specify if search emails should be done with the period of days or hours.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Set Search Email Period in",
+            "OptionalValues": [
+                "Days",
+                "Hours"
+            ],
+            "Type": 15,
+            "Value": "Days"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523458933405,
+            "CustomActionId": -1,
+            "DefaultValue": 20,
+            "Description": "Specify how many recipients action should return.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523458933405,
+            "Name": "Max Recipients to Return",
+            "Type": 0,
+            "Value": 20
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1523458933405,
+            "CustomActionId": -1,
+            "DefaultValue": 100,
+            "Description": "Specify the page size for the action to use when searching for emails.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1523458933405,
+            "Name": "Page Size",
+            "Type": 0,
+            "Value": 100
+        }
+    ],
+    "ScriptResultName": "recipients",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

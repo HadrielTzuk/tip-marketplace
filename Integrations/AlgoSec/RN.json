@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - AlgoSec",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "AlgoSec",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1631090615,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9720"
+    }
+]

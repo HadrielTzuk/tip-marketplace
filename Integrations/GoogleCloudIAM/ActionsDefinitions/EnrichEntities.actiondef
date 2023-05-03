@@ -1,0 +1,21 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Enrich Siemplify User entities with service accounts information from Google Cloud IAM. Action expects IAM service account email as a Siemplify User entity.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleCloudIAM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[[{\"Entity\": \"XXXX-XXXX@XXXX-XXXX-XXXX.XXX.XXXXXXXXXXXX.XXX\",\"EntityResult\": {\"name\": \"XXXXXXX\/XXXXXX-XXXXX-XXXXXX\/XXXXXXXXXXX\/XX-XXXXXXX@XXXXXX-XXXXX-XXXXXX.XXX.XXXXXXXXX.XXX\",\"projectId\": \"XXXXXX-XXXXXX-XXXXXX\",\"uniqueId\": \"XXXXXXXXXXXXXXXXXXXXXX\",\"email\": \"XXXXXX-XXXXXX@XXXXXX-XXXXXX-XXXXXX.XXX.XXXXXXXXXXXX.XXX\",\"displayName\": \"XXXXX XXXXXX\",\"etag\": \"XXXXXXXXXX=\",\"oauth2ClientId\": \"XXXXXXXX\",\"disabled\": \"true\",\"version\": \"1\",\"bindings\": [{\"role\": \"roles\/owner\",\"members\": [\"XXXX:XXXXXXX.XXXXXX@XXXXXXX.XX\"]},{\"role\": \"roles\/viewer\",\"members\": [\"XXXX:XXXX.XXXXXXX@XXXXXXX.XX\"]}]}}]]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Enrich Entities",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[\"USERUNIQNAME\"]}"
+}

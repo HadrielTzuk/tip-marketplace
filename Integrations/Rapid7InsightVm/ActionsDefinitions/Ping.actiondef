@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1533209899806,
+    "Creator": "Admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "Rapid7InsightVm",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1533209899806,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

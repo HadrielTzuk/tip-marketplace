@@ -1,0 +1,91 @@
+{
+    "Description": "An incident ticketing integration exchanges ticket data between your ServiceNow instance and Siemplify system.",
+    "DisplayName": "ServiceNow",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/servicenow",
+    "Identifier": "ServiceNow",
+    "Categories": [
+        "IT & Infrastructure",
+        "ITSM"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAALYAAABjCAMAAAAB3QqqAAABjFBMVEX///9fYGLjGyPi4uK4ublnaGrkJi3IycnnOUCTk5W0tbb/9/d5envlLTT9/f3Dw8RsbW/Hx8i3uLmKioyGh4mBgoNkZWf/+vr39/fl5uaxsrOpqquYmJp7fH5yc3Xj4+Tg4eHb29z60tT4w8W6u7yjo6ScnJ1qamxhYmTrWV/qUVflKTH5+fn+9PXt7e2vsLF+f4BvcHJnZ2nrXmTn5+je3t7U1NWfoKGVlpeOj5B0dXf//Pz7+/vz8/P98vL97e7q6ur85eb62NnPz9D3wcORkZPvfIDx8fH86en74eLX19i+v8C2trerrK2lpqeioqPznaDykJTwhop2d3nuc3jtam/pSlHoQUjmMTn61db5zc/MzM35y833ur32tLatra6mp6j0oaXylprxi4+DhIXtbnPsY2jqVVvoRkznPUTkHib73N3Jysv2t7r1sLL1q67wgIXud3zsZ2zmNj3rKTDxJi75IirkIir4x8n3vL70pKdYZmjK09S5x8fAwMG1wMCgsLB9jo9aYmToQEacFS0iAAAFeUlEQVR42u3WV0MTQRQF4HMXFkRiKiENTMAACUWKdAFRBBURAaUJAgqKvfde/rj3zkw2GILPPsz3sGWS3ZyduTNZWJZlWZZlWZZlWZZlWZZlWZZlWZZlWdb/5VJ4utEXbQjEYaS3Iz5fJNkPkZgPAOG9G3vVyEa6UdQaSftrIgNQmlJ1fEmqCQXxq8N806FBKBeXFgA0L+2v5HebccDzjmOF8wvL+S2UuL3/qhnlJetJC2YhxmvIGALrJmrSLQM+olkUpIgC/UQjYOk6MuoS5qZtpEWlIeY4zgssO9pNeM5WOc4ZKJcd9hgerw1lZYno5Mh0lFgAwGSvPEFdnfxuBECYFD5ND3IsGP4c0ViTjj2Vk0uiUbkkVwE2rBJHRnlbnwFqOxynasUpuKczNfMHHHtfxkF/x1kwHW+6+A43HUM5p4n6An4A/Q0cH4gHeRfo5IPjRNQAVKp+P925cR3gcTkNbYqoERtENQD3OflCckn1DSI3DlznlpR8c9DHDzyG2hOOcuKhPrgtdfPeudd1ls/P4MKqs9qFGf7gPlgsz2HPg93jphmUw+GS3rAfB4aIRjuhcF9SAmGdXkicHWgjRNUIqdgni4PgbyTaBo8KDZoG7vAfiHU4bG2rFl0LDnsATMj+AyS2SteOTXkusE9eJR3jgy2U0yKlYWRU59MkjFaiFtXb/dAGiHrNNCYK+lEtsUOqsTh4V9FD3AFGBdFnP97KaE9AzDjsnNq1x3RvrzvsCmR7AcC+wzrOAld4/6gL5cwR+TLwJInCKPBL2VwluoECLoImiG2iFCT2MKblEk92Th5pFJ4o/cqo2LfNNNMZpf/XUati4wWfLEGK/46apuIUsMW7/BGrH7G97tk4lAjRfLZSy4ZzRBKtAQUBVRVQhVGhYrdiVManSLX2fKs0slw2T/COA9yCtia93cWbVRRin+ezFdzl7TLw0VEWgUU1ScsbzJFoi3RPqu4sgSnVr4a/nmgcQJqoUQe8jnoKlk6XEt9V7FNgpmC7LvDmpV4+8vpR1lT4Vcg62X5G1f99NS5H6L8+SlpSevFvLkLS7hnm2tVV/0THbuHYJ/GXbirx5XDsdbWSI/aIM+q2E8Brx3kPvOd62pQRkUJ6jX9omqvpJVYJHtKpdIUnM46wnl/FSbkHxHPUB5giCVJuHEVqyRxKHLhHArE3JbEnLuuylQ69y+mr1Po8I2FlHGLgzTPZvMK/jQ3IXyFa9JwrKoktq0QCIVXvZkrW8ZPCE+/ErPoTKpISLol9HmaRiD29CF3O94FnvHu6oOqjnZdAOX2OI/hhyO+Pm6I10htA5d+xQ1IXI2pCQi+A14gi8JwMVsgESMDzxH84djPaVXEbD/UaIsXdviKLCj7Jf5OqlPKSvZkDS3gGbUTXUBCkQGnsMaLoJaIeeLFlqQ8cqOshNMjnxbv+xNnSIrmFUw67C2XZMQEfOEqzPIHSjiMQ1YegZNooF5cktDMGkejh0i2NzZlcH1GoGBth8r6S5MNZjNdz7jTE2A7RZ+DtodjIq1h3Nj8scoOphl1HHNMDIBZxBKnoulSgOjvEB90A5uXVqvV4ODXNB7nJQ7H7SXQeiC29S76WubmWRtJj1URsersy2Soz/StqpbcvQnutY0+sOkWmXtYdMwZ6zZZrjtA5TZ4aiBR5GiuAbp2kqKf4khIwbyPz5NmBGOS4Rn0WiB2MIH+CmzJP845nF9oj7+31iiNqcaSpkTa3r77PjYagJVp7XbfPdaNXwTZcN4SDQq4bnIQy67r6kQaGg25fnxscHoDWedyn7jE6fxrsZlXV7wloM1VV5vXkab6jiq3dfAxjl0/PQHnFh0uwLMuyLMuyLMuyLMuyLMuyLMuyLAt/AJM/o5U+4oIHAAAAAElFTkSuQmCC",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ServiceNow",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://{dev-instance}.service-now.com/api/now/v1/"
+        },
+        {
+            "IntegrationIdentifier": "ServiceNow",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ServiceNow",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ServiceNow",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Incident Table",
+            "PropertyName": "Incident Table",
+            "PropertyType": "2",
+            "Value": "incident"
+        },
+        {
+            "IntegrationIdentifier": "ServiceNow",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": true
+        },
+        {
+            "IntegrationIdentifier": "ServiceNow",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ServiceNow",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Client Secret",
+            "PropertyName": "Client Secret",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ServiceNow",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Refresh Token",
+            "PropertyName": "Refresh Token",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ServiceNow",
+            "IsMandatory": false,
+            "PropertyDisplayName": "Use Oauth Authentication",
+            "PropertyName": "Use Oauth Authentication",
+            "PropertyType": 0,
+            "Value": false
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.5 4C7.275 4 3 8.19324 3 13.4348C3 16.1985 4.14001 18.6764 5.94501 20.4871C6.61001 21.1542 7.655 21.1542 8.415 20.5824C9.46 19.7247 10.885 19.2482 12.5 19.2482C14.115 19.2482 15.445 19.7247 16.585 20.5824C17.345 21.1542 18.39 21.0589 19.055 20.3918C20.86 18.6764 22 16.1985 22 13.4348C21.905 8.28854 17.725 4 12.5 4ZM12.405 18.2951C9.55501 18.2951 7.65501 16.1985 7.65501 13.5301C7.65501 10.8617 9.55501 8.76505 12.405 8.76505C15.255 8.76505 17.155 10.957 17.155 13.5301C17.155 16.1032 15.255 18.2951 12.405 18.2951Z\" \/>\r\n<\/svg>",
+    "Version": 35.0,
+    "MarketingDisplayName": "ServiceNow"
+}

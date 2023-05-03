@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1520851303111,
+    "Creator": "admin",
+    "Description": "Get remediation status based on remediation ID",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"status\": 24, \"statusInfo\": \"File does not exist\", \"id\": 13592}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Cynet",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1520851303111,
+    "Name": "Remediation Status",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1520851346710,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "e.g. 312",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1520851346710,
+            "Name": "Remediation Id",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

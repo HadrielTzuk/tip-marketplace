@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "Added error handling for IPs that were not found in Shodan.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Get Ip Info",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1589433888,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2697"
+    },
+    {
+        "ChangeDescription": "Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Shodan",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Get Ip Info - Updated action's response handling when \"Set Minify\" is enabled.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Shodan",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1657692968,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11647"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Shodan",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

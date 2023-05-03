@@ -1,0 +1,40 @@
+{
+    "CreationTimeUnixTimeInMs": 1543164953601,
+    "Creator": "admin",
+    "Description": "Generate the refresh token that is needed for the integration configuration. Authorization code can be generated using \"Get OAuth Authorization Code\". Please refer to the documentation portal for more information.",
+    "Id": -1,
+    "IntegrationIdentifier": "BMCHelixRemedyForce",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543164953601,
+    "Name": "Get OAuth Refresh Token",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "https://localhost",
+            "Description": "Specify the redirect URL that was used when the \"Connector App\" was created.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Redirect URL",
+            "Type": 0,
+            "Value": "https://localhost"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543229155775,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the authorization code from action \"Get OAuth Authorization Code\".",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543229155775,
+            "Name": "Authorization Code",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

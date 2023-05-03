@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Cyberint",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "Cyberint",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1637151679,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10323"
+    },
+    {
+        "ChangeDescription": "New Action Added - Update Alert.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Update Alert",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1641975658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10680"
+    }
+]

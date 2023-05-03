@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1542188041117, 
+    "Creator": "Admin", 
+    "Description": "Reconnect disconnected endpoint to the network. Works with Hostname and IP entities.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SentinelOneV2", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1542188041117, 
+    "Name": "Reconnect Agent To The Network", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Version": 3.0
+}

@@ -1,0 +1,86 @@
+{
+	"Name": "Create Investigation",
+	"Description": "Create investigations for IP addresses and hostnames.",
+	"IntegrationIdentifier": "McAfeeMvisionEDRV2",
+	"ScriptResultName": "is_success",
+	"DynamicResultsMetadata": [{
+		"ResultName": "JsonResult",
+		"ResultExample": "[{\"Entity\": \"1.1.1.1\", \"EntityResult\": {\"type\": \"investigations\", \"id\": \"05cae9b0-24ca-11eb-b713-000000000000\", \"attributes\": {\"created\": \"2020-11-12T09:32:46.411Z\", \"lastModified\": \"2020-11-12T09:32:46.411Z\", \"name\": \"Siemplify Test\", \"owner\": \"unknown\", \"summary\": \"\", \"source\": \"unknown\", \"isAutomatic\": true, \"hint\": \"Test\", \"caseType\": \"IOC\", \"investigated\": true, \"status\": \"In progress\", \"priority\": \"High\"}}}]",
+		"ShowResult": true
+	}],
+	"Creator": "Admin",
+	"IsEnabled": true,
+	"IsCustom": true,
+	"IsSystem": false,
+	"Version": 1.0,
+	"TimeoutSeconds": 300,
+	"Parameters": [{
+			"CustomActionId": -1,
+			"IsMandatory": true,
+			"DefaultValue": "IOC",
+			"Description": "Defines the type of alert.",
+			"Name": "Case Type",
+			"Value": "IOC",
+			"Type": 15,
+			"OptionalValues": [
+				"Malware",
+				"Network",
+				"IOC"
+			],
+			"OptionalValuesJson": "[\"Malicious\", \"Network\", \"IOC\"]",
+			"Id": -1,
+			"CreationTimeUnixTimeInMs": 1603124715623,
+			"ModificationTimeUnixTimeInMs": 1603124715623
+		},
+		{
+			"CustomActionId": -1,
+			"IsMandatory": true,
+			"DefaultValue": "Low",
+			"Description": "Assigns a priority to the investigation.",
+			"Name": "Priority",
+			"Value": "Low",
+			"Type": 15,
+			"OptionalValues": [
+				"High",
+				"Medium",
+				"Low"
+			],
+			"OptionalValuesJson": "[\"High\",\"Medium\", \"Low\"]",
+			"Id": -1,
+			"CreationTimeUnixTimeInMs": 1603124715623,
+			"ModificationTimeUnixTimeInMs": 1603124715623
+		},
+		{
+			"CustomActionId": -1,
+			"IsMandatory": false,
+			"DefaultValue": "",
+			"Description": "Automatically links related investigations and avoids creating many cases from multiple alerts related to the same incident. If the same hint is used, the evidences will be added to the already existing investigation.",
+			"Name": "Hint",
+			"Value": "",
+			"Type": 0,
+			"OptionalValues": null,
+			"OptionalValuesJson": null,
+			"Id": -1,
+			"CreationTimeUnixTimeInMs": 1603124715623,
+			"ModificationTimeUnixTimeInMs": 1603124715623
+		},
+		{
+			"CustomActionId": -1,
+			"IsMandatory": false,
+			"DefaultValue": "",
+			"Description": "Gives the investigation a meaningful name. If the name is missing, a default case name is assigned.",
+			"Name": "Name",
+			"Value": "",
+			"Type": 0,
+			"OptionalValues": null,
+			"OptionalValuesJson": null,
+			"Id": -1,
+			"CreationTimeUnixTimeInMs": 1603124715623,
+			"ModificationTimeUnixTimeInMs": 1603124715623
+		}
+	],
+	"Id": -1,
+	"CreationTimeUnixTimeInMs": 1603124715599,
+	"ModificationTimeUnixTimeInMs": 1603124715599,
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}"
+}

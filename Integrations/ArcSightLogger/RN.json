@@ -1,0 +1,50 @@
+[
+    {
+        "ChangeDescription": "NEW! ArcSight Logger integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "ArcSight Logger",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1591687803,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3150"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "ArcSight Logger",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Security enhancements throughout the integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "ArcSight Logger",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1637746979,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    },
+    {
+        "ChangeDescription": "Send Query Action - Updated action's logic to better handle cases in which the \"Fields to Fetch\" value was empty.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Send Query",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1641975658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10684"
+    }
+]

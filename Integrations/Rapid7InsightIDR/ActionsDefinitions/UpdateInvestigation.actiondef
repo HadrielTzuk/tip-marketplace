@@ -1,0 +1,65 @@
+{
+    "CreationTimeUnixTimeInMs": 1670259130754,
+    "Creator": "admin",
+    "Description": "Update investigation in Rapid7 InsightIDR. Note: this action was built using API endpoints that are in preview release.",
+    "Id": -1,
+    "IntegrationIdentifier": "Rapid7InsightIDR",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1670259130754,
+    "Name": "Update Investigation",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"rrn\":\"rrn:investigation:eu:d16635a5-xxxx-xxxx-xxxx-67a4fbf26eb4:investigation:PAQBBKR4941D\",\"organization_id\":\"d16635a5-xxxx-xxxx-xxxx-67a4fbf26eb4\",\"title\":\"Suspicious Process - Malicious Hash On Asset\",\"source\":\"ALERT\",\"status\":\"OPEN\",\"priority\":\"HIGH\",\"last_accessed\":\"2022-10-12T13:08:37.650Z\",\"created_time\":\"2022-10-12T13:08:37.650Z\",\"disposition\":\"NOT_APPLICABLE\",\"assignee\":null,\"first_alert_time\":\"2022-10-12T13:08:37.643Z\",\"latest_alert_time\":\"2022-10-12T13:11:43.018Z\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Investigation ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the ID of the investigation that needs to be updated.",
+            "CreationTimeUnixTimeInMs": 1670259130754,
+            "ModificationTimeUnixTimeInMs": 1670259130754,
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Status",
+            "Type": 15,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the status for the investigation.",
+            "CreationTimeUnixTimeInMs": 1670259130754,
+            "ModificationTimeUnixTimeInMs": 1670259130754,
+            "CustomActionId": -1,
+            "Id": -1,
+            "OptionalValues": [
+                "Open",
+                "Investigating",
+                "Closed"
+            ]
+        },
+        {
+            "Name": "Disposition",
+            "Type": 15,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the disposition for the investigation.",
+            "CreationTimeUnixTimeInMs": 1670259130754,
+            "ModificationTimeUnixTimeInMs": 1670259130754,
+            "CustomActionId": -1,
+            "Id": -1,
+            "OptionalValues": [
+                "Benign",
+                "Malicious",
+                "Not Applicable"
+            ]
+        }
+    ]
+}

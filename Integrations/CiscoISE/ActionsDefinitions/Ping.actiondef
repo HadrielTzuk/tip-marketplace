@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1528637991004,
+    "Creator": "admin",
+    "Description": "Check connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "CiscoISE",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1528637991004,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CiscoISEManager import CiscoISEManager\n\nCISCOISE_PROVIDER = \"CiscoISE\"\n\n\ndef main():\n    # Configuration.\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(CISCOISE_PROVIDER)\n    cim = CiscoISEManager(conf['API Root'], conf['Username'], conf['Password'], conf['Verify SSL'])\n    \n    # Test UI API connectivity.\n    cim.login_ui_api()\n    \n    # Test regular API.\n    result_value = cim.ping()\n    \n    if result_value:\n        output_message = 'Connection Established.'\n    else:\n        output_message = 'Connection Failed.'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_succeed",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

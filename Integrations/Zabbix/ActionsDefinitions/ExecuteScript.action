@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1510138468693, 
+    "Creator": "admin", 
+    "Description": "Execute a script on hosts by IP.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"response\": \"success\", \"value\": \"sudo: no tty present and no askpass program specified\\n\"}, \"Entity\": \"1.1.1.1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Zabbix", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1510138468693, 
+    "Name": "Execute Script", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1521035318939, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The name of the script to execute.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1521035318939, 
+            "Name": "Script Name", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

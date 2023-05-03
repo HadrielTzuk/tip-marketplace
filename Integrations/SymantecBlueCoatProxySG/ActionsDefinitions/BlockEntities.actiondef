@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Block entities using Symantec Blue Coat ProxySG. Supported entities: IP Address.",
+    "Id": -1,
+    "IntegrationIdentifier": "SymantecBlueCoatProxySG",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Block Entities",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"172.30.xxx.xxx\",\"EntityResult\":{\"raw_output\":\"block 172.30.xxx.xxx   ok 172.30.xxx.xxx - Blue Coat SG-VA Series#(config client)\",\"status\":\"success\"}},{\"Entity\":\"1.1.x.x\",\"EntityResult\":{\"raw_output\":\"block 1.1.x.x   ok 172.30.xxx.xxx - Blue Coat SG-VA Series#(config client)\",\"status\":\"success\"}},{\"Entity\":\"test\",\"EntityResult\":{\"raw_output\":\"block test % test: invalid address 172.30.xxx.xxx - Blue Coat SG-VA Series#(config client)\",\"status\":\"failure\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [],
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

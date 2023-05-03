@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1520155247032, 
+    "Creator": "admin", 
+    "Description": "Add IP addresses to an address group", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[\"1.1.1.1\", \"2.2.2.2\"]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "PaloAltoPanorama", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1520155247032, 
+    "Name": "Add Ips to group", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1520155470744, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify name of the device. The default device name for Palo Alto Panorama is localhost.localdomain. Visit action documentation to get more insights on where you can find this value.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520155470744, 
+            "Name": "Device Name", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1520155470744, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify name of the device group. Visit action documentation to get more insights on where you can find this value.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520155470744, 
+            "Name": "Device Group Name", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1520155470744, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify name of the address group.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1520155470744, 
+            "Name": "Address Group Name", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

@@ -1,0 +1,58 @@
+{
+    "CreationTimeUnixTimeInMs": 1542547990590,
+    "Creator": "Admin",
+    "Description": "Rename the specified Slack channel. Note that action is not working on Siemplify entities.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"is_general\": false, \"name_normalized\": \"piskovisko_new1\", \"is_channel\": true, \"creator\": \"U0136KZ0XXX\", \"is_member\": true, \"is_archived\": false, \"topic\": {\"last_set\": 0, \"value\": \"\", \"creator\": \"\"}, \"parent_conversation\": null, \"is_im\": false, \"is_ext_shared\": false, \"previous_names\": [\"piskovisko_new1\", \"piskovisko_new\", \"piskovisko4445\", \"piskovisko4\", \"piskovisko4\", \"piskovisko3\", \"piskovisko3\", \"piskovisko3\", \"piskovisko3\", \"piskovisko2\"], \"last_read\": \"1604669453.001200\", \"id\": \"C01EWBPXXXX\", \"is_org_shared\": false, \"pending_connected_team_ids\": [], \"is_pending_ext_shared\": false, \"is_mpim\": false, \"is_group\": false, \"shared_team_ids\": [\"T013MJHSXXX\"], \"purpose\": {\"last_set\": 0, \"value\": \"\", \"creator\": \"\"}, \"is_private\": false, \"is_shared\": false, \"name\": \"piskovisko_new1\", \"created\": 1604668934, \"pending_shared\": [], \"unlinked\": 0}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "Slack",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1542547990590,
+    "Name": "Rename Channel",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1542547990590,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the channel, which you want to rename. Note: if both “Channel Name” and “Channel ID” are specified, action will only work with ID. ",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542547990590,
+            "Name": "Channel Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542547990590,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the id of the channel, which you want to rename. Note: if both “Channel Name” and “Channel ID” are specified, action will only work with ID. ",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542547990590,
+            "Name": "Channel ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542547990590,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what should be a new name for the channel. Note: Channel names may only contain lowercase letters, numbers, hyphens, and underscores, and must be 80 characters or less.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1542547990590,
+            "Name": "New Name",
+            "Type":0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

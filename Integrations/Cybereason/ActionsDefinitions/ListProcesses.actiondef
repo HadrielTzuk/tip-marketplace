@@ -1,0 +1,154 @@
+{
+    "CreationTimeUnixTimeInMs": 1524559211168,
+    "Creator": "admin",
+    "Description": "List processes based on provided criteria in Cybereason.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"simpleValues\":{\"imageFile.companyName\":{\"totalValues\":1,\"values\":[\"value\"]},\"elementDisplayName\":{\"totalValues\":1,\"values\":[\"value\"]},\"endTime\":{\"totalValues\":1,\"values\":[\"value\"]},\"imageFile.md5String\":{\"totalValues\":1,\"values\":[\"value\"]},\"imageFile.productName\":{\"totalValues\":1,\"values\":[\"value\"]},\"isWhiteListClassification\":{\"totalValues\":1,\"values\":[\"true\"]},\"productType\":{\"totalValues\":1,\"values\":[\"value\"]},\"commandLine\":{\"totalValues\":1,\"values\":[\"string\"]},\"creationTime\":{\"totalValues\":1,\"values\":[\"string\"]},\"pid\":{\"totalValues\":1,\"values\":[\"string\"]},\"executionPrevented\":{\"totalValues\":1,\"values\":[\"false\"]},\"imageFile.maliciousClassificationType\":{\"totalValues\":1,\"values\":[\"whitelist\"]},\"iconBase64\":{\"totalValues\":1,\"values\":[\"string\"]},\"imageFile.sha1String\":{\"totalValues\":1,\"values\":[\"value\"]},\"isImageFileSignedAndVerified\":{\"totalValues\":1,\"values\":[\"true\"]}},\"elementValues\":{\"calculatedUser\":{\"totalValues\":1,\"elementValues\":[{\"elementType\":\"User\",\"guid\":\"guid\",\"name\":\"name\",\"hasSuspicions\":false,\"hasMalops\":false}],\"totalSuspicious\":0,\"totalMalicious\":0,\"guessedTotal\":0},\"ownerMachine\":{\"totalValues\":1,\"elementValues\":[{\"elementType\":\"Machine\",\"guid\":\"guid\",\"name\":\"name\",\"hasSuspicions\":false,\"hasMalops\":false}],\"totalSuspicious\":0,\"totalMalicious\":0,\"guessedTotal\":0},\"parentProcess\":{\"totalValues\":1,\"elementValues\":[{\"elementType\":\"Process\",\"guid\":\"guid\",\"name\":\"name\",\"hasSuspicions\":false,\"hasMalops\":false}],\"totalSuspicious\":0,\"totalMalicious\":0,\"guessedTotal\":0},\"imageFile\":{\"totalValues\":1,\"elementValues\":[{\"elementType\":\"File\",\"guid\":\"guid\",\"name\":\"name\",\"hasSuspicions\":false,\"hasMalops\":false}],\"totalSuspicious\":0,\"totalMalicious\":0,\"guessedTotal\":0}},\"suspicions\":{\"lsassEncryptionKeysReadSuspicion\":1602000000000,\"lsassMainAuthenticationPackageReadSuspicion\":1602000000000,\"maliciousNGAVDetectionOfPowershellSuspicion\":1602000000000,\"lsassSensitiveReadSuspicion\":1602000000000,\"powerShellDownloaderSuspcion\":1602000000000,\"unexpectedAuditObjectAccessLsassSuspicion\":1602000000000,\"maliciousUseOfPowershellSuspicion\":1602000000000,\"lsassSupplementalAuthenticationPackageReadSuspicion\":1602000000000,\"suspiciousUseOfPowershellSuspicion\":1602000000000},\"filterData\":{\"sortInGroupValue\":\"value\",\"groupByValue\":\"powershell.exe\"},\"isMalicious\":true,\"suspicionCount\":9,\"guidString\":\"guid\",\"labelsIds\":\"None\",\"malopPriority\":\"None\",\"malicious\":true,\"suspect\":true}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Cybereason",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524559211168,
+    "Name": "List Processes",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of process names for which you want to return data.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Process Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of machine names on which you want to search for processes.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Machine Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will only return processes that are labeled as suspicious.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Has Suspicions",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will only return processes that have incoming connections.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Has Incoming Connection",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will only return processes that have outgoing connections.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Has Outgoing Connection",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will only return processes that have external connections.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Has External Connection",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will only return unsigned processes with unknown reputation.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Unsigned process with unknown reputation",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will only return processes running from a temporary folder.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Running from temporary folder",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will only return processes with escalated privileges.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Privilege Escalation",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will only return processes related to malicious use of PsExec.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Malicious use of PsExec",
+            "Type": 1,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529502968924,
+            "CustomActionId": -1,
+            "DefaultValue": 100,
+            "Description": "Specify how many processes to return.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529502968924,
+            "Name": "Results Limit",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "num_of_processes",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

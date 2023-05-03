@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1522049009620, 
+    "Creator": "admin", 
+    "Description": "Get VM name by IP address", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"Guest\": \"Microsoft Windows 7 (64-bit)\", \"Bios UUID\": \"423503ea-af3c-58a8-188c-f6285cec98e5\", \"VMware Tools\": \"toolsNotInstalled\", \"Ip Address\": \"1.1.1.1\", \"State\": \"poweredOn\", \"Template\": false, \"Path\": \"[DataStore] vm/vn.vmx\", \"Instance UUID\": \"50359be7-424b-e53d-5133-3f98f0e705ef\", \"Name\": \"vm\"}, \"Entity\": \"1.1.1.1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "VSphere", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1522049009620, 
+    "Name": "Get Vm By Ip", 
+    "Parameters": [], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom VSphereManager import VSphereManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    # Configuration.\n    conf = siemplify.get_configuration(\"VSphere\")\n    server_address = conf['Server Address']\n    username = conf['Username']\n    password = conf['Password']\n    port = int(conf['Port'])\n\n    vsphere_manager = VSphereManager(server_address, username, password, port)\n\n    vms = {}\n\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.ADDRESS:\n            vms[entity.identifier] = vsphere_manager.get_vm_by_ip(entity.identifier)\n\n    siemplify.end(\"Vsphere - Found the following vms: \\n\" +\n                  \"\\n\".join([\"{}: {}\".format(ip, vm.name) for ip, vm in vms.items()]),\n                  'true')\n\n\nif __name__ == '__main__':\n    main()", 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 1.0
+}

@@ -1,0 +1,23 @@
+{
+    "CreationTimeUnixTimeInMs": 1506252813503, 
+    "Creator": "admin", 
+    "Description": "DeepSight scan domain", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"domain\": \"amazon.com\", \"whitelisted\": true, \"schemaVersion\": 2, \"whois\": {\"city\": \"Reno\", \"updated\": \"2014-04-30T00: 00: 00Z\", \"created\": \"1994-11-01T00: 00: 00Z\", \"nameServers\": [\"NS1.P31.DYNECT.NET\", \"NS2.P31.DYNECT.NET\", \"NS3.P31.DYNECT.NET\"], \"country\": \"Us\", \"expires\": \"2022-10-31T00: 00: 00Z\", \"person\": \"Hostmaster,AmazonLegalDept.\", \"registrar\": \"MarkmonitorInc.\", \"postalCode\": \"89507\", \"organization\": \"AmazonTechnologies,Inc.\", \"email\": \"john_doe@example.com\"}}, \"Entity\": \"amazon.com\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "DeepSight", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1506528086615, 
+    "Name": "Scan Domain", 
+    "Parameters": [], 
+    "Script": "from DeepSight import DeepSight\nfrom SiemplifyAction import *\nfrom SiemplifyUtils import *\n\nHOSTNAME = 'HOSTNAME'\nUSER = \"USERUNIQNAME\"\n\ndef get_domain(domain):\n\tif '@' in domain:\n\t\treturn domain.split('@')[1]\n\telse:\n\t\treturn domain\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\tconf = siemplify.get_configuration('DeepSight')\n\tds = DeepSight(api_key = conf['ApiKey'])\n\tadditional_data = {}\n\tentities_to_update = []\n\toutput_message =\"\"\n\n\tfor entity in siemplify.target_entities:   \n\t\tif entity.entity_type == USER:\n\t\t\tdomain = get_domain(entity.identifier)\n\t\t\tif not domain:\n\t\t\t\tcontinue\n\t\telif entity.entity_type == HOSTNAME:\n\t\t\tdomain = get_domain(entity.identifier)\n\t\t\tif not domain:\n\t\t\t\tdomain = entity.identifier\n\t\telse:\n\t\t\tcontinue\n\t\tresult = ds.scan_domain(domain)\n\t\tif result:\n\t\t\tadditional_data[entity.identifier] = result\n\t\t\tif not \"message\" in result:\n\t\t\t\tadditional_data[entity.identifier] = {}\n\t\t\t\tentities_to_update.append(entity)\n\n\t\t\t\tfor key,val in result.iteritems():\n\t\t\t\t\tadditional_data[entity.identifier]['DS_' + key] = str(val)\n\t\t\t\t\tif key == 'whois_country':\n\t\t\t\t\t\tentity.additional_properties['Country'] = result['whois_country']\n\t\t\t\t\telse:\n\t\t\t\t\t\tentity.additional_properties['DS_' + key] = str(val)\n\n\tif entities_to_update:\n\t\tfor entity in entities_to_update:\n\t\t\tsiemplify.result.add_entity_enrichment(entity.identifier, additional_data[entity.identifier])\n\t\t\tif len(output_message) == 0:\n\t\t\t\toutput_message = entity.identifier\n\t\t\telse:\n\t\t\t\toutput_message += ', ' + entity.identifier\n\t\toutput_message += ' enriched.'\n\telse:\n\t\toutput_message = 'No entites were enriched' \n\t\n\tsiemplify.update_entities(entities_to_update)\n\tresult_value = 'true' if len(entities_to_update) else 'false'\n\tsiemplify.end(output_message, result_value) \n\nif __name__ == '__main__':\n\tmain()", 
+    "ScriptResultName": null, 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\", \"USERUNIQNAME\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "NEW! McAfee Mvision ePO V2 integration. Available on the Siemplify version 5.3 and higher.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "McAfee Mvision ePO V2",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1605249110,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

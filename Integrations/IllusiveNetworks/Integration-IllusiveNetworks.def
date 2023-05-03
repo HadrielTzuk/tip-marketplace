@@ -1,0 +1,48 @@
+{
+    "Description": "Shrink your organization’s attack surface. Find and eliminate the vulnerable credentials and connections that attackers use to escalate privileges and move laterally. Agentless, undetectable deception technology that creates a hostile environment for attackers, stopping lateral movement and access to your critical assets. Get actionable, real-time or on-demand forensic attack insight to accelerate blocking and remediation.",
+    "DisplayName": "Illusive Networks",
+    "Identifier": "IllusiveNetworks",
+    "Categories": ["Network Security", "Security"],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "IllusiveNetworks",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "http://x.x.x.x"
+        },
+        {
+            "IntegrationIdentifier": "IllusiveNetworks",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Key",
+            "PropertyName": "API Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "IllusiveNetworks",
+            "IsMandatory": false,
+            "PropertyDisplayName": "CA Certificate File",
+            "PropertyName": "CA Certificate File",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "IllusiveNetworks",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": false
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion":2,
+    "Version": 1.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/illusive-networks",
+    "SVGImage":"<svg width=\"17\" height=\"23\" viewBox=\"0 0 17 23\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.077095 12.2067C0.282682 11.6927 0.488268 11.2045 0.693855 10.6391C1.28492 10.819 1.82458 10.9732 2.49274 11.1788C2.49274 10.5363 2.49274 9.97095 2.49274 9.35419C3.18659 9.35419 3.77765 9.35419 4.47151 9.35419C4.47151 9.94525 4.47151 10.5106 4.47151 11.1788C5.11397 10.9732 5.67933 10.819 6.29609 10.6391C6.50168 11.2559 6.68156 11.8212 6.91285 12.438C6.29609 12.6436 5.73073 12.8235 5.08827 13.0547C5.47374 13.5944 5.80782 14.0827 6.1933 14.6223C5.65363 15.0078 5.16536 15.3676 4.6257 15.7531C4.24022 15.2391 3.88045 14.7508 3.49497 14.2112C3.1095 14.7251 2.74972 15.2134 2.33855 15.7274C1.82458 15.3419 1.33631 14.9821 0.796648 14.5966C1.15642 14.0827 1.5162 13.5944 1.90168 13.0291C1.25922 12.8492 0.668156 12.6693 0.077095 12.4894C0.077095 12.3866 0.077095 12.2838 0.077095 12.2067Z\" fill=\"#currentColor\"/><path d=\"M10.6134 11.5899C12.5151 11.5899 14.3397 11.5899 16.2156 11.5899C16.2156 12.181 16.2156 12.7464 16.2156 13.3631C14.3654 13.3631 12.5151 13.3631 10.6134 13.3631C10.6134 12.7978 10.6134 12.2324 10.6134 11.5899Z\" fill=\"#currentColor\"/><path d=\"M0 5.78212L2.13296 0H3.98324L6.1676 5.78212H4.08603L3.0581 2.41564L2.10726 5.78212H0Z\" fill=\"#currentColor\"/><path d=\"M10.1508 5.78212L12.2581 0H14.1341L16.3184 5.78212H14.2369L13.1832 2.41564L12.2324 5.78212H10.1508Z\" fill=\"#currentColor\"/><path d=\"M14.6737 19.3508V19.7106C14.6737 19.9162 14.4939 20.0961 14.2883 20.0961H8.91732C8.66034 20.0961 8.42905 20.2246 8.27486 20.4302L8.12067 20.6358L7.96648 20.4302C7.81229 20.2246 7.58101 20.0961 7.32402 20.0961H2.00447C1.79888 20.0961 1.61899 19.9162 1.61899 19.7106V19.3508H0.077095V20.6358C0.077095 21.2782 0.61676 21.8179 1.25922 21.8179H6.88715C7.32402 21.8179 7.6838 22.1777 7.6838 22.6145V23H8.60894V22.6145C8.60894 22.1777 8.96871 21.8179 9.40559 21.8179H15.0335C15.676 21.8179 16.2156 21.2782 16.2156 20.6358V19.3508H14.6737Z\" fill=\"#currentColor\"/></svg>",
+    "MarketingDisplayName": "Illusive Networks"
+}

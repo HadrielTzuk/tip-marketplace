@@ -1,0 +1,59 @@
+{
+    "Description": "The LogPoint’s SIEM system is designed from the ground up to be simple, flexible, and scalable, providing streamlined design, deployment, and integration tools to open the use of a network security tool up to all businesses.",
+    "DisplayName": "LogPoint",
+    "Identifier": "LogPoint",
+    "PythonVersion": 2,
+    "Categories": [
+        "SIEM",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "LogPoint",
+            "IsMandatory": true,
+            "PropertyDisplayName": "IP Address",
+            "PropertyName": "IP Address",
+            "PropertyType": "2",
+            "Value": "https://x.x.x.x"
+        },
+        {
+            "IntegrationIdentifier": "LogPoint",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "LogPoint",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Secret",
+            "PropertyName": "Secret",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "LogPoint",
+            "IsMandatory": false,
+            "PropertyDisplayName": "CA Certificate File",
+            "PropertyName": "CA Certificate File",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "LogPoint",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": true
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M24 10.5129C24 12.0497 23.2446 13.925 21.7079 15.4618C21.3172 15.8525 20.9264 16.2172 20.5618 16.6079C20.2753 16.9465 20.0148 16.9986 19.7022 16.6339C19.3897 16.2693 19.025 15.9567 18.6864 15.6181C17.6706 14.5762 17.6706 13.5083 18.6083 12.4143C20.0669 10.7473 19.9888 8.61144 18.3999 7.23094C16.9412 5.95463 14.8054 6.05882 13.4249 7.46536C12.0965 8.84586 12.0704 10.9557 13.4249 12.3622C15.6128 14.6023 17.8268 16.7902 20.0408 19.0042C20.9264 19.8898 21.786 20.8015 22.6976 21.635C23.1404 22.0517 23.0363 22.2861 22.5935 22.5987C20.6399 23.849 18.8687 23.8229 17.1236 22.208C14.8054 19.994 12.5393 17.6498 10.2471 15.2795C7.82476 12.779 7.4601 8.81981 9.2834 5.79835C11.1067 2.80294 14.7793 1.3443 18.1134 2.282C21.6558 3.24574 24 6.31929 24 10.5129Z\" \/>\r\n<path d=\"M1.44323 8.58539C1.67765 8.79376 1.83394 8.924 1.99022 9.08028C6.1838 13.2739 10.3774 17.4674 14.597 21.661C15.0138 22.0778 14.9877 22.3122 14.5189 22.6248C12.5653 23.9011 10.742 23.849 8.99688 22.208C6.99126 20.3066 5.03773 18.327 3.13629 16.3214C1.15671 14.2376 0.609723 11.711 1.2609 8.89795C1.28695 8.81981 1.33904 8.76772 1.44323 8.58539Z\" \/>\r\n<\/svg>",
+    "Version": 11.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/logpoint",
+    "MarketingDisplayName": "LogPoint"
+}

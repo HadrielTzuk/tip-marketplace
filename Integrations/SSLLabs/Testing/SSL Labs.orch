@@ -1,0 +1,119 @@
+{
+  "Identifier": "8ee4afd9-0d48-495a-a8d2-3e675097aad3",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": true,
+  "Name": "SSL Labs",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "35ca7487-7a1c-4ba3-956b-68a623354a22",
+      "ParentWorkflowIdentifier": "8ee4afd9-0d48-495a-a8d2-3e675097aad3",
+      "ParentStepIdentifiers": [
+        "60b710da-00b5-4a48-a5a3-9e53e88cf05e"
+      ],
+      "ParentStepIdentifier": "60b710da-00b5-4a48-a5a3-9e53e88cf05e",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "SSLLabs_Analyse Entity_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "SSLLabs_Analyse Entity",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "35ca7487-7a1c-4ba3-956b-68a623354a22",
+          "ParentWorkflowIdentifier": "8ee4afd9-0d48-495a-a8d2-3e675097aad3",
+          "Name": "ScriptName",
+          "Value": "SSLLabs_Analyse Entity",
+          "CreationTimeUnixTimeInMs": 1520848600576,
+          "ModificationTimeUnixTimeInMs": 1520848600576
+        },
+        {
+          "ParentStepIdentifier": "35ca7487-7a1c-4ba3-956b-68a623354a22",
+          "ParentWorkflowIdentifier": "8ee4afd9-0d48-495a-a8d2-3e675097aad3",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520848600576,
+          "ModificationTimeUnixTimeInMs": 1520848600576
+        },
+        {
+          "ParentStepIdentifier": "35ca7487-7a1c-4ba3-956b-68a623354a22",
+          "ParentWorkflowIdentifier": "8ee4afd9-0d48-495a-a8d2-3e675097aad3",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520848599279,
+          "ModificationTimeUnixTimeInMs": 1520848599279
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520848599279,
+      "ModificationTimeUnixTimeInMs": 1520848599279
+    },
+    {
+      "Identifier": "60b710da-00b5-4a48-a5a3-9e53e88cf05e",
+      "ParentWorkflowIdentifier": "8ee4afd9-0d48-495a-a8d2-3e675097aad3",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "SSLLabs_Ping_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "SSLLabs_Ping",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "60b710da-00b5-4a48-a5a3-9e53e88cf05e",
+          "ParentWorkflowIdentifier": "8ee4afd9-0d48-495a-a8d2-3e675097aad3",
+          "Name": "ScriptName",
+          "Value": "SSLLabs_Ping",
+          "CreationTimeUnixTimeInMs": 1520848600576,
+          "ModificationTimeUnixTimeInMs": 1520848600576
+        },
+        {
+          "ParentStepIdentifier": "60b710da-00b5-4a48-a5a3-9e53e88cf05e",
+          "ParentWorkflowIdentifier": "8ee4afd9-0d48-495a-a8d2-3e675097aad3",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520848600576,
+          "ModificationTimeUnixTimeInMs": 1520848600576
+        },
+        {
+          "ParentStepIdentifier": "60b710da-00b5-4a48-a5a3-9e53e88cf05e",
+          "ParentWorkflowIdentifier": "8ee4afd9-0d48-495a-a8d2-3e675097aad3",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520848597980,
+          "ModificationTimeUnixTimeInMs": 1520848597980
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520848597980,
+      "ModificationTimeUnixTimeInMs": 1520848597980
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "389a4314-1e75-42bf-bd33-563e2cada7ae",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "8ee4afd9-0d48-495a-a8d2-3e675097aad3",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "SSL Labs",
+      "AllEnvironments": "",
+      "Id": 55,
+      "CreationTimeUnixTimeInMs": 1520848600575,
+      "ModificationTimeUnixTimeInMs": 1520848600575
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 55,
+  "CreationTimeUnixTimeInMs": 1520848578253,
+  "ModificationTimeUnixTimeInMs": 1520848578253
+}

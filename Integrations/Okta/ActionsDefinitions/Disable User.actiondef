@@ -1,0 +1,66 @@
+{
+    "CreationTimeUnixTimeInMs": 1548084157829, 
+    "Creator": "System", 
+    "Description": "Disables the specified user", 
+    "DynamicScriptResultNamesJson": "[\"ResultJson\"]", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Okta", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1548084157837, 
+    "Name": "Disable User", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1548084157854, 
+            "CustomActionId": 700, 
+            "DefaultValue": "", 
+            "Description": "Ids of users in Okta", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084157854, 
+            "Name": "User IDs Or Logins", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1548084157855, 
+            "CustomActionId": 700, 
+            "DefaultValue": "false", 
+            "Description": "Whether to dactivate or only suspend the user", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084157855, 
+            "Name": "Is Deactivate", 
+            "Type": 1, 
+            "Value": "false"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1548084157856, 
+            "CustomActionId": 700, 
+            "DefaultValue": "false", 
+            "Description": "Whether to send an email after deactivating or not", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084157856, 
+            "Name": "Send Email If Deactivate", 
+            "Type": 1, 
+            "Value": "false"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1548084157856, 
+            "CustomActionId": 700, 
+            "DefaultValue": "false", 
+            "Description": "Whether to run on entities as well as the input", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084157856, 
+            "Name": "Also Run On Scope", 
+            "Type": 1, 
+            "Value": "false"
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyDataModel import EntityTypes\nfrom OktaManager import OktaManager\nimport json\n\nPROVIDER = \"Okta\"\nACTION_NAME = \"Okta - DisableUser\"\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    user_ids_or_logins = siemplify.parameters.get('User IDs Or Logins', \"\")\n    is_deactivate = siemplify.parameters.get('Is Deactivate', \"false\").lower() == \"true\"\n    is_send_email_deactivate = siemplify.parameters.get('Send Email If Deactivate', \"false\").lower() == \"true\"\n    is_scope = siemplify.parameters.get('Also Run On Scope', \"false\").lower() == \"true\"\n    ids = []\n    res = {}\n    ret = {}\n    output_message = \"\"\n    okta = OktaManager(api_root=conf['Api Root'], api_token=conf['Api Token'],\n                       verify_ssl=conf['Verify SSL'].lower() == 'true')\n    if user_ids_or_logins:\n        for _id in user_ids_or_logins.split(','):\n            _id = _id.strip()\n            ids.append(_id)\n    message = \"\"\n    action = \"SUSPEND\"\n    if is_deactivate:\n        action = \"DEACTIVATE\"\n    if ids:\n        for _id in ids:\n            try:\n                res = okta.disable_user(_id, is_deactivate, is_send_email_deactivate)\n                if res:\n                    message += \"The user with id {0} was disabled ({1}).\\n\\n\".format(_id, action)\n                    ret[_id] = action\n                else:\n                    message += \"The user with id {0} couldn't be disabled ({1}).\\n\\n\".format(_id, action)\n                    continue\n            except Exception as err:\n                siemplify.LOGGER.exception(err)\n                siemplify.LOGGER.error(_id + \" \" + action + \": \" + err.message)\n                pass\n    if is_scope:\n        entitiesDisabled = []\n        for entity in siemplify.target_entities:\n            if entity.entity_type == EntityTypes.USER or entity.entity_type == EntityTypes.HOSTNAME:\n                try:\n                    res = okta.disable_user(entity.identifier, is_deactivate, is_send_email_deactivate)\n                    if res:\n                        entitiesDisabled.append(entity)\n                        message += \"The user \\\"{0}\\\" was disabled ({1}).\\n\\n\".format(entity.identifier, action)\n                        ret[entity.identifier] = action\n                    else:\n                        message += \"The user \\\"{0}\\\" couldn't be disabled ({1}).\\n\\n\".format(entity.identifier, action)\n                        continue\n                except Exception as err:\n                    siemplify.LOGGER.exception(err)\n                    siemplify.LOGGER.error(entity.identifier + \" \" + action + \": \" + err.message)\n                    pass\n            else:\n                continue\n    if ret:\n        output_message = message\n    else:\n        output_message = \"No users were disabled. {}\".format(message)\n    siemplify.end(output_message, json.dumps(ret))\n\nif __name__ == '__main__':\n    main()", 
+    "ScriptResultName": "ScriptResult", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"USERUNIQNAME\"]}", 
+    "Version": 8.0
+}

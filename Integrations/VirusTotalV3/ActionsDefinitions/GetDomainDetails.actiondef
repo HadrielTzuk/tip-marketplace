@@ -1,0 +1,135 @@
+{
+    "CreationTimeUnixTimeInMs": "1570446244",
+    "Creator": "admin",
+    "Description": "Get detailed information about the domain using information from VirusTotal. Supported entities: URL (entity extracts domain part), Hostname.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"results\": [{\"Entity\": \"google.com\", \"EntityResult\": {\"execution_status\": \"success\", \"widget_url\": \"https://www.virustotal.com/ui/widget/html/\", \"widget_html\": \"\", \"attributes\": {\"categories\": {\"Comodo Valkyrie Verdict\": \"mobile communications\", \"Forcepoint ThreatSeeker\": \"search engines and portals\", \"sophos\": \"search engines\"}, \"creation_date\": 874296000, \"jarm\": \"27d40d40d29d40d1dc42d43d00041d4689ee210389f4xxxx\", \"last_analysis_results\": {\"ADMINUSLabs\": {\"category\": \"harmless\", \"engine_name\": \"ADMINUSLabs\", \"method\": \"blacklist\", \"result\": \"clean\"},  \"zvelo\": {\"category\": \"harmless\", \"engine_name\": \"zvelo\", \"method\": \"blacklist\", \"result\": \"clean\"}}, \"last_analysis_stats\": {\"harmless\": 88, \"malicious\": 1, \"suspicious\": 0, \"timeout\": 0, \"undetected\": 8}, \"last_dns_records\": [{\"ttl\": 299, \"type\": \"A\", \"value\": \"108.177.xx.xx\"}, {\"ttl\": 299, \"type\": \"A\", \"value\": \"108.177.xx.xx\"}], \"last_dns_records_date\": 1606982024, \"last_https_certificate\": {\"cert_signature\": {\"signature\": \"062df2b1e8a6db9375b595367c89186431a88375bdc083538eaec18b895b4bababbe6ecb3f0d57f05b7d3ed1ed270325fbe11c495c3be705fc88e0467ecfa95c5603498b314a4ed75210389929d45761dd33e1af0341350dd020b18e023ffb15e9cf3317c455a39043c370ac1ab8198f67905b359ad9bbad25b2506f698c00d80c0ff950b2526b0cb0ae6bc0502cafb612395959d4d448fea117299ef8392447f2fb76286fb5485b9a6c44769392c934cc5exxxx\", \"signature_algorithm\": \"sha256RSA\"}, \"extensions\": {\"1.3.6.xx.4.1.xx.2.xx.2\": \"0481f400f2007700f65c942fd177302214541808309456xxxx\", \"CA\": true, \"authority_key_identifier\": {\"keyid\": \"98d1f86e10ebcf9bec609f18901bxxxx\"}, \"ca_information_access\": {\"CA Issuers\": \"http://pki.goog/gsr2/GTS1O1.crt\", \"OCSP\": \"http://ocsp.pki.goog/gts1o1core\"}, \"certificate_policies\": [\"2.xx.xx.1.x.2\", \"1.3.x.1.x.1.xx.2.x.3\"], \"crl_distribution_points\": [\"http://crl.pki.goog/GTS1O1core.crl\"], \"extended_key_usage\": [\"serverAuth\"], \"key_usage\": [\"ff\"], \"subject_alternative_name\": [\"*.google.com\", \"*.android.com\", \"*.appengine.google.com\", \"*.bdn.dev\", \"*.cloud.google.com\", \"*.crowdsource.google.com\", \"*.datacompute.google.com\", \"*.g.co\", \"*.gcp.gvt2.com\", \"*.gcpcdn.gvt1.com\", \"*.ggpht.cn\", \"*.gkecnapps.cn\", \"*.google-analytics.com\", \"*.google.ca\", \"*.google.cl\", \"*.google.co.in\", \"*.google.co.jp\", \"*.google.co.uk\", \"*.google.com.ar\", \"*.google.com.au\", \"*.google.com.br\", \"*.google.com.co\", \"*.google.com.mx\", \"*.google.com.tr\", \"*.google.com.vn\", \"*.google.de\", \"*.google.es\", \"*.google.fr\", \"*.google.hu\", \"*.google.it\", \"*.google.nl\", \"*.google.pl\", \"*.google.pt\", \"*.googleadapis.com\", \"*.googleapis.cn\", \"*.googlecnapps.cn\", \"*.googlecommerce.com\", \"*.googlevideo.com\", \"*.gstatic.cn\", \"*.gstatic.com\", \"*.gstaticcnapps.cn\", \"*.gvt1.com\", \"*.gvt2.com\", \"*.metric.gstatic.com\", \"*.urchin.com\", \"*.url.google.com\", \"*.wear.gkecnapps.cn\", \"*.youtube-nocookie.com\", \"*.youtube.com\", \"*.youtubeeducation.com\", \"*.youtubekids.com\", \"*.yt.be\", \"*.ytimg.com\", \"android.clients.google.com\", \"android.com\", \"developer.android.google.cn\", \"developers.android.google.cn\", \"g.co\", \"ggpht.cn\", \"gkecnapps.cn\", \"goo.gl\", \"google-analytics.com\", \"google.com\", \"googlecnapps.cn\", \"googlecommerce.com\", \"source.android.google.cn\", \"urchin.com\", \"www.goo.gl\", \"youtu.be\", \"youtube.com\", \"youtubeeducation.com\", \"youtubekids.com\", \"yt.be\"], \"subject_key_identifier\": \"6332935206e0187513fc382e93836xxxxx\", \"tags\": []}, \"issuer\": {\"C\": \"US\", \"CN\": \"GTS CA 1O1\", \"O\": \"Google Trust Services\"}, \"public_key\": {\"algorithm\": \"EC\", \"ec\": {\"oid\": \"secxxx6r1\", \"pub\": \"04e39df44fb1e26dcab6784f8521a8eba46172d5e2f2f20c63d6739057d502f189bbdcb9ae72d4ae7fbf8c22d88d75fb8cf717180xxxx\"}}, \"serial_number\": \"fbe84f3140566cb602000000xxxx\", \"signature_algorithm\": \"sha256RSA\", \"size\": 2423, \"subject\": {\"C\": \"US\", \"CN\": \"*.google.com\", \"L\": \"Mountain View\", \"O\": \"Google LLC\", \"ST\": \"California\"}, \"tags\": [], \"thumbprint\": \"1c0f338c58d42a8ba99da76dc3c968xxxxx\", \"thumbprint_sha256\": \"c46e43396e2a7cfe51920db57da32693150735295f2f93804a6xxxx\", \"validity\": {\"not_after\": \"2021-01-26 07:33:42\", \"not_before\": \"2020-11-03 07:33:42\"}, \"version\": \"V3\"}, \"last_https_certificate_date\": 1606982024, \"last_modification_date\": 1607006281, \"last_update_date\": 1568043544, \"popularity_ranks\": {\"Alexa\": {\"rank\": 1, \"timestamp\": 1606836965}, \"Cisco Umbrella\": {\"rank\": 1, \"timestamp\": 1606923361}, \"Majestic\": {\"rank\": 2, \"timestamp\": 1606923363}, \"Quantcast\": {\"rank\": 1, \"timestamp\": 1585755370}, \"Statvoo\": {\"rank\": 1, \"timestamp\": 1606923361}}, \"registrar\": \"MarkMonitor Inc.\", \"reputation\": 205, \"tags\": [], \"total_votes\": {\"harmless\": 79, \"malicious\": 19}, \"whois\": \"Admin Country: US\\nAdmin Organization: Google LLC\\nAdmin State/Province: CA\\nCreation Date: 1997-09-15T00:00:00-0700\\nCreation Date: 1997-09-15T04:00:00Z\\nDNSSEC: unsigned\\nDomain Name: GOOGLE.COM\\nDomain Name: google.com\\nDomain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)\\nDomain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited\\nDomain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)\\nDomain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\\nDomain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)\\nDomain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited\\nDomain Status: serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)\\nDomain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited\\nDomain Status: serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)\\nDomain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited\\nDomain Status: serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)\\nDomain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited\\nName Server: NS1.GOOGLE.COM\\nName Server: NS2.GOOGLE.COM\\nName Server: NS3.GOOGLE.COM\\nName Server: NS4.GOOGLE.COM\\nName Server: ns1.google.com\\nName Server: ns2.google.com\\nName Server: ns3.google.com\\nName Server: ns4.google.com\\nRegistrant Country: US\\nRegistrant Email: ca4484b9e50182bds@\\nRegistrant Organization: 3307059bbb3149c4\\nRegistrant State/Province: b1952dfc047df18a\\nRegistrar Abuse Contact Email: abusecomplaints@markmonitor.com\\nRegistrar Abuse Contact Phone: +1.2083895740\\nRegistrar Abuse Contact Phone: +1.20838xxxx\\nRegistrar IANA ID: 292\\nRegistrar Registration Expiration Date: 2028-09-13T00:00:00-0700\\nRegistrar URL: http://www.markmonitor.com\\nRegistrar WHOIS Server: whois.markmonitor.com\\nRegistrar: MarkMonitor Inc.\\nRegistrar: MarkMonitor, Inc.\\nRegistry Domain ID: 2138xxx_DOMAIN_COM-VRSN\\nRegistry Expiry Date: 2028-09-14T04:00:00Z\\nTech Country: US\\nTech Organization: Google LLC\\nTech State/Province: CA\\nUpdated Date: 2019-09-09T08:39:04-0700\\nUpdated Date: 2019-09-09T15:39:04Z\", \"whois_date\": 1604968125}, \"id\": \"xxxxxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/domains/xxxxx.com\"}, \"type\": \"domain\", \"comments\": [{\"attributes\": {\"date\": 1606763924, \"html\": \"Its Google!  <br />#Safe #google<br />Please star my profile so my votes count more points thx:)<br />\", \"tags\": [\"safe\", \"google\"], \"text\": \"Its Google!  \\n#Safe #google\\nPlease star my profile so my votes count more points thx:)\\n\", \"votes\": {\"abuse\": 0, \"negative\": 0, \"positive\": 0}}, \"id\": \"d-google.com-957xxxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/comments/d-google.com-957xxx\"}, \"type\": \"comment\"}]}}], \"is_risky\": false}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "VirusTotalV3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Get Domain Details",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify how many engines should mark the domain as malicious or suspicious, for Siemplify to label it as risky. Note: if \"Engine Whitelist\" contains values, action will only count results from those engines.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Engine Threshold",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the percentage of engines should mark the entity as malicious or suspicious, for Siemplify to label it as suspicious. Note: if \"Engine Whitelist\" contains values, action will only count the percentage from those engines. If both \"Engine Threshold\" and \"Engine Percentage Threshold\" are provided, \"Engine Threshold\" will be used. Maximum value: 100. Minimum: 0.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Engine Percentage Threshold",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of engines that should be used to retrieve information, whether an entity is malicious or not. Example: AlienVault,Kaspersky. Note: if nothing is specified in this parameter, action will take results from every available engine. If the engine didn't return any information about the entity it’s not going to be counted for the parameters \"Engine Threshold\" and \"Engine Percentage Threshold\".",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Engine Whitelist",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will retrieve comments about the entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Retrieve Comments",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will create an insight containing information about the entities.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Create Insight",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will only create an insight for suspicious entities. Note: parameter \"Create Insight\" should be enabled.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Only Suspicious Entity Insight",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "10",
+            "Description": "Specify how many comments to return. Default: 10.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Max Comments To Return",
+            "Type": 0,
+            "Value": "10"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "Dark",
+            "Description": "Specify the theme for the widget.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Widget Theme",
+            "Type": 15,
+            "Value": "Dark",
+            "OptionalValues": [
+                "Light",
+                "Dark"
+            ]
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will fetch augmented widget related to the entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Fetch Widget",
+            "Type": 1,
+            "Value": true
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\", \"HOSTNAME\"]}",
+    "Type": 0,
+    "Version": 1.0
+}

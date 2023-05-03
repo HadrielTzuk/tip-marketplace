@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1544613734154, 
+    "Creator": "Admin", 
+    "Description": "Get device system information by it's UID.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "MobileIron", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1544613734161, 
+    "Name": "Fetch System Information By UUID", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1544613734172, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The UUID of the target device.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1544613734172, 
+            "Name": "Device UUID", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "Script": "# Imports\nfrom MobileIronManager import MobileIronManager\nfrom SiemplifyAction import SiemplifyAction\n\n# Consts.\nPROVIDER_NAME = 'MobileIron'\nACTION_NAME = 'MobileIron_Fetch System Information by UUID'\nTABLE_HEADER = 'Devices'\n\n\ndef rearrange_details_output(output_dict):\n    \"\"\"\n    Rearrange output.\n    :param output_dict: {list} Output values.\n    :return: {dict} Rearranged output.\n    \"\"\"\n    result_dict = {}\n    for item in output_dict:\n        if item.get('name'):\n            result_dict[item.get('name')] = item.get('value')\n    return result_dict\n\n\ndef main():\n    # Variables Definition.\n    result_value = False\n\n    # Configuration.\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    configuretion_settings = siemplify.get_configuration(PROVIDER_NAME)\n    api_root = configuretion_settings['API Root']\n    username = configuretion_settings['Username']\n    password = configuretion_settings['Password']\n    admin_device_id = configuretion_settings.get('Admin Device ID', 1)\n    connected_cloud = configuretion_settings.get('Connected Cloud', 'false').lower() == 'true'\n    verify_ssl = configuretion_settings.get('Verify SSL', 'false').lower() == 'true'\n\n    mobile_iron_manager = MobileIronManager(api_root, username, password, admin_device_id, connected_cloud, verify_ssl)\n\n    # Parameters.\n    device_uuid = siemplify.parameters.get('Device UUID')\n\n    system_information = mobile_iron_manager.get_device_details_by_uuid(device_uuid)\n\n    if system_information:\n        siemplify.result.add_entity_table(entity.identifier, rearrange_details_output(system_information))\n        result_value = True\n        output_message = \"Found system information for ID '{0}'\".format(device_uuid)\n    else:\n        output_message = \"No information was fetched for UUID '{0}'.\".format(device_uuid)\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 2.0
+}

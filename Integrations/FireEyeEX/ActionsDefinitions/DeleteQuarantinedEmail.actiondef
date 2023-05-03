@@ -1,0 +1,28 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381262567,
+    "Creator": "Admin",
+    "Description": "Deletes quarantined email.",
+    "Id": -1,
+    "IntegrationIdentifier": "FireEyeEX",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535381262567,
+    "Name": "Delete Quarantined Email",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381262567,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specify the queue id of the email that needs to be deleted.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381262567,
+            "Name": "Queue ID",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

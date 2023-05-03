@@ -1,0 +1,8 @@
+{
+    "Content": "<html><head></head><body><h2>Siemplify Marketplace Release Notes - 18.1</h2><h5>Published on 13 July, 2022</h5><hr><h3>Integrations</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     HCLBigFixInventory\n    </b>\n   </li>\n   <ul>\n    <li>\n     HCLBigFixInventory\n    </li>\n    <ul>\n     <li>\n      NEW! New Integration Added - HCL BigFix Inventory.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     PaloAltoNGFW\n    </b>\n   </li>\n   <ul>\n    <li>\n     PaloAltoNGFW\n    </li>\n    <ul>\n     <li>\n      Integration Actions - Improved error handling.\n     </li>\n    </ul>\n   </ul>\n   <li>\n    <b>\n     Shodan\n    </b>\n   </li>\n   <ul>\n    <li>\n     Shodan\n    </li>\n    <ul>\n     <li>\n      Get Ip Info - Updated action's response handling when \"Set Minify\" is enabled.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html><hr><h3>Actions</h3><html>\n <body>\n  <ul>\n   <li>\n    <b>\n     Okta\n    </b>\n   </li>\n   <ul>\n    <li>\n     Get User\n    </li>\n    <ul>\n     <li>\n      Get User - Added JSON Result to the action.\n     </li>\n    </ul>\n   </ul>\n  </ul>\n </body>\n</html></body></html>",
+    "Description": "",
+    "MarketplaceVersion": "18.1",
+    "MinimumSystemVersion": "5.1",
+    "PublishedDate": "13/07/22",
+    "Title": "Release Notes"
+}

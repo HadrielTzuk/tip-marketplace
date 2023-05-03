@@ -1,0 +1,435 @@
+{
+	"identifier": "c82523b1-43ef-4200-b736-863a8c8a0e6c",
+	"version": "0",
+	"isEnabled": true,
+	"name": "MISP",
+	"creator": "admin",
+	"priority": 1,
+	"description": "",
+	"environment": "",
+	"category": null,
+	"creationTime": "2018-07-01T14:00:39.029Z",
+	"trigger": {
+		"identifier": "3580abb1-55c0-4e9b-afb5-f63b09d1e394",
+		"type": 8,
+		"value": "",
+		"matchType": 0,
+		"description": "This will trigger the playbook for each alert ingested into Siemplify.",
+		"typeName": "All"
+	},
+	"steps": [{
+		"workflowIdentifier": "c82523b1-43ef-4200-b736-863a8c8a0e6c",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "866ed54d-f53b-4c92-b410-5e752f5fb710",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "MISP_Add Attribute_1",
+		"name": "MISP_Add Attribute",
+		"integration": "MISP",
+		"description": "Add an entity as an attribute to a MISP event",
+		"actionProvider": "Scripts",
+		"actionName": "MISP_Add Attribute",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "MISP_Add Attribute",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{\"Event ID\":\"[MISP_Create Event_2.event_id]\",\"Category\":\"External analysis\",\"Distribution\":\"1\",\"For Intrusion Detection System\":\"true\",\"Comment\":\"Added by Siemplify\"}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-07-01T14:00:39.029Z",
+		"modificationTime": "2018-07-01T14:00:39.029Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "Add Attribute"
+	},
+	{
+		"workflowIdentifier": "c82523b1-43ef-4200-b736-863a8c8a0e6c",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "103f9fff-c396-4683-9e92-7a67896256a6",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "MISP_Upload File_1",
+		"name": "MISP_Upload File",
+		"integration": "MISP",
+		"description": "Upload a file sample to MISP",
+		"actionProvider": "Scripts",
+		"actionName": "MISP_Upload File",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "MISP_Upload File",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{\"Event ID\":\"\",
+			\"File Path\":\"c:\\\\temp\\\\p.py\",\"Category\":\"External analysis\",\"Distribution\":\"1\",\"Threat Level\":\"0\",\"Analysis\":\"0\",\"Info\":\"\",
+			\"For Intrusion Detection System\":\"true\",\"Comment\":\"Uploaded by Siemplify\"}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-07-01T14:00:39.029Z",
+		"modificationTime": "2018-07-01T14:00:39.029Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "Upload File"
+	},
+	{
+		"workflowIdentifier": "c82523b1-43ef-4200-b736-863a8c8a0e6c",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "54372051-e07c-4cc6-9635-b34a56b691cb",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "MISP_Get Reputation_1",
+		"name": "MISP_Get Reputation",
+		"integration": "MISP",
+		"description": "Get the reputation and the related events of an entity",
+		"actionProvider": "Scripts",
+		"actionName": "MISP_Get Reputation",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "MISP_Get Reputation",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-07-01T14:00:39.029Z",
+		"modificationTime": "2018-07-01T14:00:39.029Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "Get Reputation"
+	},
+	{
+		"workflowIdentifier": "c82523b1-43ef-4200-b736-863a8c8a0e6c",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "66039da1-be7d-4c5a-b422-bf8c67ec2a01",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "MISP_Ping_1",
+		"name": "MISP_Ping",
+		"integration": "MISP",
+		"description": "Test connectivity to MISP.",
+		"actionProvider": "Scripts",
+		"actionName": "MISP_Ping",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "MISP_Ping",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-07-01T14:00:39.029Z",
+		"modificationTime": "2018-07-01T14:00:39.029Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "Ping"
+	},
+	{
+		"workflowIdentifier": "c82523b1-43ef-4200-b736-863a8c8a0e6c",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "3969859d-6a25-4cf3-bd5e-d847867db565",
+		"isAutomatic": true,
+		"isSkippable": false,
+		"instanceName": "MISP_Download File_1",
+		"name": "MISP_Download File",
+		"integration": "MISP",
+		"description": "Download a sample file from a MISP event",
+		"actionProvider": "Scripts",
+		"actionName": "MISP_Download File",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "MISP_Download File",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{\"Event ID\":\"\"
+		}","type":0,"isMandatory":false,"defaultValue":null,"creationTime":"0001-01-01T00: 00: 00","modificationTime":"0001-01-01T00: 00: 00","modificationTimeUnixTimeInMs":0,"additionalProperties":{}},{"name":"SelectedScopeName","value":"Allentities","type":0,"isMandatory":false,"defaultValue":null,"creationTime":"0001-01-01T00: 00: 00","modificationTime":"0001-01-01T00: 00: 00","modificationTimeUnixTimeInMs":0,"additionalProperties":{}}],"creationTime":"2018-07-01T14: 00: 39.029Z","modificationTime":"2018-07-01T14: 00: 39.029Z","modificationTimeUnixTimeInMs":0,"additionalProperties":{},"type":0,"displayName":"DownloadFile"},{"workflowIdentifier":"c82523b1-43ef-4200-b736-863a8c8a0e6c","workflowInstanceIdentifier":0,"caseId":0,"indicatorIdentifier":null,"status":0,"executingUser":null,"resultCode":0,"message":null,"resultValue":null,"results":[],"targetEntities":[],"dueDateUnixM":0,"properties":{},"actionDef":null,"identifier":"ca03b3b7-6ac7-420f-bf8d-fc8e9544478a","isAutomatic":true,"isSkippable":false,"instanceName":"MISP_UploadFile_2","name":"MISP_UploadFile","integration":"MISP","description":"UploadafilesampletoMISP","actionProvider":"Scripts","actionName":"MISP_UploadFile","parameters":[{"name":"ScriptName","value":"MISP_UploadFile","type":0,"isMandatory":false,"defaultValue":null,"creationTime":"0001-01-01T00: 00: 00","modificationTime":"0001-01-01T00: 00: 00","modificationTimeUnixTimeInMs":0,"additionalProperties":{}},{"name":"ScriptParametersEntityFields","value":"{
+			\"Event ID\":\"[MISP_Create Event_2.event_id]\",\"File Path\":\"c:\\\\temp\\\\a.bat\",\"Category\":\"\",
+			\"Distribution\":\"\",
+			\"Threat Level\":\"0\",\"Analysis\":\"0\",\"Info\":\"\",
+			\"For Intrusion Detection System\":\"false\",\"Comment\":\"\"
+		}","type":0,"isMandatory":false,"defaultValue":null,"creationTime":"0001-01-01T00: 00: 00","modificationTime":"0001-01-01T00: 00: 00","modificationTimeUnixTimeInMs":0,"additionalProperties":{}},{"name":"SelectedScopeName","value":"Allentities","type":0,"isMandatory":false,"defaultValue":null,"creationTime":"0001-01-01T00: 00: 00","modificationTime":"0001-01-01T00: 00: 00","modificationTimeUnixTimeInMs":0,"additionalProperties":{}}],"creationTime":"2018-07-01T14: 00: 39.029Z","modificationTime":"2018-07-01T14: 00: 39.029Z","modificationTimeUnixTimeInMs":0,"additionalProperties":{},"type":0,"displayName":"UploadFile"},{"workflowIdentifier":"c82523b1-43ef-4200-b736-863a8c8a0e6c","workflowInstanceIdentifier":0,"caseId":0,"indicatorIdentifier":null,"status":0,"executingUser":null,"resultCode":0,"message":null,"resultValue":null,"results":[],"targetEntities":[],"dueDateUnixM":0,"properties":{},"actionDef":null,"identifier":"bf1c2423-f48e-4976-a810-ffec3a631815","isAutomatic":true,"isSkippable":false,"instanceName":"MISP_CreateEvent_2","name":"MISP_CreateEvent","integration":"MISP","description":"CreateanewMISPevent","actionProvider":"Scripts","actionName":"MISP_CreateEvent","parameters":[{"name":"ScriptName","value":"MISP_CreateEvent","type":0,"isMandatory":false,"defaultValue":null,"creationTime":"0001-01-01T00: 00: 00","modificationTime":"0001-01-01T00: 00: 00","modificationTimeUnixTimeInMs":0,"additionalProperties":{}},{"name":"ScriptParametersEntityFields","value":"{
+			\"Event Name\":\"Test Event\",\"Distribution\":\"1\",\"Threat Level\":\"3\",\"Analysis\":\"2\",\"Publish\":\"true\",\"Comment\":\"Created By Siemplify\"}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"modificationTimeUnixTimeInMs": 0,
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-07-01T14:00:39.029Z",
+		"modificationTime": "2018-07-01T14:00:39.029Z",
+		"modificationTimeUnixTimeInMs": 0,
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "Create Event"
+	}],
+	"stepsRelations": [{
+		"condition": "",
+		"fromStep": "ca03b3b7-6ac7-420f-bf8d-fc8e9544478a",
+		"toStep": "866ed54d-f53b-4c92-b410-5e752f5fb710",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "54372051-e07c-4cc6-9635-b34a56b691cb",
+		"toStep": "103f9fff-c396-4683-9e92-7a67896256a6",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "66039da1-be7d-4c5a-b422-bf8c67ec2a01",
+		"toStep": "54372051-e07c-4cc6-9635-b34a56b691cb",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "866ed54d-f53b-4c92-b410-5e752f5fb710",
+		"toStep": "3969859d-6a25-4cf3-bd5e-d847867db565",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "bf1c2423-f48e-4976-a810-ffec3a631815",
+		"toStep": "ca03b3b7-6ac7-420f-bf8d-fc8e9544478a",
+		"destinationActionStatus": 0
+	},
+	{
+		"condition": "",
+		"fromStep": "103f9fff-c396-4683-9e92-7a67896256a6",
+		"toStep": "bf1c2423-f48e-4976-a810-ffec3a631815",
+		"destinationActionStatus": 0
+	}]
+}

@@ -1,0 +1,17 @@
+{
+    "CreationTimeUnixTimeInMs": 1509263483089,
+    "Creator": "admin",
+    "Description": "Test Connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "BulkWhoIs",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1509263483089,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import *\nfrom urlparse import urlparse\nimport datetime,requests,sys\nimport hashlib,hmac\nimport json\n\n\nAPI_URL = 'http://api.bulk-whois-api.com/api/query'\nURL = 'URL'\nHOSTNAME = 'HOSTNAME'\n\n\nclass Whois(object):\n\tdef __init__(self, **kwargs):\n\t\tself.__siemplify = kwargs.pop('siemplify',None)\n\t\tself.__Api_Key = self.__siemplify.get_configuration(\"BulkWhoIs\")[\"ApiKey\"]\n\t\tself._Secret_Key = self.__siemplify.get_configuration(\"BulkWhoIs\")[\"SecretKey\"]\n\t\tself._api_url = API_URL\n\t\treturn super(Whois, self).__init__(**kwargs)\n\n\tdef connectivity(self):\n\t\toutput_message = ''\n\t\tresult_value = 'false'\n\t\tstr_time = datetime.datetime.utcnow().strftime(\"%Y-%m-%d %H:%M:%S\")\n\n\t\tpost_data = \"query=8.8.8.8\"\n\t\tdata_to_sign = self.__Api_Key + str_time + post_data\n\t\tsignature = hmac.new(bytearray(self._Secret_Key,'utf8'),bytearray(data_to_sign,'utf8'),digestmod=hashlib.sha512).hexdigest().lower()\n\t\theaders = {\n\t\t\t\t\t\"Key\": self.__Api_Key, \n\t\t\t\t\t\"Time\":str_time, \n\t\t\t\t\t\"Sign\":signature, \n\t\t\t\t\t\"Content-Type\": \"application/x-www-form-urlencoded\",\n\t\t\t\t}\n\t\ttry:\n\t\t\tresponse = requests.post(self._api_url,headers=headers,data = post_data)\n\t\t\tif response.status_code == 200:\n\t\t\t\tif not json.loads(response.text)['success'] == 0: \n\t\t\t\t\toutput_message = 'Connection Established.'\n\t\t\t\t\tresult_value = 'true'\n\t\t\t\telse:\n\t\t\t\t\toutput_message = 'Connection Failed.'\n\t\t\t\t\tresult_value = 'false'\n\t\t\telse:\n\t\t\t\toutput_message = 'Connection Failed.'\n\t\t\t\tresult_value = 'false'\n\t\texcept:\t\n\t\t\toutput_message = 'Connection Failed. : No internet Connection.'\n\t\t\tresult_value = 'false'\n\t\t\t\n\t\tself.__siemplify.end(output_message, result_value)\n\ndef main():\n\tsiemplify = SiemplifyAction()\n\twhois = Whois(siemplify = siemplify)\n\twhois.connectivity()\n\nif __name__ == '__main__':\n\tmain()\n",
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1544613305274, 
+    "Creator": "Admin", 
+    "Description": "Fetch system information for device by it's IP adddress.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "MobileIron", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1544613305283, 
+    "Name": "Fetch System Information", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1544613305294, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The values of the inserted fields will be fetched for a device(Has to be comma separated string), ex: ios.DeviceName,user.display_name,user.email_address,user.user_id", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1544613305294, 
+            "Name": "Fields To Fetch", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "Script": "# Imports\nfrom MobileIronManager import MobileIronManager\nfrom SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\nfrom SiemplifyDataModel import EntityTypes\n\n# Consts.\nPROVIDER_NAME = 'MobileIron'\nACTION_NAME = 'MobileIron_Fetch System Information'\nTABLE_HEADER = 'Devices'\n\n\ndef main():\n    # Variables Definition.\n    result_value = False\n    success_entities = []\n    errors = []\n\n    # Configuration.\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    configuretion_settings = siemplify.get_configuration(PROVIDER_NAME)\n    api_root = configuretion_settings['API Root']\n    username = configuretion_settings['Username']\n    password = configuretion_settings['Password']\n    admin_device_id = configuretion_settings.get('Admin Device ID', 1)\n    connected_cloud = configuretion_settings.get('Connected Cloud', 'false').lower() == 'true'\n    verify_ssl = configuretion_settings.get('Verify SSL', 'false').lower() == 'true'\n\n    mobile_iron_manager = MobileIronManager(api_root, username, password, admin_device_id, connected_cloud, verify_ssl)\n\n    # Parameters.\n    fields_to_fetch = siemplify.parameters.get('Fields To Fetch')\n\n    target_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.ADDRESS]\n\n    for entity in target_entities:\n        try:\n            if fields_to_fetch:\n                system_information = mobile_iron_manager.fetch_device_information_by_ip(entity.identifier,\n                                                                                        fields_to_fetch=fields_to_fetch)\n            else:\n                system_information = mobile_iron_manager.fetch_device_information_by_ip(entity.identifier)\n\n            if system_information:\n                siemplify.result.add_entity_table(entity.identifier, flat_dict_to_csv(dict_to_flat(system_information)))\n                result_value = True\n                success_entities.append(entity)\n        except Exception as err:\n            error_message = \"Failed fetching system information for '{0}', ERROR: {1}\".format(entity.identifier,\n                                                                                              err.message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    if success_entities:\n        output_message = \"System information fetched for {0}\".format(\",\".join([entity.identifier for entity in\n                                                                               success_entities]))\n    else:\n        output_message = \"No information was fetched for entities.\"\n\n    if errors:\n        output_message = \"{0}\\n\\nErrors:\\n{1}\".format(output_message, \"\\n\".join(errors))\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Version": 2.0
+}

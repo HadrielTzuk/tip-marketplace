@@ -1,0 +1,99 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "List vulnerabilities related to the entities in Google Security Command Center.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleSecurityCommandCenter",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "List Asset Vulnerabilities",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"asset_identifier\":\"//compute.googleapis.com/projects/orbital-signal-0000/zones/europe-west1-b/instances/0000\",\"results\":{\"siemplify_asset_display_name\":\"asset name\",\"vulnerabilities\":{\"statistics\":{\"critical\":0,\"high\":2,\"medium\":0,\"low\":0,\"severity_unspecified\":0},\"data\":[{\"name\":\"organizations/0000/sources/0000/findings/7c21af78xxxxxx\",\"parent\":\"organizations/0000/sources/0000\",\"resourceName\":\"//compute.googleapis.com/projects/orbital-signal-0000/zones/europe-west1-b/instances/0000\",\"state\":\"ACTIVE\",\"category\":\"OS_VULNERABILITY\",\"externalUri\":\"https://console.cloud.google.com/compute/instancesDetail/zones/europe-west1-b/instances/0000?project=orbital-signal-0000&tab=os-information\",\"sourceProperties\":{\"description\":\"In ReadLogicalParts of basicmbr.cc, there is a possible out of bounds write due to a missing bounds check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation. Product: Android; Versions: Android-8.1, Android-9, Android-10, Android-11, Android-8.0; Android ID: A-158063095.\"},\"securityMarks\":{\"name\":\"organizations/0000/sources/0000/findings/7c21af780687xxxxx/securityMarks\"},\"eventTime\":\"2022-05-26T21:32:06.391Z\",\"createTime\":\"2021-09-17T04:21:10.785Z\",\"severity\":\"HIGH\",\"canonicalName\":\"projects/0000/sources/0000/findings/7c21af78068xxxx\",\"mute\":\"UNMUTED\",\"muteAnnotation\":\"Unmuted by olivierba@google.com\",\"findingClass\":\"VULNERABILITY\",\"vulnerability\":{\"cve\":{\"id\":\"CVE-2021-0000\",\"references\":[{\"source\":\"Distro\",\"uri\":\"https://security-tracker.debian.org/tracker/CVE-2021-0000\"},{\"source\":\"NVD\",\"uri\":\"https://nvd.nist.gov/vuln/detail/CVE-2021-0000\"}],\"cvssv3\":{\"baseScore\":6.800000190734863,\"attackVector\":\"ATTACK_VECTOR_PHYSICAL\",\"attackComplexity\":\"ATTACK_COMPLEXITY_LOW\",\"privilegesRequired\":\"PRIVILEGES_REQUIRED_NONE\",\"userInteraction\":\"USER_INTERACTION_NONE\",\"scope\":\"SCOPE_UNCHANGED\",\"confidentialityImpact\":\"IMPACT_HIGH\",\"integrityImpact\":\"IMPACT_HIGH\",\"availabilityImpact\":\"IMPACT_HIGH\"}}},\"muteUpdateTime\":\"2021-11-09T10:10:20.039Z\",\"muteInitiator\":\"Unmuted by asdasd@google.com\",\"contacts\":{\"security\":{\"contacts\":[{\"email\":\"asdasd@asd.net\"},{\"email\":\"asdasd@asd.net\"}]},\"technical\":{\"contacts\":[{\"email\":\"asdasd@asd.net\"}]}},\"description\":\"In ReadLogicalParts of basicmbr.cc, there is a possible out of bounds write due to a missing bounds check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation. Product: Android; Versions: Android-8.1, Android-9, Android-10, Android-11, Android-8.0; Android ID: A-158063095.\"},{\"name\":\"organizations/0000/sources/0000/findings/9cce4421744xxxx\",\"parent\":\"organizations/0000/sources/0000\",\"resourceName\":\"//compute.googleapis.com/projects/orbital-signal-0000/zones/europe-west1-b/instances/0000\",\"state\":\"ACTIVE\",\"category\":\"OS_VULNERABILITY\",\"externalUri\":\"https://console.cloud.google.com/compute/instancesDetail/zones/europe-west1-b/instances/0000?project=orbital-signal-0000&tab=os-information\",\"sourceProperties\":{\"description\":\"In LoadPartitionTable of gpt.cc, there is a possible out of bounds write due to a missing bounds check. This could lead to local escalation of privilege when inserting a malicious USB device, with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android-8.1 Android-9 Android-10 Android-8.0Android ID: A-152874864\"},\"securityMarks\":{\"name\":\"organizations/0000/sources/0000/findings/9cce44217440xxxx/securityMarks\"},\"eventTime\":\"2022-05-26T21:32:06.391Z\",\"createTime\":\"2021-09-17T04:21:10.779Z\",\"severity\":\"HIGH\",\"canonicalName\":\"projects/0000/sources/0000/findings/9cce4421744xxxxx\",\"mute\":\"UNMUTED\",\"muteAnnotation\":\"Unmuted by asdasd@google.com\",\"findingClass\":\"VULNERABILITY\",\"vulnerability\":{\"cve\":{\"id\":\"CVE-2020-0000\",\"references\":[{\"source\":\"Distro\",\"uri\":\"https://security-tracker.debian.org/tracker/CVE-2020-0000\"},{\"source\":\"NVD\",\"uri\":\"https://nvd.nist.gov/vuln/detail/CVE-2020-0000\"}],\"cvssv3\":{\"baseScore\":6.800000190734863,\"attackVector\":\"ATTACK_VECTOR_PHYSICAL\",\"attackComplexity\":\"ATTACK_COMPLEXITY_LOW\",\"privilegesRequired\":\"PRIVILEGES_REQUIRED_NONE\",\"userInteraction\":\"USER_INTERACTION_NONE\",\"scope\":\"SCOPE_UNCHANGED\",\"confidentialityImpact\":\"IMPACT_HIGH\",\"integrityImpact\":\"IMPACT_HIGH\",\"availabilityImpact\":\"IMPACT_HIGH\"}}},\"muteUpdateTime\":\"2021-11-09T10:10:20.134Z\",\"muteInitiator\":\"Unmuted by asdasd@google.com\",\"contacts\":{\"security\":{\"contacts\":[{\"email\":\"asdasd@asd.net\"},{\"email\":\"asdasd@asd.net\"}]},\"technical\":{\"contacts\":[{\"email\":\"asdasd@asd.net\"}]}},\"description\":\"In LoadPartitionTable of gpt.cc, there is a possible out of bounds write due to a missing bounds check. This could lead to local escalation of privilege when inserting a malicious USB device, with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android-8.1 Android-9 Android-10 Android-8.0Android ID: A-152874864\"}]},\"misconfigurations\":{\"statistics\":{\"critical\":0,\"high\":0,\"medium\":3,\"low\":0,\"severity_unspecified\":0},\"data\":[{\"name\":\"organizations/0000/sources/0000/findings/f53c39c15f2xxxx\",\"parent\":\"organizations/0000/sources/0000\",\"resourceName\":\"//compute.googleapis.com/projects/orbital-signal-0000/zones/europe-west1-b/instances/0000\",\"state\":\"ACTIVE\",\"category\":\"COMPUTE_SECURE_BOOT_DISABLED\",\"externalUri\":\"https://console.cloud.google.com/compute/instancesDetail/zones/europe-west1-b/instances/csp-linux-01?project=orbital-signal-0000\",\"sourceProperties\":{\"Recommendation\":\"Go to https://console.cloud.google.com/compute/instancesDetail/zones/europe-west1-b/instances/csp-linux-01?project=orbital-signal-0000 and click \\\"Stop\\\". Once the instance has stopped, scroll down to the \\\"Shielded VM\\\" section and check the \\\"Turn on Secure Boot\\\" checkbox. Then you can start the instance back up by clicking the \\\"Start\\\" button.\",\"ExceptionInstructions\":\"Add the security mark \\\"allow_compute_secure_boot_disabled\\\" to the asset with a value of \\\"true\\\" to prevent this finding from being activated again.\",\"Explanation\":\"Using secure boot helps protect your virtual machines against rootkits, boot- and kernel-level malware. Learn more at: https://cloud.google.com/security/shielded-cloud/shielded-vm\",\"ScannerName\":\"COMPUTE_INSTANCE_SCANNER\",\"ResourcePath\":[\"projects/orbital-signal-0000/\",\"organizations/0000/\"],\"compliance_standards\":{},\"ReactivationCount\":0},\"securityMarks\":{\"name\":\"organizations/0000/sources/0000/findings/f53c39c15f2xxxxx/securityMarks\"},\"eventTime\":\"2022-04-27T19:03:13.927Z\",\"createTime\":\"2021-06-11T13:02:26.453Z\",\"severity\":\"MEDIUM\",\"canonicalName\":\"projects/0000/sources/0000/findings/f53c39c15f2cbxxxxx\",\"mute\":\"UNDEFINED\",\"findingClass\":\"MISCONFIGURATION\",\"contacts\":{\"security\":{\"contacts\":[{\"email\":\"asdasd@asd.net\"},{\"email\":\"asdasd@asd.net\"}]},\"technical\":{\"contacts\":[{\"email\":\"asdasd@asd.net\"}]}},\"description\":\"Using secure boot helps protect your virtual machines against rootkits, boot- and kernel-level malware. Learn more at: https://cloud.google.com/security/shielded-cloud/shielded-vm\"}]}}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Asset Resource Names",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify a comma-separated list of resource names of the assets for which you want to return data.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Timeframe",
+            "Type": 15,
+            "DefaultValue": "All Time",
+            "Value": "All Time",
+            "IsMandatory": false,
+            "Description": "Specify the timeframe for the vulnerabilities/misconfiguration search.",
+            "OptionalValues": [
+                "Last Week",
+                "Last Month",
+                "Last Year",
+                "All Time"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Record Types",
+            "Type": 15,
+            "DefaultValue": "Vulnerabilities + Misconfigurations",
+            "Value": "Vulnerabilities + Misconfigurations",
+            "IsMandatory": false,
+            "Description": "Specify what kind of records should be returned.",
+            "OptionalValues": [
+                "Vulnerabilities + Misconfigurations",
+                "Vulnerabilities",
+                "Misconfigurations"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Output Type",
+            "Type": 15,
+            "DefaultValue": "Statistics",
+            "Value": "Statistics",
+            "IsMandatory": false,
+            "Description": "Specify what kind of output should be returned in the JSON result for the asset.",
+            "OptionalValues": [
+                "Statistics",
+                "Data",
+                "Statistics + Data"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Max Records To Return",
+            "Type": 0,
+            "DefaultValue": 100,
+            "Value": 100,
+            "IsMandatory": false,
+            "Description": "Specify how many records to return per record type per assets: Default: 50.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

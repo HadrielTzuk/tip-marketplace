@@ -1,0 +1,52 @@
+{
+    "CreationTimeUnixTimeInMs": 1522678428226,
+    "Creator": "admin",
+    "Description": "Add a comment to a case",
+    "Id": -1,
+    "IntegrationIdentifier": "Salesforce",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1522678428226,
+    "Name": "Add Comment",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1522678428226,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The number of the case.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1522678428226,
+            "Name": "Case Number",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522678428226,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The comment title",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1522678428226,
+            "Name": "Title",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1522678428226,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The comment's body",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1522678428226,
+            "Name": "Body",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

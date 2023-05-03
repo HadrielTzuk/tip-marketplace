@@ -1,0 +1,57 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Add IOC feed in FireEye CM based on entities. Only MD5 and SHA256 hashes are supported.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"New_IOC_Feeds\": [\"Siemplify_SFRUUDovL01BUktPU1NPTE9NT04uQ09NL0YxUTdRWC5QSFA\", \"Siemplify_aHR0cHM6Ly93d3cuY2lnYXJwYXFlLmNvbS9tYWdlLnBocA\", \"Siemplify_MTkyLjEyLjAuNjA\", \"Siemplify_ODEwZmFkYThkZDM1OWQwY2E1ZGZmMjJhMWU3MTE1NGM\", \"Siemplify_MTgyOTA2NjU2MDJhMGRiYjc4ZWRjZDgyMTM1NjEwMmEwNjY2ZmU4ZDhjZDJlZjg0OGMyY2Y1MTFlNTljNzMxMw\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "FireEyeCM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Add IOC Feed",
+    "Parameters": [
+        {
+            "Name": "Action",
+            "Type": 15,
+            "Value": "Alert",
+            "DefaultValue": "Alert",
+            "IsMandatory": true,
+            "Description": "Specify what should be the action for the new feed.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "OptionalValues": [
+                "Alert",
+                "Block"
+            ]
+        },
+        {
+            "Name": "Comment",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specify additional comments for the feed.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Extract Domain",
+            "Type": 1,
+            "Value": false,
+            "DefaultValue": false,
+            "IsMandatory": true,
+            "Description": "If enabled, action will extract the domain part out of the URL and use it to create IOC feed.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"DestinationURL\", \"FILEHASH\"]}"
+}

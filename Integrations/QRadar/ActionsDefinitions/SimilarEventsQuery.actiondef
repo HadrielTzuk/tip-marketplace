@@ -1,0 +1,107 @@
+{
+    "CreationTimeUnixTimeInMs": 1525009637104,
+    "Creator": "System",
+    "Description": "Execute a predefined AQL query to find events related to the specified Siemplify IP address, Hostname, or Username entities.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"10.0.xx.xx\", \"EntityResult\": [{\"starttime\": 1611130688377, \"protocolid\": \"xx\", \"sourceip\": \"10.0.xx.xx\", \"logsourceid\": \"xx\", \"qid\": \"2825xxx\", \"sourceport\": 0, \"eventcount\": 1, \"magnitude\": 7, \"identityip\": \"0.0.xx.xx\", \"destinationip\": \"172.30.xx.xx\", \"destinationport\": 0, \"category\": 16003, \"username\": \"API_Auth\"}, {\"starttime\": 1611130698343, \"protocolid\": \"xx\", \"sourceip\": \"10.0.xx.xx\", \"logsourceid\": \"xx\", \"qid\": \"2825xxx\", \"sourceport\": 0, \"eventcount\": 1, \"magnitude\": 7, \"identityip\": \"0.0.xx.xx\", \"destinationip\": \"172.30.xx.xx\", \"destinationport\": 0, \"category\": 16003, \"username\": \"API_Auth\"}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "QRadar",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1525009637104,
+    "Name": "Similar Events Query",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1525009637104,
+            "CustomActionId": -1,
+            "DefaultValue": "10",
+            "Description": "Fetch events for the last X minutes. The parameter accepts numeric values for example, 10.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525009637104,
+            "Name": "Time Delta In Minutes",
+            "Type": 0,
+            "Value": "10"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525009637104,
+            "CustomActionId": -1,
+            "DefaultValue": "25",
+            "Description": "Limit how many events the action can return, the parameter accepts numeric value, for example, 25.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1525009637104,
+            "Name": "Events Limit To Fetch",
+            "Type": 0,
+            "Value": "25"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525009522717,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The fields to fetch from the event in addition to predefined ones, if not set - return predefined fields for the event.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525009522717,
+            "Name": "Fields To Display",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525009637104,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Field that represents Hostname Field of event",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525009637104,
+            "Name": "Hostname Field Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525009637104,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Fields that represents Source IP Address Field of event",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525009637104,
+            "Name": "Source IP Address Field Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525009637104,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Fields that represents Destination IP Address Field of event",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525009637104,
+            "Name": "Destination IP Address Field Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525009637104,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Fields that represents Username Field of event",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525009637104,
+            "Name": "Username Field Name",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"HOSTNAME\", \"USER\"]}",
+    "IsAsync": true
+}

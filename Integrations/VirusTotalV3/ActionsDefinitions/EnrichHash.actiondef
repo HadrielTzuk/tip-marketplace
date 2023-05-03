@@ -1,0 +1,196 @@
+{
+    "CreationTimeUnixTimeInMs": "1570446244",
+    "Creator": "admin",
+    "Description": "Enrich Hash using information from VirusTotal. Supported entities: Filehash. Note: only MD5, SHA-1 and SHA-256 are supported.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"results\": [{\"Entity\": \"8b2e701e91101955c73865589a4c72999aeabc11043f7xxxxx\", \"EntityResult\": {\"attributes\": {\"authentihash\": \"ad56160b465f7bd1e7568640397f01fc4f8819ce6f0c141569xxxx\", \"creation_date\": 1410950077, \"downloadable\": true, \"exiftool\": {\"CharacterSet\": \"Unicode\", \"CodeSize\": \"547xx\", \"CompanyName\": \"MySQL, AB\", \"EntryPoint\": \"0x39xx\", \"FileDescription\": \"WinMerge Shell Integration\", \"FileFlagsMask\": \"0x00xx\", \"FileOS\": \"Windows NT 32-bit\", \"FileSubtype\": \"0\", \"FileType\": \"Win32 EXE\", \"FileTypeExtension\": \"exe\", \"FileVersion\": \"1.0.1.6\", \"FileVersionNumber\": \"1.0.1.6\", \"ImageFileCharacteristics\": \"Executable, 32-bit\", \"ImageVersion\": \"0.0\", \"InitializedDataSize\": \"199168\", \"InternalName\": \"ShellExtension\", \"LanguageCode\": \"English (U.S.)\", \"LegalCopyright\": \"Copyright 2003-2013\", \"LinkerVersion\": \"10.0\", \"MIMEType\": \"application/octet-stream\", \"MachineType\": \"Intel 386 or later, and compatibles\", \"OSVersion\": \"5.1\", \"ObjectFileType\": \"Executable application\", \"OriginalFileName\": \"ShellExtension\", \"PEType\": \"PE32\", \"ProductName\": \"ShellExtension\", \"ProductVersion\": \"1.0.1.6\", \"ProductVersionNumber\": \"1.0.1.6\", \"Subsystem\": \"Windows GUI\", \"SubsystemVersion\": \"5.1\", \"TimeStamp\": \"2014:09:17 10:34:37+00:00\", \"UninitializedDataSize\": \"0\"}, \"first_submission_date\": 1411582812, \"last_analysis_date\": 1606903659, \"last_analysis_results\": {\"ALYac\": {\"category\": \"malicious\", \"engine_name\": \"ALYac\", \"engine_update\": \"20201202\", \"engine_version\": \"1.1.1.5\", \"method\": \"blacklist\", \"result\": \"Trojan.Foreign.Gen.2\"}, \"eGambit\": {\"category\": \"malicious\", \"engine_name\": \"eGambit\", \"engine_update\": \"20201202\", \"engine_version\": null, \"method\": \"blacklist\", \"result\": \"Generic.Trojan\"}}, \"last_analysis_stats\": {\"confirmed-timeout\": 0, \"failure\": 0, \"harmless\": 0, \"malicious\": 61, \"suspicious\": 0, \"timeout\": 0, \"type-unsupported\": 5, \"undetected\": 10}, \"last_modification_date\": 1606911051, \"last_submission_date\": 1572934476, \"magic\": \"PE32 executable for MS Windows (GUI) Intel 80386 32-bit\", \"md5\": \"9498ff82a64ff445398c8426exxxx\", \"meaningful_name\": \"ShellExtension\", \"names\": [\"ShellExtension\", \"ZeuS_binary_9498ff82a64ff445398c8426exxxx.exe\", \"9498ff82a64ff445398c8426exxxx.exe\", \"9498ff82a64ff445398c8426exxxx\", \"2420800\", \"8b2e701e91101955c73865589a4c72999aeabc11043f712e05fdb1xxxxx.exe\", \"sigchxxx.exe\", \"malwxxx.exe\"], \"pe_info\": {\"compiler_product_versions\": [\"[C++] VS2010 SP1 build 40219 count=36\", \"[ASM] VS2010 SP1 build 40219 count=19\", \"[ C ] VS2010 SP1 build 40219 count=110\", \"[IMP] VS2008 SP1 build 30729 count=21\", \"[---] Unmarked objects count=197\", \"id: xxx, version: 40219 count=1\", \"[RES] VS2010 SP1 build 40219 count=1\", \"[LNK] VS2010 SP1 build 40219 count=1\"], \"entry_point\": 14768, \"imphash\": \"d7584447a5c5ca9b4a559463171xxxx\", \"import_list\": [{\"imported_functions\": [\"GetOpenFileNameA\"], \"library_name\": \"COMDLG32.dll\"}, {\"imported_functions\": [\"SafeArrayCreate\", \"RegisterActiveObject\"], \"library_name\": \"OLEAUT32.dll\"}, {\"imported_functions\": [\"GetObjectA\", \"CreateDCA\", \"AddFontResourceA\", \"DeleteObject\", \"CreateSolidBrush\", \"SetBkMode\", \"SetBkColor\", \"GetBitmapBits\", \"EnumFontFamiliesA\"], \"library_name\": \"GDI32.dll\"}, {\"imported_functions\": [\"SetSecurityDescriptorDacl\", \"GetTokenInformation\", \"ConvertStringSecurityDescriptorToSecurityDescriptorW\", \"OpenProcessToken\", \"InitializeSecurityDescriptor\", \"OpenThreadToken\", \"GetSecurityDescriptorSacl\", \"SetSecurityDescriptorSacl\"], \"library_name\": \"ADVAPI32.dll\"}, {\"imported_functions\": [\"GetStdHandle\", \"EncodePointer\", \"CreatePipe\", \"GetCurrentProcess\", \"GetConsoleMode\", \"GetLocaleInfoA\", \"LocalAlloc\", \"lstrcatA\", \"FreeEnvironmentStringsW\", \"SetStdHandle\", \"WideCharToMultiByte\", \"lstrcmpiA\", \"InterlockedExchange\", \"WriteFile\", \"GetTimeZoneInformation\", \"GetSystemTimeAsFileTime\", \"HeapReAlloc\", \"GetStringTypeW\", \"GetFullPathNameA\", \"LocalFree\", \"InitializeCriticalSection\", \"FindClose\", \"InterlockedDecrement\", \"FormatMessageA\", \"SetLastError\", \"GetModuleFileNameW\", \"IsDebuggerPresent\", \"HeapAlloc\", \"GetModuleFileNameA\", \"HeapSetInformation\", \"GetPrivateProfileStringA\", \"UnhandledExceptionFilter\", \"TlsGetValue\", \"MultiByteToWideChar\", \"CreateThread\", \"DeleteCriticalSection\", \"SetUnhandledExceptionFilter\", \"IsProcessorFeaturePresent\", \"DecodePointer\", \"SetEnvironmentVariableA\", \"TerminateProcess\", \"GetVersion\", \"GlobalAlloc\", \"GetCurrentThreadId\", \"InterlockedIncrement\", \"WriteConsoleW\", \"InitializeCriticalSectionAndSpinCount\", \"HeapFree\", \"EnterCriticalSection\", \"SetHandleCount\", \"TerminateThread\", \"LoadLibraryW\", \"GetVersionExW\", \"GetOEMCP\", \"QueryPerformanceCounter\", \"GetTickCount\", \"TlsAlloc\", \"FlushFileBuffers\", \"RtlUnwind\", \"DeleteFileA\", \"GetStartupInfoW\", \"GetProcAddress\", \"CompareStringW\", \"FindFirstFileA\", \"lstrcpyA\", \"FindNextFileA\", \"LocalSize\", \"CreateFileW\", \"GetFileType\", \"TlsSetValue\", \"CreateFileA\", \"ExitProcess\", \"LeaveCriticalSection\", \"GetLastError\", \"LCMapStringW\", \"lstrlenA\", \"GetConsoleCP\", \"GetEnvironmentStringsW\", \"GetCurrentProcessId\", \"GetCPInfo\", \"HeapSize\", \"GetCommandLineA\", \"GetCurrentThread\", \"TlsFree\", \"SetFilePointer\", \"CloseHandle\", \"GetACP\", \"GetModuleHandleW\", \"IsValidCodePage\", \"HeapCreate\", \"Sleep\"], \"library_name\": \"KERNEL32.dll\"}, {\"imported_functions\": [\"RasGetErrorStringA\", \"RasHangUpA\"], \"library_name\": \"RASAPI32.dll\"}, {\"imported_functions\": [\"EnumPrintersA\", \"GetPrinterDriverA\", \"OpenPrinterA\", \"SetPrinterDataExA\", \"DeviceCapabilitiesA\", \"ClosePrinter\"], \"library_name\": \"WINSPOOL.DRV\"}, {\"imported_functions\": [\"ExtractAssociatedIconA\"], \"library_name\": \"SHELL32.dll\"}, {\"imported_functions\": [\"SetFocus\", \"GetMessageA\", \"UpdateWindow\", \"EndDialog\", \"BeginPaint\", \"OffsetRect\", \"DrawIcon\", \"GetDlgCtrlID\", \"EnumWindowStationsW\", \"DefWindowProcA\", \"ShowWindow\", \"LoadBitmapA\", \"SetWindowPos\", \"GetWindowThreadProcessId\", \"SendDlgItemMessageA\", \"GetSystemMetrics\", \"IsWindow\", \"GetWindowRect\", \"DispatchMessageA\", \"EndPaint\", \"SetDlgItemTextA\", \"MoveWindow\", \"GetDlgItemTextA\", \"MessageBoxA\", \"TranslateMessage\", \"GetWindow\", \"GetSysColor\", \"SetActiveWindow\", \"GetDC\", \"RegisterClassExA\", \"GetCursorPos\", \"DdeInitializeA\", \"LoadBitmapW\", \"SetWindowTextA\", \"CheckMenuItem\", \"SendMessageW\", \"wsprintfA\", \"GetWindowPlacement\", \"SendMessageA\", \"GetClientRect\", \"GetDlgItem\", \"CreateDialogParamA\", \"SystemParametersInfoW\", \"IsIconic\", \"SetRect\", \"InvalidateRect\", \"GetSubMenu\", \"LoadCursorA\", \"LoadIconA\", \"FillRect\", \"IsDlgButtonChecked\", \"CheckDlgButton\", \"GetSysColorBrush\", \"CreateWindowExW\", \"EnableWindow\", \"SetForegroundWindow\", \"WindowFromDC\", \"DestroyWindow\"], \"library_name\": \"USER32.dll\"}, {\"imported_functions\": [\"ImageList_GetImageCount\", \"ImageList_Create\", \"ImageList_GetImageInfo\", \"ImageList_AddMasked\"], \"library_name\": \"COMCTL32.dll\"}], \"machine_type\": 332, \"resource_details\": [{\"chi2\": 8137.34814453125, \"entropy\": 5.789552211761475, \"filetype\": \"Data\", \"lang\": \"ENGLISH US\", \"sha256\": \"c37bc8f6dbf81e8d88978836b23ee932ade6652ba798989bf20697axxxx\", \"type\": \"RT_BITMAP\"}, {\"chi2\": 32671.111328125, \"entropy\": 2.0749704837799072, \"filetype\": \"Data\", \"lang\": \"ENGLISH US\", \"sha256\": \"9bf3939c91a904d9264930fc8a584a16286ce206b26b3f8387a8a14bxxxx\", \"type\": \"RT_BITMAP\"}, {\"chi2\": 5212.0654296875, \"entropy\": 2.6772308349609375, \"filetype\": \"Data\", \"lang\": \"ENGLISH US\", \"sha256\": \"201f2410710734df8e2f7ccbba51452e4d0ec8cc81fc57e08b117969xxxx\", \"type\": \"RT_MENU\"}, {\"chi2\": 20196.896484375, \"entropy\": 2.846670150756836, \"filetype\": \"Data\", \"lang\": \"RUSSIAN\", \"sha256\": \"de88d79a921d32d563d4448ee532b5d01f629a37ea8e877e1af3acxxxx\", \"type\": \"RT_DIALOG\"}, {\"chi2\": 17094.91796875, \"entropy\": 3.271855354309082, \"filetype\": \"Data\", \"lang\": \"ENGLISH US\", \"sha256\": \"851381c684c9f0c7b8cb7d0fb0cdf9837b6466b9923bebe0afdccb5dxxxx\", \"type\": \"RT_DIALOG\"}, {\"chi2\": 59740.10546875, \"entropy\": 3.3894574642181396, \"filetype\": \"Data\", \"lang\": \"ENGLISH US\", \"sha256\": \"a24783298e931e7949670435824fec4c4b4003f5d5d65f06fe1dcxxxx\", \"type\": \"RT_VERSION\"}, {\"chi2\": 3958.6474609375, \"entropy\": 4.795973777770996, \"filetype\": \"ASCII text\", \"lang\": \"ENGLISH US\", \"sha256\": \"49a60be4b95b6d30da355a0c124af82b35000bce8f24f957d1c09eaxxxx\", \"type\": \"RT_MANIFEST\"}], \"resource_langs\": {\"ENGLISH US\": 6, \"RUSSIAN\": 1}, \"resource_types\": {\"RT_BITMAP\": 2, \"RT_DIALOG\": 2, \"RT_MANIFEST\": 1, \"RT_MENU\": 1, \"RT_VERSION\": 1}, \"rich_pe_header_hash\": \"fa4dbca9180170710b3c245464exxxx\", \"sections\": [{\"chi2\": 292981.44, \"entropy\": 6.75, \"flags\": \"rx\", \"md5\": \"a13f88c3e0636712e10326c07d56xxxx\", \"name\": \".text\", \"raw_size\": 54784, \"virtual_address\": 4096, \"virtual_size\": 54434}, {\"chi2\": 343534.84, \"entropy\": 7.29, \"flags\": \"r\", \"md5\": \"fa72929ef3859e79dcc5257ccbxxxx\", \"name\": \".rdata\", \"raw_size\": 94720, \"virtual_address\": 61440, \"virtual_size\": 94670}, {\"chi2\": 243416.81, \"entropy\": 7.58, \"flags\": \"rw\", \"md5\": \"7320155c0175defb5b80cc0cd7xxxx\", \"name\": \".data\", \"raw_size\": 94208, \"virtual_address\": 159744, \"virtual_size\": 103244}, {\"chi2\": 99751.05, \"entropy\": 5.23, \"flags\": \"r\", \"md5\": \"613c08f8546d75f1daf2a32b9b4xxxx\", \"name\": \".rsrc\", \"raw_size\": 3584, \"virtual_address\": 266240, \"virtual_size\": 3168}, {\"chi2\": 552797.69, \"entropy\": 3.88, \"flags\": \"r\", \"md5\": \"4be0d54241ec8f62e48c40389cxxxx\", \"name\": \".reloc\", \"raw_size\": 6656, \"virtual_address\": 270336, \"virtual_size\": 6200}], \"timestamp\": 1410950077}, \"reputation\": -49, \"sha1\": \"36f9ca40b3ce96fcee1cf1d4a722293553xxxx\", \"sha256\": \"8b2e701e91101955c73865589a4c72999aeabc11043f712e05fdb1cxxxx\", \"sigma_analysis_stats\": {\"critical\": 0, \"high\": 0, \"low\": 4, \"medium\": 0}, \"sigma_analysis_summary\": {\"Sigma Integrated Rule Set (GitHub)\": {\"critical\": 0, \"high\": 0, \"low\": 4, \"medium\": 0}}, \"signature_info\": {\"copyright\": \"Copyright 2003-2013\", \"description\": \"WinMerge Shell Integration\", \"file version\": \"1.0.1.6\", \"internal name\": \"ShellExtension\", \"original name\": \"ShellExtension\", \"product\": \"ShellExtension\"}, \"size\": 254976, \"ssdeep\": \"6144:Gz90qLc1zR98hUb4UdjzEwG+vqAWiR4EXePbix67CNzjX:Gz90qLc1lWhUbhVqxxxx\", \"tags\": [\"peexe\", \"runtime-modules\", \"direct-cpu-clock-access\"], \"times_submitted\": 8, \"tlsh\": \"T1DB44CF267660D833D0DF94316C75C3F9673BFC2123215A6B6A4417699E307Exxxx\", \"total_votes\": {\"harmless\": 2, \"malicious\": 7}, \"trid\": [{\"file_type\": \"Win32 Executable MS Visual C++ (generic)\", \"probability\": 54.3}, {\"file_type\": \"Win16 NE executable (generic)\", \"probability\": 12.2}, {\"file_type\": \"Win32 Dynamic Link Library (generic)\", \"probability\": 11.4}, {\"file_type\": \"Win32 Executable (generic)\", \"probability\": 7.8}, {\"file_type\": \"OS/2 Executable (generic)\", \"probability\": 3.5}], \"type_description\": \"Win32 EXE\", \"type_extension\": \"exe\", \"type_tag\": \"peexe\", \"unique_sources\": 8, \"vhash\": \"025056657d755510804011z9005b9z25z1xxxx\"}, \"id\": \"8b2e701e91101955c73865589a4c72999aeabc11043f712e05fdbxxxxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/files/8b2e701e91101955c73865589a4c72999aeabc11043f712e05fdbxxxx\"}, \"type\": \"file\", \"comments\": [{\"attributes\": {\"date\": 1595402790, \"html\": \"#malware #Zeus<br /><br />Full genetic report from Intezer Analyze:<br />https://analyze.intezer.com/#/files/8b2e701e91101955c73865589a4c72999aeabc11043f712e05fdbxxxx<br /><br />#IntezerAnalyze\", \"tags\": [\"malware\", \"zeus\", \"intezeranalyze\"], \"text\": \"#malware #Zeus\\n\\nFull genetic report from Intezer Analyze:\\nhttps://analyze.intezer.com/#/files/8b2e701e91101955c73865589a4c72999aeabc11043f712e05fdbxxxx\\n\\n#IntezerAnalyze\", \"votes\": {\"abuse\": 0, \"negative\": 0, \"positive\": 0}}, \"id\": \"f-8b2e701e91101955c73865589a4c72999aeabc11043f712e05fdbxxxx-9945xxxx\", \"links\": {\"self\": \"https://www.virustotal.com/api/v3/comments/f-8b2e701e91101955c73865589a4c72999aeabc11043f712e05fdbxxxx-9945xxx\"}, \"type\": \"comment\"}], \"widget_url\": \"https://www.virustotal.com/ui/widget/html/OGIyZTcwMWU5MTEwMTk1NWM3Mzg2NTU4OWE0YzcyOTk5YWVhYmMxMTA0M2Y3MTJlMDVmZGIxYzE3YzRhYjE5YXx8ZmlsZXx8eyJiZDEiOiAiIzRkNjM4NSIsICJiZzEiOiAiIzMxM2Q1YSIsICJiZzIiOiAiIzIyMmM0MiIsICJmZzEiOiAiI2ZmZmZmZiIsICJ0eXBlIjogImRlZmF1bHQifXx8ZnVsbHx8Zm91bmR8fDE2NDY2NzIzOTN8fGI5OWQ3MTY5MGIzZGY5MmVjMWExNTZlMmQ1MjM3OWJhMGMxYzgyZTAwMjVkMTJmZjg5MWM2YzdjNxxxxxxxxxx\", \"sandboxes_analysis\":{\"VirusTotal Jujubox\":{\"attributes\":{\"registry_keys_opened\":[\"HKCU\\\\\\\\SOFTWARE\\\\\\\\Microsoft\",\"SOFTWARE\\\\\\\\Microsoft\\\\\\\\Xuoc\"],\"calls_highlighted\":[\"GetTickCount\"],\"tags\":[\"DIRECT_CPU_CLOCK_ACCESS\",\"RUNTIME_MODULES\"],\"files_written\":[\"C:\\\\\\\\Users\\\\\\\\<USER>\\\\\\\\AppData\\\\\\\\Roaming\\\\\\\\Uwcyi\\\\\\\\xeysv.exe\"],\"mutexes_opened\":[\"Local\\\\\\\\{159989F5-EED2-E258-7F7B-44xxxxxxxxxx}\"],\"modules_loaded\":[\"ADVAPI32.dll\"],\"analysis_date\":1593005327,\"sandbox_name\":\"VirusTotal Jujubox\",\"has_html_report\":true,\"behash\":\"891a0af66a031b044dce08xxxxxxxxxx\",\"has_evtx\":false,\"text_highlighted\":[\"C:\\\\\\\\Windows\\\\\\\\system32\\\\\\\\cmd.exe\"],\"last_modification_date\":1593005327,\"has_memdump\":false,\"mutexes_created\":[\"Global\\\\\\\\{5995CC4B-E3B3-EBC8-9F85-4Bxxxxxxxxxx}\"],\"has_pcap\":true,\"files_opened\":[\"C:\\\\\\\\Windows\\\\\\\\system32\\\\\\\\SXS.DLL\"]},\"type\":\"file_behaviour\",\"id\":\"8b2e701e91101955c73865589a4c72999aeabc11043f712e05fdb1xxxxxxxxxx_VirusTotal Jujubox\",\"links\":{\"self\":\"https://www.virustotal.com/api/v3/file_behaviours/8b2e701e91101955c73865589a4c72999aeabc11043f712e05fdb1xxxxxxxxxx_VirusTotal Jujubox\"}},\"Microsoft Sysinternals\":{\"attributes\":{\"command_executions\":[\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\wuapihost.exe -Embedding\"],\"ip_traffic\":[{\"transport_layer_protocol\":\"UDP\",\"destination_ip\":\"a83f:8110:xxxx:0:0:0:xx:xx\",\"destination_port\":53},{\"transport_layer_protocol\":\"UDP\",\"destination_ip\":\"a83f:8110:xxxx:d850:2821:d8ef:2821:xxxx\",\"destination_port\":53}],\"processes_injected\":[\"\\\\\\\\\\\\\\\\?\\\\\\\\C:\\\\\\\\Windows\\\\\\\\system32\\\\\\\\wbem\\\\\\\\WMIADAP.EXE\"],\"modules_loaded\":[\"%SAMPLEPATH%\\\\\\\\ShellExtension.exe\"],\"has_pcap\":false,\"analysis_date\":1634801121,\"sandbox_name\":\"Microsoft Sysinternals\",\"has_html_report\":false,\"processes_terminated\":[\"%SAMPLEPATH%\\\\\\\\ShellExtension.exe\"],\"behash\":\"a83d640a282980db1dd43xxxxxxxxxxx\",\"files_deleted\":[\"C:\\\\\\\\ProgramData\\\\\\\\Microsoft\\\\\\\\Windows\\\\\\\\WER\\\\\\\\Temp\\\\\\\\WER2A57.tmp.WERInternalMetadata.xml\"],\"files_dropped\":[{\"path\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\spp\\\\\\\\store\\\\\\\\2.0\\\\\\\\data.dat.tmp\"},{\"path\":\"C:\\\\\\\\ProgramData\\\\\\\\Microsoft\\\\\\\\Windows\\\\\\\\WER\\\\\\\\Temp\\\\\\\\WER2A57.tmp\"}],\"has_evtx\":false,\"last_modification_date\":1647305697,\"has_memdump\":false,\"processes_created\":[\"%SAMPLEPATH%\\\\\\\\ShellExtension.exe\"],\"processes_tree\":[{\"process_id\":\"26xx\",\"name\":\"%WINDIR%\\\\\\\\explorer.exe\",\"children\":[{\"process_id\":\"35xx\",\"name\":\"%SAMPLEPATH%\\\\\\\\ShellExtension.exe\"}]},{\"process_id\":\"61xx\",\"name\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\svchost.exe\",\"children\":[{\"process_id\":\"33xx\",\"name\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\wuapihost.exe\"}]}],\"files_opened\":[\"<Anonymous Pipe>\"]},\"type\":\"file_behaviour\",\"id\":\"8b2e701e91101955c73865589a4c72999aeabc11043f712e05fdb1xxxxxxxxxx_Microsoft Sysinternals\",\"links\":{\"self\":\"https://www.virustotal.com/api/v3/file_behaviours/8b2e701e91101955c73865589a4c72999aeabc11043f712e05fdb1xxxxxxxxxx_Microsoft Sysinternals\"}}}}}], \"is_risky\": true}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "VirusTotalV3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Enrich Hash",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify how many engines should mark the entity as malicious or suspicious, for Siemplify to label it as suspicious. Note: if \"Engine Whitelist\" contains values, action will only count results from those engines.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Engine Threshold",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the percentage of engines should mark the entity as malicious or suspicious, for Siemplify to label it as suspicious. Note: if \"Engine Whitelist\" contains values, action will only count the percentage from those engines. If both \"Engine Threshold\" and \"Engine Percentage Threshold\" are provided, \"Engine Threshold\" will be used. Maximum value: 100. Minimum: 0.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Engine Percentage Threshold",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of engines that should be used to retrieve information, whether an entity is malicious or not. Example: AlienVault,Kaspersky. Note: if nothing is specified in this parameter, action will take results from every available engine. If the engine didn't return any information about the entity it’s not going to be counted for the parameters \"Engine Threshold\" and \"Engine Percentage Threshold\".",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Engine Whitelist",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will resubmit hashes for analysis instead of using the latest information.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Resubmit Hash",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": 30,
+            "Description": "Specify how many days since the last submission should pass for the entity to be submitted again. Note: parameter \"Resubmit Hash\" needs to be enabled.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Resubmit After (Days)",
+            "Type": 0,
+            "Value": 30
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will retrieve comments about the entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Retrieve Comments",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will retrieve sigma analysis for the hash.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Retrieve Sigma Analysis",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "VirusTotal Jujubox",
+            "Description": "Specify a comma-separated list of sandbox names that should be used for behavior analysis. If nothing is provided, action will only use the \"VirusTotal Jujubox\" sandbox. Make sure that the spelling is correct. Examples of sandboxes: VirusTotal Jujubox, VirusTotal ZenBox, Microsoft Sysinternals, Tencent HABO.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Sandbox",
+            "Type": 0,
+            "Value": "VirusTotal Jujubox"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will fetch sandbox analysis for the entity. For each sandbox, action will create a separate section in the JSON result. Action will only return data for the sandboxes that are provided in the parameter \"Sandbox\".",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Retrieve Sandbox Analysis",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will create an insight containing information about the entities.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Create Insight",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will only create an insight for suspicious entities. Note: parameter \"Create Insight\" should be enabled.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Only Suspicious Entity Insight",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "10",
+            "Description": "Specify how many comments to return. Default: 10.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Max Comments To Return",
+            "Type": 0,
+            "Value": "10"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "Dark",
+            "Description": "Specify the theme for the widget.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Widget Theme",
+            "Type": 15,
+            "Value": "Dark",
+            "OptionalValues": [
+                "Light",
+                "Dark"
+            ]
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will fetch augmented widget related to the entity.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Fetch Widget",
+            "Type": 1,
+            "Value": true
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

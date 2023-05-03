@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1527753223664,
+    "Creator": "admin",
+    "Description": "Get policy details",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"1\": {\"product\": \"ios\", \"name\": \"Audit\", \"default\": true, \"serial_number\": 38, \"guid\": \"1111111111111111\", \"description\": \"ThispolicyputsClarityinamodethatwilllogandalertonconvictionsbutnotblocktraffic.\"}, \"0\": {\"product\": \"android\", \"name\": \"Protect\", \"default\": true, \"serial_number\": 11, \"guid\": \"1111111111111111\", \"description\": \"ThisisthestandardpolicyfortheAMPforEndpointsConnectorthatwillquarantinemaliciousfilesandblockmaliciousnetworkconnections.\"}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "CiscoAMP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1527753223664,
+    "Name": "Get Policies",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtils import dict_to_flat\nfrom CiscoAMPManager import CiscoAMPManager\nimport json\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    configurations = siemplify.get_configuration('CiscoAMP')\n    server_addr = configurations['Api Root']\n    client_id = configurations['Client ID']\n    api_key = configurations['Api Key']\n    use_ssl = configurations['Use SSL'].lower() == 'true'\n\n    cisco_amp_manager = CiscoAMPManager(server_addr, client_id, api_key,\n                                        use_ssl)\n\n    policies = cisco_amp_manager.get_groups()\n\n    if policies:\n        flat_policies = []\n\n        for policst in policies:\n            # Remove links - irrelevant\n            del policst[\"links\"]\n            flat_policies.append(dict_to_flat(policst))\n\n        # Attach policies in csv\n        csv_output = cisco_amp_manager.construct_csv(flat_policies)\n        siemplify.result.add_data_table(\"Policies\", csv_output)\n\n    siemplify.end(\"Successfully found {} policies.\".format(len(policies)), json.dumps(policies))\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "policies",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

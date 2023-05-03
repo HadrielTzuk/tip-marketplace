@@ -1,0 +1,75 @@
+{
+  "Identifier": "963b1084-b136-4634-9b66-785c9022a92f",
+  "IsEnable": false,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": false,
+  "Name": "URLVoid",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "c51ac898-68cd-4177-8573-a04f540a5978",
+      "ParentWorkflowIdentifier": "963b1084-b136-4634-9b66-785c9022a92f",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "URLVoid_Get domain reputation_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": false,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "URLVoid_Get domain reputation",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "c51ac898-68cd-4177-8573-a04f540a5978",
+          "ParentWorkflowIdentifier": "963b1084-b136-4634-9b66-785c9022a92f",
+          "Name": "ScriptName",
+          "Value": "URLVoid_Get domain reputation",
+          "CreationTimeUnixTimeInMs": 1519205948697,
+          "ModificationTimeUnixTimeInMs": 1519205948697
+        },
+        {
+          "ParentStepIdentifier": "c51ac898-68cd-4177-8573-a04f540a5978",
+          "ParentWorkflowIdentifier": "963b1084-b136-4634-9b66-785c9022a92f",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{\"Threshold\":\"0\"}",
+          "CreationTimeUnixTimeInMs": 1519205948697,
+          "ModificationTimeUnixTimeInMs": 1519205948697
+        },
+        {
+          "ParentStepIdentifier": "c51ac898-68cd-4177-8573-a04f540a5978",
+          "ParentWorkflowIdentifier": "963b1084-b136-4634-9b66-785c9022a92f",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1519205948697,
+          "ModificationTimeUnixTimeInMs": 1519205948697
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1519205948697,
+      "ModificationTimeUnixTimeInMs": 1519205948697
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "0a69f70f-ee29-4ed5-a841-b89baa9d05d3",
+      "IsEnabled": false,
+      "DefinitionIdentifier": "963b1084-b136-4634-9b66-785c9022a92f",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "URLVoid",
+      "AllEnvironments": "",
+      "Id": 65,
+      "CreationTimeUnixTimeInMs": 1519205948697,
+      "ModificationTimeUnixTimeInMs": 1519205948697
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 65,
+  "CreationTimeUnixTimeInMs": 1519205948697,
+  "ModificationTimeUnixTimeInMs": 1519205948697
+}

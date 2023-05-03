@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1521991584342, 
+    "Creator": "admin", 
+    "Description": "Get hash reputation by SHA1", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SentinelOne", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1521991584342, 
+    "Name": "Get Hash Reputation", 
+    "Parameters": [], 
+    "Script": "# ==============================================================================\r\n# Remarks:\r\n\r\n#  'get_hash_reputation' return 404 from API.\r\n\r\n# ==============================================================================\r\nfrom SiemplifyAction import SiemplifyAction\r\nfrom SentinelOneManager import SentinelOneManager\r\nfrom SiemplifyDataModel import EntityTypes\r\nfrom SiemplifyUtils import add_prefix_to_dict_keys, dict_to_flat, flat_dict_to_csv\r\n\r\n# Consts.\r\nSENTINEL_ONE_PROVIDER = 'SentielOne'\r\nSENTINEL_PREFIX = 'SENO_'\r\nFILEHASH = EntityTypes.FILEHASH\r\n\r\n\r\ndef main():\r\n    # Define Variables.\r\n    entities_successed = []\r\n    result_value = False\r\n    # Configuration.\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration(SENTINEL_ONE_PROVIDER)\r\n    sentinel_one_manager = SentinelOneManager(conf['Api Root'], conf['Username'], conf['Password'])\r\n\r\n    # Get scope entities.\r\n    scope_entities = [entity for entity in siemplify.target_entities if entity.entity_type == FILEHASH]\r\n\r\n    # Run on entities.\r\n    for entity in scope_entities:\r\n        hash_reputation = sentinel_one_manager.get_hash_reputation(entity.identifier)\r\n        if hash_reputation:\r\n            entities_successed.append(entity)\r\n            result_value = True\r\n            # Organize output.\r\n            hash_reputation_flat = dict_to_flat(hash_reputation)\r\n            csv_output = flat_dict_to_csv(hash_reputation_flat)\r\n            # Add entity table.\r\n            siemplify.result.add_entity_table(entity.identifier, csv_output)\r\n            # Enrich entity.\r\n            entity.additional_data.update(add_prefix_to_dict_keys(hash_reputation_flat, SENTINEL_PREFIX))\r\n\r\n    if entities_successed:\r\n        output_message = 'Found hash reputation for: {0}'.format(\",\".format([entity.identifier for entity\r\n                                                                             in entities_successed]))\r\n    else:\r\n        output_message = 'No hash reputation found for target entities.'\r\n\r\n    siemplify.update_entities(entities_successed)\r\n    siemplify.end(output_message, result_value)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n\r\n\r\n\r\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 1.0
+}

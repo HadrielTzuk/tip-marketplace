@@ -1,0 +1,168 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Execute FortiSIEM events query based on the provided parameters.",
+    "Id": -1,
+    "IntegrationIdentifier": "FortinetFortiSIEM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Execute Simple Query",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"custId\": \"1\", \"attributes\": {\"eventType\": \"Unknown_EventType\", \"eventSeverity\": \"3\", \"eventAction\": \"0 (Permit)\", \"phRecvTime\": \"Wed Dec 29 00:36:55 IST 2021\", \"relayDevIpAddr\": \"172.30.20xxx\", \"reptDevIpAddr\": \"172.30.20xxx\", \"destIpAddr\": \"172.30.20xxx\", \"destName\": \"HOST-172.30.20xxx\", \"reptDevName\": \"centos-xxx\", \"reptVendor\": \"Unknown\", \"customer\": \"Super\", \"reptModel\": \"Unknown\", \"rawEventMsg\": \"<27>Dec 29 00:36:47 centos-xxx aella_flow[5074]: 1902195|aos_afix_json|ERR|Failed to send message: Couldn't connect to server/7\", \"collectorId\": \"1\", \"eventId\": \"4242813061460978xxx\", \"phEventCategory\": \"0 (External)\", \"count\": \"1\", \"eventName\": \"Unknown event type\", \"eventParsedOk\": \"0\", \"parserName\": \"SyslogNGParser\"}, \"dataStr\": null, \"eventType\": \"Unknown_EventType\", \"id\": \"4242813061460978xxx\", \"index\": \"0\", \"nid\": \"4242813061460978xxx\", \"receiveTime\": \"2021-12-29T00:36:55+02:00\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Fields To Return",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what fields to return. If nothing is provided, action will return all fields.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Sort Field",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify what parameter should be used for sorting.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "DESC",
+            "Description": "Specify the order of sorting.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Sort Order",
+            "OptionalValues": [
+                "DESC",
+                "ASC"
+            ],
+            "Type": 15,
+            "Value": "DESC"
+        },
+        {
+            "Name": "Minimum Severity to Fetch",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify minimum event severity to fetch to Siemplify in numbers, for example 5 or 7.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Event Types",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify event types query should fetch. Parameter accepts multiple values as a comma separated string.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },        
+        {
+            "Name": "Event Category",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify event category query should fetch. Parameter accepts multiple values as a comma separated string.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },   
+        {
+            "Name": "Event IDs",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify optionally exact event ids query should fetch. Parameter accepts multiple values as a comma separated string.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },  
+        {
+            "Name": "Start Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the start time for the results. This parameter is mandatory, if \"Custom\" is selected for the \"Time Frame\" parameter. Format: ISO 8601. Example: 2021-04-23T12:38Z",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },  
+        {
+            "Name": "End Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the end time for the results. Format: ISO 8601. If nothing is provided and \"Custom\" is selected for the \"Time Frame\" parameter then this parameter will use current time.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }, 
+        {
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many results to return. Default: 50.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Last Hour",
+            "Description": "Specify a time frame for the results. If \"Custom\" is selected, you also need to provide \"Start Time\".",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Time Frame",
+            "OptionalValues": [
+                "Last Hour",
+                "Last 6 Hours",
+                "Last 24 Hours",
+                "Last Week",
+                "Last Month",
+                "Custom"
+            ],
+            "Type": 15,
+            "Value": "Last Hour"
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

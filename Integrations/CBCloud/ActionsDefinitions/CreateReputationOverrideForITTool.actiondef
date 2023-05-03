@@ -1,0 +1,88 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805, 
+    "Creator": "Admin", 
+    "DefaultResultValue": "", 
+    "Description": "Create a Reputation Override for the specific IT Tool based on a file name and path. Note: The file name can be provided either as a Siemplify File (artifact) or as an action input parameter. If the file name is passed to action both as an entity and input parameter - action will be executed on the input parameter. File name will be appended to the File Path parameter to get the resulting path to add to the override.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"XXXX\",\"EntityResult\":{\"id\":\"d544346dff7711eba71965XXXXXXXXXX\",\"created_by\":\"XXXXXXXXXX\",\"create_time\":\"20XX-XX-XXTXX:XX:XX.XXXZ\",\"override_list\":\"WHITE_LIST\",\"override_type\":\"IT_TOOL\",\"description\":\"None\",\"source\":\"APP\",\"source_ref\":\"None\",\"path\":\"\/var\/log\/XXX\",\"include_child_processes\":false}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1, 
+    "IntegrationIdentifier": "CBCloud", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1560351300805, 
+    "Name": "Create a Reputation Override for IT Tool", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify a corresponding file name to add to reputation override.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "File Name", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify a file path where corresponding IT Tool is stored on disk to add to reputation override. Example format: C:\\TMP\\ ", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "File Path", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify a description for the created reputation to override.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Description", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Not Specified",
+            "Description": "Specify override list to create.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Reputation Override List",
+            "OptionalValues": [
+                "Not Specified",
+                "WHITE_LIST",
+                "BLACK_LIST"
+            ],
+            "Type": 15,
+            "Value": "Not Specified"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, include IT Tool's child processes on approved list",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Include Child Processes",
+            "Type": 1,
+            "Value": "False"
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILENAME\"]}", 
+    "Version": 1.0
+}

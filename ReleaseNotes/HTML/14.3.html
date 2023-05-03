@@ -1,0 +1,399 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 14.3</h2><h5>Published on 27 January, 2021</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     Arcsight
+    </b>
+   </li>
+   <ul>
+    <li>
+     Arcsight
+    </li>
+    <ul>
+     <li>
+      Fixed a bug causing the latest authentication fix not to be included in the production environment
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     BlueLiv
+    </b>
+   </li>
+   <ul>
+    <li>
+     BlueLiv
+    </li>
+    <ul>
+     <li>
+      NEW! New BlueLiv integration added.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Exchange
+    </b>
+   </li>
+   <ul>
+    <li>
+     Exchange
+    </li>
+    <ul>
+     <li>
+      Fixed a bug in the proxy configuration code.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     MISP
+    </b>
+   </li>
+   <ul>
+    <li>
+     MISP
+    </li>
+    <ul>
+     <li>
+      MISP - Added the option to add CA Certificate file to the integration configuration page. Please note - the certificate file should be parsed into base64 string and put into the configuration parameter for now. It will be changed to accept a file soon.
+     </li>
+     <li>
+      Improved error handling across integration.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     Office365ManagementAPI
+    </b>
+   </li>
+   <ul>
+    <li>
+     Office365ManagementAPI
+    </li>
+    <ul>
+     <li>
+      Added support for authentication based on the certificate file.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     PaloAltoPanorama
+    </b>
+   </li>
+   <ul>
+    <li>
+     Palo Alto Panorama
+    </li>
+    <ul>
+     <li>
+      Updated action execution logic in action "Commit Changes" and "Push Changes". Now it correctly returns information in case commit or push was not successful.
+     </li>
+     <li>
+      Fixed a bug, where IP entities were not properly validated in multiple actions.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     SiemplifyThreatFuse
+    </b>
+   </li>
+   <ul>
+    <li>
+     SiemplifyThreatFuse
+    </li>
+    <ul>
+     <li>
+      NEW! NEW! Siemplify ThreatFuse integration
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     Exchange
+    </b>
+   </li>
+   <ul>
+    <li>
+     Block Sender by Message ID
+    </li>
+    <ul>
+     <li>
+      NEW! Added new Action - Block Sender
+     </li>
+    </ul>
+    <li>
+     Unblock Sender by Message ID
+    </li>
+    <ul>
+     <li>
+      NEW! Added new Action - Unblock Sender
+     </li>
+    </ul>
+    <li>
+     Send Mail
+    </li>
+    <ul>
+     <li>
+      Updated the logic for the JsonResult creation based on the Exchange Server version.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     MISP
+    </b>
+   </li>
+   <ul>
+    <li>
+     Publish Event
+    </li>
+    <ul>
+     <li>
+      Quality of life changes to action 'Publish Event'
+     </li>
+    </ul>
+    <li>
+     Add Attribute
+    </li>
+    <ul>
+     <li>
+      Quality of life changes to action 'Unpublish Event'
+     </li>
+     <li>
+      Quality of life changes to action "Add Attribute". Added support for new entity types. Added support for new hash types. Improved error handling. Updated parameter descriptions.
+     </li>
+    </ul>
+    <li>
+     Get Event Details
+    </li>
+    <ul>
+     <li>
+      Quality of life changes to the action "Get Event Details". Added new optional case wall table.
+     </li>
+    </ul>
+    <li>
+     Create Event
+    </li>
+    <ul>
+     <li>
+      Quality of life changes for action "Create Event"
+     </li>
+    </ul>
+    <li>
+     Delete an Event
+    </li>
+    <ul>
+     <li>
+      Quality of life changes to the action "Delete an Event"
+     </li>
+    </ul>
+    <li>
+     Remove Tag from an Event
+    </li>
+    <ul>
+     <li>
+      Quality of life changes for action "Remove Tag from an Event"
+     </li>
+    </ul>
+    <li>
+     Remove Tag from an Attribute
+    </li>
+    <ul>
+     <li>
+      Quality of life changes for action "Remove Tag from an Attribute". Added support to remove multiple tags. Added support for multiple attributes.
+     </li>
+    </ul>
+    <li>
+     Upload File
+    </li>
+    <ul>
+     <li>
+      Quality of life changes to action "Upload File". Added support for uploading multiple files. Removed optional action parameters: “Analysis”, “Threat Level” and “Info”, because they didn’t have an impact, when uploading file to the event.Correctly showing “Event ID” as a mandatory parameter.
+     </li>
+    </ul>
+    <li>
+     List Event Objects
+    </li>
+    <ul>
+     <li>
+      Quality of life changes to the action "List Event Objects". Added support for multiple events handling.
+     </li>
+    </ul>
+    <li>
+     Create Virustotal-Report Object
+    </li>
+    <ul>
+     <li>
+      Quality of life changes to the action "Virustotal-Report".
+     </li>
+    </ul>
+    <li>
+     Add Tag to an Event
+    </li>
+    <ul>
+     <li>
+      Quality of life changes to the action "Add Tag to an Event". Added support for multiple tags.
+     </li>
+    </ul>
+    <li>
+     Add Tag to an Attribute
+    </li>
+    <ul>
+     <li>
+      Quality of life changes to the action "Add Tag to an Attribute". Added support for multiple tags. Added support to add tags to multiple attributes.
+     </li>
+    </ul>
+    <li>
+     Create network-connection Misp Object
+    </li>
+    <ul>
+     <li>
+      Quality of life changes for action "Create network-connection Misp Object". Added ability to work with entities.
+     </li>
+    </ul>
+    <li>
+     Create IP-Port Misp Object
+    </li>
+    <ul>
+     <li>
+      Quality of life changes for action "Create IP-Port Misp Object". Added support for working with entities.
+     </li>
+    </ul>
+    <li>
+     Create Url Misp Object
+    </li>
+    <ul>
+     <li>
+      Quality of life changes for the action "Create Url Misp Object". Added support for working with entities.
+     </li>
+    </ul>
+    <li>
+     List Sightings of an Attribute
+    </li>
+    <ul>
+     <li>
+      Quality of life changes for action "List Sightings of an Attribute".
+     </li>
+    </ul>
+    <li>
+     Delete an Attribute
+    </li>
+    <ul>
+     <li>
+      Quality of life changes for action "Delete an Attribute". Added support for multiple attributes.
+     </li>
+    </ul>
+    <li>
+     Set IDS Flag for an Attribute
+    </li>
+    <ul>
+     <li>
+      Quality of life changes for the action "Set IDS Flag for an Attribute". Added support for multiple attributes.
+     </li>
+    </ul>
+    <li>
+     Unset IDS Flag for an Attribute
+    </li>
+    <ul>
+     <li>
+      Quality of life changes for action "Unset IDS Flag for an Attribute". Added support for multiple attributes.
+     </li>
+    </ul>
+    <li>
+     Create File Misp Object
+    </li>
+    <ul>
+     <li>
+      Quality of life changes to action "Create File Misp Object". Add support to work with entities. Removed "Imphash" parameter, because it's no longer supported in MISP.
+     </li>
+     <li>
+      Fixed a bug, where parameter "Filename" was not working in action "Create File Misp Object".
+     </li>
+    </ul>
+    <li>
+     Download File
+    </li>
+    <ul>
+     <li>
+      Quality of life changes to the integration "Download File". Added support for downloading file on the disk.
+     </li>
+    </ul>
+    <li>
+     Get Related Events
+    </li>
+    <ul>
+     <li>
+      Quality of life changes to the action "Get Related Events". Updated JSON example to correctly reflect possible data.
+     </li>
+     <li>
+      Fixed a bug, where action "Get Related Events" was showing duplicates in the JSON result.
+     </li>
+    </ul>
+    <li>
+     Enrich Entities
+    </li>
+    <ul>
+     <li>
+      Quality of life changes to action "Enrich Entities". Updated case wall table.
+     </li>
+     <li>
+      Updated output messages from action "Enrich Entities".
+     </li>
+    </ul>
+    <li>
+     Add Sighting to an Attribute
+    </li>
+    <ul>
+     <li>
+      Quality of life changes for action "Add Sighting to an Attribute". Added support for adding sighting to multiple attributes.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     PaloAltoPanorama
+    </b>
+   </li>
+   <ul>
+    <li>
+     Commit Changes
+    </li>
+    <ul>
+     <li>
+      Fixed a bug, where action "Commit Changes" wouldn't work, when "Only My Changes" option is enabled.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     MicrosoftAzureSentinel
+    </b>
+   </li>
+   <ul>
+    <li>
+     Microsoft Azure Sentinel Incident Connector v2
+    </li>
+    <ul>
+     <li>
+      NEW! New Microsoft Azure Sentinel Incidents Connector v2 added
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

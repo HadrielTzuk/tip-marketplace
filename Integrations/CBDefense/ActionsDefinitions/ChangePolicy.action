@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1519823712489, 
+    "Creator": "admin", 
+    "Description": "Change device policy", 
+    "Id": -1, 
+    "IntegrationIdentifier": "CBDefense", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1519823712489, 
+    "Name": "Change Policy", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519823769631, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "The new policy name. e.g. TEST_Policy", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1519823769631, 
+            "Name": "Policy Name", 
+            "Type": 0, 
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

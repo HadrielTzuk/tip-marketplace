@@ -1,0 +1,74 @@
+[
+    {
+        "ChangeDescription": "Added logs and improved error handling.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Enriches Entities",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1591502415,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2866"
+    },
+    {
+        "ChangeDescription": "Fixed json result sample",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Enriches Entities",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1600771916,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3859"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "AlienVaultTI",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Functionality enhancements in the Ping action",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "AlienVaultTI",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1618907918,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2334"
+    },
+    {
+        "ChangeDescription": "Improved the way action \"Enrich Entities\" processes data.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Enriches Entities",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1620208381,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8022"
+    },
+    {
+        "ChangeDescription": "Enrich Entities - Improved action flow, when handling entities.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Enriches Entities",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1644399582,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10943"
+    }
+]

@@ -1,0 +1,42 @@
+{
+    "CreationTimeUnixTimeInMs": 1508239534025,
+    "Creator": "admin",
+    "Description": "Send SMS and wait for answer. The message will be sent with a generated SiemplifyID: <code>. The action will wait for a response containing SiemplifyID: <code>.",
+    "Id": -1,
+    "IntegrationIdentifier": "Twilio",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1508239534025,
+    "Name": "Send SMS And Wait",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1513260252544,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Target phone number.The phone number must include a dial code.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513260252544,
+            "Name": "Phone Number",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1513260252544,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Message content.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1513260252544,
+            "Name": "Message",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

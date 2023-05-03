@@ -1,0 +1,9 @@
+INTEGRATION_NAME = 'SCCM'
+PING_ACTION = '{} - Ping'.format(INTEGRATION_NAME)
+GET_LOGIN_HISTORY_ACTION = '{} - Get Login History'.format(INTEGRATION_NAME)
+GET_COMPUTER_PROPERTIES_ACTION = '{} - Get Computer Properties'.format(INTEGRATION_NAME)
+ENRICH_ENTITIES_ACTION = '{} - Enrich Entities'.format(INTEGRATION_NAME)
+RUN_WQL_QUERY_ACTION = '{} - Run WQL Query'.format(INTEGRATION_NAME)
+
+DOMAIN_USER = r'{domain}\{username}'
+ENRICH_PREFIX = "SCCM"

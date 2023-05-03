@@ -1,0 +1,108 @@
+{
+    "CreationTimeUnixTimeInMs": 1518362568633,
+    "Creator": "admin",
+    "Description": "Send email and wait for response",
+    "Id": -1,
+    "IntegrationIdentifier": "Email",
+    "IsCustom": false,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"body\": \"Mail Body\",\"receivers\": \"set(['lilydoe@mail.com'])\",\"cc\": [],\"timestamp\": 1565012780,\"raw\": \"Raw Content\",\"names\": {\"lilydoe@mail.com\": null,\"joedoe@mail.com\": \"Tester Testor\"},\"content_type\": \"multipart/alternative\",\"date\": \"2019-08-05 16:46:20\",\"subject\": \"Re: Subject\",\"answer\": \"\",\"sender\": \"joedoe@mail.com\",\"received_timestamp\": null,\"charset\": null,\"bcc\": [],\"to\": [\"lilydoe@mail.com\"],\"email_uid\": \"173180\",\"received_date\": null,\"reply_to\": null,\"html_body\": \"HTML Body\",\"message_id\": \"<xxxxx@domain>\",\"plaintext_body\": \"Plain Text Body\",\"in_replay_to\": \"<yyyyy@domain>\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518362568633,
+    "Name": "Send Email And Wait",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Recipient email address. Multiple addresses can be separated by commas",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Recipients",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "CC email address. Multiple addresses can be separated by commas",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "CC",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "bcc email address. Multiple addresses can be separated by commas",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "bcc",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The subject of the email",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Subject",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The body of the email",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Content",
+            "Type": 10,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Exclude received mails by (subject) inserted regex and wait for the next mail.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Exclusion Subject Regex",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Exclude received mails by (body) inserted regex and wait for the next mail.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Exclusion Body Regex",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

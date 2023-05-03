@@ -1,0 +1,15 @@
+{
+    "CreationTimeUnixTimeInMs": 1532523417395,
+    "Creator": "Admin",
+    "Description": "Check connectivity",
+    "Id": -1,
+    "IntegrationIdentifier": "Zscaler",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1532523417395,
+    "Name": "Ping",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

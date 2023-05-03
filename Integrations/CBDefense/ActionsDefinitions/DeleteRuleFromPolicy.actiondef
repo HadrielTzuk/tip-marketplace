@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1528099968196,
+    "Creator": "admin",
+    "Description": "Remove a rule from an existing policy",
+    "Id": -1,
+    "IntegrationIdentifier": "CBDefense",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1528099968196,
+    "Name": "Delete Rule From Policy",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1528099968196,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Policy name",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528099968196,
+            "Name": "Policy Name",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528099968196,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Rule ID. e.g. 1",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528099968196,
+            "Name": "Rule ID",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CarbonBlackDefenseManager import CBDefenseManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    configurations = siemplify.get_configuration('CBDefense')\n    server_addr = configurations['Api Root']\n    api_key = configurations['Api Key']\n    policy_name = siemplify.parameters['Policy Name']\n    rule_id = siemplify.parameters['Rule ID']\n\n    cb_defense = CBDefenseManager(server_addr, api_key)\n    is_success_delete_rule = cb_defense.delete_rule_from_policy(policy_name, rule_id)\n\n    if is_success_delete_rule:\n        output_message = 'Carbon Black Defense - Rule {0} deleted successfully from {1} policy.'.format(rule_id, policy_name)\n\n    else:\n        output_message = 'Could not delete rule {0} from {1} policy.'.format(rule_id, policy_name)\n\n    siemplify.end(output_message, 'true')\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,93 @@
+{
+    "Id": -1,
+    "Creator": "admin",
+    "IntegrationIdentifier": "OrcaSecurity",
+    "Name": "Update Alert",
+    "Description": "Update alert in Orca Security. Note: action only initiates the verification process of the alert.",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "CreationTimeUnixTimeInMs": 0,
+    "ModificationTimeUnixTimeInMs": 0,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "{\"group_val\":\"nongroup\",\"asset_type_string\":\"AwsIamRole\",\"data\":{\"recommendation\":\"Unused {AwsIamRole} role should be removed.\",\"details\":\"AWS IAM roles can grant access to AWS resources or actions.\",\"title\":\"Unused role with policy found\"},\"alert_labels\":[\"initial access\"],\"configuration\":{\"user_status\":\"in_progress\",\"snooze_until\":null},\"is_compliance\":false,\"group_type_string\":\"NonGroup\",\"description\":\"Unused role with policy found\",\"recommendation\":\"Unused AmazonSSMRoleForInstancesQuickSetup role should be removed.\",\"source\":\"AmazonSSMRoleForInstancesQuickSetup\",\"group_type\":\"AwsIamRole\",\"cluster_type\":\"AwsIamRole\",\"type\":\"aws_iam_old_role_with_policy\",\"group_unique_id\":\"AwsIamRole_57xxxxxxxxxx_e739eb76-918b-42d3-1d8b-bcxxxxxxxxxx\",\"cloud_account_id\":\"1b6a52d3-58ed-4879-af03-b9xxxxxxxxxx\",\"type_string\":\"Unused role with policy found\",\"asset_name\":\"AmazonSSMRoleForInstancesQuickSetup\",\"account_name\":\"test\",\"asset_type\":\"AwsIamRole\",\"context\":\"control\",\"details\":\"AWS IAM roles can grant access to AWS resources or actions.\",\"model\":{\"data\":{\"Inventory\":{\"Category\":\"Users and Access\",\"UiUniqueField\":\"AROAYJTTMYxxxxxxxxxxx_arn:aws:iam::57xxxxxxxxxx:role/AmazonSSMRoleForInstancesQuickSetup\",\"BlastRadius\":\"{}\",\"SubCategory\":\"Roles\",\"Observations\":[],\"Tags\":\"{}\",\"Name\":\"AmazonSSMRoleForInstancesQuickSetup\",\"AccessEndpoints\":\"[]\"},\"AwsIamRole\":{\"Path\":\"/\",\"AssumeRolePolicy\":{\"model\":{\"name\":\"arn:aws:iam::57xxxxxxxxxx:role/AmazonSSMRoleForInstancesQuickSetup_AssumeRolePolicy\",\"id\":\"e739eb76-315a-f9d7-558d-faxxxxxxxxxx\",\"type\":\"AwsIamAssumeRolePolicy\"}},\"Policies\":{\"models\":[{\"model\":{\"data\":{\"AwsIamPolicy\":{\"PolicyBody\":\"{}\",\"IsPermissive\":false,\"ResourceType\":\"managed_policy\",\"PolicyId\":\"arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore\",\"Name\":\"AmazonSSMManagedInstanceCore\"},\"Inventory\":{\"Category\":\"Users and Access\",\"UiUniqueField\":\"arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore\",\"BlastRadius\":\"{}\",\"SubCategory\":\"Policies\",\"Observations\":[],\"Name\":\"AmazonSSMManagedInstanceCore\",\"AccessEndpoints\":\"[]\"}},\"name\":\"AmazonSSMManagedInstanceCore\",\"asset_unique_id\":\"AwsIamPolicy_57xxxxxxxxxx_e739eb76-03a4-ddcb-8152-bbxxxxxxxxxx\",\"id\":\"e739eb76-32a4-2ab1-e27c-baxxxxxxxxxx\",\"type\":\"AwsIamPolicy\"}}],\"_is_path_to_many_objects\":[true],\"remaining\":0},\"AuthorizedServices\":{\"models\":[{\"model\":{\"name\":\"ssmmessages\",\"id\":\"e739eb76-34bf-80ef-e393-92xxxxxxxxxx\",\"type\":\"AwsEntityAuthorizedService\"}}],\"remaining\":0},\"InstanceProfileArnList\":[\"arn:aws:iam::57xxxxxxxxxx:instance-profile/AmazonSSMRoleForInstancesQuickSetup\"],\"RoleTags\":[],\"Arn\":\"arn:aws:iam::57xxxxxxxxxx:role/AmazonSSMRoleForInstancesQuickSetup\",\"PermissionUsage\":0,\"RoleId\":\"AROAYJTTMYDxxxxxxxxxx\",\"CreateDate\":\"2020-09-10T14:01:21+00:00\",\"Name\":\"AmazonSSMRoleForInstancesQuickSetup\"}},\"name\":\"AmazonSSMRoleForInstancesQuickSetup\",\"asset_unique_id\":\"AwsIamRole_57xxxxxxxxxx_e739eb76-918b-42d3-1d8b-bcxxxxxxxxxx\",\"id\":\"e739eb76-3471-0f6c-01d1-fexxxxxxxxxx\",\"type\":\"AwsIamRole\"},\"state\":{\"severity\":\"hazardous\",\"last_updated\":\"2022-05-09T20:20:13+00:00\",\"last_seen\":\"2022-05-09T20:08:08+00:00\",\"in_verification\":false,\"low_since\":null,\"created_at\":\"2022-03-19T16:55:08+00:00\",\"closed_time\":null,\"verification_status\":\"scan_failed\",\"score\":3,\"alert_id\":\"orca-xxx\",\"high_since\":\"2022-05-09T20:20:13+00:00\",\"closed_reason\":null,\"status_time\":\"2022-05-09T20:20:13+00:00\",\"status\":\"in_progress\"},\"rule_query\":\"AwsIamRole with Policies with (RoleLastUsed + 90 days < now)\",\"cluster_unique_id\":\"AwsIamRole_57xxxxxxxxxx_e739eb76-918b-42d3-1d8b-bcxxxxxxxxxx\",\"cluster_name\":\"AmazonSSMRoleForInstancesQuickSetup\",\"subject_type\":\"AwsIamRole\",\"group_name\":\"AmazonSSMRoleForInstancesQuickSetup\",\"level\":0,\"is_rule\":true,\"cloud_provider\":\"aws\",\"organization_name\":\"Partners\",\"type_key\":\"c9d0d4f89314560d12c22bxxxxxxxxxx\",\"cloud_vendor_id\":\"57xxxxxxxxxx\",\"rule_id\":\"rxxxxxxxxxx\",\"asset_category\":\"Users and Access\",\"asset_state\":\"enabled\",\"organization_id\":\"e739eb76-3d1a-4022-b5d0-36xxxxxxxxxx\",\"asset_unique_id\":\"AwsIamRole_57xxxxxxxxxx_e739eb76-918b-42d3-1d8b-bcxxxxxxxxxx\",\"cloud_provider_id\":\"57xxxxxxxxxx\",\"category\":\"IAM misconfigurations\",\"asset_vendor_id\":\"AROAYJTTMYxxxxxxxxxxx_arn:aws:iam::57xxxxxxxxxx:role/AmazonSSMRoleForInstancesQuickSetup\"}",
+		"ResultName": "JsonResult"
+	}],
+    "Parameters": [
+        {
+            "Name": "Alert ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the ID of the alert needs to be updated.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Verify Alert",
+            "Type": 1,
+            "DefaultValue": false,
+            "Value": false,
+            "IsMandatory": false,
+            "Description": "If enabled, action will initiate the verification process for the alert.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Snooze State",
+            "Type": 15,
+            "DefaultValue": "Select One",
+            "Value": "Select One",
+            "IsMandatory": false,
+            "Description": "Specify the snooze state for the alert.",
+            "OptionalValues": [
+                "Select One",
+                "Snooze",
+                "Unsnooze"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Snooze Days",
+            "Type": 0,
+            "DefaultValue": 1,
+            "Value": 1,
+            "IsMandatory": false,
+            "Description": "Specify how many days alert needs to be snoozed. This parameter is mandatory if \"Snooze State\" is set to \"Snooze\". If nothing is provided, action will snooze the alert for 1 day.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Status",
+            "Type": 15,
+            "DefaultValue": "Select One",
+            "Value": "Select One",
+            "IsMandatory": false,
+            "Description": "Specify what status to set for the alert.",
+            "OptionalValues": [
+                "Select One",
+                "Open",
+                "In Progress",
+                "Close",
+                "Dismiss"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

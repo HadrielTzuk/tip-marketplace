@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Download alert artifacts from FireEye CM.",
+    "Id": -1,
+    "IntegrationIdentifier": "FireEyeCM",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Download Alert Artifacts",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"file_path\": \"/my/path\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Alert UUID",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the alert uuid from where we need to download artifacts.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Download Folder Path",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the absolute path to the folder where the acion should save the files.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Overwrite",
+            "Type": 1,
+            "Value": true,
+            "DefaultValue": true,
+            "IsMandatory": true,
+            "Description": "If enabled, action will overwrite the existing file with the same path.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

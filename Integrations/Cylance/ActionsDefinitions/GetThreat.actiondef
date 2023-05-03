@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 1522587125952, 
+    "Creator": "admin", 
+    "Description": "Enrich a hash with data from Cylance", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"cylance_score\": -1.0, \"name\": \"mpress.exe\", \"classification\": \"Trusted\", \"last_found\": \"2018-03-28T20:34:44\", \"av_industry\": null, \"unique_to_cylance\": true, \"global_quarantined\": false, \"file_size\": 103424, \"safelisted\": false, \"sha256\": \"2852680C94A9D68CDAB285012D9328A1CECA290DB60C9E35155C2BB3E46A41B4\", \"md5\": \"8B632BFC3FE653A510CBA277C2D699D1\", \"sub_classification\": \"Local\"}, \"Entity\": \"8B632BFC3FE653A510CBA277C2D699D1\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Cylance", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1522587125952, 
+    "Name": "Get Threat", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1524655956304, 
+            "CustomActionId": -1, 
+            "DefaultValue": "0", 
+            "Description": "Mark entity as suspicious if the threat Cylance score pass the given threshold. e.g. 3", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1524655956304, 
+            "Name": "Threshold", 
+            "Type": 0, 
+            "Value": "0"
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom SiemplifyDataModel import EntityTypes\r\nfrom CylanceManager import CylanceManager\r\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv, add_prefix_to_dict\r\n\r\nSCRIPT_NAME = \"Cylance - GetThreat\"\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n    siemplify.script_name = SCRIPT_NAME\r\n    conf = siemplify.get_configuration('Cylance')\r\n\r\n    server_address = conf['Server Address']\r\n    application_secret = conf['Application Secret']\r\n    application_id = conf['Application ID']\r\n    tenant_identifier = conf['Tenant Identifier']\r\n\r\n    cm = CylanceManager(server_address, application_id, application_secret,\r\n                        tenant_identifier)\r\n\r\n    threshold = int(siemplify.parameters['Threshold'])\r\n\r\n    affected_entities = []\r\n\r\n    for entity in siemplify.target_entities:\r\n        try:\r\n            if entity.entity_type == EntityTypes.FILEHASH:\r\n                threat = cm.get_threat(entity.identifier)\r\n\r\n                if threat:\r\n                    if threat['cylance_score'] > threshold:\r\n                        entity.is_suspicious = True\r\n\r\n                    # Enrich the entity\r\n                    flat_threat = dict_to_flat(threat)\r\n                    entity.additional_properties.update(\r\n                        dict_to_flat(add_prefix_to_dict(flat_threat, 'CyLance')))\r\n\r\n                    entity.is_enriched = True\r\n                    affected_entities.append(entity)\r\n\r\n        except Exception as e:\r\n            # An error occurred - skip entity and continue\r\n            siemplify.LOGGER.error(\r\n                \"An error occurred on entity: {}.\\n{}.\".format(\r\n                    entity.identifier, str(e)\r\n                ))\r\n            siemplify.LOGGER._log.exception(e)\r\n\r\n    if affected_entities:\r\n        entities_names = [entity.identifier for entity in affected_entities]\r\n\r\n        output_message = 'Following threats were found:\\n{}'.format(\r\n            '\\n'.join(entities_names))\r\n\r\n        siemplify.update_entities(affected_entities)\r\n    else:\r\n        output_message = 'No threats were found'\r\n\r\n    siemplify.end(output_message, 'true')\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 1.0
+}

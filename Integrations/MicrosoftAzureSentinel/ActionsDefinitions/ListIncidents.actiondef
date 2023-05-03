@@ -1,0 +1,70 @@
+{
+    "CreationTimeUnixTimeInMs": 1524560820281,
+    "Creator": "klim.lyapin@siemplify.co",
+    "Description": "List Microsoft Azure Sentinel Incidents based on the provided search criteria.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\":\"/subscriptions/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXXXXXXXXXXX/providers/Microsoft.SecurityInsights/Incidents/XXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\"name\":\"XXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\"etag\":\"XXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\"type\":\"Microsoft.SecurityInsights/Incidents\",\"properties\":{\"title\":\"X\",\"description\":\"Activity policyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\"severity\":\"Low\",\"status\":\"New\",\"owner\":{\"objectId\":null,\"email\":null,\"assignedTo\":null,\"userPrincipalName\":null},\"labels\":[],\"firstActivityTimeUtc\":\"2021-04-13T07:42:54.366Z\",\"lastActivityTimeUtc\":\"2021-04-13T07:42:54.366Z\",\"lastModifiedTimeUtc\":\"2021-04-13T07:43:02.870674Z\",\"createdTimeUtc\":\"2021-04-13T07:43:02.870674Z\",\"incidentNumber\":10684490,\"additionalData\":{\"alertsCount\":1,\"bookmarksCount\":0,\"commentsCount\":0,\"alertProductNames\":[\"Microsoft Cloud App Security\"],\"tactics\":[]},\"relatedAnalyticRuleIds\":[\"/subscriptions/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXXXXXXXXXXX/providers/Microsoft.SecurityInsights/alertRules/XXXXXXXXXXXXXXXXXXXXX\",\"/subscriptions/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXXXXXXXXXXX/providers/Microsoft.SecurityInsights/alertRules/XXXXXXXXXXXXXXXXXXXXX\",\"/subscriptions/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXXXXXXXXXXX/providers/Microsoft.SecurityInsights/alertRules/XXXXXXXXXXXXXXXXXXXXX\",\"/subscriptions/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXXXXXXXXXXX/providers/Microsoft.SecurityInsights/alertRules/XXXXXXXXXXXXXXXXXXXXX\",\"/subscriptions/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXXXXXXXXXXX/providers/Microsoft.SecurityInsights/alertRules/XXXXXXXXXXXXXXXXXXXXX\"],\"incidentUrl\":\"https://portal.azure.com/#asset/Microsoft_Azure_Security_Insights/Incident/subscriptions/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXXXXXXXXXXX/providers/Microsoft.SecurityInsights/Incidents/XXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\"providerName\":\"Azure Sentinel\",\"providerIncidentId\":\"XXXXXXX\"}},{\"id\":\"/subscriptions/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXXXXXXXXXXX/providers/Microsoft.SecurityInsights/Incidents/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\"name\":\"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\"etag\":\"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\"type\":\"Microsoft.SecurityInsights/Incidents\",\"properties\":{\"title\":\"X\",\"description\":\"Activity policyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\"severity\":\"Low\",\"status\":\"New\",\"owner\":{\"objectId\":null,\"email\":null,\"assignedTo\":null,\"userPrincipalName\":null},\"labels\":[],\"firstActivityTimeUtc\":\"2021-04-13T07:33:03.572Z\",\"lastActivityTimeUtc\":\"2021-04-13T07:33:03.572Z\",\"lastModifiedTimeUtc\":\"2021-04-13T07:33:33.0348454Z\",\"createdTimeUtc\":\"2021-04-13T07:33:33.0348454Z\",\"incidentNumber\":10444889,\"additionalData\":{\"alertsCount\":1,\"bookmarksCount\":0,\"commentsCount\":0,\"alertProductNames\":[\"Microsoft Cloud App Security\"],\"tactics\":[]},\"relatedAnalyticRuleIds\":[\"/subscriptions/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXXXXXXXXXXX/providers/Microsoft.SecurityInsights/alertRules/XXXXXXXXXXXXXXXXXXXXX\",\"/subscriptions/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXXXXXXXXXXX/providers/Microsoft.SecurityInsights/alertRules/XXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\"/subscriptions/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXXXXXXXXXXX/providers/Microsoft.SecurityInsights/alertRules/XXXXXXXXXXXXXXXXXXXXX\",\"/subscriptions/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXXXXXXXXXXX/providers/Microsoft.SecurityInsights/alertRules/XXXXXXXXXXXXXXXXXXXXX\",\"/subscriptions/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXXXXXXXXXXX/providers/Microsoft.SecurityInsights/alertRules/XXXXXXXXXXXXXXXXXXXXXX\"],\"incidentUrl\":\"https://portal.azure.com/#asset/Microsoft_Azure_Security_Insights/Incident/subscriptions/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/resourceGroups/sentinel-check/providers/Microsoft.OperationalInsights/workspaces/XXXXXXXXXXXXXXX/providers/Microsoft.SecurityInsights/Incidents/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\"providerName\":\"Azure Sentinel\",\"providerIncidentId\":\"XXXXX\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftAzureSentinel",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524560820281,
+    "Name": "List Incidents",
+    "Parameters": [
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "3",
+            "Description": "Time frame in hours for which to fetch Incidents",
+            "Name": "Time Frame",
+            "Value": "3",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "New, Active, Closed",
+            "Description": "Statuses of the incidents to look for. Comma-separated string",
+            "Name": "Status",
+            "Value": "New, Active, Closed",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "Informational, Low, Medium, High",
+            "Description": "Severities of the incidents to look for. Comma-separated string.",
+            "Name": "Severity",
+            "Value": "Informational, Low, Medium, High",
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "200",
+            "Description": "How many incidents to fetch",
+            "Name": "How Many Incidents to Fetch",
+            "Value": "200",
+            "Type": 0,
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

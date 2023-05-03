@@ -1,0 +1,66 @@
+{
+    "CreationTimeUnixTimeInMs": 1548084654044, 
+    "Creator": "System", 
+    "Description": "Unassign a role from a user", 
+    "DynamicScriptResultNamesJson": "[\"ResultJson\"]", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Okta", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1548084654059, 
+    "Name": "Unassign Role", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1548084654078, 
+            "CustomActionId": 711, 
+            "DefaultValue": "", 
+            "Description": "Ids of users in Okta", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084654078, 
+            "Name": "User IDs", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1548084654079, 
+            "CustomActionId": 711, 
+            "DefaultValue": "", 
+            "Description": "Ids or names of roles in Okta", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1548084654079, 
+            "Name": "Role IDs Or Names", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1548084654079, 
+            "CustomActionId": 711, 
+            "DefaultValue": "false", 
+            "Description": "Whether the values are ids or names", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084654079, 
+            "Name": "Is Id", 
+            "Type": 1, 
+            "Value": "false"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1548084654080, 
+            "CustomActionId": 711, 
+            "DefaultValue": "false", 
+            "Description": "Whether to run on entities as well as the input", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084654080, 
+            "Name": "Also Run On Scope", 
+            "Type": 1, 
+            "Value": "false"
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyDataModel import EntityTypes\nfrom OktaManager import OktaManager\nimport json\n\nPROVIDER = \"Okta\"\nACTION_NAME = \"Okta - UnassignRole\"\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    user_ids = siemplify.parameters.get('User IDs', \"\")\n    role_types = siemplify.parameters['Role IDs Or Names']\n    is_role_id = siemplify.parameters.get(\"Is Id\", \"false\").lower() == \"true\"\n    is_scope = siemplify.parameters.get('Also Run On Scope', \"false\").lower() == \"true\"\n    roles = []\n    ids = []\n    res = {}\n    ret = {}\n    flag = False\n    output_message = \"\"\n    okta = OktaManager(api_root=conf['Api Root'], api_token=conf['Api Token'],\n                       verify_ssl=conf['Verify SSL'].lower() == 'true')\n    if user_ids:\n        for _id in user_ids.split(','):\n            _id = _id.strip()\n            ids.append(_id)\n    if role_types:\n        for role in role_types.split(','):\n            role = role.strip()\n            roles.append(role)\n    message = \"\"\n    if ids:\n        for _id in ids:\n            if roles:\n                ret[_id] = []\n                for role in roles:\n                    try:\n                        if is_role_id:\n                            res = okta.unassign_role(_id, role)\n                        else:\n                            role_id = okta.find_role_id_by_name(_id, role)\n                            if role_id:\n                                res = okta.unassign_role(_id, role_id)\n                            else:\n                                message += _id + \": Couldn't find role id for {0}.\\n\\n\".format(role)\n                                continue\n                        if res:\n                            ret[_id].append(role)\n                            flag = True\n                            message += \"The user with id {0} was unassigned the role {1}.\\n\\n\".format(_id, role)\n                        else:\n                            message += \"The user with id {0} couldn't be unassigned the role {1}.\\n\\n\".format(_id, role)\n                    except Exception as err:\n                        siemplify.LOGGER.exception(err)\n                        siemplify.LOGGER.error(_id + \", \" + role + \": \" + err.message)\n                        pass\n    if is_scope:\n        entitiesUnassigned = []\n        for entity in siemplify.target_entities:\n            if entity.entity_type == EntityTypes.USER or entity.entity_type == EntityTypes.HOSTNAME:\n                _id = okta.login_to_id(entity.identifier)\n                if _id:\n                    if roles:\n                        ret[entity.identifier] = []\n                        for role in roles:\n                            try:\n                                if is_role_id:\n                                    res = okta.unassign_role(_id, role)\n                                else:\n                                    role_id = okta.find_role_id_by_name(_id, role)\n                                    if role_id:\n                                        res = okta.unassign_role(_id, role_id)\n                                    else:\n                                        message += entity.identifier + \": Couldn't find role id {0}.\\n\\n\".format(role)\n                                        continue\n                                if res:\n                                    entitiesUnassigned.append(entity)\n                                    ret[entity.identifier].append(role)\n                                    flag = True\n                                    message += \"The user \\\"{0}\\\" was unassigned the role {1}.\\n\\n\".format(entity.identifier, role)\n                                else:\n                                    message += \"The user \\\"{0}\\\" couldn't be unassigned the role {1}.\\n\\n\".format(entity.identifier, role)\n                            except Exception as err:\n                                siemplify.LOGGER.exception(err)\n                                siemplify.LOGGER.error(entity.identifier + \", \" + role + \": \" + err.message)\n                                pass\n                else:\n                    message += \"Couldn't find the user \\\"{0}\\\".\\n\\n\".format(entity.identifier)\n                    continue\n            else:\n                continue\n    success = \"false\"\n    if ret and flag:\n        output_message = message\n        success = \"true\"\n    else:\n        output_message = \"No users were unassigned roles. {}\".format(message)\n    siemplify.end(output_message, success)\n\nif __name__ == '__main__':\n    main()", 
+    "ScriptResultName": "ScriptResult", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"USERUNIQNAME\"]}", 
+    "Version": 11.0
+}

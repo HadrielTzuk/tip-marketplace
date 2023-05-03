@@ -1,0 +1,30 @@
+{
+    "CreationTimeUnixTimeInMs": 1506519117083,
+    "Creator": "admin",
+    "Description": "Raise case incident (Note - Used to mark critical true positive cases)",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1506519117083,
+    "Name": "Raise Incident",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1510914806944,
+            "CustomActionId": -1,
+            "DefaultValue": "@SocManager",
+            "Description": "Role to which the case should be assigned.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1510914806944,
+            "Name": "Soc Role",
+            "Type": 3,
+            "Value": "@SocManager"
+        }
+    ],
+    "Script": "\nfrom SiemplifyAction import *\n\ndef main():\n    siemplify = SiemplifyAction()    \n    siemplify.raise_incident()\n    siemplify.assign_case('@SocManager')\n    \n    output_message = \"The case raised to Incident status\"    \n    siemplify.end(output_message, \"true\")\n\nif __name__ == '__main__':\n\tmain()\n",
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

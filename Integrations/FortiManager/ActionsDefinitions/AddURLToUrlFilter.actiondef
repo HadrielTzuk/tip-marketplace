@@ -1,0 +1,42 @@
+{
+    "CreationTimeUnixTimeInMs": 1536141709830, 
+    "Creator": "System", 
+    "Description": "Add a new block record to a url filter by it's name. \nAction is running as async, please adjust script timeout value in Chronicle SOAR IDE for action as needed.",
+    "Id": -1, 
+    "IntegrationIdentifier": "FortiManager", 
+    "IsCustom": false, 
+    "IsEnabled": true,
+    "IsAsync": true,
+    "ModificationTimeUnixTimeInMs": 1536141709830, 
+    "Name": "Add URL To Url Filter", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1536141709830, 
+            "CustomActionId": 7, 
+            "DefaultValue": "", 
+            "Description": "The name of the ADOM. Default: root.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1536141709830, 
+            "Name": "ADOM Name", 
+            "Type": 0, 
+            "Value": "root"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1536141709830, 
+            "CustomActionId": 7, 
+            "DefaultValue": null, 
+            "Description": "The name of the URL filter to add record to.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1536141709830, 
+            "Name": "Url Filter Name", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "Script": "from SiemplifyAction import *\nfrom SiemplifyDataModel import EntityTypes\nfrom FortiManager import FortiManager\n\n\nPROVIDER = 'FortiManager'\nACTION_NAME = 'FortiManager_Block URL'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    verify_ssl = conf.get('Verify SSL', 'false').lower() == 'true'\n    forti_manager = FortiManager(conf['API Root'], conf['Username'], conf['Password'], verify_ssl)\n\n    result_value = False\n    errors = []\n    success_entities = []\n\n    target_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.URL]\n\n    # Parameters.\n    adom_name = siemplify.parameters.get('ADOM Name', 'root')\n    urlfilter_name = siemplify.parameters.get('Urlfilter Name')\n\n\n    for entity in target_entities:\n        try:\n            # Get urlfilter id.\n            urlfilter_id = forti_manager.get_urlfilter_id_by_name(adom_name, urlfilter_name)\n            # Add url entry to a urlfilter.\n            forti_manager.add_block_url_record_to_urlfilter_by_id(adom_name, urlfilter_id, entity.identifier)\n            success_entities.append(entity)\n            result_value = True\n\n        except Exception as err:\n            error_message = 'Error accrued blocking {0}, Error: {1}'.format(entity.identifier, err.message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n\n    if success_entities:\n        output_message = 'The following entities were blocked: {0}'.format(', '.join(\n            [entity.identifier for entity in success_entities]))\n    else:\n        output_message = 'No entities were blocked.'\n\n    if errors:\n        output_message = \"{0} \\n \\n Errors:  \\n {1}\".format(output_message, ' \\n '.join(errors))\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Version": 1.0
+}

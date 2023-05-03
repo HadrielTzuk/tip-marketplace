@@ -1,0 +1,73 @@
+{
+    "Description": "A complete automation solution to enable efficient automated service management and reduce the cost of IT operations.",
+    "DisplayName": "Micro Focus ITSMA",
+    "Identifier": "MicroFocusITSMA",
+    "Categories": [
+        "IT & Infrastructure",
+        "ITSM"
+    ],
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAJ4AAABSCAMAAACScZ2GAAAAnFBMVEX///8AeO8Nf/AbhvH9/v/J4vxDm/Ot1Po2lfIGe+/k8f3y+f4VhPFhq/X4/P9TpPTY6v0eiPHI4vx+u/fu9v7C3/s8mPPF4fus0/qr0/oki/KOxPgtkPLp9P6y1vqo0fpNofTV6fzN5fyayvlcqfXb7P293fujz/lxtPbf7v2gzfmUxvhGnfQIffD1+v6FvvjR5/y22fuLwvhpsPZ5VOQhAAADlElEQVRo3u2XiW6jMBCGZwzNSUkghAC5Q9KczdG+/7utG58UyJYlq5VW/lQp7q/B+YTxmIDBYDAYDAaDwWAwGAz/LzNSzkLVOHvgjAlJbDZsEDJjIzckGmHA0hXRSfa8tqen3ghgeNzOfShkjuW0tJoJMDZ0/M71EsQ5G71ghpilIz2Ttats2oPV8XBMZ1BIE8tp6DVjqYQW12shNpVIm/GOSjqbxoW1a5hNx+sIauqRu9MBc3pcpDft3Jmudb0FT4OdXut0pjJ9pXrHybKuHvboyHVK9T6BM9DTtXxk9dQT6ceX3vUyXF1KFvf2Mz2HLc6Crgsp1nsFTtDpnB/ryQlgcL/uLfXTFXyDLcWBFJHT26VUDHxEcijXU6hlbHASxKhMD+wO5CD49XA2ugX029/1ekDnDz3EG2AVPZ1DiV4xeCeEAs45vZD3gwn0/0iP0L9rJT0iFPJ0cnp0uENKH0aV9E6b/ial112CawB/VQ88xIGcvVwvbTSG2a3xSi/RpdV/lyfqbXYDNvvjxvKqP2U9+OKdnToy9Z6vxyjR8xGdsHUndMQeVXpbOtkOQNa2W7zWeoZexIbKROhJkSFm2MrSBRv1aDiDwpO4V1tvy9ZGmXA9S4pM31Gj3ZelIchS3PO27WTbTW29ThwPQRBE8Y3rvcWx6KebKGpyouZGlfrA/eMo7Yi4GcvaeAR19P4+Ro/xr/SCkf+iGE6BshnKYPQCjKWWrUS0soHRHQ35Q+n7arJ9fb05ZrjkopbL3pl0BuLluqsayumuOUGdWW29GHNfvMhGS6BkvzYBlrW7kO2C/rP7XhOxbUmclJ1cxOOB0GsgOqJG/I5qIelC9gzx1WwedVg/5VCzJa7N9D5sRkAn6nO9Jc/2iF6RHv+0XF73yRa8tt4CNJjeETianui87iTpPdDzgHMdDOZPuXsu42xLvbHYkVKPfSrK797ZZfy2sZyggCneCbVnz2GQbS09cWg7Em9WXa/L9CZST/FRW+9aZeeSsJUjDGdvX6zyO9eZ19aDT0vweOeWA4z8znV/+OzZZ7tQj2NzHv7WKIV0v+udKu5cjyyEHnCWXG+/G8hLx0/Sa4DGj/peIvQCnvlc7w0RXXX3nq9X6dRAHnkO756jn50a+AClp17mFRXOXC+ThRXOXIuUYmX1bpbzfZIocSzFwgVK6ukZ60A7LXG8LVDOJz1LbmAwGAwGg8FgMBgMBsOf8wu+0kZb7avRawAAAABJRU5ErkJggg==",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "MicroFocusITSMA",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "6",
+            "Value": "https://<serverAddress>/"
+        },
+        {
+            "IntegrationIdentifier": "MicroFocusITSMA",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MicroFocusITSMA",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MicroFocusITSMA",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Tenant ID",
+            "PropertyName": "Tenant ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MicroFocusITSMA",
+            "IsMandatory": true,
+            "PropertyDisplayName": "External System",
+            "PropertyName": "External System",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MicroFocusITSMA",
+            "IsMandatory": true,
+            "PropertyDisplayName": "External ID",
+            "PropertyName": "External ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "MicroFocusITSMA",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path d=\"M22 3v15.31h-3.69V6.69H6.69V3H22z\"\/>\r\n  <path d=\"M18.31 18.31V22H3V6.69h3.69v11.62h11.62z\"\/>\r\n<\/svg>\r\n",
+    "Version": 4.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/micro-focus-itsma",
+    "MarketingDisplayName": "Micro Focus ITSM"
+}

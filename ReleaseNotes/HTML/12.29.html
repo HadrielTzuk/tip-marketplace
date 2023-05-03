@@ -1,0 +1,345 @@
+<html><head></head><body><h2>Siemplify Marketplace Release Notes - 12.29</h2><h5>Published on 02 April, 2020</h5><hr><h3>Integrations</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     ActiveDirectory
+    </b>
+   </li>
+   <ul>
+    <li>
+     ActiveDirectory
+    </li>
+    <ul>
+     <li>
+      Fixed a bug in load_nested_groups method, which caused an endless recursion in case of a cycle in the DC's groups hierarchy.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     AzureActiveDirectory
+    </b>
+   </li>
+   <ul>
+    <li>
+     AzureActiveDirectory
+    </li>
+    <ul>
+     <li>
+      Fixed action def files JSONs.
+     </li>
+     <li>
+      Added usage of TIPCommon for table constructions in all actions.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     CheckPointFirewall
+    </b>
+   </li>
+   <ul>
+    <li>
+     CheckPointFirewall
+    </li>
+    <ul>
+     <li>
+      Added domain field support for login
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     McAfeeEPO
+    </b>
+   </li>
+   <ul>
+    <li>
+     McAfeeEPO
+    </li>
+    <ul>
+     <li>
+      Added group supporting to the integration itself as non-mandatory field
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     QRadar
+    </b>
+   </li>
+   <ul>
+    <li>
+     QRadar
+    </li>
+    <ul>
+     <li>
+      Fixed a bug of empty numeric non mandatory fields.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     VMRay
+    </b>
+   </li>
+   <ul>
+    <li>
+     VMRay
+    </li>
+    <ul>
+     <li>
+      Integration refactored.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Actions</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     Endgame
+    </b>
+   </li>
+   <ul>
+    <li>
+     Kill Process
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for killing processes.
+     </li>
+    </ul>
+    <li>
+     Drivers Survey
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for getting informations about drivers that are installed on endpoints.
+     </li>
+    </ul>
+    <li>
+     Firewall Survey
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for getting information about firewall rules that exist endpoints.
+     </li>
+    </ul>
+    <li>
+     Network Survey
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for getting information about connections, DNS cache, Net Bios, ARP, and Route tables from endpoints.
+     </li>
+    </ul>
+    <li>
+     Process Survey
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for getting information about running processes on endpoints.
+     </li>
+    </ul>
+    <li>
+     Removable Media Survey
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for getting information about removable media from endpoints.
+     </li>
+    </ul>
+    <li>
+     Software Survey
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for getting information about an installed software on endpoints.
+     </li>
+    </ul>
+    <li>
+     System Survey
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for getting information such as memory use, dns, and OS from endpoints.
+     </li>
+    </ul>
+    <li>
+     User Sessions Survey
+    </li>
+    <ul>
+     <li>
+      NEW! Added new action for getting information about an active user sessions on endpoints.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     McAfeeEPO
+    </b>
+   </li>
+   <ul>
+    <li>
+     AddTag
+    </li>
+    <ul>
+     <li>
+      Added group supporting to Add Tag action
+     </li>
+    </ul>
+    <li>
+     GetSystemInformation
+    </li>
+    <ul>
+     <li>
+      Added group supporting to Get System Information action
+     </li>
+    </ul>
+    <li>
+     RemoveTag
+    </li>
+    <ul>
+     <li>
+      Added group supporting to Remove Tag action
+     </li>
+    </ul>
+    <li>
+     RunFullScan
+    </li>
+    <ul>
+     <li>
+      Added group supporting to Run Full Scan action
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     McAfeeESM
+    </b>
+   </li>
+   <ul>
+    <li>
+     Send Query to ESM
+    </li>
+    <ul>
+     <li>
+      Added missing line that imports the required package
+     </li>
+    </ul>
+    <li>
+     McAfee ESM Send Advanced Query to ESM
+    </li>
+    <ul>
+     <li>
+      Added result example in action def file.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     PaloAltoCortexXDR
+    </b>
+   </li>
+   <ul>
+    <li>
+     Enrich Entities
+    </li>
+    <ul>
+     <li>
+      NEW! Added a new action for enriching entities.
+     </li>
+    </ul>
+    <li>
+     Get Endpoint Agent Report
+    </li>
+    <ul>
+     <li>
+      NEW! Added a new action for fetching agent report for endpoints.
+     </li>
+    </ul>
+    <li>
+     Unisolate Endpoint
+    </li>
+    <ul>
+     <li>
+      NEW! Added a new action for unisolating endpoints.
+     </li>
+    </ul>
+    <li>
+     Isolate Endpoint
+    </li>
+    <ul>
+     <li>
+      NEW! Added a new action for isolating endpoints.
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     ServiceNow
+    </b>
+   </li>
+   <ul>
+    <li>
+     WaitForFieldUpdate
+    </li>
+    <ul>
+     <li>
+      Added a validation that the incident is still open and can check for a field update.
+     </li>
+     <li>
+      Check if the updated field value is string or a dictionary, to process accordingly
+     </li>
+    </ul>
+   </ul>
+   <li>
+    <b>
+     VirusTotal
+    </b>
+   </li>
+   <ul>
+    <li>
+     ScanHash
+    </li>
+    <ul>
+     <li>
+      Fixed issue that returned is_risky when no value was found.
+     </li>
+    </ul>
+    <li>
+     ScanURL
+    </li>
+    <ul>
+     <li>
+      Fixed issue that returned is_risky when no value was found.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html><hr><h3>Connectors</h3><html>
+ <body>
+  <ul>
+   <li>
+    <b>
+     QRadar
+    </b>
+   </li>
+   <ul>
+    <li>
+     QRadar New Correlations Events Connector
+    </li>
+    <ul>
+     <li>
+      Added support for non-ASCII data.
+     </li>
+    </ul>
+   </ul>
+  </ul>
+ </body>
+</html></body></html>

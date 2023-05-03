@@ -1,0 +1,154 @@
+{
+   "CreationTimeUnixTimeInMs":1530621343817,
+   "Creator":"admin",
+   "Description":"DEPRECATED! Pull Asset alerts from Google Chronicle and convert them into Siemplify alerts. Note: this connector is going to be deprecated. It is recommended to use the \"Chronicle Alerts Connector\".",
+   "Id":-1,
+   "Integration":"GoogleChronicle",
+   "IsConnectorRulesSupported":true,
+   "IsCustom":false,
+   "IsEnabled":true,
+   "ModificationTimeUnixTimeInMs":1530621343817,
+   "Name":"Google Chronicle - Alerts Connector",
+   "Parameters":[
+      {
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1532871487965,
+         "DefaultValue":"Product Name",
+         "Description":"Enter the source field name in order to retrieve the Product Field name.",
+         "Id":-1,
+         "IsMandatory":true,
+         "IsAdvanced":true,
+         "Mode":0,
+         "ModificationTimeUnixTimeInMs":1532871487965,
+         "Name":"DeviceProductField",
+         "Type":2
+      },
+      {
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1532871487965,
+         "DefaultValue":"udmEvent_metadata_eventType",
+         "Description":"Enter the source field name in order to retrieve the Event Field name.",
+         "Id":-1,
+         "IsMandatory":true,
+         "IsAdvanced":true,
+         "Mode":0,
+         "ModificationTimeUnixTimeInMs":1532871487965,
+         "Name":"EventClassId",
+         "Type":2
+      },
+      {
+         "Name":"PythonProcessTimeout",
+         "Type":1,
+         "DefaultValue":180,
+         "IsMandatory":true,
+         "IsAdvanced":true,
+         "Description":"Timeout limit for the python process running the current script.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Service Account Credentials",
+         "Type":3,
+         "DefaultValue":"",
+         "IsMandatory":true,
+         "IsAdvanced":false,
+         "Description":"A json formatted string act as a token access",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Fetch Max Hours Backwards",
+         "Type":1,
+         "DefaultValue":1,
+         "IsMandatory":false,
+         "IsAdvanced":false,
+         "Description":"Amount of hours from where to fetch alerts.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Environment Field Name",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "IsAdvanced":true,
+         "Description":"Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Environment Regex Pattern",
+         "Type":2,
+         "DefaultValue":".*",
+         "IsMandatory":false,
+         "IsAdvanced":true,
+         "Description":"A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Server Address",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "IsAdvanced":true,
+         "Description":"The address of the proxy server to use.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Username",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "IsAdvanced":true,
+         "Description":"The proxy username to authenticate with.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Password",
+         "Type":3,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "IsAdvanced":true,
+         "Description":"The proxy password to authenticate with.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      }
+   ],
+   "ProductToVisualFamilyRecords":[
+   ],
+   "Rules":[
+   ],
+   "SimulationUseCases":{
+      "CasesForUseCase":[
+      ],
+      "UseCaseName":null
+   },
+   "Version": 1
+}

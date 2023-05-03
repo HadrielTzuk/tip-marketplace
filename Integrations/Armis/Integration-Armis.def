@@ -1,0 +1,44 @@
+{
+    "Description": "Agentless and passive security that sees, identifies, and classifies every device, tracks behavior, identifies threats, and takes action automatically to protect critical information and systems.",
+    "DisplayName": "Armis",
+    "Identifier": "Armis",
+    "PythonVersion": 2,
+    "Categories": [
+        "IT & Infrastructure",
+        "IoT",
+        "Asset Management"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Armis",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https://{root}"
+        },
+        {
+            "IntegrationIdentifier": "Armis",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Secret",
+            "PropertyName": "API Secret",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Armis",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": true
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "IsAvailableForCommunity": true,
+    "SVGImage": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"currentColor\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<path d=\"M1 23.8922L15.5263 2.40531C15.8938 1.8649 16.4774 1.8649 16.8233 2.40531L24 13.0839H20.8872C20.2603 13.1055 19.4605 13.473 19.093 13.9918L12.6729 23.8922H1Z\" fill=\"currentColor\"\/><\/svg>",
+    "Version": 4.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/armis",
+    "MarketingDisplayName": "Armis"
+}

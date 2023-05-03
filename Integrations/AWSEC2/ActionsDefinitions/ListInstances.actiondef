@@ -1,0 +1,56 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Describes the specified instances or all instances.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSEC2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "{\"EC2_Instances\": [{\"AmiLaunchIndex\": 0, \"ImageId\": \"ami-x\", \"InstanceId\": \"i-x\", \"InstanceType\": \"t2.micro\", \"KeyName\": \"CBdefense\", \"LaunchTime\": \"2021-02-17 14:22:59+00:00\", \"Monitoring\": {\"State\": \"disabled\"}, \"Placement\": {\"AvailabilityZone\": \"us-east-1d\", \"GroupName\": \"\", \"Tenancy\": \"default\"}, \"PrivateDnsName\": \"ip-x-x-x-x.ec2.internal\", \"PrivateIpAddress\": \"x.x.x.x\", \"ProductCodes\": [], \"PublicDnsName\": \"\", \"State\": {\"Code\": 1, \"Name\": \"stopped\"}, \"StateTransitionReason\": \"User initiated (2021-02-17 14:57:06 GMT)\", \"SubnetId\": \"subnet-x\", \"VpcId\": \"vpc-x\", \"Architecture\": \"x86_64\", \"BlockDeviceMappings\": [{\"DeviceName\": \"/x/x\", \"Ebs\": {\"AttachTime\": \"2020-05-18 13:05:25+00:00\", \"DeleteOnTermination\": true, \"Status\": \"attached\", \"VolumeId\": \"vol-x\"}}], \"ClientToken\": \"\", \"EbsOptimized\": false, \"EnaSupport\": true, \"Hypervisor\": \"xen\", \"NetworkInterfaces\": [{\"Attachment\": {\"AttachTime\": \"2020-05-18 13:05:24+00:00\", \"AttachmentId\": \"eni-attach-x\", \"DeleteOnTermination\": true, \"DeviceIndex\": 0, \"Status\": \"attached\"}, \"Description\": \"\", \"Groups\": [{\"GroupName\": \"EC2-demo-instance\", \"GroupId\": \"sg-x\"}], \"Ipv6Addresses\": [], \"MacAddress\": \"x:x:x:x:x:x\", \"NetworkInterfaceId\": \"eni-x\", \"OwnerId\": \"x\", \"PrivateDnsName\": \"ip-x-x-x-x.ec2.internal\", \"PrivateIpAddress\": \"x.x.x.x\", \"PrivateIpAddresses\": [{\"Primary\": true, \"PrivateDnsName\": \"ip-x-x-x-x.ec2.internal\", \"PrivateIpAddress\": \"x.x.x.x\"}], \"SourceDestCheck\": true, \"Status\": \"in-use\", \"SubnetId\": \"subnet-x\", \"VpcId\": \"vpc-x\", \"InterfaceType\": \"interface\"}], \"RootDeviceName\": \"/x/x\", \"RootDeviceType\": \"ebs\", \"SecurityGroups\": [{\"GroupName\": \"EC2-demo-instance\", \"GroupId\": \"sg-x\"}], \"SourceDestCheck\": true, \"StateReason\": {\"Code\": \"Client.UserInitiatedShutdown\", \"Message\": \"Client.UserInitiatedShutdown: User initiated shutdown\"}, \"Tags\": [{\"Key\": \"Name\", \"Value\": \"CB-defense-agent\"}, {\"Key\": \"Owner\", \"Value\": \"x;x\"}], \"VirtualizationType\": \"hvm\", \"CpuOptions\": {\"CoreCount\": 1, \"ThreadsPerCore\": 1}, \"CapacityReservationSpecification\": {\"CapacityReservationPreference\": \"open\"}, \"HibernationOptions\": {\"Configured\": false}, \"MetadataOptions\": {\"State\": \"applied\", \"HttpTokens\": \"optional\", \"HttpPutResponseHopLimit\": 1, \"HttpEndpoint\": \"enabled\"}}]}",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Instances",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "One or more instance IDs. specify instance IDs, the output includes information for only the specified instances. Please note that the parameter ‘Instance IDs’ cannot be used with the parameter ‘Max Results’. ‘Instance IDs’ has priority over the ‘Max Result’ parameter.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Instance IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The key/value combination of a tag assigned to the resource. For example, to find all resources that have a tag with the key Owner and the value TeamA , specify Owner:TeamA. Comma separated tag filters. E.g. Name:Name1,Owner:TeamA. Returned instances will be fit to all filters.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Tag Filters",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many instances to return. Default is 50. Maximum is 1000. Please note that the parameter ‘Instance IDs’ cannot be used with the parameter ‘Max Results’. ‘Instance IDs’ has priority over the ‘Max Result’ parameter.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Results",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

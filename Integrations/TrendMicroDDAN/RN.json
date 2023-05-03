@@ -1,0 +1,26 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Trend Micro DDAN.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "TrendMicroDDAN",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1671621658,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13240"
+    },
+    {
+        "ChangeDescription": "Submit File, Submit File URL - Added ability to fetch suspicious objects.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "TrendMicroDDAN",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1673428608,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13582"
+    }
+]

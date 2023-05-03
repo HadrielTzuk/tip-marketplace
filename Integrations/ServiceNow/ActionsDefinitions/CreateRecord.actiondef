@@ -1,0 +1,49 @@
+{
+    "CreationTimeUnixTimeInMs": 1535985977484,
+    "Creator": "Admin",
+    "Description": "Create new records in different tables of Service Now.",
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535985977484,
+    "Name": "Create Record",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"sys_tags\": \"\", \"user_input\": \"\", \"calendar_stc\": \"\", \"subcategory\": \"\", \"watch_list\": \"\", \"follow_up\": \"\", \"made_sla\": \"true\", \"sys_created_by\": \"admin\", \"sla_due\": \"\", \"number\": \"INC0010021\", \"group_list\": \"\", \"reassignment_count\": \"0\", \"assigned_to\": \"\", \"sys_mod_count\": \"0\", \"notify\": \"1\", \"resolved_by\": \"\", \"upon_reject\": \"cancel\", \"additional_assignee_list\": \"\", \"category\": \"inquiry\", \"closed_at\": \"\", \"parent_incident\": \"\", \"cmdb_ci\": \"\", \"contact_type\": \"\", \"impact\": \"3\", \"rfc\": \"\", \"expected_start\": \"\", \"knowledge\": \"false\", \"sys_updated_by\": \"admin\", \"caused_by\": \"\", \"comments\": \"\", \"closed_by\": \"\", \"priority\": \"5\", \"state\": \"1\", \"sys_id\": \"19fcb4672fb11010f170c886f699b612\", \"opened_at\": \"2020-07-10 08:24:34\", \"child_incidents\": \"0\", \"work_notes\": \"\", \"delivery_task\": \"\", \"short_description\": \"\", \"comments_and_work_notes\": \"\", \"time_worked\": \"\", \"upon_approval\": \"proceed\", \"company\": \"\", \"business_stc\": \"\", \"correlation_display\": \"\", \"sys_class_name\": \"incident\", \"delivery_plan\": \"\", \"escalation\": \"0\", \"description\": \"\", \"parent\": \"\", \"close_notes\": \"\", \"business_duration\": \"\", \"problem_id\": \"\", \"sys_updated_on\": \"2020-07-10 08:24:34\", \"approval_history\": \"\", \"approval_set\": \"\", \"business_service\": \"\", \"reopened_by\": \"\", \"calendar_duration\": \"\", \"caller_id\": \"\", \"active\": \"true\", \"approval\": \"not requested\", \"service_offering\": \"\", \"sys_domain_path\": \"/\", \"hold_reason\": \"\", \"activity_due\": \"\", \"severity\": \"3\", \"incident_state\": \"1\", \"resolved_at\": \"\", \"location\": \"\", \"due_date\": \"\", \"work_start\": \"\", \"work_end\": \"\", \"work_notes_list\": \"\", \"sys_created_on\": \"2020-07-10 08:24:34\", \"correlation_id\": \"\", \"contract\": \"\", \"reopened_time\": \"\", \"opened_by\": {\"link\": \"https://dev92294.service-now.com/api/now/v1/table/sys_user/6816f79cc0a8016401c5a33be04be441\", \"value\": \"6816f79cc0a8016401c5a33be04be441\"}, \"close_code\": \"\", \"assignment_group\": \"\", \"sys_domain\": {\"link\": \"https://dev92294.service-now.com/api/now/v1/table/sys_user_group/global\", \"value\": \"global\"}, \"order\": \"\", \"urgency\": \"3\", \"reopen_count\": \"0\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535985977484,
+            "CustomActionId": 13,
+            "DefaultValue": null,
+            "Description": "Specify what table should be used to create a record.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535985977484,
+            "Name": "Table Name",
+            "Type": 0,
+            "Value": null,
+            "Values": []
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535985977484,
+            "CustomActionId": 13,
+            "DefaultValue": null,
+            "Description": "Specify JSON data that is needed to create a record.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535985977484,
+            "Name": "Object Json Data",
+            "Type": 0,
+            "Value": null,
+            "Values": []
+        }
+    ],
+    "Script": "# Imports\nfrom SiemplifyAction import SiemplifyAction\nfrom ServiceNowManager import ServiceNowManager\nimport json\n\nDEFAULT_TABLE = 'incident'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n\n    # Configuration.\n    conf = siemplify.get_configuration('ServiceNow')\n    username = conf['Username']\n    password = conf['Password']\n    api_root = conf['Api Root']\n    service_now_manager = ServiceNowManager(api_root, username, password, default_incident_table)\n\n    # Parameters\n    table_name = siemplify.parameters.get('Table Name') if siemplify.parameters.get(\n        'Table Name') else DEFAULT_TABLE\n    json_data = json.loads(siemplify.parameters.get('Object Json Data')) or {}\n\n    object_number = service_now_manager.create_object(json_data, table_name=table_name)\n\n    if object_number:\n        output_message = \"ServiceNow record - {0} was created in {1}.\".format(object_number, table_name)\n        result_value = object_number\n\n    else:\n        output_message = \"Failed to create ServiceNow record in {0}.\".format(table_name)\n        result_value = None\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "object_sys_id",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,37 @@
+{
+    "CreationTimeUnixTimeInMs": 1560351300805, 
+    "Creator": "Admin", 
+    "DefaultResultValue": "", 
+    "Description": "Get information about the firewall rules on a specific Endgame endpoint.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [{\"direction\": \"in\", \"machine_id\": \"870499c3-d6bf-8edd-972d-12345678\", \"description\": \"Inbound rule for Google Chrome to allow mDNS traffic.\", \"remote_addresses\": \"*\", \"protocol_number\": 17, \"enabled\": true, \"edge_traversal\": false, \"profiles\": [\"domain\", \"public\", \"private\"], \"interface_types\": \"All\", \"rule_name\": \"Google Chrome (mDNS-In)\", \"icmp_and_type_codes\": \"\", \"local_addresses\": \"*\", \"application_name\": \"C:\\\\Program Files (x86)\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\", \"collection_id\": \"0925eea5-c61f-464a-ba61-12345678\", \"remote_ports\": \"*\", \"action\": \"allow\", \"local_ports\": \"1234\"}], \"Entity\": \"PC-01\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Endgame", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1560351300805, 
+    "Name": "Firewall Survey (Windows only)", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1560351300835, 
+            "CustomActionId": -1, 
+            "DefaultValue": "50", 
+            "Description": "Specify how many items to return.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1560351300835, 
+            "Name": "Max Items to Return", 
+            "Type": 0, 
+            "Value": "50"
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "TimeoutSeconds": 600, 
+    "Version": 1.0,
+    "IsAsync": true
+}

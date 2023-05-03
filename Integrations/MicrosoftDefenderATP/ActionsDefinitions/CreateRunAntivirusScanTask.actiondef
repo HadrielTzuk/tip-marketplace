@@ -1,0 +1,51 @@
+{
+    "CreationTimeUnixTimeInMs": 1575015001, 
+    "Creator": "klim.lyapin@siemplify.co", 
+    "Description": "Create Run AV Scan Task", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"status\": \"Pending\", \"creation_date_time_utc\": \"2020-02-08T03:27:01.8730344Z\", \"cancellation_requestor\": null, \"cancellation_date_time_utc\": null, \"id\": \"00000000-0000-0000-0000-000000000000\", \"last_update_date_time_utc\": \"2020-02-08T03:27:01.8730344Z\", \"related_file_info\": null, \"cancellation_comment\": null, \"requestor\": \"00000000-0000-0000-0000-000000000000\", \"error_h_result\": 0, \"scope\": null, \"machine_id\": \"000000000000000000000000000000\", \"type\": \"RunAntiVirusScan\", \"requestor_comment\": \"test\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "MicrosoftDefenderATP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1575015001, 
+    "Name": "Create Run Antivirus Scan Task", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1578672183844, 
+            "CustomActionId": -1, 
+            "DefaultValue": "Full", 
+            "Description": "Antivirus Scan Type", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1578672183844, 
+            "Name": "Antivirus Scan Type", 
+            "OptionalValues": [
+                "Full", 
+                "Quick"
+            ], 
+            "Type": 15, 
+            "Value": "Full"
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1578672183844, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Comment why an antivirus scan needs to be executed on the machine", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1578672183844, 
+            "Name": "Comment", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

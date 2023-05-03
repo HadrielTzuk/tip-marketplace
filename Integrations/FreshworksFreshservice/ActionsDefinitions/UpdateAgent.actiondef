@@ -1,0 +1,166 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583,
+    "Creator": "admin",
+    "Description": "Update existing Freshservice Agent. Note that action is not working on Siemplify entities.",
+    "Id": -1,
+    "IntegrationIdentifier": "FreshworksFreshservice",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"agent\": {\"active\": true, \"address\": null, \"background_information\": null, \"can_see_all_tickets_from_associated_departments\": true, \"created_at\": \"2021-07-14T07:51:11Z\", \"custom_fields\": {\"aaaa\": \"aaaaa\"}, \"department_ids\": [12345, 12345], \"email\": \"aaaa.aaa@a.aaa\", \"external_id\": null, \"first_name\": \"aaaa\", \"has_logged_in\": false, \"id\": 12345, \"job_title\": \"DEVDEV\", \"language\": \"en\", \"last_active_at\": null, \"last_login_at\": null, \"last_name\": \"aaaaa\", \"location_id\": 12345, \"mobile_phone_number\": null, \"occasional\": true, \"reporting_manager_id\": null, \"role_ids\": [12345, 12345], \"roles\": [{\"role_id\": 123345, \"assignment_scope\": \"member_groups\", \"groups\": []}, {\"role_id\": 123435, \"assignment_scope\": \"entire_helpdesk\", \"groups\": []}], \"scopes\": {\"ticket\": null, \"problem\": null, \"change\": null, \"release\": null, \"asset\": null, \"solution\": null, \"contract\": null}, \"scoreboard_level_id\": 5, \"signature\": \"<p><br></p>\\n\", \"time_format\": \"12h\", \"time_zone\": \"Eastern Time (US & Canada)\", \"updated_at\": \"2021-07-14T14:12:54Z\", \"work_phone_number\": null, \"group_ids\": [12345, 12345], \"member_of\": [12345, 12345], \"observer_of\": []}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1530451212583,
+    "Name": "Update Agent",
+    "Parameters": [
+    {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify agent id to update.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Agent ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the email of the agent to update.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Email",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the first name of the agent to update.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "First Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the last name of the agent to update.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Last Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, agent will be updated as an occasional agent, otherwise it will be a full-time agent.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Is occasional",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, agent will be able to see all tickets from Associated departments.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Can See All Tickets From Associated Departments",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify department names associated with the agent. Parameter accepts multiple values as a comma separated string.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Departments",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify location name associated with the agent.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Location",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify group names agent should be a member of.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Group Memberships",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify roles to add to agent. Parameter accepts multiple values as a comma separated string. Example: {'role_id':170000XXXXX,'assignment_scope': 'entire_helpdesk'}",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Roles",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify agent job title.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Job Title",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a JSON object that contains custom fields to add to the agent. Action appends new custom fields to any existing for an agent. Example format: {\"key1\":\"value1\",\"key2\":\"value2\"}",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Custom Fields",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

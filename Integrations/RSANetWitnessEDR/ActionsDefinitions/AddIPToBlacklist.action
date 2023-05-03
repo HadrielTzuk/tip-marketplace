@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791, 
+    "Creator": "admin", 
+    "Description": "Add IP To Blacklist in RSA Netwitness EDR.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Ips\": [\"1.1.1.2\", \"1.1.1.1\"]}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "RSANetWitnessEDR", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1518545061791, 
+    "Name": "Add IP To Blacklist", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

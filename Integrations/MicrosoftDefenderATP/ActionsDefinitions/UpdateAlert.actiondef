@@ -1,0 +1,102 @@
+{
+    "CreationTimeUnixTimeInMs": 1575015001,
+    "Creator": "klim.lyapin@siemplify.co",
+    "Description": "Update Alerts",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"last_update_time\": \"2020-08-11T07:18:20.2166667Z\", \"last_event_time\": \"2020-08-10T16:40:00.6435038Z\", \"classification\": \"FalsePositive\", \"alert_processes\": null, \"investigation_state\": \"PendingApproval\", \"threat_family_name\": null, \"id\": \"da637326745323896920_864388402\", \"category\": \"SuspiciousActivity\", \"severity\": \"High\", \"title\": \"Love\", \"comments\": [], \"resolved_time\": null, \"status\": \"InProgress\", \"description\": \"Love\", \"alert_creation_time\": \"2020-08-10T16:42:12.2490966Z\", \"alert_domains\": null, \"alert_ips\": null, \"detection_source\": \"CustomerTI\", \"determination\": \"UnwantedSoftware\", \"alert_files\": [], \"incident_id\": 78, \"investigation_id\": 42, \"first_event_time\": \"2020-08-10T16:40:00.6435038Z\", \"assigned_to\": \"Automation\", \"alert_user\": null, \"machine_id\": \"32ad71569ed6b78fc46af06aff3a48533f00c21c\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "MicrosoftDefenderATP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1575015001,
+    "Name": "Update Alert",
+    "Parameters": [
+        {
+            "CustomActionId": -1,
+            "IsMandatory": true,
+            "DefaultValue": "",
+            "Description": "Microsoft Defender ATP Alert ID to update.",
+            "Name": "Alert ID",
+            "Value": null,
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "New",
+            "Description": "Status of the alert",
+            "Name": "Status",
+            "Value": "New",
+            "Type": 15,
+            "OptionalValues": [
+                "New",
+                "InProgress",
+                "Resolved"
+            ],
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "",
+            "Description": "User who is assigned to this alert",
+            "Name": "Assigned To",
+            "Value": null,
+            "Type": 0,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "Unknown",
+            "Description": "Classification to update alert with",
+            "Name": "Classification",
+            "Value": "Unknown",
+            "Type": 15,
+            "OptionalValues": [
+                "Unknown",
+                "FalsePositive",
+                "TruePositive"
+            ],
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        },
+        {
+            "CustomActionId": -1,
+            "IsMandatory": false,
+            "DefaultValue": "NotAvailable",
+            "Description": "Determination to update alert with",
+            "Name": "Determination",
+            "Value": "NotAvailable",
+            "Type": 15,
+            "OptionalValues": [
+                "NotAvailable",
+                "Apt",
+                "Malware",
+                "SecurityPersonnel",
+                "SecurityTesting",
+                "UnwantedSoftware",
+                "Other"
+            ],
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1578672183844,
+            "ModificationTimeUnixTimeInMs": 1578672183844
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,42 @@
+{
+    "CreationTimeUnixTimeInMs": 1548084372370, 
+    "Creator": "System", 
+    "Description": "Get the groups that the user is a member of", 
+    "DynamicScriptResultNamesJson": "[\"ResultJson\"]", 
+    "Id": -1, 
+    "IntegrationIdentifier": "Okta", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1548084372375, 
+    "Name": "List User Groups", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1548084372383, 
+            "CustomActionId": 706, 
+            "DefaultValue": "", 
+            "Description": "Ids or logins of users in Okta", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084372383, 
+            "Name": "User IDs Or Logins", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1548084372383, 
+            "CustomActionId": 706, 
+            "DefaultValue": "false", 
+            "Description": "Whether to run on entities as well as the input", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1548084372383, 
+            "Name": "Also Run On Scope", 
+            "Type": 1, 
+            "Value": "false"
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyDataModel import EntityTypes\nfrom SiemplifyUtils import construct_csv, dict_to_flat\nfrom OktaManager import OktaManager\nimport json\n\nPROVIDER = \"Okta\"\nACTION_NAME = \"Okta - ListUserGroups\"\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(PROVIDER)\n    user_ids = siemplify.parameters.get('User IDs', \"\")\n    is_scope = siemplify.parameters.get('Also Run On Scope', \"false\").lower() == \"true\"\n    ids = []\n    res = {}\n    ret = {}\n    output_message = \"\"\n    okta = OktaManager(api_root=conf['Api Root'], api_token=conf['Api Token'],\n                       verify_ssl=conf['Verify SSL'].lower() == 'true')\n    if user_ids:\n        for _id in user_ids.split(','):\n            _id = _id.strip()\n            ids.append(_id)\n    message = \"\"\n    if ids:\n        for _id in ids:\n            try:\n                res = okta.list_user_groups(_id)\n                if res:\n                    groups = []\n                    ret[_id] = []\n                    for group in res:\n                        groups.append(group['profile']['name'])\n                        ret[_id].append(group)\n                    message += \"The user with id {0} belongs to {1} groups: {2}\\n\\n\".format(_id, len(groups), ', '.join(groups))\n                else:\n                    message += \"The user with id {0} doesn't belong to any group\\n\\n\"\n                    continue\n            except Exception as err:\n                siemplify.LOGGER.exception(err)\n                siemplify.LOGGER.error(_id + \": \" + err.message)\n                pass\n    if is_scope:\n        entitiesWithGroup = []\n        entityGroups = {}\n        for entity in siemplify.target_entities:\n            if entity.entity_type == EntityTypes.USER or entity.entity_type == EntityTypes.HOSTNAME:\n                try:\n                    res = okta.list_user_groups(entity.identifier)\n                    if res:\n                        entitiesWithGroup.append(entity)\n                        groups = []\n                        entityGroups[entity.identifier] = {}\n                        ret[entity.identifier] = []\n                        for group in res:\n                            groups.append(group['profile']['name'])\n                            entityGroups[entity.identifier][group['profile']['name']] = group\n                            ret[entity.identifier].append(group)\n                        message += \"The user \\\"{0}\\\" belongs to {1} groups: {2}\\n\\n\".format(entity.identifier, len(groups), ', '.join(groups))\n                    else:\n                        message += \"The user \\\"{0}\\\" doen't belong to any group.\\n\\n\".format(entity.identifier)\n                        continue\n                except Exception as err:\n                    siemplify.LOGGER.exception(err)\n                    siemplify.LOGGER.error(entity.identifier + \": \" + err.message)\n                    pass\n            else:\n                continue\n        #ret = entityGroups\n    if ret:\n        flag = False\n        output_message = message\n        for user, groups in ret.items():\n            rows = []\n            if groups:\n                for group in groups:\n                    if group:\n                        flat_group = dict_to_flat(group)\n                        rows.append(flat_group)\n            if rows:\n                flag = True\n                csv_output = construct_csv(rows)\n                siemplify.result.add_data_table(\"Okta - User \\\"{}\\\" Groups\".format(user), csv_output)\n        if not flag:\n            output_message = \"No groups were found. {}\".format(message)\n    else:\n        output_message = \"No groups were found. {}\".format(message)\n    siemplify.end(output_message, json.dumps(ret))\n\nif __name__ == '__main__':\n    main()", 
+    "ScriptResultName": "ScriptResult", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"USERUNIQNAME\"]}", 
+    "Version": 8.0
+}

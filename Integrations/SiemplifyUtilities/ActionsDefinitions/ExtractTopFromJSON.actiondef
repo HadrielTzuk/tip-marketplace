@@ -1,0 +1,83 @@
+{
+    "CreationTimeUnixTimeInMs": 1545645208893,
+    "Creator": "Admin",
+    "Description": "The action gets Json as input, sort it by a specific key and return the TOP x of the relevant branches",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"HOST\": {\"DETECTION\": {\"QID\": \"82003\", \"SEVERITY\": \"1\", \"RESULTS\": \"Timestamp of host (network byte ordering): 03:40:14 GMT\"}, \"IP\": \"1.1.1.1\", \"LAST_SCAN_DATETIME\": \"2018-08-13T10:24:35Z\", \"OS\": \"Windows 10\"}, \"DATETIME\": \"2018-08-29T14:01:12Z\"}, {\"HOST\": {\"DETECTION\": {\"PORT\": \"443\", \"QID\": \"11827\", \"PROTOCOL\": \"tcp\", \"RESULTS\": \"X-Frame-Options or Content-Security-Policy: frame-ancestors HTTP Headers missing on port 443.\", \"SEVERITY\": \"2\"}, \"IP\": \"1.1.1.1\", \"LAST_SCAN_DATETIME\": \"2018-08-13T08:31:58Z\", \"OS\": \"Linux 3.13\"}, \"DATETIME\": \"2018-08-29T14:01:12Z\"}, {\"HOST\": {\"DETECTION\": {\"PORT\": \"53\", \"QID\": \"15033\", \"PROTOCOL\": \"udp\", \"RESULTS\": \"--- IPv4 --- \", \"SEVERITY\": \"4\"}, \"IP\": \"1.1.1.1\", \"LAST_SCAN_DATETIME\": \"2018-08-13T08:31:58Z\", \"OS\": \"Linux 3.13\"}, \"DATETIME\": \"2018-08-29T14:01:12Z\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SiemplifyUtilities",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1545645208901,
+    "Name": "Extract Top From JSON",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1545645208915,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "JSON data to process.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1545645208915,
+            "Name": "JSON Data",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1545645208918,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Nested key separated by dots. Use * as a wildcard. Example: Host.*.wassap_list.Severity",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1545645208918,
+            "Name": "Key To Sort By",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1545645208918,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The type of the field to sort by. Valid values: int (numeric field), string (a text field) or date",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1545645208918,
+            "Name": "Field Type",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1545645208919,
+            "CustomActionId": -1,
+            "DefaultValue": "true",
+            "Description": "Sort results by DESC or ASC (Z -> A).",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1545645208919,
+            "Name": "Reverse (DESC -> ASC)",
+            "Type": 1,
+            "Value": "true"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1545645208919,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Retrieve number of rows from JSON to process.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1545645208919,
+            "Name": "Top Rows",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SiemplifyUtilitiesManager import SiemplifyUtilitiesManager\nimport json\n\nACTION_NAME = 'SiemplifyUtilities_Extract Top From JSON'\nWILD_CARD_SIGN = '*'\nJSON_HEADER_PATTERN = 'Branch No.{0}'  # Brunch Number.\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n\n    # Parameters.\n    json_data = json.loads(siemplify.parameters.get(\"JSON Data\", {}))\n    nested_key = siemplify.parameters.get(\"Key To Sort By\", \"\").split('.')\n    field_type = siemplify.parameters.get(\"Field Type\", \"number\")\n    reverse = siemplify.parameters.get(\"Reverse\", \"false\").lower() == 'true'\n    top_rows = int(siemplify.parameters.get('Top Rows', 3))\n\n    branches = SiemplifyUtilitiesManager.fetch_branches_from_dict(json_data, nested_key, WILD_CARD_SIGN)\n    sorted_branches = SiemplifyUtilitiesManager.sort_list_of_dicts_by_nested_key(branches, nested_key, field_type,\n                                                                                 reverse=reverse,\n                                                                                 wild_card_value=WILD_CARD_SIGN)\n\n    top_sorted_branches = sorted_branches[:top_rows]\n\n    for index, branch in enumerate(top_sorted_branches):\n        siemplify.result.add_json(JSON_HEADER_PATTERN.format(index+1), json.dumps(branch))\n\n    if sorted_branches:\n        output_message = 'Top {0} branches presented.'.format(len(top_sorted_branches))\n    else:\n        output_message = 'No branches were found.'\n\n    siemplify.end(output_message, json.dumps(top_sorted_branches))\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "result",
+    "Version": 5.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

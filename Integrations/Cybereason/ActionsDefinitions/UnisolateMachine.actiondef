@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1524559211168, 
+    "Creator": "admin", 
+    "Description": "Unisolate a machine in Cybereason. Supported entities: Hostname.",
+    "Id": -1, 
+    "IntegrationIdentifier": "Cybereason", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1524559211168, 
+    "Name": "Unisolate Machine", 
+    "Parameters": [], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Version": 1.0,
+    "IsAsync": true
+}

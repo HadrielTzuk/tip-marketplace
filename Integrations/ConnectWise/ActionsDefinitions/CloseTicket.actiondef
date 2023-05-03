@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1515425445217,
+    "Creator": "admin",
+    "Description": "Close ConnectWise ticket",
+    "Id": -1,
+    "IntegrationIdentifier": "ConnectWise",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515425445217,
+    "Name": "Close Ticket",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516116315526,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "ConnectWise ticket id. e.g. 608718",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516116315526,
+            "Name": "Ticket Id",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516116315526,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "If the specific system use a custom closed status (e.g. Completed)",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516116315526,
+            "Name": "Custom Close Status",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "Script": "from SiemplifyDataModel import EntityTypes\r\n# Imports\r\nfrom SiemplifyAction import SiemplifyAction\r\nfrom ConnectWiseManager import ConnectWiseManager\r\n\r\n\r\ndef main():\r\n\r\n    # Variables Definitions.\r\n    output_message = ''\r\n    result_value = False\r\n\r\n    siemplify = SiemplifyAction()\r\n    # Configuration.\r\n    configuration_settings = siemplify.get_configuration('ConnectWise')\r\n    company_url = configuration_settings['Api Root']\r\n    company_name = configuration_settings['Company Name']\r\n    public_key = configuration_settings['Public Key']\r\n    private_key = configuration_settings['Private Key']\r\n    connectwise_manager = ConnectWiseManager(company_url, company_name, public_key, private_key)\r\n\r\n    # Parameters.\r\n    ticket_id = siemplify.parameters['Ticket Id']\r\n    # Change the ticket status.\r\n    if siemplify.parameters.get('Custom Close Status'):\r\n        custom_close_status = siemplify.parameters['Custom Close Status']\r\n        ticket_id_result = connectwise_manager.close_ticket(ticket_id, custom_close_status)  # The result will be a ticket id.\r\n    else:\r\n        # Execute Close Ticket.\r\n        ticket_id_result = connectwise_manager.close_ticket(ticket_id)  # The result will be a ticket id.\r\n\r\n    if ticket_id_result:\r\n        output_message = \"Ticket with id {0} was closed.\".format(ticket_id_result)\r\n    else:\r\n        output_message = 'There was a problem closing ticket with id: {0}.'.format(ticket_id)\r\n\r\n\r\n    siemplify.end(output_message, ticket_id_result)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n",
+    "ScriptResultName": "ticket_id",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

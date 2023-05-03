@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1530796772163, 
+    "Creator": "admin", 
+    "Description": "Get samples for hash (MD5 and SHA256)", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SymantecContentAnalysis", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530796772163, 
+    "Name": "Get Hash Report", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecContentAnalysisManager import SymantecContentAnalysisManager\nfrom SiemplifyDataModel import EntityTypes\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\n\nINTEGRATION_PROVIDER = 'SymantecContentAnalysis'\nACTION_NAME = 'SymantecContentAnalysis_Get Hash Report'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(INTEGRATION_PROVIDER)\n\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    symantec_manager = SymantecContentAnalysisManager(conf.get('API Root'), conf.get('API Key'), verify_ssl)\n\n    # Variables\n    success_entities = []\n    errors = []\n    result_value = False\n\n    target_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.FILEHASH]\n\n    for entity in target_entities:\n        try:\n            report = symantec_manager.get_file_samples(entity.identifier)\n\n            if report:\n                result_value = True\n                success_entities.append(entity)\n                report_flat = dict_to_flat(report)\n                report_csv = flat_dict_to_csv(report_flat)\n                siemplify.result.add_entity_table(entity.identifier, report_csv)\n                # Enrich entity.\n                entity.additional_properties.update(report_flat)\n\n        except Exception as err:\n            error_message = 'Error fetching report for \"{0}\", ERROR: {1}'.format(entity.identifier, unicode(err))\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    if result_value:\n        output_message = '{0} were enriched.'.format([entity.identifier for entity in success_entities])\n    else:\n        output_message = 'No target entities were enriched.'\n\n    if errors:\n        output_message = \"{0} \\n Errors: \\n \\n  {1}\".format(output_message, ' \\n '.join(errors))\n\n    siemplify.update_entities(success_entities)\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 1.0
+}

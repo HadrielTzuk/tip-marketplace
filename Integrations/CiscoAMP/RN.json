@@ -1,0 +1,119 @@
+[
+    {
+        "ChangeDescription": "Added an action for isolating machines.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Isolate Machine",
+        "ItemType": "Action",
+        "New": true,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1313"
+    },
+    {
+        "ChangeDescription": "Added  an action for unisolating machines.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Unisolate Machine",
+        "ItemType": "Action",
+        "New": true,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1873"
+    },
+    {
+        "ChangeDescription": "Fixed a bug that caused the action to always output a success message, even if it didn't find any information.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Get Computers By Network Activity (Ip)",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2915"
+    },
+    {
+        "ChangeDescription": "Updated the JSON results example to match the actual JSON that the action is returning.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Get Computer Info",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1591500723,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2823"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "CiscoAMP",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": " Added new connector \"Security Events Connector\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "CiscoAMPSecurityEventsConnector",
+        "ItemType": "Connector",
+        "New": true,
+        "PublishTime": 1625639577,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8970"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "CiscoAMP",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    },
+    {
+        "ChangeDescription": "Get Computers - Added support for unicode.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "Get Computer Info",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1644399582,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11056"
+    },
+    {
+        "ChangeDescription": "Security Events Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 12.0,
+        "ItemName": "CiscoAMPSecurityEventsConnector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1657087429,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11913"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 13.0,
+        "ItemName": "CiscoAMP",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

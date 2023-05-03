@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1510667967184, 
+    "Creator": "Admin", 
+    "Description": "Retrieve Virus Engine agent version information from the endpoints in McAfee ePO. Supported entities: Hostname, IP.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"172.xx.202.xxx\", \"EntityResult\": {\"Virus_Engine_Agent_version\": \"test\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1, 
+    "IntegrationIdentifier": "McAfeeEPO", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1510667967184, 
+    "Name": "Get Virus Engine Agent Version", 
+    "Parameters": [], 
+    "ScriptResultName": "Virus Engine Agent Version", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 2.0
+}

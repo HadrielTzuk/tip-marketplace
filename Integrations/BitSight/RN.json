@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - BitSight.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "BitSight",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1667378095,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13036"
+    },
+    {
+        "ChangeDescription": "BitSight - Alerts Connector - Switched \"Max Hours Backwards\" to \"Max Days Backwards\".",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "BitSight - Alerts Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1668597293,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13040"
+    },
+    {
+        "ChangeDescription": "BitSight - Alerts Connector - Added OOTB mapping.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "BitSight - Alerts Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1668597293,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13040"
+    }
+]

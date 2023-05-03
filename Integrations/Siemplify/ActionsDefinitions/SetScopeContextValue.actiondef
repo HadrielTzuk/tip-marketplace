@@ -1,0 +1,48 @@
+{
+    "Creator": "admin",
+    "Description": "Action sets a value for a key specified that is stored in the Siemplify database. Available scopes to get context values for: Alert, Case, Global. Action is not working on Siemplify entities. Note: Key Name parameter is case insensitive.",
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "Name": "Set Scope Context Value",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1517322102448,
+            "CustomActionId": -1,
+            "DefaultValue": "Not specified",
+            "Description": "Specify the Siemplify context scope to return context keys for.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1517322102448,
+            "Name": "Context Scope",
+            "OptionalValues": [
+                "Not specified",
+                "Alert",
+                "Case",
+                "Global"
+            ],
+            "Type": 15,
+            "Value": "Not specified"
+        },
+        {
+            "DefaultValue": "",
+            "Description": "Specify the key name to set context value for.",
+            "IsMandatory": true,
+            "Name": "Key Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "DefaultValue": "",
+            "Description": "Specify the value to store under the specified key.",
+            "IsMandatory": true,
+            "Name": "Key Value",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

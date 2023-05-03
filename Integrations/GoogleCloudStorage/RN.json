@@ -1,0 +1,62 @@
+[
+    {
+        "ChangeDescription": "NEW! Google Cloud Storage integration.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "GoogleCloudStorage",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1611055296,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4476"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "GoogleCloudStorage",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "GoogleCloudStorage",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "Improved integration configuration according to the best practices.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "GoogleCloudStorage",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1678320000,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "265188814"
+    },
+    {
+        "ChangeDescription": "Google Cloud Storage - Integration update",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "GoogleCloudStorage",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1679443200,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "274736966"
+    }
+]

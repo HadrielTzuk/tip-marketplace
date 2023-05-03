@@ -1,0 +1,75 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381792970, 
+    "Creator": "Admin", 
+    "Description": "Lookup similar alerts in Google Chronicle. Supported Chronicle alert types: RULE, EXTERNAL, IOC. Note: this action can only work with alerts that come from the \"Chronicle Alerts Connector\". Note: action can only fetch 10000 alerts. Make sure to narrow down the timeframe for better results.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"count\":4,\"distinct\":[{\"first_seen\":\"2021-12-01T20:47:02Z\",\"last_seen\":\"2021-12-02T00:47:02Z\",\"product_name\":\"Office 365\",\"used_ioc_asset\":\"10.169.xxx.xxx\",\"name\":\"Threat Model Positive Score:74\",\"hostnames\":\"host-name\",\"urls\":\"www.test.com\",\"ips\":\"10.169.xxx.xxx\",\"subjects\":\"Invoice for Goods\",\"users\":\"test-user1, test-user2\",\"email_addresses\":\"stanlee4@acme.com, tony@starkindustries.com\",\"hashes\":\"xxxxxxxxxxxxxxxx\",\"processes\":\"pr1, pr2\",\"rule_urls\":[\"www.rule-url.com\"]},{\"first_seen\":\"2021-12-01T20:47:02Z\",\"last_seen\":\"2021-12-02T00:47:02Z\",\"product_name\":\"Office 365\",\"used_ioc_asset\":\"stanlee4@acme.com\",\"name\":\"Threat Model Positive Score:74\",\"hostnames\":\"host-name\",\"urls\":\"www.test.com\",\"ips\":\"10.169.xxx.xxx\",\"subjects\":\"Invoice for Goods\",\"users\":\"test-user1, test-user2\",\"email_addresses\":\"stanlee4@acme.com, tony@starkindustries.com\",\"hashes\":\"xxxxxxxxxxxxxxxx\",\"processes\":\"pr1, pr2\",\"rule_urls\":[\"www.rule-url.com\"]}],\"processed_alerts\":210,\"run_time\":0.640103,\"external_url\":\"www.external-url.com\"}",
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "GoogleChronicle", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1535381792970, 
+    "Name": "Lookup Similar Alerts",
+    "Parameters": [
+        {
+            "Name": "Time Frame",
+            "Type": 15,
+            "DefaultValue": "Last Hour",
+            "Value": "Last Hour",
+            "IsMandatory": false,
+            "Description": "Specify a time frame for the results. If \"Alert Time Till Now\" is selected, action will use start time of the alert as start time for the search and end time will be current time. If \"30 Minutes Around Alert Time\" is selected, action will search the alerts 30 minutes before the alert happened till the 30 minutes after the alert has happened.  Same idea applies to \"1 Hour Around Alert Time\" and \"5 Minutes Around Alert Time\".",
+            "OptionalValues": [
+                "Last Hour",
+                "Last 6 Hours",
+                "Last 24 Hours",
+                "Last Week",
+                "Last Month",
+                "Alert Time Till Now",
+                "5 Minutes Around Alert Time",
+                "30 Minutes Around Alert Time",
+                "1 Hour Around Alert Time"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of IOCs or assets that you want to find in the alerts. Note: action will perform a different search for each item provided.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "IOCs / Assets",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "Name": "Similarity By",
+            "Type": 15,
+            "DefaultValue": "Alert Name and Product",
+            "Value": "Alert Name and Product",
+            "IsMandatory": false,
+            "Description": "Specify what attributes need to be used, when the action is to search for similar alerts. If \"Alert Name and Alert Type\" is selected, action will try to find all of the alerts that have the same alert name and IOCs/Assets for the underlying alert type. If \"Product\" is selected, then action will try to find all of the alerts that originate from the same product and have the same IOCs/Assets, action will search among both \"EXTERNAL\" and \"Rule\" alerts. If \"Only IOCs/Assets\" is enabled, action will match the similarity only based upon the items provided in the parameter \"IOCs/Assets\", action will search among both \"EXTERNAL\" and \"Rule\" alerts.",
+            "OptionalValues": [
+                "Alert Name, Alert Type and Product",
+                "Alert Name and Alert Type",
+                "Product",
+                "Only IOCs/Assets"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+    }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

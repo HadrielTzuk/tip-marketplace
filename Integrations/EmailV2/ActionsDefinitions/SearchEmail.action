@@ -1,0 +1,99 @@
+{
+    "CreationTimeUnixTimeInMs": 1518362436003,
+    "Creator": "admin",
+    "Description": "Search email messages. Requires: IMAP configuration",
+    "Id": -1,
+    "IntegrationIdentifier": "EmailV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518362436003,
+    "Name": "Search Email",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "Inbox",
+            "Description": "Mailbox folder to search email in. Parameter should also accept comma separated list of folders to check the user response in multiple folders.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Folder Name",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition, specify what subject to search for emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Subject Filter",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition, specify who should be the sender of needed emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Sender Filter",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Filter condition, specify who should be the recipient of needed emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Recipient Filter",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "60",
+            "Description": "Filter condition, specify in what time frame in minutes should search look for emails",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Time frame (minutes)",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "Filter condition, specify if search should look only for unread emails",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1518362705080,
+            "Name": "Only Unread",
+            "Type": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "CustomActionId": -1,
+            "DefaultValue": "100",
+            "Description": "Return max X emails as an action result.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1518362561007,
+            "Name": "Max Emails To Return",
+            "Type": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"emails\":[{\"name\": \"aaa@aaa.com_1574937477000\", \"message_id\": \"<CAHNaB8eum4Tc=fj4U-n42zJNf6hgN6jop+KqG+WC3eGret_ZmA@mail.gmail.com>\", \"email_uid\": 14, \"subject\": \"Test 35\", \"StartTime\": 1574937477000, \"EndTime\": 1574937477000, \"Environment\": \"Undefined\", \"body\": \"Test with attachment\", \"html_body\": \"<div>Test with attachment</div>\", \"text_body\": \"Test with attachment\", \"device_product\": \"Mail\", \"vendor\": \"Mail\", \"event_type\": \"Mailbox Alert\", \"from\": \"uuu@uuu.com\", \"to\": \"hhh@hhh.com\", \"managerReceiptTime\": 1574937477000, \"original_message\": \"\", \"reply_to\": \"\", \"answer\": \"\", \"url_1\": \"https://siemplify.co\", \"url_2\": \"github.com\", \"file_1_name\": \"Test email as MSG.zip\", \"file_1_md5\": \"fc0118857de51b68c6c38c71566d9a5c\", \"file_2_name\": \"small_jpg.jpg\", \"file_2_md5\": \"2c39ce6536da5891e3766005438d3b47\", \"extra_data_field\": \"ttt\"}, {\"name\": \"aaa@aaa.com_1574937477000\", \"message_id\": \"<CAHNaB8eum4Tc=fj4U-n42zJNf6hgN6jop+KqG+WC3eGret_ZmA@mail.gmail.com>\", \"email_uid\": 14, \"subject\": \"Test 35\", \"StartTime\": 1574937477000, \"EndTime\": 1574937477000, \"Environment\": \"Undefined\", \"body\": \"Test with attachment\", \"html_body\": \"<div>Test with attachment</div>\", \"text_body\": \"Test with attachment\", \"device_product\": \"Mail\", \"vendor\": \"Mail\", \"event_type\": \"Mailbox Alert\", \"from\": \"uuu@uuu.com\", \"to\": \"hhh@hhh.com\", \"managerReceiptTime\": 1574937477000, \"original_message\": \"\", \"reply_to\": \"\", \"answer\": \"\", \"url_1\": \"https://siemplify.co\", \"url_2\": \"github.com\", \"file_1_name\": \"Test email as MSG.zip\", \"file_1_md5\": \"fc0118857de51b68c6c38c71566d9a5c\", \"file_2_name\": \"small_jpg.jpg\", \"file_2_md5\": \"2c39ce6536da5891e3766005438d3b47\", \"extra_data_field\": \"ttt\"}]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

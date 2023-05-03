@@ -1,0 +1,140 @@
+[
+    {
+        "ChangeDescription": "Updated dependencies to prevent connection errors on Linux machines.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "SCCM",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1985"
+    },
+    {
+        "ChangeDescription": "Migrated integration to Python3.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "SCCM",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4391"
+    },
+    {
+        "ChangeDescription": "Ping action refactored.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Ping",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4185"
+    },
+    {
+        "ChangeDescription": "Get Computer Properties action refactored.",
+        "Deprecated": true,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Get Computer Properties",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4186"
+    },
+    {
+        "ChangeDescription": "Get Login History action refactored. Action input parameter is added to limit how many records to return. Query to use in action is changed.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Get Login History",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "TIPG-4187"
+    },
+    {
+        "ChangeDescription": "New Enrich Entities action added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Enrich Entities",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4191"
+    },
+    {
+        "ChangeDescription": "New Run WQL Query action added.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Run WQL Query",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1599461255,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4193"
+    },
+    {
+        "ChangeDescription": "Updated username search logic.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "Enrich Entities",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1603184264,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4743"
+    },
+    {
+        "ChangeDescription": "Fixed user login count display in action result.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "Get Login History",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1603184264,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4744"
+    },
+    {
+        "ChangeDescription": "Updated username search logic.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "Get Login History",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1603184264,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5022"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "SCCM",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Security enhancements throughout the integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 12.0,
+        "ItemName": "SCCM",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1636521986,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9841"
+    }
+]

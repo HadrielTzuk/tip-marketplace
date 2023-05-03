@@ -1,0 +1,80 @@
+{
+    "CreationTimeUnixTimeInMs": 1535381792970,
+    "Creator": "Admin",
+    "Description": "List quarantined emails.",
+    "Id": -1,
+    "IntegrationIdentifier": "FireEyeEX",
+    "IsCustom": false,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"from\": \"test.user1@fex2-lab.local\", \"completed_at\": \"2020-06-03T15:39:15\", \"quarantine_path\": \"/data/email-analysis/quarantine2/2020-06-03/15/49cY3l0dK9zxNgJ\", \"queue_id\": \"49cY3l0dK9zxNgJ\", \"email_uuid\": \"5f89bf79-32c7-4c61-86ac-f825dd4c6f4a\", \"message_id\": \"274ebe82-8576-1ac8-491c-de03e080be89@fex2-lab.local\", \"subject\": \"Yura\"}]",
+		"ResultName": "JsonResult"
+	}],
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1535381792970,
+    "Name": "List Quarantined Emails",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "If specified, only emails that were created after start time will be returned. If Start Time and End Time are not specified, action returns quarantined emails from the last 24 hours. Format: YYYY-MM-DD'T'HH:MM:SS.SSS-HHMM",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "If specified, only emails that were created before end time will be returned.  If Start Time and End Time are not specified, action returns quarantined emails from the last 24 hours. Format: YYYY-MM-DD'T'HH:MM:SS.SSS-HHMM",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "End Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "If specified, returns all of the quarantined emails only from this sender.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Sender Filter",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "If specified, returns all of the quarantined emails only with this subject.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Subject Filter",
+            "Value": "",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Specify how many emails to return. Limit is 10000. This is FireEye EX limitation.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Email to Return",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

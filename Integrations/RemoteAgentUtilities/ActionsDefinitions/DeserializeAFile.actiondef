@@ -1,0 +1,39 @@
+{
+    "CreationTimeUnixTimeInMs": 1543765113732,
+    "Creator": "Admin",
+    "Description": "Deserialize a file from a base64 string and save it to disk.",
+    "Id": -1,
+    "IntegrationIdentifier": "RemoteAgentUtilities",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543765113732,
+    "Name": "Deserialize A File",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1543765113743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "File Name. The purpose is to get as a placeholder from prev action (key in json result - file_name)",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543765113743,
+            "Name": "File Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543765113743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "File base64. The purpose is to get as a placeholder from prev action (key in json result - base64_file_content)",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543765113743,
+            "Name": "File base64",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "file_new_path",
+    "Version": 1.0
+}

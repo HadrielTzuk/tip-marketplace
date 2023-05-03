@@ -1,0 +1,91 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244, 
+    "Creator": "admin", 
+    "Description": "Add IP to iBoss Block List.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "IBoss", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "Name": "Add IP to Policy Block List", 
+    "Parameters": [
+        {
+            "CustomActionId": -1, 
+            "DefaultValue": 1001, 
+            "Description": "Specify to which policy category you want to add the IP.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Name": "Category ID", 
+            "Type": 0, 
+            "Value": 1001
+        }, 
+        {
+            "CustomActionId": -1, 
+            "DefaultValue": 50, 
+            "Description": "Specify priority of the IP that needs to be blocked.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Name": "Priority", 
+            "Type": 0, 
+            "Value": 50
+        }, 
+        {
+            "CustomActionId": -1, 
+            "DefaultValue": "Destination", 
+            "Description": "Specify what is the direction of the IP.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Name": "Direction", 
+            "OptionalValues": [
+                "Destination", 
+                "Source", 
+                "Destination and Source"
+            ], 
+            "Type": 15, 
+            "Value": "Destination"
+        }, 
+        {
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the start port related to the IP that needs to be blocked. Note: if only \"Start Port\" or \"End Port\" is specified, the value will be added to both action parameters.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Name": "Start Port", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the end port related to the IP that needs to be blocked. Note: if only \"Start Port\" or \"End Port\" is specified, the value will be added to both action parameters.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Name": "End Port", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Add a note related to the IP that needs to be blocked.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Name": "Note", 
+            "Type": 0, 
+            "Value": ""
+        }, 
+        {
+            "CustomActionId": -1, 
+            "DefaultValue": false, 
+            "Description": "If enabled, IP will be considered as a regular expression.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Name": "Is Regular Expression", 
+            "Type": 1, 
+            "Value": false
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

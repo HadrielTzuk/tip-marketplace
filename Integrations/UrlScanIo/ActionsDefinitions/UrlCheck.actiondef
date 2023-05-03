@@ -1,0 +1,83 @@
+{
+    "CreationTimeUnixTimeInMs": 1523801165235, 
+    "Creator": "admin", 
+    "Description": "Submit a URL to be scanned and get the scan details",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"task\": {\"domURL\": \"https://urlscan.io/dom/7e9cb8cb-82ce-4ef7-881a-xxxx/\", \"screenshotURL\": \"https://urlscan.io/screenshots/7e9cb8cb-82ce-4ef7-881a-xxxx.png\", \"uuid\": \"7e9cb8cb-82ce-4ef7-881a-xxxx\", \"url\": \"http://domain-example.com/f1q7qxxxx.php\", \"visibility\": \"public\", \"source\": \"12a3ddafxxx\", \"time\": \"2019-01-31T15:19:55.267Z\", \"reportURL\": \"https://urlscan.io/result/7e9cb8cb-82ce-4ef7-881a-xxxx/\", \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36\", \"method\": \"api\"}, \"stats\": {\"malicious\": 0, \"uniqCountries\": 1, \"totalLinks\": 3, \"secureRequests\": 14, \"securePercentage\": 93, \"adBlocked\": 0, \"IPv6Percentage\": 50}, \"page\": {\"city\": \"Los Angeles\", \"domain\": \"domain-example.com\", \"asn\": \"AS22612\", \"url\": \"http://domain-example.com/f1q7qxxxx.php\", \"ip\": \"1.1.x.x\", \"asnname\": \"NAMECHEAP-NET - Namecheap, Inc., US\", \"server\": \"nginx\", \"country\": \"US\", \"ptr\": \"\"}, \"lists\": {\"linkDomains\": [\"www.namecheap.com\", \"ap.www.namecheap.com\"], \"countries\": [\"US\"], \"asns\": [\"22612\"], \"servers\": [\"cloudflare\", \"nginx\"], \"ips\": [\"1.1.x.x\"], \"urls\": [\"http://domain-example.com/f1q7qxxxx.php\"], \"domains\": [\"nc-img.com\"], \"hashes\": [\"f31c0889d28c7d713f237a8cea8cfbc5cb4cba63fad767666cce2bbcxxxxx\"], \"certificates\": [{\"subjectName\": \"nc-img.com\", \"validFrom\": 1534204800, \"validTo\": 1565827199, \"issuer\": \"COMODO RSA Domain Validation Secure Server CA\"}]},  \"verdicts\": {\"overall\": {\"score\": 0,\"categories\": [],\"brands\": [],\"tags\": [],\"malicious\": false,\"hasVerdicts\": 0},\"urlscan\": {\"score\": 0,\"categories\": [],\"brands\": [],\"tags\": [],\"detectionDetails\": [],\"malicious\": false},\"engines\": {\"score\": 0,\"malicious\": [],\"benign\": [],\"maliciousTotal\": 0,\"benignTotal\": 0,\"verdicts\": [],\"enginesTotal\": 0},\"community\": {\"score\": 0,\"votes\": [],\"votesTotal\": 0,\"votesMalicious\": 0,\"votesBenign\": 0,\"tags\": [],\"categories\": []}}}, \"Entity\": \"HTTP://domain-example.COM/F1Q7QXXXX.PHP\"}]",
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "UrlScanIo", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1523801165235, 
+    "Name": "Url Check", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516022322464,
+            "CustomActionId": -1,
+            "DefaultValue": "public",
+            "Description": "Scans on urlscan.io have one of three visibility levels, make sure to use the appropriate level for your submission.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516022322464,
+            "Name": "Visibility",
+            "Type": 15,
+            "OptionalValues": [
+                "public",
+                "unlisted",
+                "private"
+            ],
+            "Value": "public"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "0",
+            "Description": "Mark entity as suspicious if the score of verdicts is equal or above the given threshold. Default is 0, in this case, we consider every scanned url as suspicious.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Threshold",
+            "Type": 0,
+            "Value": "0"
+        },
+        {
+            "Name": "Create Insight",
+            "Type": 1,
+            "Value": true,
+            "DefaultValue": true,
+            "IsMandatory": false,
+            "Description": "If enabled, action will create an insight containing information about entities.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Only Suspicious Insight",
+            "Type": 1,
+            "Value": false,
+            "DefaultValue": false,
+            "IsMandatory": false,
+            "Description": "If enabled, action will only create insight for suspicious entities. Note: \"Create Insight\" parameter needs to be enabled.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Add Screenshot To Insight",
+            "Type": 1,
+            "Value": false,
+            "DefaultValue": false,
+            "IsMandatory": false,
+            "Description": "If enabled, action will add a screenshot of the website to the insight, if it’s available.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "Script": "from SiemplifyDataModel import EntityTypes\nimport requests\nimport json\nimport base64\nfrom UrlScanManager import UrlScanManager\nfrom SiemplifyAction import SiemplifyAction\n\ndef main():\n    siemplify = SiemplifyAction()\n    \n    conf = siemplify.get_configuration('UrlScan')\n    api_key = conf.get('ApiKey')\n    url_scan_manager = UrlScanManager(api_key)\n\n    entities_to_update = []\n\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.URL:\n\n            # Submit url for scan\n            scan_res = url_scan_manager.scan(entity.identifier.lower())\n\n            # Check if submission successful\n            if scan_res:\n                # Get scan ID for scan report\n                scan_id = scan_res['uuid']\n                # Get scan report\n                scan_report = url_scan_manager.get_scan_report(scan_id)\n\n            if scan_report:\n                entities_to_update.append(entity)\n                # Add web link to full scan result\n                siemplify.result.add_link(\"Web Report - {0}\".format(entity.identifier), scan_res['result'])\n                # Add IP/ASNs, IP Detail, (Sub)Domains, Domain Tree, Links, Certificates data.\n                siemplify.result.add_json(entity.identifier, json.dumps(scan_report['lists']))\n                # Add screenshot\n                screenshot = requests.get(scan_report['task']['screenshotURL'])\n                siemplify.result.add_attachment('Screenshot - {0}'.format(entity.identifier), 'sss.png'.format(scan_id), base64.b64encode(screenshot.content))\n\n    if entities_to_update:\n        output_massage = 'Following entities were scanned by urlscan.io. \\n{0}'.format(entities_to_update)\n        result_value = 'true'\n    else:\n        output_massage = 'No entities were scanned.'\n        result_value = 'false'\n\n    siemplify.end(output_massage, result_value)\n\nif __name__ == \"__main__\":\n    main()", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Version": 1.0,
+    "IsAsync": true
+}

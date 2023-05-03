@@ -1,0 +1,35 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Add comments to entities in Exabeam Advanced Analytics. Supported entities: Hostname, IP and User.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"newComment\":{\"commentId\":\"XXXXXXXXX\",\"commentType\":\"asset\",\"commentObjectId\":\"XXXXXXXXX\",\"text\":\"my comment\",\"exaUser\":\"admin\", \"createTime\":\"XXXXXXXXX\",\"updateTime\":\"XXXXXXXXX\",\"edited\":\"false\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "ExabeamAdvancedAnalytics",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Add Comments To Entity",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the comment that needs to be added to the entity.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Comment",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"ADDRESS\", \"USERUNIQNAME\", \"HOSTNAME\"]}"
+}

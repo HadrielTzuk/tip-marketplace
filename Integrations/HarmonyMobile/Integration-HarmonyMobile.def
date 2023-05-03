@@ -1,0 +1,51 @@
+{
+    "Description": "Harmony Mobile is the market-leading Mobile Threat Defense solution. It keeps your corporate data safe by securing employees’ mobile devices across all attack vectors: apps, network and OS. Designed to reduce admins’ overhead and increase user adoption, it perfectly fits into your existing mobile environment, deploys and scales quickly, and protects devices without impacting user experience nor privacy.",
+    "DisplayName": "Harmony Mobile",
+    "Identifier": "HarmonyMobile",
+    "MarketingDisplayName": "Harmony Mobile",
+    "Categories": [
+        "Endpoint Management",
+        "Operational"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "HarmonyMobile",
+            "PropertyName": "API Root",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://cloudinfra-gw.portal.checkpoint.com"
+        },
+        {
+            "IntegrationIdentifier": "HarmonyMobile",
+            "PropertyName": "Client ID",
+            "PropertyDisplayName": "Client ID",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "HarmonyMobile",
+            "PropertyDisplayName": "Client Secret",
+            "PropertyName": "Client Secret",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "HarmonyMobile",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": "true"
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"25\" height=\"26\" fill=\"currentColor\" viewBox=\"0 0 25 26\"><path d=\"M12.7 5c3.645 4.048 7.845 16.393 0 17-8.535-.405-3.915-12.952 0-17z\"/><path d=\"M8.3 9.452c-2.52 5.06-1.4 9.918-.21 11.537C2.84 16.739 2 10.059 2 8.036c.84 0 3.57-.203 6.3 1.416zM16.7 9.452c2.52 5.06 1.4 9.918.21 11.537C22.16 16.739 23 10.059 23 8.036c-.84 0-3.57-.203-6.3 1.416z\"/></svg>",
+    "Version": 2.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/harmony-mobile"
+}

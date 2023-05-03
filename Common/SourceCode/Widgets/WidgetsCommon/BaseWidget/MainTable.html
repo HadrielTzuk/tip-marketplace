@@ -1,0 +1,314 @@
+{% import 'CommonScripts.html' as common_scripts -%}
+
+<style>
+{%- macro get_main_table_style(auto_map_columns) %}
+{% set auto_map_columns = auto_map_columns | default(false, true) %}
+.main-table {
+    font-family: var(--widget-text-font);
+    font-style: var(--widget-font-style);
+
+    line-height: var(--default-line-height);
+
+    color: var(--dark-gray-100);
+
+    overflow-x: scroll;
+}
+
+.main-table table {
+    font-size: var(--font-size-medium);
+
+    width: 100%;
+
+    border-collapse: collapse;
+    word-break: keep-all;
+}
+
+.main-table th {
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--default-line-height);
+
+    background-color: var(--dark-gray-600);
+
+    padding: 8px 16px;
+
+    text-transform: uppercase;
+    vertical-align: top;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.main-table tr {
+    font-weight: var(--font-weight-regular);
+}
+
+.main-table tr:nth-child(even) {
+    background-color: var(--color-table-even-row);
+}
+
+.main-table td {
+    padding: 8px 16px;
+
+    vertical-align: top;
+}
+{%- endmacro -%}
+</style>
+
+
+{%- macro get_main_table_html(table_data, auto_map_columns) %}
+{% set auto_map_columns = auto_map_columns | default(false, true) %}
+<div class="main-table">
+  <table id="main-table">
+    {% if auto_map_columns %}
+    <thead id="main-table-header"></thead>
+    {% else %}
+    <thead>
+    <tr>
+      {% for data in table_data %}
+      <th{% if data.th_style is defined -%}
+        {{ ' ' }}style="
+        {%- for k, v in data.th_style.items() -%}
+        {% if not loop.last -%}
+        {{ k }}: {{ v }}; {% else %}{{ k }}: {{ v }};{% endif %}{% endfor %}"{% endif %}>
+        {{ data.header }}
+      </th>
+      {% endfor %}
+    </tr>
+    </thead>
+    {% endif %}
+    <tbody id="main-table-body"></tbody>
+  </table>
+</div>
+{%- endmacro -%}
+
+
+<script>
+{% macro get_main_table_script(table_data, get_data_to_iterrate, json_result_has_entities, entity_result_list_path, key_not_found_display_value, auto_map_columns) %}
+{% set auto_map_columns = auto_map_columns | default(false, true) %}
+{% if get_data_to_iterrate is defined %}
+{%- if get_data_to_iterrate.startswith('[') and get_data_to_iterrate.endswith(']') -%}
+const iterListData = {{ get_data_to_iterrate }};
+{%- else -%}
+const iterListData = {{ get_data_to_iterrate }}(actionListData);
+{% endif %}
+{% elif json_result_has_entities | default(false, true) %}
+const iterListData = el.{{ entity_result_list_path }};
+{% else %}
+const iterListData = actionListData;
+{% endif %}
+{% if auto_map_columns %}
+const tableMapping = {};
+
+for (const item of iterListData) {
+    for (const key of Object.keys(item)) {
+        if (tableMapping[key] === undefined) {
+            tableMapping[key] = [];
+        }
+    }
+}
+
+for (const [heading, dataArray] of Object.entries(tableMapping)) {
+    for (const item of iterListData) {
+        dataArray.push(fieldExists(item[heading]));
+    }
+}
+
+const initialValue = "";
+
+const keys = Object.keys(tableMapping);
+const headerHTML = `<tr>${keys.map(
+    key => key.toString()
+        .replace(/^[-_]*(.)/, (_, c) => c.toUpperCase())
+        .replace(/[-_]+(.)/g, (_, c) => " " + c.toUpperCase())
+).reduce((headerString, key) => headerString + `<th>${key}</th>`, initialValue)}</tr>`;
+
+const tableColumns = Object.values(tableMapping);
+// Transposing from columns to rows
+const tableRows = tableColumns[0].map((col, i) => tableColumns.map(row => row[i]));
+
+const isObject = obj => obj && obj.constructor === ({}).constructor;
+const bodyHTML = tableRows.reduce(
+    (tableRows, tableRowArray) => tableRows + `<tr>${tableRowArray.reduce(
+        (dataCells, dataCell) => {
+            if (Array.isArray(dataCell)) {
+                dataCell = dataCell
+                    .map(item => isObject(item) ? JSON.stringify(item, null, 4) : item)
+                    .join(", ");
+            } else if (isObject(dataCell)) {
+                dataCell = JSON.stringify(dataCell, null, 4);
+            }
+
+            return dataCells + `<td>${getCollapsableEscapedHTML(dataCell ? dataCell.toString() : "")}</td>`;
+        },
+        initialValue
+    )}</tr>`,
+    initialValue
+);
+
+$("#main-table-header").html(headerHTML);
+$("#main-table-body").html(bodyHTML);
+{% else %}
+let mhtml = "";
+$.each({% if json_result_has_entities | default(false, true) or get_data_to_iterrate is defined %}iterListData{% else %}actionListData{% endif %}, (key, el) => {
+    mhtml += "<tr>";
+
+{% for data in table_data %}
+{% set table_value = data.value %}
+{% set keys_to_display = table_value.keys_to_display %}
+{% set keys_length = keys_to_display | length %}
+{% set prefix_with_keys_names = table_value.prefix_with_keys_names | default(false, true) %}
+{% set only_non_empty_values = table_value.only_non_empty_values | default(false, true) %}
+{% set is_link = table_value.is_link | default(false, true) %}
+{% set pass_to_function = table_value.pass_to_function is defined %}
+{% set check_field = table_value.check_field | default(false, true) %}
+{% set remove_special_symbols = table_value.remove_special_symbols | default(false, true) %}
+{% set collapse_long_text = table_value.collapse_long_text | default(false, true) -%}
+{% set not_available = table_value.collapse_long_text | default(false, true) -%}
+
+
+{%- macro getKeyNameIfPlaceholder(key) %}
+{%- if key.startswith('[') and key.endswith(']') -%}
+{{ key.split('"')[1].split('.')[-1] }}
+{%- else -%}
+{{ key }}
+{%- endif %}
+{%- endmacro -%}
+
+{%- macro addTableDataCell(key) %}
+    mhtml += "<td>" +
+        {% if is_link %}
+        `<a href="${ {{ common_scripts.getElementOrPlaceholder(table_value.url_value) }} }" target="_blank" class="link">` +
+        {% endif %}
+        {% if prefix_with_keys_names %}
+        `{{ getKeyNameIfPlaceholder(key) }}: ` +
+        {% endif -%}
+
+        {% set ns = namespace(indent=-1, param_indent=0) %}
+        {% set bool_paramTo_value = {
+            'getCollapsableEscapedHTML': collapse_long_text,
+            'removeSpecialSymbols': remove_special_symbols,
+            'checkField': check_field,
+            table_value.pass_to_function: pass_to_function
+        } %}
+        {% for fn, value in bool_paramTo_value.items() %}
+        {% if value %}
+        {% set ns.indent = ns.indent + 1 %}
+        {% set space_indent = ' ' * 4 * ns.indent %}
+        {% if fn == table_value.pass_to_function %}
+        {{ space_indent }}{{ table_value.pass_to_function }}(
+        {% if table_value.function_parameters is defined -%}
+            {%- for param in table_value.function_parameters %}
+            {{ space_indent }}{{ param }},
+            {% endfor -%}
+        {%- endif %}
+        {%- else %}
+        {{ space_indent }}{{ fn }}(
+        {% endif -%}
+        {% endif -%}
+        {%- endfor %}
+        {% set ns.param_indent = ns.param_indent + 1 %}
+        {{ ' ' * 4 * (ns.param_indent + ns.indent) }}fieldExists({{ common_scripts.getElementOrPlaceholder(key) }})
+        {%- for i in range(ns.indent + 1) +%}
+        {{ ' ' * 4 * (ns.indent - i) }})
+        {%- endfor +%}
+        {% if is_link %}
+        + "</a>"
+        {% endif %}
+        + "</td>";
+{%- endmacro -%}
+
+{%- macro addLineTableDataCell(key) %}
+    tempMhtml +=
+        {% if is_link %}
+            `<a href="${ {{ common_scripts.getElementOrPlaceholder(table_value.url_value) }} }" target="_blank" class="link">` +
+        {% endif %}
+        {% if prefix_with_keys_names %}
+        `{{ getKeyNameIfPlaceholder(key) }}: ` +
+        {% endif %}
+        {% set ns = namespace(indent=-1, param_indent=0) %}
+        {% set bool_paramTo_value = {
+            'removeSpecialSymbols': remove_special_symbols,
+            'checkField': check_field,
+            table_value.pass_to_function: pass_to_function
+        } %}
+        {% for fn, value in bool_paramTo_value.items() %}
+        {% if value %}
+        {% set ns.indent = ns.indent + 1 %}
+        {% set space_indent = ' ' * 4 * ns.indent %}
+        {% if fn == table_value.pass_to_function %}
+        {{ space_indent }}{{ table_value.pass_to_function }}(
+        {% if table_value.function_parameters is defined -%}
+            {%- for param in table_value.function_parameters %}
+            {{ space_indent }}{{ param }},
+            {% endfor -%}
+        {%- endif %}
+        {%- else %}
+        {{ space_indent }}{{ fn }}(
+        {% endif -%}
+        {% endif -%}
+        {%- endfor %}
+            {% set ns.param_indent = ns.param_indent + 1 %}
+        {{ ' ' * 4 * (ns.param_indent + ns.indent) }}fieldExists({{ common_scripts.getElementOrPlaceholder(key) }})
+        {%- for i in range(ns.indent + 1) +%}
+        {{ ' ' * 4 * (ns.indent - i) }})
+        {%- endfor +%}
+        {% if is_link %} + "</a>"
+        {%- endif %}
+        + "\n";
+{%- endmacro -%}
+
+{% if keys_length == 1 %}
+{% set key = table_value.keys_to_display[0] %}
+{% if only_non_empty_values %}
+    if ({{ common_scripts.getElementOrPlaceholder(key) }}.trim() !== "") {
+    {{ addTableDataCell(key) | indent(8) }}
+    }
+{% else %}
+{{ addTableDataCell(key) }}
+
+{% endif %}
+{% elif keys_length >= 1 %}
+{% set keys = table_value.keys_to_display %}
+    // Add multiline table data cell
+    mhtml += "<td>";
+
+    let tempMhtml = "";
+    {% for key in keys %}
+    {% if only_non_empty_values %}
+        if ({{ common_scripts.getElementOrPlaceholder(key) }}.trim() !== "") {
+        {{ addLineTableDataCell(key) | indent(8) }}
+        }
+{% else %}
+    {{ addLineTableDataCell(key) }}
+{% endif %}
+
+{% endfor %}
+    {% if collapse_long_text %}
+    mhtml += getCollapsableEscapedHTML(tempMhtml)
+    {% endif %}
+    mhtml += "</td>";
+    // Finish multiline table data cell
+
+{% endif %}
+{% endfor %}
+    mhtml += "</tr>";
+});
+
+$("#main-table-body").html(mhtml);
+{% endif %}
+{% set key_not_found_display_value = key_not_found_display_value | default("N/A") +%}
+// Toggle off a column if all the values in it are "{{ key_not_found_display_value }}"
+$("th").each(function (idx, _) {
+    const check = Boolean(
+        $("tbody tr").find("td:eq(" + idx + ")").filter(function () {
+            return ["{{ key_not_found_display_value }}", ""].includes($.trim($(this).text())) ? 0 : 1;
+        }).length
+    );
+
+    $("tr").find("td:eq(" + idx + "), th:eq(" + idx + ")").toggle(check);
+});
+
+function fieldExists(field) {
+    return [undefined, ""].includes(field) ? "{{ key_not_found_display_value }}" : field;
+}
+{%- endmacro -%}
+</script>

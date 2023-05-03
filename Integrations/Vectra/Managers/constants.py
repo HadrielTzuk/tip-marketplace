@@ -1,0 +1,37 @@
+INTEGRATION_NAME = u'Vectra'
+DEFAULT_PAGE_SIZE = 5000
+NEXT_PAGE_URL_KEY = u'next'
+ENRICHMENT_PREFIX = u'Vectra'
+
+DETECTION_TYPE = u'Detection'
+ENDPOINT_TYPE = u'Endpoint'
+DETECTION_FIXED_STATUS = u"Fixed"
+
+PING_SCRIPT_NAME = u'{} - Ping'.format(INTEGRATION_NAME)
+ADD_TAGS_SCRIPT_NAME = u'{} - Add Tags'.format(INTEGRATION_NAME)
+REMOVE_TAGS_SCRIPT_NAME = u'{} - Remove Tags'.format(INTEGRATION_NAME)
+UPDATE_NOTE_SCRIPT_NAME = u'{} - Update Note'.format(INTEGRATION_NAME)
+UPDATE_DETECTION_STATUS_SCRIPT_NAME = u'{} - Update Detection Status'.format(INTEGRATION_NAME)
+ENRICH_ENDPOINT_SCRIPT_NAME = u'{} - Enrich Endpoint'.format(INTEGRATION_NAME)
+GET_TRIAGE_RULE_DETAILS_SCRIPT_NAME = u'{} - Get Triage Rule Details'.format(INTEGRATION_NAME)
+
+
+CONNECTOR_NAME = u'{} - Detections Connector'.format(INTEGRATION_NAME)
+DEFAULT_TIME_FRAME = 0
+ACCEPTABLE_TIME_INTERVAL_IN_MINUTES = 5 # 5min
+WHITELIST_FILTER = u'whitelist'
+BLACKLIST_FILTER = u'blacklist'
+DETECTION_CATEGORIES = [
+    u'Command & Control',
+    u'Botnet',
+    u'Reconnaissance',
+    u'Lateral Movement',
+    u'Exfiltration',
+    u'Info',
+]
+MAX_IDS = 3000
+VECTRA_DATETIME_FORMAT = u'%Y-%m-%dT%H%M'
+FIRST_TIMESTAMP_FORMAT = u'%Y-%m-%dT%H:%M:%SZ'
+DEFAULT_DEVICE_VENDOR = u'Vectra'
+DEFAULT_DEVICE_PRODUCT = u'Vectra'
+NOT_FOUND_STATUS_CODE = 404

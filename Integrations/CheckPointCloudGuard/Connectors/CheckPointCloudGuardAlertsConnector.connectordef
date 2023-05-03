@@ -1,0 +1,204 @@
+{
+   "CreationTimeUnixTimeInMs":1530621343817,
+   "Creator":"admin",
+   "Description":"Pull alerts from Check Point Cloud Guard.",
+   "Id":-1,
+   "Integration":"CheckPointCloudGuard",
+   "IsConnectorRulesSupported":true,
+   "IsCustom":false,
+   "IsEnabled":true,
+   "ModificationTimeUnixTimeInMs":1530621343817,
+   "Name":"Check Point Cloud Guard - Alerts Connector",
+   "Parameters":[
+      {
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1532871487965,
+         "DefaultValue":"Product Name",
+         "Description":"Enter the source field name in order to retrieve the Product Field name.",
+         "Id":-1,
+         "IsMandatory":true,
+         "Mode":0,
+         "ModificationTimeUnixTimeInMs":1532871487965,
+         "Name":"DeviceProductField",
+         "Type":2
+      },
+      {
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1532871487965,
+         "DefaultValue":"alertType",
+         "Description":"Enter the source field name in order to retrieve the Event Field name.",
+         "Id":-1,
+         "IsMandatory":true,
+         "Mode":0,
+         "ModificationTimeUnixTimeInMs":1532871487965,
+         "Name":"EventClassId",
+         "Type":2
+      },
+      {
+         "Name":"PythonProcessTimeout",
+         "Type":1,
+         "DefaultValue":180,
+         "IsMandatory":true,
+         "Description":"Timeout limit for the python process running the current script.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"API Key ID",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":true,
+         "Description":"API Key ID of the Check Point Cloud Guard account.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"API Key Secret",
+         "Type":3,
+         "DefaultValue":"",
+         "IsMandatory":true,
+         "Description":"API Key Secret of the Check Point Cloud Guard account.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Fetch Max Hours Backwards",
+         "Type":1,
+         "DefaultValue":1,
+         "IsMandatory":false,
+         "Description":"Amount of hours from where to fetch alerts.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Max Alerts To Fetch",
+         "Type":1,
+         "DefaultValue":50,
+         "IsMandatory":true,
+         "Description":"How many alerts to process per one connector iteration.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Lowest Severity To Fetch",
+         "Type":2,
+         "DefaultValue":"Medium",
+         "IsMandatory":true,
+         "Description":"Lowest severity that will be used to fetch alerts. Possible values: Low, Medium, High",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Use whitelist as a blacklist",
+         "Type":0,
+         "DefaultValue":false,
+         "IsMandatory":true,
+         "Description":"If enabled, whitelist will be used as a blacklist.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Verify SSL",
+         "Type":0,
+         "DefaultValue":true,
+         "IsMandatory":true,
+         "Description":"If enabled, verify the SSL certificate for the connection to the CheckPoint Cloud Guard server is valid.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Environment Field Name",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Environment Regex Pattern",
+         "Type":2,
+         "DefaultValue":".*",
+         "IsMandatory":false,
+         "Description":"A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Server Address",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"The address of the proxy server to use.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Username",
+         "Type":2,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"The proxy username to authenticate with.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      },
+      {
+         "Name":"Proxy Password",
+         "Type":3,
+         "DefaultValue":"",
+         "IsMandatory":false,
+         "Description":"The proxy password to authenticate with.",
+         "ConnectorDefinitionId":-1,
+         "CreationTimeUnixTimeInMs":1530621343817,
+         "Id":-1,
+         "Mode":2,
+         "ModificationTimeUnixTimeInMs":1530621343817
+      }
+   ],
+   "ProductToVisualFamilyRecords":[
+   ],
+   "Rules":[
+   ],
+   "SimulationUseCases":{
+      "CasesForUseCase":[
+      ],
+      "UseCaseName":null
+   },
+   "Version": 1
+}

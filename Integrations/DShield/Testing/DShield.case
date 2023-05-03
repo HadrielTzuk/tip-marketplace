@@ -1,0 +1,58 @@
+{
+	"Cases": [{
+			"Events": [{
+					"_fields": {
+						"BaseEventIds": "[]",
+						"ParentEventId": -1,
+						"StartTime": "1516712313943",
+						"EndTime": "1516712313943",
+						"DeviceProduct": "IPS_Product"
+					},
+					"_rawDataFields": {
+						"applicationProtocol": "TCP",
+						"categoryOutcome": "blocked",
+						"destinationAddress": "191.101.167.235",
+						"destinationHostName": "www.ircnet.org",
+						"destinationPort": "770",
+						"destinationProcessName": "MrlCS.sob",
+						"destinationUserName": "XWzNr1l@gmail.com",
+						"deviceAddress": "172.21.135.124",
+						"deviceEventClassId": "IRC Connections",
+						"deviceHostName": "ckIYC2",
+						"Field_24": "B0:E7:DF:6C:EF:71",
+						"deviceProduct": "IPS_Product",
+						"deviceVendor": "Vendor",
+						"endTime": "1516801431465",
+						"eventId": "0aa16009-5bb4-41a3-91ed-81347442ca29",
+						"managerReceiptTime": "1472578976804",
+						"message": "Connection to IRC Server",
+						"name": "IRC Connections",
+						"severity": "8",
+						"sourceAddress": "8.8.8.8",
+						"sourceHostName": "WWW.FACEBOOK.COM",
+						"startTime": "1516801431465",
+						"sourcetype": "IPS_Product"
+					},
+					"Environment": null,
+					"SourceSystemName": null
+				}
+			],
+			"Environment": "",
+			"SourceSystemName": "Splunk",
+			"TicketId": "c40793f5-ca34-4854-9580-9504be439123",
+			"Description": "IRC Connections",
+			"DisplayId": "c40793f5-ca34-4854-9580-9504be439123",
+			"Reason": null,
+			"Name": "IRC Connections",
+			"DeviceVendor": "IPS",
+			"DeviceProduct": "IPS_Product",
+			"StartTime": "1/24/2018 1:43:51 PM",
+			"EndTime": "1/24/2018 1:43:51 PM",
+			"IsTestCase": true,
+			"Priority": -1,
+			"RuleGenerator": "Simulation_Original_IRC Connections",
+			"Extensions": []
+		}
+	],
+	"IsTestCase": true
+}

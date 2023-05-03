@@ -1,0 +1,77 @@
+{
+    "CreationTimeUnixTimeInMs": 1543765113732,
+    "Creator": "Admin",
+    "Description": "Form query string from given parameters.",
+    "Id": -1,
+    "IntegrationIdentifier": "SiemplifyUtilities",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1543765113732,
+    "Name": "Query Joiner",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1543765113743,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Comma separated string list. For example: value1,value2,value3.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543765113743,
+            "Name": "Values",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543765113745,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Query target field ex. SrcIP, DestHost, etc..",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543765113745,
+            "Name": "Query Field",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543765113745,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Query operator(OR, AND, etc.)",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1543765113745,
+            "Name": "Query Operator",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543765113745,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will add quotes to every item in the \"Values\" list.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1543765113745,
+            "Name": "Add Quotes",
+            "Type": 1,
+            "Value": "False"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1543765113745,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will add double quotes to every item in the \"Values\" list.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1543765113745,
+            "Name": "Add Double Quotes",
+            "Type": 1,
+            "Value": "False"
+        }
+    ],
+    "Script": "from SiemplifyUtilitiesManager import SiemplifyUtilitiesManager\nfrom SiemplifyAction import SiemplifyAction\n\nACTION_NAME = 'SiemplifyUtilities_Query Joiner Action'\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n\n    # Parameters.\n    query_values = siemplify.parameters.get('Values')\n    query_field = siemplify.parameters.get('Query Field', 'OR')\n    query_operator = siemplify.parameters.get('Query Operator')\n\n    query = SiemplifyUtilitiesManager.form_query(query_field, query_operator, query_values)\n\n    output_message = \"Successfully formed query: {0}\".format(query)\n\n    siemplify.end(output_message, query)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "query",
+    "Version": 2.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

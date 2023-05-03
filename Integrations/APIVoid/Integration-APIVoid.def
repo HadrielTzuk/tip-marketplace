@@ -1,0 +1,42 @@
+{
+    "Description": "Database of API services mostly focused on threat analysis and threat intelligence, that can be easily integrated anywhere.",
+    "DisplayName": "APIVoid",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/apivoid",
+    "Identifier": "APIVoid",
+    "Categories": [
+        "Threat Intelligence",
+        "Operational"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "APIVoid",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://endpoint.apivoid.com"
+        },
+        {
+            "IntegrationIdentifier": "APIVoid",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "Api Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "APIVoid",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<path d=\"M22.5,15.8c0,1.4,0,2.7,0,4.1c0,1.5-1.1,2.6-2.6,2.6c-2.5,0-5,0-7.5,0c-4.4,0-8.4-3.1-9.5-7.3C1.2,8.8,5.3,4.1,9.7,2.9\n\t\tc6.3-1.7,11.1,2.2,12.4,6.6c0.3,1,0.4,1.9,0.4,2.9C22.5,13.6,22.5,14.7,22.5,15.8C22.5,15.8,22.5,15.8,22.5,15.8z M7.5,12.5\n\t\tc0,2.7,2.2,4.9,4.9,5c2.7,0.1,5.2-2.2,5.2-5c0-2.8-2.2-5.1-5-5.1C9.7,7.5,7.5,9.7,7.5,12.5z\"/>\n</g>\n</svg>\n",
+    "Version": 9.0,
+    "MarketingDisplayName": "APIVoid"
+}

@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1528802629993, 
+    "Creator": "admin", 
+    "Description": "Block URL by assigning it to a URL group attached to a policy", 
+    "Id": -1, 
+    "IntegrationIdentifier": "CiscoFirepowerManagementCenter", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1528802629993, 
+    "Name": "Block URL", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1528802629993, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "URL group object name.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528802629993, 
+            "Name": "URL Group Name", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom CiscoFirepowerManager import CiscoFirepowerManager\nfrom SiemplifyDataModel import EntityTypes\n\nINTEGRATION_PROVIDER = 'CiscoFirepower'\n\n\ndef main():\n\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(INTEGRATION_PROVIDER)\n    cisco_firepower_manager = CiscoFirepowerManager(conf['API Root'],\n                                                    conf['Username'],\n                                                    conf['Password'],\n                                                    conf['Verify SSL'])\n    # Parameters.\n    url_group_name = siemplify.parameters.get('URL Group Name')\n\n    # variables.\n    error_flag = False\n    blocked_entities = []\n    errors = []\n    result_value = False \n\n    # Set script name.\n    siemplify.script_name = 'CiscoFirepower_Block_URL'\n\n    target_urls = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.URL]\n\n    # Get url group object to pass to the block function.\n    url_group_object = cisco_firepower_manager.get_url_group_by_name(url_group_name)\n\n    for url_entity in target_urls:\n        try:\n            cisco_firepower_manager.block_url(url_group_object, url_entity.identifier)\n            result_value = True\n            blocked_entities.append(url_entity.identifier)\n        except Exception as err:\n            error_message = 'Error blocking url \"{0}\", ERROR: {1}.'.format(url_entity.identifier, err.message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            error_flag = True\n            errors.append(error_message)\n\n    if result_value:\n        output_message = 'The following entities were blocked: {0}'.format(','.join(blocked_entities))\n    else:\n        output_message = 'No entities were blocked.'\n\n    if error_flag:\n        output_message = \"{0}  \\n \\n  ERRORS: {1}\".format(output_message, errors)\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "is_succeed", 
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\"]}", 
+    "Version": 1.0
+}

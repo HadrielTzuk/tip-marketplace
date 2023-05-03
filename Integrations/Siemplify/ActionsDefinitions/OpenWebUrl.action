@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1519556797745,
+    "Creator": "admin",
+    "Description": "Generate a browser link",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1519556797745,
+    "Name": "Open Web Url",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1519558801691,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Title for URL.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519558801691,
+            "Name": "Title",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1519558801691,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "Target URL.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1519558801691,
+            "Name": "URL",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,50 @@
+{
+    "Description": "Portnox NAC operations - real-time visibility into any and all devices connected or connecting to your network, giving your IT team comprehensive Network Access Management (NAM) capabilities. ",
+    "DisplayName": "Portnox",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/portnox",
+    "Identifier": "Portnox",
+    "Categories": [
+        "NAC",
+        "Network Security",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Portnox",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Portnox",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Portnox",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "Portnox",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.1,
+    "SVGImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M37.5,12.4c-6.3,0-10.5,4.1-10.5,10.4c0,6.3,4.4,10.1,10.1,10.1c5.2,0,10.3-3.3,10.3-10.4C47.4,16.5,43.4,12.4,37.5,12.4z\n\t\t\t M37.3,28.5c-2.6,0-4-2.5-4-5.9c0-2.9,1.1-5.9,4-5.9c2.8,0,3.9,3,3.9,5.9C41.1,26.1,39.6,28.5,37.3,28.5z M16.4,12.4\n\t\t\tc-2.8,0-5.1,1.1-6.5,3.2H9.8l-0.3-2.7H4.2c0.1,1.8,0.2,4,0.2,6.6v20.9h6.1v-9.7h0.1c0.9,1.3,2.7,2.2,5.1,2.2\n\t\t\tc4.4,0,8.9-3.3,8.9-10.5C24.5,16.1,20.6,12.4,16.4,12.4z M14.1,28.2c-1.8,0-3.2-1.3-3.6-2.9c-0.1-0.4-0.1-0.8-0.1-1.3v-2.7\n\t\t\tc0-0.4,0-0.7,0.1-1.1c0.4-1.8,1.9-3.1,3.6-3.1c2.7,0,4.1,2.4,4.1,5.5C18.3,26,16.7,28.2,14.1,28.2z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 6.0,
+    "MarketingDisplayName": "Portnox"
+}

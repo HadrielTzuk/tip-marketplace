@@ -1,0 +1,72 @@
+{
+    "CreationTimeUnixTimeInMs": 1522664948559,
+    "Description": "Search engine based on Lucene. It provides a distributed, multitenant-capable full-text search engine.",
+    "DisplayName": "Elastic Search",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/elasticsearch",
+    "Id": 33,
+    "Identifier": "ElasticSearch",
+    "Categories": [
+        "SIEM",
+        "Free to use",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ElasticSearch",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Server Address",
+            "PropertyName": "Server Address",
+            "PropertyType": "2",
+            "Value": "http://x.x.x.x:9200"
+        },
+        {
+            "IntegrationIdentifier": "ElasticSearch",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ElasticSearch",
+            "IsMandatory": false,
+            "PropertyDisplayName": "CA Certificate File",
+            "PropertyName": "CA Certificate File",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ElasticSearch",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "ElasticSearch",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Authenticate",
+            "PropertyName": "Authenticate",
+            "PropertyType": "0",
+            "Value": "False"
+        },
+        {
+            "IntegrationIdentifier": "ElasticSearch",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "IntegrationSupportedActions": [],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "ModificationTimeUnixTimeInMs": 1522664948559,
+    "SvgImage": "<!-- Generated by IcoMoon.io -->\n<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\">\n<title>ElasticSearch_IntegrationImage</title>\n<path d=\"M18.688 17.792c-2.048-1.024-4.096-1.92-6.144-2.816-1.92 1.664-3.712 3.456-5.632 5.12-0.768 0.64-1.024 1.28-0.896 2.304 0 0.384 0.128 0.768 0.128 1.152 0.64 4.992 6.656 8.192 11.392 4.864 0.896-0.64 1.792-1.28 2.048-2.432 0.256-0.896 0.256-1.92 0.512-2.688 0.512-1.664 0.384-3.2-0.64-4.608-0.256-0.384-0.512-0.768-0.768-0.896zM13.312 14.208c1.792 0.896 3.712 1.664 5.504 2.56 0.384 0.128 0.512 0.128 0.768-0.128 1.92-1.664 3.712-3.328 5.632-4.992 0.512-0.384 0.64-0.896 0.768-1.408 0.256-4.608-3.584-7.936-7.424-7.808-1.792-0.128-3.328 0.64-4.736 1.664-0.768 0.64-1.28 1.408-1.536 2.56-0.128 1.024-0.128 1.152-0.256 1.792-0.384 1.792-0.64 3.456 0.512 4.992 0.256 0.256 0.512 0.64 0.768 0.768zM26.496 12.032c-2.048 1.792-4.096 3.584-6.144 5.376-0.128 0.128-0.128 0.384-0.128 0.64 0.256 0.64 0.64 1.28 0.896 1.92 0.128 0.128 0.384 0.384 0.512 0.384 1.408 0.384 2.816 0.64 4.352 1.024 0.128 0 0.384 0 0.512 0 1.792-0.64 3.2-2.432 3.2-4.48 0.128-2.432-1.152-3.968-3.2-4.864zM11.648 14.080c0.128-0.512-0.512-1.28-0.768-1.792-0.256-0.384-0.512-0.64-0.896-0.64-1.28-0.384-2.432-0.64-3.712-0.896-0.384-0.128-0.768-0.128-1.024 0-1.92 0.896-2.944 2.432-3.072 4.608 0.128 2.048 1.024 3.584 2.816 4.48 0.128 0.128 0.512 0 0.64-0.128 1.536-1.408 3.072-2.688 4.608-4.096 0.512-0.512 1.28-1.024 1.408-1.536zM25.6 22.272c-1.152-0.256-2.432-0.64-3.584-0.896-0.384-0.128-0.64 0-0.64 0.512-0.256 1.536-0.512 2.944-0.896 4.48 1.408 1.024 2.816 1.024 4.224 0.128 1.28-0.768 1.792-2.432 1.408-3.84-0.128-0.128-0.384-0.384-0.512-0.384zM6.528 9.728c1.28 0.256 2.56 0.64 3.968 0.896 0.384-1.664 0.768-3.2 1.024-4.864 0-0.128-0.128-0.384-0.384-0.512-1.152-0.768-2.304-0.768-3.584 0-1.152 0.768-1.792 1.792-1.664 3.2 0 0.512-0.128 1.152 0.64 1.28z\"></path>\n</svg>\n",
+    "Version": 37.0,
+    "PythonVersion": 2,
+    "MarketingDisplayName": "Elastic Search"
+}

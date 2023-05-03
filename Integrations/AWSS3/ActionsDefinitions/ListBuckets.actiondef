@@ -1,0 +1,19 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Retrieve a list of buckets from AWS S3.",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSS3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+		"ResultExample": "[{\"Owner\":{\"DisplayName\":\"lab_aws\",\"ID\":\"935dc3fed0e1d2c5b12242cf9927370824f2438681a2d3c0523f254dbde41aba\"},\"Buckets\":[{\"CreationDate\":\"2020-09-14T10:31:56\",\"Name\":\"testsiemplify\"}]}]",
+		"ResultName": "JsonResult"
+	}],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Buckets",
+    "Parameters": [],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

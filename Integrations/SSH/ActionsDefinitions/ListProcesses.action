@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 1515634094232,
+    "Creator": "admin",
+    "Description": "List running processes on a remote machine",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Processes\": [\"USER,PID,%CPU,%MEM,VSZ,RSS,TTY,STAT,START,TIME,COMMAND\", \"root,1,0.0,0.0,193656,6656,?,Ss,Jan16,0:24,/usr/lib/systemd/systemd --system --deserialize 24\", \"root,32142,0.0,0.0,0,0,?,S,Jan22,0:32,[kworker/3:1]\"]}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "SSH",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1515634094232,
+    "Name": "List Processes",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1516072592679,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Remote server address(e.g: x.x.x.x).",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072592679,
+            "Name": "Remote Server",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072592679,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072592679,
+            "Name": "Remote Username",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072592679,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1516072592679,
+            "Name": "Remote Password",
+            "Type": 12,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1516072592679,
+            "CustomActionId": -1,
+            "DefaultValue": "22",
+            "Description": "The default port will be 22.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1516072592679,
+            "Name": "Remote Port",
+            "Type": 0,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "results",
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

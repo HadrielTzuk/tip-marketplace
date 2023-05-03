@@ -1,0 +1,119 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244,
+    "Creator": "admin",
+    "Description": "Send a query to get information about related events from ArcSight Logger event log manager.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"baseEventCount\": 1, \"destinationAddress\": \"172.30.20x.xx\", \"deviceAddress\": \"172.30.20x.xx\", \"deviceEventClassId\": \"storagegroup:xxx\", \"deviceReceiptTime\": 1591865902357, \"deviceVendor\": \"ArcSight\", \"endTime\": 1591865902357, \"fileType\": \"storageGroup\"}, {\"baseEventCount\": 1, \"destinationAddress\": \"172.30.20x.xx\", \"deviceAddress\": \"172.30.20x.xx\", \"deviceEventClassId\": \"eps:xxx\", \"deviceReceiptTime\": 1591865902357, \"deviceVendor\": \"ArcSight\", \"endTime\": 1591865902357, \"fileType\": \"\"}, {\"baseEventCount\": 1, \"destinationAddress\": \"172.30.20x.xx\", \"deviceAddress\": \"172.30.20x.xx\", \"deviceEventClassId\": \"disk:xxx\", \"deviceReceiptTime\": 1591865902357, \"deviceVendor\": \"ArcSight\", \"endTime\": 1591865902357, \"fileType\": \"\"},\n{\"baseEventCount\": 1, \"destinationAddress\": \"172.30.20x.xx\", \"deviceAddress\": \"172.30.20x.xx\", \"deviceEventClassId\": \"network:xxx\", \"deviceReceiptTime\": 1591865902357, \"deviceVendor\": \"ArcSight\", \"endTime\": 1591865902357, \"fileType\": \"\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "ArcSightLogger",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Send Query",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the query to send to ArcSight Logger event search.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Query",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "100",
+            "Description": "Specify the amount of events to return. Limit is 10000. This is ArcSight Logger limitation.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Max Events to Return",
+            "Type": 0,
+            "Value": "100"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "1h",
+            "Description": "Specify the time frame which will be used to fetch events. \nPossible values:\n1m - 1 minute ago\n1h - 1 hour ago\n1d - 1 day ago\nNote: You can’t combine different values, like 1d2h30m.\n",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Time Frame",
+            "Type": 0,
+            "Value": "1h"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what fields to fetch from ArcSight Logger. If nothing is specified, then all of the available fields will be returned.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Fields to Fetch",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "If enabled, raw event data is included in the response.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Include Raw Event Data",
+            "Type": 1,
+            "Value": "True"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "Indicates that ArcSight Logger event search is local only, and does not include ArcSight Logger peers. Set to false if you want to include peers in the event search.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Local Search Only",
+            "Type": 1,
+            "Value": "False"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "Indicates that the ArcSight Logger search should try to discover fields in the events found.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Discover Fields",
+            "Type": 1,
+            "Value": "True"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535884906829,
+            "CustomActionId": -1,
+            "DefaultValue": "ascending",
+            "Description": "Specify what sorting method to use.\nPossible values:\nascending\ndescending\n",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535884906829,
+            "Name": "Sort",
+            "Type": 0,
+            "Value": "ascending"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

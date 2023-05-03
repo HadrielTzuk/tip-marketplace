@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1530543162607, 
+    "Creator": "admin", 
+    "Description": "Enrich SHA2 hash using Symantec ATP information.", 
+    "Id": -1, 
+    "IntegrationIdentifier": "SymantecATP", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530543162607, 
+    "Name": "Enrich File Hash", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom SymantecATPManager import SymantecATPManager\nfrom SiemplifyDataModel import EntityTypes\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv\n\nATP_PROVIDER = 'SymantecATP'\nRESULT_TABLE_NAME = \"Command IDs\"\nACTION_NAME = \"SymantecATP_Get File Details\"\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    siemplify.script_name = ACTION_NAME\n    conf = siemplify.get_configuration(ATP_PROVIDER)\n    verify_ssl = True if conf.get('Verify SSL').lower() == 'true' else False\n    atp_manager = SymantecATPManager(conf.get('API Root'), conf.get('Client ID'), conf.get('Client Secret'), verify_ssl)\n\n    result_value = False\n    errors = []\n    success_entities = []\n\n    target_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.FILEHASH]\n\n    for entity in target_entities:\n        try:\n            file_details = atp_manager.get_file_details_by_hash(entity.identifier)\n\n            if file_details:\n                file_details_flat = dict_to_flat(file_details)\n                csv_result = flat_dict_to_csv(file_details_flat)\n                # Add Table.\n                siemplify.result.add_entity_table(entity.identifier, csv_result)\n                # Enrich Entity.\n                entity.additional_properties.update(file_details_flat)\n                success_entities.append(entity)\n                result_value = True\n\n        except Exception as err:\n            error_message = 'Error fetching file details for  \"{0}\", Error: {1}'.format(entity.identifier, unicode(err))\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n            errors.append(error_message)\n\n    if result_value:\n        output_message = '{0} were enriched.'.format(','.join([entity.identifier for entity in success_entities]))\n    else:\n        output_message = 'No entities were enriched.'\n\n    # Attach errors if exists.\n    if errors:\n        output_message = \"{0}, \\n \\n  ERRORS: \\n {1} \".format(output_message, ' \\n '.join(errors))\n\n    siemplify.update_entities(success_entities)\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "max_file_health", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 1.0
+}

@@ -1,0 +1,27 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Run a CLI command on Nozomi Networks device. Note: Nozomi API doesnt provide a validation for executed CLI commands, its up to the User to make sure that the provided CLI command is correct. Note2: Action is not working with Siemplify Entities.",
+    "Id": -1,
+    "IntegrationIdentifier": "NozomiNetworks",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Run a CLI Command",
+    "Parameters": [
+        {
+            "Name": "CLI Command",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify a CLI Command to execute on Nozomi Networks device.  Note: Nozomi API doesnt provide a validation for executed CLI commands, its up to the User to make sure that the provided CLI command is correct.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

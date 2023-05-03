@@ -1,0 +1,53 @@
+{
+    "CreationTimeUnixTimeInMs": 1570446244, 
+    "Creator": "admin", 
+    "Description": "Remove User from the specified group. Note: The user name can be provided either as a Siemplify entity or as an action input parameter. If the user name is passed to action both as an entity and input parameter - action will be executed on the input parameter. User name should be specified in username@domain format.",
+    "Id": -1, 
+    "IntegrationIdentifier": "AzureActiveDirectory", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1570446244, 
+    "Name": "Remove User from a Group",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1570446244, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify user name to remove from the target group. User name should be specified in username@domain format. Parameter accepts multiple values as a comma separated string.",
+            "Id": -1, 
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1570446244, 
+            "Name": "User Name",
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify group name to remove user from.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Group Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1570446244,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID of the group from which you want to remove the user. If both \"Group Name\" and \"Group ID\" are provided, then \"Group ID\" will have priority. Example of the id: 00e40000-1971-439d-80fc-d0e000001dbd.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1570446244,
+            "Name": "Group ID",
+            "Type": 0,
+            "Value": ""
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

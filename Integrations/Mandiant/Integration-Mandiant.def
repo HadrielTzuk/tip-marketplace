@@ -1,0 +1,56 @@
+{
+    "Description": "Mandiant is on a mission to make every organization secure from cyber threats and confident in their readiness. Mandiant delivers dynamic cyber defense solutions powered by industry-leading expertise, intelligence and innovative technology.",
+    "DisplayName": "Mandiant",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/mandiant",
+    "Identifier": "Mandiant",
+    "Categories": ["Threat Intelligence"],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "Mandiant",
+            "IsMandatory": true,
+            "PropertyDisplayName": "UI Root",
+            "PropertyName": "UI Root",
+            "PropertyType": "2",
+            "Value": "https://advantage.mandiant.com"
+        },
+        {
+            "IntegrationIdentifier": "Mandiant",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": "2",
+            "Value": "https://api.intelligence.mandiant.com"
+        },
+        {
+            "IntegrationIdentifier": "Mandiant",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client ID",
+            "PropertyName": "Client ID",
+            "PropertyType": "2",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Mandiant",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Client Secret",
+            "PropertyName": "Client Secret",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "Mandiant",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "True"
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "Version": 3.0,
+    "SvgImage": "<svg id=\"a\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M19.6,13.11v8.85h3.37V9.61c-.91,0-1.75,.38-2.39,1.01-.64,.66-.98,1.54-.98,2.48Zm1.78-5.67c.47-.24,1.01-.31,1.55-.24h.03l.03-4.2h-3.33l-7.5,10.71L4.69,3H2V22h3.43V9.54l5.72,8.19h2.02l5.22-7.45c.34-.49,.74-.94,1.14-1.36l.03-.03c.5-.56,1.14-1.12,1.82-1.43Z\"/></svg>",
+    "MarketingDisplayName": "Mandiant"
+}

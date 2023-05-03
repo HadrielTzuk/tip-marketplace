@@ -1,0 +1,83 @@
+[
+    {
+        "ChangeDescription": "Refactoring of the integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Bulk WhoIS",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1185"
+    },
+    {
+        "ChangeDescription": "Changed integration logo",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "BulkWhoIs",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1510"
+    },
+    {
+        "ChangeDescription": "Added Verify SSL parameter to integration configurations",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "BulkWhoIs",
+        "ItemType": "Integration",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2000"
+    },
+    {
+        "ChangeDescription": "Updated integration logo for playbooks",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 10.0,
+        "ItemName": "BulkWhoIs",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1583483254,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2128"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 11.0,
+        "ItemName": "BulkWhoIs",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Fixed a bug, where action will not work with URLs containing schema.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 12.0,
+        "ItemName": "WhoIsDetails",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1618907918,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1587"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 13.0,
+        "ItemName": "BulkWhoIs",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    }
+]

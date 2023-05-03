@@ -1,0 +1,85 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Search Lastline completed analysis tasks history. For submission either URL or Filehash in a format of md5 or sha1 can be provided. Note: Action is not working with Siemplify entities, only action input parameters are used.",
+    "Id": -1,
+    "IntegrationIdentifier": "Lastline",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "{\"success\": 1, \"data\": [{\"username\": \"XXXX@siemplify.co\", \"status\": \"finished\", \"task_subject_filename\": null, \"task_subject_sha1\": null, \"task_uuid\": \"123456789\", \"task_subject_md5\": null, \"task_subject_url\": \"https://google.com\", \"task_start_time\": \"2021-03-24 07:42:52\", \"analysis_history_id\": 123456, \"title\": null, \"score\": 0}]}",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Search Analysis History",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Submission name to search for. Can be either URL or Filehash in a format of MD5 and SHA1.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Submission Name",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Not specified",
+            "Description": "Optionally specify a submission type to search for, either URL or FileHash.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Submission Type",
+            "OptionalValues": [
+                "Not specified",
+                "URL",
+                "FileHash"
+            ],
+            "Type": 15,
+            "Value": "Not specified"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": 24,
+            "Description": "Time frame for which to search for completed analysis tasks.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Hours Backwards",
+            "Type": 0,
+            "Value": 24
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": 100,
+            "Description": "Search for report in last x analyses executed in Lastline.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Search in last x scans",
+            "Type": 0,
+            "Value": 100
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": 0,
+            "Description": "Skip first x scans returned by Lastline API.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Skip first x scans",
+            "Type": 0,
+            "Value": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\":[]}",
+    "Version": 1.0
+}

@@ -1,0 +1,166 @@
+{
+	"identifier": "7fa5665c-49ed-18df-6aa4-02c29a66d117",
+	"version": "1",
+	"isEnabled": true,
+	"name": "UnshortenMe",
+	"creator": "admin",
+	"priority": 1,
+	"description": "",
+	"environment": "",
+	"category": null,
+	"creationTime": "2018-05-07T11:26:50.212Z",
+	"trigger": {
+		"identifier": "7f450da1-b9ac-6199-a7f8-1edf90060740",
+		"type": 8,
+		"value": "",
+		"matchType": 0,
+		"description": "This will trigger the playbook for each alert ingested into Siemplify.",
+		"typeName": "All"
+	},
+	"steps": [{
+		"workflowIdentifier": "7fa5665c-49ed-18df-6aa4-02c29a66d117",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "80c98fb1-1db9-d4b7-1f8c-0302a435fd40",
+		"isAutomatic": true,
+		"isSkippable": true,
+		"instanceName": "UnshortenMe_Ping_1",
+		"name": "UnshortenMe_Ping",
+		"integration": "UnshortenMe",
+		"description": "Test connectivity to UnshortenMe.",
+		"actionProvider": "Scripts",
+		"actionName": "UnshortenMe_Ping",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "UnshortenMe_Ping",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-05-07T11:26:50.212Z",
+		"modificationTime": "2018-05-07T11:26:50.212Z",
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "Ping"
+	},
+	{
+		"workflowIdentifier": "7fa5665c-49ed-18df-6aa4-02c29a66d117",
+		"workflowInstanceIdentifier": 0,
+		"caseId": 0,
+		"indicatorIdentifier": null,
+		"status": 0,
+		"executingUser": null,
+		"resultCode": 0,
+		"message": null,
+		"resultValue": null,
+		"results": [],
+		"targetEntities": [],
+		"dueDateUnixM": 0,
+		"properties": {
+
+		},
+		"actionDef": null,
+		"identifier": "e8523e51-9485-2a84-9e5e-7de0eb3161c9",
+		"isAutomatic": true,
+		"isSkippable": true,
+		"instanceName": "UnshortenMe_Unshorten URL_1",
+		"name": "UnshortenMe_Unshorten URL",
+		"integration": "UnshortenMe",
+		"description": "Resolve short URLs to long URLs.",
+		"actionProvider": "Scripts",
+		"actionName": "UnshortenMe_Unshorten URL",
+		"parameters": [{
+			"name": "ScriptName",
+			"value": "UnshortenMe_Unshorten URL",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "ScriptParametersEntityFields",
+			"value": "{}",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"additionalProperties": {
+
+			}
+		},
+		{
+			"name": "SelectedScopeName",
+			"value": "All entities",
+			"type": 0,
+			"isMandatory": false,
+			"defaultValue": null,
+			"creationTime": "0001-01-01T00:00:00",
+			"modificationTime": "0001-01-01T00:00:00",
+			"additionalProperties": {
+
+			}
+		}],
+		"creationTime": "2018-05-07T11:26:50.212Z",
+		"modificationTime": "2018-05-07T11:26:50.212Z",
+		"additionalProperties": {
+
+		},
+		"type": 0,
+		"displayName": "Unshorten URL"
+	}],
+	"stepsRelations": [{
+		"condition": "",
+		"fromStep": "80c98fb1-1db9-d4b7-1f8c-0302a435fd40",
+		"toStep": "e8523e51-9485-2a84-9e5e-7de0eb3161c9",
+		"destinationActionStatus": 0
+	}]
+}

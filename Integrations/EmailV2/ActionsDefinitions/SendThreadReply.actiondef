@@ -1,0 +1,94 @@
+{
+    "CreationTimeUnixTimeInMs": 1518362436003,
+    "Creator": "admin",
+    "Description": "Send a message as a reply to the email thread.",
+    "Id": -1,
+    "IntegrationIdentifier": "EmailV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518362436003,
+    "Name": "Send Thread Reply",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"message_id\":\"<162556278608.14165.480701790xxxxxxxxxx@siemplify>\",\"recipients\":\"test@example.com\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Message ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the ID of the message to which you want to send a reply.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "ModificationTimeUnixTimeInMs": 1518362561007
+        },
+        {
+            "Name": "Folder Name",
+            "Type": 0,
+            "DefaultValue": "Inbox",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify a comma-separated list of mailbox folders in which action should search for email. Note: you can set mail-specific folders, for example, \"[Gmail]/All Mail\" to search in all of the folders of Gmail mailbox. Additionally, folder name should match exactly the IMAP folder. If folder contains spaces, folder must be wrapped in double quotes.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "ModificationTimeUnixTimeInMs": 1518362561007
+        },
+        {
+            "Name": "Content",
+            "Type": 10,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the content of the reply.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "ModificationTimeUnixTimeInMs": 1518362561007
+        },
+        {
+            "Name": "Attachment Paths",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify a comma separated list of attachments file paths stored on the server for addition to the email.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "ModificationTimeUnixTimeInMs": 1518362705080
+        },
+        {
+            "Name": "Reply All",
+            "Type": 1,
+            "DefaultValue": true,
+            "Value": true,
+            "IsMandatory": false,
+            "Description": "If enabled, action will send a reply to all recipients related to the original email. Note: this parameter has priority over \"Reply To\" parameter.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1518362705080,
+            "ModificationTimeUnixTimeInMs": 1518362705080
+        },
+        {
+            "Name": "Reply To",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify a comma-separated list of emails to which you want to send this reply. If nothing is provided and \"Reply All\" is disabled, action will only send a reply to the sender of the email. If \"Reply All\" is enabled, action will ignore this parameter.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1518362561007,
+            "ModificationTimeUnixTimeInMs": 1518362561007
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

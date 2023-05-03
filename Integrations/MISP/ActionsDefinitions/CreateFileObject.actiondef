@@ -1,0 +1,106 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583,
+    "Creator": "admin",
+    "Description": "Create a File Object in MISP. Requires one of: FILENAME, MD5, SHA1, SHA256, SSDEEP to be provided or “Use Entities“ parameter set to true.",
+    "Id": -1,
+    "IntegrationIdentifier": "MISP",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"Object\": {\"id\": \"XXX\", \"name\": \"file\", \"meta-category\": \"file\", \"description\": \"File object describing a file with info\", \"template_uuid\": \"XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXX\", \"template_version\": \"XX\", \"event_id\": \"XX\", \"uuid\": \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\", \"timestamp\": \"1595435541\", \"distribution\": \"info\", \"sharing_group_id\": \"XX\", \"comment\": \"\", \"deleted\": false, \"first_seen\": null, \"last_seen\": null, \"Attribute\": [{\"id\": \"XXX\", \"event_id\": \"XX\", \"object_id\": \"XX\", \"object_relation\": \"filename\", \"category\": \"Category type\", \"type\": \"filename\", \"value1\": \"test.file\", \"value2\": \"\", \"to_ids\": false, \"uuid\": \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\", \"timestamp\": \"1594935541\", \"distribution\": \"info\", \"sharing_group_id\": \"XX\", \"comment\": \"\", \"deleted\": false, \"disable_correlation\": false, \"first_seen\": null, \"last_seen\": null, \"value\": \"test.file\"}]}}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1530451212583,
+    "Name": "Create File Misp Object",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ID or UUID of the event for which you want to add file objects.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Event ID",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the name of the file, which you want to add to the event.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "FILENAME",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the md5 of the file, which you want to add to the event.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "MD5",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the sha1 of the file, which you want to add to the event.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "SHA1",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the sha256 of the file, which you want to add to the event.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "SHA256",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the ssdeep of the file, which you want to add to the event. Format: size:hash:hash",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "SSDEEP",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, action will use entities in order to create objects. Supported entities: File name and hash. “Use Entities“ has priority over other parameters.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1530451212583,
+            "Name": "Use Entities",
+            "Type": 1,
+            "Value": false
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

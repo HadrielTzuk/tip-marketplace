@@ -1,0 +1,57 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Translate text using Google Translate.",
+    "Id": -1,
+    "IntegrationIdentifier": "GoogleTranslate",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Translate Text",
+    "DynamicResultsMetadata": [{
+        "ResultExample": "{\"data\":{\"translations\":[{\"translatedText\":\"La gran pirámide de giza\",\"detectedSourceLanguage\":\"en\"}]}}",
+        "ResultName": "JsonResult"
+    }],
+    "Parameters": [        
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the source language of the text. If nothing is provided, action will detect the language automatically.",
+            "Id": -1, 
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Source Language",
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828,
+            "CustomActionId": -1,
+            "DefaultValue": "en",
+            "Description": "Specify the desired language.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528797117828,
+            "Name": "Target Language",
+            "Type": 0,
+            "Value": "en"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the text that needs to be translated.",
+            "Id": -1, 
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Text",
+            "Type": 0, 
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

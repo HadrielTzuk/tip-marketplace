@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1536139421466,
+    "Creator": "Admin",
+    "Description": "Test Connectivity to XForce",
+    "Id": -1,
+    "IntegrationIdentifier": "XForce",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1536139421466,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from XForceManager import XForceManager\nfrom SiemplifyAction import SiemplifyAction\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('XForce')\n    address = conf['Address']\n    api_key = conf['Api Key']\n    api_password = conf['Api Password']\n    use_ssl = conf['Use SSL'].lower() == 'true'\n    xforce_manager = XForceManager(api_key, api_password, address, use_ssl)\n\n    connectivity = xforce_manager.test_connectivity()\n    output_message = \"Connected Successfully\"\n    siemplify.end(output_message, connectivity)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "ScriptResultName": "is_connected",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\":[]}"
+}

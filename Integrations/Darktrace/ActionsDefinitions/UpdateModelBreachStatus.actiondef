@@ -1,0 +1,45 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Update model breach status in Darktrace.",
+    "Id": -1,
+    "IntegrationIdentifier": "Darktrace",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Update Model Breach Status",
+    "Parameters": [
+        {
+            "Name": "Status",
+            "Type": 15,
+            "DefaultValue": "Acknowledged",
+            "Value": "Acknowledged",
+            "IsMandatory": true,
+            "Description": "Specify what status to set for the model breach.",
+            "OptionalValues": [
+                "Acknowledged",
+                "Unacknowledged"
+            ],
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1512975883225,
+            "ModificationTimeUnixTimeInMs": 1512975883225
+        },
+        {
+            "Name": "Model Breach ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the id of the model breach, for which you want to update status.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

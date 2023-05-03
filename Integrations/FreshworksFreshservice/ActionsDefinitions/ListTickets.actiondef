@@ -1,0 +1,111 @@
+{
+    "CreationTimeUnixTimeInMs": 1530451212583, 
+    "Creator": "admin", 
+    "Description": "List Freshservice tickets base on the specified search criteria. Note that action is not working on Siemplify entities.",
+    "Id": -1, 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"tickets\":[{\"subject\":\"XXXX\",\"group_id\":\"XXXXXX\",\"department_id\":\"XXXXX\",\"category\":\"XXXXX\",\"sub_category\":\"XXXXX\",\"item_category\":\"XXXXX\",\"requester_id\":\"XXXXXX\",\"responder_id\":\"XXXXX\",\"due_by\":\"XXXXXXXXXX\",\"fr_escalated\":\"XXXXX\",\"deleted\":\"XXXXX\",\"spam\":\"XXXXX\",\"email_config_id\":\"XXXXX\",\"fwd_emails\":[],\"reply_cc_emails\":[],\"cc_emails\":[],\"is_escalated\":\"XXXXX\",\"fr_due_by\":\"XXXXXXXXXX\",\"id\":\"XX\",\"priority\":\"X\",\"priority_name\":\"XXXXX\",\"status\":\"X\",\"status_name\":\"XXXXX\",\"source\":\"X\",\"source_name\":\"XXXXX\",\"created_at\":\"XXXXXXXXXX\",\"updated_at\":\"XXXXXXXXXX\",\"requested_for_id\":\"XXXXXXXXXX\",\"to_emails\":\"XXXXX\",\"type\":\"XXXXX\",\"description\":\"XXXXX\",\"description_text\":\"XXXXX\",\"custom_fields\":{\"test\":\"XXXXX\",\"my_field\":\"XXXXX\"},\"requester\":{\"email\":\"XXXXX.XXXXX@XXXXX.XX\",\"id\":\"XXXXXXXXXX\",\"mobile\":\"XXXXX\",\"name\":\"XXXXXXXXXX\",\"phone\":\"XXXXX\"}}]}]", 
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "FreshworksFreshservice", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1530451212583, 
+    "Name": "List Tickets",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970, 
+            "CustomActionId": -1, 
+            "DefaultValue": "All", 
+            "Description": "Specify ticket type to return.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1535381792970, 
+            "Name": "Ticket Type", 
+            "OptionalValues": [
+                "All", 
+                "Incident", 
+                "Service Request"
+            ], 
+            "Type": 15, 
+            "Value": "All"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the requester email of tickets to return.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Requester", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "False",
+            "Description": "If enabled, action will return additional stats on the tickets.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Include Stats",
+            "Type": 1,
+            "Value": "False"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": "", 
+            "Description": "Specify the timeframe to search tickets for.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Search for Last X hours", 
+            "Type": 0, 
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": 30, 
+            "Description": "Specify how many tickets should be returned per page for Freshservice pagination.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Rows per Page", 
+            "Type": 0, 
+            "Value": 30
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": 1, 
+            "Description": "Specify starting from which page tickets should be returned with Freshservice pagination.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Start at Page", 
+            "Type": 0, 
+            "Value": 1
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530451212583, 
+            "CustomActionId": -1, 
+            "DefaultValue": 30, 
+            "Description": "Specify how many tickets action should return in total.",
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1530451212583, 
+            "Name": "Max Rows to Return", 
+            "Type": 0, 
+            "Value": 30
+        }
+    ], 
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

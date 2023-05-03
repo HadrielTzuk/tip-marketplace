@@ -1,0 +1,51 @@
+{
+    "Description": "BMC Remedy ITSM is industry-leading, service management that transforms the best-practice ITSM principles you've come to appreciate from Remedy to provide unprecedented ROI on your choice of cloud.",
+    "DisplayName": "BMC Remedy ITSM",
+    "Identifier": "BMCRemedyITSM",
+    "MarketingDisplayName": "BMC Remedy ITSM",
+    "Categories": [
+        "ITSM",
+        "IT & Infrastructure"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "BMCRemedyITSM",
+            "PropertyName": "API Root",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://{IP}:{port}"
+        },
+        {
+            "IntegrationIdentifier": "BMCRemedyITSM",
+            "PropertyDisplayName": "Username",
+            "PropertyName": "Username",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "BMCRemedyITSM",
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "BMCRemedyITSM",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": true,
+            "Value": true
+        }
+    ],
+    "PythonVersion": 2,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg id=\"Layer_1\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path d=\"M18,13.87l-2.21-1.34L18,11.19a1.91,1.91,0,0,0,1-1.63,2,2,0,0,0-1-1.64L8.78,2.33A2.09,2.09,0,0,0,7.7,2,1.75,1.75,0,0,0,6,3.93v3a4,4,0,0,0,1.74,3.11l4.07,2.46L7.74,15A4,4,0,0,0,6,18.1v3A1.76,1.76,0,0,0,7.7,23a2.52,2.52,0,0,0,1.08-.3L18,17.14a1.84,1.84,0,0,0,0-3.27ZM8.78,8.26A1.93,1.93,0,0,1,8,6.9V4.22l8.71,5.3L13.8,11.29ZM8,20.74V18.08a1.93,1.93,0,0,1,.75-1.36l5-3,2.94,1.77Z\"/></svg>",
+    "Version": 3.0,
+    "IsAvailableForCommunity": true,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/bmc-remedy-itsm"
+}

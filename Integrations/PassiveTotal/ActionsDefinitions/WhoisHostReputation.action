@@ -1,0 +1,23 @@
+{
+    "CreationTimeUnixTimeInMs": 1512725413391, 
+    "Creator": "admin", 
+    "Description": "Request host reputation from RiskIQ ", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"results\": [{\"recordHash\": \"0aad10e23953813834d28098db21c0902f01190c3eba7e38869f798ca56abda7\", \"resolve\": \"1.1.1.1\", \"recordType\": \"A\", \"resolveType\": \"ip\", \"value\": \"test.com\", \"source\": [\"riskiq\"], \"lastSeen\": \"2013-09-12 13:08:07\", \"collected\": \"2019-01-24 12:36:12\", \"firstSeen\": \"2013-09-12 13:08:07\"}], \"totalRecords\": 5099, \"queryValue\": \"test.com\", \"pager\": \"None\", \"queryType\": \"domain\", \"firstSeen\": \"2009-09-01 19:59:32\", \"lastSeen\": \"2019-01-24 12:36:11\"}, \"Entity\": \"test.com\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "PassiveTotal", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1512725413391, 
+    "Name": "Whois Host Reputation", 
+    "Parameters": [], 
+    "Script": "# Imports\nfrom SiemplifyAction import *\nfrom PassiveTotalManager import PassiveTotal\n\n# Consts\nHOSTNAME = 'HOSTNAME'\n\n# Action Contenta\nsiemplify = SiemplifyAction()\n\nconfiguration = siemplify.get_configuration('PassiveTotal')\npassive_total = PassiveTotal(user=configuration['Username'], key=configuration['Api_Key'])\nscope_entities = [entity for entity in siemplify.target_entities if entity.entity_type == HOSTNAME\n                      and not entity.is_internal]\nentities_to_update = []\noutput_message = ''\nresult_value = False\n\nfor entity in scope_entities:\n        whois_dict = passive_total.get_dns_dict(entity.identifier)\n        whois_csv = passive_total.get_dns_csv(entity.identifier)\n        # Enrich entity with the scan result.]\n        if whois_dict:\n            entity.additional_properties.update(whois_dict)\n            entities_to_update.append(entity)\n        # Display result output\n        if whois_csv and len(whois_csv) > 1:\n            siemplify.result.add_entity_table(entity.identifier, whois_csv)\n\n# Update Entities\nsiemplify.update_entities(entities_to_update)\n# Arrange Action Output.\nif len(scope_entities) == 0:\n    output_message = 'No entities for scan.'\nelse:\n    if len(entities_to_update) == 0:\n        output_message = 'No entities were enriched.'\n    else:\n        for entity in entities_to_update:\n            if len(output_message) == 0:\n                output_message = entity.identifier\n            else:\n                output_message += ', {0}'.format(entity.identifier)\n        output_message += ' enriched by WhoIs RISKIQ.'\nsiemplify.end(output_message, result_value)\n", 
+    "ScriptResultName": "<Entity:Result>", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

@@ -1,0 +1,182 @@
+[
+    {
+        "ChangeDescription": "Fixed a bug, where action wouldn't work even with valid action parameters.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Add Comment To Incident",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1504"
+    },
+    {
+        "ChangeDescription": "Fixed a bug, where action wouldn't work even with valid hashes.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Enrich File Hash",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1626"
+    },
+    {
+        "ChangeDescription": "Fixed a bug, where action wouldn't work with valid queries.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Get Events Free Query",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1694"
+    },
+    {
+        "ChangeDescription": "Fixed a bug, where action wouldn't work with valid action parameters.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Close Incident Action",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1720"
+    },
+    {
+        "ChangeDescription": "Fixed a bug, where action wouldn't work even with valid action parameters.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Get Events Free Entity",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1744"
+    },
+    {
+        "ChangeDescription": "Added a special message that Symantec ATP doesn't support MD5 hashes in whitelist.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Add To WhiteList",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2009"
+    },
+    {
+        "ChangeDescription": "Fixed a bug, where action wouldn't find the existing host.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Isolate Endpoint",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1745"
+    },
+    {
+        "ChangeDescription": "Fixed a bug, where action wouldn't find the existing host.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Rejoin Endpoint",
+        "ItemType": "Action",
+        "New": false,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-1745"
+    },
+    {
+        "ChangeDescription": "New action Update Incident Resolution",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Update Incident Resolution",
+        "ItemType": "Action",
+        "New": true,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2840"
+    },
+    {
+        "ChangeDescription": "New action Delete BlackList Policy",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Delete BlackList Policy",
+        "ItemType": "Action",
+        "New": true,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2841"
+    },
+    {
+        "ChangeDescription": "New action Get Incident Comments",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Get Incident Comments",
+        "ItemType": "Action",
+        "New": true,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2842"
+    },
+    {
+        "ChangeDescription": "New connector \"Incident Connector\"",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "Symantec ATP - Incidents Connector",
+        "ItemType": "Connector",
+        "New": true,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2855"
+    },
+    {
+        "ChangeDescription": "Removed default value for Commands IDs parameter.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "Get Commands Status",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1596449631,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-3346"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Symantec ATP",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": " Fixed a bug where the integration's SVG logo file was causing unexpected behaviors in specific cases.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Symantec ATP",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1617794120,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8062"
+    },
+    {
+        "ChangeDescription": "Incidents Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Incidents Connector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1657087429,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11917"
+    }
+]

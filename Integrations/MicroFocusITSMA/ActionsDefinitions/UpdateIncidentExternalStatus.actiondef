@@ -1,0 +1,41 @@
+{
+    "CreationTimeUnixTimeInMs": 1529503598490,
+    "Creator": "admin",
+    "Description": "Update the external status for an incident",
+    "Id": -1,
+    "IntegrationIdentifier": "MicroFocusITSMA",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1529503598490,
+    "Name": "Update Incident External Status",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1529503598490,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The ID of the incident",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529503598490,
+            "Name": "Incident ID",
+            "Type": 0,
+            "Value": null
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1529503598490,
+            "CustomActionId": -1,
+            "DefaultValue": null,
+            "Description": "The updated external status of the incident",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1529503598490,
+            "Name": "Status",
+            "Type": 0,
+            "Value": null
+        }
+    ],
+    "Script": "from SiemplifyAction import SiemplifyAction\nfrom MicroFocusITSMAManager import MicroFocusITSMAManager\n\n\nITSMA_PROVIDER = 'MicroFocusITSMA'\n\n\ndef main():\n    # Configuration\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration(ITSMA_PROVIDER)\n    itsma_manager = MicroFocusITSMAManager(conf['API Root'], conf['Username'], conf['Password'], conf['Tenant ID'],\n                                           conf['External System'], conf['External ID'], conf['Verify SSL'])\n\n    # Parameters.\n    incident_id = siemplify.parameters.get('Incident ID')\n    status = siemplify.parameters('Status')\n\n    result_value = itsma_manager.update_external_incident_status(incident_id, status)\n\n    if result_value:\n        output_message = 'An incident with id \"{0}\" external status was change to {1}'.format(incident_id, status)\n    else:\n        output_message = 'No ticket was updated.'\n\n    siemplify.end(output_message, result_value)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "ScriptResultName": "is_succeed",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,87 @@
+{
+    "CreationTimeUnixTimeInMs": 1524559211168,
+    "Creator": "admin",
+    "Description": "List events related to entities in LogRhythm. Supported entities: Hostname, IP Address, User, CVE, Hash, URL. Note: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"EntityIdentifier\", \"EntityResult\": [{\"kBytes\":1111.021111625,\"kBytesIn\":2500,\"kBytesOut\":21.011111625,\"outboundKBytes\":21.011111625,\"impactedHostTotalKBytes\":1111.021111625,\"keyField\":\"messageId\",\"count\":1,\"classificationId\":1111,\"classificationName\":\"Error\",\"classificationTypeName\":\"Operations\",\"commonEventName\":\"HTTP 504 : Server Error - Gateway Time-Out\",\"commonEventId\":1111,\"direction\":3,\"directionName\":\"External\",\"entityId\":2,\"entityName\":\"EchoTestEntity\",\"rootEntityId\":2,\"rootEntityName\":\"EchoTestEntity\",\"impactedEntityId\":-100,\"impactedEntityName\":\"Global Entity\",\"impactedHost\":\"111.1.1.11\",\"impactedInterface\":\"0\",\"impactedIp\":\"111.1.1.11\",\"impactedPort\":80,\"impactedZoneName\":\"External\",\"indexedDate\":1621111021111,\"insertedDate\":1621111431111,\"logDate\":1621111139789,\"logMessage\":\"CISCONGFW EVENT Ev_Id=436 Ev\",\"logSourceHost\":\"EchoTestHost\",\"logSourceHostId\":2,\"logSourceHostName\":\"EchoTestHost\",\"logSourceId\":15,\"logSourceName\":\"Echo_2_1000107\",\"logSourceType\":1000007,\"logSourceTypeName\":\"Flat File - Cisco NGFW\",\"messageId\":\"23066\",\"messageTypeEnum\":2,\"mpeRuleId\":1176829,\"mpeRuleName\":\"HTTP 504 : Server Error : Gateway Timeout\",\"normalDate\":1621111431191,\"normalDateMin\":1621111431191,\"normalMsgDateMax\":1621111431191,\"normalDateHour\":1629122400000,\"originEntityId\":-100,\"originEntityName\":\"Global Entity\",\"originHostId\":-1,\"originHost\":\"111.1.1.11\",\"originInterface\":\"0\",\"originIp\":\"111.1.1.11\",\"originPort\":14042,\"originZone\":3,\"originZoneName\":\"External\",\"priority\":38,\"process\":\"5\",\"processId\":300003,\"protocolId\":6,\"protocolName\":\"TCP\",\"serviceId\":1388,\"serviceName\":\"HTTP\",\"portProtocol\":\"HTTP\",\"session\":\"436\",\"severity\":\"57\",\"url\":\"http://www.google.com/\",\"vendorMessageId\":\"504\",\"version\":\"2\",\"status\":\"504\"}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "LogRhythm",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524559211168,
+    "Name": "List Entity Events",
+    "Parameters": [
+        {
+            "Name": "Time Frame",
+            "Type": 15,
+            "Value": "Last Hour",
+            "DefaultValue": "Last Hour",
+            "IsMandatory": false,
+            "Description": "Specify a time frame for the results. If “Custom” is selected, you also need to provide “Start Time”.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "OptionalValues": [
+                "Last Hour",
+                "Last 6 Hours",
+                "Last 24 Hours",
+                "Last Week",
+                "Last Month",
+                "Custom"
+            ]
+        },
+        {
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specify the start time for the results. This parameter is mandatory, if “Custom” is selected for the “Time Frame” parameter. Format: ISO 8601. Example: 2021-04-23T12:38Z",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "End Time",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specify the end time for the results. Format: ISO 8601. If nothing is provided and “Custom” is selected for the “Time Frame” parameter then this parameter will use current time.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Sort Order",
+            "Type": 15,
+            "Value": "Datetime ASC",
+            "DefaultValue": "Datetime ASC",
+            "IsMandatory": false,
+            "Description": "Specify the sorting logic for the query.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "OptionalValues": [
+                "Datetime ASC",
+                "Datetime DESC",
+                "Risk ASC",
+                "Risk DESC"
+            ]
+        },
+        {
+            "Name": "Max Events To Return",
+            "Type": 0,
+            "Value": "50",
+            "DefaultValue": "50",
+            "IsMandatory": false,
+            "Description": "Specify how many events to return. Default: 50",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\", \"DestinationURL\", \"FILEHASH\", \"USERUNIQNAME\", \"CVE\"]}",
+    "Version": 1.0,
+    "IsAsync": true
+}

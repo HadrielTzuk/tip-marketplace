@@ -1,0 +1,34 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Stop a subscription to a chosen Office 365 Management API content type. Note: When a subscription is stopped, you will no longer receive notifications and you will not be able to retrieve available content. If the subscription is later restarted, you will have access to new content from that point forward. You will not be able to retrieve content that was available between the time the subscription was stopped and restarted.",
+    "Id": -1,
+    "IntegrationIdentifier": "Office365ManagementAPI",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Stop Subscription",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1522665785536,
+            "CustomActionId": -1,
+            "DefaultValue": "Select content type",
+            "Description": "Specify for which content type to stop a subscription.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1522665785536,
+            "Name": "Stop a Subscription for",
+            "Type": 15,
+            "Value": "Select content type",
+            "OptionalValues": [
+                "Select content type",
+                "DLP.All",
+                "Audit.General"
+            ]
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

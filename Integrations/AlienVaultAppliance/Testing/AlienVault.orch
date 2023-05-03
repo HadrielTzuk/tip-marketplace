@@ -1,0 +1,163 @@
+{
+  "Identifier": "04ae3f4b-f7cb-4333-ad51-5dd097fbc5ee",
+  "IsEnable": true,
+  "Version": 0.0,
+  "IsArchived": false,
+  "IsAutomatic": true,
+  "Name": "AlienVault",
+  "Category": 1,
+  "Description": null,
+  "Priority": 3,
+  "Creator": "admin",
+  "Steps": [
+    {
+      "Identifier": "ca3471fd-bbc3-4a67-9b8e-04d110f711af",
+      "ParentWorkflowIdentifier": "04ae3f4b-f7cb-4333-ad51-5dd097fbc5ee",
+      "ParentStepIdentifiers": [],
+      "ParentStepIdentifier": "",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "AlienVault_Ping_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "AlienVault_Ping",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "ca3471fd-bbc3-4a67-9b8e-04d110f711af",
+          "ParentWorkflowIdentifier": "04ae3f4b-f7cb-4333-ad51-5dd097fbc5ee",
+          "Name": "ScriptName",
+          "Value": "AlienVault_Ping",
+          "CreationTimeUnixTimeInMs": 1520431141016,
+          "ModificationTimeUnixTimeInMs": 1520431141016
+        },
+        {
+          "ParentStepIdentifier": "ca3471fd-bbc3-4a67-9b8e-04d110f711af",
+          "ParentWorkflowIdentifier": "04ae3f4b-f7cb-4333-ad51-5dd097fbc5ee",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520431141016,
+          "ModificationTimeUnixTimeInMs": 1520431141016
+        },
+        {
+          "ParentStepIdentifier": "ca3471fd-bbc3-4a67-9b8e-04d110f711af",
+          "ParentWorkflowIdentifier": "04ae3f4b-f7cb-4333-ad51-5dd097fbc5ee",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520431137317,
+          "ModificationTimeUnixTimeInMs": 1520431137317
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520431137317,
+      "ModificationTimeUnixTimeInMs": 1520431137317
+    },
+    {
+      "Identifier": "f8e8514a-e2ec-4ea3-980e-281b9671095a",
+      "ParentWorkflowIdentifier": "04ae3f4b-f7cb-4333-ad51-5dd097fbc5ee",
+      "ParentStepIdentifiers": [
+        "b338b653-4df6-48da-ae20-c167aaf7c1d6"
+      ],
+      "ParentStepIdentifier": "b338b653-4df6-48da-ae20-c167aaf7c1d6",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "AlienVault_Enrich Vulnerabilities_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "AlienVault_Enrich Vulnerabilities",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "f8e8514a-e2ec-4ea3-980e-281b9671095a",
+          "ParentWorkflowIdentifier": "04ae3f4b-f7cb-4333-ad51-5dd097fbc5ee",
+          "Name": "ScriptName",
+          "Value": "AlienVault_Enrich Vulnerabilities",
+          "CreationTimeUnixTimeInMs": 1520431141017,
+          "ModificationTimeUnixTimeInMs": 1520431141017
+        },
+        {
+          "ParentStepIdentifier": "f8e8514a-e2ec-4ea3-980e-281b9671095a",
+          "ParentWorkflowIdentifier": "04ae3f4b-f7cb-4333-ad51-5dd097fbc5ee",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520431141017,
+          "ModificationTimeUnixTimeInMs": 1520431141017
+        },
+        {
+          "ParentStepIdentifier": "f8e8514a-e2ec-4ea3-980e-281b9671095a",
+          "ParentWorkflowIdentifier": "04ae3f4b-f7cb-4333-ad51-5dd097fbc5ee",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520431140035,
+          "ModificationTimeUnixTimeInMs": 1520431140035
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520431140034,
+      "ModificationTimeUnixTimeInMs": 1520431140034
+    },
+    {
+      "Identifier": "b338b653-4df6-48da-ae20-c167aaf7c1d6",
+      "ParentWorkflowIdentifier": "04ae3f4b-f7cb-4333-ad51-5dd097fbc5ee",
+      "ParentStepIdentifiers": [
+        "ca3471fd-bbc3-4a67-9b8e-04d110f711af"
+      ],
+      "ParentStepIdentifier": "ca3471fd-bbc3-4a67-9b8e-04d110f711af",
+      "PreviousResultCondition": "{}",
+      "InstanceName": "AlienVault_Enrich Assets_1",
+      "IsAutomatic": true,
+      "Name": null,
+      "IsSkippable": true,
+      "Description": null,
+      "ActionProvider": "Scripts",
+      "ActionName": "AlienVault_Enrich Assets",
+      "Parameters": [
+        {
+          "ParentStepIdentifier": "b338b653-4df6-48da-ae20-c167aaf7c1d6",
+          "ParentWorkflowIdentifier": "04ae3f4b-f7cb-4333-ad51-5dd097fbc5ee",
+          "Name": "ScriptName",
+          "Value": "AlienVault_Enrich Assets",
+          "CreationTimeUnixTimeInMs": 1520431141017,
+          "ModificationTimeUnixTimeInMs": 1520431141017
+        },
+        {
+          "ParentStepIdentifier": "b338b653-4df6-48da-ae20-c167aaf7c1d6",
+          "ParentWorkflowIdentifier": "04ae3f4b-f7cb-4333-ad51-5dd097fbc5ee",
+          "Name": "ScriptParametersEntityFields",
+          "Value": "{}",
+          "CreationTimeUnixTimeInMs": 1520431141017,
+          "ModificationTimeUnixTimeInMs": 1520431141017
+        },
+        {
+          "ParentStepIdentifier": "b338b653-4df6-48da-ae20-c167aaf7c1d6",
+          "ParentWorkflowIdentifier": "04ae3f4b-f7cb-4333-ad51-5dd097fbc5ee",
+          "Name": "SelectedScopeName",
+          "Value": "All entities",
+          "CreationTimeUnixTimeInMs": 1520431138765,
+          "ModificationTimeUnixTimeInMs": 1520431138765
+        }
+      ],
+      "CreationTimeUnixTimeInMs": 1520431138765,
+      "ModificationTimeUnixTimeInMs": 1520431138765
+    }
+  ],
+  "Triggers": [
+    {
+      "Identifier": "214c5494-516e-483d-bda4-21c9e66d7f8e",
+      "IsEnabled": true,
+      "DefinitionIdentifier": "04ae3f4b-f7cb-4333-ad51-5dd097fbc5ee",
+      "Type": 8,
+      "Value": "All",
+      "MatchType": 0,
+      "WorkflowName": "AlienVault",
+      "AllEnvironments": "",
+      "Id": 49,
+      "CreationTimeUnixTimeInMs": 1520431141016,
+      "ModificationTimeUnixTimeInMs": 1520431141016
+    }
+  ],
+  "AllEnvironments": "",
+  "Id": 49,
+  "CreationTimeUnixTimeInMs": 1520431128245,
+  "ModificationTimeUnixTimeInMs": 1520431128245
+}

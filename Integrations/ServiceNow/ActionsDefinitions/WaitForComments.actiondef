@@ -1,0 +1,93 @@
+{
+    "CreationTimeUnixTimeInMs": 1658212904165,
+    "Creator": "Admin",
+    "Description": "Wait for comments related to a specific table record in ServiceNow. Note: Action is running as async, please adjust script timeout value in Siemplify IDE for action as needed.",
+    "Id": -1,
+    "IntegrationIdentifier": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1658212904165,
+    "Name": "Wait For Comments",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"sys_id\":\"e5039e6097211110c8cb32xxxxxxxxxx\",\"sys_created_on\":\"2022-08-23 05:27:43\",\"name\":\"incident\",\"element_id\":\"40a5d77b97411110c8cb32xxxxxxxxxx\",\"sys_tags\":\"\",\"value\":\"test comment\",\"sys_created_by\":\"admin\",\"element\":\"comments\"},{\"sys_id\":\"8e03da6097211110c8cb32xxxxxxxxxx\",\"sys_created_on\":\"2022-08-23 05:27:46\",\"name\":\"incident\",\"element_id\":\"40a5d77b97411110c8cb32xxxxxxxxxx\",\"sys_tags\":\"\",\"value\":\"new comment\",\"sys_created_by\":\"admin\",\"element\":\"comments\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Table Name",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the name of the table in which you want to wait for a comment or work note. Example: incident.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1658212904165,
+            "ModificationTimeUnixTimeInMs": 1658212904165
+        },
+        {
+            "Name": "Record Sys ID",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the record ID in which you want to wait for a comment or work note.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1658212904165,
+            "ModificationTimeUnixTimeInMs": 1658212904165
+        },
+        {
+            "Name": "Type",
+            "Type": 15,
+            "Value": "Comment",
+            "DefaultValue": "Comment",
+            "IsMandatory": true,
+            "Description": "Specify for what type of object action needs to wait.",
+            "OptionalValues": [
+                "Comment",
+                "Work Note"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1658212904165,
+            "ModificationTimeUnixTimeInMs": 1658212904165
+        },
+        {
+            "Name": "Wait Mode",
+            "Type": 15,
+            "Value": "Until Timeout",
+            "DefaultValue": "Until Timeout",
+            "IsMandatory": true,
+            "Description": "Specify the wait mode for the action. If \"Until Timeout\" is selected, action will wait until and return all of the comments in that timeframe. If \"Until First Message\" is selected, action will wait until a new message appears after action execution. If \"Until Specific Text\" is selected, action will wait until there is a message that is equal to the string provided in the \"Text\" parameter. Note: \"Text\" parameter is mandatory, if \"Until Specific Text\" is provided.",
+            "OptionalValues": [
+                "Until Timeout",
+                "Until First Message",
+                "Until Specific Text"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1658212904165,
+            "ModificationTimeUnixTimeInMs": 1658212904165
+        },
+        {
+            "Name": "Text",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specify the text for which action needs to wait. Note: this parameter is only relevant, if \"Until Specific Text\" is selected for \"Wait Mode\" parameter.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1533725706168,
+            "ModificationTimeUnixTimeInMs": 1533725706168
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": true
+}

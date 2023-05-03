@@ -1,0 +1,120 @@
+{
+    "CreationTimeUnixTimeInMs": 1518545061791,
+    "Creator": "admin",
+    "Description": "Run forensic scan on the endpoint in the Illusive Networks. Works with IP and Hostname entities.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"some_entity\", \"EntityResult\": {\"host_info\": {\"osName\": \"Windows 10\", \"machineType\": \"Workstation\", \"host\": \"xxx.yyy.local\", \"loggedInUser\": \"No User is Logged-in\", \"userProfiles\": [\"admin\", \"Administrator\"], \"operatingSystemType\": \"Windows\", \"timeDeviationInHours\": -8.0, \"daylightSavingDeviationInHours\": 0.0}, \"prefetch_info\": [{\"details\": {\"MD5\": \"N/A\", \"SHA256\": \"N/A\", \"dataSource\": \"Prefetch\", \"isFileExists\": \"No\", \"lastExecutionTime\": \"2021-03-08T02:32:07.123-08:00\", \"lastRunTimes\": [\"2021-03-01T02:25:26.533-08:00\", \"2021-02-18T18:23:10.450-08:00\", \"2021-02-18T17:09:42.157-08:00\", \"2021-02-17T18:23:58.376-08:00\"], \"prefetchFileName\": \"C:\\\\Windows\\\\Prefetch\\\\AM_DELTA.EXE-3A6EE7FD.pf\", \"relatedModules\": [\"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\MPSIGSTUB.EXE\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\NTDLL.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SOFTWAREDISTRIBUTION\\\\DOWNLOAD\\\\INSTALL\\\\AM_DELTA.EXE\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\KERNEL32.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\KERNELBASE.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\LOCALE.NLS\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\ADVAPI32.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\MSVCRT.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\SECHOST.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\RPCRT4.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\VERSION.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\BCRYPTPRIMITIVES.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\$MFT\"], \"runCount\": 0, \"version\": 30}, \"fileName\": \"C:\\\\WINDOWS\\\\SOFTWAREDISTRIBUTION\\\\DOWNLOAD\\\\INSTALL\\\\AM_DELTA.EXE\"}, {\"details\": {\"MD5\": \"N/A\", \"SHA256\": \"N/A\", \"dataSource\": \"Prefetch\", \"isFileExists\": \"No\", \"lastExecutionTime\": \"2021-02-15T18:23:20.701-08:00\", \"lastRunTimes\": [], \"prefetchFileName\": \"C:\\\\Windows\\\\Prefetch\\\\AM_DELTA_PATCH_1.331.1067.0.E-C66E0B1B.pf\", \"relatedModules\": [\"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\NTDLL.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SOFTWAREDISTRIBUTION\\\\DOWNLOAD\\\\INSTALL\\\\AM_DELTA_PATCH_1.331.1067.0.EXE\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\KERNEL32.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\KERNELBASE.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\LOCALE.NLS\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\ADVAPI32.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\MSVCRT.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\SECHOST.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\RPCRT4.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\VERSION.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\BCRYPTPRIMITIVES.DLL\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\SYSTEM32\\\\MPSIGSTUB.EXE\", \"\\\\VOLUME{01d7035e6f98cb77-266fcfdc}\\\\WINDOWS\\\\APPPATCH\\\\SYSMAIN.SDB\"], \"runCount\": 0, \"version\": 30}, \"fileName\": \"C:\\\\WINDOWS\\\\SOFTWAREDISTRIBUTION\\\\DOWNLOAD\\\\INSTALL\\\\AM_DELTA_PATCH_1.331.1067.0.EXE\"}], \"installed_programs_info\": [{\"details\": {\"MD5\": \"N/A\", \"SHA256\": \"N/A\", \"dataSource\": \"Add Remove Programs\", \"displayName\": \"Microsoft Update Health Tools\", \"isFileExists\": \"No\", \"lastWriteTime\": \"2021-02-20T14:18:49.409-08:00\", \"version\": \"2.75.0.0\"}, \"fileName\": \"MsiExec.exe /X{BAB9FCC5-1506-4B4F-BFCA-EDE0BDB86C21}\"}], \"startup_processes\": [{\"Caption\": \"OneDriveSetup\", \"Command\": \"C:\\\\Windows\\\\SysWOW64\\\\OneDriveSetup.exe /thfirstsetup\", \"Description\": \"OneDriveSetup\", \"Location\": \"HKU\\\\S-1-5-19\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run\", \"Name\": \"OneDriveSetup\", \"SettingID\": \"\", \"User\": \"NT AUTHORITY\\\\LOCAL SERVICE\", \"UserSID\": \"S-1-5-19\"}, {\"Caption\": \"OneDriveSetup\", \"Command\": \"C:\\\\Windows\\\\SysWOW64\\\\OneDriveSetup.exe /thfirstsetup\", \"Description\": \"OneDriveSetup\", \"Location\": \"HKU\\\\S-1-5-20\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run\", \"Name\": \"OneDriveSetup\", \"SettingID\": \"\", \"User\": \"NT AUTHORITY\\\\NETWORK SERVICE\", \"UserSID\": \"S-1-5-20\"}], \"running_processes\": [{\"MD5\": \"N/A\", \"SHA256\": \"N/A\", \"administratorPrivilleges\": \"True\", \"commandline\": \"\", \"processID\": 4, \"processName\": \"N/A\", \"processParent\": \"N/A\", \"processPath\": \"N/A\", \"session\": \"RDP-Tcp (0)\", \"sessionId\": 0, \"startTime\": \"2021-02-22T02:04:29.428-08:00\", \"user\": \"NT AUTHORITY\\\\SYSTEM\", \"userSid\": \"S-1-5-18\"}, {\"MD5\": \"N/A\", \"SHA256\": \"5BE0DE7F915BA819D4BA048DB7A2A87F6F3253FDD4865DC418181A0D6A031CAA\", \"administratorPrivilleges\": \"True\", \"commandline\": \"C:\\\\Windows\\\\system32\\\\svchost.exe -k DcomLaunch -p -s LSM\", \"processID\": 8, \"processName\": \"svchost.exe\", \"processParent\": \"N/A\", \"processPath\": \"C:\\\\Windows\\\\System32\\\\svchost.exe\", \"session\": \"RDP-Tcp (0)\", \"sessionId\": 0, \"startTime\": \"2021-02-22T02:06:35.629-08:00\", \"user\": \"NT AUTHORITY\\\\SYSTEM\", \"userSid\": \"S-1-5-18\"}]}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "IllusiveNetworks",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1518545061791,
+    "Name": "Run Forensic Scan",
+    "Parameters": [        
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": true, 
+            "Description": "If enabled, action will return system information.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Include System Information", 
+            "Type": 1, 
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": true, 
+            "Description": "If enabled, action will return information about prefetch files.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Include Prefetch Files Information", 
+            "Type": 1, 
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": false, 
+            "Description": "If enabled, action will return information about add-remove programs.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Include Add-Remove Programs Information", 
+            "Type": 1, 
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": false, 
+            "Description": "If enabled, action will return information about startup processes.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Include Startup Processes Information", 
+            "Type": 1, 
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": false, 
+            "Description": "If enabled, action will return information about running processes.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Include Running Processes Information", 
+            "Type": 1, 
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": false, 
+            "Description": "If enabled, action will return information about user-assist programs.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Include User-Assist Programs Information", 
+            "Type": 1, 
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": false, 
+            "Description": "If enabled, action will return information about powershell history.", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Include Powershell History Information", 
+            "Type": 1, 
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1528797117828, 
+            "CustomActionId": -1, 
+            "DefaultValue": 50, 
+            "Description": "Specify how many items to return. If nothing is provided, action will return everything.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1528797117828, 
+            "Name": "Max Items To Return", 
+            "Type": 0, 
+            "Value": 50
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\",\"ADDRESS\"]}",
+    "IsAsync": true
+}

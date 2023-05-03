@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1522587155374, 
+    "Creator": "admin", 
+    "Description": "Get threats associated to a particular hostname or an IP address", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [{\"name\": \"DESKTOP-CL0OJIN\", \"ip_addresses\": [\"169.254.195.84\", \"192.168.2.100\"], \"mac_addresses\": [\"02-00-4C-4F-4F-50\", \"CC-2F-71-24-2D-59\"], \"id\": \"0805c701-009b-4d2a-8d52-142e3af38c33\", \"state\": \"OffLine\", \"date_found\": \"2018-03-28T20:34:44\", \"file_status\": \"Quarantined\", \"agent_version\": \"2.0.1480\", \"file_path\": \"C:\\\\Users\\\\Daniel\\\\Downloads\\\\mpress.219\\\\mpress.exe\", \"policy_id\": \"1429b00e-50bc-4038-bcae-04935713aabf\"}], \"Entity\": \"2852680c94a9d68cdab285012d9328a1ceca290db60c9e35155c2bb3e46a41b4\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "Cylance", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1522587155374, 
+    "Name": "Get Threat Devices", 
+    "Parameters": [], 
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom SiemplifyDataModel import EntityTypes\r\nfrom CylanceManager import CylanceManager\r\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv, add_prefix_to_dict\r\n\r\nSCRIPT_NAME = \"Cylance - GetThreatDevices\"\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n    siemplify.script_name = SCRIPT_NAME\r\n    conf = siemplify.get_configuration('Cylance')\r\n\r\n    server_address = conf['Server Address']\r\n    application_secret = conf['Application Secret']\r\n    application_id = conf['Application ID']\r\n    tenant_identifier = conf['Tenant Identifier']\r\n\r\n    cm = CylanceManager(server_address, application_id, application_secret,\r\n                        tenant_identifier)\r\n\r\n    affected_entities = []\r\n\r\n    for entity in siemplify.target_entities:\r\n        try:\r\n            if entity.entity_type == EntityTypes.FILEHASH:\r\n                threats = cm.get_threat_devices(entity.identifier)\r\n\r\n                if threats:\r\n                    threats = map(dict_to_flat, threats)\r\n                    csv_output = cm.construct_csv(threats)\r\n\r\n                    siemplify.result.add_entity_table('Cylance Threat Devices',\r\n                                                      csv_output)\r\n                    affected_entities.append(entity)\r\n\r\n        except Exception as e:\r\n            # An error occurred - skip entity and continue\r\n            siemplify.LOGGER.error(\r\n                \"An error occurred on entity: {}.\\n{}.\".format(\r\n                    entity.identifier, str(e)\r\n                ))\r\n            siemplify.LOGGER._log.exception(e)\r\n\r\n    if affected_entities:\r\n        entities_names = [entity.identifier for entity in affected_entities]\r\n\r\n        output_message = 'Threat devices were found for the following entites:\\n' + '\\n'.join(\r\n            entities_names)\r\n    else:\r\n        output_message = 'No threat devices were found.'\r\n\r\n    siemplify.end(output_message, 'true')\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 1.0
+}

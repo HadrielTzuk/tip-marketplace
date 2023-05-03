@@ -1,0 +1,22 @@
+{
+    "CreationTimeUnixTimeInMs": 1510668139220, 
+    "Creator": "admin", 
+    "Description": "Retrieve DAT information from the endpoints in McAfee ePO. Supported entities: Hostname, IP.",
+    "Id": -1,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": {\"DAT_version\": \"9455.0000\"}, \"Entity\": \"1.1.1.1\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "IntegrationIdentifier": "McAfeeEPO",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1510668139221,
+    "Name": "Get Dat Version",
+    "Parameters": [],
+    "ScriptResultName": "Dat Version",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}",
+    "Type": 0,
+    "Version": 2.0
+}

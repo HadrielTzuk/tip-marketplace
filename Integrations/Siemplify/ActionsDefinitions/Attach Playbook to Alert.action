@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1514384915973,
+    "Creator": "admin",
+    "Description": "Attach a specific playbook to an alert",
+    "Id": -1,
+    "IntegrationIdentifier": "Siemplify",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1514384915973,
+    "Name": "Attach Playbook to Alert",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1514456986574,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Playbook, which should be attached to an alert.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1514456986574,
+            "Name": "Playbook Name",
+            "Type": 2,
+            "Value": ""
+        }
+    ],
+    "ScriptResultName": null,
+    "Type": 0,
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1532528812506, 
+    "Creator": "admin", 
+    "Description": "Check if specific TCP port is open", 
+    "Id": -1, 
+    "IntegrationIdentifier": "MXToolBox", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1532528812506, 
+    "Name": "TCP Port Status", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1532528812506, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "The port number to check", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1532528812506, 
+            "Name": "Port Number", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom MXToolBoxManager import MXToolBoxManager\nfrom SiemplifyUtils import dict_to_flat, construct_csv\n\nMXTOOLBOX_PROVIDER = 'MXToolBox'\nSCRIPT_NAME = 'MXToolBox_port_status'\n\n\ndef main():\n    # Configurations.\n    siemplify = SiemplifyAction()\n    siemplify.script_name = SCRIPT_NAME\n    conf = siemplify.get_configuration(MXTOOLBOX_PROVIDER)\n    verify_ssl = True if conf['Verify SSL'] == 'true' else False\n    mx_tool_box_manager = MXToolBoxManager(conf['API Root'], conf['API Key'], verify_ssl)\n    # Parameters.\n    port_number = siemplify.parameters['Port Number']\n\n    # Variables.\n    errors = []\n    port_statuses = []\n    success_entities = []\n\n    target_entities = [entity for entity in siemplify.target_entities if entity.entity_type == EntityTypes.HOSTNAME or\n                       entity.entity_type == EntityTypes.ADDRESS]\n\n    for entity in target_entities:\n        try:\n            port_status = mx_tool_box_manager.get_port_status(entity.identifier, port_number)\n            port_statuses.append(port_status)\n            if port_status:\n                success_entities.append(entity)\n\n        except Exception as err:\n            error_message = 'Error fetching port status data for \"{0}\", ERROR: {1}'.format(entity.identifier,\n                                                                                             unicode(err))\n            errors.append(error_message)\n            siemplify.LOGGER.error(error_message)\n            siemplify.LOGGER.exception(err)\n\n    if success_entities:\n        output_message = \"Port {0} is open for: {1}\".format(port_number, \",\".join([entity.identifier for\n                                                                                   entity in success_entities]))\n    else:\n        output_message = 'Not found data for target entities.'\n\n    if errors:\n        output_message = \"{0}  \\n \\n {1}\".format(output_message, \" \\n \".join(errors))\n\n    siemplify.end(output_message, \",\".join(map(str, port_statuses)))\n\n\nif __name__ == '__main__':\n    main()\n", 
+    "ScriptResultName": "port_statuses", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\", \"HOSTNAME\", \"DestinationURL\", \"ADDRESS\"]}", 
+    "Version": 1.0
+}

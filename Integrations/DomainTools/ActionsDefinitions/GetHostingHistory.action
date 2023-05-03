@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1515504722975, 
+    "Creator": "admin", 
+    "Description": "Get domain hosting history information, enrich and add CSV table", 
+    "Id": -1, 
+    "IntegrationIdentifier": "DomainTools", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1515504722975, 
+    "Name": "Get Hosting History", 
+    "Parameters": [], 
+    "ScriptResultName": "is_succeed", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\"]}", 
+    "Type": 0, 
+    "Version": 0.0
+}

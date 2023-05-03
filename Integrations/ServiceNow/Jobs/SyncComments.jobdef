@@ -1,0 +1,115 @@
+{
+    "CreationTimeUnixTimeInMs": 1530435938022,
+    "Creator": "admin",
+    "Description": "This job will synchronize comments in ServiceNow table records and Siemplify cases.",
+    "Id": -1,
+    "Integration": "ServiceNow",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530435938022,
+    "Name": "Sync Table Record Comments",
+    "Parameters": [
+      {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "https://{dev-instance}.service-now.com/api/now/v1/",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Api Root",
+            "Description": "API root of the ServiceNow instance.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Username",
+            "Description": "Username of the ServiceNow account.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Password",
+            "Description": "Password of the ServiceNow account.",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530435938022,
+            "DefaultValue": true,
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530435938022,
+            "Name": "Verify SSL",
+            "Description": "If enabled, verify the SSL certificate for the connection to the ServiceNow server is valid.",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Client ID",
+            "Description": "Client ID of Service Now application. Required for Oauth authentication.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Client Secret",
+            "Description": "Client Secret of Service Now application. Required for Oauth authentication.",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Refresh Token",
+            "Description": "Refresh token for Service Now application. Required for Oauth authentication.",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530435938022,
+            "DefaultValue": false,
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530435938022,
+            "Name": "Use Oauth Authentication",
+            "Description": "If enabled, integration will use Oauth authentication. Parameters “Client ID“, “Client Secret“ and “Refresh Token“ are mandatory.",
+            "Type": 0
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530435938022,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530435938022,
+            "Name": "Table Name",
+            "Description": "Name of the table, where you want to search for the record. Example: incident.",
+            "Type": 2
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Script": "# -*- coding: utf-8 -*-\n# ==============================================================================\n# title           :SyncComments.py\n# description     :Job for sync comments in ServiceNow and in Siemplify\n# author          :zivh@siemplify.co\n# date            :06-27-18\n# python_version  :2.7\n# Doc: https://developer.servicenow.com/app.do#!/rest_api_doc?v=jakarta&id=r_AggregateAPI-GET\n# ==============================================================================\n# =====================================\n#              IMPORTS                #'\n# =====================================\nfrom ServiceNowManager import ServiceNowManager\nfrom SiemplifyJob import SiemplifyJob\nfrom SiemplifyUtils import convert_unixtime_to_datetime\nfrom SiemplifyUtils import utc_now\n\nimport urllib3\nimport requests\n\nimport datetime\n\nurllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)\nrequests.packages.urllib3.disable_warnings()\n\n\n# =====================================\n#             CONSTANTS               #\n# =====================================\nDEFAULT_DAYS_BACKWARDS = 1\nOPEN_CASE_STATUS_ENUM = '1'\nSIEMPLIFY_COMMENT_PREFIX = \"Siemplify: \"\nSN_COMMENT_PREFIX = \"ServiceNow: \"\n\n# =====================================\n#              CLASSES                #\n# =====================================\n\n\ndef validate_timestamp(last_run_timestamp, offset):\n    \"\"\"\n    Validate timestamp in range\n    :param last_run_timestamp: {datetime} last run timestamp\n    :param offset: {datetime} last run timestamp\n    :return: {datetime} if first run, return current time minus offset time, else return timestamp from file\n    \"\"\"\n    current_time = utc_now()\n    # Check if first run\n    if current_time - last_run_timestamp > datetime.timedelta(days=offset):\n        return current_time - datetime.timedelta(days=offset)\n    else:\n        return last_run_timestamp\n\n\ndef main():\n    siemplify = SiemplifyJob()\n\n    try:\n        siemplify.script_name = 'ServiceNow - SyncComments'\n\n        siemplify.LOGGER.info('--------------- JOB STARTED ---------------')\n\n        # Configurations.\n        api_root = siemplify.parameters['API Root']\n        username = siemplify.parameters['Username']\n        password = siemplify.parameters['Password']\n        days_backwards = int(siemplify.parameters.get('Days Backwards', DEFAULT_DAYS_BACKWARDS))\n        service_now_manager = ServiceNowManager(api_root, username, password, default_incident_table)\n\n        # Get last Successful execution time.\n        last_successful_execution_time = siemplify.fetch_timestamp(datetime_format=True)\n        last_successful_execution_time = validate_timestamp(last_successful_execution_time, days_backwards)\n        siemplify.LOGGER.info('Last successful execution run: {0}'.format(unicode(last_successful_execution_time).encode('utf-8')))\n\n        # Sync Incidents Comment to ServiceNow\n        siemplify.LOGGER.info('--- Start synchronize Incidents Comments from Siemplify to ServiceNow ---')\n        cases_ids = siemplify.get_cases_by_filter(statuses=[OPEN_CASE_STATUS_ENUM])\n        if cases_ids:\n            siemplify.LOGGER.info(\"Found {0} open cases\".format(len(cases_ids)))\n\n        # Check case modification time\n        cases = []\n        for case_id in cases_ids:\n            case = siemplify._get_case_by_id(str(case_id))\n            if last_successful_execution_time <= convert_unixtime_to_datetime(case['modification_time']):\n                cases.append(case_id)\n        siemplify.LOGGER.info(\"Found {0} relevant open cases\".format(len(cases)))\n\n        for case_id in cases:\n            siemplify.LOGGER.info('Run on case with id: {0}'.format(unicode(case_id).encode('utf-8')))\n            case = siemplify._get_case_by_id(str(case_id))\n            case_comments = siemplify.get_case_comments(case['identifier'])\n            siemplify.LOGGER.info(\"Found {0} comments for case with id: {1} \".format(len(case_comments), unicode(case_id).encode('utf-8')))\n\n            for comment in case_comments:\n                # Covert to datetime\n                comment_time = convert_unixtime_to_datetime((comment['modification_time_unix_time_in_ms']))\n\n                # Check that the comment is newer than the JOB timestamp\n                if comment_time > last_successful_execution_time:\n                    siemplify.LOGGER.info(\"Found new comment at Case {0}\".format(unicode(case_id).encode('utf-8')))\n\n                    # Add to comment Siemplify prefix in order to identify the comment as a siemplify comment\n                    comment_text = \"{0}{1}\".format(SIEMPLIFY_COMMENT_PREFIX, comment['comment'])\n\n                    # Update all Alert's tickets in ServiceNow\n                    for alert in case['cyber_alerts']:\n                        ticket_number = alert['additional_data']\n\n                        # Add the comment to ServiceNow ticket\n                        try:\n                            siemplify.LOGGER.info(\"Add comment to ticket {0}\".format(unicode(ticket_number).encode('utf-8')))\n                            service_now_manager.add_comment_to_incident(ticket_number, comment_text)\n                        except Exception as err:\n                            siemplify.LOGGER.error(\n                                \"Failed to add comment to ticket {0}, error: {1}\".format(ticket_number, err.message))\n                            siemplify.LOGGER._log.exception(err)\n\n        siemplify.LOGGER.info(\" --- Finish synchronize comments from cases to ServiceNow tickets --- \")\n\n        # Sync Incidents Comment to Siemplify\n        siemplify.LOGGER.info('--- Start synchronize Incidents Comments from ServiceNow to Siemplify ---')\n        sn_last_time_format = service_now_manager.convert_datetime_to_sn_format(last_successful_execution_time)\n\n        # Get tickets that where modified since last success time.\n        last_modified_ticket_ids = service_now_manager.get_incident_ids_by_time_filter(last_modification_utc=sn_last_time_format)\n        siemplify.LOGGER.info('Found {0} modified incidents since {1}'.format(unicode(len(last_modified_ticket_ids)).encode('utf-8'), unicode(sn_last_time_format).encode('utf-8')))\n\n        for ticket_id in last_modified_ticket_ids:\n            # Get ticket by id\n            ticket = service_now_manager.get_ticket_by_id(ticket_id)['result']\n\n            # Ticket short description is the related alert id in Siemplify\n            alert_id = ticket['short_description']\n\n            # Fetch case id of the relevant alert\n            alert_cases_ids = siemplify.get_cases_by_ticket_id(alert_id)\n            if alert_cases_ids:\n                siemplify.LOGGER.info('Case ids {0} found for ticket with id: {1}'.format(len(alert_cases_ids), ticket_id))\n\n                # Get Last comments for ticket.\n                ticket_comments = service_now_manager.get_incident_comments_since_time(ticket_id, sn_last_time_format)\n                if ticket_comments:\n                    siemplify.LOGGER.info(\n                        'Found {0} comment for ticket with id: {1}'.format(unicode(len(ticket_comments)).encode('utf-8'),\n                                                                        unicode(ticket_id).encode('utf-8')))\n\n                    # Get all comments that didn't come from Siemplify\n                    comments_to_add = [comment for comment in ticket_comments\n                                       if not comment.startswith(SIEMPLIFY_COMMENT_PREFIX)]\n\n                    # Add comments to cases.\n                    for alert_case_id in alert_cases_ids:\n                        siemplify.LOGGER.info('Add comments to case with id: {0}'.format(unicode(alert_case_id).encode('utf-8')))\n                        for comment in comments_to_add:\n                            comment_with_prefix = \"{0}{1}\".format(SN_COMMENT_PREFIX, comment)\n                            siemplify.add_comment(comment_with_prefix, alert_case_id)\n\n                else:\n                    siemplify.LOGGER.info(\"No new comments in ticket -{0}\".format(str(ticket_id)))\n            else:\n                siemplify.LOGGER.info(\"Ticket {0} not created for Siemplify alert. Continue\".format(str(ticket_id)))\n\n        siemplify.LOGGER.info(\" --- Finish synchronize comments from ServiceNow tickets to cases --- \")\n        # Update last successful run time.\n        siemplify.save_timestamp(datetime_format=True)\n        siemplify.LOGGER.info(\"Update Job last execution timestamp\")\n        siemplify.LOGGER.info('--------------- JOB FINISHED ---------------')\n\n    except Exception as err:\n        siemplify.LOGGER._log.exception('Got exception on main handler.Error: {0}'.format(err.message))\n        raise\n\n\nif __name__ == '__main__':\n    main()\n",
+    "Version": 1
+}

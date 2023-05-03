@@ -1,0 +1,36 @@
+{
+    "CreationTimeUnixTimeInMs": "1570446244",
+    "Creator": "admin",
+    "Description": "Add a comment to entities in VirusTotal. Supported entities: File Hash, URL, Hostname, IP Address. Note: only MD5, SHA-1 and SHA-256 Hash types are supported",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\": \"xxxx@xxxx.xx\", \"EntityResult\": {\"Status\": \"Done\"}},{\"Entity\": \"yyyy@yyyy.yy\", \"EntityResult\": {\"Status\": \"Not done\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "VirusTotalV3",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1570446244,
+    "Name": "Add Comment To Entity",
+    "Parameters": [
+        {
+            "Name": "Comment",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the comment that should be added to entities.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 1677183607,
+            "ModificationTimeUnixTimeInMs": 1677183607
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"DestinationURL\", \"FILEHASH\", \"ADDRESS\"]}",
+    "Type": 0,
+    "Version": 1.0,
+    "IsAsync": false
+}

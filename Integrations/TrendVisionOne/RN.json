@@ -1,0 +1,14 @@
+[
+    {
+        "ChangeDescription": "New Integration Added - Trend Vision One.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "TrendVisionOne",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "278041220"
+    }
+]

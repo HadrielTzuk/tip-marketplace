@@ -1,0 +1,398 @@
+{
+    "Param float": {
+        "False": {
+            "True": {
+                "int": "Given default_value of 'True' doesn't match expected type int",
+                "float": "Given default_value of 'True' doesn't match expected type float",
+                "bool": "Paramater named Param float, with value 1.1 isn't a valid BOOL",
+                "str": "Given default_value of 'True' doesn't match expected type str"
+            },
+            "2": {
+                "int": 1,
+                "float": "Given default_value of '2' doesn't match expected type float",
+                "bool": "Given default_value of '2' doesn't match expected type bool",
+                "str": "Given default_value of '2' doesn't match expected type str"
+            },
+            "AAA": {
+                "int": "Given default_value of 'AAA' doesn't match expected type int",
+                "float": "Given default_value of 'AAA' doesn't match expected type float",
+                "bool": "Given default_value of 'AAA' doesn't match expected type bool",
+                "str": "1.1"
+            },
+            "2.2": {
+                "int": "Given default_value of '2.2' doesn't match expected type int",
+                "float": 1.1,
+                "bool": "Given default_value of '2.2' doesn't match expected type bool",
+                "str": "Given default_value of '2.2' doesn't match expected type str"
+            },
+            "null": {
+                "int": 1,
+                "float": 1.1,
+                "bool": "Paramater named Param float, with value 1.1 isn't a valid BOOL",
+                "str": "1.1"
+            }
+        },
+        "True": {
+            "True": {
+                "int": "Given default_value of 'True' doesn't match expected type int",
+                "float": "Given default_value of 'True' doesn't match expected type float",
+                "bool": "Paramater named Param float, with value 1.1 isn't a valid BOOL",
+                "str": "Given default_value of 'True' doesn't match expected type str"
+            },
+            "2": {
+                "int": 1,
+                "float": "Given default_value of '2' doesn't match expected type float",
+                "bool": "Given default_value of '2' doesn't match expected type bool",
+                "str": "Given default_value of '2' doesn't match expected type str"
+            },
+            "AAA": {
+                "int": "Given default_value of 'AAA' doesn't match expected type int",
+                "float": "Given default_value of 'AAA' doesn't match expected type float",
+                "bool": "Given default_value of 'AAA' doesn't match expected type bool",
+                "str": "1.1"
+            },
+            "2.2": {
+                "int": "Given default_value of '2.2' doesn't match expected type int",
+                "float": 1.1,
+                "bool": "Given default_value of '2.2' doesn't match expected type bool",
+                "str": "Given default_value of '2.2' doesn't match expected type str"
+            },
+            "null": {
+                "int": 1,
+                "float": 1.1,
+                "bool": "Paramater named Param float, with value 1.1 isn't a valid BOOL",
+                "str": "1.1"
+            }
+        }
+    },
+    "Param int": {
+        "False": {
+            "True": {
+                "int": "Given default_value of 'True' doesn't match expected type int",
+                "float": "Given default_value of 'True' doesn't match expected type float",
+                "bool": "Paramater named Param int, with value 1 isn't a valid BOOL",
+                "str": "Given default_value of 'True' doesn't match expected type str"
+            },
+            "2": {
+                "int": 1,
+                "float": "Given default_value of '2' doesn't match expected type float",
+                "bool": "Given default_value of '2' doesn't match expected type bool",
+                "str": "Given default_value of '2' doesn't match expected type str"
+            },
+            "AAA": {
+                "int": "Given default_value of 'AAA' doesn't match expected type int",
+                "float": "Given default_value of 'AAA' doesn't match expected type float",
+                "bool": "Given default_value of 'AAA' doesn't match expected type bool",
+                "str": "1"
+            },
+            "2.2": {
+                "int": "Given default_value of '2.2' doesn't match expected type int",
+                "float": 1.0,
+                "bool": "Given default_value of '2.2' doesn't match expected type bool",
+                "str": "Given default_value of '2.2' doesn't match expected type str"
+            },
+            "null": {
+                "int": 1,
+                "float": 1.0,
+                "bool": "Paramater named Param int, with value 1 isn't a valid BOOL",
+                "str": "1"
+            }
+        },
+        "True": {
+            "True": {
+                "int": "Given default_value of 'True' doesn't match expected type int",
+                "float": "Given default_value of 'True' doesn't match expected type float",
+                "bool": "Paramater named Param int, with value 1 isn't a valid BOOL",
+                "str": "Given default_value of 'True' doesn't match expected type str"
+            },
+            "2": {
+                "int": 1,
+                "float": "Given default_value of '2' doesn't match expected type float",
+                "bool": "Given default_value of '2' doesn't match expected type bool",
+                "str": "Given default_value of '2' doesn't match expected type str"
+            },
+            "AAA": {
+                "int": "Given default_value of 'AAA' doesn't match expected type int",
+                "float": "Given default_value of 'AAA' doesn't match expected type float",
+                "bool": "Given default_value of 'AAA' doesn't match expected type bool",
+                "str": "1"
+            },
+            "2.2": {
+                "int": "Given default_value of '2.2' doesn't match expected type int",
+                "float": 1.0,
+                "bool": "Given default_value of '2.2' doesn't match expected type bool",
+                "str": "Given default_value of '2.2' doesn't match expected type str"
+            },
+            "null": {
+                "int": 1,
+                "float": 1.0,
+                "bool": "Paramater named Param int, with value 1 isn't a valid BOOL",
+                "str": "1"
+            }
+        }
+    },
+    "Param str": {
+        "False": {
+            "True": {
+                "int": "Given default_value of 'True' doesn't match expected type int",
+                "float": "Given default_value of 'True' doesn't match expected type float",
+                "bool": "Paramater named Param str, with value AAA isn't a valid BOOL",
+                "str": "Given default_value of 'True' doesn't match expected type str"
+            },
+            "2": {
+                "int": "invalid literal for int() with base 10: 'AAA'",
+                "float": "Given default_value of '2' doesn't match expected type float",
+                "bool": "Given default_value of '2' doesn't match expected type bool",
+                "str": "Given default_value of '2' doesn't match expected type str"
+            },
+            "AAA": {
+                "int": "Given default_value of 'AAA' doesn't match expected type int",
+                "float": "Given default_value of 'AAA' doesn't match expected type float",
+                "bool": "Given default_value of 'AAA' doesn't match expected type bool",
+                "str": "AAA"
+            },
+            "2.2": {
+                "int": "Given default_value of '2.2' doesn't match expected type int",
+                "float": "could not convert string to float: AAA",
+                "bool": "Given default_value of '2.2' doesn't match expected type bool",
+                "str": "Given default_value of '2.2' doesn't match expected type str"
+            },
+            "null": {
+                "int": "invalid literal for int() with base 10: 'AAA'",
+                "float": "could not convert string to float: AAA",
+                "bool": "Paramater named Param str, with value AAA isn't a valid BOOL",
+                "str": "AAA"
+            }
+        },
+        "True": {
+            "True": {
+                "int": "Given default_value of 'True' doesn't match expected type int",
+                "float": "Given default_value of 'True' doesn't match expected type float",
+                "bool": "Paramater named Param str, with value AAA isn't a valid BOOL",
+                "str": "Given default_value of 'True' doesn't match expected type str"
+            },
+            "2": {
+                "int": "invalid literal for int() with base 10: 'AAA'",
+                "float": "Given default_value of '2' doesn't match expected type float",
+                "bool": "Given default_value of '2' doesn't match expected type bool",
+                "str": "Given default_value of '2' doesn't match expected type str"
+            },
+            "AAA": {
+                "int": "Given default_value of 'AAA' doesn't match expected type int",
+                "float": "Given default_value of 'AAA' doesn't match expected type float",
+                "bool": "Given default_value of 'AAA' doesn't match expected type bool",
+                "str": "AAA"
+            },
+            "2.2": {
+                "int": "Given default_value of '2.2' doesn't match expected type int",
+                "float": "could not convert string to float: AAA",
+                "bool": "Given default_value of '2.2' doesn't match expected type bool",
+                "str": "Given default_value of '2.2' doesn't match expected type str"
+            },
+            "null": {
+                "int": "invalid literal for int() with base 10: 'AAA'",
+                "float": "could not convert string to float: AAA",
+                "bool": "Paramater named Param str, with value AAA isn't a valid BOOL",
+                "str": "AAA"
+            }
+        }
+    },
+    "Param bool A": {
+        "False": {
+            "True": {
+                "int": "Given default_value of 'True' doesn't match expected type int",
+                "float": "Given default_value of 'True' doesn't match expected type float",
+                "bool": true,
+                "str": "Given default_value of 'True' doesn't match expected type str"
+            },
+            "2": {
+                "int": 1,
+                "float": "Given default_value of '2' doesn't match expected type float",
+                "bool": "Given default_value of '2' doesn't match expected type bool",
+                "str": "Given default_value of '2' doesn't match expected type str"
+            },
+            "AAA": {
+                "int": "Given default_value of 'AAA' doesn't match expected type int",
+                "float": "Given default_value of 'AAA' doesn't match expected type float",
+                "bool": "Given default_value of 'AAA' doesn't match expected type bool",
+                "str": "True"
+            },
+            "2.2": {
+                "int": "Given default_value of '2.2' doesn't match expected type int",
+                "float": 1.0,
+                "bool": "Given default_value of '2.2' doesn't match expected type bool",
+                "str": "Given default_value of '2.2' doesn't match expected type str"
+            },
+            "null": {
+                "int": 1,
+                "float": 1.0,
+                "bool": true,
+                "str": "True"
+            }
+        },
+        "True": {
+            "True": {
+                "int": "Given default_value of 'True' doesn't match expected type int",
+                "float": "Given default_value of 'True' doesn't match expected type float",
+                "bool": true,
+                "str": "Given default_value of 'True' doesn't match expected type str"
+            },
+            "2": {
+                "int": 1,
+                "float": "Given default_value of '2' doesn't match expected type float",
+                "bool": "Given default_value of '2' doesn't match expected type bool",
+                "str": "Given default_value of '2' doesn't match expected type str"
+            },
+            "AAA": {
+                "int": "Given default_value of 'AAA' doesn't match expected type int",
+                "float": "Given default_value of 'AAA' doesn't match expected type float",
+                "bool": "Given default_value of 'AAA' doesn't match expected type bool",
+                "str": "True"
+            },
+            "2.2": {
+                "int": "Given default_value of '2.2' doesn't match expected type int",
+                "float": 1.0,
+                "bool": "Given default_value of '2.2' doesn't match expected type bool",
+                "str": "Given default_value of '2.2' doesn't match expected type str"
+            },
+            "null": {
+                "int": 1,
+                "float": 1.0,
+                "bool": true,
+                "str": "True"
+            }
+        }
+    },
+    "Param bool B": {
+        "False": {
+            "True": {
+                "int": "Given default_value of 'True' doesn't match expected type int",
+                "float": "Given default_value of 'True' doesn't match expected type float",
+                "bool": true,
+                "str": "Given default_value of 'True' doesn't match expected type str"
+            },
+            "2": {
+                "int": 1,
+                "float": "Given default_value of '2' doesn't match expected type float",
+                "bool": "Given default_value of '2' doesn't match expected type bool",
+                "str": "Given default_value of '2' doesn't match expected type str"
+            },
+            "AAA": {
+                "int": "Given default_value of 'AAA' doesn't match expected type int",
+                "float": "Given default_value of 'AAA' doesn't match expected type float",
+                "bool": "Given default_value of 'AAA' doesn't match expected type bool",
+                "str": "True"
+            },
+            "2.2": {
+                "int": "Given default_value of '2.2' doesn't match expected type int",
+                "float": 1.0,
+                "bool": "Given default_value of '2.2' doesn't match expected type bool",
+                "str": "Given default_value of '2.2' doesn't match expected type str"
+            },
+            "null": {
+                "int": 1,
+                "float": 1.0,
+                "bool": true,
+                "str": "True"
+            }
+        },
+        "True": {
+            "True": {
+                "int": "Given default_value of 'True' doesn't match expected type int",
+                "float": "Given default_value of 'True' doesn't match expected type float",
+                "bool": true,
+                "str": "Given default_value of 'True' doesn't match expected type str"
+            },
+            "2": {
+                "int": 1,
+                "float": "Given default_value of '2' doesn't match expected type float",
+                "bool": "Given default_value of '2' doesn't match expected type bool",
+                "str": "Given default_value of '2' doesn't match expected type str"
+            },
+            "AAA": {
+                "int": "Given default_value of 'AAA' doesn't match expected type int",
+                "float": "Given default_value of 'AAA' doesn't match expected type float",
+                "bool": "Given default_value of 'AAA' doesn't match expected type bool",
+                "str": "True"
+            },
+            "2.2": {
+                "int": "Given default_value of '2.2' doesn't match expected type int",
+                "float": 1.0,
+                "bool": "Given default_value of '2.2' doesn't match expected type bool",
+                "str": "Given default_value of '2.2' doesn't match expected type str"
+            },
+            "null": {
+                "int": 1,
+                "float": 1.0,
+                "bool": true,
+                "str": "True"
+            }
+        }
+    },
+    "FICTIONAL KEY": {
+        "False": {
+            "True": {
+                "int": "Given default_value of 'True' doesn't match expected type int",
+                "float": "Given default_value of 'True' doesn't match expected type float",
+                "bool": true,
+                "str": "Given default_value of 'True' doesn't match expected type str"
+            },
+            "2": {
+                "int": 2,
+                "float": "Given default_value of '2' doesn't match expected type float",
+                "bool": "Given default_value of '2' doesn't match expected type bool",
+                "str": "Given default_value of '2' doesn't match expected type str"
+            },
+            "AAA": {
+                "int": "Given default_value of 'AAA' doesn't match expected type int",
+                "float": "Given default_value of 'AAA' doesn't match expected type float",
+                "bool": "Given default_value of 'AAA' doesn't match expected type bool",
+                "str": "AAA"
+            },
+            "2.2": {
+                "int": "Given default_value of '2.2' doesn't match expected type int",
+                "float": 2.2,
+                "bool": "Given default_value of '2.2' doesn't match expected type bool",
+                "str": "Given default_value of '2.2' doesn't match expected type str"
+            },
+            "null": {
+                "int": null,
+                "float": null,
+                "bool": null,
+                "str": null
+            }
+        },
+        "True": {
+            "True": {
+                "int": "Given default_value of 'True' doesn't match expected type int",
+                "float": "Given default_value of 'True' doesn't match expected type float",
+                "bool": "Missing mandatory parameter FICTIONAL KEY",
+                "str": "Given default_value of 'True' doesn't match expected type str"
+            },
+            "2": {
+                "int": "Missing mandatory parameter FICTIONAL KEY",
+                "float": "Given default_value of '2' doesn't match expected type float",
+                "bool": "Given default_value of '2' doesn't match expected type bool",
+                "str": "Given default_value of '2' doesn't match expected type str"
+            },
+            "AAA": {
+                "int": "Given default_value of 'AAA' doesn't match expected type int",
+                "float": "Given default_value of 'AAA' doesn't match expected type float",
+                "bool": "Given default_value of 'AAA' doesn't match expected type bool",
+                "str": "Missing mandatory parameter FICTIONAL KEY"
+            },
+            "2.2": {
+                "int": "Given default_value of '2.2' doesn't match expected type int",
+                "float": "Missing mandatory parameter FICTIONAL KEY",
+                "bool": "Given default_value of '2.2' doesn't match expected type bool",
+                "str": "Given default_value of '2.2' doesn't match expected type str"
+            },
+            "null": {
+                "int": "Missing mandatory parameter FICTIONAL KEY",
+                "float": "Missing mandatory parameter FICTIONAL KEY",
+                "bool": "Missing mandatory parameter FICTIONAL KEY",
+                "str": "Missing mandatory parameter FICTIONAL KEY"
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "CreationTimeUnixTimeInMs": 1527419044459, 
+    "Creator": "admin", 
+    "Description": "Add user to groups.",
+    "Id": -1, 
+    "IntegrationIdentifier": "ActiveDirectory", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1527419044459, 
+    "Name": "Add User To Group", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1527419044459, 
+            "CustomActionId": -1, 
+            "DefaultValue": null, 
+            "Description": "Specify a comma-separated list of groups to which action should add users.",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "ModificationTimeUnixTimeInMs": 1527419044459, 
+            "Name": "Group Name", 
+            "Type": 0, 
+            "Value": null
+        }
+    ], 
+    "Script": "from SiemplifyDataModel import EntityTypes\nfrom SiemplifyAction import SiemplifyAction\nfrom ActiveDirectoryManager import ActiveDirectoryManager\n\n\ndef main():\n    siemplify = SiemplifyAction()\n    conf = siemplify.get_configuration('ActiveDirectory')\n    server = conf['Server']\n    username = conf['Username']\n    password = conf['Password']\n    domain = conf['Domain']\n\n    group_name = siemplify.parameters['Group Name']\n\n    ad = ActiveDirectoryManager(server, domain, username, password)\n\n    affected_users = []\n\n    for entity in siemplify.target_entities:\n        if entity.entity_type == EntityTypes.USER:\n            res = ad.add_user_to_group(entity.identifier, group_name)\n        else:\n            continue\n\n        if res:\n            affected_users.append(entity)\n\n    if affected_users:\n        entities_names = [entity.identifier for entity in affected_users]\n\n        output_message = 'The following users were moved to group {}:\\n'.format(\n            group_name) + '\\n'.join(\n            entities_names)\n\n    else:\n        output_message = 'No users were added to group {}.'.format(group_name)\n\n    siemplify.end(output_message, 'true')\n\nif __name__ == \"__main__\":\n    main()\n", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Version": 1.0
+}

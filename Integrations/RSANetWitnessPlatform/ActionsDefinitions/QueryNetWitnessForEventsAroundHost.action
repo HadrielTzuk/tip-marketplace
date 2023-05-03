@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 1518546090797, 
+    "Creator": "admin", 
+    "Description": "Retrieve the latest events related to the hostnames in RSA Netwitness. Requires configuration of Broker API or Concentrator API", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\": [{\"payload.req\": \"0\", \"org.src\": \"Blue\", \"domain.src\": \"test.com\", \"netname\": \"other src\", \"lifetime\": \"0\", \"rid\": \"29\", \"payload\": \"0\", \"size\": \"66\", \"country.src\": \"France\", \"service\": \"0\", \"longdec.src\": \"-2.2595\", \"eth.src\": \"11:1C:1C:11:22:87\", \"tcp.dstport\": \"40906\", \"direction\": \"inbound\", \"medium\": \"1\", \"ip.dst\": \"1.1.1.1\", \"latdec.src\": \"48.3175\", \"city.src\": \"Tr\\\\u00e9meur\", \"alert\": \"test App rule\", \"sessionid\": \"29\", \"eth.type\": \"2048\", \"ip.src\": \"1.1.1.1\", \"tcp.flags\": \"20\", \"eth.dst\": \"11:11:11:B1:1B:11\", \"did\": \"nwappliance5805\", \"tcp.srcport\": \"80\", \"packets\": \"1\", \"streams\": \"1\", \"time\": 1547013286, \"ip.proto\": \"6\"}, {\"payload.req\": \"0\", \"org.src\": \"Blue\", \"domain.src\": \"test.com\", \"netname\": \"private dst\", \"lifetime\": \"0\", \"rid\": \"4401\", \"payload\": \"0\", \"size\": \"66\", \"country.src\": \"France\", \"service\": \"0\", \"longdec.src\": \"-2.2595\", \"eth.src\": \"11:1C:AC:11:11:11\", \"tcp.dstport\": \"41156\", \"direction\": \"inbound\", \"medium\": \"1\", \"ip.dst\": \"1.1.1.1\", \"latdec.src\": \"48.3175\", \"city.src\": \"Tr\\\\u00e9meur\", \"alert\": \"test App rule\", \"sessionid\": \"4401\", \"eth.type\": \"2048\", \"ip.src\": \"1.1.1.1\", \"tcp.flags\": \"20\", \"eth.dst\": \"00:50:56:B5:1B:43\", \"did\": \"nwappliance5805\", \"tcp.srcport\": \"80\", \"packets\": \"1\", \"streams\": \"1\", \"time\": 1547016274}], \"Entity\": \"test.com\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "RSANetWitnessPlatform", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1518546090797, 
+    "Name": "Query NetWitness For Events Around Host", 
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928, 
+            "CustomActionId": -1, 
+            "DefaultValue": 1, 
+            "Description": "Specify how many hours backwards to fetch events. Default is 1 hour.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1534420803928, 
+            "Name": "Max Hours Backwards", 
+            "Type": 0, 
+            "Value": 1
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1534420803928, 
+            "CustomActionId": -1, 
+            "DefaultValue": 50, 
+            "Description": "Specify how many events to return. If nothing is specified, action will return 50 events.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "ModificationTimeUnixTimeInMs": 1534420803928, 
+            "Name": "Max Events To Return", 
+            "Type": 0, 
+            "Value": 50
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

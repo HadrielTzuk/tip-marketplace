@@ -1,0 +1,59 @@
+{
+    "CreationTimeUnixTimeInMs": 1524559211168,
+    "Creator": "admin",
+    "Description": "Update Alarm in LogRhythm.",
+    "Id": -1,
+    "IntegrationIdentifier": "LogRhythm",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1524559211168,
+    "Name": "Update Alarm",
+    "Parameters": [
+        {
+            "Name": "Alarm ID",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": true,
+            "Description": "Specify the ID of the alarm that needs to be updated in LogRhythm.",
+            "CustomActionId": -1,
+            "Id": -1
+        },
+        {
+            "Name": "Status",
+            "Type": 15,
+            "Value": "Select One",
+            "DefaultValue": "Select One",
+            "IsMandatory": false,
+            "Description": "Specify the status for the alarm.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "OptionalValues": [
+                "Select One",
+                "New",
+                "Open",
+                "Working",
+                "Escalated",
+                "Closed",
+                "False Alarm",
+                "Resolved",
+                "Unresolved",
+                "Reported",
+                "Monitor"
+            ]
+        },
+        {
+            "Name": "Risk Score",
+            "Type": 0,
+            "Value": "",
+            "DefaultValue": "",
+            "IsMandatory": false,
+            "Description": "Specify a new risk score for the alarm. Maximum: 100.",
+            "CustomActionId": -1,
+            "Id": -1
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\": []}",
+    "Version": 1.0
+}

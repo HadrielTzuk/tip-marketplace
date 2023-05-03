@@ -1,0 +1,21 @@
+{
+    "CreationTimeUnixTimeInMs": 157044624, 
+    "Creator": "admin", 
+    "Description": "Enrich Siemplify User entity with information from Azure Active Directory. Action expects Siemplify user entity in username@domain format.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"user@domain.onmicrosoft.com\",\"EntityResult\":{\"@odata.context\":\"https://graph.microsoft.com/v1.0/$metadata#users/$entity\",\"@odata.id\":\"https://graph.microsoft.com/v2/d48f52ca-5b1a-4708-8ed0-xxxxx/directoryObjects/2d14c76d-49ea-429b-ba91-xxxxx/Microsoft.DirectoryServices.User\",\"businessPhones\":[],\"displayName\":\"User Name\",\"givenName\":\"User\",\"jobTitle\":null,\"mail\":null,\"mobilePhone\":null,\"officeLocation\":null,\"preferredLanguage\":null,\"surname\":\"Aleksanyan\",\"userPrincipalName\":\"user@domain.onmicrosoft.com\",\"id\":\"2d14c76d-49ea-429b-ba91-xxxxx\"}}]",
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "AzureActiveDirectory", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1570446244, 
+    "Name": "Enrich User", 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"USERUNIQNAME\"]}", 
+    "Type": 0, 
+    "Version": 1.0
+}

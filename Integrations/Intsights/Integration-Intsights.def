@@ -1,0 +1,50 @@
+{
+    "Description": "The only all-in-one external threat protection platform designed to neutralize cyberattacks outside the wire.",
+    "DisplayName": "IntSights",
+    "Identifier": "Intsights",
+    "Categories": [
+        "Threat Intelligence",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "IntSights",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://<server-address>"
+        },
+        {
+            "IntegrationIdentifier": "IntSights",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Account ID",
+            "PropertyName": "Account ID",
+            "PropertyType": "2",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "IntSights",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "Api Key",
+            "PropertyType": "3",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "IntSights",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SvgImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path d=\"M17.7 12.6S16 9.85 12.65 9.85c-3.3 0-5.15 2.75-5.15 2.75s1.6 2.75 5.05 2.75C16 15.3 17.7 12.6 17.7 12.6zm-4.6-7.9c-8.45.55-7.4 7.4-7.4 7.4 1.75-2.8 4.65-3.85 8.05-3.85 3.45 0 6.85 2.4 6.85 7 0 2.3-1.5 3.9-3.15 4.95-2.15 1.35-4.7 1.85-7.2 1.5-6.8-.95-8.55-5-8.55-5 0 3.55 3.85 7.65 11.3 7.65 4.7 0 11.05-3.5 11-9.05 0-4.45-2.4-11.2-10.9-10.6zm-1.25 15.95c8.45-.55 7.45-7.45 7.45-7.45-1.75 2.8-4.65 3.85-8.05 3.85-3.4 0-6.85-2.4-6.85-7 0-2.3 1.5-3.9 3.15-4.95 2.15-1.35 4.7-1.85 7.2-1.5 6.8.95 8.55 5 8.55 5C23.3 5.1 19.6 1 12 1 7.3 1 .95 4.5 1 10.05c0 4.45 2.4 11.2 10.85 10.6z\"\/>\r\n<\/svg>\r\n",
+    "Version": 18.0,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/intsights",
+    "MarketingDisplayName": "Intsights"
+}

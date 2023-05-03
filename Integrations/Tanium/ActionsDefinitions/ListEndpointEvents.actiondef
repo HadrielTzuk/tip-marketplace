@@ -1,0 +1,132 @@
+{
+    "CreationTimeUnixTimeInMs": 1533271942188,
+    "Creator": "admin",
+    "Description": "List events related to the endpoints from Tanium. Action works with Tanium Threat Response API. Supported Entities: Hostname, IP Address.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Entity\":\"172.30.xxx.xxx\",\"EntityResult\":[{\"create_time\":\"2022-01-18 11:59:52.000\",\"end_time\":null,\"exit_code\":null,\"pid\":2,\"process_path\":\"kthreadd\",\"id\":\"720575xxxxxxxx\",\"process_table_id\":\"720575xxxxxxxx\",\"parent_process_table_id\":\"720575xxxxxxxxx\",\"parent_pid\":-1,\"user_name\":\"root\",\"group_name\":\"root\",\"hash_type_name\":null,\"hash\":null,\"process_command_line\":null,\"parent_path\":\"<Unknown Process>\",\"parent_command_line\":\"<Unknown Process>\",\"parent_hash\":null,\"create_time_raw\":1642507192000,\"end_time_raw\":null}]},{\"Entity\":\"centos-xxxx\",\"EntityResult\":[{\"id\":\"461168xxxxxxxxxxxxx\",\"timestamp\":\"2022-04-04 15:04:30.293\",\"timestamp_raw\":1649084670293,\"pid\":865,\"process_table_id\":\"72057xxxxxxxxxxx\",\"process_path\":\"/opt/SumoCollector/jre/bin/java\",\"file\":\"/opt/SumoCollector/config/blades/000000000AB1F252.json.new.25\",\"operation\":\"Create\",\"event_operation_id\":0,\"user_name\":\"root\",\"group_name\":\"root\",\"details\":null}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "Tanium",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1533271942188,
+    "Name": "List Endpoint Events",
+    "Parameters": [
+        {
+            "Name": "Event Type",
+            "Type": 15,
+            "DefaultValue": "Combined",
+            "Value": "Combined",
+            "IsMandatory": false,
+            "Description": "Specify the type of the event that needs to be returned.",
+            "OptionalValues": [
+                "File",
+                "Network",
+                "Process",
+                "Registry",
+                "Driver",
+                "Combined",
+                "DNS",
+                "Image"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Time Frame",
+            "Type": 15,
+            "DefaultValue": "Last Hour",
+            "Value": "Last Hour",
+            "IsMandatory": false,
+            "Description": "Specify a time frame for the results. If \"Alert Time Till Now\" is selected, action will use start time of the alert as start time for the search and end time will be current time. If \"30 Minutes Around Alert Time\" is selected, action will search the alerts 30 minutes before the alert happened till the 30 minutes after the alert has happened.  Same idea applies to \"1 Hour Around Alert Time\" and \"5 Minutes Around Alert Time\". If \"Custom\" is selected, you also need to provide \"Start Time\".",
+            "OptionalValues": [
+                "Last Hour",
+                "Last 6 Hours",
+                "Last 24 Hours",
+                "Last Week",
+                "Last Month",
+                "Alert Time Till Now",
+                "5 Minutes Around Alert Time",
+                "30 Minutes Around Alert Time",
+                "1 Hour Around Alert Time",
+                "Custom"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Start Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the start time for the results. This parameter is mandatory, if \"Custom\" is selected for the \"Time Frame\" parameter. Format: ISO 8601",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "End Time",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": false,
+            "Description": "Specify the end time for the results. Format: ISO 8601. If nothing is provided and \"Custom\" is selected for the \"Time Frame\" parameter then this parameter will use current time.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Sort Field",
+            "Type": 0,
+            "DefaultValue": "timestamp",
+            "Value": "timestamp",
+            "IsMandatory": false,
+            "Description": "Specify what parameter should be used for sorting.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Sort Order",
+            "Type": 15,
+            "DefaultValue": "ASC",
+            "Value": "ASC",
+            "IsMandatory": false,
+            "Description": "Specify the order of sorting.",
+            "OptionalValues": [
+                "ASC",
+                "DESC"
+            ],
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Events To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many events to return per entity. Default: 50. Maximum: 500.",
+            "Id": -1,
+            "CustomActionId": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": [\"HOSTNAME\", \"ADDRESS\"]}"
+}

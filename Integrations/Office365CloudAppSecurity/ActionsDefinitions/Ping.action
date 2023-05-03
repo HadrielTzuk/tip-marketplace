@@ -1,0 +1,17 @@
+{
+    "CreationTimeUnixTimeInMs": 1513525130286,
+    "Creator": "admin",
+    "Description": "The action is used to test connectivity.",
+    "Id": -1,
+    "IntegrationIdentifier": "Office365CloudAppSecurity",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1513525130286,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

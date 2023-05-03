@@ -1,0 +1,71 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Get information about reports related to the entities. Supported entities: All.",
+    "Id": -1,
+    "IntegrationIdentifier": "TruSTAR",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"id\": \"XXXXXX-XXXX-XXXXX-XXXXX-XXXXXXXXXX\",\"created\": \"XXXXXXXXXXXXXXX\",\"updated\": \"XXXXXXXXXXXXXXX\",\"title\": \"XXXXX\",\"distributionType\": \"XXXXXXXX\",\"submissionStatus\": \"XXXXXXXX\",\"timeBegan\": \"XXXXXXXXXXXXXXX\",\"reportBody\": \"XXXXXXXXXX\",\"externalTrackingId\": \"XXXXXX-XXXXXX-XXXXX\",\"enclaveIds\": [],\"tags\": [{\"guid\": \"XXXXXXX XXXXXXX\",\"name\": \"XXXXXXX XXXXXXX\",\"enclaveId\": \"XXXXXXX-XXXX-XXXX-XXXX-XXXXXXX\"}]}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Get Related Reports",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will create an insight containing information about reports related to the entities.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Create Insight",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": false,
+            "Description": "If enabled, insight will contain information about the report body. Note: report body can be very big in size.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Include Report Body In Insight",
+            "Type": 1,
+            "Value": false
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1515073753262,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of enclave names that should be used during the enrichment.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1515073753262,
+            "Name": "Enclave Filter",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": 10,
+            "Description": "Specify how many reports to return. Default: 10. Maximum: 25.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Reports To Return",
+            "Type": 0,
+            "Value": 10
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "SimulationDataJson": "{\"Entities\": [\"DestinationURL\",\"FILEHASH\", \"USER\", \"HOSTNAME\", \"USERUNIQNAME\", \"ADDRESS\", \"MacAddress\", \"PROCESS\", \"FILENAME\", \"THREATSIGNATURE\", \"EMAILSUBJECT\", \"USB\", \"CREDITCARD\", \"PHONENUMBER\", \"CVE\", \"THREATACTOR\", \"THREATCAMPAIGN\", \"GENERICENTITY\"]}",
+    "Version": 1.0
+}

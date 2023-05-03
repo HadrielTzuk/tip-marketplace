@@ -1,0 +1,201 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Execute query in Logpoint based on entities. Currently supported entity types: User, IP, Email Address, URL, File Hash, Hostname. Note: Email Address is a User entity that matches the format of email address.",
+    "Id": -1,
+    "IntegrationIdentifier": "LogPoint",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "[{\"msg\": \"2021-01-28 15:29:35 LogPoint INFO: search; performed; type=audit_log; user=&#39;admin&#39;; source_address=&#39;x.x.x.x&#39;; query=&#39;a&#39;; time_range=&#39;Last 24 hours&#39;; repos=[&#39;1.1.1.1:1&#39;]\", \"repo\": \"&#39;1.1.1.1:1&#39;\", \"type\": \"audit_log\", \"log_ts\": 1611847775, \"_type_str\": \"norm_id host device_name user source_name time_range repo _enrich_policy action query object log_level msg label type col_type source_address collected_at _tz device_ip _fromV550 repo_name logpoint_name\", \"device_name\": \"localhost\", \"_offset\": 1111, \"time_range\": \"Last 24 hours\", \"logpoint_name\": \"LogPoint\", \"source_address\": \"xxx.xx.x.x\", \"host\": \"LogPoint\", \"action\": \"performed\", \"repo_name\": \"xxxxx\", \"source_name\": \"\/xxx\/xxx\/xxx\/xx\/xxx\/xxx.log\", \"col_ts\": 1611847783, \"_tz\": \"UTC\", \"query\": \"a\", \"log_level\": \"INFO\", \"norm_id\": \"LogPoint\", \"_identifier\": \"0\", \"collected_at\": \"xxxx\", \"device_ip\": \"x.x.x.x\", \"_fromV550\": \"t\", \"_enrich_policy\": \"None\", \"_type_num\": \"log_ts sig_id col_ts _offset _identifier\", \"_type_ip\": \"source_address device_ip\", \"sig_id\": \"xxxxx\", \"user\": \"admin\", \"col_type\": \"filesystem\", \"object\": \"search\", \"_labels\": [\"Audit\", \"LPSearch\", \"LogPoint\"]}]",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "Execute Entity Query",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the query that needs to be executed. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Query",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "Last 24 Hours",
+            "Description": "Specify the time frame for the query. If \"Custom\" is selected, you need also provide start time, end time by default will be current time.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Time Frame",
+            "OptionalValues": [
+                "Last Hour",
+                "Last 12 Hours",
+                "Last 24 Hours",
+                "Last 30 Days",
+                "Last 365 Days",
+                "Custom"
+            ],
+            "Type": 15,
+            "Value": "Last 24 Hours"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the start time for the query. Format: YYYY-MM-DDThh:mm:ssZ or timestamp.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Start Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify the end time for the query. Format: YYYY-MM-DDThh:mm:ssZ or timestamp. If nothing is provided action will use current time as end time.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "End Time",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a comma-separated list of names of the repos. If nothing is provided, action will search in all repos.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Repos",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with IP entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "IP Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with Hostname entities, when preparing the filter. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Hostname Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with File Hash entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "File Hash Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with User entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "User Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with URL entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "URL Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify what key should be used with Email Address entities. Please refer to the action documentation for details.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Email Address Entity Key",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "True",
+            "Description": "If enabled, action will not start execution, unless all of the entity types are available for the specified \".. Entity Keys\". Example: if \"IP Entity Key\" and \"File Hash Entity Keys\" are specified, but in the scope there are no file hashes then if this parameter is enabled, action will not execute the query.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Stop if Not Enough Entities",
+            "Type": 1,
+            "Value": "True"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "OR",
+            "Description": "Specify what should be the logical operator used between different entity types.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Cross Entity Operator",
+            "OptionalValues": [
+                "OR",
+                "AND"
+            ],
+            "Type": 15,
+            "Value": "OR"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "100",
+            "Description": "Specify how many results should be returned.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "Value": "100"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "SimulationDataJson": "{\"Entities\":[\"ADDRESS\",\"HOSTNAME\",\"USERUNIQNAME\",\"DestinationURL\",\"FILEHASH\"]}",
+    "Version": 1.0,
+    "IsAsync": true
+}

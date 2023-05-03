@@ -1,0 +1,59 @@
+{
+    "Description": "Blueliv is Europe’s leading cyberthreat intelligence provider. It looks beyond your perimeter, scouring the open, deep and dark web to deliver fresh, automated and actionable threat intelligence to protect the enterprise and manage your digital risk.",
+    "DisplayName": "BlueLiv",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/blueliv",
+    "Identifier": "BlueLiv",
+    "Categories": [
+        "Threat Intelligence",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "BlueLiv",
+            "IsMandatory": true,
+            "PropertyDisplayName": "API Root",
+            "PropertyName": "API Root",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "BlueLiv",
+            "IsMandatory": true,
+            "PropertyDisplayName": "User Name",
+            "PropertyName": "User Name",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "BlueLiv",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Password",
+            "PropertyName": "Password",
+            "PropertyType": 3,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "BlueLiv",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Organization ID",
+            "PropertyName": "Organization ID",
+            "PropertyType": 2,
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "BlueLiv",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": "0",
+            "Value": "false"
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "SVGImage": "<svg width=\"23\" height=\"23\" viewBox=\"0 0 23 23\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9.89039 13.0708H0V22.9612H9.89039V13.0708Z\" fill=\"#currentColor\"/><path d=\"M4.96459 9.92917C7.70645 9.92917 9.92917 7.70645 9.92917 4.96459C9.92917 2.22272 7.70645 0 4.96459 0C2.22272 0 0 2.22272 0 4.96459C0 7.70645 2.22272 9.92917 4.96459 9.92917Z\" fill=\"#currentColor\"/><path d=\"M18.0354 9.92917C20.7773 9.92917 23 7.70645 23 4.96459C23 2.22272 20.7773 0 18.0354 0C15.2935 0 13.0708 2.22272 13.0708 4.96459C13.0708 7.70645 15.2935 9.92917 18.0354 9.92917Z\" fill=\"#currentColor\"/><path d=\"M18.0354 22.9612C20.7773 22.9612 23 20.7385 23 17.9966C23 15.2548 20.7773 13.032 18.0354 13.032C15.2935 13.032 13.0708 15.2548 13.0708 17.9966C13.0708 20.7385 15.2935 22.9612 18.0354 22.9612Z\" fill=\"#currentColor\"/></svg>",
+    "Version": 3.0,
+    "MarketingDisplayName": "BlueLiv",
+    "PythonVersion": 2
+}

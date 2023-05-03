@@ -1,0 +1,52 @@
+{
+    "Description": "MISP is an open source software solution for collecting, storing, distributing and sharing cyber security indicators and threat about cyber security incidents",
+    "DisplayName": "MISP",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/misp",
+    "Identifier": "MISP",
+    "PythonVersion": 2,
+    "Categories": [
+        "Threat Intelligence",
+        "Security",
+        "Free to use"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "MISP",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Root",
+            "PropertyName": "Api Root",
+            "PropertyType": "2",
+            "Value": "https://{IP}"
+        },
+        {
+            "IntegrationIdentifier": "MISP",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "Api Key",
+            "PropertyType": "3",
+            "Value": null
+        },
+        {
+            "IntegrationIdentifier": "MISP",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Use SSL",
+            "PropertyName": "Use SSL",
+            "PropertyType": "0",
+            "Value": "False"
+        },
+        {
+            "IntegrationIdentifier": "MISP",
+            "IsMandatory": false,
+            "PropertyDisplayName": "CA Certificate File - parsed into Base64 String",
+            "PropertyName": "CA Certificate File - parsed into Base64 String",
+            "PropertyType": "2",
+            "Value": ""
+        }
+    ],
+    "MinimumSystemVersion": 5.3,
+    "SvgImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M21.7,8.4h-0.3v6c0,1.4-1.1,2.5-2.5,2.5H7V17c0,1,0.8,1.8,1.8,1.8h9l3.8,2.3c0.1,0.1,0.3,0,0.2-0.2l-0.3-2.1h0.2\n\t\t\tc1,0,1.8-0.8,1.8-1.8v-6.8C23.5,9.2,22.7,8.4,21.7,8.4z M18.1,15.7c1.1,0,2.1-0.9,2.1-2.1V5.9c0-1.1-0.9-2.1-2.1-2.1H3.5\n\t\t\tc-1.1,0-2.1,0.9-2.1,2.1v7.7c0,1.1,0.9,2.1,2.1,2.1h0.3l-0.4,2.4c0,0.1,0.1,0.2,0.2,0.2l4.3-2.6H18.1z M16.2,8.1\n\t\t\tc0.7,0,1.3,0.6,1.3,1.3s-0.6,1.3-1.3,1.3s-1.3-0.6-1.3-1.3S15.4,8.1,16.2,8.1z M10.9,8.1c0.7,0,1.3,0.6,1.3,1.3s-0.6,1.3-1.3,1.3\n\t\t\tc-0.7,0-1.3-0.6-1.3-1.3S10.2,8.1,10.9,8.1z M5.6,10.8c-0.7,0-1.3-0.6-1.3-1.3s0.6-1.3,1.3-1.3S7,8.7,7,9.4S6.4,10.8,5.6,10.8z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "Version": 26.0,
+    "MarketingDisplayName": "MISP",
+    "IsAvailableForCommunity": true
+}

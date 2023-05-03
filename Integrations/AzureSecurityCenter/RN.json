@@ -1,0 +1,74 @@
+[
+    {
+        "ChangeDescription": "NEW! Azure Security Center integration",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "AzureSecurityCenter",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1609233872,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-4467"
+    },
+    {
+        "ChangeDescription": "Updated the integration's logo.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "AzureSecurityCenter",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629272126,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-8868"
+    },
+    {
+        "ChangeDescription": "Added OAuth authentication for Multi Factor Authentication environments.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "AzureSecurityCenter",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1629880631,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-9529"
+    },
+    {
+        "ChangeDescription": "Security Alerts Connector - Updated connector to better support Siemplify's SAAS deployment. Important - Before updating, please make sure to read our white paper for stateless connectors here: https://integrations.siemplify.co/doc/stateless-connectors-white-paper.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 4.0,
+        "ItemName": "AzureSecurityCenterConnector",
+        "ItemType": "Connector",
+        "New": false,
+        "PublishTime": 1657087429,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11822"
+    },
+    {
+        "ChangeDescription": "Updated Integration's dependencies.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "AzureSecurityCenter",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1659513901,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11787"
+    },
+    {
+        "ChangeDescription": "List Regulatory Standards, List Regulatory Standard Controls, Update Alert Status - Added an ability to provide subscription at the action level.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "AzureSecurityCenter",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1666784955,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-13075"
+    }
+]

@@ -1,0 +1,68 @@
+{
+    "CreationTimeUnixTimeInMs": 1535993960679,
+    "Creator": "Admin",
+    "Description": "Describes the specified security groups or all of your security groups. A security group is for use with instances either in the EC2-Classic platform or in a specific VPC. For more information, see https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html",
+    "Id": -1,
+    "IntegrationIdentifier": "AWSEC2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "DynamicResultsMetadata": [{
+        "ResultExample": "{\"EC2_Security_Groups\": [{\"Description\": \"launch-wizard-2 created 2021-01-30T19:37:11.523+02:00\", \"GroupName\": \"launch-wizard-2\", \"IpPermissions\": [{\"FromPort\": 22, \"IpProtocol\": \"tcp\", \"IpRanges\": [{\"CidrIp\": \"x.x.x.x/0\"}], \"Ipv6Ranges\": [], \"PrefixListIds\": [], \"ToPort\": 11, \"UserIdGroupPairs\": []}], \"OwnerId\": \"x\", \"GroupId\": \"sg-xx\", \"IpPermissionsEgress\": [{\"IpProtocol\": \"-1\", \"IpRanges\": [{\"CidrIp\": \"x.x.x.x/0\"}], \"Ipv6Ranges\": [], \"PrefixListIds\": [], \"UserIdGroupPairs\": []}], \"Tags\": [{\"Key\": \"Owner\", \"Value\": \"x\"}, {\"Key\": \"Team\", \"Value\": \"A-x, x\"}], \"VpcId\": \"vpc-x\"}]}",
+        "ResultName": "JsonResult"
+    }],
+    "ModificationTimeUnixTimeInMs": 1535993960679,
+    "Name": "List Security Groups",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "One or more security group Names [EC2-Classic and default VPC only]. Separated by comma. If you specify security group Names, the output includes information for only the specified names.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Security Group Names",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "One or more security group IDs. Separated by comma. If you specify security group IDs, the output includes information for only the specified ids. Required for security groups in a non-default VPC.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Security Group IDs",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "The key/value combination of a tag assigned to the security group. For example, to find all groups that have a tag with the key Owner and the value TeamA , specify Owner:TeamA. Comma separated tag filters. E.g. Name:Name1,Owner:TeamA. Returned groups will be fit to all filters.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Tag Filters",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1535381792970,
+            "CustomActionId": -1,
+            "DefaultValue": "50",
+            "Description": "Specify how many security groups to return. Default is 50. Maximum is 1000. Please note that the parameters ‘Security Group IDs’ and ‘Security Group Names’ cannot be used with the parameter ‘Max Results’",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1535381792970,
+            "Name": "Max Results",
+            "Type": 0,
+            "Value": "50"
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

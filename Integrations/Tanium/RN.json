@@ -1,0 +1,98 @@
+[
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "Tanium",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Updated the integration to work with Tanium Platform REST APIs, with API token based authentication. Note - Version 5 of the integration is not operational, please make sure to upgrade the integration to version 6 and make sure your workflows are checked and updated in the case of need - JSON results can be different.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Tanium",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1645006602,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11125"
+    },
+    {
+        "ChangeDescription": "New Action Added - List Endpoint Events.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "List Endpoint Events",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1650451092,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11374"
+    },
+    {
+        "ChangeDescription": "New Action Added - Get Task Details.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Get Task Details",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1650451092,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11378"
+    },
+    {
+        "ChangeDescription": "New Action Added - Download File.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Download File",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1650451092,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11376"
+    },
+    {
+        "ChangeDescription": "New Action Added - Delete File.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Delete File",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1650451092,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11377"
+    },
+    {
+        "ChangeDescription": "List Endpoint Events, Download File, Delete File - Updated the logic behind creating connection.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Tanium",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1651659550,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11660"
+    },
+    {
+        "ChangeDescription": "New Action Added - Quarantine Endpoint.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Quarantine Endpoint",
+        "ItemType": "Action",
+        "New": true,
+        "PublishTime": 1651659550,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-11375"
+    }
+]

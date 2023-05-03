@@ -1,0 +1,62 @@
+[
+    {
+        "ChangeDescription": "Added support for unicode data.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 5.0,
+        "ItemName": "List Policies",
+        "ItemType": "Action",
+        "New": false,
+        "PublishTime": 1589168641,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2880"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 6.0,
+        "ItemName": "Fortigate",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Integration - Regressive! Rewritten the integration to support latest API version, added new actions and removed deprecated ones.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 7.0,
+        "ItemName": "Fortigate",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1633519274,
+        "Regressive": true,
+        "Removed": false,
+        "TicketNumber": "TIPG-9949"
+    },
+    {
+        "ChangeDescription": "New Connector Added - Vulnerabilities Connector.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 8.0,
+        "ItemName": "Connector",
+        "ItemType": " Vulnerabilities Connector",
+        "New": true,
+        "PublishTime": 1637151679,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-10340"
+    },
+    {
+        "ChangeDescription": "Security Enhancements.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 9.0,
+        "ItemName": "Fortigate",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1682553600,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": ""
+    }
+]

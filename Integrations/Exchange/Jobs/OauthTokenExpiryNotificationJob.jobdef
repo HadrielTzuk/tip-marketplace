@@ -1,0 +1,92 @@
+{
+    "CreationTimeUnixTimeInMs": 1530453125371,
+    "Creator": "admin",
+    "Description": "Oauth Token Expiry Notification Job is recommended to use if integration is working with Oauth refresh tokens. Refresh tokens are valid only for 90 days, after that User will need to create a new refresh token to use in the integration. This job will send reminder emails to the configured recipient list when the token will expire in 10, 5 and 1 day. Once a new token is set in this job, the notification timer will start over.",
+    "Id": -1,
+    "Integration": "Exchange",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1530453125371,
+    "Name": "Oauth Token Expiry Notification Job",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "outlook.office365.com",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Mail Server Address",
+            "Description": "Mail server IP address to connect to. If connecting to O365, server address should be set to outlook.office365.com.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Mail Address for sending notifications",
+            "Description": "Mail address to use for sending out the notifications.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Notifications Recipients List",
+            "Description": "Parameter accepts multiple values as a comma separated string.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Client ID",
+            "Description": "Client (Application) ID of Azure Active Directory App that will be used for the integration.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": false,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Client Secret",
+            "Description": "For Office 365 Oauth authentication, secret can be provided for the auth flow.",
+            "Type": 3
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Tenant (Directory) ID",
+            "Description": "Azure Tenant (Directory) ID.",
+            "Type": 2
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1530453125371,
+            "DefaultValue": "",
+            "Id": -1,
+            "IsMandatory": true,
+            "JobDefinitionId": -1,
+            "ModificationTimeUnixTimeInMs": 1530453125371,
+            "Name": "Refresh Token",
+            "Description": "Refresh token that was obtained from running “Get Authorization” and “Generate Token” actions.",
+            "Type": 3
+        }
+    ],
+    "RunIntervalInSeconds": 900,
+    "Version": 1.0
+}

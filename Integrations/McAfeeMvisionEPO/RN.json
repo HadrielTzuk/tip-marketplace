@@ -1,0 +1,38 @@
+[
+    {
+        "ChangeDescription": "NEW! McAfee Mvision ePO integration. Available on the Siemplify version 5.3 and higher.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 1.0,
+        "ItemName": "McAfee Mvision ePO",
+        "ItemType": "Integration",
+        "New": true,
+        "PublishTime": 1593415992,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-2887"
+    },
+    {
+        "ChangeDescription": " Added integration support for the Playbook Simulator feature, allowing you to build, test and edit your workflow logic in a pre-production environment.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 2.0,
+        "ItemName": "McAfee Mvision ePO",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1604481503,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5303"
+    },
+    {
+        "ChangeDescription": "Fixed a bug, where integration connectivity test will show error, even if credentials are correct.",
+        "Deprecated": false,
+        "IntroducedInIntegrationVersion": 3.0,
+        "ItemName": "McAfee Mvision ePO",
+        "ItemType": "Integration",
+        "New": false,
+        "PublishTime": 1618907918,
+        "Regressive": false,
+        "Removed": false,
+        "TicketNumber": "TIPG-5859"
+    }
+]

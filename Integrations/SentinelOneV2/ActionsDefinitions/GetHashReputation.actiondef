@@ -1,0 +1,58 @@
+{
+    "CreationTimeUnixTimeInMs": 1542187500928, 
+    "Creator": "Admin", 
+    "Description": "Retrieve information about the hashes from SentinelOne.", 
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"EntityResult\":{\"data\":{\"rank\":\"10\"},\"is_risky\":false},\"Entity\":\"e104ea8908a0c21f245b629dc075ad1dbdea3xxx\"},{\"EntityResult\":{\"data\":{\"rank\":\"6\"},\"is_risky\":true},\"Entity\":\"df531d66173235167ac502b867f3cae2170adxxx\"}]", 
+            "ResultName": "JsonResult"
+        }
+    ], 
+    "Id": -1, 
+    "IntegrationIdentifier": "SentinelOneV2", 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "ModificationTimeUnixTimeInMs": 1542187500928, 
+    "Name": "Get Hash Reputation", 
+    "Parameters": [
+            {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": "5",
+            "Description": "Specify what should be the reputation threshold in order it to be marked as suspicious. If nothing is provided, action will not mark entites as suspicious. Maximum: 10.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Reputation Threshold",
+            "Type": 0,
+            "Value": "5"
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will create an insight containing information about the reputation.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Create Insight",
+            "Type": 1,
+            "Value": true
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1542188059113,
+            "CustomActionId": -1,
+            "DefaultValue": true,
+            "Description": "If enabled, action will only create insight for hashes that have higher or equal reputation to “Reputation Threshold“ value.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1542188059113,
+            "Name": "Only Suspicious Hashes Insight",
+            "Type": 1,
+            "Value": true
+        }
+    ], 
+    "ScriptResultName": "is_success", 
+    "SimulationDataJson": "{\"Entities\": [\"FILEHASH\"]}", 
+    "Version": 2.0
+}

@@ -1,0 +1,47 @@
+{
+    "CreationTimeUnixTimeInMs": 0,
+    "Creator": "admin",
+    "Description": "Execute a custom hunting query in Microsoft 365 Defender.",
+    "Id": -1,
+    "IntegrationIdentifier": "Microsoft365Defender",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 0,
+    "Name": "Execute Custom Query",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"Timestamp\":\"2021-04-12T07:25:00Z\",\"AlertId\":\"fa7a318954-6c4c-eaab-xxx-xxxxxxxxxx\",\"Title\":\"CC_Sensitive information\",\"Category\":\"InitialAccess\",\"Severity\":\"Medium\",\"ServiceSource\":\"Microsoft Defender for Office 365\",\"DetectionSource\":\"Microsoft Defender for Office 365\",\"AttackTechniques\":\"\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Query",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the query that needs to be executed. Use this parameter to provide |where clauses. Note: Note: you don't need to provide a limiting (\"top\" keyword).",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        },
+        {
+            "Name": "Max Results To Return",
+            "Type": 0,
+            "DefaultValue": 50,
+            "Value": 50,
+            "IsMandatory": false,
+            "Description": "Specify how many results to return. Default: 50.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 0,
+            "ModificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "SimulationDataJson": "{\"Entities\": []}",
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0
+}

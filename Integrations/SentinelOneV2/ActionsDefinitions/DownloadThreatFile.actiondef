@@ -1,0 +1,72 @@
+{
+    "CreationTimeUnixTimeInMs": 1521991572300,
+    "Creator": "admin",
+    "Description": "Download file related to threat in SentinelOne. Note: Your user role must have permissions to Fetch Threat File - Admin, IR Team, SOC.",
+    "Id": -1,
+    "IntegrationIdentifier": "SentinelOneV2",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1521991572300,
+    "Name": "Download Threat File",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "{\"absolute_path\":\"files/mim.exe\"}",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Parameters": [
+        {
+            "Name": "Threat ID",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the id of the threat for which you want to download the file.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1521991572300,
+            "ModificationTimeUnixTimeInMs": 1521991572300
+        },
+        {
+            "Name": "Password",
+            "Type": 12,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the password for the zip that contains the threat file. Password requirements: At least 10 characters. Three of these: uppercase, lowercase, digits, special symbols. Maximum length is 256 characters.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1521991572300,
+            "ModificationTimeUnixTimeInMs": 1521991572300
+        },
+        {
+            "Name": "Download Folder Path",
+            "Type": 0,
+            "DefaultValue": "",
+            "Value": "",
+            "IsMandatory": true,
+            "Description": "Specify the path to the folder, where you want to store the threat file.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1521991572300,
+            "ModificationTimeUnixTimeInMs": 1521991572300
+        },
+        {
+            "Name": "Overwrite",
+            "Type": 1,
+            "DefaultValue": false,
+            "Value": false,
+            "IsMandatory": true,
+            "Description": "If enabled, action will overwrite the file with the same name.",
+            "CustomActionId": -1,
+            "Id": -1,
+            "CreationTimeUnixTimeInMs": 1521991572300,
+            "ModificationTimeUnixTimeInMs": 1521991572300
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Type": 0,
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}",
+    "IsAsync": true
+}

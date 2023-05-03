@@ -1,0 +1,35 @@
+{
+    "Description": "urlscan.io is a service to scan and analyse websites.",
+    "DisplayName": "UrlScanIo",
+    "DocumentationLink": "https://integrations.siemplify.co/doc/urlscan.io",
+    "Identifier": "UrlScanIo",
+    "Categories": [
+        "Threat Intelligence",
+        "Security"
+    ],
+    "ImageBase64": "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",
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "UrlScanIo",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Api Key",
+            "PropertyName": "Api Key",
+            "PropertyType": "3",
+            "Value": ""
+        },
+        {
+            "IntegrationIdentifier": "UrlScanIo",
+            "IsMandatory": true,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "PropertyType": 0,
+            "Value": false
+        }
+    ],
+    "IsAvailableForCommunity": true,
+    "MinimumSystemVersion": 5.3,
+    "PythonVersion": 2,
+    "SVGImage": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path fill-rule=\"evenodd\" d=\"M22.55 19.5L17 13.95c.55-1.1.9-2.35.9-3.7 0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8c1.7 0 3.3-.55 4.6-1.45l5.4 5.4c.75.75 1.95.75 2.65 0 .75-.75.75-1.95 0-2.7zM9.9 15.6c-2.95 0-5.35-2.4-5.35-5.35 0-2.95 2.4-5.35 5.35-5.35 2.95 0 5.35 2.4 5.35 5.35 0 2.95-2.4 5.35-5.35 5.35zM9 6.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6.9 0 1.6-.7 1.6-1.6 0-.9-.7-1.6-1.6-1.6z\" clip-rule=\"evenodd\"\/>\r\n<\/svg>",
+    "Version": 16.0,
+    "MarketingDisplayName": "urlscan.io"
+}

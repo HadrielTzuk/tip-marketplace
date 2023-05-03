@@ -1,0 +1,58 @@
+{
+    "CreationTimeUnixTimeInMs": 1525002829777,
+    "Creator": "admin",
+    "Description": "List reference maps of sets available in Qradar.",
+    "DynamicResultsMetadata": [
+        {
+            "ResultExample": "[{\"timeout_type\":\"UNKNOWN\",\"number_of_elements\":1,\"creation_time\":1611240976203,\"name\":\"test\",\"element_type\":\"ALN\"},{\"time_to_live\":\"0 years 2 mons 0 days 0 hours 0 mins 0.00 secs\",\"timeout_type\":\"LAST_SEEN\",\"number_of_elements\":0,\"creation_time\":1440695697155,\"value_label\":\"destinationip\",\"name\":\"User-System Authentication or Usage\",\"element_type\":\"IP\",\"key_label\":\"username\"},{\"timeout_type\":\"UNKNOWN\",\"number_of_elements\":0,\"creation_time\":1399659402000,\"name\":\"CorrelatedAttackMap\",\"element_type\":\"ALN\"}]",
+            "ResultName": "JsonResult"
+        }
+    ],
+    "Id": -1,
+    "IntegrationIdentifier": "QRadar",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1525002829777,
+    "Name": "List Reference Maps of Sets",
+    "Parameters": [
+        {
+            "CreationTimeUnixTimeInMs": 1525002829777,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify which fields should be returned by the action. If nothing is provided - return all available fields by default. Parameter accepts multiple values separated by comma.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525002829777,
+            "Name": "Fields To Return",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525002829777,
+            "CustomActionId": -1,
+            "DefaultValue": "",
+            "Description": "Specify a filter condition to return only specific elements, for example: element_type = ALN.",
+            "Id": -1,
+            "IsMandatory": false,
+            "ModificationTimeUnixTimeInMs": 1525002829777,
+            "Name": "Filter Condition",
+            "Type": 0,
+            "Value": ""
+        },
+        {
+            "CreationTimeUnixTimeInMs": 1525002829777,
+            "CustomActionId": -1,
+            "DefaultValue": 25,
+            "Description": "Specify a maximum numbers of elements to return by the action.",
+            "Id": -1,
+            "IsMandatory": true,
+            "ModificationTimeUnixTimeInMs": 1525002829777,
+            "Name": "Number Of Elements To Return",
+            "Type": 0,
+            "Value": 25
+        }
+    ],
+    "ScriptResultName": "is_success",
+    "Version": 1.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

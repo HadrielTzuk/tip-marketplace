@@ -1,0 +1,16 @@
+{
+    "CreationTimeUnixTimeInMs": 1522590085919,
+    "Creator": "admin",
+    "Description": "Test connectivity to Cylance",
+    "Id": -1,
+    "IntegrationIdentifier": "Cylance",
+    "IsCustom": false,
+    "IsEnabled": true,
+    "ModificationTimeUnixTimeInMs": 1522590085919,
+    "Name": "Ping",
+    "Parameters": [],
+    "Script": "from SiemplifyAction import SiemplifyAction\r\nfrom CylanceManager import CylanceManager\r\n\r\n\r\ndef main():\r\n    siemplify = SiemplifyAction()\r\n    conf = siemplify.get_configuration('Cylance')\r\n\r\n    server_address = conf['Server Address']\r\n    application_secret = conf['Application Secret']\r\n    application_id = conf['Application ID']\r\n    tenant_identifier = conf['Tenant Identifier']\r\n\r\n    cm = CylanceManager(server_address, application_id, application_secret,\r\n                        tenant_identifier)\r\n\r\n    siemplify.end(\"Successfully connected.\", 'true')\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n",
+    "ScriptResultName": "is_success",
+    "Version": 0.0,
+    "SimulationDataJson": "{\"Entities\": []}"
+}

@@ -1,0 +1,227 @@
+{
+    "CreationTimeUnixTimeInMs": 1527498801325, 
+    "Creator": "admin", 
+    "Description": "A Connector for fetching incidents from Palo Alto Cortex XDR and creating alerts from the attached incidents.", 
+    "Id": -1, 
+    "ConnectorDefinitionId": -1, 
+    "Integration": "PaloAltoCortexXDR", 
+    "IsConnectorRulesSupported": false, 
+    "IsCustom": false, 
+    "IsEnabled": true, 
+    "MappingRules": [], 
+    "ModificationTimeUnixTimeInMs": 1527498801325, 
+    "Name": "Palo Alto Cortex XDR Connector", 
+    "CustomSections": [
+        {
+            "columns": [
+                {
+                    "name": "Behaviour", 
+                    "type": "rich"
+                }
+            ], 
+            "rows": [
+                {
+                    "Behaviour": "<p>&nbsp;&nbsp;<strong>The flow of the connector</strong></p>\n\n<ol>\n\t<li>The connector uses the REST APIs of the Palo Alto Cortex XDR to access Palo Alto Cortex XDR data and search for incidents from a given timestamp (from the timestamp of the last incident that was found by the connector in previous runs).</li>\n\t<li>For every newly found Incident, a <strong>Siemplify Alert</strong> will be created from the incident data. Incident can&nbsp;contain alerts which are <strong>Siemplify </strong><strong>events.</strong></li>\n</ol>\n\n<p>&nbsp;</p>\n\n<p><span style=\"color:#e74c3c\"><strong>Environment Logic:</strong></span></p>\n\n<p>Get environment using all reoccurring environment logic<br />\nEnvironment Field Name + Environment Regex Pattern + environment map.json</p>\n\n<p>First, if&nbsp;<strong>Environment Field Name</strong> supplied&nbsp;- Get the environment from this field in the Siemplify Alert.<br />\nThen, if the&nbsp;<strong>Environment Regex Pattern</strong>&nbsp;is given - extract environment from the found environment that previously fetched using the given Regex pattern.&nbsp;<br />\nIn the end, try to resolve the found environment to its mapped alias - using the<strong> map file</strong>. The map file can be found and manage in {C:\\Siemplify_Server\\Scripting\\SiemplifyConnectorExecution\\&lt;Connector-instance&gt;\\map.json}<br />\nIf nothing supply, return the default connector environment</p>\n"
+                }
+            ], 
+            "templateName": "Behaviour"
+        }, 
+        {
+            "columns": [
+                {
+                    "name": "Product Version", 
+                    "type": "plain"
+                }, 
+                {
+                    "name": "API Endpoint", 
+                    "type": "rich"
+                }
+            ], 
+            "rows": [
+                {
+                    "API Endpoint": "<p>api_keys/validate/</p>\n\n<p>public_api/v1/incidents/get_incident_extra_data/</p>\n\n<p>public_api/v1/incidents/get_incidents/</p>\n", 
+                    "Product Version": "v1"
+                }
+            ], 
+            "templateName": "API Requests"
+        }
+    ], 
+    "Parameters": [
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1527498801325, 
+            "DefaultValue": "device_product", 
+            "Description": "The field name used to determine the device product", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 0, 
+            "ModificationTimeUnixTimeInMs": 1527498801325, 
+            "Name": "DeviceProductField", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1527498801325, 
+            "DefaultValue": "event_name", 
+            "Description": "The field name used to determine the event name (sub-type)", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 0, 
+            "ModificationTimeUnixTimeInMs": 1527498801325, 
+            "Name": "EventClassId", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1527498801325, 
+            "DefaultValue": "60", 
+            "Description": "The timeout limit (in seconds) for the python process running current script", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 0, 
+            "ModificationTimeUnixTimeInMs": 1527498801325, 
+            "Name": "PythonProcessTimeout", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1527498801325, 
+            "DefaultValue": "https://api-{fqdn}",
+            "Description": "The full API root address. From this root, we should be able to reach all other API endpoints. For more information, please refer to https://docs.paloaltonetworks.com/cortex/cortex-xdr/cortex-xdr-api/cortex-xdr-api-overview/get-started-with-cortex-xdr-apis",
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 2, 
+            "ModificationTimeUnixTimeInMs": 1527498801325, 
+            "Name": "Api Root", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1527498801325, 
+            "DefaultValue": null, 
+            "Description": "From your Cortex XDR, generate the advanced key for future authentication", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 2, 
+            "ModificationTimeUnixTimeInMs": 1527498801325, 
+            "Name": "Api Key", 
+            "Type": 3
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1527498801325, 
+            "DefaultValue": "3", 
+            "Description": "The corresponding ID of the API Key for future authentication", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 0, 
+            "ModificationTimeUnixTimeInMs": 1527498801325, 
+            "Name": "Api Key ID", 
+            "Type": 1
+        },
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1527498801325, 
+            "DefaultValue": "true", 
+            "Description": "Indicate whether to verify SSL certificate or not", 
+            "Id": -1, 
+            "IsMandatory": true, 
+            "Mode": 2, 
+            "ModificationTimeUnixTimeInMs": 1527498801325, 
+            "Name": "Verify SSL", 
+            "Type": 0
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1527498801325, 
+            "DefaultValue": "10", 
+            "Description": "Limit the number of alerts in every cycle. e.g. 10", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 2, 
+            "ModificationTimeUnixTimeInMs": 1527498801325, 
+            "Name": "Alerts Count Limit", 
+            "Type": 1
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1527498801325, 
+            "DefaultValue": "1", 
+            "Description": "This field is used in the connector first running cycle and determine the start time. e.g. 3", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 2, 
+            "ModificationTimeUnixTimeInMs": 1527498801325, 
+            "Name": "Max Days Backwards", 
+            "Type": 1
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1527498801325, 
+            "DefaultValue": "", 
+            "Description": "If defined - connector will extract the environment from the specified incident field.", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 2, 
+            "ModificationTimeUnixTimeInMs": 1527498801325, 
+            "Name": "Environment Field Name", 
+            "Type": 2
+        }, 
+        {
+            "ConnectorDefinitionId": -1, 
+            "CreationTimeUnixTimeInMs": 1525167465721, 
+            "DefaultValue": null, 
+            "Description": "If defined - the connector will implement the specific RegEx pattern on the data from \"envirnment field\" to extract specific string. For example - extract domain from sender's address: \"(?<=@)(\\S+$)\"", 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 2, 
+            "ModificationTimeUnixTimeInMs": 1525167465721, 
+            "Name": "Environment Regex Pattern", 
+            "Type": 1
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1574099687000, 
+            "Name": "Proxy Server Address", 
+            "ModificationTimeUnixTimeInMs": 1574099687000, 
+            "Type": 2, 
+            "DefaultValue": null, 
+            "Description": "The address of the proxy server to use.", 
+            "ConnectorDefinitionId": -1, 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 2
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1574099687000, 
+            "Name": "Proxy Username", 
+            "ModificationTimeUnixTimeInMs": 1574099687000, 
+            "Type": 2, 
+            "DefaultValue": null, 
+            "Description": "The proxy username to authenticate with.", 
+            "ConnectorDefinitionId": -1, 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 2
+        }, 
+        {
+            "CreationTimeUnixTimeInMs": 1525167465721, 
+            "Name": "Proxy Password", 
+            "ModificationTimeUnixTimeInMs": 1525167465721, 
+            "Type": 3, 
+            "DefaultValue": null, 
+            "Description": "The proxy password to authenticate with.", 
+            "ConnectorDefinitionId": -1, 
+            "Id": -1, 
+            "IsMandatory": false, 
+            "Mode": 2
+        }
+    ], 
+    "ProductToVisualFamilyRecords": [], 
+    "Rules": [], 
+    "SimulationUseCases": {
+        "CasesForUseCase": [], 
+        "UseCaseName": null
+    }, 
+    "Version": 1,
+    "DocumentationLink": "https://integrations.siemplify.co/doc/palo-alto-cortex-xdr#palo-alto-cortex-xdr-connector"
+}
